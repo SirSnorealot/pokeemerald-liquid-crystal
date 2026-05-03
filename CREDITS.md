@@ -63,4 +63,10 @@ Also thanks to all the hard work put into [pokemerald](https://github.com/pret/p
 
 ## Pokemerald Liquid Crystal Credits
 
-TBA
+### Tools Used
+
+[porymap](https://github.com/huderlem/porymap)
+
+### Tutorial/Code Used
+
+[Triple layer metatiles](https://github.com/pret/pokeemerald/wiki/Triple-layer-metatiles)  
