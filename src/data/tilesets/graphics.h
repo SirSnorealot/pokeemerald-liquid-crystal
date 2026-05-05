@@ -1635,6 +1635,50 @@ const u16 gTilesetPalettes_UnionRoom[][16] =
 
 const u32 gTilesetTiles_UnionRoom[] = INCGFX_U32("data/tilesets/secondary/union_room/tiles.png", ".4bpp.fastSmol");
 
+const u16 gTilesetPalettes_building_lc_Primary[][16] =
+{
+	INCGFX_U16("data/tilesets/primary/building_lc/palettes/00.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/primary/building_lc/palettes/01.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/primary/building_lc/palettes/02.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/primary/building_lc/palettes/03.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/primary/building_lc/palettes/04.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/primary/building_lc/palettes/05.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/primary/building_lc/palettes/06.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/primary/building_lc/palettes/07.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/primary/building_lc/palettes/08.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/primary/building_lc/palettes/09.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/primary/building_lc/palettes/10.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/primary/building_lc/palettes/11.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/primary/building_lc/palettes/12.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/primary/building_lc/palettes/13.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/primary/building_lc/palettes/14.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/primary/building_lc/palettes/15.pal", ".gbapal"),
+};
+
+const u32 gTilesetTiles_building_lc_Primary[] = INCGFX_U32("data/tilesets/primary/building_lc/tiles.png", ".4bpp.fastSmol", "-num_tiles 512 -Wnum_tiles");
+
+const u16 gTilesetPalettes_players_house_lc_Secondary[][16] =
+{
+	INCGFX_U16("data/tilesets/secondary/players_house_lc/palettes/00.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/secondary/players_house_lc/palettes/01.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/secondary/players_house_lc/palettes/02.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/secondary/players_house_lc/palettes/03.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/secondary/players_house_lc/palettes/04.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/secondary/players_house_lc/palettes/05.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/secondary/players_house_lc/palettes/06.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/secondary/players_house_lc/palettes/07.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/secondary/players_house_lc/palettes/08.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/secondary/players_house_lc/palettes/09.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/secondary/players_house_lc/palettes/10.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/secondary/players_house_lc/palettes/11.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/secondary/players_house_lc/palettes/12.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/secondary/players_house_lc/palettes/13.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/secondary/players_house_lc/palettes/14.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/secondary/players_house_lc/palettes/15.pal", ".gbapal"),
+};
+
+const u32 gTilesetTiles_players_house_lc_Secondary[] = INCGFX_U32("data/tilesets/secondary/players_house_lc/tiles.png", ".4bpp.fastSmol", "-num_tiles 191 -Wnum_tiles");
+
 #if IS_FRLG
 
 const u32 gTilesetTiles_Building_Frlg[] = INCGFX_U32("data/tilesets/primary/building_frlg/tiles.png", ".4bpp.smol");

@@ -833,6 +833,28 @@ const struct Tileset gTileset_UnionRoom =
     .callback = NULL,
 };
 
+const struct Tileset gTileset_building_lc_Primary =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_building_lc_Primary,
+    .palettes = gTilesetPalettes_building_lc_Primary,
+    .metatiles = gMetatiles_building_lc_Primary,
+    .metatileAttributes = gMetatileAttributes_building_lc_Primary,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_players_house_lc_Secondary =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_players_house_lc_Secondary,
+    .palettes = gTilesetPalettes_players_house_lc_Secondary,
+    .metatiles = gMetatiles_players_house_lc_Secondary,
+    .metatileAttributes = gMetatileAttributes_players_house_lc_Secondary,
+    .callback = NULL,
+};
+
 #else
 
 // FRLG tilesets
