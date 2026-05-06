@@ -833,7 +833,7 @@ const struct Tileset gTileset_UnionRoom =
     .callback = NULL,
 };
 
-const struct Tileset gTileset_building_lc_Primary =
+const struct Tileset gTileset__building_lc =
 {
     .isCompressed = TRUE,
     .isSecondary = FALSE,
@@ -844,7 +844,7 @@ const struct Tileset gTileset_building_lc_Primary =
     .callback = NULL,
 };
 
-const struct Tileset gTileset_players_house_lc_Secondary =
+const struct Tileset gTileset__players_house_lc =
 {
     .isCompressed = TRUE,
     .isSecondary = TRUE,

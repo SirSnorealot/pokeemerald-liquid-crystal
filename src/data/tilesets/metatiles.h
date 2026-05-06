@@ -210,11 +210,11 @@ const u16 gMetatileAttributes_MysteryEventsHouse[] = INCBIN_U16("data/tilesets/s
 const u16 gMetatiles_UnionRoom[] = INCBIN_U16("data/tilesets/secondary/union_room/metatiles.bin");
 const u16 gMetatileAttributes_UnionRoom[] = INCBIN_U16("data/tilesets/secondary/union_room/metatile_attributes.bin");
 
-const u16 gMetatiles_building_lc_Primary[] = INCBIN_U16("data/tilesets/primary/building_lc/metatiles.bin");
-const u16 gMetatileAttributes_building_lc_Primary[] = INCBIN_U16("data/tilesets/primary/building_lc/metatile_attributes.bin");
+const u16 gMetatiles_building_lc_Primary[] = INCBIN_U16("data/tilesets/primary/_building_lc/metatiles.bin");
+const u16 gMetatileAttributes_building_lc_Primary[] = INCBIN_U16("data/tilesets/primary/_building_lc/metatile_attributes.bin");
 
-const u16 gMetatiles_players_house_lc_Secondary[] = INCBIN_U16("data/tilesets/secondary/players_house_lc/metatiles.bin");
-const u16 gMetatileAttributes_players_house_lc_Secondary[] = INCBIN_U16("data/tilesets/secondary/players_house_lc/metatile_attributes.bin");
+const u16 gMetatiles_players_house_lc_Secondary[] = INCBIN_U16("data/tilesets/secondary/_players_house_lc/metatiles.bin");
+const u16 gMetatileAttributes_players_house_lc_Secondary[] = INCBIN_U16("data/tilesets/secondary/_players_house_lc/metatile_attributes.bin");
 
 #else
 

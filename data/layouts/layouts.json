@@ -589,8 +589,8 @@
       "name": "LittlerootTown_BrendansHouse_1F_Layout",
       "width": 17,
       "height": 14,
-      "primary_tileset": "gTileset_building_lc_Primary",
-      "secondary_tileset": "gTileset_players_house_lc_Secondary",
+      "primary_tileset": "gTileset__building_lc",
+      "secondary_tileset": "gTileset__players_house_lc",
       "border_filepath": "data/layouts/LittlerootTown_BrendansHouse_1F/border.bin",
       "blockdata_filepath": "data/layouts/LittlerootTown_BrendansHouse_1F/map.bin",
       "layout_version": "emerald"
@@ -600,8 +600,8 @@
       "name": "LittlerootTown_BrendansHouse_2F_Layout",
       "width": 11,
       "height": 9,
-      "primary_tileset": "gTileset_building_lc_Primary",
-      "secondary_tileset": "gTileset_players_house_lc_Secondary",
+      "primary_tileset": "gTileset__building_lc",
+      "secondary_tileset": "gTileset__players_house_lc",
       "border_filepath": "data/layouts/LittlerootTown_BrendansHouse_2F/border.bin",
       "blockdata_filepath": "data/layouts/LittlerootTown_BrendansHouse_2F/map.bin",
       "layout_version": "emerald"
