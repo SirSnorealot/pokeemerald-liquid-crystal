@@ -9,6 +9,7 @@ This project will be open source and anyone can use anything in this project as 
 - [Screenshots](#screenshots)
 - [Installation](#installation)
 - [Building](#building)
+- [Todo](#todo)
 - [Credits](#credits)
 
 ## Screenshots
@@ -32,6 +33,28 @@ make debug -j$(nproc)
 ```sh
 make release -j$(nproc)
 ```
+
+## Todo
+
+> A place to track things I think of so I don't forget them.
+
+- [ ] **[PRIORITY]** Port All Maps - Started: SirSnorealot
+- [ ] DNS Lights in Windows - Not started.
+- [ ] Headbutt Trees - Not started.
+- [ ] Region Maps - Not started.
+- [ ] Pokegear - Not started.
+- [ ] Port Title Screen - Not started.
+- [ ] Intro before Title screen - Not started.
+- [ ] New Game Intro - Not started.
+- [ ] Port OW Sprites - Not started.
+- [ ] Scripting - Not started.
+- [ ] Properly implement roaming legendaries. - Not started.
+- [ ] Mom Bank System - Not started.
+- [ ] Players room and decorations - Not started.
+- [ ] Decide how to do and implement berries and apricorns. - Not started.
+- [ ] Port Pokemon Images (Disable animations?) - Not started.
+- [ ] Port Trainer Sprites - Not started.
+
 
 ## Credits
 
