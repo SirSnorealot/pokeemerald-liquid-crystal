@@ -103,10 +103,10 @@
     {
       "id": "LAYOUT_LITTLEROOT_TOWN",
       "name": "LittlerootTown_Layout",
-      "width": 20,
-      "height": 20,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Petalburg",
+      "width": 28,
+      "height": 22,
+      "primary_tileset": "gTileset__general_lc",
+      "secondary_tileset": "gTileset__new_bark_town_lc",
       "border_filepath": "data/layouts/LittlerootTown/border.bin",
       "blockdata_filepath": "data/layouts/LittlerootTown/map.bin",
       "layout_version": "emerald"
