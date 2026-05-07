@@ -101,14 +101,14 @@
       "layout_version": "emerald"
     },
     {
-      "id": "LAYOUT_LITTLEROOT_TOWN",
-      "name": "LittlerootTown_Layout",
+      "id": "LAYOUT_NEW_BARK_TOWN",
+      "name": "NewBarkTown_Layout",
       "width": 28,
       "height": 22,
       "primary_tileset": "gTileset__general_lc",
       "secondary_tileset": "gTileset__new_bark_town_lc",
-      "border_filepath": "data/layouts/LittlerootTown/border.bin",
-      "blockdata_filepath": "data/layouts/LittlerootTown/map.bin",
+      "border_filepath": "data/layouts/_NewBarkTown/border.bin",
+      "blockdata_filepath": "data/layouts/_NewBarkTown/map.bin",
       "layout_version": "emerald"
     },
     {
@@ -178,14 +178,14 @@
       "layout_version": "emerald"
     },
     {
-      "id": "LAYOUT_ROUTE101",
-      "name": "Route101_Layout",
+      "id": "LAYOUT_ROUTE29",
+      "name": "Route29_Layout",
       "width": 76,
       "height": 20,
       "primary_tileset": "gTileset__general_lc",
       "secondary_tileset": "gTileset__new_bark_town_lc",
-      "border_filepath": "data/layouts/Route101/border.bin",
-      "blockdata_filepath": "data/layouts/Route101/map.bin",
+      "border_filepath": "data/layouts/_Route29/border.bin",
+      "blockdata_filepath": "data/layouts/_Route29/map.bin",
       "layout_version": "emerald"
     },
     {
@@ -585,25 +585,25 @@
       "layout_version": "emerald"
     },
     {
-      "id": "LAYOUT_LITTLEROOT_TOWN_BRENDANS_HOUSE_1F",
-      "name": "LittlerootTown_BrendansHouse_1F_Layout",
+      "id": "LAYOUT_NEW_BARK_TOWN_PLAYERS_HOUSE_1F",
+      "name": "NewBarkTown_BrendansHouse_1F_Layout",
       "width": 17,
       "height": 14,
       "primary_tileset": "gTileset__building_lc",
       "secondary_tileset": "gTileset__players_house_lc",
-      "border_filepath": "data/layouts/LittlerootTown_BrendansHouse_1F/border.bin",
-      "blockdata_filepath": "data/layouts/LittlerootTown_BrendansHouse_1F/map.bin",
+      "border_filepath": "data/layouts/_NewBarkTown_PlayersHouse_1F/border.bin",
+      "blockdata_filepath": "data/layouts/_NewBarkTown_PlayersHouse_1F/map.bin",
       "layout_version": "emerald"
     },
     {
-      "id": "LAYOUT_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F",
-      "name": "LittlerootTown_BrendansHouse_2F_Layout",
+      "id": "LAYOUT_NEW_BARK_TOWN_PLAYERS_HOUSE_2F",
+      "name": "NewBarkTown_BrendansHouse_2F_Layout",
       "width": 11,
       "height": 9,
       "primary_tileset": "gTileset__building_lc",
       "secondary_tileset": "gTileset__players_house_lc",
-      "border_filepath": "data/layouts/LittlerootTown_BrendansHouse_2F/border.bin",
-      "blockdata_filepath": "data/layouts/LittlerootTown_BrendansHouse_2F/map.bin",
+      "border_filepath": "data/layouts/_NewBarkTown_PlayersHouse_2F/border.bin",
+      "blockdata_filepath": "data/layouts/_NewBarkTown_PlayersHouse_2F/map.bin",
       "layout_version": "emerald"
     },
     {
