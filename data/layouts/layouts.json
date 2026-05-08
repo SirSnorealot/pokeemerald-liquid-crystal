@@ -586,7 +586,7 @@
     },
     {
       "id": "LAYOUT_NEW_BARK_TOWN_PLAYERS_HOUSE_1F",
-      "name": "NewBarkTown_BrendansHouse_1F_Layout",
+      "name": "NewBarkTown_PlayersHouse_1F_Layout",
       "width": 17,
       "height": 14,
       "primary_tileset": "gTileset__building_lc",
@@ -597,7 +597,7 @@
     },
     {
       "id": "LAYOUT_NEW_BARK_TOWN_PLAYERS_HOUSE_2F",
-      "name": "NewBarkTown_BrendansHouse_2F_Layout",
+      "name": "NewBarkTown_PlayersHouse_2F_Layout",
       "width": 11,
       "height": 9,
       "primary_tileset": "gTileset__building_lc",
@@ -629,14 +629,14 @@
       "layout_version": "emerald"
     },
     {
-      "id": "LAYOUT_LITTLEROOT_TOWN_PROFESSOR_BIRCHS_LAB",
-      "name": "LittlerootTown_ProfessorBirchsLab_Layout",
-      "width": 13,
-      "height": 13,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_Lab",
-      "border_filepath": "data/layouts/LittlerootTown_ProfessorBirchsLab/border.bin",
-      "blockdata_filepath": "data/layouts/LittlerootTown_ProfessorBirchsLab/map.bin",
+      "id": "LAYOUT_NEW_BARK_TOWN_PROFESSOR_ELMS_LAB",
+      "name": "NewBarkTown_ProfessorElmsLab_Layout",
+      "width": 32,
+      "height": 28,
+      "primary_tileset": "gTileset__building_lc",
+      "secondary_tileset": "gTileset__elms_lab_lc",
+      "border_filepath": "data/layouts/_NewBarkTown_ProfessorElmsLab/border.bin",
+      "blockdata_filepath": "data/layouts/_NewBarkTown_ProfessorElmsLab/map.bin",
       "layout_version": "emerald"
     },
     {

@@ -877,6 +877,17 @@ const struct Tileset gTileset__new_bark_town_lc =
     .callback = NULL,
 };
 
+const struct Tileset gTileset__elms_lab_lc =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_elms_lab_lc,
+    .palettes = gTilesetPalettes_elms_lab_lc,
+    .metatiles = gMetatiles_elms_lab_lc,
+    .metatileAttributes = gMetatileAttributes_elms_lab_lc,
+    .callback = NULL,
+};
+
 #else
 
 // FRLG tilesets

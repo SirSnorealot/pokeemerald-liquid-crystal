@@ -214,7 +214,7 @@ LittlerootTown_EventScript_BeginDexUpgradeScene::
 	clearflag FLAG_HIDE_LITTLEROOT_TOWN_BIRCH
 	delay 20
 	clearflag FLAG_HIDE_MAP_NAME_POPUP
-	warp MAP_LITTLEROOT_TOWN_PROFESSOR_BIRCHS_LAB, 6, 5
+	warp MAP_NEW_BARK_TOWN_PROFESSOR_ELMS_LAB, 6, 5
 	waitstate
 	releaseall
 	end
