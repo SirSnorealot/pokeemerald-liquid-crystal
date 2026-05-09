@@ -1,4 +1,4 @@
-Route102_MapScripts::
+Route30_MapScripts::
 	.byte 0
 
 Route102_EventScript_LittleBoy::

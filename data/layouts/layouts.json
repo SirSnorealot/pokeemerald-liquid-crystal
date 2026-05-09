@@ -189,14 +189,14 @@
       "layout_version": "emerald"
     },
     {
-      "id": "LAYOUT_ROUTE102",
-      "name": "Route102_Layout",
-      "width": 50,
-      "height": 20,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Petalburg",
-      "border_filepath": "data/layouts/Route102/border.bin",
-      "blockdata_filepath": "data/layouts/Route102/map.bin",
+      "id": "LAYOUT_ROUTE30",
+      "name": "Route30_Layout",
+      "width": 38,
+      "height": 62,
+      "primary_tileset": "gTileset__general_lc",
+      "secondary_tileset": "gTileset__cherrygrove_city_lc",
+      "border_filepath": "data/layouts/_Route30/border.bin",
+      "blockdata_filepath": "data/layouts/_Route30/map.bin",
       "layout_version": "emerald"
     },
     {
