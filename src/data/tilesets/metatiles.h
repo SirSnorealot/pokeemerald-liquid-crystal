@@ -237,6 +237,9 @@ const u16 gMetatileAttributes_route_31_lc[] = INCBIN_U16("data/tilesets/secondar
 const u16 gMetatiles_violet_city_lc[] = INCBIN_U16("data/tilesets/secondary/_violet_city_lc/metatiles.bin");
 const u16 gMetatileAttributes_violet_city_lc[] = INCBIN_U16("data/tilesets/secondary/_violet_city_lc/metatile_attributes.bin");
 
+const u16 gMetatiles_route_32_lc[] = INCBIN_U16("data/tilesets/secondary/_route_32_lc/metatiles.bin");
+const u16 gMetatileAttributes_route_32_lc[] = INCBIN_U16("data/tilesets/secondary/_route_32_lc/metatile_attributes.bin");
+
 #else
 
 const u16 gMetatiles_Building_Frlg[] = INCBIN_U16("data/tilesets/primary/building_frlg/metatiles.bin");

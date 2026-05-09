@@ -211,14 +211,14 @@
       "layout_version": "emerald"
     },
     {
-      "id": "LAYOUT_ROUTE104",
-      "name": "Route104_Layout",
-      "width": 40,
-      "height": 80,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Rustboro",
-      "border_filepath": "data/layouts/Route104/border.bin",
-      "blockdata_filepath": "data/layouts/Route104/map.bin",
+      "id": "LAYOUT_ROUTE32",
+      "name": "Route32_Layout",
+      "width": 38,
+      "height": 120,
+      "primary_tileset": "gTileset__general_lc",
+      "secondary_tileset": "gTileset__route_32_lc",
+      "border_filepath": "data/layouts/_Route32/border.bin",
+      "blockdata_filepath": "data/layouts/_Route32/map.bin",
       "layout_version": "emerald"
     },
     {

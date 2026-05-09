@@ -1,4 +1,4 @@
-Route104_MapScripts::
+Route32_MapScripts::
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, Route104_OnFrame
 	map_script MAP_SCRIPT_ON_TRANSITION, Route104_OnTransition
 	.byte 0
@@ -343,14 +343,14 @@ Route104_EventScript_Girl2::
 	end
 
 Route104_EventScript_SailToDewford::
-	setobjectsubpriority LOCALID_ROUTE104_BRINEY, MAP_ROUTE104, 0
-	setobjectsubpriority LOCALID_PLAYER, MAP_ROUTE104, 0
+	setobjectsubpriority LOCALID_ROUTE104_BRINEY, MAP_ROUTE32, 0
+	setobjectsubpriority LOCALID_PLAYER, MAP_ROUTE32, 0
 	applymovement LOCALID_ROUTE104_BRINEY, Route104_Movement_BrineyBoardBoat
 	waitmovement 0
 	removeobject LOCALID_ROUTE104_BRINEY
 	applymovement LOCALID_PLAYER, Route104_Movement_PlayerBoardBoat
 	waitmovement 0
-	hideobjectat LOCALID_PLAYER, MAP_ROUTE104
+	hideobjectat LOCALID_PLAYER, MAP_ROUTE32
 	call Common_EventScript_PlayBrineysBoatMusic
 	goto_if_set FLAG_ENABLE_NORMAN_MATCH_CALL, Route104_EventScript_SailToDewfordNoCall
 	goto_if_unset FLAG_ENABLE_NORMAN_MATCH_CALL, Route104_EventScript_SailToDewfordDadCalls
@@ -376,8 +376,8 @@ Route104_EventScript_SailToDewfordDadCalls::
 	delay 30
 	setflag FLAG_ENABLE_NORMAN_MATCH_CALL
 	applymovement LOCALID_PLAYER, Route104_Movement_SailToDewfordAfterDadCalls
-	applymovement LOCALID_ROUTE104_BOAT, Route104_Movement_SailToDewfordAfterDadCalls, MAP_ROUTE104
-	waitmovement LOCALID_ROUTE104_BOAT, MAP_ROUTE104
+	applymovement LOCALID_ROUTE104_BOAT, Route104_Movement_SailToDewfordAfterDadCalls, MAP_ROUTE32
+	waitmovement LOCALID_ROUTE104_BOAT, MAP_ROUTE32
 	waitmovement 0
 	goto Route104_EventScript_ArriveInDewford
 
@@ -399,9 +399,9 @@ Route104_EventScript_ArriveInDewford::
 	clearflag FLAG_HIDE_MR_BRINEY_BOAT_DEWFORD_TOWN
 	call Common_EventScript_StopBrineysBoatMusic
 	setflag FLAG_HIDE_ROUTE_104_MR_BRINEY_BOAT
-	hideobjectat LOCALID_ROUTE104_BOAT, MAP_ROUTE104
+	hideobjectat LOCALID_ROUTE104_BOAT, MAP_ROUTE32
 	copyvar VAR_BRINEY_LOCATION, VAR_0x8008
-	resetobjectsubpriority LOCALID_PLAYER, MAP_ROUTE104
+	resetobjectsubpriority LOCALID_PLAYER, MAP_ROUTE32
 	resetobjectsubpriority LOCALID_DEWFORD_BRINEY, MAP_DEWFORD_TOWN
 	copyobjectxytoperm LOCALID_DEWFORD_BRINEY
 	setvar VAR_BOARD_BRINEY_BOAT_STATE, 0
