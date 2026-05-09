@@ -1,4 +1,4 @@
-OldaleTown_MapScripts::
+CherrygroveCity_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, OldaleTown_OnTransition
 	.byte 0
 

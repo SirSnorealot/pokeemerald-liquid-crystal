@@ -899,6 +899,18 @@ const struct Tileset gTileset__goldenrod_city_lc =
     .callback = NULL,
 };
 
+const struct Tileset gTileset__cherrygrove_city_lc =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_cherrygrove_city_lc,
+    .palettes = gTilesetPalettes_cherrygrove_city_lc,
+    .metatiles = gMetatiles_cherrygrove_city_lc,
+    .metatileAttributes = gMetatileAttributes_cherrygrove_city_lc,
+    .callback = NULL,
+};
+
+
 #else
 
 // FRLG tilesets

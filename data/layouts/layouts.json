@@ -112,14 +112,14 @@
       "layout_version": "emerald"
     },
     {
-      "id": "LAYOUT_OLDALE_TOWN",
-      "name": "OldaleTown_Layout",
-      "width": 20,
-      "height": 20,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Petalburg",
-      "border_filepath": "data/layouts/OldaleTown/border.bin",
-      "blockdata_filepath": "data/layouts/OldaleTown/map.bin",
+      "id": "LAYOUT_CHERRYGROVE_CITY",
+      "name": "CherrygroveCity_Layout",
+      "width": 56,
+      "height": 92,
+      "primary_tileset": "gTileset__general_lc",
+      "secondary_tileset": "gTileset__cherrygrove_city_lc",
+      "border_filepath": "data/layouts/_CherrygroveCity/border.bin",
+      "blockdata_filepath": "data/layouts/_CherrygroveCity/map.bin",
       "layout_version": "emerald"
     },
     {

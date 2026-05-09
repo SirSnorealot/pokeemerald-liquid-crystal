@@ -1767,6 +1767,28 @@ const u16 gTilesetPalettes_goldenrod_city_lc[][16] =
 
 const u32 gTilesetTiles_goldenrod_city_lc[] = INCGFX_U32("data/tilesets/secondary/_goldenrod_city_lc/tiles.png", ".4bpp.fastSmol", "-num_tiles 497 -Wnum_tiles");
 
+const u16 gTilesetPalettes_cherrygrove_city_lc[][16] =
+{
+	INCGFX_U16("data/tilesets/secondary/_cherrygrove_city_lc/palettes/00.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/secondary/_cherrygrove_city_lc/palettes/01.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/secondary/_cherrygrove_city_lc/palettes/02.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/secondary/_cherrygrove_city_lc/palettes/03.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/secondary/_cherrygrove_city_lc/palettes/04.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/secondary/_cherrygrove_city_lc/palettes/05.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/secondary/_cherrygrove_city_lc/palettes/06.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/secondary/_cherrygrove_city_lc/palettes/07.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/secondary/_cherrygrove_city_lc/palettes/08.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/secondary/_cherrygrove_city_lc/palettes/09.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/secondary/_cherrygrove_city_lc/palettes/10.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/secondary/_cherrygrove_city_lc/palettes/11.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/secondary/_cherrygrove_city_lc/palettes/12.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/secondary/_cherrygrove_city_lc/palettes/13.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/secondary/_cherrygrove_city_lc/palettes/14.pal", ".gbapal"),
+	INCGFX_U16("data/tilesets/secondary/_cherrygrove_city_lc/palettes/15.pal", ".gbapal"),
+};
+
+const u32 gTilesetTiles_cherrygrove_city_lc[] = INCGFX_U32("data/tilesets/secondary/_cherrygrove_city_lc/tiles.png", ".4bpp.fastSmol", "-num_tiles 504 -Wnum_tiles");
+
 #if IS_FRLG
 
 const u32 gTilesetTiles_Building_Frlg[] = INCGFX_U32("data/tilesets/primary/building_frlg/tiles.png", ".4bpp.smol");

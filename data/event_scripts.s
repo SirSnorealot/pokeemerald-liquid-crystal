@@ -135,7 +135,7 @@ gStdScripts_End::
 	.include "data/maps/SootopolisCity/scripts.inc"
 	.include "data/maps/EverGrandeCity/scripts.inc"
 	.include "data/maps/NewBarkTown/scripts.inc"
-	.include "data/maps/OldaleTown/scripts.inc"
+	.include "data/maps/CherrygroveCity/scripts.inc"
 	.include "data/maps/DewfordTown/scripts.inc"
 	.include "data/maps/LavaridgeTown/scripts.inc"
 	.include "data/maps/FallarborTown/scripts.inc"
