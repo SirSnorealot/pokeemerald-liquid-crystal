@@ -231,6 +231,9 @@ const u16 gMetatileAttributes_goldenrod_city_lc[] = INCBIN_U16("data/tilesets/se
 const u16 gMetatiles_cherrygrove_city_lc[] = INCBIN_U16("data/tilesets/secondary/_cherrygrove_city_lc/metatiles.bin");
 const u16 gMetatileAttributes_cherrygrove_city_lc[] = INCBIN_U16("data/tilesets/secondary/_cherrygrove_city_lc/metatile_attributes.bin");
 
+const u16 gMetatiles_route_31_lc[] = INCBIN_U16("data/tilesets/secondary/_route_31_lc/metatiles.bin");
+const u16 gMetatileAttributes_route_31_lc[] = INCBIN_U16("data/tilesets/secondary/_route_31_lc/metatile_attributes.bin");
+
 #else
 
 const u16 gMetatiles_Building_Frlg[] = INCBIN_U16("data/tilesets/primary/building_frlg/metatiles.bin");

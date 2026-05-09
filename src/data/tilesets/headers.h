@@ -910,6 +910,17 @@ const struct Tileset gTileset__cherrygrove_city_lc =
     .callback = NULL,
 };
 
+const struct Tileset gTileset__route_31_lc =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_route_31_lc,
+    .palettes = gTilesetPalettes_route_31_lc,
+    .metatiles = gMetatiles_route_31_lc,
+    .metatileAttributes = gMetatileAttributes_route_31_lc,
+    .callback = NULL,
+};
+
 
 #else
 

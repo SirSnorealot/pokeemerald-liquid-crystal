@@ -300,8 +300,8 @@
           }
         },
         {
-          "map": "MAP_ROUTE103",
-          "base_label": "gRoute103",
+          "map": "MAP_ROUTE31",
+          "base_label": "gRoute31",
           "land_mons": {
             "encounter_rate": 20,
             "mons": [
