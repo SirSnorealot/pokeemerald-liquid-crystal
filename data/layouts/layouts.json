@@ -222,14 +222,14 @@
       "layout_version": "emerald"
     },
     {
-      "id": "LAYOUT_ROUTE105",
-      "name": "Route105_Layout",
-      "width": 40,
-      "height": 80,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Dewford",
-      "border_filepath": "data/layouts/Route105/border.bin",
-      "blockdata_filepath": "data/layouts/Route105/map.bin",
+      "id": "LAYOUT_ROUTE33",
+      "name": "Route33_Layout",
+      "width": 44,
+      "height": 30,
+      "primary_tileset": "gTileset__general_lc",
+      "secondary_tileset": "gTileset__new_bark_town_lc",
+      "border_filepath": "data/layouts/_Route33/border.bin",
+      "blockdata_filepath": "data/layouts/_Route33/map.bin",
       "layout_version": "emerald"
     },
     {
