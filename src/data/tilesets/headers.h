@@ -921,6 +921,17 @@ const struct Tileset gTileset__route_31_lc =
     .callback = NULL,
 };
 
+const struct Tileset gTileset__violet_city_lc =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_violet_city_lc,
+    .palettes = gTilesetPalettes_violet_city_lc,
+    .metatiles = gMetatiles_violet_city_lc,
+    .metatileAttributes = gMetatileAttributes_violet_city_lc,
+    .callback = NULL,
+};
+
 
 #else
 

@@ -3,12 +3,12 @@
     "gMapGroup_TownsAndRoutes",
     "gMapGroup_IndoorNewBark",
     "gMapGroup_IndoorCherrygrove",
+    "gMapGroup_IndoorVioletCity",
     "gMapGroup_IndoorDewford",
     "gMapGroup_IndoorLavaridge",
     "gMapGroup_IndoorFallarbor",
     "gMapGroup_IndoorVerdanturf",
     "gMapGroup_IndoorPacifidlog",
-    "gMapGroup_IndoorPetalburg",
     "gMapGroup_IndoorSlateport",
     "gMapGroup_IndoorGoldenrod",
     "gMapGroup_IndoorRustboro",
@@ -38,7 +38,7 @@
   "gMapGroup_TownsAndRoutes": [
     "NewBarkTown",
     "CherrygroveCity",
-    "PetalburgCity",
+    "VioletCity",
     "SlateportCity",
     "GoldenrodCity",
     "RustboroCity",
@@ -108,6 +108,15 @@
     "OldaleTown_PokemonCenter_2F",
     "OldaleTown_Mart"
   ],
+  "gMapGroup_IndoorVioletCity": [
+    "PetalburgCity_WallysHouse",
+    "PetalburgCity_Gym",
+    "PetalburgCity_House1",
+    "PetalburgCity_House2",
+    "PetalburgCity_PokemonCenter_1F",
+    "PetalburgCity_PokemonCenter_2F",
+    "PetalburgCity_Mart"
+  ],
   "gMapGroup_IndoorDewford": [
     "DewfordTown_House1",
     "DewfordTown_PokemonCenter_1F",
@@ -154,15 +163,6 @@
     "PacifidlogTown_House3",
     "PacifidlogTown_House4",
     "PacifidlogTown_House5"
-  ],
-  "gMapGroup_IndoorPetalburg": [
-    "PetalburgCity_WallysHouse",
-    "PetalburgCity_Gym",
-    "PetalburgCity_House1",
-    "PetalburgCity_House2",
-    "PetalburgCity_PokemonCenter_1F",
-    "PetalburgCity_PokemonCenter_2F",
-    "PetalburgCity_Mart"
   ],
   "gMapGroup_IndoorSlateport": [
     "SlateportCity_SternsShipyard_1F",

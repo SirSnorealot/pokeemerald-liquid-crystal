@@ -1,7 +1,7 @@
 
 {
 "required_maps":   [
-    ["MAP_PETALBURG_CITY", 112],
+    ["MAP_VIOLET_CITY", 112],
     ["MAP_SLATEPORT_CITY", 112],
     ["MAP_GOLDENROD_CITY", 112],
     ["MAP_RUSTBORO_CITY", 112],

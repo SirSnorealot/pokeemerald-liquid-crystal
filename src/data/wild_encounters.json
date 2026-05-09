@@ -9027,8 +9027,8 @@
           }
         },
         {
-          "map": "MAP_PETALBURG_CITY",
-          "base_label": "gPetalburgCity",
+          "map": "MAP_VIOLET_CITY",
+          "base_label": "gVioletCity",
           "water_mons": {
             "encounter_rate": 1,
             "mons": [

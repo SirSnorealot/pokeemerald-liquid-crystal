@@ -2,14 +2,14 @@
   "layouts_table_label": "gMapLayouts",
   "layouts": [
     {
-      "id": "LAYOUT_PETALBURG_CITY",
-      "name": "PetalburgCity_Layout",
-      "width": 30,
-      "height": 30,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Petalburg",
-      "border_filepath": "data/layouts/PetalburgCity/border.bin",
-      "blockdata_filepath": "data/layouts/PetalburgCity/map.bin",
+      "id": "LAYOUT_VIOLET_CITY",
+      "name": "VioletCity_Layout",
+      "width": 54,
+      "height": 42,
+      "primary_tileset": "gTileset__general_lc",
+      "secondary_tileset": "gTileset__violet_city_lc",
+      "border_filepath": "data/layouts/_VioletCity/border.bin",
+      "blockdata_filepath": "data/layouts/_VioletCity/map.bin",
       "layout_version": "emerald"
     },
     {
