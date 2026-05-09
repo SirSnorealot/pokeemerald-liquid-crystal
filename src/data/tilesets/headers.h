@@ -888,6 +888,17 @@ const struct Tileset gTileset__elms_lab_lc =
     .callback = NULL,
 };
 
+const struct Tileset gTileset__goldenrod_city_lc =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_goldenrod_city_lc,
+    .palettes = gTilesetPalettes_goldenrod_city_lc,
+    .metatiles = gMetatiles_goldenrod_city_lc,
+    .metatileAttributes = gMetatileAttributes_goldenrod_city_lc,
+    .callback = NULL,
+};
+
 #else
 
 // FRLG tilesets

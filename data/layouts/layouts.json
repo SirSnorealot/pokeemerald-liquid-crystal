@@ -24,14 +24,14 @@
       "layout_version": "emerald"
     },
     {
-      "id": "LAYOUT_MAUVILLE_CITY",
-      "name": "MauvilleCity_Layout",
-      "width": 40,
-      "height": 20,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Mauville",
-      "border_filepath": "data/layouts/MauvilleCity/border.bin",
-      "blockdata_filepath": "data/layouts/MauvilleCity/map.bin",
+      "id": "LAYOUT_GOLDENROD_CITY",
+      "name": "GoldenrodCity_Layout",
+      "width": 76,
+      "height": 54,
+      "primary_tileset": "gTileset__general_lc",
+      "secondary_tileset": "gTileset__goldenrod_city_lc",
+      "border_filepath": "data/layouts/_GoldenrodCity/border.bin",
+      "blockdata_filepath": "data/layouts/_GoldenrodCity/map.bin",
       "layout_version": "emerald"
     },
     {

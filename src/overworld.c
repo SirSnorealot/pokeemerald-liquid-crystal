@@ -1260,8 +1260,8 @@ u16 GetWarpDestinationMusic(void)
     }
     else
     {
-        if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_MAUVILLE_CITY)
-         && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_MAUVILLE_CITY))
+        if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_GOLDENROD_CITY)
+         && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_GOLDENROD_CITY))
             return MUS_ROUTE110;
         else
             return MUS_ROUTE119;
