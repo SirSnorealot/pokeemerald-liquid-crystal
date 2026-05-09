@@ -2,7 +2,7 @@
   "group_order": [
     "gMapGroup_TownsAndRoutes",
     "gMapGroup_IndoorNewBark",
-    "gMapGroup_IndoorOldale",
+    "gMapGroup_IndoorCherrygrove",
     "gMapGroup_IndoorDewford",
     "gMapGroup_IndoorLavaridge",
     "gMapGroup_IndoorFallarbor",
@@ -10,7 +10,7 @@
     "gMapGroup_IndoorPacifidlog",
     "gMapGroup_IndoorPetalburg",
     "gMapGroup_IndoorSlateport",
-    "gMapGroup_IndoorMauville",
+    "gMapGroup_IndoorGoldenrod",
     "gMapGroup_IndoorRustboro",
     "gMapGroup_IndoorFortree",
     "gMapGroup_IndoorLilycove",
@@ -36,6 +36,8 @@
     "gMapGroup_IndoorRoute124"
   ],
   "gMapGroup_TownsAndRoutes": [
+    "NewBarkTown",
+    "CherrygroveCity",
     "PetalburgCity",
     "SlateportCity",
     "GoldenrodCity",
@@ -45,8 +47,6 @@
     "MossdeepCity",
     "SootopolisCity",
     "EverGrandeCity",
-    "NewBarkTown",
-    "CherrygroveCity",
     "DewfordTown",
     "LavaridgeTown",
     "FallarborTown",
@@ -101,7 +101,7 @@
     "LittlerootTown_MaysHouse_2F",
     "NewBarkTown_ProfessorElmsLab"
   ],
-  "gMapGroup_IndoorOldale": [
+  "gMapGroup_IndoorCherrygrove": [
     "OldaleTown_House1",
     "OldaleTown_House2",
     "OldaleTown_PokemonCenter_1F",
@@ -180,7 +180,7 @@
     "SlateportCity_PokemonCenter_2F",
     "SlateportCity_Mart"
   ],
-  "gMapGroup_IndoorMauville": [
+  "gMapGroup_IndoorGoldenrod": [
     "MauvilleCity_Gym",
     "MauvilleCity_BikeShop",
     "MauvilleCity_House1",
