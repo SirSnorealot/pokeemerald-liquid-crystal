@@ -354,14 +354,14 @@
       "layout_version": "emerald"
     },
     {
-      "id": "LAYOUT_ROUTE117",
-      "name": "Route117_Layout",
-      "width": 60,
-      "height": 20,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Mauville",
-      "border_filepath": "data/layouts/Route117/border.bin",
-      "blockdata_filepath": "data/layouts/Route117/map.bin",
+      "id": "LAYOUT_ROUTE34",
+      "name": "Route34_Layout",
+      "width": 54,
+      "height": 112,
+      "primary_tileset": "gTileset__general_lc",
+      "secondary_tileset": "gTileset__goldenrod_city_lc",
+      "border_filepath": "data/layouts/_Route34/border.bin",
+      "blockdata_filepath": "data/layouts/_Route34/map.bin",
       "layout_version": "emerald"
     },
     {
