@@ -549,7 +549,7 @@ gStdScripts_End::
 	.include "data/maps/TrainerHill_3F/scripts.inc"
 	.include "data/maps/TrainerHill_4F/scripts.inc"
 	.include "data/maps/TrainerHill_Roof/scripts.inc"
-	.include "data/maps/NavelRock_Exterior/scripts.inc"
+	.include "data/maps/Route40_2/scripts.inc"
 	.include "data/maps/NavelRock_Harbor/scripts.inc"
 	.include "data/maps/NavelRock_Entrance/scripts.inc"
 	.include "data/maps/NavelRock_B1F/scripts.inc"

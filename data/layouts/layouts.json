@@ -4622,14 +4622,14 @@
       "layout_version": "emerald"
     },
     {
-      "id": "LAYOUT_NAVEL_ROCK_EXTERIOR",
-      "name": "NavelRock_Exterior_Layout",
-      "width": 21,
-      "height": 24,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Dewford",
-      "border_filepath": "data/layouts/NavelRock_Exterior/border.bin",
-      "blockdata_filepath": "data/layouts/NavelRock_Exterior/map.bin",
+      "id": "LAYOUT_ROUTE_40_2",
+      "name": "Route_40_2_Layout",
+      "width": 56,
+      "height": 56,
+      "primary_tileset": "gTileset__general_lc",
+      "secondary_tileset": "gTileset__olivine_port_lc",
+      "border_filepath": "data/layouts/_route40_2/border.bin",
+      "blockdata_filepath": "data/layouts/_route40_2/map.bin",
       "layout_version": "emerald"
     },
     {

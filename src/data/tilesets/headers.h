@@ -965,6 +965,17 @@ const struct Tileset gTileset__olivine_city_lc =
     .callback = NULL,
 };
 
+const struct Tileset gTileset__olivine_port_lc =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_olivine_port_lc,
+    .palettes = gTilesetPalettes_olivine_port_lc,
+    .metatiles = gMetatiles_olivine_port_lc,
+    .metatileAttributes = gMetatileAttributes_olivine_port_lc,
+    .callback = NULL,
+};
+
 #else
 
 // FRLG tilesets
