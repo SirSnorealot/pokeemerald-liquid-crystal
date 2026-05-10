@@ -244,14 +244,14 @@
       "layout_version": "emerald"
     },
     {
-      "id": "LAYOUT_ROUTE107",
-      "name": "Route107_Layout",
-      "width": 60,
-      "height": 20,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Dewford",
-      "border_filepath": "data/layouts/Route107/border.bin",
-      "blockdata_filepath": "data/layouts/Route107/map.bin",
+      "id": "LAYOUT_ROUTE36",
+      "name": "Route36_Layout",
+      "width": 64,
+      "height": 26,
+      "primary_tileset": "gTileset__general_lc",
+      "secondary_tileset": "gTileset__violet_city_lc",
+      "border_filepath": "data/layouts/_Route36/border.bin",
+      "blockdata_filepath": "data/layouts/_Route36/map.bin",
       "layout_version": "emerald"
     },
     {

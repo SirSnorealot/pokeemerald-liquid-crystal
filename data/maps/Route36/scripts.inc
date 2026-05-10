@@ -1,4 +1,4 @@
-Route107_MapScripts::
+Route36_MapScripts::
 	.byte 0
 
 Route107_EventScript_Darrin::
