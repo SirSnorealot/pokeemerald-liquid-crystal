@@ -1,7 +1,7 @@
 {
-  "id": "MAP_ROUTE109",
-  "name": "Route109",
-  "layout": "LAYOUT_ROUTE109",
+  "id": "MAP_ROUTE38",
+  "name": "Route38",
+  "layout": "LAYOUT_ROUTE38",
   "music": "MUS_ROUTE104",
   "region_map_section": "MAPSEC_ROUTE_109",
   "requires_flash": false,
@@ -12,7 +12,13 @@
   "allow_running": true,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": null,
+  "connections": [
+    {
+      "map": "MAP_ECRUTEAK_CITY",
+      "offset": -14,
+      "direction": "right"
+    }
+  ],
   "object_events": [
     {
       "local_id": "LOCALID_ROUTE109_BOAT",
@@ -329,15 +335,7 @@
       "flag": "0"
     }
   ],
-  "warp_events": [
-    {
-      "x": 12,
-      "y": 5,
-      "elevation": 0,
-      "dest_map": "MAP_ROUTE109_SEASHORE_HOUSE",
-      "dest_warp_id": "0"
-    }
-  ],
+  "warp_events": [],
   "coord_events": [],
   "bg_events": [
     {

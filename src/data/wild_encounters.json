@@ -3087,8 +3087,8 @@
           }
         },
         {
-          "map": "MAP_ROUTE109",
-          "base_label": "gRoute109",
+          "map": "MAP_ROUTE38",
+          "base_label": "gRoute38",
           "water_mons": {
             "encounter_rate": 4,
             "mons": [

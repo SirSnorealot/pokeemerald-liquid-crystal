@@ -67,22 +67,7 @@
       "flag": "0"
     }
   ],
-  "warp_events": [
-    {
-      "x": 6,
-      "y": 9,
-      "elevation": 0,
-      "dest_map": "MAP_ROUTE109",
-      "dest_warp_id": "0"
-    },
-    {
-      "x": 7,
-      "y": 9,
-      "elevation": 0,
-      "dest_map": "MAP_ROUTE109",
-      "dest_warp_id": "0"
-    }
-  ],
+  "warp_events": [],
   "coord_events": [],
   "bg_events": []
 }

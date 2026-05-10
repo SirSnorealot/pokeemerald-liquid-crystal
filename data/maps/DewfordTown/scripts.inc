@@ -157,12 +157,12 @@ DewfordTown_EventScript_SailToSlateport::
 	applymovement LOCALID_PLAYER, DewfordTown_Movement_SailToSlateport
 	waitmovement 0
 	call Common_EventScript_StopBrineysBoatMusic
-	showobjectat LOCALID_PLAYER, MAP_ROUTE109
+	showobjectat LOCALID_PLAYER, MAP_ROUTE38
 	applymovement LOCALID_PLAYER, DewfordTown_Movement_ExitBoatSlateport
 	waitmovement 0
 	setobjectxyperm LOCALID_ROUTE109_BRINEY, 21, 26
 	addobject LOCALID_ROUTE109_BRINEY
-	setobjectsubpriority LOCALID_ROUTE109_BRINEY, MAP_ROUTE109, 0
+	setobjectsubpriority LOCALID_ROUTE109_BRINEY, MAP_ROUTE38, 0
 	applymovement LOCALID_ROUTE109_BRINEY, DewfordTown_Movement_BrineyExitBoat
 	waitmovement 0
 	clearflag FLAG_HIDE_ROUTE_109_MR_BRINEY
@@ -175,7 +175,7 @@ DewfordTown_EventScript_SailToSlateport::
 	closemessage
 	copyvar VAR_BRINEY_LOCATION, VAR_0x8008
 	resetobjectsubpriority LOCALID_PLAYER, MAP_DEWFORD_TOWN
-	resetobjectsubpriority LOCALID_ROUTE109_BRINEY, MAP_ROUTE109
+	resetobjectsubpriority LOCALID_ROUTE109_BRINEY, MAP_ROUTE38
 	copyobjectxytoperm LOCALID_ROUTE109_BRINEY
 	release
 	end
