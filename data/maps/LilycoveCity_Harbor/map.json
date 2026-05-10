@@ -84,22 +84,7 @@
       "flag": "FLAG_HIDE_LILYCOVE_HARBOR_EVENT_TICKET_TAKER"
     }
   ],
-  "warp_events": [
-    {
-      "x": 11,
-      "y": 14,
-      "elevation": 0,
-      "dest_map": "MAP_LILYCOVE_CITY",
-      "dest_warp_id": "12"
-    },
-    {
-      "x": 12,
-      "y": 14,
-      "elevation": 0,
-      "dest_map": "MAP_LILYCOVE_CITY",
-      "dest_warp_id": "12"
-    }
-  ],
+  "warp_events": [],
   "coord_events": [],
   "bg_events": []
 }

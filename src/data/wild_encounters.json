@@ -8493,8 +8493,8 @@
           }
         },
         {
-          "map": "MAP_LILYCOVE_CITY",
-          "base_label": "gLilycoveCity",
+          "map": "MAP_OLIVINE_CITY",
+          "base_label": "gOlivineCity",
           "water_mons": {
             "encounter_rate": 4,
             "mons": [

@@ -57,14 +57,14 @@
       "layout_version": "emerald"
     },
     {
-      "id": "LAYOUT_LILYCOVE_CITY",
-      "name": "LilycoveCity_Layout",
-      "width": 80,
-      "height": 40,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Lilycove",
-      "border_filepath": "data/layouts/LilycoveCity/border.bin",
-      "blockdata_filepath": "data/layouts/LilycoveCity/map.bin",
+      "id": "LAYOUT_OLIVINE_CITY",
+      "name": "OlivineCity_Layout",
+      "width": 56,
+      "height": 50,
+      "primary_tileset": "gTileset__general_lc",
+      "secondary_tileset": "gTileset__olivine_city_lc",
+      "border_filepath": "data/layouts/_OlivineCity/border.bin",
+      "blockdata_filepath": "data/layouts/_OlivineCity/map.bin",
       "layout_version": "emerald"
     },
     {

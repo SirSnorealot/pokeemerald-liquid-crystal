@@ -243,6 +243,9 @@ const u16 gMetatileAttributes_route_32_lc[] = INCBIN_U16("data/tilesets/secondar
 const u16 gMetatiles_route_35_lc[] = INCBIN_U16("data/tilesets/secondary/_route_35_lc/metatiles.bin");
 const u16 gMetatileAttributes_route_35_lc[] = INCBIN_U16("data/tilesets/secondary/_route_35_lc/metatile_attributes.bin");
 
+const u16 gMetatiles_olivine_city_lc[] = INCBIN_U16("data/tilesets/secondary/_olivine_city_lc/metatiles.bin");
+const u16 gMetatileAttributes_olivine_city_lc[] = INCBIN_U16("data/tilesets/secondary/_olivine_city_lc/metatile_attributes.bin");
+
 #else
 
 const u16 gMetatiles_Building_Frlg[] = INCBIN_U16("data/tilesets/primary/building_frlg/metatiles.bin");

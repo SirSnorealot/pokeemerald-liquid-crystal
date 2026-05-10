@@ -28,22 +28,7 @@
       "flag": "0"
     }
   ],
-  "warp_events": [
-    {
-      "x": 2,
-      "y": 7,
-      "elevation": 0,
-      "dest_map": "MAP_LILYCOVE_CITY",
-      "dest_warp_id": "9"
-    },
-    {
-      "x": 3,
-      "y": 7,
-      "elevation": 0,
-      "dest_map": "MAP_LILYCOVE_CITY",
-      "dest_warp_id": "9"
-    }
-  ],
+  "warp_events": [],
   "coord_events": [],
   "bg_events": []
 }

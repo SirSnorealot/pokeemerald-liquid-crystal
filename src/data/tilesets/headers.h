@@ -954,6 +954,17 @@ const struct Tileset gTileset__route_35_lc =
     .callback = NULL,
 };
 
+const struct Tileset gTileset__olivine_city_lc =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_olivine_city_lc,
+    .palettes = gTilesetPalettes_olivine_city_lc,
+    .metatiles = gMetatiles_olivine_city_lc,
+    .metatileAttributes = gMetatileAttributes_olivine_city_lc,
+    .callback = NULL,
+};
+
 #else
 
 // FRLG tilesets
