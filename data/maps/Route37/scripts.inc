@@ -1,4 +1,4 @@
-Route108_MapScripts::
+Route37_MapScripts::
 	.byte 0
 
 Route108_EventScript_Jerome::

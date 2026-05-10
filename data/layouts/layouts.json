@@ -255,14 +255,14 @@
       "layout_version": "emerald"
     },
     {
-      "id": "LAYOUT_ROUTE108",
-      "name": "Route108_Layout",
-      "width": 60,
-      "height": 20,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Slateport",
-      "border_filepath": "data/layouts/Route108/border.bin",
-      "blockdata_filepath": "data/layouts/Route108/map.bin",
+      "id": "LAYOUT_ROUTE37",
+      "name": "Route37_Layout",
+      "width": 28,
+      "height": 30,
+      "primary_tileset": "gTileset__general_lc",
+      "secondary_tileset": "gTileset__route_35_lc",
+      "border_filepath": "data/layouts/_Route37/border.bin",
+      "blockdata_filepath": "data/layouts/_Route37/map.bin",
       "layout_version": "emerald"
     },
     {
