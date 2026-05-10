@@ -2820,8 +2820,8 @@
           }
         },
         {
-          "map": "MAP_ROUTE106",
-          "base_label": "gRoute106",
+          "map": "MAP_ROUTE35",
+          "base_label": "gRoute35",
           "water_mons": {
             "encounter_rate": 4,
             "mons": [

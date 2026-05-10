@@ -1,4 +1,4 @@
-Route106_MapScripts::
+Route35_MapScripts::
 	.byte 0
 
 Route106_EventScript_TrainerTipsSign::
