@@ -30,7 +30,7 @@
     },
     {
       "id": "HEAL_LOCATION_SLATEPORT_CITY",
-      "map": "MAP_SLATEPORT_CITY",
+      "map": "MAP_AZALEA_TOWN",
       "x": 19,
       "y": 20,
       "respawn_map": "MAP_SLATEPORT_CITY_POKEMON_CENTER_1F",

@@ -8671,8 +8671,8 @@
           }
         },
         {
-          "map": "MAP_SLATEPORT_CITY",
-          "base_label": "gSlateportCity",
+          "map": "MAP_AZALEA_TOWN",
+          "base_label": "gAzaleaTown",
           "water_mons": {
             "encounter_rate": 4,
             "mons": [

@@ -68,29 +68,7 @@
       "flag": "FLAG_HIDE_SLATEPORT_CITY_STERNS_SHIPYARD_MR_BRINEY"
     }
   ],
-  "warp_events": [
-    {
-      "x": 2,
-      "y": 14,
-      "elevation": 0,
-      "dest_map": "MAP_SLATEPORT_CITY",
-      "dest_warp_id": "2"
-    },
-    {
-      "x": 3,
-      "y": 14,
-      "elevation": 0,
-      "dest_map": "MAP_SLATEPORT_CITY",
-      "dest_warp_id": "2"
-    },
-    {
-      "x": 3,
-      "y": 1,
-      "elevation": 0,
-      "dest_map": "MAP_SLATEPORT_CITY_STERNS_SHIPYARD_2F",
-      "dest_warp_id": "0"
-    }
-  ],
+  "warp_events": [],
   "coord_events": [],
   "bg_events": []
 }

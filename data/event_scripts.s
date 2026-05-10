@@ -126,7 +126,7 @@ gStdScripts_End::
 
 
 	.include "data/maps/VioletCity/scripts.inc"
-	.include "data/maps/SlateportCity/scripts.inc"
+	.include "data/maps/AzaleaTown/scripts.inc"
 	.include "data/maps/GoldenrodCity/scripts.inc"
 	.include "data/maps/RustboroCity/scripts.inc"
 	.include "data/maps/FortreeCity/scripts.inc"

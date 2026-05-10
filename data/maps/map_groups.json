@@ -9,7 +9,7 @@
     "gMapGroup_IndoorFallarbor",
     "gMapGroup_IndoorVerdanturf",
     "gMapGroup_IndoorPacifidlog",
-    "gMapGroup_IndoorSlateport",
+    "gMapGroup_IndoorAzaleaTown",
     "gMapGroup_IndoorGoldenrod",
     "gMapGroup_IndoorRustboro",
     "gMapGroup_IndoorFortree",
@@ -39,7 +39,7 @@
     "NewBarkTown",
     "CherrygroveCity",
     "VioletCity",
-    "SlateportCity",
+    "AzaleaTown",
     "GoldenrodCity",
     "RustboroCity",
     "FortreeCity",
@@ -164,7 +164,7 @@
     "PacifidlogTown_House4",
     "PacifidlogTown_House5"
   ],
-  "gMapGroup_IndoorSlateport": [
+  "gMapGroup_IndoorAzaleaTown": [
     "SlateportCity_SternsShipyard_1F",
     "SlateportCity_SternsShipyard_2F",
     "SlateportCity_BattleTentLobby",
