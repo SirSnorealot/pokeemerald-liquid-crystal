@@ -1,4 +1,4 @@
-Route111_MapScripts::
+Route40_MapScripts::
 	map_script MAP_SCRIPT_ON_LOAD, Route111_OnLoad
 	map_script MAP_SCRIPT_ON_TRANSITION, Route111_OnTransition
 	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, Route111_OnWarp
@@ -85,7 +85,7 @@ Route111_EventScript_SetWinstratesNotDefeated::
 	end
 
 Route111_EventScript_SetLayoutNoMirageTower::
-	setmaplayoutindex LAYOUT_ROUTE111_NO_MIRAGE_TOWER
+	@setmaplayoutindex LAYOUT_ROUTE111_NO_MIRAGE_TOWER
 	return
 
 Route111_EventScript_SetMirageTowerGone::

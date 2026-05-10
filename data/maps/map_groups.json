@@ -18,7 +18,7 @@
     "gMapGroup_IndoorSootopolis",
     "gMapGroup_IndoorEverGrande",
     "gMapGroup_IndoorRoute104",
-    "gMapGroup_IndoorRoute111",
+    "gMapGroup_IndoorRoute40",
     "gMapGroup_IndoorRoute112",
     "gMapGroup_IndoorRoute114",
     "gMapGroup_IndoorRoute116",
@@ -63,7 +63,7 @@
     "Route37",
     "Route38",
     "Route39",
-    "Route111",
+    "Route40",
     "Route112",
     "Route113",
     "Route114",
@@ -299,7 +299,7 @@
     "Route104_MrBrineysHouse",
     "Route104_PrettyPetalFlowerShop"
   ],
-  "gMapGroup_IndoorRoute111": [
+  "gMapGroup_IndoorRoute40": [
     "Route111_WinstrateFamilysHouse",
     "Route111_OldLadysRestStop"
   ],
