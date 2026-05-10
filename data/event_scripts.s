@@ -125,17 +125,17 @@ gStdScripts::
 gStdScripts_End::
 
 
+	.include "data/maps/NewBarkTown/scripts.inc"
+	.include "data/maps/CherrygroveCity/scripts.inc"
 	.include "data/maps/VioletCity/scripts.inc"
 	.include "data/maps/AzaleaTown/scripts.inc"
 	.include "data/maps/GoldenrodCity/scripts.inc"
-	.include "data/maps/RustboroCity/scripts.inc"
+	.include "data/maps/EcruteakCity/scripts.inc"
 	.include "data/maps/FortreeCity/scripts.inc"
 	.include "data/maps/LilycoveCity/scripts.inc"
 	.include "data/maps/MossdeepCity/scripts.inc"
 	.include "data/maps/SootopolisCity/scripts.inc"
 	.include "data/maps/EverGrandeCity/scripts.inc"
-	.include "data/maps/NewBarkTown/scripts.inc"
-	.include "data/maps/CherrygroveCity/scripts.inc"
 	.include "data/maps/DewfordTown/scripts.inc"
 	.include "data/maps/LavaridgeTown/scripts.inc"
 	.include "data/maps/FallarborTown/scripts.inc"

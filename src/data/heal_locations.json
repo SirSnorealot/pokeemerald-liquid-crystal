@@ -46,7 +46,7 @@
     },
     {
       "id": "HEAL_LOCATION_RUSTBORO_CITY",
-      "map": "MAP_RUSTBORO_CITY",
+      "map": "MAP_ECRUTEAK_CITY",
       "x": 16,
       "y": 39,
       "respawn_map": "MAP_RUSTBORO_CITY_POKEMON_CENTER_1F",

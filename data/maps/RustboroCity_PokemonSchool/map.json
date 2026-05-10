@@ -106,22 +106,7 @@
       "flag": "FLAG_HIDE_RUSTBORO_CITY_POKEMON_SCHOOL_SCOTT"
     }
   ],
-  "warp_events": [
-    {
-      "x": 5,
-      "y": 10,
-      "elevation": 0,
-      "dest_map": "MAP_RUSTBORO_CITY",
-      "dest_warp_id": "4"
-    },
-    {
-      "x": 6,
-      "y": 10,
-      "elevation": 0,
-      "dest_map": "MAP_RUSTBORO_CITY",
-      "dest_warp_id": "4"
-    }
-  ],
+  "warp_events": [],
   "coord_events": [],
   "bg_events": [
     {
