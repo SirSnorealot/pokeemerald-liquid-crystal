@@ -1,4 +1,4 @@
-PacifidlogTown_MapScripts::
+CianwoodCity_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, PacifidlogTown_OnTransition
 	map_script MAP_SCRIPT_ON_RESUME, PacifidlogTown_OnResume
 	.byte 0

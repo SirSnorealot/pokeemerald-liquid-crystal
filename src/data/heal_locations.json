@@ -154,7 +154,7 @@
     },
     {
       "id": "HEAL_LOCATION_PACIFIDLOG_TOWN",
-      "map": "MAP_PACIFIDLOG_TOWN",
+      "map": "MAP_CIANWOOD_CITY",
       "x": 8,
       "y": 16,
       "respawn_map": "MAP_PACIFIDLOG_TOWN_POKEMON_CENTER_1F",

@@ -976,7 +976,7 @@ const struct Tileset gTileset__olivine_port_lc =
     .callback = NULL,
 };
 
-const struct Tileset gTileset_cianwood_city_lc =
+const struct Tileset gTileset__cianwood_city_lc =
 {
     .isCompressed = TRUE,
     .isSecondary = TRUE,

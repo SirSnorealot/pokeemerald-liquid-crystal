@@ -167,14 +167,14 @@
       "layout_version": "emerald"
     },
     {
-      "id": "LAYOUT_PACIFIDLOG_TOWN",
-      "name": "PacifidlogTown_Layout",
-      "width": 20,
-      "height": 40,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Pacifidlog",
-      "border_filepath": "data/layouts/PacifidlogTown/border.bin",
-      "blockdata_filepath": "data/layouts/PacifidlogTown/map.bin",
+      "id": "LAYOUT_CIANWOOD_CITY",
+      "name": "CianwoodCity_Layout",
+      "width": 48,
+      "height": 76,
+      "primary_tileset": "gTileset__general_lc",
+      "secondary_tileset": "gTileset__cianwood_city_lc",
+      "border_filepath": "data/layouts/_CianwoodCity/border.bin",
+      "blockdata_filepath": "data/layouts/_CianwoodCity/map.bin",
       "layout_version": "emerald"
     },
     {
@@ -304,7 +304,7 @@
       "width": 70,
       "height": 56,
       "primary_tileset": "gTileset__general_lc",
-      "secondary_tileset": "gTileset_cianwood_city_lc",
+      "secondary_tileset": "gTileset__cianwood_city_lc",
       "border_filepath": "data/layouts/_Route41/border.bin",
       "blockdata_filepath": "data/layouts/_Route41/map.bin",
       "layout_version": "emerald"

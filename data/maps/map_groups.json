@@ -8,11 +8,11 @@
     "gMapGroup_IndoorGoldenrod",
     "gMapGroup_IndoorEcruteakCity",
     "gMapGroup_IndoorOlivineCity",
+    "gMapGroup_IndoorCianwoodCity",
     "gMapGroup_IndoorDewford",
     "gMapGroup_IndoorLavaridge",
     "gMapGroup_IndoorFallarbor",
     "gMapGroup_IndoorVerdanturf",
-    "gMapGroup_IndoorPacifidlog",
     "gMapGroup_IndoorFortree",
     "gMapGroup_IndoorMossdeep",
     "gMapGroup_IndoorSootopolis",
@@ -43,6 +43,7 @@
     "GoldenrodCity",
     "EcruteakCity",
     "OlivineCity",
+    "CianwoodCity",
     "FortreeCity",
     "MossdeepCity",
     "SootopolisCity",
@@ -51,7 +52,6 @@
     "LavaridgeTown",
     "FallarborTown",
     "VerdanturfTown",
-    "PacifidlogTown",
     "Route29",
     "Route30",
     "Route31",
@@ -188,6 +188,15 @@
     "LilycoveCity_DepartmentStoreRooftop",
     "LilycoveCity_DepartmentStoreElevator"
   ],
+  "gMapGroup_IndoorCianwoodCity": [
+    "PacifidlogTown_PokemonCenter_1F",
+    "PacifidlogTown_PokemonCenter_2F",
+    "PacifidlogTown_House1",
+    "PacifidlogTown_House2",
+    "PacifidlogTown_House3",
+    "PacifidlogTown_House4",
+    "PacifidlogTown_House5"
+  ],
   "gMapGroup_IndoorDewford": [
     "DewfordTown_House1",
     "DewfordTown_PokemonCenter_1F",
@@ -225,15 +234,6 @@
     "VerdanturfTown_WandasHouse",
     "VerdanturfTown_FriendshipRatersHouse",
     "VerdanturfTown_House"
-  ],
-  "gMapGroup_IndoorPacifidlog": [
-    "PacifidlogTown_PokemonCenter_1F",
-    "PacifidlogTown_PokemonCenter_2F",
-    "PacifidlogTown_House1",
-    "PacifidlogTown_House2",
-    "PacifidlogTown_House3",
-    "PacifidlogTown_House4",
-    "PacifidlogTown_House5"
   ],
   "gMapGroup_IndoorFortree": [
     "FortreeCity_House1",
