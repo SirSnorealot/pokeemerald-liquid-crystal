@@ -1,7 +1,7 @@
 {
-  "id": "MAP_ROUTE112",
-  "name": "Route112",
-  "layout": "LAYOUT_ROUTE112",
+  "id": "MAP_ROUTE41",
+  "name": "Route41",
+  "layout": "LAYOUT_ROUTE41",
   "music": "MUS_ROUTE110",
   "region_map_section": "MAPSEC_ROUTE_112",
   "requires_flash": false,
@@ -14,19 +14,9 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "map": "MAP_ROUTE113",
-      "offset": -60,
-      "direction": "up"
-    },
-    {
-      "map": "MAP_LAVARIDGE_TOWN",
-      "offset": 40,
-      "direction": "left"
-    },
-    {
       "map": "MAP_ROUTE40",
-      "offset": -20,
-      "direction": "right"
+      "offset": 0,
+      "direction": "up"
     }
   ],
   "object_events": [
@@ -215,50 +205,7 @@
       "flag": "0"
     }
   ],
-  "warp_events": [
-    {
-      "x": 28,
-      "y": 27,
-      "elevation": 0,
-      "dest_map": "MAP_ROUTE112_CABLE_CAR_STATION",
-      "dest_warp_id": "0"
-    },
-    {
-      "x": 29,
-      "y": 27,
-      "elevation": 0,
-      "dest_map": "MAP_ROUTE112_CABLE_CAR_STATION",
-      "dest_warp_id": "1"
-    },
-    {
-      "x": 6,
-      "y": 46,
-      "elevation": 3,
-      "dest_map": "MAP_JAGGED_PASS",
-      "dest_warp_id": "0"
-    },
-    {
-      "x": 7,
-      "y": 46,
-      "elevation": 3,
-      "dest_map": "MAP_JAGGED_PASS",
-      "dest_warp_id": "1"
-    },
-    {
-      "x": 11,
-      "y": 36,
-      "elevation": 0,
-      "dest_map": "MAP_FIERY_PATH",
-      "dest_warp_id": "0"
-    },
-    {
-      "x": 22,
-      "y": 10,
-      "elevation": 0,
-      "dest_map": "MAP_FIERY_PATH",
-      "dest_warp_id": "1"
-    }
-  ],
+  "warp_events": [],
   "coord_events": [],
   "bg_events": [
     {

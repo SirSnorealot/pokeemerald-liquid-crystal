@@ -249,6 +249,9 @@ const u16 gMetatileAttributes_olivine_city_lc[] = INCBIN_U16("data/tilesets/seco
 const u16 gMetatiles_olivine_port_lc[] = INCBIN_U16("data/tilesets/secondary/_olivine_port_lc/metatiles.bin");
 const u16 gMetatileAttributes_olivine_port_lc[] = INCBIN_U16("data/tilesets/secondary/_olivine_port_lc/metatile_attributes.bin");
 
+const u16 gMetatiles_cianwood_city_lc[] = INCBIN_U16("data/tilesets/secondary/_cianwood_city_lc/metatiles.bin");
+const u16 gMetatileAttributes_cianwood_city_lc[] = INCBIN_U16("data/tilesets/secondary/_cianwood_city_lc/metatile_attributes.bin");
+
 #else
 
 const u16 gMetatiles_Building_Frlg[] = INCBIN_U16("data/tilesets/primary/building_frlg/metatiles.bin");

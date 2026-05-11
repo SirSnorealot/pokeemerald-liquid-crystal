@@ -299,14 +299,14 @@
       "layout_version": "emerald"
     },
     {
-      "id": "LAYOUT_ROUTE112",
-      "name": "Route112_Layout",
-      "width": 40,
-      "height": 60,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Lavaridge",
-      "border_filepath": "data/layouts/Route112/border.bin",
-      "blockdata_filepath": "data/layouts/Route112/map.bin",
+      "id": "LAYOUT_ROUTE41",
+      "name": "Route41_Layout",
+      "width": 70,
+      "height": 56,
+      "primary_tileset": "gTileset__general_lc",
+      "secondary_tileset": "gTileset_cianwood_city_lc",
+      "border_filepath": "data/layouts/_Route41/border.bin",
+      "blockdata_filepath": "data/layouts/_Route41/map.bin",
       "layout_version": "emerald"
     },
     {

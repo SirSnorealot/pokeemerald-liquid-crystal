@@ -976,6 +976,17 @@ const struct Tileset gTileset__olivine_port_lc =
     .callback = NULL,
 };
 
+const struct Tileset gTileset_cianwood_city_lc =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_cianwood_city_lc,
+    .palettes = gTilesetPalettes_cianwood_city_lc,
+    .metatiles = gMetatiles_cianwood_city_lc,
+    .metatileAttributes = gMetatileAttributes_cianwood_city_lc,
+    .callback = NULL,
+};
+
 #else
 
 // FRLG tilesets

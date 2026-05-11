@@ -19,7 +19,7 @@
     "gMapGroup_IndoorEverGrande",
     "gMapGroup_IndoorRoute104",
     "gMapGroup_IndoorRoute40",
-    "gMapGroup_IndoorRoute112",
+    "gMapGroup_IndoorRoute41",
     "gMapGroup_IndoorRoute114",
     "gMapGroup_IndoorRoute116",
     "gMapGroup_IndoorRoute117",
@@ -65,7 +65,7 @@
     "Route39",
     "Route40",
     "Route40_2",
-    "Route112",
+    "Route41",
     "Route113",
     "Route114",
     "Route115",
@@ -304,7 +304,7 @@
     "Route111_WinstrateFamilysHouse",
     "Route111_OldLadysRestStop"
   ],
-  "gMapGroup_IndoorRoute112": [
+  "gMapGroup_IndoorRoute41": [
     "Route112_CableCarStation",
     "MtChimney_CableCarStation"
   ],
