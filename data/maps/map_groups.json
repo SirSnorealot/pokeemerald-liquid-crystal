@@ -93,7 +93,8 @@
     "Underwater_Route128",
     "Underwater_Route129",
     "Underwater_Route105",
-    "Underwater_Route125"
+    "Underwater_Route125",
+    "OutskirtIsland"
   ],
   "gMapGroup_IndoorNewBark": [
     "NewBarkTown_PlayersHouse_1F",
@@ -505,7 +506,6 @@
     "BattleFrontier_BattleTowerElevator",
     "BattleFrontier_BattleTowerCorridor",
     "BattleFrontier_BattleTowerBattleRoom",
-    "SouthernIsland_Exterior",
     "SouthernIsland_Interior",
     "SafariZone_RestHouse",
     "SafariZone_Northeast",

@@ -52,7 +52,7 @@ LilycoveCity_Harbor_EventScript_FerryRegularLocationSelect::
 
 LilycoveCity_Harbor_EventScript_GoToSouthernIsland::
 	call LilycoveCity_Harbor_EventScript_BoardFerry
-	warp MAP_SOUTHERN_ISLAND_EXTERIOR, 13, 22
+	warp MAP_OUTSKIRT_ISLAND, 13, 22
 	waitstate
 	release
 	end
@@ -197,7 +197,7 @@ LilycoveCity_Harbor_EventScript_EonTicketFirstTime::
 LilycoveCity_Harbor_EventScript_GoToSouthernIslandFirstTime::
 	closemessage
 	call LilycoveCity_Harbor_EventScript_BoardFerryWithSailor
-	warp MAP_SOUTHERN_ISLAND_EXTERIOR, 13, 22
+	warp MAP_OUTSKIRT_ISLAND, 13, 22
 	waitstate
 	release
 	end

@@ -17,6 +17,11 @@
       "map": "MAP_GOLDENROD_CITY",
       "offset": 0,
       "direction": "up"
+    },
+    {
+      "map": "MAP_OUTSKIRT_ISLAND",
+      "offset": -54,
+      "direction": "left"
     }
   ],
   "object_events": [

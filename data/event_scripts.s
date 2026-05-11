@@ -492,7 +492,7 @@ gStdScripts_End::
 	.include "data/maps/BattleFrontier_BattleTowerElevator/scripts.inc"
 	.include "data/maps/BattleFrontier_BattleTowerCorridor/scripts.inc"
 	.include "data/maps/BattleFrontier_BattleTowerBattleRoom/scripts.inc"
-	.include "data/maps/SouthernIsland_Exterior/scripts.inc"
+	.include "data/maps/OutskirtIsland/scripts.inc"
 	.include "data/maps/SouthernIsland_Interior/scripts.inc"
 	.include "data/maps/SafariZone_RestHouse/scripts.inc"
 	.include "data/maps/SafariZone_Northeast/scripts.inc"

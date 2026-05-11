@@ -22,6 +22,11 @@
       "map": "MAP_ROUTE40",
       "offset": -29,
       "direction": "left"
+    },
+    {
+      "map": "MAP_OUTSKIRT_ISLAND",
+      "offset": -36,
+      "direction": "right"
     }
   ],
   "object_events": [],

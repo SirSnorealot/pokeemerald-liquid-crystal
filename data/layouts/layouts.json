@@ -3181,14 +3181,14 @@
       "layout_version": "emerald"
     },
     {
-      "id": "LAYOUT_SOUTHERN_ISLAND_EXTERIOR",
-      "name": "SouthernIsland_Exterior_Layout",
-      "width": 33,
-      "height": 30,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Rustboro",
-      "border_filepath": "data/layouts/SouthernIsland_Exterior/border.bin",
-      "blockdata_filepath": "data/layouts/SouthernIsland_Exterior/map.bin",
+      "id": "LAYOUT_OUTSKIRT_ISLAND",
+      "name": "OutskirtIsland_Layout",
+      "width": 60,
+      "height": 120,
+      "primary_tileset": "gTileset__general_lc",
+      "secondary_tileset": "gTileset__route_32_lc",
+      "border_filepath": "data/layouts/_OutskirtIsland/border.bin",
+      "blockdata_filepath": "data/layouts/_OutskirtIsland/map.bin",
       "layout_version": "emerald"
     },
     {
