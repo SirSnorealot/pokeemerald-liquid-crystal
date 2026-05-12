@@ -1,4 +1,4 @@
-Route113_MapScripts::
+Route42_MapScripts::
 	map_script MAP_SCRIPT_ON_RESUME, Route113_OnResume
 	map_script MAP_SCRIPT_ON_TRANSITION, Route113_OnTransition
 	.byte 0

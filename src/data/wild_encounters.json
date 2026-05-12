@@ -1104,8 +1104,8 @@
           }
         },
         {
-          "map": "MAP_ROUTE113",
-          "base_label": "gRoute113",
+          "map": "MAP_ROUTE42",
+          "base_label": "gRoute42",
           "land_mons": {
             "encounter_rate": 20,
             "mons": [
