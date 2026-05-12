@@ -44,7 +44,7 @@
     "EcruteakCity",
     "OlivineCity",
     "CianwoodCity",
-    "FortreeCity",
+    "MahoganyTown",
     "MossdeepCity",
     "SootopolisCity",
     "EverGrandeCity",
@@ -308,6 +308,9 @@
   "gMapGroup_IndoorRoute41": [
     "Route112_CableCarStation",
     "MtChimney_CableCarStation"
+  ],
+  "gMapGroup_IndoorRoute42": [
+    "Route113_GlassWorkshop"
   ],
   "gMapGroup_IndoorRoute114": [
     "Route114_FossilManiacsHouse",
@@ -606,9 +609,6 @@
     "Route110_TrickHousePuzzle8",
     "Route110_SeasideCyclingRoadSouthEntrance",
     "Route110_SeasideCyclingRoadNorthEntrance"
-  ],
-  "gMapGroup_IndoorRoute42": [
-    "Route113_GlassWorkshop"
   ],
   "gMapGroup_IndoorRoute123": [
     "Route123_BerryMastersHouse"

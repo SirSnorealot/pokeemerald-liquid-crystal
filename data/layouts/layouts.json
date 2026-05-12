@@ -46,14 +46,14 @@
       "layout_version": "emerald"
     },
     {
-      "id": "LAYOUT_FORTREE_CITY",
-      "name": "FortreeCity_Layout",
-      "width": 40,
-      "height": 20,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Fortree",
-      "border_filepath": "data/layouts/FortreeCity/border.bin",
-      "blockdata_filepath": "data/layouts/FortreeCity/map.bin",
+      "id": "LAYOUT_MAHOGANY_TOWN",
+      "name": "MahoganyTown_Layout",
+      "width": 36,
+      "height": 40,
+      "primary_tileset": "gTileset__general_lc",
+      "secondary_tileset": "gTileset__new_bark_town_lc",
+      "border_filepath": "data/layouts/_MahoganyTown/border.bin",
+      "blockdata_filepath": "data/layouts/_MahoganyTown/map.bin",
       "layout_version": "emerald"
     },
     {
