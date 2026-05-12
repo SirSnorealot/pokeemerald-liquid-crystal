@@ -321,14 +321,14 @@
       "layout_version": "emerald"
     },
     {
-      "id": "LAYOUT_ROUTE114",
-      "name": "Route114_Layout",
+      "id": "LAYOUT_ROUTE43",
+      "name": "Route43_Layout",
       "width": 40,
       "height": 80,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Fallarbor",
-      "border_filepath": "data/layouts/Route114/border.bin",
-      "blockdata_filepath": "data/layouts/Route114/map.bin",
+      "primary_tileset": "gTileset__general_lc",
+      "secondary_tileset": "gTileset__cherrygrove_city_lc",
+      "border_filepath": "data/layouts/_Route43/border.bin",
+      "blockdata_filepath": "data/layouts/_Route43/map.bin",
       "layout_version": "emerald"
     },
     {

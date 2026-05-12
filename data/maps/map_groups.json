@@ -21,7 +21,7 @@
     "gMapGroup_IndoorRoute40",
     "gMapGroup_IndoorRoute41",
     "gMapGroup_IndoorRoute42",
-    "gMapGroup_IndoorRoute114",
+    "gMapGroup_IndoorRoute43",
     "gMapGroup_IndoorRoute116",
     "gMapGroup_IndoorRoute117",
     "gMapGroup_IndoorRoute121",
@@ -67,7 +67,7 @@
     "Route40_2",
     "Route41",
     "Route42",
-    "Route114",
+    "Route43",
     "Route115",
     "Route116",
     "Route118",
@@ -312,7 +312,7 @@
   "gMapGroup_IndoorRoute42": [
     "Route113_GlassWorkshop"
   ],
-  "gMapGroup_IndoorRoute114": [
+  "gMapGroup_IndoorRoute43": [
     "Route114_FossilManiacsHouse",
     "Route114_FossilManiacsTunnel",
     "Route114_LanettesHouse"

@@ -28,22 +28,7 @@
       "flag": "FLAG_HIDE_LANETTES_HOUSE_LANETTE"
     }
   ],
-  "warp_events": [
-    {
-      "x": 5,
-      "y": 7,
-      "elevation": 0,
-      "dest_map": "MAP_ROUTE114",
-      "dest_warp_id": "2"
-    },
-    {
-      "x": 6,
-      "y": 7,
-      "elevation": 0,
-      "dest_map": "MAP_ROUTE114",
-      "dest_warp_id": "2"
-    }
-  ],
+  "warp_events": [],
   "coord_events": [],
   "bg_events": [
     {
