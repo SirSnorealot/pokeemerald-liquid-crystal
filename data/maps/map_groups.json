@@ -17,9 +17,10 @@
     "gMapGroup_IndoorMossdeep",
     "gMapGroup_IndoorSootopolis",
     "gMapGroup_IndoorEverGrande",
-    "gMapGroup_IndoorRoute104",
+    "gMapGroup_IndoorRoute32",
     "gMapGroup_IndoorRoute40",
     "gMapGroup_IndoorRoute41",
+    "gMapGroup_IndoorRoute42",
     "gMapGroup_IndoorRoute114",
     "gMapGroup_IndoorRoute116",
     "gMapGroup_IndoorRoute117",
@@ -30,7 +31,6 @@
     "gMapGroup_IndoorRoute104Prototype",
     "gMapGroup_IndoorRoute109",
     "gMapGroup_IndoorRoute110",
-    "gMapGroup_IndoorRoute113",
     "gMapGroup_IndoorRoute123",
     "gMapGroup_IndoorRoute119",
     "gMapGroup_IndoorRoute124"
@@ -297,7 +297,7 @@
     "EverGrandeCity_PokemonCenter_2F",
     "EverGrandeCity_PokemonLeague_2F"
   ],
-  "gMapGroup_IndoorRoute104": [
+  "gMapGroup_IndoorRoute32": [
     "Route104_MrBrineysHouse",
     "Route104_PrettyPetalFlowerShop"
   ],
@@ -607,7 +607,7 @@
     "Route110_SeasideCyclingRoadSouthEntrance",
     "Route110_SeasideCyclingRoadNorthEntrance"
   ],
-  "gMapGroup_IndoorRoute113": [
+  "gMapGroup_IndoorRoute42": [
     "Route113_GlassWorkshop"
   ],
   "gMapGroup_IndoorRoute123": [
