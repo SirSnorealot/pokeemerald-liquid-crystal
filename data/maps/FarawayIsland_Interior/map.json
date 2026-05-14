@@ -29,22 +29,7 @@
       "flag": "FLAG_HIDE_MEW"
     }
   ],
-  "warp_events": [
-    {
-      "x": 12,
-      "y": 19,
-      "elevation": 0,
-      "dest_map": "MAP_FARAWAY_ISLAND_ENTRANCE",
-      "dest_warp_id": "0"
-    },
-    {
-      "x": 13,
-      "y": 19,
-      "elevation": 0,
-      "dest_map": "MAP_FARAWAY_ISLAND_ENTRANCE",
-      "dest_warp_id": "1"
-    }
-  ],
+  "warp_events": [],
   "coord_events": [],
   "bg_events": []
 }

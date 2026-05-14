@@ -94,6 +94,7 @@
     "Underwater_Route129",
     "Underwater_Route105",
     "Underwater_Route125",
+    "LakeOfRage",
     "OutskirtIsland"
   ],
   "gMapGroup_IndoorNewBark": [
@@ -555,7 +556,6 @@
     "BattleFrontier_PokemonCenter_1F",
     "BattleFrontier_PokemonCenter_2F",
     "BattleFrontier_Mart",
-    "FarawayIsland_Entrance",
     "FarawayIsland_Interior",
     "BirthIsland_Exterior",
     "BirthIsland_Harbor",

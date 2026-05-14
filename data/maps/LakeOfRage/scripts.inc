@@ -1,4 +1,4 @@
-FarawayIsland_Entrance_MapScripts::
+LakeOfRage_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, FarawayIsland_Entrance_OnTransition
 	.byte 0
 
@@ -26,7 +26,7 @@ FarawayIsland_Entrance_EventScript_Sailor::
 	applymovement VAR_LAST_TALKED, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
 	delay 30
-	hideobjectat LOCALID_FARAWAY_ISLAND_SAILOR, MAP_FARAWAY_ISLAND_ENTRANCE
+	@hideobjectat LOCALID_FARAWAY_ISLAND_SAILOR, MAP_LAKE_OF_RAGE
 	setvar VAR_0x8004, LOCALID_FARAWAY_ISLAND_SS_TIDAL
 	call Common_EventScript_FerryDepartIsland
 	warp MAP_LILYCOVE_CITY_HARBOR, 8, 11

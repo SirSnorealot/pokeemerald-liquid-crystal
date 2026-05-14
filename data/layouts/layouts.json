@@ -4413,14 +4413,14 @@
       "layout_version": "emerald"
     },
     {
-      "id": "LAYOUT_FARAWAY_ISLAND_ENTRANCE",
-      "name": "FarawayIsland_Entrance_Layout",
-      "width": 34,
-      "height": 46,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Rustboro",
-      "border_filepath": "data/layouts/FarawayIsland_Entrance/border.bin",
-      "blockdata_filepath": "data/layouts/FarawayIsland_Entrance/map.bin",
+      "id": "LAYOUT_LAKE_OF_RAGE",
+      "name": "LakeOfRage_Layout",
+      "width": 68,
+      "height": 56,
+      "primary_tileset": "gTileset__general_lc",
+      "secondary_tileset": "gTileset__cianwood_city_lc",
+      "border_filepath": "data/layouts/_LakeOfRage/border.bin",
+      "blockdata_filepath": "data/layouts/_LakeOfRage/map.bin",
       "layout_version": "emerald"
     },
     {

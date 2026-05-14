@@ -539,7 +539,7 @@ gStdScripts_End::
 	.include "data/maps/BattleFrontier_PokemonCenter_1F/scripts.inc"
 	.include "data/maps/BattleFrontier_PokemonCenter_2F/scripts.inc"
 	.include "data/maps/BattleFrontier_Mart/scripts.inc"
-	.include "data/maps/FarawayIsland_Entrance/scripts.inc"
+	.include "data/maps/LakeOfRage/scripts.inc"
 	.include "data/maps/FarawayIsland_Interior/scripts.inc"
 	.include "data/maps/BirthIsland_Exterior/scripts.inc"
 	.include "data/maps/BirthIsland_Harbor/scripts.inc"

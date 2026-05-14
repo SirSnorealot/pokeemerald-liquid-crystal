@@ -73,7 +73,7 @@ LilycoveCity_Harbor_EventScript_GoToBirthIsland::
 
 LilycoveCity_Harbor_EventScript_GoToFarawayIsland::
 	call LilycoveCity_Harbor_EventScript_BoardFerry
-	warp MAP_FARAWAY_ISLAND_ENTRANCE, 13, 38
+	warp MAP_LAKE_OF_RAGE, 13, 38
 	waitstate
 	release
 	end
@@ -247,7 +247,7 @@ LilycoveCity_Harbor_EventScript_OldSeaMapFirstTime::
 	call_if_eq VAR_FACING, DIR_EAST, LilycoveCity_Harbor_EventScript_BoardFerryWithBrineyAndSailorEast
 	setvar VAR_0x8004, LOCALID_LILYCOVE_HARBOR_SS_TIDAL
 	call Common_EventScript_FerryDepart
-	warp MAP_FARAWAY_ISLAND_ENTRANCE, 13, 38
+	warp MAP_LAKE_OF_RAGE, 13, 38
 	waitstate
 	release
 	end
@@ -255,7 +255,7 @@ LilycoveCity_Harbor_EventScript_OldSeaMapFirstTime::
 LilycoveCity_Harbor_EventScript_GoToFarawayIslandFirstTime::
 	closemessage
 	call LilycoveCity_Harbor_EventScript_BoardFerryWithSailor
-	warp MAP_FARAWAY_ISLAND_ENTRANCE, 13, 38
+	warp MAP_LAKE_OF_RAGE, 13, 38
 	waitstate
 	release
 	end
