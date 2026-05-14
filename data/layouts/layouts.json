@@ -323,8 +323,8 @@
     {
       "id": "LAYOUT_ROUTE43",
       "name": "Route43_Layout",
-      "width": 40,
-      "height": 80,
+      "width": 32,
+      "height": 86,
       "primary_tileset": "gTileset__general_lc",
       "secondary_tileset": "gTileset__cherrygrove_city_lc",
       "border_filepath": "data/layouts/_Route43/border.bin",
