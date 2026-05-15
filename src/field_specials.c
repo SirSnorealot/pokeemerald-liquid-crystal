@@ -3543,8 +3543,8 @@ bool32 GetAbnormalWeatherMapNameAndType(void)
     static const u8 sAbnormalWeatherMapNumbers[] = {
         MAP_NUM(MAP_ROUTE43),
         MAP_NUM(MAP_ROUTE43),
-        MAP_NUM(MAP_ROUTE115),
-        MAP_NUM(MAP_ROUTE115),
+        MAP_NUM(MAP_ROUTE44),
+        MAP_NUM(MAP_ROUTE44),
         MAP_NUM(MAP_ROUTE116),
         MAP_NUM(MAP_ROUTE116),
         MAP_NUM(MAP_ROUTE118),
@@ -3576,8 +3576,8 @@ bool8 AbnormalWeatherHasExpired(void)
     {
         MAP_NUM(MAP_ROUTE43),
         MAP_NUM(MAP_ROUTE43),
-        MAP_NUM(MAP_ROUTE115),
-        MAP_NUM(MAP_ROUTE115),
+        MAP_NUM(MAP_ROUTE44),
+        MAP_NUM(MAP_ROUTE44),
         MAP_NUM(MAP_ROUTE116),
         MAP_NUM(MAP_ROUTE116),
         MAP_NUM(MAP_ROUTE118),

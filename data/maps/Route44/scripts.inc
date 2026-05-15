@@ -1,4 +1,4 @@
-Route115_MapScripts::
+Route44_MapScripts::
 	map_script MAP_SCRIPT_ON_LOAD, Route115_OnLoad
 	map_script MAP_SCRIPT_ON_TRANSITION, Route115_OnTransition
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, Route115_OnFrame
