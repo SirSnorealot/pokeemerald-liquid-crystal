@@ -1,7 +1,7 @@
 {
-  "id": "MAP_ROUTE118",
-  "name": "Route118",
-  "layout": "LAYOUT_ROUTE118",
+  "id": "MAP_ROUTE46",
+  "name": "Route46",
+  "layout": "LAYOUT_ROUTE46",
   "music": "MUS_ROUTE118",
   "region_map_section": "MAPSEC_ROUTE_118",
   "requires_flash": false,
@@ -14,14 +14,14 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "map": "MAP_ROUTE119",
-      "offset": 40,
-      "direction": "up"
+      "map": "MAP_ROUTE45",
+      "offset": -71,
+      "direction": "right"
     },
     {
-      "map": "MAP_ROUTE123",
-      "offset": 0,
-      "direction": "right"
+      "map": "MAP_ROUTE29",
+      "offset": -18,
+      "direction": "down"
     }
   ],
   "object_events": [
@@ -306,22 +306,7 @@
       "flag": "0"
     }
   ],
-  "warp_events": [
-    {
-      "x": 42,
-      "y": 6,
-      "elevation": 0,
-      "dest_map": "MAP_TERRA_CAVE_ENTRANCE",
-      "dest_warp_id": "0"
-    },
-    {
-      "x": 9,
-      "y": 6,
-      "elevation": 0,
-      "dest_map": "MAP_TERRA_CAVE_ENTRANCE",
-      "dest_warp_id": "0"
-    }
-  ],
+  "warp_events": [],
   "coord_events": [
     {
       "type": "trigger",

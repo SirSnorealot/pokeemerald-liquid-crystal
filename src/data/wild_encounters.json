@@ -1580,8 +1580,8 @@
           }
         },
         {
-          "map": "MAP_ROUTE118",
-          "base_label": "gRoute118",
+          "map": "MAP_ROUTE46",
+          "base_label": "gRoute46",
           "land_mons": {
             "encounter_rate": 20,
             "mons": [
