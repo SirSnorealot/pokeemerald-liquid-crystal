@@ -134,7 +134,7 @@ gStdScripts_End::
 	.include "data/maps/OlivineCity/scripts.inc"
 	.include "data/maps/CianwoodCity/scripts.inc"
 	.include "data/maps/MahoganyTown/scripts.inc"
-	.include "data/maps/MossdeepCity/scripts.inc"
+	.include "data/maps/BlackthornCity/scripts.inc"
 	.include "data/maps/SootopolisCity/scripts.inc"
 	.include "data/maps/EverGrandeCity/scripts.inc"
 	.include "data/maps/DewfordTown/scripts.inc"

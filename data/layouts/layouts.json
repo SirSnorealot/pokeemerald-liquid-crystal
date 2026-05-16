@@ -68,14 +68,14 @@
       "layout_version": "emerald"
     },
     {
-      "id": "LAYOUT_MOSSDEEP_CITY",
-      "name": "MossdeepCity_Layout",
-      "width": 80,
-      "height": 40,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Mossdeep",
-      "border_filepath": "data/layouts/MossdeepCity/border.bin",
-      "blockdata_filepath": "data/layouts/MossdeepCity/map.bin",
+      "id": "LAYOUT_BLACKTHORN_CITY",
+      "name": "BlackthornCity_Layout",
+      "width": 60,
+      "height": 52,
+      "primary_tileset": "gTileset__general_lc",
+      "secondary_tileset": "gTileset__route_35_lc",
+      "border_filepath": "data/layouts/_BlackthornCity/border.bin",
+      "blockdata_filepath": "data/layouts/_BlackthornCity/map.bin",
       "layout_version": "emerald"
     },
     {

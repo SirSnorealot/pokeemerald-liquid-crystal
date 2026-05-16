@@ -1,4 +1,4 @@
-MossdeepCity_MapScripts::
+BlackthornCity_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, MossdeepCity_OnTransition
 	.byte 0
 

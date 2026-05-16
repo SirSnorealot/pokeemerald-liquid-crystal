@@ -141,15 +141,7 @@
       "flag": "FLAG_HIDE_MOSSDEEP_CITY_SPACE_CENTER_2F_TEAM_MAGMA"
     }
   ],
-  "warp_events": [
-    {
-      "x": 13,
-      "y": 1,
-      "elevation": 0,
-      "dest_map": "MAP_MOSSDEEP_CITY_SPACE_CENTER_1F",
-      "dest_warp_id": "2"
-    }
-  ],
+  "warp_events": [],
   "coord_events": [],
   "bg_events": []
 }

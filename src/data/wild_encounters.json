@@ -8760,8 +8760,8 @@
           }
         },
         {
-          "map": "MAP_MOSSDEEP_CITY",
-          "base_label": "gMossdeepCity",
+          "map": "MAP_BLACKTHORN_CITY",
+          "base_label": "gBlackthornCity",
           "water_mons": {
             "encounter_rate": 4,
             "mons": [

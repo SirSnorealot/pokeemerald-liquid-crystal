@@ -54,22 +54,7 @@
       "flag": "0"
     }
   ],
-  "warp_events": [
-    {
-      "x": 4,
-      "y": 7,
-      "elevation": 0,
-      "dest_map": "MAP_MOSSDEEP_CITY",
-      "dest_warp_id": "7"
-    },
-    {
-      "x": 3,
-      "y": 7,
-      "elevation": 0,
-      "dest_map": "MAP_MOSSDEEP_CITY",
-      "dest_warp_id": "7"
-    }
-  ],
+  "warp_events": [],
   "coord_events": [],
   "bg_events": []
 }

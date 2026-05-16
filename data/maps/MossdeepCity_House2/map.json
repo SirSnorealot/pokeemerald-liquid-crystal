@@ -55,22 +55,7 @@
       "flag": "FLAG_HIDE_MOSSDEEP_CITY_HOUSE_2_WINGULL"
     }
   ],
-  "warp_events": [
-    {
-      "x": 3,
-      "y": 8,
-      "elevation": 0,
-      "dest_map": "MAP_MOSSDEEP_CITY",
-      "dest_warp_id": "3"
-    },
-    {
-      "x": 4,
-      "y": 8,
-      "elevation": 0,
-      "dest_map": "MAP_MOSSDEEP_CITY",
-      "dest_warp_id": "3"
-    }
-  ],
+  "warp_events": [],
   "coord_events": [],
   "bg_events": []
 }
