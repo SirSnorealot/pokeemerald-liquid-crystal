@@ -52,18 +52,65 @@ Open `data/maps/<map_name>/map.json` and make the following changes:
 
 > **Exception:** If any already-added LC neighbor maps border this map, add their connections to `"connections"` now. Check existing LC maps that reference this map's area.
 
+### Sanitize LC event data (required)
+
+The LC export `map.json` uses old GBA formats that mapjson cannot process. Run these fixes before building:
+
+**Remove `local_id` key from all `object_events`** — the key must not exist at all (not even `null`). If present, mapjson generates `#define 1 1` in the map event ID header, breaking the build.
+
+```python
+import json
+with open('data/maps/<map_name>/map.json') as f:
+    m = json.load(f)
+for e in m.get('object_events', []):
+    e.pop('local_id', None)
+with open('data/maps/<map_name>/map.json', 'w') as f:
+    json.dump(m, f, indent=4)
+```
+
+**Remove `coord_events` and `bg_events` entries missing a `type` field** — old GBA-extracted events use `trigger`/`index` fields instead of `type`/`var`/`var_value`. mapjson requires `type` and will error on entries without it. Strip them:
+
+```python
+import json
+with open('data/maps/<map_name>/map.json') as f:
+    m = json.load(f)
+m['coord_events'] = [e for e in m.get('coord_events', []) if 'type' in e]
+m['bg_events']    = [e for e in m.get('bg_events', [])    if 'type' in e]
+with open('data/maps/<map_name>/map.json', 'w') as f:
+    json.dump(m, f, indent=4)
+```
+
 ---
 
-## Step 3 — Update `scripts.inc`
+## Step 3 — Handle `scripts.inc`
 
-Open `data/maps/<map_name>/scripts.inc` and rename only the top-level map scripts label:
+### Replace mode
+Open `data/maps/<map_name>/scripts.inc` (the renamed Hoenn file) and rename **only** the top-level map scripts label:
 
 ```diff
 -<OldMapName>_MapScripts::
 +<map_name>_MapScripts::
 ```
 
-Leave all other script content as-is.
+Leave all other Hoenn script content as-is. The existing scripts are valid pokeemerald assembly and serve as placeholder logic until LC scripts are ported.
+
+### Append mode
+Create `data/maps/<map_name>/scripts.inc` with a stub containing only the required map scripts label:
+
+```asm
+<map_name>_MapScripts::
+	.byte 0
+```
+
+> **Do not copy `scripts.inc` from `lc_maps` in Append mode.** The LC export scripts use old GBA macro formats that are incompatible with pokeemerald and will produce many assembler errors:
+> - `trainerbattle` has a different argument signature than pokeemerald's macro
+> - `checkpartymove` instruction does not exist in this codebase
+> - `[.]` is not a valid charmap control code
+> - `{0X??}` / `{0x??}` raw hex byte escapes are not supported
+> - `{PLAY_BGM}{0x????}` uses an old argument format
+> - Raw UTF-8 accented characters (e.g. `é` as bytes `0xC3 0xA9`) cause assembler errors — pokeemerald uses charmap escape codes (e.g. `{é}`) instead
+>
+> The lc_maps scripts are reference material only. LC script logic will be ported manually in a later pass.
 
 ---
 
@@ -123,6 +170,8 @@ Replace it with:
 .include "data/maps/<map_name>/scripts.inc"
 ```
 
+> **Note:** `data/event_scripts.s` uses **tab** indentation. When scripting this replacement (e.g. in Python), use `\t` as the line prefix, not spaces. A mismatch will silently fail to find the line.
+
 ---
 
 ## Step 8 — Update `tools/mapjson/required_map_defines.json`
@@ -148,18 +197,33 @@ Each of the following source files may reference the old Hoenn map by its `MAP_*
 | `src/roamer.c` | `sRoamerLocations` map number entries |
 | `src/overworld.c` | Hardcoded map group/num checks *(cities only)* |
 | `src/data/heal_locations.json` | Pokémon Center heal location `"map"` field *(cities only)* |
+| `src/follower_helper.c` | Hardcoded map checks for follower behavior |
+| `src/tv.c` | Map ID references for in-game TV segments; also contains `LOCALID_*` NPC constants tied to specific maps — if the replaced map had named NPC IDs (e.g. `LOCALID_ROUTE120_GABBY_1`), search for those constants too and redirect them to equivalent NPCs on the new map or remove the references |
+| `src/wild_encounter.c` | Hardcoded map checks for special wild encounter logic |
 
 > Not every file will have a match. Only update files where `<hoenn_map_id>` actually appears. Do not make changes if there is no occurrence.
+
+> **`src/pokedex_area_screen.c` — duplicate case value warning:** This file defines `MAP_GROUP_*` and `MAP_GROUP_*_FRLG` macros using `MAP_GROUP(MAP_<name>)`. If any replaced map causes two of these macros to expand to the same integer (because both maps now live in the same group), the compiler will emit a `duplicate case value` error in the switch statements in that file. Fix by removing the redundant `_FRLG` case labels from both switch blocks.
 
 ---
 
 ## Step 10 — Verify the Build
 
+Always run `make clean` before building to avoid stale generated `.inc` files from previously processed maps:
+
 ```bash
-make debug -j$(nproc)
+make clean && make debug -j$(nproc) > /tmp/build_output.txt 2>&1; echo "EXIT:$?"
 ```
 
-Check for any errors about unknown map IDs, missing includes, or undefined references.
+Check errors (ignore make infrastructure lines):
+
+```bash
+grep -E "error:" /tmp/build_output.txt | grep -v "^make" | sort -u
+```
+
+> **Build hang note:** The build runs in parallel and may appear idle in the terminal while still working. Do not interrupt it. If using an async terminal, wait for the completion notification before checking output.
+
+Fix all errors and rebuild until `EXIT:0` is shown.
 
 ---
 
@@ -167,7 +231,7 @@ Check for any errors about unknown map IDs, missing includes, or undefined refer
 
 - [ ] Map folder renamed or created at `data/maps/<map_name>/`
 - [ ] `map.json` — `id`, `name`, `layout` updated; `connections` set to `[]`
-- [ ] `scripts.inc` — top label renamed to `<map_name>_MapScripts::`
+- [ ] `scripts.inc` — *(Replace)* top label renamed to `<map_name>_MapScripts::`, Hoenn content preserved; *(Append)* stub created with label and `.byte 0` only (lc_maps scripts.inc NOT used)
 - [ ] *(Replace mode)* Sub-map `warp_events` pointing to old Hoenn map cleared to `[]`
 - [ ] Adjacent already-added LC maps — connections updated
 - [ ] `data/maps/map_groups.json` — entry replaced or appended
@@ -180,4 +244,10 @@ Check for any errors about unknown map IDs, missing includes, or undefined refer
 - [ ] `src/roamer.c` — map references updated if present
 - [ ] `src/overworld.c` — map references updated if present *(cities)*
 - [ ] `src/data/heal_locations.json` — map reference updated if present *(cities)*
-- [ ] Build succeeds
+- [ ] `src/follower_helper.c` — map reference updated if present
+- [ ] `src/tv.c` — map reference and any `LOCALID_*` constants updated if present
+- [ ] `src/wild_encounter.c` — map reference updated if present
+- [ ] `src/pokedex_area_screen.c` — checked for duplicate `MAP_GROUP_*` / `MAP_GROUP_*_FRLG` case values if maps moved groups
+- [ ] `map.json` — `local_id` key removed from all `object_events`
+- [ ] `map.json` — `coord_events` and `bg_events` entries without `type` field removed
+- [ ] Build succeeds (`EXIT:0` from piped build command)

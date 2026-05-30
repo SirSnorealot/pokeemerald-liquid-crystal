@@ -199,14 +199,15 @@ Follow [ADD_LAYOUT.md](ADD_LAYOUT.md) with:
 
 ### 3-A: Obtain source map files
 
-The source `map.json` and `scripts.inc` come from:
+Only `map.json` is copied from the LC export:
 
-```
-lc_maps/data/maps/<lc_map_folder>/map.json
-lc_maps/data/maps/<lc_map_folder>/scripts.inc
+```bash
+cp lc_maps/data/maps/<lc_map_folder>/map.json data/maps/<map_name>/map.json
 ```
 
-These are copied into `data/maps/<map_name>/` as the starting point (Replace mode: after renaming the Hoenn folder; Append mode: into a newly created folder).
+> **Replace mode:** `scripts.inc` already exists (the renamed Hoenn file). ADD_MAP Step 3 will only rename the top label — do not overwrite it.
+>
+> **Append mode:** Do not copy `scripts.inc` from `lc_maps`. The LC export scripts use old GBA macro formats that are incompatible with pokeemerald (wrong `trainerbattle` signature, non-existent `checkpartymove`, unsupported `[.]` and `{0X??}` escapes, raw UTF-8 bytes). ADD_MAP Step 3 will create a stub. The lc_maps scripts are reference material for a later manual porting pass.
 
 ### 3-B: Run ADD_MAP procedure
 
@@ -271,8 +272,14 @@ When the user says "import all connected maps" or "keep going":
 1. Maintain a queue of folders to import and a set of already-imported folders (check against `data/maps/map_groups.json`).
 2. After importing each map, enqueue its unimported connections (and warps if requested).
 3. Continue until the queue is empty.
-4. Run a single build check (`make debug -j$(nproc)`) after all maps in the batch are imported rather than after each individual map.
-5. If the build fails, fix all errors and rebuild until it is clean before reporting completion.
+4. Always run `make clean` before the batch build to avoid stale generated `.inc` files:
+   ```bash
+   make clean && make debug -j$(nproc) > /tmp/build_output.txt 2>&1; echo "EXIT:$?"
+   grep -E "error:" /tmp/build_output.txt | grep -v "^make" | sort -u
+   ```
+5. If the build fails, fix all errors and rebuild until `EXIT:0` before reporting completion.
+
+> **Build hang note:** Parallel builds may appear idle while still working. Do not interrupt. Wait for the completion notification before checking output.
 
 ---
 
@@ -283,7 +290,7 @@ When the user says "import all connected maps" or "keep going":
 - [ ] Primary tileset — checked in registry; imported via ADD_TILESET if missing
 - [ ] Secondary tileset — checked in registry; imported via ADD_TILESET if missing
 - [ ] Layout — checked via md5 hash; imported via ADD_LAYOUT if not already present
-- [ ] Map files placed in `data/maps/<map_name>/`
-- [ ] ADD_MAP procedure completed in full
+- [ ] `map.json` only copied from lc_maps (`scripts.inc` NOT copied — stub generated instead)
+- [ ] ADD_MAP procedure completed in full (including event sanitization in Step 2)
 - [ ] *(Multi-map)* All queued connections/warps processed
-- [ ] **Build passes with zero errors** (`make debug -j$(nproc)`) — fix all errors and rebuild until clean
+- [ ] **Build passes with zero errors** — piped build `EXIT:0`, all errors fixed and rebuilt until clean

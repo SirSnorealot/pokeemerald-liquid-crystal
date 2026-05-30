@@ -170,12 +170,16 @@ Add a new row to `docs_lc/tileset_registry.md`. Leave **AMAP #** as `?` — the 
 
 ## Step 7 — Verify the Build
 
+Always run `make clean` before building to avoid stale generated files:
+
 ```bash
-make debug -j$(nproc)
+make clean && make debug -j$(nproc) > /tmp/build_output.txt 2>&1; echo "EXIT:$?"
+grep -E "error:" /tmp/build_output.txt | grep -v "^make" | sort -u
 ```
 
-Check for any errors about unknown tilesets, missing files, or tile count
-warnings.
+> **Build hang note:** Parallel builds may appear idle while still working. Wait for `EXIT:N` to appear before checking results.
+
+Check for errors about unknown tilesets, missing files, or tile count warnings.
 
 ---
 
@@ -187,4 +191,4 @@ warnings.
 - [ ] `src/data/tilesets/graphics.h` — palette array + tiles line added before `#if IS_FRLG`
 - [ ] `src/data/tilesets/headers.h` — `gTileset__<tileset_name>` struct added before `#else`
 - [ ] `docs_lc/tileset_registry.md` — new row added
-- [ ] Build succeeds
+- [ ] Build succeeds (`EXIT:0`)

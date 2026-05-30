@@ -84,11 +84,16 @@ Add the following block as a new element inside the `"layouts"` array, placed af
 
 ## Step 3 — Verify the Build
 
+Always run `make clean` before building to avoid stale generated files:
+
 ```bash
-make debug -j$(nproc)
+make clean && make debug -j$(nproc) > /tmp/build_output.txt 2>&1; echo "EXIT:$?"
+grep -E "error:" /tmp/build_output.txt | grep -v "^make" | sort -u
 ```
 
-Check for any errors about unknown layouts, missing files, or tileset references.
+> **Build hang note:** Parallel builds may appear idle while still working. Wait for `EXIT:N` to appear before checking results.
+
+Check for errors about unknown layouts, missing files, or tileset references.
 
 ---
 
@@ -97,4 +102,4 @@ Check for any errors about unknown layouts, missing files, or tileset references
 - [ ] `data/layouts/<layout_folder>/border.bin` and `map.bin` placed
 - [ ] `data/layouts/layouts.json` — entry added or replaced
 - [ ] *(Replace mode only)* Old Hoenn layout folder's `.bin` files deleted
-- [ ] Build succeeds
+- [ ] Build succeeds (`EXIT:0`)
