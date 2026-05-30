@@ -31,7 +31,11 @@ From this you must determine:
 
 ## Phase 0 — Locate and Read the Export
 
-### 0-A: Derive standard identifiers
+### 0-A: Check the map registry
+
+Before doing anything else, check [docs_lc/map_registry.md](../map_registry.md). If the map is already listed there, it has been fully imported — skip all phases and report to the user.
+
+### 0-B: Derive standard identifiers
 
 ```
 map_id     = "MAP_" + SCREAMING_SNAKE_CASE(<map_name>)
@@ -39,7 +43,7 @@ map_id     = "MAP_" + SCREAMING_SNAKE_CASE(<map_name>)
 hoenn_map_id = "MAP_" + SCREAMING_SNAKE_CASE(<hoenn_map_name>)   [Replace mode only]
 ```
 
-### 0-B: Find the lc_maps folder
+### 0-C: Find the lc_maps folder
 
 Convert the English map name to a SCREAMING_SNAKE_CASE search token (e.g. "Cherrygrove City" → `CHERRYGROVE_CITY`), then list candidates:
 
@@ -67,7 +71,7 @@ for d in sorted(os.listdir(maps_dir)):
 "
 ```
 
-### 0-C: Load the source map.json
+### 0-D: Load the source map.json
 
 ```bash
 cat lc_maps/data/maps/<lc_map_folder>/map.json
@@ -75,7 +79,7 @@ cat lc_maps/data/maps/<lc_map_folder>/map.json
 
 Record the value of `"layout"` — call it `lc_layout_id` (e.g. `LAYOUT_2D5064`).
 
-### 0-D: Load the layout record
+### 0-E: Load the layout record
 
 ```bash
 python3 -c "
@@ -246,13 +250,12 @@ ls lc_maps/data/maps/<derived_folder>/
 
 ### 4-A: Follow map connections (outdoor neighbors)
 
-Read the `"connections"` array from `lc_maps/data/maps/<lc_map_folder>/map.json`. Each entry has a `"map"` field. Derive a candidate folder for each, then check whether it is already imported in the project:
+Read the `"connections"` array from `lc_maps/data/maps/<lc_map_folder>/map.json`. Each entry has a `"map"` field. Derive a candidate folder for each, then check whether it is already imported by:
 
-```bash
-grep '"<DERIVED_MAP_ID>"' data/maps/map_groups.json
-```
+1. Checking [docs_lc/map_registry.md](../map_registry.md) — if the project map name appears there, it is already imported.
+2. If not in the registry, also verify against the project: `grep '"<DERIVED_MAP_ID>"' data/maps/map_groups.json`
 
-- **Found** → already imported, skip.
+- **Found (either check)** → already imported, skip.
 - **Not found** → queue it for import.
 
 For each queued connection, run this entire procedure (Phases 0–3) for that map. The user must supply a `map_name` and mode for each; ask if not obvious from context.
@@ -285,6 +288,7 @@ When the user says "import all connected maps" or "keep going":
 
 ## Summary Checklist
 
+- [ ] Map registry checked — not already imported
 - [ ] English name resolved to `lc_map_folder` via `map_type` / connections inspection
 - [ ] `lc_layout_id`, `lc_primary_tileset`, `lc_secondary_tileset` recorded from export
 - [ ] Primary tileset — checked in registry; imported via ADD_TILESET if missing
@@ -294,3 +298,4 @@ When the user says "import all connected maps" or "keep going":
 - [ ] ADD_MAP procedure completed in full (including event sanitization in Step 2)
 - [ ] *(Multi-map)* All queued connections/warps processed
 - [ ] **Build passes with zero errors** — piped build `EXIT:0`, all errors fixed and rebuilt until clean
+- [ ] Map added to [docs_lc/map_registry.md](../map_registry.md)

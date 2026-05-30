@@ -227,6 +227,17 @@ Fix all errors and rebuild until `EXIT:0` is shown.
 
 ---
 
+## Step 11 — Update the Map Registry
+
+Add an entry for this map to [docs_lc/map_registry.md](../map_registry.md). Place it in the correct section (Outdoor or Indoor) and record the `lc_maps` source folder used.
+
+| Column | Value |
+|---|---|
+| Project Map Name | `<map_name>` |
+| lc_maps Folder | the `lc_map_folder` identified in Phase 0 of IMPORT_MAP_FROM_EXPORT |
+
+---
+
 ## Summary Checklist
 
 - [ ] Map folder renamed or created at `data/maps/<map_name>/`
@@ -251,3 +262,4 @@ Fix all errors and rebuild until `EXIT:0` is shown.
 - [ ] `map.json` — `local_id` key removed from all `object_events`
 - [ ] `map.json` — `coord_events` and `bg_events` entries without `type` field removed
 - [ ] Build succeeds (`EXIT:0` from piped build command)
+- [ ] Map added to `docs_lc/map_registry.md`
