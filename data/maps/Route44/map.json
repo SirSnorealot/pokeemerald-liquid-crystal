@@ -3,6 +3,7 @@
   "name": "Route44",
   "layout": "LAYOUT_ROUTE44",
   "music": "MUS_ROUTE104",
+  "region": "REGION_HOENN",
   "region_map_section": "MAPSEC_ROUTE_115",
   "requires_flash": false,
   "weather": "WEATHER_SUNNY",
