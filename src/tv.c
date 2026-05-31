@@ -3344,7 +3344,7 @@ void GetMomOrDadStringForTVMessage(void)
         }
         else
         {
-            if (gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_LITTLEROOT_TOWN_MAYS_HOUSE_1F))
+            if (gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_NEW_BARK_TOWN_HOUSE1))
             {
                 StringCopy(gStringVar1, gText_Mom);
                 VarSet(VAR_TEMP_3, 1);

@@ -124,7 +124,7 @@ LittlerootTown_EventScript_StepOffTruckFemale::
 	setvar VAR_0x8005, 8
 	call LittlerootTown_EventScript_GoInsideWithMom
 	setflag FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_TRUCK
-	warpsilent MAP_LITTLEROOT_TOWN_MAYS_HOUSE_1F, 2, 8
+	warpsilent MAP_NEW_BARK_TOWN_HOUSE1, 2, 8
 	waitstate
 	releaseall
 	end

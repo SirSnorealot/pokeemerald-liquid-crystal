@@ -115,8 +115,8 @@
   "gMapGroup_IndoorNewBark": [
     "NewBarkTown_PlayersHouse_1F",
     "NewBarkTown_PlayersHouse_2F",
-    "LittlerootTown_MaysHouse_1F",
-    "LittlerootTown_MaysHouse_2F",
+    "NewBarkTown_House1",
+    "NewBarkTown_House2",
     "NewBarkTown_ProfessorElmsLab"
   ],
   "gMapGroup_IndoorCherrygrove": [

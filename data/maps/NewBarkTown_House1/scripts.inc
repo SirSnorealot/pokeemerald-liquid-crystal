@@ -1,4 +1,4 @@
-LittlerootTown_MaysHouse_1F_MapScripts::
+NewBarkTown_House1_MapScripts::
 	map_script MAP_SCRIPT_ON_LOAD, LittlerootTown_MaysHouse_1F_OnLoad
 	map_script MAP_SCRIPT_ON_TRANSITION, LittlerootTown_MaysHouse_1F_OnTransition
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, LittlerootTown_MaysHouse_1F_OnFrame
@@ -60,7 +60,7 @@ LittlerootTown_MaysHouse_1F_EventScript_GoUpstairsToSetClock::
 	applymovement LOCALID_PLAYER, LittlerootTown_MaysHouse_1F_Movement_PushTowardStairs
 	applymovement LOCALID_PLAYERS_HOUSE_1F_MOM, LittlerootTown_MaysHouse_1F_Movement_PushTowardStairs
 	waitmovement 0
-	warp MAP_LITTLEROOT_TOWN_MAYS_HOUSE_2F, 1, 1
+	warp MAP_NEW_BARK_TOWN_HOUSE2, 1, 1
 	waitstate
 	releaseall
 	end

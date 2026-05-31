@@ -12,10 +12,10 @@
     },
     {
       "id": "HEAL_LOCATION_LITTLEROOT_TOWN_MAYS_HOUSE_2F",
-      "map": "MAP_LITTLEROOT_TOWN_MAYS_HOUSE_2F",
+      "map": "MAP_NEW_BARK_TOWN_HOUSE2",
       "x": 4,
       "y": 2,
-      "respawn_map": "MAP_LITTLEROOT_TOWN_MAYS_HOUSE_1F",
+      "respawn_map": "MAP_NEW_BARK_TOWN_HOUSE1",
       "respawn_npc": "0",
       "respawn_x": 8,
       "respawn_y": 7
@@ -107,7 +107,7 @@
       "map": "MAP_NEW_BARK_TOWN",
       "x": 14,
       "y": 9,
-      "respawn_map": "MAP_LITTLEROOT_TOWN_MAYS_HOUSE_1F",
+      "respawn_map": "MAP_NEW_BARK_TOWN_HOUSE1",
       "respawn_npc": "0",
       "respawn_x": 8,
       "respawn_y": 7
