@@ -1,6 +1,14 @@
-Route109_SeashoreHouse_MapScripts::
+Route29_GateHouse_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, Route109_SeashoreHouse_OnTransition
 	.byte 0
+
+@ TODO(LC): stub for unported LC NPC script ROUTE_29_4_2_Script_0088203D
+ROUTE_29_4_2_Script_0088203D::
+	end
+
+@ TODO(LC): stub for unported LC NPC script ROUTE_29_4_2_Script_008825DE
+ROUTE_29_4_2_Script_008825DE::
+	end
 
 Route109_SeashoreHouse_OnTransition:
 	setflag FLAG_LANDMARK_SEASHORE_HOUSE

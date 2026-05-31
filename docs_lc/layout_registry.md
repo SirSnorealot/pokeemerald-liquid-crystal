@@ -92,6 +92,14 @@ Maps every project layout that was imported from the LC export to its source fol
 
 ---
 
+## Gate / Indoor-Route Layouts
+
+| Project Layout ID  | Project Folder | lc_maps Folder |
+|--------------------|----------------|----------------|
+| LAYOUT_ROUTE_GATE  | _RouteGate     | 320990         |
+
+---
+
 ## Indoor Layouts
 
 | Project Layout ID                         | Project Folder                       | lc_maps Folder |

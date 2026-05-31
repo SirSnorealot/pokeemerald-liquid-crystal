@@ -29,7 +29,7 @@
     "gMapGroup_IndoorDynamic",
     "gMapGroup_SpecialArea",
     "gMapGroup_IndoorRoute104Prototype",
-    "gMapGroup_IndoorRoute109",
+    "gMapGroup_IndoorRoute29",
     "gMapGroup_IndoorRoute110",
     "gMapGroup_IndoorRoute123",
     "gMapGroup_IndoorRoute119",
@@ -607,8 +607,8 @@
     "Route104_Prototype",
     "Route104_PrototypePrettyPetalFlowerShop"
   ],
-  "gMapGroup_IndoorRoute109": [
-    "Route109_SeashoreHouse"
+  "gMapGroup_IndoorRoute29": [
+    "Route29_GateHouse"
   ],
   "gMapGroup_IndoorRoute110": [
     "Route110_TrickHouseEntrance",

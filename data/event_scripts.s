@@ -593,7 +593,7 @@ gStdScripts_End::
 	.include "data/maps/TrainerHill_Elevator/scripts.inc"
 	.include "data/maps/Route104_Prototype/scripts.inc"
 	.include "data/maps/Route104_PrototypePrettyPetalFlowerShop/scripts.inc"
-	.include "data/maps/Route109_SeashoreHouse/scripts.inc"
+	.include "data/maps/Route29_GateHouse/scripts.inc"
 	.include "data/maps/Route110_TrickHouseEntrance/scripts.inc"
 	.include "data/maps/Route110_TrickHouseEnd/scripts.inc"
 	.include "data/maps/Route110_TrickHouseCorridor/scripts.inc"

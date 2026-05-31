@@ -2927,14 +2927,14 @@
       "layout_version": "emerald"
     },
     {
-      "id": "LAYOUT_ROUTE109_SEASHORE_HOUSE",
-      "name": "Route109_SeashoreHouse_Layout",
+      "id": "LAYOUT_ROUTE_GATE",
+      "name": "RouteGate_Layout",
       "width": 15,
-      "height": 10,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_SeashoreHouse",
-      "border_filepath": "data/layouts/Route109_SeashoreHouse/border.bin",
-      "blockdata_filepath": "data/layouts/Route109_SeashoreHouse/map.bin",
+      "height": 12,
+      "primary_tileset": "gTileset__building_lc",
+      "secondary_tileset": "gTileset__route_gate_lc",
+      "border_filepath": "data/layouts/_RouteGate/border.bin",
+      "blockdata_filepath": "data/layouts/_RouteGate/map.bin",
       "layout_version": "emerald"
     },
     {

@@ -1042,6 +1042,17 @@ const struct Tileset gTileset__viridian_city_lc =
     .callback = NULL,
 };
 
+const struct Tileset gTileset__route_gate_lc =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_route_gate_lc,
+    .palettes = gTilesetPalettes_route_gate_lc,
+    .metatiles = gMetatiles_route_gate_lc,
+    .metatileAttributes = gMetatileAttributes_route_gate_lc,
+    .callback = NULL,
+};
+
 #else
 
 // FRLG tilesets

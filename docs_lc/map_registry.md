@@ -101,3 +101,4 @@ Maps every project map that was imported from the LC export to its source folder
 | NewBarkTown_ProfessorElmsLab    | NEW_BARK_TOWN_4_3    |
 | NewBarkTown_House1              | NEW_BARK_TOWN_5_26   |
 | NewBarkTown_House2              | NEW_BARK_TOWN_5_27   |
+| Route29_GateHouse               | ROUTE_29_4_2         |

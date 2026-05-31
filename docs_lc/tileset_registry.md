@@ -29,3 +29,4 @@ When adding a new tileset entry, leave AMAP # as `?` and fill it in afterward.
 | gTileset_2D4B6C  | ?      | gTileset__route_100_lc        |
 | gTileset_2D4ADC  | ?      | gTileset__pewter_city_lc      |
 | gTileset_2D4AC4  | ?      | gTileset__viridian_city_lc    |
+| gTileset_2D4E84  | ?      | gTileset__route_gate_lc       |
