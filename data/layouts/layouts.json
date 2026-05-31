@@ -1541,12 +1541,23 @@
       "layout_version": "emerald"
     },
     {
+      "id": "LAYOUT_ROUTE30_HOUSE2",
+      "name": "Route30_House2_Layout",
+      "width": 13,
+      "height": 10,
+      "primary_tileset": "gTileset__building_lc",
+      "secondary_tileset": "gTileset__elms_lab_lc",
+      "border_filepath": "data/layouts/_Route30_House2/border.bin",
+      "blockdata_filepath": "data/layouts/_Route30_House2/map.bin",
+      "layout_version": "emerald"
+    },
+    {
       "id": "LAYOUT_ROUTE104_PRETTY_PETAL_FLOWER_SHOP",
       "name": "Route104_PrettyPetalFlowerShop_Layout",
       "width": 15,
       "height": 9,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_PrettyPetalFlowerShop",
+      "primary_tileset": "gTileset__building_lc",
+      "secondary_tileset": "gTileset__elms_lab_lc",
       "border_filepath": "data/layouts/Route104_PrettyPetalFlowerShop/border.bin",
       "blockdata_filepath": "data/layouts/Route104_PrettyPetalFlowerShop/map.bin",
       "layout_version": "emerald"
@@ -3389,14 +3400,14 @@
       "layout_version": "emerald"
     },
     {
-      "id": "LAYOUT_ROUTE104_PROTOTYPE",
-      "name": "Route104_Prototype_Layout",
-      "width": 1,
-      "height": 1,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Rustboro",
-      "border_filepath": "data/layouts/Route104_Prototype/border.bin",
-      "blockdata_filepath": "data/layouts/Route104_Prototype/map.bin",
+      "id": "LAYOUT_ROUTE30_HOUSE1",
+      "name": "Route30_House1_Layout",
+      "width": 13,
+      "height": 10,
+      "primary_tileset": "gTileset__building_lc",
+      "secondary_tileset": "gTileset__interior_lc",
+      "border_filepath": "data/layouts/_Route30_House1/border.bin",
+      "blockdata_filepath": "data/layouts/_Route30_House1/map.bin",
       "layout_version": "emerald"
     },
     {

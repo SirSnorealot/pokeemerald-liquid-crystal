@@ -888,6 +888,17 @@ const struct Tileset gTileset__elms_lab_lc =
     .callback = NULL,
 };
 
+const struct Tileset gTileset__interior_lc =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_interior_lc,
+    .palettes = gTilesetPalettes_interior_lc,
+    .metatiles = gMetatiles_interior_lc,
+    .metatileAttributes = gMetatileAttributes_interior_lc,
+    .callback = NULL,
+};
+
 const struct Tileset gTileset__goldenrod_city_lc =
 {
     .isCompressed = TRUE,

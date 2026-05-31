@@ -225,6 +225,9 @@ const u16 gMetatileAttributes_new_bark_town_lc[] = INCBIN_U16("data/tilesets/sec
 const u16 gMetatiles_elms_lab_lc[] = INCBIN_U16("data/tilesets/secondary/_elms_lab_lc/metatiles.bin");
 const u16 gMetatileAttributes_elms_lab_lc[] = INCBIN_U16("data/tilesets/secondary/_elms_lab_lc/metatile_attributes.bin");
 
+const u16 gMetatiles_interior_lc[] = INCBIN_U16("data/tilesets/secondary/_interior_lc/metatiles.bin");
+const u16 gMetatileAttributes_interior_lc[] = INCBIN_U16("data/tilesets/secondary/_interior_lc/metatile_attributes.bin");
+
 const u16 gMetatiles_goldenrod_city_lc[] = INCBIN_U16("data/tilesets/secondary/_goldenrod_city_lc/metatiles.bin");
 const u16 gMetatileAttributes_goldenrod_city_lc[] = INCBIN_U16("data/tilesets/secondary/_goldenrod_city_lc/metatile_attributes.bin");
 

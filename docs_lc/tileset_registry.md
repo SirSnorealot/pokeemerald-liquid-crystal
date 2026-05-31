@@ -19,6 +19,7 @@ When adding a new tileset entry, leave AMAP # as `?` and fill it in afterward.
 | gTileset_2D4BB4  | 12     | gTileset__building_lc         |
 | gTileset_2D4C74  | 20     | gTileset__players_house_lc    |
 | gTileset_2D4C8C  | 21     | gTileset__elms_lab_lc         |
+| gTileset_2D4ECC  | ?      | gTileset__interior_lc         |
 | gTileset_2D4DC4  | 34     | gTileset__violet_city_lc      |
 | gTileset_2D504C  | 61     | gTileset__route_31_lc         |
 | gTileset_2D5064  | 62     | gTileset__route_35_lc         |
