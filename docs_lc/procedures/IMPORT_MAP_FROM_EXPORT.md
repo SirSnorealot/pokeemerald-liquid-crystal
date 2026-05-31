@@ -152,7 +152,11 @@ After the tileset is imported, record its LC name in the registry table as `gTil
 
 ## Phase 2 — Layout Import Check
 
-### 2-A: Compute the layout binary hashes
+### 2-A: Check the layout registry
+
+Before hashing, check [docs_lc/layout_registry.md](../layout_registry.md). If `lc_layout_id`'s hex folder appears in the `lc_maps Folder` column, the layout is already imported — record the matching `Project Layout ID` as `layout_id` and skip to Phase 3.
+
+### 2-B: Compute the layout binary hashes (fallback)
 
 ```bash
 md5sum lc_maps/data/layouts/<lc_layout_folder>/map.bin
@@ -161,7 +165,7 @@ md5sum lc_maps/data/layouts/<lc_layout_folder>/border.bin
 
 where `<lc_layout_folder>` is the hex address part of `lc_layout_id` (e.g. `2D5064` from `LAYOUT_2D5064`).
 
-### 2-B: Search the project for matching binaries
+### 2-C: Search the project for matching binaries
 
 ```bash
 find data/layouts -name "map.bin" | xargs md5sum | grep "<map_bin_hash>"
@@ -171,7 +175,7 @@ find data/layouts -name "border.bin" | xargs md5sum | grep "<border_bin_hash>"
 - **Both match the same folder** → the layout is already imported. Record the project `layout_id` from `data/layouts/layouts.json` by searching for that folder's `blockdata_filepath`. Skip to Phase 3.
 - **No match** → the layout must be imported. Continue to step 2-C.
 
-### 2-C: Choose an LC layout identity
+### 2-D: Choose an LC layout identity
 
 The user supplies (or you derive from `map_name`):
 - `layout_id` — e.g. `LAYOUT_CHERRYGROVE_CITY`
@@ -182,7 +186,7 @@ Translate the lc_maps tileset names to LC names (already resolved in Phase 1):
 - `primary_tileset_ref` — the `gTileset__<name>` LC form
 - `secondary_tileset_ref` — the `gTileset__<name>` LC form
 
-### 2-D: Run ADD_LAYOUT procedure
+### 2-E: Run ADD_LAYOUT procedure
 
 > **`layout_version` warning:** `mapjson` skips any layout whose `layout_version` does not match the current build target. For a debug/release emerald build the value must be `"emerald"`. If you set (or inherit) `"frlg"`, the layout will be silently omitted from `layouts.inc`, causing `undefined reference to '<Name>_Layout'` linker errors. After ADD_LAYOUT completes, verify:
 > ```bash
@@ -286,7 +290,7 @@ When the user says "import all connected maps" or "keep going":
 - [ ] `lc_layout_id`, `lc_primary_tileset`, `lc_secondary_tileset` recorded from export
 - [ ] Primary tileset — checked in registry; imported via ADD_TILESET if missing
 - [ ] Secondary tileset — checked in registry; imported via ADD_TILESET if missing
-- [ ] Layout — checked via md5 hash; imported via ADD_LAYOUT if not already present
+- [ ] Layout — checked in layout registry (and md5 hash fallback); imported via ADD_LAYOUT if not already present
 - [ ] ADD_MAP procedure completed in full per [ADD_MAP.md](ADD_MAP.md)
 - [ ] *(Multi-map)* All queued connections/warps processed
 - [ ] **`layout_version` is `"emerald"`** in `data/layouts/layouts.json` for every new layout

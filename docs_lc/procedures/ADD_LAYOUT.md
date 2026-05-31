@@ -103,3 +103,4 @@ Check for errors about unknown layouts, missing files, or tileset references.
 - [ ] `data/layouts/layouts.json` — entry added or replaced
 - [ ] *(Replace mode only)* Old Hoenn layout folder's `.bin` files deleted
 - [ ] Build succeeds (`EXIT:0`)
+- [ ] Layout added to [docs_lc/layout_registry.md](../layout_registry.md)
