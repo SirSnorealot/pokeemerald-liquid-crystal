@@ -3,7 +3,6 @@
   "name": "Route40",
   "layout": "LAYOUT_ROUTE40",
   "music": "MUS_ROUTE110",
-  "region": "REGION_HOENN",
   "region_map_section": "MAPSEC_ROUTE_111",
   "requires_flash": false,
   "weather": "WEATHER_SUNNY",
@@ -15,19 +14,19 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
+      "map": "MAP_ROUTE41",
+      "offset": 0,
+      "direction": "down"
+    },
+    {
       "map": "MAP_OLIVINE_CITY",
       "offset": -20,
       "direction": "right"
     },
     {
-      "map": "MAP_ROUTE_40_2",
+      "map": "MAP_ROUTE40_2",
       "offset": 29,
       "direction": "right"
-    },
-    {
-      "map": "MAP_ROUTE41",
-      "offset": 0,
-      "direction": "down"
     }
   ],
   "object_events": [
@@ -1088,5 +1087,6 @@
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Route111_EventScript_TrainerHillSign"
     }
-  ]
+  ],
+  "region": "REGION_HOENN"
 }

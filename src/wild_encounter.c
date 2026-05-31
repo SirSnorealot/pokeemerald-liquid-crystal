@@ -115,8 +115,8 @@ bool8 CheckFeebasAtCoords(s16 x, s16 y)
     u8 route119Section = 0;
     u16 spotId;
 
-    if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_ROUTE119)
-     && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_ROUTE119))
+    if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_ROUTE1)
+     && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_ROUTE1))
     {
         x -= MAP_OFFSET;
         y -= MAP_OFFSET;
@@ -631,8 +631,8 @@ static bool8 AllowWildCheckOnNewMetatile(void)
 
 bool8 AreLegendariesInSootopolisPreventingEncounters(void)
 {
-    if (gSaveBlock1Ptr->location.mapGroup != MAP_GROUP(MAP_SOOTOPOLIS_CITY)
-     || gSaveBlock1Ptr->location.mapNum != MAP_NUM(MAP_SOOTOPOLIS_CITY))
+    if (gSaveBlock1Ptr->location.mapGroup != MAP_GROUP(MAP_CELADON_CITY)
+     || gSaveBlock1Ptr->location.mapNum != MAP_NUM(MAP_CELADON_CITY))
     {
         return FALSE;
     }

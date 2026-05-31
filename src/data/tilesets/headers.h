@@ -987,6 +987,61 @@ const struct Tileset gTileset__cianwood_city_lc =
     .callback = NULL,
 };
 
+const struct Tileset gTileset__celadon_city_lc =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_celadon_city_lc,
+    .palettes = gTilesetPalettes_celadon_city_lc,
+    .metatiles = gMetatiles_celadon_city_lc,
+    .metatileAttributes = gMetatileAttributes_celadon_city_lc,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset__fuchsia_city_lc =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_fuchsia_city_lc,
+    .palettes = gTilesetPalettes_fuchsia_city_lc,
+    .metatiles = gMetatiles_fuchsia_city_lc,
+    .metatileAttributes = gMetatileAttributes_fuchsia_city_lc,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset__route_100_lc =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_route_100_lc,
+    .palettes = gTilesetPalettes_route_100_lc,
+    .metatiles = gMetatiles_route_100_lc,
+    .metatileAttributes = gMetatileAttributes_route_100_lc,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset__pewter_city_lc =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_pewter_city_lc,
+    .palettes = gTilesetPalettes_pewter_city_lc,
+    .metatiles = gMetatiles_pewter_city_lc,
+    .metatileAttributes = gMetatileAttributes_pewter_city_lc,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset__viridian_city_lc =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_viridian_city_lc,
+    .palettes = gTilesetPalettes_viridian_city_lc,
+    .metatiles = gMetatiles_viridian_city_lc,
+    .metatileAttributes = gMetatileAttributes_viridian_city_lc,
+    .callback = NULL,
+};
+
 #else
 
 // FRLG tilesets

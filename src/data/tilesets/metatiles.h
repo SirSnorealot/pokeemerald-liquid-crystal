@@ -252,6 +252,21 @@ const u16 gMetatileAttributes_olivine_port_lc[] = INCBIN_U16("data/tilesets/seco
 const u16 gMetatiles_cianwood_city_lc[] = INCBIN_U16("data/tilesets/secondary/_cianwood_city_lc/metatiles.bin");
 const u16 gMetatileAttributes_cianwood_city_lc[] = INCBIN_U16("data/tilesets/secondary/_cianwood_city_lc/metatile_attributes.bin");
 
+const u16 gMetatiles_celadon_city_lc[] = INCBIN_U16("data/tilesets/secondary/_celadon_city_lc/metatiles.bin");
+const u16 gMetatileAttributes_celadon_city_lc[] = INCBIN_U16("data/tilesets/secondary/_celadon_city_lc/metatile_attributes.bin");
+
+const u16 gMetatiles_fuchsia_city_lc[] = INCBIN_U16("data/tilesets/secondary/_fuchsia_city_lc/metatiles.bin");
+const u16 gMetatileAttributes_fuchsia_city_lc[] = INCBIN_U16("data/tilesets/secondary/_fuchsia_city_lc/metatile_attributes.bin");
+
+const u16 gMetatiles_route_100_lc[] = INCBIN_U16("data/tilesets/secondary/_route_100_lc/metatiles.bin");
+const u16 gMetatileAttributes_route_100_lc[] = INCBIN_U16("data/tilesets/secondary/_route_100_lc/metatile_attributes.bin");
+
+const u16 gMetatiles_pewter_city_lc[] = INCBIN_U16("data/tilesets/secondary/_pewter_city_lc/metatiles.bin");
+const u16 gMetatileAttributes_pewter_city_lc[] = INCBIN_U16("data/tilesets/secondary/_pewter_city_lc/metatile_attributes.bin");
+
+const u16 gMetatiles_viridian_city_lc[] = INCBIN_U16("data/tilesets/secondary/_viridian_city_lc/metatiles.bin");
+const u16 gMetatileAttributes_viridian_city_lc[] = INCBIN_U16("data/tilesets/secondary/_viridian_city_lc/metatile_attributes.bin");
+
 #else
 
 const u16 gMetatiles_Building_Frlg[] = INCBIN_U16("data/tilesets/primary/building_frlg/metatiles.bin");

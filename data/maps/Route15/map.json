@@ -1,0 +1,139 @@
+{
+    "id": "MAP_ROUTE15",
+    "name": "Route15",
+    "layout": "LAYOUT_ROUTE15",
+    "music": "MUS_RG_ROUTE11",
+    "region_map_section": "MAPSEC_ROUTE_15",
+    "requires_flash": false,
+    "weather": "WEATHER_SUNNY",
+    "map_type": "MAP_TYPE_ROUTE",
+    "allow_cycling": true,
+    "allow_escaping": false,
+    "allow_running": true,
+    "show_map_name": true,
+    "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+    "connections": [
+        {
+            "map": "MAP_FUCHSIA_CITY",
+            "offset": -21,
+            "direction": "left"
+        },
+        {
+            "map": "MAP_ROUTE14",
+            "offset": -35,
+            "direction": "right"
+        }
+    ],
+    "object_events": [
+        {
+            "type": "object",
+            "graphics_id": "19",
+            "x": 33,
+            "y": 22,
+            "elevation": 3,
+            "movement_type": "7",
+            "movement_range_x": 1,
+            "movement_range_y": 1,
+            "trainer_type": "1",
+            "trainer_sight_or_berry_tree_id": "3",
+            "script": "ROUTE_15_3_33_Script_00916EA5",
+            "flag": "0"
+        },
+        {
+            "type": "object",
+            "graphics_id": "19",
+            "x": 23,
+            "y": 19,
+            "elevation": 3,
+            "movement_type": "10",
+            "movement_range_x": 1,
+            "movement_range_y": 1,
+            "trainer_type": "1",
+            "trainer_sight_or_berry_tree_id": "5",
+            "script": "ROUTE_15_3_33_Script_00916DE2",
+            "flag": "0"
+        },
+        {
+            "type": "object",
+            "graphics_id": "22",
+            "x": 39,
+            "y": 19,
+            "elevation": 3,
+            "movement_type": "1",
+            "movement_range_x": 1,
+            "movement_range_y": 1,
+            "trainer_type": "1",
+            "trainer_sight_or_berry_tree_id": "3",
+            "script": "ROUTE_15_3_33_Script_00916F57",
+            "flag": "0"
+        },
+        {
+            "type": "object",
+            "graphics_id": "92",
+            "x": 20,
+            "y": 10,
+            "elevation": 0,
+            "movement_type": "0",
+            "movement_range_x": 0,
+            "movement_range_y": 0,
+            "trainer_type": "0",
+            "trainer_sight_or_berry_tree_id": "0",
+            "script": "ROUTE_15_3_33_Script_00917850",
+            "flag": "5656"
+        },
+        {
+            "type": "object",
+            "graphics_id": "19",
+            "x": 50,
+            "y": 19,
+            "elevation": 0,
+            "movement_type": "0",
+            "movement_range_x": 0,
+            "movement_range_y": 0,
+            "trainer_type": "1",
+            "trainer_sight_or_berry_tree_id": "3",
+            "script": "ROUTE_15_3_33_Script_00918B6B",
+            "flag": "0"
+        },
+        {
+            "type": "object",
+            "graphics_id": "22",
+            "x": 57,
+            "y": 21,
+            "elevation": 0,
+            "movement_type": "7",
+            "movement_range_x": 0,
+            "movement_range_y": 0,
+            "trainer_type": "1",
+            "trainer_sight_or_berry_tree_id": "4",
+            "script": "ROUTE_15_3_33_Script_0091AE83",
+            "flag": "0"
+        },
+        {
+            "type": "object",
+            "graphics_id": "19",
+            "x": 64,
+            "y": 19,
+            "elevation": 0,
+            "movement_type": "0",
+            "movement_range_x": 0,
+            "movement_range_y": 0,
+            "trainer_type": "1",
+            "trainer_sight_or_berry_tree_id": "3",
+            "script": "ROUTE_15_3_33_Script_0091B992",
+            "flag": "0"
+        }
+    ],
+    "warp_events": [],
+    "coord_events": [],
+    "bg_events": [
+        {
+            "x": 37,
+            "y": 18,
+            "elevation": 0,
+            "type": "sign",
+            "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+            "script": "ROUTE_15_3_33_Script_0091072A"
+        }
+    ]
+}

@@ -386,24 +386,25 @@ Route104_EventScript_ArriveInDewford::
 	applymovement LOCALID_PLAYER, Route104_Movement_PlayerExitBoat
 	waitmovement 0
 	call Common_EventScript_StopBrineysBoatMusic
-	showobjectat LOCALID_PLAYER, MAP_DEWFORD_TOWN
+	showobjectat LOCALID_PLAYER, MAP_LAVENDER_TOWN
 	applymovement LOCALID_PLAYER, Route104_Movement_PlayerMoveForBriney
 	waitmovement 0
-	setobjectxyperm LOCALID_DEWFORD_BRINEY, 12, 8
-	addobject LOCALID_DEWFORD_BRINEY
-	setobjectsubpriority LOCALID_DEWFORD_BRINEY, MAP_DEWFORD_TOWN, 0
-	clearflag FLAG_HIDE_MR_BRINEY_DEWFORD_TOWN
-	applymovement LOCALID_DEWFORD_BRINEY, Route104_Movement_BrineyExitBoat
-	waitmovement 0
-	addobject LOCALID_DEWFORD_BOAT
-	clearflag FLAG_HIDE_MR_BRINEY_BOAT_DEWFORD_TOWN
+	@ TODO(LC): Briney boat arrival not implemented for LC - DewfordTown outdoor map removed
+	@setobjectxyperm LOCALID_DEWFORD_BRINEY, 12, 8
+	@addobject LOCALID_DEWFORD_BRINEY
+	@setobjectsubpriority LOCALID_DEWFORD_BRINEY, MAP_LAVENDER_TOWN, 0
+	@clearflag FLAG_HIDE_MR_BRINEY_DEWFORD_TOWN
+	@applymovement LOCALID_DEWFORD_BRINEY, Route104_Movement_BrineyExitBoat
+	@waitmovement 0
+	@addobject LOCALID_DEWFORD_BOAT
+	@clearflag FLAG_HIDE_MR_BRINEY_BOAT_DEWFORD_TOWN
 	call Common_EventScript_StopBrineysBoatMusic
 	setflag FLAG_HIDE_ROUTE_104_MR_BRINEY_BOAT
 	hideobjectat LOCALID_ROUTE104_BOAT, MAP_ROUTE32
 	copyvar VAR_BRINEY_LOCATION, VAR_0x8008
 	resetobjectsubpriority LOCALID_PLAYER, MAP_ROUTE32
-	resetobjectsubpriority LOCALID_DEWFORD_BRINEY, MAP_DEWFORD_TOWN
-	copyobjectxytoperm LOCALID_DEWFORD_BRINEY
+	@resetobjectsubpriority LOCALID_DEWFORD_BRINEY, MAP_LAVENDER_TOWN
+	@copyobjectxytoperm LOCALID_DEWFORD_BRINEY
 	setvar VAR_BOARD_BRINEY_BOAT_STATE, 0
 	goto_if_unset FLAG_DELIVERED_STEVEN_LETTER, Route104_EventScript_DeliverLetterReminder
 	goto_if_set FLAG_DELIVERED_STEVEN_LETTER, Route104_EventScript_LandedInDewford
@@ -1166,3 +1167,10 @@ Route104_Text_BrendanPostBattle:
 	.string "making POKéMON battle.\p"
 	.string "Like MR. BRINEY, it's important to\n"
 	.string "become friends with your POKéMON.$"
+
+DewfordTown_Text_BrineyLandedInDewford:
+	.string "MR. BRINEY: Well, here we are!\n"
+	.string "DEWFORD TOWN!$"
+
+Route104_Text_LandedInDewfordDeliverLetter:
+	.string "Deliver the LETTER to STEVEN.$"

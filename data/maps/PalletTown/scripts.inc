@@ -1,0 +1,32 @@
+PalletTown_MapScripts::
+	.byte 0
+
+PALLET_TOWN_3_76_Script_0016586B::
+	end
+
+PALLET_TOWN_3_76_Script_00909CD7::
+	end
+
+PALLET_TOWN_3_76_Script_009407FF::
+	end
+
+PALLET_TOWN_3_76_Script_00953EB5::
+	end
+
+PALLET_TOWN_3_76_Script_00958877::
+	end
+
+PALLET_TOWN_3_76_Script_009588BD::
+	end
+
+PALLET_TOWN_3_76_Script_009588E2::
+	end
+
+PALLET_TOWN_3_76_Script_00958937::
+	end
+
+PALLET_TOWN_3_76_Script_0095894F::
+	end
+
+PALLET_TOWN_3_76_Script_00972385::
+	end

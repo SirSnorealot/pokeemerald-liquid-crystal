@@ -364,39 +364,39 @@ enum SSTidalLocation GetSSTidalLocation(s8 *mapGroup, s8 *mapNum, s16 *x, s16 *y
     case SS_TIDAL_DEPART_SLATEPORT:
         if (*varCruiseStepCount < 60)
         {
-            *mapNum = MAP_NUM(MAP_ROUTE134);
+            *mapNum = MAP_NUM(MAP_ROUTE16);
             *x = *varCruiseStepCount + 19;
         }
         else if (*varCruiseStepCount < 140)
         {
-            *mapNum = MAP_NUM(MAP_ROUTE133);
+            *mapNum = MAP_NUM(MAP_ROUTE15);
             *x = *varCruiseStepCount - 60;
         }
         else
         {
-            *mapNum = MAP_NUM(MAP_ROUTE132);
+            *mapNum = MAP_NUM(MAP_ROUTE14);
             *x = *varCruiseStepCount - 140;
         }
         break;
     case SS_TIDAL_HALFWAY_SLATEPORT:
         if (*varCruiseStepCount < 66)
         {
-            *mapNum = MAP_NUM(MAP_ROUTE132);
+            *mapNum = MAP_NUM(MAP_ROUTE14);
             *x = 65 - *varCruiseStepCount;
         }
         else if (*varCruiseStepCount < 146)
         {
-            *mapNum = MAP_NUM(MAP_ROUTE133);
+            *mapNum = MAP_NUM(MAP_ROUTE15);
             *x = 145 - *varCruiseStepCount;
         }
         else
         {
-            *mapNum = MAP_NUM(MAP_ROUTE134);
+            *mapNum = MAP_NUM(MAP_ROUTE16);
             *x = 224 - *varCruiseStepCount;
         }
         break;
     }
-    *mapGroup = MAP_GROUP(MAP_ROUTE132);
+    *mapGroup = MAP_GROUP(MAP_ROUTE14);
     *y = 20;
     return SS_TIDAL_LOCATION_CURRENTS;
 }
@@ -3551,12 +3551,12 @@ bool32 GetAbnormalWeatherMapNameAndType(void)
         MAP_NUM(MAP_ROUTE46),
         MAP_NUM(MAP_ROUTE33),
         MAP_NUM(MAP_ROUTE33),
-        MAP_NUM(MAP_ROUTE125),
-        MAP_NUM(MAP_ROUTE125),
-        MAP_NUM(MAP_ROUTE127),
-        MAP_NUM(MAP_ROUTE127),
-        MAP_NUM(MAP_ROUTE129),
-        MAP_NUM(MAP_ROUTE129)
+        MAP_NUM(MAP_ROUTE7),
+        MAP_NUM(MAP_ROUTE7),
+        MAP_NUM(MAP_ROUTE9),
+        MAP_NUM(MAP_ROUTE9),
+        MAP_NUM(MAP_ROUTE11),
+        MAP_NUM(MAP_ROUTE11)
     };
 
     u16 abnormalWeather = VarGet(VAR_ABNORMAL_WEATHER_LOCATION);
@@ -3584,12 +3584,12 @@ bool8 AbnormalWeatherHasExpired(void)
         MAP_NUM(MAP_ROUTE46),
         MAP_NUM(MAP_ROUTE33),
         MAP_NUM(MAP_ROUTE33),
-        MAP_NUM(MAP_ROUTE125),
-        MAP_NUM(MAP_ROUTE125),
-        MAP_NUM(MAP_ROUTE127),
-        MAP_NUM(MAP_ROUTE127),
-        MAP_NUM(MAP_ROUTE129),
-        MAP_NUM(MAP_ROUTE129)
+        MAP_NUM(MAP_ROUTE7),
+        MAP_NUM(MAP_ROUTE7),
+        MAP_NUM(MAP_ROUTE9),
+        MAP_NUM(MAP_ROUTE9),
+        MAP_NUM(MAP_ROUTE11),
+        MAP_NUM(MAP_ROUTE11)
     };
 
     u16 steps = VarGet(VAR_ABNORMAL_WEATHER_STEP_COUNTER);
@@ -3617,14 +3617,14 @@ bool8 AbnormalWeatherHasExpired(void)
             }
         }
 
-        if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_UNDERWATER_ROUTE127))
+        if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_ROUTE19))
         {
             switch (gSaveBlock1Ptr->location.mapNum)
             {
-            case MAP_NUM(MAP_UNDERWATER_ROUTE127):
-            case MAP_NUM(MAP_UNDERWATER_ROUTE129):
-            case MAP_NUM(MAP_UNDERWATER_ROUTE105):
-            case MAP_NUM(MAP_UNDERWATER_ROUTE125):
+            case MAP_NUM(MAP_ROUTE19):
+            case MAP_NUM(MAP_ROUTE21):
+            case MAP_NUM(MAP_ROUTE22):
+            case MAP_NUM(MAP_ROUTE24):
                 VarSet(VAR_SHOULD_END_ABNORMAL_WEATHER, 1);
                 return FALSE;
             default:
@@ -3951,7 +3951,7 @@ void GetBattlePyramidHint(void)
 // Used to avoid a potential softlock if the player respawns on Dewford with no way off
 void ResetHealLocationFromDewford(void)
 {
-    if (gSaveBlock1Ptr->lastHealLocation.mapGroup == MAP_GROUP(MAP_DEWFORD_TOWN) && gSaveBlock1Ptr->lastHealLocation.mapNum == MAP_NUM(MAP_DEWFORD_TOWN))
+    if (gSaveBlock1Ptr->lastHealLocation.mapGroup == MAP_GROUP(MAP_LAVENDER_TOWN) && gSaveBlock1Ptr->lastHealLocation.mapNum == MAP_NUM(MAP_LAVENDER_TOWN))
         SetLastHealLocationWarp(HEAL_LOCATION_PETALBURG_CITY);
 }
 

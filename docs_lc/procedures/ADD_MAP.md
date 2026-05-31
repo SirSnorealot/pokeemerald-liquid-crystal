@@ -17,6 +17,7 @@ This procedure wires a new LC map into the project's map data, group tables, eve
 | **Replace mode only:** `hoenn_map_name` | `Route118` |
 | **Replace mode only:** `hoenn_map_id` | `MAP_ROUTE118` |
 | **Append mode only:** `map_group_neighbor` | the existing map name to insert after |
+| `lc_map_folder` | `ROUTE_1_3_19` — the LC export folder identified in IMPORT Phase 0-C |
 
 > **Naming conventions**
 > - Map folders use no leading underscore: `data/maps/Route46/`
@@ -35,50 +36,40 @@ data/maps/<hoenn_map_name>/  →  data/maps/<map_name>/
 ```
 
 ### Append mode
-Create a new folder `data/maps/<map_name>/` and place the exported `map.json` and `scripts.inc` files from PokeMapExport inside it.
+Create a new empty folder `data/maps/<map_name>/`. (`map.json` is written in Step 2; `scripts.inc` is created in Step 3.)
 
 ---
 
-## Step 2 — Update `map.json`
+## Step 2 — Write `map.json` from LC export
 
-Open `data/maps/<map_name>/map.json` and make the following changes:
+Build a fresh `map.json` at `data/maps/<map_name>/map.json` by reading the LC export at `lc_maps/data/maps/<lc_map_folder>/map.json`. Overwrite any existing file.
 
-- `"id"` → `"<map_id>"`
-- `"name"` → `"<map_name>"`
-- `"layout"` → `"<layout_id>"`
-- `"connections"` → `[]` *(leave empty; neighboring maps will add connections when they are added later)*
+**Identity fields — use project values, never LC export values:**
 
-> **Do not change** `music`, `region_map_section`, `weather`, `map_type`, `allow_cycling`, `allow_escaping`, `allow_running`, `show_map_name`, `battle_scene`, `object_events`, `warp_events`, `coord_events`, or `bg_events`. These are carried over from the source and are updated later as LC content is built out.
+| Field | Value |
+|---|---|
+| `"id"` | `"<map_id>"` |
+| `"name"` | `"<map_name>"` |
+| `"layout"` | `"<layout_id>"` |
 
-> **Exception:** If any already-added LC neighbor maps border this map, add their connections to `"connections"` now. Check existing LC maps that reference this map's area.
+**Header metadata — copy directly from the LC export:**
 
-### Sanitize LC event data (required)
+`"music"`, `"region_map_section"`, `"requires_flash"`, `"weather"`, `"map_type"`, `"allow_cycling"`, `"allow_escaping"`, `"allow_running"`, `"show_map_name"`, `"battle_scene"`
 
-The LC export `map.json` uses old GBA formats that mapjson cannot process. Run these fixes before building:
+**`"connections"` — set to `[]` (empty).** Do not copy connections from the LC export — they contain LC-specific map IDs that do not exist in the project. Connections are added in Step 5 as neighboring maps are imported.
 
-**Remove `local_id` key from all `object_events`** — the key must not exist at all (not even `null`). If present, mapjson generates `#define 1 1` in the map event ID header, breaking the build.
+> **Exception:** If already-imported LC neighbors border this map, add their connections now — see Step 5 for format and direction conversion.
 
-```python
-import json
-with open('data/maps/<map_name>/map.json') as f:
-    m = json.load(f)
-for e in m.get('object_events', []):
-    e.pop('local_id', None)
-with open('data/maps/<map_name>/map.json', 'w') as f:
-    json.dump(m, f, indent=4)
-```
+**`"object_events"` — copy all entries from the LC export with one rule:**
 
-**Remove `coord_events` and `bg_events` entries missing a `type` field** — old GBA-extracted events use `trigger`/`index` fields instead of `type`/`var`/`var_value`. mapjson requires `type` and will error on entries without it. Strip them:
+- Remove `"local_id"` if its value is an **integer** — mapjson emits `#define 1 1` for integer local_ids, breaking the build.
+- Keep `"local_id"` if its value is a **string** (e.g. `"LOCALID_ROUTE101_BIRCH"`) — mapjson generates a valid `#define` constant used by scripts.
 
-```python
-import json
-with open('data/maps/<map_name>/map.json') as f:
-    m = json.load(f)
-m['coord_events'] = [e for e in m.get('coord_events', []) if 'type' in e]
-m['bg_events']    = [e for e in m.get('bg_events', [])    if 'type' in e]
-with open('data/maps/<map_name>/map.json', 'w') as f:
-    json.dump(m, f, indent=4)
-```
+**`"warp_events"` — copy as-is from the LC export.**
+
+**`"coord_events"` and `"bg_events"` — include only entries that have a `"type"` field.** Old GBA-extracted events use `trigger`/`index` instead of `type`/`var`/`var_value`; mapjson errors on any entry missing `"type"`.
+
+> **LOCALIDs for removed maps:** If the project previously had a Hoenn map here that is now replaced by an LC map, any scripts referencing `LOCALID_<HOENN_MAP>_*` constants lose their source. **Do not create stub header files.** Comment out the affected lines with `@` and add a `@ TODO(LC):` note. mapjson auto-generates LOCALID constants from `"local_id"` fields in `map.json` — if the original map is gone, those constants no longer exist.
 
 ---
 
@@ -137,6 +128,17 @@ For any already-added LC maps that are geographically adjacent to `<map_name>`, 
   "direction": "<direction>"
 }
 ```
+
+Read `"offset"` from the LC export's `"connections"` array. Convert LC directions to pokeemerald:
+
+| LC export | pokeemerald |
+|---|---|
+| `north` | `up` |
+| `south` | `down` |
+| `east` | `right` |
+| `west` | `left` |
+
+> **Never patch `connections.inc` directly.** `mapjson` regenerates it verbatim from `map.json` on every clean build. The fix always goes in `map.json`.
 
 Also add the reciprocal connection on `<map_name>`'s `map.json` if it is known at this time.
 
@@ -241,7 +243,7 @@ Add an entry for this map to [docs_lc/map_registry.md](../map_registry.md). Plac
 ## Summary Checklist
 
 - [ ] Map folder renamed or created at `data/maps/<map_name>/`
-- [ ] `map.json` — `id`, `name`, `layout` updated; `connections` set to `[]`
+- [ ] `map.json` — written from scratch per Step 2 rules (identity fields from project args, metadata from LC export, connections empty, integer local_ids dropped, typed events only)
 - [ ] `scripts.inc` — *(Replace)* top label renamed to `<map_name>_MapScripts::`, Hoenn content preserved; *(Append)* stub created with label and `.byte 0` only (lc_maps scripts.inc NOT used)
 - [ ] *(Replace mode)* Sub-map `warp_events` pointing to old Hoenn map cleared to `[]`
 - [ ] Adjacent already-added LC maps — connections updated
@@ -259,7 +261,5 @@ Add an entry for this map to [docs_lc/map_registry.md](../map_registry.md). Plac
 - [ ] `src/tv.c` — map reference and any `LOCALID_*` constants updated if present
 - [ ] `src/wild_encounter.c` — map reference updated if present
 - [ ] `src/pokedex_area_screen.c` — checked for duplicate `MAP_GROUP_*` / `MAP_GROUP_*_FRLG` case values if maps moved groups
-- [ ] `map.json` — `local_id` key removed from all `object_events`
-- [ ] `map.json` — `coord_events` and `bg_events` entries without `type` field removed
 - [ ] Build succeeds (`EXIT:0` from piped build command)
 - [ ] Map added to `docs_lc/map_registry.md`

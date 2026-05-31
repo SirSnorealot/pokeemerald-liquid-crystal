@@ -157,7 +157,7 @@ static const mapsec_u16_t sMovingRegionMapSections[3] =
 
 static const u16 sFeebasData[][3] =
 {
-    {SPECIES_FEEBAS, MAP_GROUP(MAP_ROUTE119), MAP_NUM(MAP_ROUTE119)},
+    {SPECIES_FEEBAS, MAP_GROUP(MAP_ROUTE1), MAP_NUM(MAP_ROUTE1)},
     {NUM_SPECIES}
 };
 
@@ -318,7 +318,6 @@ static void FindMapsWithMon(enum Species species)
             switch (sFeebasData[i][1])
             {
             case MAP_GROUP_TOWNS_AND_ROUTES:
-            case MAP_GROUP_TOWNS_AND_ROUTES_FRLG:
                 SetAreaHasMon(sFeebasData[i][1], sFeebasData[i][2]);
                 break;
             case MAP_GROUP_DUNGEONS:
@@ -345,7 +344,6 @@ static void FindMapsWithMon(enum Species species)
             switch (gWildMonHeaders[i].mapGroup)
             {
             case MAP_GROUP_TOWNS_AND_ROUTES:
-            case MAP_GROUP_TOWNS_AND_ROUTES_FRLG:
                 SetAreaHasMon(gWildMonHeaders[i].mapGroup, gWildMonHeaders[i].mapNum);
                 break;
             case MAP_GROUP_DUNGEONS:

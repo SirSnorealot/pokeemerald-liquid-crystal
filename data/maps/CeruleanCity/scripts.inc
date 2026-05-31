@@ -1,0 +1,62 @@
+CeruleanCity_MapScripts::
+	.byte 0
+
+CERULEAN_CITY_3_3_Script_00166603::
+	end
+
+CERULEAN_CITY_3_3_Script_001666E7::
+	end
+
+CERULEAN_CITY_3_3_Script_00166726::
+	end
+
+CERULEAN_CITY_3_3_Script_0016672F::
+	end
+
+CERULEAN_CITY_3_3_Script_0016AC94::
+	end
+
+CERULEAN_CITY_3_3_Script_001BDF13::
+	end
+
+CERULEAN_CITY_3_3_Script_00900AA8::
+	end
+
+CERULEAN_CITY_3_3_Script_00923958::
+	end
+
+CERULEAN_CITY_3_3_Script_009239A2::
+	end
+
+CERULEAN_CITY_3_3_Script_009239E0::
+	end
+
+CERULEAN_CITY_3_3_Script_00923A3B::
+	end
+
+CERULEAN_CITY_3_3_Script_00923A56::
+	end
+
+CERULEAN_CITY_3_3_Script_00923AD3::
+	end
+
+CERULEAN_CITY_3_3_Script_00923B26::
+	end
+
+CERULEAN_CITY_3_3_Script_00923BCD::
+	end
+
+CERULEAN_CITY_3_3_Script_00924634::
+	end
+
+CERULEAN_CITY_3_3_Script_009247E5::
+	end
+
+CERULEAN_CITY_3_3_Script_0093ECA5::
+	end
+
+CERULEAN_CITY_3_3_Script_009A3977::
+	end
+
+CERULEAN_CITY_3_3_Script_009AC9E4::
+	end

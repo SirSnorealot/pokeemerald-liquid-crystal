@@ -1,0 +1,59 @@
+VermilionCity_MapScripts::
+	.byte 0
+
+VermilionCity_EventScript_Dummy::
+	end
+
+VERMILION_CITY_3_5_Script_00166C53::
+	end
+
+VERMILION_CITY_3_5_Script_00166C65::
+	end
+
+VERMILION_CITY_3_5_Script_00166C6E::
+	end
+
+VERMILION_CITY_3_5_Script_00168014::
+	end
+
+VERMILION_CITY_3_5_Script_001BDF13::
+	end
+
+VERMILION_CITY_3_5_Script_008DADC4::
+	end
+
+VERMILION_CITY_3_5_Script_008DADE9::
+	end
+
+VERMILION_CITY_3_5_Script_008DAE43::
+	end
+
+VERMILION_CITY_3_5_Script_008EB16F::
+	end
+
+VERMILION_CITY_3_5_Script_0090A45B::
+	end
+
+VERMILION_CITY_3_5_Script_00910B38::
+	end
+
+VERMILION_CITY_3_5_Script_00913134::
+	end
+
+VERMILION_CITY_3_5_Script_00914B07::
+	end
+
+VERMILION_CITY_3_5_Script_0091EA6E::
+	end
+
+VERMILION_CITY_3_5_Script_0092AA94::
+	end
+
+VERMILION_CITY_3_5_Script_00935F17::
+	end
+
+VERMILION_CITY_3_5_Script_0093C377::
+	end
+
+VERMILION_CITY_3_5_Script_00943584::
+	end

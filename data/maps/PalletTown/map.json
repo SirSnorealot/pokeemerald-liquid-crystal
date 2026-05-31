@@ -1,0 +1,137 @@
+{
+    "id": "MAP_PALLET_TOWN",
+    "name": "PalletTown",
+    "layout": "LAYOUT_PALLET_TOWN",
+    "music": "MUS_RG_PALLET",
+    "region_map_section": "MAPSEC_PALLET_TOWN",
+    "requires_flash": false,
+    "weather": "WEATHER_NONE",
+    "map_type": "MAP_TYPE_TOWN",
+    "allow_cycling": true,
+    "allow_escaping": false,
+    "allow_running": true,
+    "show_map_name": true,
+    "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+    "connections": [
+        {
+            "map": "MAP_ROUTE1",
+            "offset": 2,
+            "direction": "up"
+        },
+        {
+            "map": "MAP_ROUTE21",
+            "offset": -2,
+            "direction": "down"
+        }
+    ],
+    "object_events": [
+        {
+            "type": "object",
+            "graphics_id": "22",
+            "x": 8,
+            "y": 14,
+            "elevation": 0,
+            "movement_type": "2",
+            "movement_range_x": 0,
+            "movement_range_y": 0,
+            "trainer_type": "0",
+            "trainer_sight_or_berry_tree_id": "0",
+            "script": "PALLET_TOWN_3_76_Script_00958877",
+            "flag": "0"
+        },
+        {
+            "type": "object",
+            "graphics_id": "27",
+            "x": 18,
+            "y": 24,
+            "elevation": 0,
+            "movement_type": "6",
+            "movement_range_x": 0,
+            "movement_range_y": 0,
+            "trainer_type": "0",
+            "trainer_sight_or_berry_tree_id": "0",
+            "script": "PALLET_TOWN_3_76_Script_00953EB5",
+            "flag": "0"
+        },
+        {
+            "type": "object",
+            "graphics_id": "41",
+            "x": 14,
+            "y": 11,
+            "elevation": 0,
+            "movement_type": "1",
+            "movement_range_x": 0,
+            "movement_range_y": 0,
+            "trainer_type": "1",
+            "trainer_sight_or_berry_tree_id": "0",
+            "script": "PALLET_TOWN_3_76_Script_00972385",
+            "flag": "0"
+        },
+        {
+            "type": "object",
+            "graphics_id": "20",
+            "x": 29,
+            "y": 10,
+            "elevation": 0,
+            "movement_type": "4",
+            "movement_range_x": 0,
+            "movement_range_y": 0,
+            "trainer_type": "0",
+            "trainer_sight_or_berry_tree_id": "0",
+            "script": "PALLET_TOWN_3_76_Script_009407FF",
+            "flag": "0"
+        }
+    ],
+    "warp_events": [],
+    "coord_events": [],
+    "bg_events": [
+        {
+            "x": 23,
+            "y": 22,
+            "elevation": 0,
+            "type": "sign",
+            "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+            "script": "PALLET_TOWN_3_76_Script_009588BD"
+        },
+        {
+            "x": 8,
+            "y": 11,
+            "elevation": 0,
+            "type": "sign",
+            "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+            "script": "PALLET_TOWN_3_76_Script_00958937"
+        },
+        {
+            "x": 19,
+            "y": 11,
+            "elevation": 0,
+            "type": "sign",
+            "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+            "script": "PALLET_TOWN_3_76_Script_0095894F"
+        },
+        {
+            "x": 12,
+            "y": 16,
+            "elevation": 0,
+            "type": "sign",
+            "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+            "script": "PALLET_TOWN_3_76_Script_009588E2"
+        },
+        {
+            "x": 23,
+            "y": 17,
+            "elevation": 0,
+            "type": "sign",
+            "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+            "script": "PALLET_TOWN_3_76_Script_0016586B"
+        },
+        {
+            "x": 12,
+            "y": 10,
+            "elevation": 0,
+            "type": "sign",
+            "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+            "script": "PALLET_TOWN_3_76_Script_00909CD7"
+        }
+    ]
+}

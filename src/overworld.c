@@ -1155,22 +1155,22 @@ static bool16 ShouldLegendaryMusicPlayAtLocation(struct WarpData *warp)
         {
         case MAP_NUM(MAP_OLIVINE_CITY):
         case MAP_NUM(MAP_BLACKTHORN_CITY):
-        case MAP_NUM(MAP_SOOTOPOLIS_CITY):
-        case MAP_NUM(MAP_EVER_GRANDE_CITY):
-        case MAP_NUM(MAP_ROUTE124):
-        case MAP_NUM(MAP_ROUTE125):
-        case MAP_NUM(MAP_ROUTE126):
-        case MAP_NUM(MAP_ROUTE127):
-        case MAP_NUM(MAP_ROUTE128):
+        case MAP_NUM(MAP_CELADON_CITY):
+        case MAP_NUM(MAP_SAFFRON_CITY):
+        case MAP_NUM(MAP_ROUTE6):
+        case MAP_NUM(MAP_ROUTE7):
+        case MAP_NUM(MAP_ROUTE8):
+        case MAP_NUM(MAP_ROUTE9):
+        case MAP_NUM(MAP_ROUTE10):
             return TRUE;
         default:
             if (VarGet(VAR_SOOTOPOLIS_CITY_STATE) < 4)
                 return FALSE;
             switch (warp->mapNum)
             {
-            case MAP_NUM(MAP_ROUTE129):
-            case MAP_NUM(MAP_ROUTE130):
-            case MAP_NUM(MAP_ROUTE131):
+            case MAP_NUM(MAP_ROUTE11):
+            case MAP_NUM(MAP_ROUTE12):
+            case MAP_NUM(MAP_ROUTE13):
                 return TRUE;
             }
         }
@@ -1182,9 +1182,9 @@ static bool16 NoMusicInSootopolisWithLegendaries(struct WarpData *warp)
 {
     if (VarGet(VAR_SKY_PILLAR_STATE) != 1)
         return FALSE;
-    else if (warp->mapGroup != MAP_GROUP(MAP_SOOTOPOLIS_CITY))
+    else if (warp->mapGroup != MAP_GROUP(MAP_CELADON_CITY))
         return FALSE;
-    else if (warp->mapNum == MAP_NUM(MAP_SOOTOPOLIS_CITY))
+    else if (warp->mapNum == MAP_NUM(MAP_CELADON_CITY))
         return TRUE;
     else
         return FALSE;
@@ -1375,10 +1375,10 @@ void TryFadeOutOldMapMusic(void)
     {
         if (currentMusic == MUS_SURF
             && VarGet(VAR_SKY_PILLAR_STATE) == 2
-            && gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_SOOTOPOLIS_CITY)
-            && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_SOOTOPOLIS_CITY)
-            && sWarpDestination.mapGroup == MAP_GROUP(MAP_SOOTOPOLIS_CITY)
-            && sWarpDestination.mapNum == MAP_NUM(MAP_SOOTOPOLIS_CITY)
+            && gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_CELADON_CITY)
+            && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_CELADON_CITY)
+            && sWarpDestination.mapGroup == MAP_GROUP(MAP_CELADON_CITY)
+            && sWarpDestination.mapNum == MAP_NUM(MAP_CELADON_CITY)
             && sWarpDestination.x == 29
             && sWarpDestination.y == 53)
             return;
@@ -1499,8 +1499,8 @@ void UpdateAmbientCry(s16 *state, u16 *delayCounter)
 
 static void ChooseAmbientCrySpecies(void)
 {
-    if ((gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_ROUTE130)
-     && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_ROUTE130))
+    if ((gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_ROUTE12)
+     && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_ROUTE12))
      && !IsMirageIslandPresent())
     {
         // Only play water Pokémon cries on this route

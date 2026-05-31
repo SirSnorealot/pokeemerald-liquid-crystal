@@ -78,7 +78,7 @@
     },
     {
       "id": "HEAL_LOCATION_SOOTOPOLIS_CITY",
-      "map": "MAP_SOOTOPOLIS_CITY",
+      "map": "MAP_CELADON_CITY",
       "x": 43,
       "y": 32,
       "respawn_map": "MAP_SOOTOPOLIS_CITY_POKEMON_CENTER_1F",
@@ -86,7 +86,7 @@
     },
     {
       "id": "HEAL_LOCATION_EVER_GRANDE_CITY",
-      "map": "MAP_EVER_GRANDE_CITY",
+      "map": "MAP_SAFFRON_CITY",
       "x": 27,
       "y": 49,
       "respawn_map": "MAP_EVER_GRANDE_CITY_POKEMON_CENTER_1F",
@@ -122,7 +122,7 @@
     },
     {
       "id": "HEAL_LOCATION_DEWFORD_TOWN",
-      "map": "MAP_DEWFORD_TOWN",
+      "map": "MAP_LAVENDER_TOWN",
       "x": 2,
       "y": 11,
       "respawn_map": "MAP_DEWFORD_TOWN_POKEMON_CENTER_1F",
@@ -130,7 +130,7 @@
     },
     {
       "id": "HEAL_LOCATION_LAVARIDGE_TOWN",
-      "map": "MAP_LAVARIDGE_TOWN",
+      "map": "MAP_VERMILION_CITY",
       "x": 9,
       "y": 7,
       "respawn_map": "MAP_LAVARIDGE_TOWN_POKEMON_CENTER_1F",
@@ -138,7 +138,7 @@
     },
     {
       "id": "HEAL_LOCATION_FALLARBOR_TOWN",
-      "map": "MAP_FALLARBOR_TOWN",
+      "map": "MAP_FUCHSIA_CITY",
       "x": 14,
       "y": 8,
       "respawn_map": "MAP_FALLARBOR_TOWN_POKEMON_CENTER_1F",
@@ -146,7 +146,7 @@
     },
     {
       "id": "HEAL_LOCATION_VERDANTURF_TOWN",
-      "map": "MAP_VERDANTURF_TOWN",
+      "map": "MAP_PEWTER_CITY",
       "x": 16,
       "y": 4,
       "respawn_map": "MAP_VERDANTURF_TOWN_POKEMON_CENTER_1F",
@@ -162,7 +162,7 @@
     },
     {
       "id": "HEAL_LOCATION_EVER_GRANDE_CITY_POKEMON_LEAGUE",
-      "map": "MAP_EVER_GRANDE_CITY",
+      "map": "MAP_SAFFRON_CITY",
       "x": 18,
       "y": 6,
       "respawn_map": "MAP_EVER_GRANDE_CITY_POKEMON_LEAGUE_1F",

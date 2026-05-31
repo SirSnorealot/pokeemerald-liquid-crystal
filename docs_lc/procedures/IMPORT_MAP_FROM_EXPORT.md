@@ -184,6 +184,12 @@ Translate the lc_maps tileset names to LC names (already resolved in Phase 1):
 
 ### 2-D: Run ADD_LAYOUT procedure
 
+> **`layout_version` warning:** `mapjson` skips any layout whose `layout_version` does not match the current build target. For a debug/release emerald build the value must be `"emerald"`. If you set (or inherit) `"frlg"`, the layout will be silently omitted from `layouts.inc`, causing `undefined reference to '<Name>_Layout'` linker errors. After ADD_LAYOUT completes, verify:
+> ```bash
+> python3 -c "import json; d=json.load(open('data/layouts/layouts.json')); print(next(l['layout_version'] for l in d['layouts'] if l['id']=='<layout_id>'))"
+> ```
+> The output must be `emerald`.
+
 Follow [ADD_LAYOUT.md](ADD_LAYOUT.md) with:
 
 | ADD_LAYOUT field | Value |
@@ -201,20 +207,6 @@ Follow [ADD_LAYOUT.md](ADD_LAYOUT.md) with:
 
 ## Phase 3 — Map Import
 
-### 3-A: Obtain source map files
-
-Only `map.json` is copied from the LC export:
-
-```bash
-cp lc_maps/data/maps/<lc_map_folder>/map.json data/maps/<map_name>/map.json
-```
-
-> **Replace mode:** `scripts.inc` already exists (the renamed Hoenn file). ADD_MAP Step 3 will only rename the top label — do not overwrite it.
->
-> **Append mode:** Do not copy `scripts.inc` from `lc_maps`. The LC export scripts use old GBA macro formats that are incompatible with pokeemerald (wrong `trainerbattle` signature, non-existent `checkpartymove`, unsupported `[.]` and `{0X??}` escapes, raw UTF-8 bytes). ADD_MAP Step 3 will create a stub. The lc_maps scripts are reference material for a later manual porting pass.
-
-### 3-B: Run ADD_MAP procedure
-
 Follow [ADD_MAP.md](ADD_MAP.md) with:
 
 | ADD_MAP field | Value |
@@ -222,11 +214,12 @@ Follow [ADD_MAP.md](ADD_MAP.md) with:
 | `map_name` | user-supplied |
 | `map_id` | derived in Phase 0 |
 | `layout_id` | resolved in Phase 2 |
+| `lc_map_folder` | identified in Phase 0-C |
 | Mode | user-supplied |
 | `hoenn_map_name` | user-supplied *(Replace only)* |
 | `hoenn_map_id` | user-supplied *(Replace only)* |
 
-> **Note for ADD_MAP step 10:** Even in single-map mode, the build must succeed and all errors must be resolved before this procedure is considered complete. Do not stop at the first error — fix it and rebuild until clean.
+> Even in single-map mode, the build must succeed before this procedure is considered complete. Do not stop at the first error — fix it and rebuild until `EXIT:0`.
 
 ---
 
@@ -294,8 +287,8 @@ When the user says "import all connected maps" or "keep going":
 - [ ] Primary tileset — checked in registry; imported via ADD_TILESET if missing
 - [ ] Secondary tileset — checked in registry; imported via ADD_TILESET if missing
 - [ ] Layout — checked via md5 hash; imported via ADD_LAYOUT if not already present
-- [ ] `map.json` only copied from lc_maps (`scripts.inc` NOT copied — stub generated instead)
-- [ ] ADD_MAP procedure completed in full (including event sanitization in Step 2)
+- [ ] ADD_MAP procedure completed in full per [ADD_MAP.md](ADD_MAP.md)
 - [ ] *(Multi-map)* All queued connections/warps processed
+- [ ] **`layout_version` is `"emerald"`** in `data/layouts/layouts.json` for every new layout
 - [ ] **Build passes with zero errors** — piped build `EXIT:0`, all errors fixed and rebuilt until clean
 - [ ] Map added to [docs_lc/map_registry.md](../map_registry.md)

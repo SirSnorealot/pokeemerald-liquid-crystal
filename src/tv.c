@@ -216,7 +216,7 @@ static const struct {
         .species = SPECIES_SEEDOT,
         .moves = {MOVE_GIGA_DRAIN, MOVE_FRUSTRATION, MOVE_SOLAR_BEAM, MOVE_LEECH_SEED},
         .level = 25,
-        .location = MAP_NUM(MAP_ROUTE120),
+        .location = MAP_NUM(MAP_ROUTE2),
     },
     {
         .species = SPECIES_SKITTY,
@@ -1039,8 +1039,8 @@ void GetGabbyAndTyLocalIds(void)
         gSpecialVar_0x8005 = LOCALID_ROUTE118_TY_1;
         break;
     case 3:
-        gSpecialVar_0x8004 = LOCALID_ROUTE120_GABBY_1;
-        gSpecialVar_0x8005 = LOCALID_ROUTE120_TY_1;
+        gSpecialVar_0x8004 = LOCALID_ROUTE118_GABBY_1;
+        gSpecialVar_0x8005 = LOCALID_ROUTE118_TY_1;
         break;
     case 4:
         gSpecialVar_0x8004 = LOCALID_ROUTE111_GABBY_2;
@@ -1051,8 +1051,8 @@ void GetGabbyAndTyLocalIds(void)
         gSpecialVar_0x8005 = LOCALID_ROUTE118_TY_2;
         break;
     case 6:
-        gSpecialVar_0x8004 = LOCALID_ROUTE120_GABBY_2;
-        gSpecialVar_0x8005 = LOCALID_ROUTE120_TY_2;
+        gSpecialVar_0x8004 = LOCALID_ROUTE118_GABBY_2;
+        gSpecialVar_0x8005 = LOCALID_ROUTE118_TY_2;
         break;
     case 7:
         gSpecialVar_0x8004 = LOCALID_ROUTE111_GABBY_3;

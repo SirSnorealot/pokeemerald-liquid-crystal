@@ -1,0 +1,77 @@
+{
+    "id": "MAP_ROUTE42_2",
+    "name": "Route42_2",
+    "layout": "LAYOUT_ROUTE42_2",
+    "music": "MUS_RG_GYM",
+    "region_map_section": "MAPSEC_GREEN_PATH",
+    "requires_flash": false,
+    "weather": "WEATHER_NONE",
+    "map_type": "MAP_TYPE_ROUTE",
+    "allow_cycling": false,
+    "allow_escaping": false,
+    "allow_running": true,
+    "show_map_name": false,
+    "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+    "connections": [],
+    "object_events": [],
+    "warp_events": [],
+    "coord_events": [],
+    "bg_events": [
+        {
+            "x": 7,
+            "y": 7,
+            "elevation": 0,
+            "type": "sign",
+            "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+            "script": "ROUTE_42_4_23_Script_0085DEA1"
+        },
+        {
+            "x": 8,
+            "y": 8,
+            "elevation": 0,
+            "type": "sign",
+            "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+            "script": "ROUTE_42_4_23_Script_0085DEA1"
+        },
+        {
+            "x": 7,
+            "y": 4,
+            "elevation": 0,
+            "type": "sign",
+            "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+            "script": "ROUTE_42_4_23_Script_0085DEA1"
+        },
+        {
+            "x": 8,
+            "y": 4,
+            "elevation": 0,
+            "type": "sign",
+            "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+            "script": "ROUTE_42_4_23_Script_0085DEA1"
+        },
+        {
+            "x": 9,
+            "y": 2,
+            "elevation": 0,
+            "type": "sign",
+            "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+            "script": "ROUTE_42_4_23_Script_0085DEA1"
+        },
+        {
+            "x": 16,
+            "y": 6,
+            "elevation": 0,
+            "type": "sign",
+            "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+            "script": "ROUTE_42_4_23_Script_0085DEA1"
+        },
+        {
+            "x": 15,
+            "y": 6,
+            "elevation": 0,
+            "type": "sign",
+            "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+            "script": "ROUTE_42_4_23_Script_0085DEA1"
+        }
+    ]
+}

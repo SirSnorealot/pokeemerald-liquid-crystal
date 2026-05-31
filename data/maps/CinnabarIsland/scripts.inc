@@ -1,0 +1,17 @@
+CinnabarIsland_MapScripts::
+	.byte 0
+
+CINNABAR_ISLAND_3_8_Script_0094B0D5::
+	end
+
+CINNABAR_ISLAND_3_8_Script_0094B130::
+	end
+
+CINNABAR_ISLAND_3_8_Script_0094B19F::
+	end
+
+CINNABAR_ISLAND_3_8_Script_00982C76::
+	end
+
+CINNABAR_ISLAND_3_8_Script_00A7FF6E::
+	end

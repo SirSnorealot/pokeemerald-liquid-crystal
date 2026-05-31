@@ -1,0 +1,41 @@
+ViridianCity_MapScripts::
+	.byte 0
+
+VIRIDIAN_CITY_3_1_Script_001659B8::
+	end
+
+VIRIDIAN_CITY_3_1_Script_001659CA::
+	end
+
+VIRIDIAN_CITY_3_1_Script_001659F6::
+	end
+
+VIRIDIAN_CITY_3_1_Script_00165A8F::
+	end
+
+VIRIDIAN_CITY_3_1_Script_001BDF13::
+	end
+
+VIRIDIAN_CITY_3_1_Script_001BEB8C::
+	end
+
+VIRIDIAN_CITY_3_1_Script_0091FEB4::
+	end
+
+VIRIDIAN_CITY_3_1_Script_0094B181::
+	end
+
+VIRIDIAN_CITY_3_1_Script_009534D8::
+	end
+
+VIRIDIAN_CITY_3_1_Script_00953AFB::
+	end
+
+VIRIDIAN_CITY_3_1_Script_00953B4B::
+	end
+
+VIRIDIAN_CITY_3_1_Script_00953B82::
+	end
+
+VIRIDIAN_CITY_3_1_Script_00953BBD::
+	end

@@ -1,0 +1,46 @@
+{
+    "id": "MAP_ROUTE24",
+    "name": "Route24",
+    "layout": "LAYOUT_ROUTE24",
+    "music": "MUS_RG_ROUTE3",
+    "region_map_section": "MAPSEC_ROUTE_24",
+    "requires_flash": false,
+    "weather": "WEATHER_NONE",
+    "map_type": "MAP_TYPE_ROUTE",
+    "allow_cycling": true,
+    "allow_escaping": false,
+    "allow_running": true,
+    "show_map_name": true,
+    "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+    "connections": [
+        {
+            "map": "MAP_CERULEAN_CITY",
+            "offset": -4,
+            "direction": "down"
+        },
+        {
+            "map": "MAP_ROUTE25",
+            "offset": -2,
+            "direction": "up"
+        }
+    ],
+    "object_events": [
+        {
+            "type": "object",
+            "graphics_id": "49",
+            "x": 18,
+            "y": 12,
+            "elevation": 0,
+            "movement_type": "1",
+            "movement_range_x": 0,
+            "movement_range_y": 0,
+            "trainer_type": "0",
+            "trainer_sight_or_berry_tree_id": "0",
+            "script": "ROUTE_24_3_43_Script_0093AC47",
+            "flag": "5727"
+        }
+    ],
+    "warp_events": [],
+    "coord_events": [],
+    "bg_events": []
+}
