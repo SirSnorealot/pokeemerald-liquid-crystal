@@ -104,3 +104,8 @@ Maps every project map that was imported from the LC export to its source folder
 | Route29_GateHouse               | ROUTE_29_4_2         |
 | Route30_House1                  | ROUTE_30_5_0         |
 | Route30_House2                  | ROUTE_30_34_12       |
+| CherrygroveCity_PokemonCenter | CHERRYGROVE_CITY_33_2  |
+| CherrygroveCity_Mart            | CHERRYGROVE_CITY_6_3   |
+| CherrygroveCity_House1          | CHERRYGROVE_CITY_2_100 |
+| CherrygroveCity_GuidesHouse     | CHERRYGROVE_CITY_4_91  |
+| CherrygroveCity_House2          | CHERRYGROVE_CITY_33_1  |

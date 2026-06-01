@@ -120,11 +120,11 @@
     "NewBarkTown_ProfessorElmsLab"
   ],
   "gMapGroup_IndoorCherrygrove": [
-    "OldaleTown_House1",
-    "OldaleTown_House2",
-    "OldaleTown_PokemonCenter_1F",
-    "OldaleTown_PokemonCenter_2F",
-    "OldaleTown_Mart"
+    "CherrygroveCity_Mart",
+    "CherrygroveCity_PokemonCenter",
+    "CherrygroveCity_House1",
+    "CherrygroveCity_GuidesHouse",
+    "CherrygroveCity_House2"
   ],
   "gMapGroup_IndoorVioletCity": [
     "PetalburgCity_WallysHouse",
@@ -603,6 +603,10 @@
     "NavelRock_Bottom",
     "TrainerHill_Elevator"
   ],
+  "gMapGroup_IndoorRoute30": [
+    "Route30_House1",
+    "Route30_House2"
+  ],
   "gMapGroup_IndoorRoute29": [
     "Route29_GateHouse"
   ],
@@ -631,9 +635,5 @@
   ],
   "gMapGroup_IndoorRoute124": [
     "Route124_DivingTreasureHuntersHouse"
-  ],
-  "gMapGroup_IndoorRoute30": [
-    "Route30_House1",
-    "Route30_House2"
   ]
 }

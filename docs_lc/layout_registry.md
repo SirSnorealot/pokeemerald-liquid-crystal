@@ -110,4 +110,6 @@ Maps every project layout that was imported from the LC export to its source fol
 | LAYOUT_NEW_BARK_TOWN_HOUSE1               | _NewBarkTown_House1                  | C0B8C8         |
 | LAYOUT_NEW_BARK_TOWN_HOUSE2               | _NewBarkTown_House2                  | 79B08C         |
 | LAYOUT_ROUTE30_HOUSE1                     | _Route30_House1                      | 77AC44         |
-| LAYOUT_ROUTE30_HOUSE2                     | _Route30_House2                      | 788364         |
+| LAYOUT_HOUSE2_LC                     | _House2_LC                      | 788364         |
+| LAYOUT_POKEMON_CENTER_LC                  | _PokemonCenter_LC                    | 7D5E90         |
+| LAYOUT_MART_LC                          | _Mart_LC                           | 7736A4         |

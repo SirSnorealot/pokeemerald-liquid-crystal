@@ -1,4 +1,4 @@
-OldaleTown_PokemonCenter_1F_MapScripts::
+CherrygroveCity_PokemonCenter_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, OldaleTown_PokemonCenter_1F_OnTransition
 	map_script MAP_SCRIPT_ON_RESUME, CableClub_OnResume
 	.byte 0
@@ -9,7 +9,8 @@ OldaleTown_PokemonCenter_1F_OnTransition:
 	end
 
 OldaleTown_PokemonCenter_1F_EventScript_Nurse::
-	setvar VAR_0x800B, LOCALID_OLDALE_NURSE
+	@ TODO(LC): replace with correct LOCALID once accessible to assembler
+	@ setvar VAR_0x800B, LOCALID_CHERRYGROVE_NURSE
 	call Common_EventScript_PkmnCenterNurse
 	waitmessage
 	waitbuttonpress
@@ -60,3 +61,19 @@ OldaleTown_PokemonCenter_1F_Text_TradedInWirelessClub:
 	.string "the second floor was built recently.\p"
 	.string "I traded POKéMON right away.$"
 
+
+CherrygroveCity_PokemonCenter_EventScript_CableClub::
+	@ TODO(LC): port cable club script
+	end
+
+CherrygroveCity_PokemonCenter_Sign_1::
+	@ TODO(LC): port sign text
+	end
+
+CherrygroveCity_PokemonCenter_Sign_2::
+	@ TODO(LC): port sign text
+	end
+
+CherrygroveCity_PokemonCenter_Sign_3::
+	@ TODO(LC): port sign text
+	end

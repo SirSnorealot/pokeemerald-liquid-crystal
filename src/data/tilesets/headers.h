@@ -1064,6 +1064,28 @@ const struct Tileset gTileset__route_gate_lc =
     .callback = NULL,
 };
 
+const struct Tileset gTileset__house1_lc =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_house1_lc,
+    .palettes = gTilesetPalettes_house1_lc,
+    .metatiles = gMetatiles_house1_lc,
+    .metatileAttributes = gMetatileAttributes_house1_lc,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset__pokemon_center_lc =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_pokemon_center_lc,
+    .palettes = gTilesetPalettes_pokemon_center_lc,
+    .metatiles = gMetatiles_pokemon_center_lc,
+    .metatileAttributes = gMetatileAttributes_pokemon_center_lc,
+    .callback = NULL,
+};
+
 #else
 
 // FRLG tilesets

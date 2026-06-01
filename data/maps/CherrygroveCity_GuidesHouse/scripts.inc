@@ -1,4 +1,4 @@
-OldaleTown_House1_MapScripts::
+CherrygroveCity_GuidesHouse_MapScripts::
 	.byte 0
 
 OldaleTown_House1_EventScript_Woman::

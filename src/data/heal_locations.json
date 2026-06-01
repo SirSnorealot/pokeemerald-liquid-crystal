@@ -117,8 +117,8 @@
       "map": "MAP_CHERRYGROVE_CITY",
       "x": 6,
       "y": 17,
-      "respawn_map": "MAP_OLDALE_TOWN_POKEMON_CENTER_1F",
-      "respawn_npc": "LOCALID_OLDALE_NURSE"
+      "respawn_map": "MAP_CHERRYGROVE_CITY_POKEMON_CENTER",
+      "respawn_npc": "LOCALID_CHERRYGROVE_NURSE"
     },
     {
       "id": "HEAL_LOCATION_DEWFORD_TOWN",
