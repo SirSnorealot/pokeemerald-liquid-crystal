@@ -69,6 +69,8 @@ Build a fresh `map.json` at `data/maps/<map_name>/map.json` by reading the LC ex
 
 **`"coord_events"` and `"bg_events"` — include only entries that have a `"type"` field.** Old GBA-extracted events use `trigger`/`index` instead of `type`/`var`/`var_value`; mapjson errors on any entry missing `"type"`.
 
+> **Event data is low priority.** Getting the map to load and the build to succeed is the goal. If copying events is causing complexity or build issues, it is acceptable to leave `"object_events"`, `"coord_events"`, and `"bg_events"` as empty arrays (`[]`). Warp events are worth preserving for navigation, but can also be emptied if needed. Incomplete event data does **not** block import.
+
 > **LOCALIDs for removed maps:** If the project previously had a Hoenn map here that is now replaced by an LC map, any scripts referencing `LOCALID_<HOENN_MAP>_*` constants lose their source. **Do not create stub header files.** Comment out the affected lines with `@` and add a `@ TODO(LC):` note. mapjson auto-generates LOCALID constants from `"local_id"` fields in `map.json` — if the original map is gone, those constants no longer exist.
 
 ---
@@ -84,6 +86,16 @@ Open `data/maps/<map_name>/scripts.inc` (the renamed Hoenn file) and rename **on
 ```
 
 Leave all other Hoenn script content as-is. The existing scripts are valid pokeemerald assembly and serve as placeholder logic until LC scripts are ported.
+
+**If the existing scripts cause build errors** (e.g. referencing `LOCALID_<HOENN_MAP>_*` constants that no longer exist after renaming, or any other undefined symbol), comment out the offending lines using `@` prefix and add a `@ TODO(LC):` note. **Never delete existing script content.** The goal is a compiling ROM that preserves the original logic for future reference.
+
+Example:
+```asm
+@ TODO(LC): LOCALID_ROUTE118_SWIMMER no longer defined after map rename
+@	tainerbattle TRAINER_SWIMMER_M, Route118SwimmerText_BeforeBattle, Route118SwimmerText_AfterBattle
+```
+
+> This applies to any line that references a symbol from the old Hoenn map — LOCALID constants, trainer references, map-specific text labels, or anything else that fails to assemble. Comment it out; do not remove it.
 
 ### Append mode
 Create `data/maps/<map_name>/scripts.inc` with a stub containing only the required map scripts label:
