@@ -1,0 +1,70 @@
+{
+  "id": "MAP_DARK_CAVE_VIOLET_CITY_SIDE",
+  "name": "DarkCave_VioletCitySide",
+  "layout": "LAYOUT_DARK_CAVE_VIOLET_CITY_SIDE",
+  "music": "MUS_RG_MT_MOON",
+  "region_map_section": "MAPSEC_MT_MOON",
+  "requires_flash": true,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_UNDERGROUND",
+  "allow_cycling": true,
+  "allow_escaping": true,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [],
+  "object_events": [],
+  "warp_events": [
+    {
+      "x": 49,
+      "y": 43,
+      "elevation": 3,
+      "dest_map": "MAP_ROUTE46",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 23,
+      "y": 3,
+      "elevation": 3,
+      "dest_map": "MAP_DARK_CAVE_BLACKTHORN_CITY_SIDE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 19,
+      "y": 28,
+      "elevation": 3,
+      "dest_map": "MAP_DARK_CAVE_VIOLET_CITY_SIDE",
+      "dest_warp_id": "5"
+    },
+    {
+      "x": 6,
+      "y": 20,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE31",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 17,
+      "y": 34,
+      "elevation": 0,
+      "dest_map": "MAP_DARK_CAVE_DEEP_SECTION",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 3,
+      "y": 29,
+      "elevation": 0,
+      "dest_map": "MAP_DARK_CAVE_VIOLET_CITY_SIDE",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 5,
+      "y": 37,
+      "elevation": 0,
+      "dest_map": "MAP_DARK_CAVE_BLACKTHORN_CITY_SIDE",
+      "dest_warp_id": "5"
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}

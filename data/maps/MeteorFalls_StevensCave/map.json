@@ -30,15 +30,7 @@
       "flag": "0"
     }
   ],
-  "warp_events": [
-    {
-      "x": 10,
-      "y": 29,
-      "elevation": 3,
-      "dest_map": "MAP_METEOR_FALLS_1F_1R",
-      "dest_warp_id": "5"
-    }
-  ],
+  "warp_events": [],
   "coord_events": [],
   "bg_events": []
 }

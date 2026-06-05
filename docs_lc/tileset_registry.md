@@ -33,3 +33,4 @@ When adding a new tileset entry, leave AMAP # as `?` and fill it in afterward.
 | gTileset_2D4E84  | ?      | gTileset__route_gate_lc       |
 | gTileset_2D4BCC  | ?      | gTileset__house1_lc           |
 | gTileset_2D4BE4  | ?      | gTileset__pokemon_center_lc   |
+| gTileset_2D4BFC  | ?      | gTileset__dark_cave_lc        |

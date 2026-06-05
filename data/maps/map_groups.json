@@ -376,10 +376,10 @@
     "Route124_DivingTreasureHuntersHouse"
   ],
   "gMapGroup_Dungeons": [
-    "MeteorFalls_1F_1R",
-    "MeteorFalls_1F_2R",
-    "MeteorFalls_B1F_1R",
-    "MeteorFalls_B1F_2R",
+    "DarkCave_VioletCitySide",
+    "DarkCave_BlackthornCitySide",
+    "DarkCave_DeepSection",
+    "DarkCave_InnerSection",
     "RusturfTunnel",
     "Underwater_SootopolisCity",
     "DesertRuins",

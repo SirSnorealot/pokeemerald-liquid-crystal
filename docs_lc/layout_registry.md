@@ -113,3 +113,14 @@ Maps every project layout that was imported from the LC export to its source fol
 | LAYOUT_HOUSE2_LC                     | _House2_LC                      | 788364         |
 | LAYOUT_POKEMON_CENTER_LC                  | _PokemonCenter_LC                    | 7D5E90         |
 | LAYOUT_MART_LC                          | _Mart_LC                           | 7736A4         |
+
+---
+
+## Dungeon Layouts
+
+| Project Layout ID                         | Project Folder                       | lc_maps Folder |
+|-------------------------------------------|--------------------------------------|----------------|
+| LAYOUT_DARK_CAVE_VIOLET_CITY_SIDE         | _DarkCaveVioletCitySide              | AF51BC         |
+| LAYOUT_DARK_CAVE_BLACKTHORN_CITY_SIDE     | _DarkCaveBlackthornCitySide          | 2FC728         |
+| LAYOUT_DARK_CAVE_DEEP_SECTION             | _DarkCaveDeepSection                 | 9E3F30         |
+| LAYOUT_DARK_CAVE_INNER_SECTION            | _DarkCaveInnerSection                | AE3160         |

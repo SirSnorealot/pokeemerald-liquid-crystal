@@ -1086,6 +1086,17 @@ const struct Tileset gTileset__pokemon_center_lc =
     .callback = NULL,
 };
 
+const struct Tileset gTileset__dark_cave_lc =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_dark_cave_lc,
+    .palettes = gTilesetPalettes_dark_cave_lc,
+    .metatiles = gMetatiles_dark_cave_lc,
+    .metatileAttributes = gMetatileAttributes_dark_cave_lc,
+    .callback = NULL,
+};
+
 #else
 
 // FRLG tilesets

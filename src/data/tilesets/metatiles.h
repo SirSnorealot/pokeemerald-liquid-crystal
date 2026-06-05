@@ -276,6 +276,8 @@ const u16 gMetatiles_house1_lc[] = INCBIN_U16("data/tilesets/secondary/_house1_l
 const u16 gMetatileAttributes_house1_lc[] = INCBIN_U16("data/tilesets/secondary/_house1_lc/metatile_attributes.bin");
 const u16 gMetatiles_pokemon_center_lc[] = INCBIN_U16("data/tilesets/secondary/_pokemon_center_lc/metatiles.bin");
 const u16 gMetatileAttributes_pokemon_center_lc[] = INCBIN_U16("data/tilesets/secondary/_pokemon_center_lc/metatile_attributes.bin");
+const u16 gMetatiles_dark_cave_lc[] = INCBIN_U16("data/tilesets/secondary/_dark_cave_lc/metatiles.bin");
+const u16 gMetatileAttributes_dark_cave_lc[] = INCBIN_U16("data/tilesets/secondary/_dark_cave_lc/metatile_attributes.bin");
 
 #else
 

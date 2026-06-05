@@ -109,3 +109,14 @@ Maps every project map that was imported from the LC export to its source folder
 | CherrygroveCity_House1          | CHERRYGROVE_CITY_2_100 |
 | CherrygroveCity_GuidesHouse     | CHERRYGROVE_CITY_4_91  |
 | CherrygroveCity_House2          | CHERRYGROVE_CITY_33_1  |
+
+---
+
+## Dungeon Maps
+
+| Project Map Name                | lc_maps Folder        |
+|---------------------------------|-----------------------|
+| DarkCave_VioletCitySide         | DARK_CAVE_1_1         |
+| DarkCave_BlackthornCitySide     | DARK_CAVE_1_3         |
+| DarkCave_DeepSection            | DARK_CAVE_1_2         |
+| DarkCave_InnerSection           | DARK_CAVE_1_29        |

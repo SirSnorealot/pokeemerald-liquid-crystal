@@ -3043,7 +3043,7 @@
           }
         },
         {
-          "map": "MAP_METEOR_FALLS_B1F_2R",
+          "map": "MAP_DARK_CAVE_INNER_SECTION",
           "base_label": "gMeteorFalls_B1F_2R",
           "land_mons": {
             "encounter_rate": 10,
@@ -10951,7 +10951,7 @@
           }
         },
         {
-          "map": "MAP_METEOR_FALLS_1F_1R",
+          "map": "MAP_DARK_CAVE_VIOLET_CITY_SIDE",
           "base_label": "gMeteorFalls_1F_1R",
           "land_mons": {
             "encounter_rate": 10,
@@ -11105,7 +11105,7 @@
           }
         },
         {
-          "map": "MAP_METEOR_FALLS_1F_2R",
+          "map": "MAP_DARK_CAVE_BLACKTHORN_CITY_SIDE",
           "base_label": "gMeteorFalls_1F_2R",
           "land_mons": {
             "encounter_rate": 10,
@@ -11259,7 +11259,7 @@
           }
         },
         {
-          "map": "MAP_METEOR_FALLS_B1F_1R",
+          "map": "MAP_DARK_CAVE_DEEP_SECTION",
           "base_label": "gMeteorFalls_B1F_1R",
           "land_mons": {
             "encounter_rate": 10,
