@@ -1,10 +1,10 @@
 {
   "heal_locations": [
     {
-      "id": "HEAL_LOCATION_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F",
+      "id": "HEAL_LOCATION_NEWBARK_TOWN_PLAYERS_HOUSE_2F",
       "map": "MAP_NEW_BARK_TOWN_PLAYERS_HOUSE_2F",
-      "x": 4,
-      "y": 2,
+      "x": 1,
+      "y": 6,
       "respawn_map": "MAP_NEW_BARK_TOWN_PLAYERS_HOUSE_1F",
       "respawn_npc": "0",
       "respawn_x": 2,
