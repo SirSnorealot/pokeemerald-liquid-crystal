@@ -993,7 +993,7 @@ static void LoadMapFromWarp(bool32 a1)
 
 void ResetInitialPlayerAvatarState(void)
 {
-    sInitialPlayerAvatarState.direction = DIR_NORTH;
+    sInitialPlayerAvatarState.direction = DIR_SOUTH;
     sInitialPlayerAvatarState.transitionFlags = PLAYER_AVATAR_FLAG_ON_FOOT;
 }
 
