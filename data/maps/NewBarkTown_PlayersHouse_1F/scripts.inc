@@ -53,6 +53,31 @@ NewBarkTown_PlayersHouse_1F_EventScript_Visitor::
 	release
 	end
 
+NewBarkTown_PlayersHouse_1F_EventScript_Sink::
+	msgbox NewBarkTown_PlayersHouse_Script_Sink_Text, MSGBOX_NPC
+	release
+	end
+
+NewBarkTown_PlayersHouse_1F_EventScript_Fridge::
+	msgbox NewBarkTown_PlayersHouse_Script_Fridge_Text, MSGBOX_NPC
+	release
+	end
+
+NewBarkTown_PlayersHouse_1F_EventScript_TV::
+	checkplayergender
+	goto_if_eq VAR_RESULT, MALE, NewBarkTown_PlayersHouse_1F_EventScript_TV_Male
+	goto_if_eq VAR_RESULT, FEMALE, NewBarkTown_PlayersHouse_1F_EventScript_TV_Female
+	releaseall
+	end
+
+NewBarkTown_PlayersHouse_1F_EventScript_TV_Male::
+	msgbox NewBarkTown_PlayersHouse_Script_TV_Text_Male, MSGBOX_NPC
+	return
+
+NewBarkTown_PlayersHouse_1F_EventScript_TV_Female::
+	msgbox NewBarkTown_PlayersHouse_Script_TV_Text_Female, MSGBOX_NPC
+	return
+
 @Movement
 NewBarkTown_PlayersHouse_Mom_Move_Up:
 	emote_exclamation_mark
@@ -128,3 +153,23 @@ NewBarkTown_PlayersHouse_Script_Visitor_Text:
 	.string "My daughter is adamant about \n"
 	.string "becoming PROF.ELM's assistant. \p"
 	.string "She really loves POKéMON!$"
+
+NewBarkTown_PlayersHouse_Script_Sink_Text:
+	.string "The sink is spotless.\n"
+	.string "Mom likes it clean.$"
+
+NewBarkTown_PlayersHouse_Script_Fridge_Text:
+	.string "Let's see what's in the fridge...\n"
+	.string "FRESH WATER and tasty LEMONADE!$"
+
+NewBarkTown_PlayersHouse_Script_TV_Text_Male:
+	.string "There's a movie on TV:\n"
+	.string "Stars dot the sky as two boys ride\l"
+	.string "on a train...\p"
+	.string "I'd better get rolling too!$"
+
+NewBarkTown_PlayersHouse_Script_TV_Text_Female:
+	.string "There's a movie on TV.\n"
+	.string "A girl with her hair in pigtails is\l"
+	.string "walking up a brick road.\p"
+	.string "I better go, too.$"
