@@ -863,7 +863,7 @@ const struct Tileset gTileset__general_lc =
     .palettes = gTilesetPalettes_general_lc,
     .metatiles = gMetatiles_general_lc,
     .metatileAttributes = gMetatileAttributes_general_lc,
-    .callback = NULL,
+    .callback = InitTilesetAnim_General_lc,
 };
 
 const struct Tileset gTileset__new_bark_town_lc =
