@@ -1157,7 +1157,7 @@ static u32 Debug_GenerateListTrainerMenu(const struct DebugMenuOption *items)
 
 static const u16 sLocationFlags[] =
 {
-    FLAG_VISITED_LITTLEROOT_TOWN,
+    FLAG_VISITED_NEWBARK_TOWN,
     FLAG_VISITED_OLDALE_TOWN,
     FLAG_VISITED_DEWFORD_TOWN,
     FLAG_VISITED_LAVARIDGE_TOWN,

@@ -4,10 +4,10 @@ NewBarkTown_PlayersHouse_2F_MapScripts::
 	.byte 0
 
 NewBarkTown_PlayersHouse_2F_OnTransition:
-	call NewBarkTown_PlayersHouse_2F_EventScript_SetRespawn
+	call_if_unset FLAG_SYS_B_DASH, NewBarkTown_PlayersHouse_2F_SetUpNewGame_Script
 	@call_if_lt VAR_LITTLEROOT_RIVAL_STATE, 2, LittlerootTown_BrendansHouse_2F_EventScript_CheckSetReadyToMeetBrendan
 	@call_if_ge VAR_LITTLEROOT_RIVAL_STATE, 3, LittlerootTown_BrendansHouse_2F_EventScript_CheckShouldUpdateBrendanPos
-	@call_if_eq VAR_LITTLEROOT_INTRO_STATE, 4, PlayersHouse_2F_EventScript_BlockStairsUntilClockIsSet
+	@call_if_eq VAR_NEWBARK_INTRO_STATE, 4, PlayersHouse_2F_EventScript_BlockStairsUntilClockIsSet
 	@call SecretBase_EventScript_SetDecorationFlags
 	@setvar VAR_SECRET_BASE_INITIALIZED, 0
 	end
@@ -40,8 +40,11 @@ NewBarkTown_PlayersHouse_2F_OnTransition:
 @ 	goto_if_eq VAR_RESULT, MALE, SecretBase_EventScript_InitDecorations
 @ 	end
 
-NewBarkTown_PlayersHouse_2F_EventScript_SetRespawn::
+NewBarkTown_PlayersHouse_2F_SetUpNewGame_Script::
 	setrespawn HEAL_LOCATION_NEWBARK_TOWN_PLAYERS_HOUSE_2F
+	setflag FLAG_SYS_B_DASH
+	setflag FLAG_VISITED_NEWBARK_TOWN
+	setvar VAR_NEWBARK_INTRO_STATE, 1
 	return
 
 NewBarkTown_PlayersHouse_2F_EventScript_CheckPlayersPC::
@@ -61,31 +64,20 @@ NewBarkTown_PlayersHouse_2F_EventScript_TurnOffPlayerPC::
 	releaseall
 	end
 
-PlayersHouse_2F_EventScript_Notebook::
-	msgbox PlayersHouse_2F_Text_Notebook, MSGBOX_SIGN
-	end
-
 PlayersHouse_2F_EventScript_GameCube::
-	msgbox PlayersHouse_2F_Text_ItsAGameCube, MSGBOX_SIGN
+	msgbox PlayersHouse_2F_Text_PlayNES, MSGBOX_SIGN
 	end
 
 PlayersHouse_2F_Text_ClockIsStopped:
 	.string "The clock is stopped…\p"
 	.string "Better set it and start it!$"
 
-PlayersHouse_2F_Text_Notebook:
-	.string "{PLAYER} flipped open the notebook.\p"
-	.string "ADVENTURE RULE NO. 1\n"
-	.string "Open the MENU with START.\p"
-	.string "ADVENTURE RULE NO. 2\n"
-	.string "Record your progress with SAVE.\p"
-	.string "The remaining pages are blank…$"
-
 Common_Text_LookCloserAtMap:
 	.string "{PLAYER} took a closer look at the\n"
 	.string "{REGION} region map.$"
 
-PlayersHouse_2F_Text_ItsAGameCube:
-	.string "It's a Nintendo GameCube.\p"
-	.string "A Game Boy Advance is connected to\n"
-	.string "serve as the Controller.$"
+PlayersHouse_2F_Text_PlayNES:
+	.string "{PLAYER} played with the NES\n"
+	.string "shaped Wii.\p"
+	.string "Okay!\n"
+	.string "It's time to go!$"
