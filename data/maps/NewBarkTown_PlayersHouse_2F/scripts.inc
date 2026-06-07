@@ -44,6 +44,7 @@ NewBarkTown_PlayersHouse_2F_SetUpNewGame_Script::
 	setrespawn HEAL_LOCATION_NEWBARK_TOWN_PLAYERS_HOUSE_2F
 	setflag FLAG_SYS_B_DASH
 	setflag FLAG_VISITED_NEWBARK_TOWN
+	clearflag FLAG_HIDE_LITTLEROOT_TOWN_RIVAL
 	setvar VAR_NEWBARK_INTRO_STATE, 1
 	return
 
