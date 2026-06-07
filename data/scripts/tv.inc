@@ -48,25 +48,25 @@
 
 @ The following is a loop for the TV show messages
 @ VAR_RESULT is set to TRUE when the show has printed its final message
-EventScript_DoTVShow::
-	special DoTVShow
-	waitmessage
-	waitbuttonpress
-	goto_if_ne VAR_RESULT, TRUE, EventScript_DoTVShow
-	goto EventScript_TurnOffTV
-	end
+@ EventScript_DoTVShow::
+@ 	special DoTVShow
+@ 	waitmessage
+@ 	waitbuttonpress
+@ 	goto_if_ne VAR_RESULT, TRUE, EventScript_DoTVShow
+@ 	goto EventScript_TurnOffTV
+@ 	end
 
-EventScript_TurnOffTV::
-	special TurnOffTVScreen
-	setflag FLAG_SYS_TV_WATCH
-	releaseall
-	end
+@ EventScript_TurnOffTV::
+@ 	special TurnOffTVScreen
+@ 	setflag FLAG_SYS_TV_WATCH
+@ 	releaseall
+@ 	end
 
-EventScript_MomDadMightLikeThis2::
-	special GetMomOrDadStringForTVMessage
-	msgbox gText_MomOrDadMightLikeThisProgram, MSGBOX_DEFAULT
-	goto EventScript_TurnOffTV
-	end
+@ EventScript_MomDadMightLikeThis2::
+@ 	special GetMomOrDadStringForTVMessage
+@ 	msgbox gText_MomOrDadMightLikeThisProgram, MSGBOX_DEFAULT
+@ 	goto EventScript_TurnOffTV
+@ 	end
 
 @ EventScript_TryDoPokeNews::
 @ 	special DoPokeNews
@@ -76,10 +76,10 @@ EventScript_MomDadMightLikeThis2::
 @ 	goto EventScript_TurnOffTV
 @ 	end
 
-EventScript_DoInSearchOfTrainers::
-	special DoTVShowInSearchOfTrainers
-	waitmessage
-	waitbuttonpress
-	goto_if_eq VAR_RESULT, 0, EventScript_DoInSearchOfTrainers
-	goto EventScript_TurnOffTV
-	end
+@ EventScript_DoInSearchOfTrainers::
+@ 	special DoTVShowInSearchOfTrainers
+@ 	waitmessage
+@ 	waitbuttonpress
+@ 	goto_if_eq VAR_RESULT, 0, EventScript_DoInSearchOfTrainers
+@ 	goto EventScript_TurnOffTV
+@ 	end

@@ -25,6 +25,7 @@ static void _InitPrimaryTilesetAnimation(void);
 static void _InitSecondaryTilesetAnimation(void);
 static void TilesetAnim_General(u16);
 static void TilesetAnim_Building(u16);
+static void TilesetAnim_Building_lc(u16);
 static void TilesetAnim_Rustboro(u16);
 static void TilesetAnim_Dewford(u16);
 static void TilesetAnim_Slateport(u16);
@@ -49,6 +50,7 @@ static void QueueAnimTiles_General_SandWaterEdge(u16);
 static void QueueAnimTiles_General_Waterfall(u16);
 static void QueueAnimTiles_General_LandWaterEdge(u16);
 static void QueueAnimTiles_Building_TVTurnedOn(u16);
+static void QueueAnimTiles_Building_TVTurnedOn_lc(u16);
 static void QueueAnimTiles_Rustboro_WindyWater(u16, u8);
 static void QueueAnimTiles_Rustboro_Fountain(u16);
 static void QueueAnimTiles_Dewford_Flag(u16);
@@ -427,6 +429,14 @@ const u16 *const gTilesetAnims_Building_TvTurnedOn[] = {
     gTilesetAnims_Building_TvTurnedOn_Frame1
 };
 
+const u16 gTilesetAnims_Building_TvTurnedOn_Frame0_lc[] = INCGFX_U16("data/tilesets/primary/_building_lc/anim/tv_turned_on/0.png", ".4bpp");
+const u16 gTilesetAnims_Building_TvTurnedOn_Frame1_lc[] = INCGFX_U16("data/tilesets/primary/_building_lc/anim/tv_turned_on/1.png", ".4bpp");
+
+const u16 *const gTilesetAnims_Building_TvTurnedOn_lc[] = {
+    gTilesetAnims_Building_TvTurnedOn_Frame0_lc,
+    gTilesetAnims_Building_TvTurnedOn_Frame1_lc
+};
+
 const u16 gTilesetAnims_SootopolisGym_SideWaterfall_Frame0[] = INCGFX_U16("data/tilesets/secondary/sootopolis_gym/anim/side_waterfall/0.png", ".4bpp");
 const u16 gTilesetAnims_SootopolisGym_SideWaterfall_Frame1[] = INCGFX_U16("data/tilesets/secondary/sootopolis_gym/anim/side_waterfall/1.png", ".4bpp");
 const u16 gTilesetAnims_SootopolisGym_SideWaterfall_Frame2[] = INCGFX_U16("data/tilesets/secondary/sootopolis_gym/anim/side_waterfall/2.png", ".4bpp");
@@ -629,6 +639,13 @@ void InitTilesetAnim_Building(void)
     sPrimaryTilesetAnimCallback = TilesetAnim_Building;
 }
 
+void InitTilesetAnim_Building_lc(void)
+{
+    sPrimaryTilesetAnimCounter = 0;
+    sPrimaryTilesetAnimCounterMax = 256;
+    sPrimaryTilesetAnimCallback = TilesetAnim_Building_lc;
+}
+
 static void TilesetAnim_General(u16 timer)
 {
     if (timer % 16 == 0)
@@ -647,6 +664,12 @@ static void TilesetAnim_Building(u16 timer)
 {
     if (timer % 8 == 0)
         QueueAnimTiles_Building_TVTurnedOn(timer / 8);
+}
+
+static void TilesetAnim_Building_lc(u16 timer)
+{
+    // if (timer % 8 == 0)
+    //     QueueAnimTiles_Building_TVTurnedOn_lc(timer / 8);
 }
 
 static void QueueAnimTiles_General_Flower(u16 timer)
@@ -1114,6 +1137,12 @@ static void QueueAnimTiles_Building_TVTurnedOn(u16 timer)
 {
     u16 i = timer % ARRAY_COUNT(gTilesetAnims_Building_TvTurnedOn);
     AppendTilesetAnimToBuffer(gTilesetAnims_Building_TvTurnedOn[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(496)), 4 * TILE_SIZE_4BPP);
+}
+
+static void QueueAnimTiles_Building_TVTurnedOn_lc(u16 timer)
+{
+    u16 i = timer % ARRAY_COUNT(gTilesetAnims_Building_TvTurnedOn_lc);
+    AppendTilesetAnimToBuffer(gTilesetAnims_Building_TvTurnedOn_lc[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(181)), 2 * TILE_SIZE_4BPP);
 }
 
 static void QueueAnimTiles_SootopolisGym_Waterfalls(u16 timer)

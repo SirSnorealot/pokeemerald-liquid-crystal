@@ -841,7 +841,7 @@ const struct Tileset gTileset__building_lc =
     .palettes = gTilesetPalettes_building_lc,
     .metatiles = gMetatiles_building_lc,
     .metatileAttributes = gMetatileAttributes_building_lc,
-    .callback = NULL,
+    .callback = InitTilesetAnim_Building_lc,
 };
 
 const struct Tileset gTileset__players_house_lc =

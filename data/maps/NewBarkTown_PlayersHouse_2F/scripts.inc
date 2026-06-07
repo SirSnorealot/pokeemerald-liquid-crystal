@@ -61,11 +61,6 @@ NewBarkTown_PlayersHouse_2F_EventScript_TurnOffPlayerPC::
 	releaseall
 	end
 
-LittlerootTown_BrendansHouse_2F_EventScript_CheckRivalsPC::
-	msgbox gText_PokemonTrainerSchoolEmail, MSGBOX_DEFAULT
-	releaseall
-	end
-
 PlayersHouse_2F_EventScript_Notebook::
 	msgbox PlayersHouse_2F_Text_Notebook, MSGBOX_SIGN
 	end

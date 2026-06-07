@@ -824,30 +824,30 @@ u8 FindAnyTVShowOnTheAir(void)
 
 void UpdateTVScreensOnMap(int width, int height)
 {
-    FlagSet(FLAG_SYS_TV_WATCH);
-    switch (CheckForPlayersHouseNews())
-    {
-    case PLAYERS_HOUSE_TV_LATI:
-        SetTVMetatilesOnMap(width, height, METATILE_Building_TV_On);
-        break;
-    case PLAYERS_HOUSE_TV_MOVIE:
-        // Don't flash TV for movie text in player's house
-        break;
-//  case PLAYERS_HOUSE_TV_NONE:
-    default:
-        if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_LILYCOVE_CITY_COVE_LILY_MOTEL_1F)
-         && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_LILYCOVE_CITY_COVE_LILY_MOTEL_1F))
-        {
-            // NPC in Lilycove Hotel is always watching TV
-            SetTVMetatilesOnMap(width, height, METATILE_Building_TV_On);
-        }
-        else if (FlagGet(FLAG_SYS_TV_START) && (FindAnyTVShowOnTheAir() != 0xFF || FindAnyPokeNewsOnTheAir() != 0xFF || IsGabbyAndTyShowOnTheAir()))
-        {
-            FlagClear(FLAG_SYS_TV_WATCH);
-            SetTVMetatilesOnMap(width, height, METATILE_Building_TV_On);
-        }
-        break;
-    }
+//     FlagSet(FLAG_SYS_TV_WATCH);
+//     switch (CheckForPlayersHouseNews())
+//     {
+//     case PLAYERS_HOUSE_TV_LATI:
+//         SetTVMetatilesOnMap(width, height, METATILE_Building_TV_On);
+//         break;
+//     case PLAYERS_HOUSE_TV_MOVIE:
+//         // Don't flash TV for movie text in player's house
+//         break;
+// //  case PLAYERS_HOUSE_TV_NONE:
+//     default:
+//         if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_LILYCOVE_CITY_COVE_LILY_MOTEL_1F)
+//          && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_LILYCOVE_CITY_COVE_LILY_MOTEL_1F))
+//         {
+//             // NPC in Lilycove Hotel is always watching TV
+//             SetTVMetatilesOnMap(width, height, METATILE_Building_TV_On);
+//         }
+//         else if (FlagGet(FLAG_SYS_TV_START) && (FindAnyTVShowOnTheAir() != 0xFF || FindAnyPokeNewsOnTheAir() != 0xFF || IsGabbyAndTyShowOnTheAir()))
+//         {
+//             FlagClear(FLAG_SYS_TV_WATCH);
+//             SetTVMetatilesOnMap(width, height, METATILE_Building_TV_On);
+//         }
+//         break;
+//     }
 }
 
 static void SetTVMetatilesOnMap(int width, int height, u16 metatileId)
