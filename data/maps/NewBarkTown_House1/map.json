@@ -12,10 +12,9 @@
   "allow_running": false,
   "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": [],
+  "connections": null,
   "object_events": [
     {
-      "type": "object",
       "graphics_id": "22",
       "x": 4,
       "y": 4,
@@ -29,7 +28,6 @@
       "flag": "4370"
     },
     {
-      "type": "object",
       "graphics_id": "31",
       "x": 7,
       "y": 4,
@@ -48,8 +46,8 @@
       "x": 4,
       "y": 8,
       "elevation": 3,
-      "dest_warp_id": 0,
-      "dest_map": "MAP_NEW_BARK_TOWN"
+      "dest_map": "MAP_NEW_BARK_TOWN",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [],

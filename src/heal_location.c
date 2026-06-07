@@ -67,11 +67,12 @@ static bool32 IsLastHealLocation(u32 healLocation)
 
 bool32 IsLastHealLocationPlayerHouse()
 {
-    if (IsLastHealLocation(HEAL_LOCATION_LITTLEROOT_TOWN_MAYS_HOUSE)
-        || IsLastHealLocation(HEAL_LOCATION_LITTLEROOT_TOWN_MAYS_HOUSE_2F)
-        || IsLastHealLocation(HEAL_LOCATION_LITTLEROOT_TOWN_BRENDANS_HOUSE)
-        || IsLastHealLocation(HEAL_LOCATION_NEWBARK_TOWN_PLAYERS_HOUSE_2F)
-        || IsLastHealLocation(HEAL_LOCATION_PALLET_TOWN))
+    if (IsLastHealLocation(HEAL_LOCATION_NEWBARK_TOWN_PLAYERS_HOUSE_2F)
+        || IsLastHealLocation(HEAL_LOCATION_NEWBARK_TOWN_PLAYERS_HOUSE)
+        // || IsLastHealLocation(HEAL_LOCATION_LITTLEROOT_TOWN_MAYS_HOUSE)
+        // || IsLastHealLocation(HEAL_LOCATION_LITTLEROOT_TOWN_MAYS_HOUSE_2F)
+        // || IsLastHealLocation(HEAL_LOCATION_PALLET_TOWN)
+    )
         return TRUE;
 
     return FALSE;
