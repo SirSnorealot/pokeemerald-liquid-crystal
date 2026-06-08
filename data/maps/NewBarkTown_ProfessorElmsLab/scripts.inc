@@ -109,9 +109,32 @@ NewBarkTown_ProfessorElmsLab_Starter_script:
 	waitmovement LOCALID_PLAYER
 	applymovement LOCALID_ELMS_LAB_ELM, Common_Movement_FacePlayer
 	waitmovement LOCALID_ELMS_LAB_ELM
-	msgbox NewBarkTown_ProfessorElmsLab_Starter_script_Text_1, MSGBOX_DEFAULT
-	applymovement LOCALID_ELMS_LAB_ELM, Common_Movement_FaceDown
+	msgbox NewBarkTown_ProfessorElmsLab_Starter_Greeting_text, MSGBOX_DEFAULT
+	msgbox NewBarkTown_ProfessorElmsLab_Starter_Research_Request_text, MSGBOX_YESNO
+	compare VAR_RESULT, 0
+	goto_if_eq NewBarkTown_ProfessorElmsLab_Starter_Request_Declined_script
+	goto NewBarkTown_ProfessorElmsLab_Starter_Request_Accepted_script
+
+NewBarkTown_ProfessorElmsLab_Starter_Request_Declined_script:
+	msgbox NewBarkTown_ProfessorElmsLab_Starter_Please_Help_text, MSGBOX_YESNO
+	compare VAR_RESULT, 0
+	goto_if_eq NewBarkTown_ProfessorElmsLab_Starter_Request_Declined_script
+	goto NewBarkTown_ProfessorElmsLab_Starter_Request_Accepted_script
+
+NewBarkTown_ProfessorElmsLab_Starter_Request_Accepted_script:
+	msgbox NewBarkTown_ProfessorElmsLab_Starter_Thanks_text, MSGBOX_DEFAULT
+	closemessage
+	playse SE_PIN
+	applymovement LOCALID_ELMS_LAB_ELM, NewBarkTown_ProfessorElmsLab_Elm_Move_To_Computer
 	waitmovement LOCALID_ELMS_LAB_ELM
+	delay 0x50
+	msgbox NewBarkTown_ProfessorElmsLab_Starter_Email_text, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_ELMS_LAB_ELM, NewBarkTown_ProfessorElmsLab_Elm_Return_From_Computer
+	waitmovement LOCALID_ELMS_LAB_ELM
+	msgbox NewBarkTown_ProfessorElmsLab_Starter_MrPokemon_Request_text, MSGBOX_DEFAULT
+	closemessage
+	msgbox NewBarkTown_ProfessorElmsLab_Starter_Pick_One_text, MSGBOX_DEFAULT
 	setvar VAR_NEWBARK_INTRO_STATE, 3
 	closemessage
 	releaseall
@@ -263,9 +286,18 @@ NewBarkTown_ProfessorElmsLab_Return_From_Totodile_script_2:
 NewBarkTown_ProfessorElmsLab_Got_Poke_script:
 	applymovement LOCALID_ELMS_LAB_ELM, Common_Movement_FacePlayer
 	waitmovement LOCALID_ELMS_LAB_ELM
+	msgbox NewBarkTown_ProfessorElmsLab_Watcher_text, MSGBOX_DEFAULT
+	closemessage
+	playse SE_PIN
+	applymovement LOCALID_ELMS_LAB_ELM, NewBarkTown_ProfessorElmsLab_Elm_React_To_Watcher
+	waitmovement LOCALID_ELMS_LAB_ELM
+	msgbox NewBarkTown_ProfessorElmsLab_Who_Was_That_text, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_ELMS_LAB_ELM, NewBarkTown_ProfessorElmsLab_Elm_Face_Right_After_Watcher
+	waitmovement LOCALID_ELMS_LAB_ELM
 	msgbox NewBarkTown_ProfessorElmsLab_MRPOKEMON_text, MSGBOX_DEFAULT
 	setvar VAR_NEWBARK_INTRO_STATE, 4
-	release
+	releaseall
 	end
 NewBarkTown_ProfessorElmsLab_Left_Poke_script:
 	msgbox NewBarkTown_ProfessorElmsLab_Left_Poke_text, MSGBOX_NPC
@@ -304,7 +336,7 @@ NewBarkTown_ProfessorElmsLab_Machine::
 	end
 
 NewBarkTown_ProfessorElmsLab_Complicated_Device::
-	msgbox NewBarkTown_ProfessorElmsLab_Complicated_Device_text MSGBOX_NPC
+	msgbox NewBarkTown_ProfessorElmsLab_Complicated_Device_text, MSGBOX_NPC
 	release
 	end
 
@@ -321,6 +353,34 @@ NewBarkTown_ProfessorElmsLab_Heal_Mons::
 	end
 
 @Movement
+NewBarkTown_ProfessorElmsLab_Elm_Move_To_Computer:
+	emote_exclamation_mark
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_up
+	face_up
+	step_end
+
+NewBarkTown_ProfessorElmsLab_Elm_Return_From_Computer:
+	walk_down
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	face_down
+	step_end
+
+NewBarkTown_ProfessorElmsLab_Elm_React_To_Watcher:
+	emote_exclamation_mark
+	face_left
+	step_end
+
+NewBarkTown_ProfessorElmsLab_Elm_Face_Right_After_Watcher:
+	face_down
+	step_end
+
 NewBarkTown_ProfessorElmsLab_Player_Walk_Up_1:
 	walk_up
 	walk_up
@@ -422,74 +482,159 @@ NewBarkTown_ProfessorElmsLab_Aide_Return_3:
 	step_end
 
 @Text
-NewBarkTown_ProfessorElmsLab_Starter_script_Text_1:
+NewBarkTown_ProfessorElmsLab_Starter_Greeting_text:
 	.string "ELM: {PLAYER}!\n"
-	.string "There you are!\p"
-	.string "I needed to ask you a favor.\p"
+	.string "There you are!$"
+
+NewBarkTown_ProfessorElmsLab_Starter_Research_Request_text:
+	.string "ELM: I needed to ask you a favor.\p"
+	.string "I'm conducting new POKéMON research\n"
+	.string "right now.\p"
+	.string "I was wondering if you could help me\n"
+	.string "with it, {PLAYER}.\p"
+	.string "You see...\p"
+	.string "I'm writing a paper that I want to\n"
+	.string "present at a conference.\p"
+	.string "But there are some things I don't\n"
+	.string "quite understand yet.\p"
+	.string "So!\p"
+	.string "I'd like you to raise a POKéMON that\n"
+	.string "I recently caught.$"
+
+NewBarkTown_ProfessorElmsLab_Starter_Please_Help_text:
+	.string "ELM: But...\n"
+	.string "Please, I need your help!$"
+
+NewBarkTown_ProfessorElmsLab_Starter_Thanks_text:
+	.string "ELM: Thanks, {PLAYER}!\n"
+	.string "You're a great help!\p"
+	.string "When I announce my findings, I'm\n"
+	.string "sure we'll delve a bit deeper into\l"
+	.string "the many mysteries of POKéMON.\p"
+	.string "You can count on it!$"
+
+NewBarkTown_ProfessorElmsLab_Starter_Email_text:
+	.string "ELM: Oh, hey!\n"
+	.string "I got an e-mail!\p"
+	.string "..................\n"
+	.string "Hm...\l"
+	.string "Uh-huh...\p"
+	.string "Okay...$"
+
+NewBarkTown_ProfessorElmsLab_Starter_MrPokemon_Request_text:
+	.string "ELM: Hey, listen.\p"
 	.string "I have an acquaintance called\n"
 	.string "MR.POKéMON.\p"
 	.string "He keeps finding weird things and\n"
 	.string "raving about his discoveries.\p"
 	.string "Anyway, I just got an e-mail from him\n"
 	.string "saying that this time it's real.\p"
-	.string "It is intriguing, but we're busy with\n"
-	.string "our POKéMON research.\p"
-	.string "Could you look into it for us?\p"
-	.string "I'll give you a POKéMON for a partner.\p"
-	.string "They're all rare POKéMON that we just\n"
-	.string "found.\l"
-	.string "Go on. Pick one!$"
+	.string "It is intriguing, but we're busy\n"
+	.string "with our POKéMON research...\p"
+	.string "Wait!\p"
+	.string "I know!\p"
+	.string "{PLAYER}, can you go in our place?$"
+
+NewBarkTown_ProfessorElmsLab_Starter_Pick_One_text:
+	.string "ELM: I want you to raise one of the\n"
+	.string "POKéMON contained in these BALLS.\p"
+	.string "You'll be that POKéMON's first\n"
+	.string "partner, {PLAYER}!\p"
+	.string "Go on.\p"
+	.string "Pick one!$"
 
 NewBarkTown_ProfessorElmsLab_Chikorita_text:
-	.string "ELM: So, you like CHIKORITA, the\ngrass POKéMON?$"
+	.string "ELM: I see! CHIKORITA is your choice.\n"
+	.string "It's very easy to raise.\p"
+	.string "So, {PLAYER}, you want to go with\n"
+	.string "the GRASS POKéMON CHIKORITA?$"
 
 NewBarkTown_ProfessorElmsLab_Cyndaquil_text:
-	.string "ELM: You'll take CYNDAQUIL, the\nfire POKéMON?$"
+	.string "ELM: Ah! CYNDAQUIL is your choice.\n"
+	.string "You should raise it patiently.\p"
+	.string "So, {PLAYER}, you're claiming the\n"
+	.string "FIRE POKéMON CYNDAQUIL?$"
 
 NewBarkTown_ProfessorElmsLab_Totodile_text:
-	.string "ELM: Do you want TOTODILE, the\nwater POKéMON?$"
+	.string "ELM: Hm! TOTODILE is your choice.\n"
+	.string "It's one worth raising.\p"
+	.string "So, {PLAYER}, you've decided on the\n"
+	.string "WATER POKéMON TOTODILE?$"
 
 NewBarkTown_ProfessorElmsLab_Think_Over_text:
-	.string "ELM: Think it over carefully.\pYour partner is important.$"
+	.string "ELM: Think it over carefully.\p"
+	.string "Your partner is important.$"
 
 NewBarkTown_ProfessorElmsLab_Received_text:
-	.string "{PLAYER} received a {STR_VAR_1}!$"
+	.string "{PLAYER} received the {STR_VAR_1}\n"
+	.string "from PROF. ELM!$"
 
 NewBarkTown_ProfessorElmsLab_Nickname_text:
-	.string "Do you want to give a nickname to\nthis {STR_VAR_1}?$"
+	.string "Do you want to give a nickname to\n"
+	.string "this {STR_VAR_1}?$"
+
+NewBarkTown_ProfessorElmsLab_Watcher_text:
+	.string "??????: I'm watching you ELM!$"
+
+NewBarkTown_ProfessorElmsLab_Who_Was_That_text:
+	.string "ELM: Who the hell was that!?$"
 
 NewBarkTown_ProfessorElmsLab_MRPOKEMON_text:
-	.string "MR.POKéMON lives near CHERRYGROVE,\nthe next city.\pIt's almost a direct route to\nthere.$"
+	.string "ELM: Anyway...\p"
+	.string "MR.POKéMON lives a little bit beyond\n"
+	.string "CHERRYGROVE, the next city over.\p"
+	.string "It's almost a direct route there so\n"
+	.string "you can't miss it.\p"
+	.string "If your POKéMON is hurt, you should\n"
+	.string "heal it with the machine on my\l"
+	.string "right.\p"
+	.string "Feel free to use it anytime.$"
 
 NewBarkTown_ProfessorElmsLab_WildPoke_text:
-	.string "If a wild POKéMON appears, let your\nPOKéMON battle it!$"
+	.string "ELM: Now, {PLAYER}.\p"
+	.string "Inside those three POKé BALLS are\n"
+	.string "POKéMON.\p"
+	.string "Which one will you choose for\n"
+	.string "yourself?$"
 
 NewBarkTown_ProfessorElmsLab_MRPOKEMON_text_2:
-	.string "MR.POKéMON goes everywhere and finds\nrarities.\pToo bad they're just rare and\nnot very useful...\p{PLAYER}, I'm counting on you!$"
+	.string "ELM: MR.POKéMON lives a little bit\n"
+	.string "beyond CHERRYGROVE, the next city\l"
+	.string "over.\p"
+	.string "It's almost a direct route there so\n"
+	.string "you can't miss it.$"
 
 NewBarkTown_ProfessorElmsLab_Elm_DontLeaveDuringPick_text:
-	.string "ELM: Wait! Where are you going?$"
+	.string "ELM: Hey!\n"
+	.string "Don't go away yet!$"
 
 NewBarkTown_ProfessorElmsLab_Aide_Potion_text:
-	.string "{PLAYER}, I want you to have this for\nyour errand.$"
+	.string "{PLAYER}, I want you to have this for\n"
+	.string "your errand.$"
 
 NewBarkTown_ProfessorElmsLab_Aide_Busy_text:
-	.string "There are only two of us, so we're\nalways busy.$"
+	.string "There are only two of us, so we're\n"
+	.string "always busy.$"
 
 NewBarkTown_ProfessorElmsLab_Left_Poke_text:
-	.string "It contains a POKéMON caught by\nPROF.ELM.$"
+	.string "It contains a POKéMON caught\n"
+	.string "by PROF.ELM.$"
 
 NewBarkTown_ProfessorElmsLab_Window_Open_text:
-	.string "The window's open.\nA pleasant breeze is blowing in.$"
+	.string "The window's open.\n"
+	.string "A pleasant breeze is blowing in.$"
 
 NewBarkTown_ProfessorElmsLab_Window_Closed_text:
-	.string "My reflection!\nLookin' good!$"
+	.string "My reflection!\n"
+	.string "Lookin' good!$"
 
 NewBarkTown_ProfessorElmsLab_Trash_Can_text:
-	.string "The wrapper from the snack PROF.ELM\nate is in there...$"
+	.string "The wrapper from the snack PROF.ELM\n"
+	.string "ate is in there...$"
 
 NewBarkTown_ProfessorElmsLab_Heal_Mons_text:
 	.string "Would you like to heal your POKéMON?$"
 
 NewBarkTown_ProfessorElmsLab_Complicated_Device_text:
-	.string "A complicated device,\nbetter not touch it...$"
+	.string "A complicated device,\n"
+	.string "better not touch it...$"
