@@ -15,88 +15,74 @@
   "connections": null,
   "object_events": [
     {
-      "local_id": "LOCALID_BIRCHS_LAB_AIDE",
+      "local_id": "LOCALID_ELMS_LAB_AIDE",
       "graphics_id": "OBJ_EVENT_GFX_SCIENTIST_1",
-      "x": 9,
-      "y": 8,
+      "x": 10,
+      "y": 18,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "LittlerootTown_ProfessorBirchsLab_EventScript_Aide",
+      "script": "NewBarkTown_ProfessorElmsLab_Aide_script",
       "flag": "0"
     },
     {
-      "local_id": "LOCALID_BIRCHS_LAB_BIRCH",
+      "local_id": "LOCALID_ELMS_LAB_ELM",
       "graphics_id": "OBJ_EVENT_GFX_PROF_BIRCH",
-      "x": 6,
-      "y": 4,
+      "x": 13,
+      "y": 11,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "LittlerootTown_ProfessorBirchsLab_EventScript_Birch",
-      "flag": "FLAG_HIDE_LITTLEROOT_TOWN_BIRCHS_LAB_BIRCH"
-    },
-    {
-      "local_id": "LOCALID_BIRCHS_LAB_RIVAL",
-      "graphics_id": "OBJ_EVENT_GFX_VAR_0",
-      "x": 7,
-      "y": 4,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-      "movement_range_x": 1,
-      "movement_range_y": 1,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "LittlerootTown_ProfessorBirchsLab_EventScript_Rival",
-      "flag": "FLAG_HIDE_LITTLEROOT_TOWN_BIRCHS_LAB_RIVAL"
+      "script": "NewBarkTown_ProfessorElmsLab_Elm_script",
+      "flag": "0"
     },
     {
       "local_id": "LOCALID_BIRCHS_LAB_CYNDAQUIL_BALL",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 6,
-      "y": 8,
+      "x": 15,
+      "y": 12,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "LittlerootTown_ProfessorBirchsLab_EventScript_Cyndaquil",
-      "flag": "FLAG_HIDE_LITTLEROOT_TOWN_BIRCHS_LAB_POKEBALL_CYNDAQUIL"
+      "script": "NewBarkTown_ProfessorElmsLab_Cyndaquil_script",
+      "flag": "FLAG_HIDE_ELM_LAB_Cyndaquil_BALL"
     },
     {
       "local_id": "LOCALID_BIRCHS_LAB_TOTODILE_BALL",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 6,
-      "y": 8,
+      "x": 16,
+      "y": 12,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "LittlerootTown_ProfessorBirchsLab_EventScript_Totodile",
-      "flag": "FLAG_HIDE_LITTLEROOT_TOWN_BIRCHS_LAB_POKEBALL_TOTODILE"
+      "script": "NewBarkTown_ProfessorElmsLab_Totodile_script",
+      "flag": "FLAG_HIDE_ELM_LAB_Totodile_BALL"
     },
     {
       "local_id": "LOCALID_BIRCHS_LAB_CHIKORITA_BALL",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 6,
-      "y": 8,
+      "x": 17,
+      "y": 12,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "LittlerootTown_ProfessorBirchsLab_EventScript_Chikorita",
-      "flag": "FLAG_HIDE_LITTLEROOT_TOWN_BIRCHS_LAB_POKEBALL_CHIKORITA"
+      "script": "NewBarkTown_ProfessorElmsLab_Chikorita_script",
+      "flag": "FLAG_HIDE_ELM_LAB_Chikorita_BALL"
     }
   ],
   "warp_events": [
@@ -108,127 +94,102 @@
       "dest_warp_id": "2"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 12,
+      "y": 16,
+      "elevation": 0,
+      "var": "VAR_NEWBARK_INTRO_STATE",
+      "var_value": "3",
+      "script": "NewBarkTown_ProfessorElmsLab_Elm_DontLeaveDuringPick_script"
+    },
+    {
+      "type": "trigger",
+      "x": 13,
+      "y": 16,
+      "elevation": 0,
+      "var": "VAR_NEWBARK_INTRO_STATE",
+      "var_value": "3",
+      "script": "NewBarkTown_ProfessorElmsLab_Elm_DontLeaveDuringPick_script"
+    },
+    {
+      "type": "trigger",
+      "x": 14,
+      "y": 16,
+      "elevation": 0,
+      "var": "VAR_NEWBARK_INTRO_STATE",
+      "var_value": "3",
+      "script": "NewBarkTown_ProfessorElmsLab_Elm_DontLeaveDuringPick_script"
+    },
+    {
+      "type": "trigger",
+      "x": 12,
+      "y": 17,
+      "elevation": 0,
+      "var": "VAR_NEWBARK_INTRO_STATE",
+      "var_value": "4",
+      "script": "NewBarkTown_ProfessorElmsLab_Aide_Potion_Script_1"
+    },
+    {
+      "type": "trigger",
+      "x": 13,
+      "y": 17,
+      "elevation": 0,
+      "var": "VAR_NEWBARK_INTRO_STATE",
+      "var_value": "4",
+      "script": "NewBarkTown_ProfessorElmsLab_Aide_Potion_Script_2"
+    },
+    {
+      "type": "trigger",
+      "x": 14,
+      "y": 17,
+      "elevation": 0,
+      "var": "VAR_NEWBARK_INTRO_STATE",
+      "var_value": "4",
+      "script": "NewBarkTown_ProfessorElmsLab_Aide_Potion_Script_3"
+    }
+  ],
   "bg_events": [
     {
       "type": "sign",
-      "x": 10,
-      "y": 7,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
-      "script": "LittlerootTown_ProfessorBirchsLab_EventScript_Machine"
-    },
-    {
-      "type": "sign",
-      "x": 11,
-      "y": 7,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
-      "script": "LittlerootTown_ProfessorBirchsLab_EventScript_Machine"
-    },
-    {
-      "type": "sign",
-      "x": 7,
-      "y": 1,
+      "x": 18,
+      "y": 12,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "LittlerootTown_ProfessorBirchsLab_EventScript_Book"
+      "script": "NewBarkTown_ProfessorElmsLab_Trash_Can"
+    },
+    {
+      "type": "sign",
+      "x": 13,
+      "y": 9,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "NewBarkTown_ProfessorElmsLab_Window_Closed"
+    },
+    {
+      "type": "sign",
+      "x": 14,
+      "y": 9,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "NewBarkTown_ProfessorElmsLab_Window_Open"
     },
     {
       "type": "sign",
       "x": 8,
-      "y": 1,
+      "y": 13,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "LittlerootTown_ProfessorBirchsLab_EventScript_Book"
+      "script": "NewBarkTown_ProfessorElmsLab_Machine"
     },
     {
       "type": "sign",
-      "x": 1,
-      "y": 1,
+      "x": 9,
+      "y": 13,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "LittlerootTown_ProfessorBirchsLab_EventScript_Bookshelf"
-    },
-    {
-      "type": "sign",
-      "x": 0,
-      "y": 7,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "LittlerootTown_ProfessorBirchsLab_EventScript_Bookshelf"
-    },
-    {
-      "type": "sign",
-      "x": 1,
-      "y": 7,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "LittlerootTown_ProfessorBirchsLab_EventScript_Bookshelf"
-    },
-    {
-      "type": "sign",
-      "x": 2,
-      "y": 7,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "LittlerootTown_ProfessorBirchsLab_EventScript_Bookshelf"
-    },
-    {
-      "type": "sign",
-      "x": 3,
-      "y": 7,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "LittlerootTown_ProfessorBirchsLab_EventScript_Bookshelf"
-    },
-    {
-      "type": "sign",
-      "x": 4,
-      "y": 1,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "LittlerootTown_ProfessorBirchsLab_EventScript_PC"
-    },
-    {
-      "type": "sign",
-      "x": 3,
-      "y": 1,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "LittlerootTown_ProfessorBirchsLab_EventScript_PC"
-    },
-    {
-      "type": "sign",
-      "x": 1,
-      "y": 10,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "LittlerootTown_ProfessorBirchsLab_EventScript_PC"
-    },
-    {
-      "type": "sign",
-      "x": 1,
-      "y": 9,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "LittlerootTown_ProfessorBirchsLab_EventScript_PC"
-    },
-    {
-      "type": "sign",
-      "x": 11,
-      "y": 10,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "LittlerootTown_ProfessorBirchsLab_EventScript_PC"
-    },
-    {
-      "type": "sign",
-      "x": 11,
-      "y": 9,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "LittlerootTown_ProfessorBirchsLab_EventScript_PC"
+      "script": "NewBarkTown_ProfessorElmsLab_Machine"
     }
   ],
   "region": "REGION_HOENN"

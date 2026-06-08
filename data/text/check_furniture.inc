@@ -4,6 +4,9 @@ Text_PictureBookShelf:
 Text_BookShelf:
 	.string "It's filled with all sorts of books.$"
 
+Text_BookShelfDifficult:
+	.string "It's full of difficult books.$"
+
 Text_PokemonCenterBookShelf:
 	.string "POKéMON magazines!\n"
 	.string "POKéMON PAL…\p"

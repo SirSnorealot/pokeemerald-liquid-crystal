@@ -6,6 +6,10 @@ EventScript_BookShelf::
 	msgbox Text_BookShelf, MSGBOX_SIGN
 	end
 
+EventScript_BookShelfDifficult::
+	msgbox Text_BookShelfDifficult, MSGBOX_SIGN
+	end
+
 EventScript_PokemonCenterBookShelf::
 	msgbox Text_PokemonCenterBookShelf, MSGBOX_SIGN
 	end

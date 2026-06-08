@@ -505,6 +505,8 @@ static const u8 *GetInteractedMetatileScript(struct MapPosition *position, u8 me
         return EventScript_PictureBookShelf;
     if (MetatileBehavior_IsBookShelf(metatileBehavior) == TRUE)
         return EventScript_BookShelf;
+    if (MetatileBehavior_IsBookShelfDifficult(metatileBehavior) == TRUE)
+        return EventScript_BookShelfDifficult;
     if (MetatileBehavior_IsPokeCenterBookShelf(metatileBehavior) == TRUE)
         return EventScript_PokemonCenterBookShelf;
     if (MetatileBehavior_IsVase(metatileBehavior) == TRUE)
@@ -790,11 +792,11 @@ static bool8 TryStartStepCountScript(u16 metatileBehavior)
             ScriptContext_SetupScript(Route119_EventScript_ScottWonAtFortreeGymCall);
             return TRUE;
         }
-        if (ShouldDoScottBattleFrontierCall() == TRUE)
-        {
-            ScriptContext_SetupScript(LittlerootTown_ProfessorBirchsLab_EventScript_ScottAboardSSTidalCall);
-            return TRUE;
-        }
+        // if (ShouldDoScottBattleFrontierCall() == TRUE)
+        // {
+        //     ScriptContext_SetupScript(LittlerootTown_ProfessorBirchsLab_EventScript_ScottAboardSSTidalCall);
+        //     return TRUE;
+        // }
         if (ShouldDoRoxanneCall() == TRUE)
         {
             ScriptContext_SetupScript(RustboroCity_Gym_EventScript_RegisterRoxanne);

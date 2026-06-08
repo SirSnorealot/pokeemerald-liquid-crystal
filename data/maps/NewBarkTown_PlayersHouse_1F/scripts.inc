@@ -10,9 +10,9 @@ NewBarkTown_PlayersHouse_Obtain_PokeGear::
 	lockall
 	playse SE_PIN
 	applymovement LOCALID_PLAYERS_HOUSE_1F_MOM, NewBarkTown_PlayersHouse_Mom_Move_Up
-	waitmovement 0
+	waitmovement LOCALID_PLAYERS_HOUSE_1F_MOM
 	applymovement LOCALID_PLAYER, NewBarkTown_PlayersHouse_Player_Face_Down
-	waitmovement 0
+	waitmovement LOCALID_PLAYER
 	msgbox NewBarkTown_PlayersHouse_Obtain_PokeGear_Text_1, MSGBOX_DEFAULT
 	playfanfare MUS_OBTAIN_ITEM
 	message NewBarkTown_PlayersHouse_Obtain_PokeGear_Text_2
@@ -34,14 +34,14 @@ NewBarkTown_PlayersHouse_Obtain_PokeGear_End::
 	setvar VAR_NEWBARK_INTRO_STATE, 2
 	closemessage
 	applymovement LOCALID_PLAYERS_HOUSE_1F_MOM, NewBarkTown_PlayersHouse_Mom_Move_Down
-	waitmovement 0
+	waitmovement LOCALID_PLAYERS_HOUSE_1F_MOM
 	releaseall
 	end
 
 NewBarkTown_PlayersHouse_Mom_Script::
 	msgbox NewBarkTown_PlayersHouse_Mom_Script_Text_1, MSGBOX_NPC
 	applymovement LOCALID_PLAYERS_HOUSE_1F_MOM, NewBarkTown_PlayersHouse_Mom_Face_Left
-	waitmovement 0
+	waitmovement LOCALID_PLAYERS_HOUSE_1F_MOM
 	end
 
 NewBarkTown_PlayersHouse_1F_EventScript_Visitor::
@@ -49,7 +49,7 @@ NewBarkTown_PlayersHouse_1F_EventScript_Visitor::
 	faceplayer
 	msgbox NewBarkTown_PlayersHouse_Script_Visitor_Text, MSGBOX_NPC
 	applymovement LOCALID_PLAYERS_HOUSE_1F_VISITOR, NewBarkTown_PlayersHouse_Visitor_Face_Right
-	waitmovement 0
+	waitmovement LOCALID_PLAYERS_HOUSE_1F_VISITOR
 	release
 	end
 

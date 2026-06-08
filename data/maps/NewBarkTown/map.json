@@ -87,7 +87,7 @@
       "y": 4,
       "elevation": 3,
       "dest_map": "MAP_NEW_BARK_TOWN_PROFESSOR_ELMS_LAB",
-      "dest_warp_id": "2"
+      "dest_warp_id": "0"
     },
     {
       "x": 17,
@@ -122,7 +122,7 @@
       "y": 9,
       "elevation": 0,
       "var": "VAR_NEWBARK_INTRO_STATE",
-      "var_value": "3",
+      "var_value": "10",
       "script": "NewBarkTown_EventScript_Lass_Trigger_Top2"
     },
     {
@@ -131,7 +131,7 @@
       "y": 10,
       "elevation": 0,
       "var": "VAR_NEWBARK_INTRO_STATE",
-      "var_value": "3",
+      "var_value": "10",
       "script": "NewBarkTown_EventScript_Lass_Trigger_Bottom2"
     }
   ],

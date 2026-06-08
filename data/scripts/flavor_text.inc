@@ -4,6 +4,10 @@ EventScript_Bookshelf::
 	msgbox Text_Bookshelf, MSGBOX_SIGN
 	end
 
+EventScript_BookShelfDifficult::
+	msgbox Text_BookShelfDifficult, MSGBOX_SIGN
+	end
+
 EventScript_PokeMartShelf::
 	msgbox Text_PokeMartShelf, MSGBOX_SIGN
 	end
@@ -117,6 +121,9 @@ EventScript_Indigo_HighestAuthority::
 Text_Bookshelf::
 	.string "It's crammed full of POKéMON\n"
 	.string "books.$"
+
+Text_BookShelfDifficult::
+	.string "It's full of difficult books.$"
 
 Text_NothingButPokemonBooks::
 	.string "ほんだなに　ならんでいるのは\n"

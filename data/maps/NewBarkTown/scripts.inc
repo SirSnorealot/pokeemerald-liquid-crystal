@@ -13,9 +13,9 @@ NewBarkTown_MapScripts::
 	@ State descriptions for VAR_NEWBARK_INTRO_STATE
 	@ 1: Started Game
 	@ 2: Obtained PokeGear
-	@ 3: Got Starter Pokemon
-	@ 4: Talked to Mom after getting Starter Pokemon
-	@ 5: ?
+	@ 3: Entered Professor Elm's Lab for the first time
+	@ 4: Picked a starter
+	@ 5: Aid gave potion
 	@ 6: ?
 	@ 7: ?
 
@@ -53,11 +53,11 @@ NewBarkTown_EventScript_ElmsLabSign::
 	end
 
 NewBarkTown_EventScript_PlayersHouseSign::
-	msgbox NewBarkTown_Text_PlayersHouse, MSGBOX_DEFAULT
+	msgbox NewBarkTown_Text_PlayersHouse, MSGBOX_SIGN
 	end
 
 NewBarkTown_EventScript_ElmsHouseSign::
-	msgbox NewBarkTown_Text_ProfElmsHouse, MSGBOX_DEFAULT
+	msgbox NewBarkTown_Text_ProfElmsHouse, MSGBOX_SIGN
 	end
 
 NewBarkTown_EventScript_FatMan::
@@ -79,41 +79,45 @@ NewBarkTown_EventScript_Lass2::
 
 NewBarkTown_EventScript_Lass_Trigger_Bottom1::
 	applymovement LOCALID_NEWBARK_LASS NewBarkTown_movement_Lass_Left_from_Bottom
-	waitmovement 0
+	waitmovement LOCALID_NEWBARK_LASS
 	msgbox NewBarkTown_Text_Lass_Trigger1, MSGBOX_NPC
 	applymovement LOCALID_NEWBARK_LASS NewBarkTown_movement_Lass_Right_from_Bottom
 	applymovement LOCALID_PLAYER NewBarkTown_movement_Lass_Right_from_Bottom
-	waitmovement 0
+	waitmovement LOCALID_NEWBARK_LASS
+	waitmovement LOCALID_PLAYER
 	release
 	end
 
 NewBarkTown_EventScript_Lass_Trigger_Top1::
 	applymovement LOCALID_NEWBARK_LASS NewBarkTown_movement_Lass_Left_from_Top
-	waitmovement 0
+	waitmovement LOCALID_NEWBARK_LASS
 	msgbox NewBarkTown_Text_Lass_Trigger1, MSGBOX_NPC
 	applymovement LOCALID_NEWBARK_LASS NewBarkTown_movement_Lass_Right_from_Top
 	applymovement LOCALID_PLAYER NewBarkTown_movement_Lass_Right_from_Top
-	waitmovement 0
+	waitmovement LOCALID_NEWBARK_LASS
+	waitmovement LOCALID_PLAYER
 	release
 	end
 
 NewBarkTown_EventScript_Lass_Trigger_Bottom2::
 	applymovement LOCALID_NEWBARK_LASS NewBarkTown_movement_Lass_Left_from_Bottom
-	waitmovement 0
+	waitmovement LOCALID_NEWBARK_LASS
 	msgbox NewBarkTown_Text_Lass_Trigger2, MSGBOX_NPC
 	applymovement LOCALID_NEWBARK_LASS NewBarkTown_movement_Lass_Right_from_Bottom
 	applymovement LOCALID_PLAYER NewBarkTown_movement_Lass_Right_from_Bottom
-	waitmovement 0
+	waitmovement LOCALID_NEWBARK_LASS
+	waitmovement LOCALID_PLAYER
 	release
 	end
 
 NewBarkTown_EventScript_Lass_Trigger_Top2::
 	applymovement LOCALID_NEWBARK_LASS NewBarkTown_movement_Lass_Left_from_Top
-	waitmovement 0
+	waitmovement LOCALID_NEWBARK_LASS
 	msgbox NewBarkTown_Text_Lass_Trigger2, MSGBOX_NPC
 	applymovement LOCALID_NEWBARK_LASS NewBarkTown_movement_Lass_Right_from_Top
 	applymovement LOCALID_PLAYER NewBarkTown_movement_Lass_Right_from_Top
-	waitmovement 0
+	waitmovement LOCALID_NEWBARK_LASS
+	waitmovement LOCALID_PLAYER
 	release
 	end
 
