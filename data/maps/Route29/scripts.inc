@@ -1,298 +1,346 @@
 Route29_MapScripts::
-	map_script MAP_SCRIPT_ON_TRANSITION, Route101_OnTransition
-	map_script MAP_SCRIPT_ON_FRAME_TABLE, Route101_OnFrame
 	.byte 0
 
-Route101_OnTransition:
-	call ProfBirch_EventScript_UpdateLocation
+Route29_EventScript_RouteSign::
+	msgbox Route29_Text_RouteSign, MSGBOX_SIGN
 	end
 
-Route101_OnFrame:
-	map_script_2 VAR_ROUTE101_STATE, 0, Route101_EventScript_HideMapNamePopup
-	.2byte 0
-
-Route101_EventScript_HideMapNamePopup::
-	setflag FLAG_HIDE_MAP_NAME_POPUP
-	setvar VAR_ROUTE101_STATE, 1
+Route29_EventScript_SaveProgressReminderNpc::
+	msgbox Route29_Text_SaveProgressReminder, MSGBOX_NPC
 	end
 
-Route101_EventScript_StartBirchRescue::
-	lockall
-	playbgm MUS_HELP, TRUE
-	msgbox Route101_Text_HelpMe, MSGBOX_DEFAULT
-	closemessage
-	setobjectxy LOCALID_ROUTE101_BIRCH, 0, 15
-	setobjectxy LOCALID_ROUTE101_ZIGZAGOON, 0, 16
-	applymovement LOCALID_PLAYER, Route101_Movement_EnterScene
-	applymovement LOCALID_ROUTE101_BIRCH, Route101_Movement_BirchRunAway1
-	applymovement LOCALID_ROUTE101_ZIGZAGOON, Route101_Movement_ZigzagoonChase1
-	waitmovement 0
-	applymovement LOCALID_ROUTE101_ZIGZAGOON, Route101_Movement_ZigzagoonChaseInCircles
-	applymovement LOCALID_ROUTE101_BIRCH, Route101_Movement_BirchRunInCircles
-	waitmovement 0
-	applymovement LOCALID_ROUTE101_BIRCH, Common_Movement_WalkInPlaceFasterRight
-	waitmovement 0
-	applymovement LOCALID_ROUTE101_ZIGZAGOON, Route101_Movement_ZigzagoonFaceBirch
-	applymovement LOCALID_ROUTE101_BIRCH, Route101_Movement_BirchFaceZigzagoon
-	waitmovement 0
-	msgbox Route101_Text_PleaseHelp, MSGBOX_DEFAULT
-	closemessage
-	setvar VAR_ROUTE101_STATE, 2
-	releaseall
+Route29_EventScript_LedgeTutorialNpc::
+	msgbox Route29_Text_LedgeTutorial, MSGBOX_NPC
 	end
 
-Route101_EventScript_PreventExitSouth::
-	lockall
-	msgbox Route101_Text_DontLeaveMe, MSGBOX_DEFAULT
-	closemessage
-	applymovement LOCALID_PLAYER, Route101_Movement_PreventExitSouth
-	waitmovement 0
-	releaseall
+Route29_EventScript_TallGrassWarningNpc::
+	msgbox Route29_Text_TallGrassWarning, MSGBOX_NPC
 	end
 
-Route101_EventScript_PreventExitWest::
-	lockall
-	msgbox Route101_Text_DontLeaveMe, MSGBOX_DEFAULT
-	closemessage
-	applymovement LOCALID_PLAYER, Route101_Movement_PreventExitWest
-	waitmovement 0
-	releaseall
+Route29_Script_Tuscany_AlreadyMet::
+	msgbox Route29_Text_TuscanyAlreadyMet, MSGBOX_NPC
 	end
 
-Route101_EventScript_PreventExitNorth::
-	lockall
-	msgbox Route101_Text_DontLeaveMe, MSGBOX_DEFAULT
-	closemessage
-	applymovement LOCALID_PLAYER, Route101_Movement_PreventExitNorth
-	waitmovement 0
-	releaseall
+Route29_Script_Tuscany_BagFull::
+	msgbox Route29_Text_TuscanyBagFull, MSGBOX_NPC
 	end
 
-Route101_Movement_PreventExitSouth:
-	walk_up
-	step_end
-
-Route101_Movement_PreventExitWest:
-	walk_right
-	step_end
-
-Route101_Movement_PreventExitNorth:
-	walk_down
-	step_end
-
-Route101_Movement_ZigzagoonChaseInCircles:
-	walk_fast_up
-	walk_fast_up
-	walk_fast_up
-	walk_fast_right
-	walk_fast_right
-	walk_fast_right
-	walk_fast_down
-	walk_fast_down
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
-	walk_fast_up
-	walk_fast_up
-	walk_fast_right
-	walk_fast_right
-	walk_fast_right
-	walk_fast_down
-	walk_fast_down
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
-	walk_fast_up
-	walk_fast_up
-	walk_fast_right
-	walk_fast_right
-	walk_fast_right
-	walk_fast_down
-	walk_fast_down
-	walk_fast_left
-	walk_fast_left
-	step_end
-
-Route101_Movement_ZigzagoonChase1:
-	walk_fast_up
-	walk_fast_right
-	walk_fast_right
-	walk_fast_right
-	walk_fast_right
-	walk_fast_up
-	step_end
-
-@ Leftover data? This command is unused.
-	step_end
-
-Route101_Movement_ZigzagoonFaceBirch:
-	walk_in_place_fast_left
-	walk_in_place_fast_left
-	walk_in_place_fast_left
-	walk_in_place_fast_left
-	step_end
-
-Route101_Movement_EnterScene:
-	walk_fast_up
-	walk_fast_up
-	walk_fast_up
-	walk_fast_up
-	walk_in_place_faster_left
-	step_end
-
-Route101_Movement_BirchRunInCircles:
-	walk_fast_up
-	walk_fast_up
-	walk_fast_right
-	walk_fast_right
-	walk_fast_right
-	walk_fast_down
-	walk_fast_down
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
-	walk_fast_up
-	walk_fast_up
-	walk_fast_right
-	walk_fast_right
-	walk_fast_right
-	walk_fast_down
-	walk_fast_down
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
-	walk_fast_up
-	walk_fast_up
-	walk_fast_right
-	walk_fast_right
-	walk_fast_right
-	walk_fast_down
-	walk_fast_down
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
-	step_end
-
-Route101_Movement_BirchRunAway1:
-	walk_fast_right
-	walk_fast_right
-	walk_fast_right
-	walk_fast_right
-	walk_fast_up
-	walk_fast_up
-	step_end
-
-@ Leftover data? This command is unused.
-	step_end
-
-Route101_Movement_BirchFaceZigzagoon:
-	walk_in_place_fast_right
-	walk_in_place_fast_right
-	walk_in_place_fast_right
-	walk_in_place_fast_right
-	step_end
-
-Route101_Movement_Unused1:
-	walk_up
-	walk_up
-	step_end
-
-Route101_Movement_Unused2:
-	walk_up
-	walk_left
-	walk_up
-	step_end
-
-Route101_EventScript_Youngster::
-	msgbox Route101_Text_TakeTiredPokemonToPokeCenter, MSGBOX_NPC
-	end
-
-Route101_EventScript_Boy::
-	msgbox Route101_Text_WildPokemonInTallGrass, MSGBOX_NPC
-	end
-
-Route101_EventScript_RouteSign::
-	msgbox Route101_Text_RouteSign, MSGBOX_SIGN
-	end
-
-Route101_EventScript_BirchsBag::
-	lock
-	faceplayer
-	setflag FLAG_SYS_POKEMON_GET
-	setflag FLAG_RESCUED_BIRCH
-	fadescreen FADE_TO_BLACK
-	removeobject LOCALID_ROUTE101_ZIGZAGOON
-	setobjectxy LOCALID_PLAYER, 6, 13
-	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
-	waitmovement 0
-	special ChooseStarter
-	applymovement LOCALID_ROUTE101_BIRCH, Route101_Movement_BirchApproachPlayer
-	waitmovement 0
-	msgbox Route101_Text_YouSavedMe, MSGBOX_DEFAULT
-	special HealPlayerParty
-	setflag FLAG_HIDE_ROUTE_101_BIRCH_ZIGZAGOON_BATTLE
-	@clearflag FLAG_HIDE_LITTLEROOT_TOWN_BIRCHS_LAB_BIRCH
-	setflag FLAG_HIDE_ROUTE_101_BIRCH_STARTERS_BAG
-	setvar VAR_BIRCH_LAB_STATE, 2
-	setvar VAR_ROUTE101_STATE, 3
-	clearflag FLAG_HIDE_MAP_NAME_POPUP
-	checkplayergender
-	call_if_eq VAR_RESULT, MALE, Route101_EventScript_HideMayInBedroom
-	call_if_eq VAR_RESULT, FEMALE, Route101_EventScript_HideBrendanInBedroom
-	warp MAP_NEW_BARK_TOWN_PROFESSOR_ELMS_LAB, 6, 5
-	waitstate
+Route29_EventScript_TimeOfDayPokemonWatcherNpc::
+	goto_if_set 0x1766, Route29_Script_TimeOfDayPokemonWatcherNpc_NightText
+	goto_if_set 0x1765, Route29_Script_TimeOfDayPokemonWatcherNpc_MorningText
 	release
 	end
 
-Route101_EventScript_HideMayInBedroom::
-	setflag FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_RIVAL_BEDROOM
-	return
+Route29_Script_TimeOfDayPokemonWatcherNpc_NightText::
+	lock
+	faceplayer
+	msgbox Route29_Text_PokemonWatcherNight, MSGBOX_AUTOCLOSE
+	release
+	end
 
-Route101_EventScript_HideBrendanInBedroom::
-	setflag FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_RIVAL_BEDROOM
-	return
+Route29_Script_TimeOfDayPokemonWatcherNpc_MorningText::
+	lock
+	faceplayer
+	msgbox Route29_Text_PokemonWatcherMorning, MSGBOX_AUTOCLOSE
+	release
+	end
 
-Route101_Movement_BirchApproachPlayer:
+
+Route29_EventScript_CatchingTutorialTriggerWest::
+	goto_if_set 0x1020, Route29_Script_CatchingTutorialWest_Start
+	release
+	end
+
+Route29_EventScript_CatchingTutorialTriggerEast::
+	goto_if_set 0x1020, Route29_Script_CatchingTutorialEast_Start
+	release
+	end
+
+Route29_EventScript_TuscanyOfSnowflakes::
+	lockall
+	faceplayer
+	goto_if_set 0x15CB, Route29_Script_Tuscany_AlreadyMet
+	msgbox Route29_Text_TuscanyIntroduction, MSGBOX_NPC
+	lockall
+	setorcopyvar 0x8000, 0xD9
+	setorcopyvar 0x8001, 0x1
+	callstd STD_OBTAIN_ITEM
+	goto_if_eq 0x800D, 0x0, Route29_Script_Tuscany_BagFull
+	msgbox Route29_Text_TuscanyExplainSilkScarf, MSGBOX_NPC
+	setflag 0x15CB
+	release
+	end
+
+Route29_EventScript_CatchingTutorialNpc::
+	lock
+	faceplayer
+	goto_if_set 0x1781, Route29_Script_CatchingTutorialNpc_AfterTutorial
+	goto_if_set 0x1780, Route29_Script_CatchingTutorialNpc_OfferRepeatTutorial
+	msgbox Route29_Text_PokemonHideInGrass, MSGBOX_AUTOCLOSE
+	release
+	end
+
+Route29_Script_CatchingTutorialNpc_AfterTutorial::
+	msgbox Route29_Text_PokemonHideInGrass, MSGBOX_AUTOCLOSE
+	release
+	end
+
+Route29_Script_CatchingTutorialNpc_OfferRepeatTutorial::
+	msgbox Route29_Text_CatchingTutorialOfferRepeat, MSGBOX_YESNO
+	goto_if_eq 0x800D, 0x1, Route29_Script_CatchingTutorialNpc_RepeatDemonstration
+	release
+	end
+
+Route29_Script_CatchingTutorialWest_Start::
+	goto_if_set 0x1780, Route29_Script_CatchingTutorialWest_AlreadyCompleted
+	goto_if_set 0x1781, Route29_Script_CatchingTutorialWest_AlreadyCompleted
+	applymovement 0x5, Route29_Movement_CatchingTutorialNpcApproachWest
+	waitmovement 0x0
+	msgbox Route29_Text_CatchingTutorialOfferWest, MSGBOX_YESNO
+	goto_if_eq 0x800D, 0x1, Route29_Script_CatchingTutorialWest_Demonstrate
+	msgbox Route29_Text_CatchingTutorialDeclinedWest, MSGBOX_NPC
+	applymovement 0x5, Route29_Movement_CatchingTutorialNpcLeaveWest
+	waitmovement 0x0
+	setflag 0x1780
+	release
+	end
+
+Route29_Script_CatchingTutorialWest_Demonstrate::
+	release
+	applymovement 0x5, Route29_Movement_CatchingTutorialNpcLeaveWest
+	applymovement 0xFF, Route29_Movement_CatchingTutorialPlayerMoveToDemoWest
+	delay 0x80
+	@ special 0x188
+	@ special 0x9D
+	waitstate
+	applymovement 0x5, Route29_Movement_CatchingTutorialNpcFaceUp
+	waitmovement 0x0
+	msgbox Route29_Text_CatchingTutorialCompleteWest, MSGBOX_NPC
+	applymovement 0x5, Route29_Movement_CatchingTutorialNpcFaceDownFast
+	waitmovement 0x0
+	setflag 0x1781
+	release
+	end
+
+Route29_Script_CatchingTutorialWest_AlreadyCompleted::
+	release
+	end
+
+Route29_Script_CatchingTutorialEast_Start::
+	goto_if_set 0x1780, Route29_Script_CatchingTutorialEast_AlreadyCompleted
+	goto_if_set 0x1781, Route29_Script_CatchingTutorialEast_AlreadyCompleted
+	applymovement 0x5, Route29_Movement_CatchingTutorialNpcApproachEast
+	waitmovement 0x0
+	msgbox Route29_Text_CatchingTutorialOfferEast, MSGBOX_YESNO
+	goto_if_eq 0x800D, 0x1, Route29_Script_CatchingTutorialEast_Demonstrate
+	msgbox Route29_Text_CatchingTutorialDeclinedEast, MSGBOX_NPC
+	applymovement 0x5, Route29_Movement_CatchingTutorialNpcLeaveEast
+	waitmovement 0x0
+	setflag 0x1780
+	release
+	end
+
+Route29_Script_CatchingTutorialEast_Demonstrate::
+	release
+	applymovement 0x5, Route29_Movement_CatchingTutorialNpcLeaveEast
+	applymovement 0xFF, Route29_Movement_CatchingTutorialPlayerMoveToDemoEast
+	delay 0x80
+	@ special 0x188
+	@ special 0x9D
+	waitstate
+	applymovement 0x5, Route29_Movement_CatchingTutorialNpcFaceUpAlternate
+	waitmovement 0x0
+	msgbox Route29_Text_CatchingTutorialCompleteEast, MSGBOX_NPC
+	applymovement 0x5, Route29_Movement_CatchingTutorialNpcFaceDown
+	waitmovement 0x0
+	setflag 0x1781
+	release
+	end
+
+Route29_Script_CatchingTutorialEast_AlreadyCompleted::
+	release
+	end
+
+Route29_Script_CatchingTutorialNpc_RepeatDemonstration::
+	release
+	@ special 0x188
+	@ special 0x9D
+	waitstate
+	msgbox Route29_Text_CatchingTutorialCompleteWest, MSGBOX_NPC
+	applymovement 0x5, Route29_Movement_CatchingTutorialNpcFaceDownFast
+	setflag 0x1781
+	release
+	end
+
+Route29_Movement_CatchingTutorialPlayerMoveToDemoWest::
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_down
+	step_end
+
+Route29_Movement_CatchingTutorialNpcLeaveWest::
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_down
+	walk_down
+	step_end
+
+Route29_Movement_CatchingTutorialNpcApproachWest::
+	walk_up
+	walk_up
+	walk_right
+	walk_right
+	walk_right
+	walk_right
 	walk_right
 	step_end
 
-Route101_Text_HelpMe:
-	.string "H-help me!$"
+Route29_Movement_CatchingTutorialNpcFaceUp::
+	face_up
+	step_end
 
-Route101_Text_PleaseHelp:
-	.string "Hello! You over there!\n"
-	.string "Please! Help!\p"
-	.string "In my BAG!\n"
-	.string "There's a POKé BALL!$"
+Route29_Movement_CatchingTutorialNpcFaceDownFast::
+	face_down
+	step_end
 
-Route101_Text_DontLeaveMe:
-	.string "Wh-Where are you going?!\n"
-	.string "Don't leave me like this!$"
+Route29_Movement_CatchingTutorialNpcFaceUpAlternate::
+	face_up
+	step_end
 
-Route101_Text_YouSavedMe:
-	.string "PROF. BIRCH: Whew…\p"
-	.string "I was in the tall grass studying wild\n"
-	.string "POKéMON when I was jumped.\p"
-	.string "You saved me.\n"
-	.string "Thanks a lot!\p"
-	.string "Oh?\p"
-	.string "Hi, you're {PLAYER}{KUN}!\p"
-	.string "This is not the place to chat, so come\n"
-	.string "by my POKéMON LAB later, okay?$"
+Route29_Movement_CatchingTutorialNpcFaceDown::
+	face_down
+	step_end
 
-Route101_Text_TakeTiredPokemonToPokeCenter:
-	.string "If POKéMON get tired, take them to\n"
-	.string "a POKéMON CENTER.\p"
-	.string "There's a POKéMON CENTER in OLDALE\n"
-	.string "TOWN right close by.$"
+Route29_Movement_CatchingTutorialPlayerMoveToDemoEast::
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_down
+	walk_down
+	step_end
 
-Route101_Text_WildPokemonInTallGrass:
-	.string "Wild POKéMON will jump out at you in\n"
-	.string "tall grass.\p"
-	.string "If you want to catch POKéMON, you have\n"
-	.string "to go into the tall grass and search.$"
+Route29_Movement_CatchingTutorialNpcLeaveEast::
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_down
+	walk_down
+	walk_down
+	step_end
 
-Route101_Text_RouteSign:
-	.string "ROUTE 101\n"
-	.string "{UP_ARROW} OLDALE TOWN$"
+Route29_Movement_CatchingTutorialNpcApproachEast::
+	walk_up
+	walk_up
+	walk_up
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	step_end
 
+Route29_Text_RouteSign:
+	.string "ROUTE 29\p"
+	.string "{LEFT_ARROW} CHERRYGROVE CITY\n"
+	.string "{RIGHT_ARROW} NEW BARK TOWN$"
+
+Route29_Text_SaveProgressReminder:
+	.string "I wanted to take a break, so I\n"
+	.string "saved to record my progress.$"
+
+Route29_Text_LedgeTutorial:
+	.string "See those ledges? It's scary to jump\n"
+	.string "off them.\p"
+	.string "But you can go to NEW BARK TOWN\n"
+	.string "without walking through the grass.$"
+
+Route29_Text_PokemonWatcherNight:
+	.string "I'm waiting for POKéMON that\n"
+	.string "only appear in the NIGHT.$"
+
+Route29_Text_TallGrassWarning:
+	.string "Yo. How are your POKéMON?\n"
+	.string "If they're weak and not ready for\l"
+	.string "battle, keep out of the grass.$"
+
+Route29_Text_PokemonHideInGrass:
+	.string "POKéMON hide in the grass.\n"
+	.string "Who knows when they'll pop out...$"
+
+Route29_Text_TuscanyExplainSilkScarf:
+	.string "Wouldn't you agree that it is\n"
+	.string "most adorable?\p"
+	.string "It strengthens normal-type moves.\n"
+	.string "I am certain it will be of use.$"
+
+Route29_Text_TuscanyAlreadyMet:
+	.string "Have you met MONICA, my older\n"
+	.string "sister?\p"
+	.string "Or my younger brother, WESLEY?\n"
+	.string "I am the second of seven children.$"
+
+Route29_Text_TuscanyBagFull:
+	.string "It appears that your BAG is\n"
+	.string "full.\n"
+	.string "Please make space for this.$"
+
+Route29_Text_TuscanyIntroduction:
+	.string "I do believe that this is the\n"
+	.string "first time we've met?\p"
+	.string "Please allow me to introduce\n"
+	.string "myself.\p"
+	.string "I am TUSCANY of Snowflakes.\p"
+	.string "By way of introduction, please\n"
+	.string "accept this gift, SILK SCARF.$"
+
+Route29_Text_PokemonWatcherMorning:
+	.string "I'm waiting for POKéMON that\n"
+	.string "only appear in the MORNING.$"
+
+Route29_Text_CatchingTutorialCompleteWest:
+	.string "That's how you do it.\p"
+	.string "If you weaken them first, POKéMON\n"
+	.string "are easier to catch.$"
+
+Route29_Text_CatchingTutorialDeclinedWest:
+	.string "Oh. Fine, then.\p"
+	.string "Anyway, if you want to catch\n"
+	.string "POKéMON, you have to walk a lot.$"
+
+Route29_Text_CatchingTutorialOfferWest:
+	.string "I've seen you a couple times.\p"
+	.string "How many POKéMON have you caught?\p"
+	.string "Would you like me to show you how\n"
+	.string "to catch POKéMON?$"
+
+Route29_Text_CatchingTutorialCompleteEast:
+	.string "That's how you do it.\p"
+	.string "If you weaken them first, POKéMON\n"
+	.string "are easier to catch.$"
+
+Route29_Text_CatchingTutorialDeclinedEast:
+	.string "Oh. Fine, then.\p"
+	.string "Anyway, if you want to catch\n"
+	.string "POKéMON, you have to walk a lot.$"
+
+Route29_Text_CatchingTutorialOfferEast:
+	.string "I've seen you a couple times.\p"
+	.string "How many POKéMON have you caught?\p"
+	.string "Would you like me to show you how\n"
+	.string "to catch POKéMON?$"
+
+Route29_Text_CatchingTutorialOfferRepeat:
+	.string "Huh? You want me to show you how\n"
+	.string "to catch POKéMON?$"

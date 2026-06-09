@@ -12,10 +12,9 @@
   "allow_running": false,
   "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": [],
+  "connections": null,
   "object_events": [
     {
-      "type": "object",
       "graphics_id": "69",
       "x": 3,
       "y": 6,
@@ -29,7 +28,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "18",
       "x": 9,
       "y": 5,
@@ -48,15 +46,15 @@
       "x": 7,
       "y": 1,
       "elevation": 0,
-      "dest_warp_id": 0,
-      "dest_map": "MAP_ROUTE46"
+      "dest_map": "MAP_ROUTE46",
+      "dest_warp_id": "0"
     },
     {
       "x": 7,
       "y": 10,
       "elevation": 0,
-      "dest_warp_id": 0,
-      "dest_map": "MAP_ROUTE29"
+      "dest_map": "MAP_ROUTE29",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [],
