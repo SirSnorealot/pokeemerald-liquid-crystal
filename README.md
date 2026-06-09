@@ -47,7 +47,7 @@ make release -j$(nproc)
 - [ ] Intro before Title screen - Not started.
 - [ ] New Game Intro - Not started.
 - [ ] Port OW Sprites - Not started.
-- [ ] Scripting - Not started.
+- [ ] Scripting - Started: SirSnorealot
 - [ ] Properly implement roaming legendaries. - Not started.
 - [ ] Mom Bank System - Not started.
 - [ ] Players room and decorations - Not started.
