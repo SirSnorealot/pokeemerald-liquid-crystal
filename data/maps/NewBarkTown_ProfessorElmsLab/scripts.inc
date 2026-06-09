@@ -352,6 +352,14 @@ NewBarkTown_ProfessorElmsLab_Heal_Mons::
 	release
 	end
 
+NewBarkTown_ProfessorElmsLab_EventScript_ElmEmail::
+    msgbox NewBarkTown_ProfessorElmsLab_Text_ElmEmail, MSGBOX_SIGN
+    end
+
+NewBarkTown_ProfessorElmsLab_EventScript_PokemonEvolutionScreen::
+    msgbox NewBarkTown_ProfessorElmsLab_Text_PokemonEvolutionScreen, MSGBOX_NPC
+    end
+
 @Movement
 NewBarkTown_ProfessorElmsLab_Elm_Move_To_Computer:
 	emote_exclamation_mark
@@ -638,3 +646,21 @@ NewBarkTown_ProfessorElmsLab_Heal_Mons_text:
 NewBarkTown_ProfessorElmsLab_Complicated_Device_text:
 	.string "A complicated device,\n"
 	.string "better not touch it...$"
+
+NewBarkTown_ProfessorElmsLab_Text_ElmEmail:
+    .string "There's an e-mail message here.\p"
+    .string "…\p"
+    .string "Finally!\n"
+    .string "The ultimate TRAINERS of the\l"
+    .string "POKéMON LEAGUE are ready to take on\l"
+    .string "all comers!\p"
+    .string "Bring your best POKéMON and see\n"
+    .string "how you rate as a TRAINER!\p"
+    .string "POKéMON LEAGUE HQ\n"
+    .string "INDIGO PLATEAU\p"
+    .string "PROF. ELM, please visit us!\n"
+    .string "…$"
+
+NewBarkTown_ProfessorElmsLab_Text_PokemonEvolutionScreen:
+    .string "OBSERVATIONS ON POKéMON EVOLUTION\n"
+    .string "...It says on the screen...$"
