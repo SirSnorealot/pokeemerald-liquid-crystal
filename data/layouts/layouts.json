@@ -1376,17 +1376,6 @@
       "layout_version": "emerald"
     },
     {
-      "id": "LAYOUT_ROUTE104_MR_BRINEYS_HOUSE",
-      "name": "Route104_MrBrineysHouse_Layout",
-      "width": 12,
-      "height": 9,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_GenericBuilding",
-      "border_filepath": "data/layouts/Route104_MrBrineysHouse/border.bin",
-      "blockdata_filepath": "data/layouts/Route104_MrBrineysHouse/map.bin",
-      "layout_version": "emerald"
-    },
-    {
       "id": "LAYOUT_LILYCOVE_CITY_LILYCOVE_MUSEUM_1F",
       "name": "LilycoveCity_LilycoveMuseum_1F_Layout",
       "width": 21,
@@ -2968,6 +2957,17 @@
       "secondary_tileset": "gTileset__route_gate_lc",
       "border_filepath": "data/layouts/_RouteGate/border.bin",
       "blockdata_filepath": "data/layouts/_RouteGate/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_ROUTE_GATE_EAST_WEST",
+      "name": "RouteGateEastWest_Layout",
+      "width": 13,
+      "height": 9,
+      "primary_tileset": "gTileset__building_lc",
+      "secondary_tileset": "gTileset__route_gate_lc",
+      "border_filepath": "data/layouts/_RouteGateEastWest/border.bin",
+      "blockdata_filepath": "data/layouts/_RouteGateEastWest/map.bin",
       "layout_version": "emerald"
     },
     {

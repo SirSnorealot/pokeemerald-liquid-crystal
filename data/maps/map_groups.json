@@ -11,7 +11,7 @@
     "gMapGroup_IndoorCianwoodCity",
     "gMapGroup_IndoorRoute29",
     "gMapGroup_IndoorRoute30",
-    "gMapGroup_IndoorRoute32",
+    "gMapGroup_IndoorRoute31",
     "gMapGroup_IndoorRoute40",
     "gMapGroup_IndoorRoute41",
     "gMapGroup_IndoorRoute42",
@@ -221,13 +221,13 @@
     "Route30_House1",
     "Route30_House2"
   ],
-  "gMapGroup_IndoorRoute32": [
-    "Route104_MrBrineysHouse",
-    "Route104_PrettyPetalFlowerShop"
+  "gMapGroup_IndoorRoute31": [
+    "Route31_GateHouse"
   ],
   "gMapGroup_IndoorRoute40": [
     "Route111_WinstrateFamilysHouse",
-    "Route111_OldLadysRestStop"
+    "Route111_OldLadysRestStop",
+    "Route104_PrettyPetalFlowerShop"
   ],
   "gMapGroup_IndoorRoute41": [
     "Route112_CableCarStation",

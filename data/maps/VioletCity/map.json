@@ -153,7 +153,15 @@
       "flag": "FLAG_HIDE_PETALBURG_CITY_SCOTT"
     }
   ],
-  "warp_events": [],
+  "warp_events": [
+    {
+      "x": 51,
+      "y": 30,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE31_GATE_HOUSE",
+      "dest_warp_id": "1"
+    }
+  ],
   "coord_events": [
     {
       "type": "trigger",

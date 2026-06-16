@@ -1,6 +1,13 @@
-Route104_MrBrineysHouse_MapScripts::
-	map_script MAP_SCRIPT_ON_TRANSITION, Route104_MrBrineysHouse_OnTransition
+Route31_GateHouse_MapScripts::
 	.byte 0
+
+@ TODO(LC): stub for unported LC NPC script ROUTE_31_5_2_Script_00804511
+ROUTE_31_5_2_Script_00804511::
+	end
+
+@ TODO(LC): stub for unported LC NPC script ROUTE_31_5_2_Script_00804548
+ROUTE_31_5_2_Script_00804548::
+	end
 
 Route104_MrBrineysHouse_OnTransition:
 	setflag FLAG_LANDMARK_MR_BRINEY_HOUSE
@@ -13,10 +20,14 @@ Route104_MrBrineysHouse_EventScript_HideRustboroRival::
 	return
 
 Route104_MrBrineysHouse_EventScript_SetBrineyPeekoPos::
-	setobjectxyperm LOCALID_BRINEYS_HOUSE_BRINEY, 9, 3
-	setobjectmovementtype LOCALID_BRINEYS_HOUSE_BRINEY, MOVEMENT_TYPE_WALK_SEQUENCE_DOWN_LEFT_UP_RIGHT
-	setobjectxyperm LOCALID_BRINEYS_HOUSE_PEEKO, 9, 6
-	setobjectmovementtype LOCALID_BRINEYS_HOUSE_PEEKO, MOVEMENT_TYPE_WALK_SEQUENCE_LEFT_UP_RIGHT_DOWN
+@ TODO(LC): LOCALID_BRINEYS_HOUSE_BRINEY no longer defined after map rename
+@	setobjectxyperm LOCALID_BRINEYS_HOUSE_BRINEY, 9, 3
+@ TODO(LC): LOCALID_BRINEYS_HOUSE_BRINEY no longer defined after map rename
+@	setobjectmovementtype LOCALID_BRINEYS_HOUSE_BRINEY, MOVEMENT_TYPE_WALK_SEQUENCE_DOWN_LEFT_UP_RIGHT
+@ TODO(LC): LOCALID_BRINEYS_HOUSE_PEEKO no longer defined after map rename
+@	setobjectxyperm LOCALID_BRINEYS_HOUSE_PEEKO, 9, 6
+@ TODO(LC): LOCALID_BRINEYS_HOUSE_PEEKO no longer defined after map rename
+@	setobjectmovementtype LOCALID_BRINEYS_HOUSE_PEEKO, MOVEMENT_TYPE_WALK_SEQUENCE_LEFT_UP_RIGHT_DOWN
 	return
 
 Route104_MrBrineysHouse_EventScript_Briney::
@@ -155,4 +166,3 @@ Route104_MrBrineysHouse_Text_TellMeWheneverYouWantToSail:
 
 Route104_MrBrineysHouse_Text_Peeko:
 	.string "PEEKO: Pii piihyoro!$"
-

@@ -97,6 +97,7 @@ Maps every project layout that was imported from the LC export to its source fol
 | Project Layout ID  | Project Folder | lc_maps Folder |
 |--------------------|----------------|----------------|
 | LAYOUT_ROUTE_GATE  | _RouteGate     | 320990         |
+| LAYOUT_ROUTE_GATE_EAST_WEST | _RouteGateEastWest | 338D20 |
 
 ---
 
