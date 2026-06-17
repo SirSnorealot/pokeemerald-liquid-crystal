@@ -278,6 +278,14 @@ const u16 gMetatiles_pokemon_center_lc[] = INCBIN_U16("data/tilesets/secondary/_
 const u16 gMetatileAttributes_pokemon_center_lc[] = INCBIN_U16("data/tilesets/secondary/_pokemon_center_lc/metatile_attributes.bin");
 const u16 gMetatiles_dark_cave_lc[] = INCBIN_U16("data/tilesets/secondary/_dark_cave_lc/metatiles.bin");
 const u16 gMetatileAttributes_dark_cave_lc[] = INCBIN_U16("data/tilesets/secondary/_dark_cave_lc/metatile_attributes.bin");
+const u16 gMetatiles_violet_academy_lc[] = INCBIN_U16("data/tilesets/secondary/_violet_academy_lc/metatiles.bin");
+const u16 gMetatileAttributes_violet_academy_lc[] = INCBIN_U16("data/tilesets/secondary/_violet_academy_lc/metatile_attributes.bin");
+const u16 gMetatiles_violet_gym_lc[] = INCBIN_U16("data/tilesets/secondary/_violet_gym_lc/metatiles.bin");
+const u16 gMetatileAttributes_violet_gym_lc[] = INCBIN_U16("data/tilesets/secondary/_violet_gym_lc/metatile_attributes.bin");
+const u16 gMetatiles_house2_lc[] = INCBIN_U16("data/tilesets/secondary/_house2_lc/metatiles.bin");
+const u16 gMetatileAttributes_house2_lc[] = INCBIN_U16("data/tilesets/secondary/_house2_lc/metatile_attributes.bin");
+const u16 gMetatiles_sprout_tower_lc[] = INCBIN_U16("data/tilesets/secondary/_sprout_tower_lc/metatiles.bin");
+const u16 gMetatileAttributes_sprout_tower_lc[] = INCBIN_U16("data/tilesets/secondary/_sprout_tower_lc/metatile_attributes.bin");
 
 #else
 

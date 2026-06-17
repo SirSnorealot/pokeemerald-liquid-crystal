@@ -49,7 +49,7 @@ PetalburgCity_EventScript_WallyTutorial::
 	clearflag FLAG_DONT_TRANSITION_MUSIC
 	special LoadPlayerParty
 	setvar VAR_PETALBURG_GYM_STATE, 1
-	warp MAP_PETALBURG_CITY_GYM, 4, 108
+	warp MAP_VIOLET_CITY_GYM, 4, 108
 	waitstate
 	releaseall
 	end
@@ -74,7 +74,7 @@ PetalburgCity_EventScript_WalkToWallyHouse::
 	clearflag FLAG_HIDE_MAP_NAME_POPUP
 	fadedefaultbgm
 	clearflag FLAG_DONT_TRANSITION_MUSIC
-	warp MAP_PETALBURG_CITY_WALLYS_HOUSE, 2, 4
+	warp MAP_VIOLET_CITY_EARLS_POKEMON_ACADEMY, 2, 4
 	waitstate
 	releaseall
 	end

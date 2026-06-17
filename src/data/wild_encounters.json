@@ -8569,7 +8569,7 @@
           }
         },
         {
-          "map": "MAP_RUSTURF_TUNNEL",
+          "map": "MAP_SPROUT_TOWER_1F",
           "base_label": "gRusturfTunnel_Morning",
           "land_mons": {
             "encounter_rate": 10,
@@ -8638,7 +8638,7 @@
           }
         },
         {
-          "map": "MAP_RUSTURF_TUNNEL",
+          "map": "MAP_SPROUT_TOWER_1F",
           "base_label": "gRusturfTunnel_Day",
           "land_mons": {
             "encounter_rate": 10,
@@ -8707,7 +8707,7 @@
           }
         },
         {
-          "map": "MAP_RUSTURF_TUNNEL",
+          "map": "MAP_SPROUT_TOWER_1F",
           "base_label": "gRusturfTunnel_Evening",
           "land_mons": {
             "encounter_rate": 10,
@@ -8776,7 +8776,7 @@
           }
         },
         {
-          "map": "MAP_RUSTURF_TUNNEL",
+          "map": "MAP_SPROUT_TOWER_1F",
           "base_label": "gRusturfTunnel_Night",
           "land_mons": {
             "encounter_rate": 10,

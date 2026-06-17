@@ -34,3 +34,7 @@ When adding a new tileset entry, leave AMAP # as `?` and fill it in afterward.
 | gTileset_2D4BCC  | ?      | gTileset__house1_lc           |
 | gTileset_2D4BE4  | ?      | gTileset__pokemon_center_lc   |
 | gTileset_2D4BFC  | ?      | gTileset__dark_cave_lc        |
+| gTileset_2D4F2C  | ?      | gTileset__violet_gym_lc       |
+| gTileset_2D4F5C  | ?      | gTileset__violet_academy_lc   |
+| gTileset_2D4EB4  | ?      | gTileset__house2_lc           |
+| gTileset_2D4E9C  | ?      | gTileset__sprout_tower_lc     |

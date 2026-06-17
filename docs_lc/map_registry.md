@@ -103,6 +103,12 @@ Maps every project map that was imported from the LC export to its source folder
 | NewBarkTown_House2              | NEW_BARK_TOWN_5_27   |
 | Route29_GateHouse               | ROUTE_29_4_2         |
 | Route31_GateHouse               | ROUTE_31_5_2         |
+| VioletCity_Mart                 | VIOLET_CITY_34_3     |
+| VioletCity_PokemonCenter     | VIOLET_CITY_36_0     |
+| VioletCity_House2               | VIOLET_CITY_5_20     |
+| VioletCity_House1               | VIOLET_CITY_5_21     |
+| VioletCity_Gym                  | VIOLET_CITY_34_0     |
+| VioletCity_EarlsPokemonAcademy  | VIOLET_CITY_35_4     |
 | Route30_House1                  | ROUTE_30_5_0         |
 | Route30_House2                  | ROUTE_30_34_12       |
 | CherrygroveCity_PokemonCenter | CHERRYGROVE_CITY_33_2  |
@@ -121,3 +127,6 @@ Maps every project map that was imported from the LC export to its source folder
 | DarkCave_BlackthornCitySide     | DARK_CAVE_1_3         |
 | DarkCave_DeepSection            | DARK_CAVE_1_2         |
 | DarkCave_InnerSection           | DARK_CAVE_1_29        |
+| SproutTower_1F                  | SPROUT_TOWER_2_99     |
+| SproutTower_2F                  | SPROUT_TOWER_2_12     |
+| SproutTower_3F                  | SPROUT_TOWER_2_13     |

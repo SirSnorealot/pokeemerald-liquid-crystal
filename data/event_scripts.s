@@ -248,13 +248,12 @@ gStdScripts_End::
 	.include "data/maps/PacifidlogTown_House3/scripts.inc"
 	.include "data/maps/PacifidlogTown_House4/scripts.inc"
 	.include "data/maps/PacifidlogTown_House5/scripts.inc"
-	.include "data/maps/PetalburgCity_WallysHouse/scripts.inc"
-	.include "data/maps/PetalburgCity_Gym/scripts.inc"
-	.include "data/maps/PetalburgCity_House1/scripts.inc"
-	.include "data/maps/PetalburgCity_House2/scripts.inc"
-	.include "data/maps/PetalburgCity_PokemonCenter_1F/scripts.inc"
-	.include "data/maps/PetalburgCity_PokemonCenter_2F/scripts.inc"
-	.include "data/maps/PetalburgCity_Mart/scripts.inc"
+	.include "data/maps/VioletCity_EarlsPokemonAcademy/scripts.inc"
+	.include "data/maps/VioletCity_Gym/scripts.inc"
+	.include "data/maps/VioletCity_House1/scripts.inc"
+	.include "data/maps/VioletCity_House2/scripts.inc"
+	.include "data/maps/VioletCity_PokemonCenter/scripts.inc"
+	.include "data/maps/VioletCity_Mart/scripts.inc"
 	.include "data/maps/SlateportCity_SternsShipyard_1F/scripts.inc"
 	.include "data/maps/SlateportCity_SternsShipyard_2F/scripts.inc"
 	.include "data/maps/SlateportCity_BattleTentLobby/scripts.inc"
@@ -386,9 +385,9 @@ gStdScripts_End::
 	.include "data/maps/DarkCave_BlackthornCitySide/scripts.inc"
 	.include "data/maps/DarkCave_DeepSection/scripts.inc"
 	.include "data/maps/DarkCave_InnerSection/scripts.inc"
-	.include "data/maps/RusturfTunnel/scripts.inc"
-	.include "data/maps/Underwater_SootopolisCity/scripts.inc"
-	.include "data/maps/DesertRuins/scripts.inc"
+	.include "data/maps/SproutTower_1F/scripts.inc"
+	.include "data/maps/SproutTower_2F/scripts.inc"
+	.include "data/maps/SproutTower_3F/scripts.inc"
 	.include "data/maps/GraniteCave_1F/scripts.inc"
 	.include "data/maps/GraniteCave_B1F/scripts.inc"
 	.include "data/maps/GraniteCave_B2F/scripts.inc"
@@ -895,8 +894,6 @@ EventScript_HideMrBriney::
 	return
 
 RusturfTunnel_EventScript_SetRusturfTunnelOpen::
-	removeobject LOCALID_RUSTURF_TUNNEL_WANDAS_BF
-	removeobject LOCALID_RUSTURF_TUNNEL_WANDA
 	clearflag FLAG_HIDE_VERDANTURF_TOWN_WANDAS_HOUSE_WANDAS_BOYFRIEND
 	clearflag FLAG_HIDE_VERDANTURF_TOWN_WANDAS_HOUSE_WANDA
 	setvar VAR_RUSTURF_TUNNEL_STATE, 6

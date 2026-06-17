@@ -1097,6 +1097,50 @@ const struct Tileset gTileset__dark_cave_lc =
     .callback = NULL,
 };
 
+const struct Tileset gTileset__violet_academy_lc =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_violet_academy_lc,
+    .palettes = gTilesetPalettes_violet_academy_lc,
+    .metatiles = gMetatiles_violet_academy_lc,
+    .metatileAttributes = gMetatileAttributes_violet_academy_lc,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset__violet_gym_lc =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_violet_gym_lc,
+    .palettes = gTilesetPalettes_violet_gym_lc,
+    .metatiles = gMetatiles_violet_gym_lc,
+    .metatileAttributes = gMetatileAttributes_violet_gym_lc,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset__house2_lc =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_house2_lc,
+    .palettes = gTilesetPalettes_house2_lc,
+    .metatiles = gMetatiles_house2_lc,
+    .metatileAttributes = gMetatileAttributes_house2_lc,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset__sprout_tower_lc =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_sprout_tower_lc,
+    .palettes = gTilesetPalettes_sprout_tower_lc,
+    .metatiles = gMetatiles_sprout_tower_lc,
+    .metatileAttributes = gMetatileAttributes_sprout_tower_lc,
+    .callback = NULL,
+};
+
 #else
 
 // FRLG tilesets

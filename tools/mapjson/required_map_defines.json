@@ -417,31 +417,27 @@
             112
         ],
         [
-            "MAP_PETALBURG_CITY_WALLYS_HOUSE",
+            "MAP_VIOLET_CITY_EARLS_POKEMON_ACADEMY",
             112
         ],
         [
-            "MAP_PETALBURG_CITY_GYM",
+            "MAP_VIOLET_CITY_GYM",
             112
         ],
         [
-            "MAP_PETALBURG_CITY_HOUSE1",
+            "MAP_VIOLET_CITY_HOUSE1",
             112
         ],
         [
-            "MAP_PETALBURG_CITY_HOUSE2",
+            "MAP_VIOLET_CITY_HOUSE2",
             112
         ],
         [
-            "MAP_PETALBURG_CITY_POKEMON_CENTER_1F",
+            "MAP_VIOLET_CITY_POKEMON_CENTER",
             112
         ],
         [
-            "MAP_PETALBURG_CITY_POKEMON_CENTER_2F",
-            112
-        ],
-        [
-            "MAP_PETALBURG_CITY_MART",
+            "MAP_VIOLET_CITY_MART",
             112
         ],
         [
@@ -973,15 +969,15 @@
             114
         ],
         [
-            "MAP_RUSTURF_TUNNEL",
+            "MAP_SPROUT_TOWER_1F",
             114
         ],
         [
-            "MAP_UNDERWATER_SOOTOPOLIS_CITY",
+            "MAP_SPROUT_TOWER_2F",
             114
         ],
         [
-            "MAP_DESERT_RUINS",
+            "MAP_SPROUT_TOWER_3F",
             114
         ],
         [

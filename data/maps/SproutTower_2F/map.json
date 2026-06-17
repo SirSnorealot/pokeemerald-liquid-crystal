@@ -1,0 +1,101 @@
+{
+  "id": "MAP_SPROUT_TOWER_2F",
+  "name": "SproutTower_2F",
+  "layout": "LAYOUT_SPROUT_TOWER_2F",
+  "music": "MUS_RG_CINNABAR",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": false,
+  "allow_escaping": true,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [],
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "189",
+      "x": 11,
+      "y": 2,
+      "elevation": 0,
+      "movement_type": "1",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "1",
+      "trainer_sight_or_berry_tree_id": "5",
+      "script": "SPROUT_TOWER_2_12_Script_00805839",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "92",
+      "x": 1,
+      "y": 1,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SPROUT_TOWER_2_12_Script_0080561C",
+      "flag": "4167"
+    },
+    {
+      "type": "object",
+      "graphics_id": "189",
+      "x": 8,
+      "y": 13,
+      "elevation": 0,
+      "movement_type": "9",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "1",
+      "trainer_sight_or_berry_tree_id": "6",
+      "script": "SPROUT_TOWER_2_12_Script_00805577",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 9,
+      "y": 13,
+      "elevation": 3,
+      "dest_warp_id": "0",
+      "dest_map": "MAP_SPROUT_TOWER_3F"
+    },
+    {
+      "x": 1,
+      "y": 5,
+      "elevation": 0,
+      "dest_warp_id": "1",
+      "dest_map": "MAP_SPROUT_TOWER_1F"
+    },
+    {
+      "x": 5,
+      "y": 3,
+      "elevation": 3,
+      "dest_warp_id": "2",
+      "dest_map": "MAP_SPROUT_TOWER_1F"
+    },
+    {
+      "x": 17,
+      "y": 3,
+      "elevation": 0,
+      "dest_warp_id": "3",
+      "dest_map": "MAP_SPROUT_TOWER_1F"
+    }
+  ],
+  "coord_events": [],
+  "bg_events": [
+    {
+      "x": 11,
+      "y": 14,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "SPROUT_TOWER_2_12_Script_0016779B"
+    }
+  ]
+}

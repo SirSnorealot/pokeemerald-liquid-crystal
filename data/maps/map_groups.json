@@ -127,13 +127,12 @@
     "CherrygroveCity_House2"
   ],
   "gMapGroup_IndoorVioletCity": [
-    "PetalburgCity_WallysHouse",
-    "PetalburgCity_Gym",
-    "PetalburgCity_House1",
-    "PetalburgCity_House2",
-    "PetalburgCity_PokemonCenter_1F",
-    "PetalburgCity_PokemonCenter_2F",
-    "PetalburgCity_Mart"
+    "VioletCity_Gym",
+    "VioletCity_House1",
+    "VioletCity_Mart",
+    "VioletCity_EarlsPokemonAcademy",
+    "VioletCity_PokemonCenter",
+    "VioletCity_House2"
   ],
   "gMapGroup_IndoorAzaleaTown": [
     "SlateportCity_SternsShipyard_1F",
@@ -380,9 +379,9 @@
     "DarkCave_BlackthornCitySide",
     "DarkCave_DeepSection",
     "DarkCave_InnerSection",
-    "RusturfTunnel",
-    "Underwater_SootopolisCity",
-    "DesertRuins",
+    "SproutTower_1F",
+    "SproutTower_2F",
+    "SproutTower_3F",
     "GraniteCave_1F",
     "GraniteCave_B1F",
     "GraniteCave_B2F",
