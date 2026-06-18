@@ -111,14 +111,19 @@ Maps every project layout that was imported from the LC export to its source fol
 | LAYOUT_NEW_BARK_TOWN_HOUSE1               | _NewBarkTown_House1                  | C0B8C8         |
 | LAYOUT_NEW_BARK_TOWN_HOUSE2               | _NewBarkTown_House2                  | 79B08C         |
 | LAYOUT_ROUTE30_HOUSE1                     | _Route30_House1                      | 77AC44         |
-| LAYOUT_HOUSE2_LC                     | _House2_LC                      | 788364         |
+| LAYOUT_HOUSE2_LC                          | _House2_LC                           | 788364         |
 | LAYOUT_POKEMON_CENTER_LC                  | _PokemonCenter_LC                    | 7D5E90         |
-| LAYOUT_MART_LC                          | _Mart_LC                           | 7736A4         |
-| LAYOUT_HOUSE1_LC                          | _House1_LC                          | 7A26D0         |
-| LAYOUT_VIOLET_CITY_GYM                    | _VioletCity_Gym                     | 2D7504         |
-| LAYOUT_VIOLET_CITY_EARLS_POKEMON_ACADEMY  | _VioletCity_EarlsPokemonAcademy     | 2D7418         |
-
----
+| LAYOUT_MART_LC                            | _Mart_LC                             | 7736A4         |
+| LAYOUT_HOUSE1_LC                          | _House1_LC                           | 7A26D0         |
+| LAYOUT_VIOLET_CITY_GYM                    | _VioletCity_Gym                      | 2D7504         |
+| LAYOUT_VIOLET_CITY_EARLS_POKEMON_ACADEMY  | _VioletCity_EarlsPokemonAcademy      | 2D7418         |
+| LAYOUT_ROUTE32_RUINS_OF_ALPH_GATE         | _Route32_RuinsOfAlphGate             | 2D657C         |
+| LAYOUT_ROUTE34_POKEMON_DAY_CARE           | _Route34_PokemonDayCare              | 773064         |
+| LAYOUT_AZALEA_TOWN_KURTS_HOUSE            | _AzaleaTown_KurtsHouse               | 8FE49C         |
+| LAYOUT_AZALEA_TOWN_ILEX_FOREST_GATE       | _AzaleaTown_IlexForestGate           | 343DD8         |
+| LAYOUT_AZALEA_TOWN_GYM                    | _AzaleaTown_Gym                      | 99DED4         |
+| LAYOUT_RUINS_OF_ALPH_RESEARCH_CENTER      | _RuinsOfAlph_ResearchCenter          | 345938         |
+| LAYOUT_RUINS_OF_ALPH_INNER_CHAMBER        | _RuinsOfAlph_InnerChamber            | 7F7C78         |
 
 ## Dungeon Layouts
 
@@ -131,3 +136,12 @@ Maps every project layout that was imported from the LC export to its source fol
 | LAYOUT_SPROUT_TOWER_1F                    | _SproutTower_1F                      | 7FAB18         |
 | LAYOUT_SPROUT_TOWER_2F                    | _SproutTower_2F                      | 3454D8         |
 | LAYOUT_SPROUT_TOWER_3F                    | _SproutTower_3F                      | 3455F0         |
+| LAYOUT_ILEX_FOREST                        | _IlexForest                          | A3F6EC         |
+| LAYOUT_UNION_CAVE_1F                      | _UnionCave_1F                        | 93E6EC         |
+| LAYOUT_UNION_CAVE_B1F                     | _UnionCave_B1F                       | 96C03C         |
+| LAYOUT_UNION_CAVE_B2F                     | _UnionCave_B2F                       | A5D6AC         |
+| LAYOUT_SLOWPOKE_WELL_1F                   | _SlowpokeWell_1F                     | 8F8C00         |
+| LAYOUT_SLOWPOKE_WELL_B1F                  | _SlowpokeWell_B1F                    | A2E110         |
+| LAYOUT_RUINS_OF_ALPH_CHAMBER_A            | _RuinsOfAlph_ChamberA                | 789344         |
+| LAYOUT_RUINS_OF_ALPH_PUZZLE_ROOM          | _RuinsOfAlph_PuzzleRoom              | 9CFFB4         |
+| LAYOUT_RUINS_OF_ALPH_CHAMBER              | _RuinsOfAlph_Chamber                 | 345820         |

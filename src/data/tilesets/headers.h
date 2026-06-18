@@ -1141,6 +1141,50 @@ const struct Tileset gTileset__sprout_tower_lc =
     .callback = NULL,
 };
 
+const struct Tileset gTileset__azalea_gym_lc =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_azalea_gym_lc,
+    .palettes = gTilesetPalettes_azalea_gym_lc,
+    .metatiles = gMetatiles_azalea_gym_lc,
+    .metatileAttributes = gMetatileAttributes_azalea_gym_lc,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset__slowpoke_well_lc =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_slowpoke_well_lc,
+    .palettes = gTilesetPalettes_slowpoke_well_lc,
+    .metatiles = gMetatiles_slowpoke_well_lc,
+    .metatileAttributes = gMetatileAttributes_slowpoke_well_lc,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset__ruins_of_alph_lc =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_ruins_of_alph_lc,
+    .palettes = gTilesetPalettes_ruins_of_alph_lc,
+    .metatiles = gMetatiles_ruins_of_alph_lc,
+    .metatileAttributes = gMetatileAttributes_ruins_of_alph_lc,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset__ruins_of_alph_puzzle_lc =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_ruins_of_alph_puzzle_lc,
+    .palettes = gTilesetPalettes_ruins_of_alph_puzzle_lc,
+    .metatiles = gMetatiles_ruins_of_alph_puzzle_lc,
+    .metatileAttributes = gMetatileAttributes_ruins_of_alph_puzzle_lc,
+    .callback = NULL,
+};
+
 #else
 
 // FRLG tilesets

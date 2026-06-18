@@ -416,28 +416,28 @@
       "x": 17,
       "y": 36,
       "elevation": 0,
-      "dest_map": "MAP_MT_CHIMNEY_CABLE_CAR_STATION",
+      "dest_map": "MAP_ROUTE36_RUINS_OF_ALPH_GATE",
       "dest_warp_id": "0"
     },
     {
       "x": 18,
       "y": 36,
       "elevation": 0,
-      "dest_map": "MAP_MT_CHIMNEY_CABLE_CAR_STATION",
+      "dest_map": "MAP_ROUTE36_RUINS_OF_ALPH_GATE",
       "dest_warp_id": "1"
     },
     {
       "x": 20,
       "y": 41,
       "elevation": 3,
-      "dest_map": "MAP_JAGGED_PASS",
+      "dest_map": "MAP_SLOWPOKE_WELL_1_F",
       "dest_warp_id": "2"
     },
     {
       "x": 21,
       "y": 41,
       "elevation": 3,
-      "dest_map": "MAP_JAGGED_PASS",
+      "dest_map": "MAP_SLOWPOKE_WELL_1_F",
       "dest_warp_id": "3"
     }
   ],

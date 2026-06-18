@@ -8293,7 +8293,7 @@
           }
         },
         {
-          "map": "MAP_PETALBURG_WOODS",
+          "map": "MAP_ILEX_FOREST",
           "base_label": "gPetalburgWoods_Morning",
           "land_mons": {
             "encounter_rate": 20,
@@ -8362,7 +8362,7 @@
           }
         },
         {
-          "map": "MAP_PETALBURG_WOODS",
+          "map": "MAP_ILEX_FOREST",
           "base_label": "gPetalburgWoods_Day",
           "land_mons": {
             "encounter_rate": 20,
@@ -8431,7 +8431,7 @@
           }
         },
         {
-          "map": "MAP_PETALBURG_WOODS",
+          "map": "MAP_ILEX_FOREST",
           "base_label": "gPetalburgWoods_Evening",
           "land_mons": {
             "encounter_rate": 20,
@@ -8500,7 +8500,7 @@
           }
         },
         {
-          "map": "MAP_PETALBURG_WOODS",
+          "map": "MAP_ILEX_FOREST",
           "base_label": "gPetalburgWoods_Night",
           "land_mons": {
             "encounter_rate": 20,
@@ -8845,7 +8845,7 @@
           }
         },
         {
-          "map": "MAP_GRANITE_CAVE_1F",
+          "map": "MAP_UNION_CAVE_1_F",
           "base_label": "gGraniteCave_1F_Morning",
           "land_mons": {
             "encounter_rate": 10,
@@ -8914,7 +8914,7 @@
           }
         },
         {
-          "map": "MAP_GRANITE_CAVE_1F",
+          "map": "MAP_UNION_CAVE_1_F",
           "base_label": "gGraniteCave_1F_Day",
           "land_mons": {
             "encounter_rate": 10,
@@ -8983,7 +8983,7 @@
           }
         },
         {
-          "map": "MAP_GRANITE_CAVE_1F",
+          "map": "MAP_UNION_CAVE_1_F",
           "base_label": "gGraniteCave_1F_Evening",
           "land_mons": {
             "encounter_rate": 10,
@@ -9052,7 +9052,7 @@
           }
         },
         {
-          "map": "MAP_GRANITE_CAVE_1F",
+          "map": "MAP_UNION_CAVE_1_F",
           "base_label": "gGraniteCave_1F_Night",
           "land_mons": {
             "encounter_rate": 10,
@@ -9121,7 +9121,7 @@
           }
         },
         {
-          "map": "MAP_GRANITE_CAVE_B1F",
+          "map": "MAP_UNION_CAVE_B1_F",
           "base_label": "gGraniteCave_B1F_Morning",
           "land_mons": {
             "encounter_rate": 10,
@@ -9190,7 +9190,7 @@
           }
         },
         {
-          "map": "MAP_GRANITE_CAVE_B1F",
+          "map": "MAP_UNION_CAVE_B1_F",
           "base_label": "gGraniteCave_B1F_Day",
           "land_mons": {
             "encounter_rate": 10,
@@ -9259,7 +9259,7 @@
           }
         },
         {
-          "map": "MAP_GRANITE_CAVE_B1F",
+          "map": "MAP_UNION_CAVE_B1_F",
           "base_label": "gGraniteCave_B1F_Evening",
           "land_mons": {
             "encounter_rate": 10,
@@ -9328,7 +9328,7 @@
           }
         },
         {
-          "map": "MAP_GRANITE_CAVE_B1F",
+          "map": "MAP_UNION_CAVE_B1_F",
           "base_label": "gGraniteCave_B1F_Night",
           "land_mons": {
             "encounter_rate": 10,
@@ -9397,7 +9397,7 @@
           }
         },
         {
-          "map": "MAP_MT_PYRE_1F",
+          "map": "MAP_RUINS_OF_ALPH_CHAMBER_A",
           "base_label": "gMtPyre_1F_Morning",
           "land_mons": {
             "encounter_rate": 10,
@@ -9466,7 +9466,7 @@
           }
         },
         {
-          "map": "MAP_MT_PYRE_1F",
+          "map": "MAP_RUINS_OF_ALPH_CHAMBER_A",
           "base_label": "gMtPyre_1F_Day",
           "land_mons": {
             "encounter_rate": 10,
@@ -9535,7 +9535,7 @@
           }
         },
         {
-          "map": "MAP_MT_PYRE_1F",
+          "map": "MAP_RUINS_OF_ALPH_CHAMBER_A",
           "base_label": "gMtPyre_1F_Evening",
           "land_mons": {
             "encounter_rate": 10,
@@ -9604,7 +9604,7 @@
           }
         },
         {
-          "map": "MAP_MT_PYRE_1F",
+          "map": "MAP_RUINS_OF_ALPH_CHAMBER_A",
           "base_label": "gMtPyre_1F_Night",
           "land_mons": {
             "encounter_rate": 10,
@@ -11269,7 +11269,7 @@
           }
         },
         {
-          "map": "MAP_GRANITE_CAVE_B2F",
+          "map": "MAP_UNION_CAVE_B2_F",
           "base_label": "gGraniteCave_B2F_Morning",
           "land_mons": {
             "encounter_rate": 10,
@@ -11368,7 +11368,7 @@
           }
         },
         {
-          "map": "MAP_GRANITE_CAVE_B2F",
+          "map": "MAP_UNION_CAVE_B2_F",
           "base_label": "gGraniteCave_B2F_Day",
           "land_mons": {
             "encounter_rate": 10,
@@ -11467,7 +11467,7 @@
           }
         },
         {
-          "map": "MAP_GRANITE_CAVE_B2F",
+          "map": "MAP_UNION_CAVE_B2_F",
           "base_label": "gGraniteCave_B2F_Evening",
           "land_mons": {
             "encounter_rate": 10,
@@ -11566,7 +11566,7 @@
           }
         },
         {
-          "map": "MAP_GRANITE_CAVE_B2F",
+          "map": "MAP_UNION_CAVE_B2_F",
           "base_label": "gGraniteCave_B2F_Night",
           "land_mons": {
             "encounter_rate": 10,
@@ -11665,7 +11665,7 @@
           }
         },
         {
-          "map": "MAP_FIERY_PATH",
+          "map": "MAP_SLOWPOKE_WELL_B1_F",
           "base_label": "gFieryPath_Morning",
           "land_mons": {
             "encounter_rate": 10,
@@ -11734,7 +11734,7 @@
           }
         },
         {
-          "map": "MAP_FIERY_PATH",
+          "map": "MAP_SLOWPOKE_WELL_B1_F",
           "base_label": "gFieryPath_Day",
           "land_mons": {
             "encounter_rate": 10,
@@ -11803,7 +11803,7 @@
           }
         },
         {
-          "map": "MAP_FIERY_PATH",
+          "map": "MAP_SLOWPOKE_WELL_B1_F",
           "base_label": "gFieryPath_Evening",
           "land_mons": {
             "encounter_rate": 10,
@@ -11872,7 +11872,7 @@
           }
         },
         {
-          "map": "MAP_FIERY_PATH",
+          "map": "MAP_SLOWPOKE_WELL_B1_F",
           "base_label": "gFieryPath_Night",
           "land_mons": {
             "encounter_rate": 10,
@@ -12557,7 +12557,7 @@
           }
         },
         {
-          "map": "MAP_JAGGED_PASS",
+          "map": "MAP_SLOWPOKE_WELL_1_F",
           "base_label": "gJaggedPass_Morning",
           "land_mons": {
             "encounter_rate": 20,
@@ -12626,7 +12626,7 @@
           }
         },
         {
-          "map": "MAP_JAGGED_PASS",
+          "map": "MAP_SLOWPOKE_WELL_1_F",
           "base_label": "gJaggedPass_Day",
           "land_mons": {
             "encounter_rate": 20,
@@ -12695,7 +12695,7 @@
           }
         },
         {
-          "map": "MAP_JAGGED_PASS",
+          "map": "MAP_SLOWPOKE_WELL_1_F",
           "base_label": "gJaggedPass_Evening",
           "land_mons": {
             "encounter_rate": 20,
@@ -12764,7 +12764,7 @@
           }
         },
         {
-          "map": "MAP_JAGGED_PASS",
+          "map": "MAP_SLOWPOKE_WELL_1_F",
           "base_label": "gJaggedPass_Night",
           "land_mons": {
             "encounter_rate": 20,
@@ -21409,7 +21409,7 @@
           }
         },
         {
-          "map": "MAP_MT_PYRE_2F",
+          "map": "MAP_RUINS_OF_ALPH_RESEARCH_CENTER",
           "base_label": "gMtPyre_2F_Morning",
           "land_mons": {
             "encounter_rate": 10,
@@ -21478,7 +21478,7 @@
           }
         },
         {
-          "map": "MAP_MT_PYRE_2F",
+          "map": "MAP_RUINS_OF_ALPH_RESEARCH_CENTER",
           "base_label": "gMtPyre_2F_Day",
           "land_mons": {
             "encounter_rate": 10,
@@ -21547,7 +21547,7 @@
           }
         },
         {
-          "map": "MAP_MT_PYRE_2F",
+          "map": "MAP_RUINS_OF_ALPH_RESEARCH_CENTER",
           "base_label": "gMtPyre_2F_Evening",
           "land_mons": {
             "encounter_rate": 10,
@@ -21616,7 +21616,7 @@
           }
         },
         {
-          "map": "MAP_MT_PYRE_2F",
+          "map": "MAP_RUINS_OF_ALPH_RESEARCH_CENTER",
           "base_label": "gMtPyre_2F_Night",
           "land_mons": {
             "encounter_rate": 10,
@@ -21685,7 +21685,7 @@
           }
         },
         {
-          "map": "MAP_MT_PYRE_3F",
+          "map": "MAP_RUINS_OF_ALPH_PUZZLE_ROOM_A",
           "base_label": "gMtPyre_3F_Morning",
           "land_mons": {
             "encounter_rate": 10,
@@ -21754,7 +21754,7 @@
           }
         },
         {
-          "map": "MAP_MT_PYRE_3F",
+          "map": "MAP_RUINS_OF_ALPH_PUZZLE_ROOM_A",
           "base_label": "gMtPyre_3F_Day",
           "land_mons": {
             "encounter_rate": 10,
@@ -21823,7 +21823,7 @@
           }
         },
         {
-          "map": "MAP_MT_PYRE_3F",
+          "map": "MAP_RUINS_OF_ALPH_PUZZLE_ROOM_A",
           "base_label": "gMtPyre_3F_Evening",
           "land_mons": {
             "encounter_rate": 10,
@@ -21892,7 +21892,7 @@
           }
         },
         {
-          "map": "MAP_MT_PYRE_3F",
+          "map": "MAP_RUINS_OF_ALPH_PUZZLE_ROOM_A",
           "base_label": "gMtPyre_3F_Night",
           "land_mons": {
             "encounter_rate": 10,
@@ -21961,7 +21961,7 @@
           }
         },
         {
-          "map": "MAP_MT_PYRE_4F",
+          "map": "MAP_RUINS_OF_ALPH_CHAMBER_B",
           "base_label": "gMtPyre_4F_Morning",
           "land_mons": {
             "encounter_rate": 10,
@@ -22030,7 +22030,7 @@
           }
         },
         {
-          "map": "MAP_MT_PYRE_4F",
+          "map": "MAP_RUINS_OF_ALPH_CHAMBER_B",
           "base_label": "gMtPyre_4F_Day",
           "land_mons": {
             "encounter_rate": 10,
@@ -22099,7 +22099,7 @@
           }
         },
         {
-          "map": "MAP_MT_PYRE_4F",
+          "map": "MAP_RUINS_OF_ALPH_CHAMBER_B",
           "base_label": "gMtPyre_4F_Evening",
           "land_mons": {
             "encounter_rate": 10,
@@ -22168,7 +22168,7 @@
           }
         },
         {
-          "map": "MAP_MT_PYRE_4F",
+          "map": "MAP_RUINS_OF_ALPH_CHAMBER_B",
           "base_label": "gMtPyre_4F_Night",
           "land_mons": {
             "encounter_rate": 10,
@@ -22237,7 +22237,7 @@
           }
         },
         {
-          "map": "MAP_MT_PYRE_5F",
+          "map": "MAP_RUINS_OF_ALPH_CHAMBER_C",
           "base_label": "gMtPyre_5F_Morning",
           "land_mons": {
             "encounter_rate": 10,
@@ -22306,7 +22306,7 @@
           }
         },
         {
-          "map": "MAP_MT_PYRE_5F",
+          "map": "MAP_RUINS_OF_ALPH_CHAMBER_C",
           "base_label": "gMtPyre_5F_Day",
           "land_mons": {
             "encounter_rate": 10,
@@ -22375,7 +22375,7 @@
           }
         },
         {
-          "map": "MAP_MT_PYRE_5F",
+          "map": "MAP_RUINS_OF_ALPH_CHAMBER_C",
           "base_label": "gMtPyre_5F_Evening",
           "land_mons": {
             "encounter_rate": 10,
@@ -22444,7 +22444,7 @@
           }
         },
         {
-          "map": "MAP_MT_PYRE_5F",
+          "map": "MAP_RUINS_OF_ALPH_CHAMBER_C",
           "base_label": "gMtPyre_5F_Night",
           "land_mons": {
             "encounter_rate": 10,
@@ -22513,7 +22513,7 @@
           }
         },
         {
-          "map": "MAP_MT_PYRE_6F",
+          "map": "MAP_RUINS_OF_ALPH_CHAMBER_D",
           "base_label": "gMtPyre_6F_Morning",
           "land_mons": {
             "encounter_rate": 10,
@@ -22582,7 +22582,7 @@
           }
         },
         {
-          "map": "MAP_MT_PYRE_6F",
+          "map": "MAP_RUINS_OF_ALPH_CHAMBER_D",
           "base_label": "gMtPyre_6F_Day",
           "land_mons": {
             "encounter_rate": 10,
@@ -22651,7 +22651,7 @@
           }
         },
         {
-          "map": "MAP_MT_PYRE_6F",
+          "map": "MAP_RUINS_OF_ALPH_CHAMBER_D",
           "base_label": "gMtPyre_6F_Evening",
           "land_mons": {
             "encounter_rate": 10,
@@ -22720,7 +22720,7 @@
           }
         },
         {
-          "map": "MAP_MT_PYRE_6F",
+          "map": "MAP_RUINS_OF_ALPH_CHAMBER_D",
           "base_label": "gMtPyre_6F_Night",
           "land_mons": {
             "encounter_rate": 10,
@@ -22789,7 +22789,7 @@
           }
         },
         {
-          "map": "MAP_MT_PYRE_EXTERIOR",
+          "map": "MAP_RUINS_OF_ALPH_INNER_CHAMBER",
           "base_label": "gMtPyre_Exterior_Morning",
           "land_mons": {
             "encounter_rate": 10,
@@ -22858,7 +22858,7 @@
           }
         },
         {
-          "map": "MAP_MT_PYRE_EXTERIOR",
+          "map": "MAP_RUINS_OF_ALPH_INNER_CHAMBER",
           "base_label": "gMtPyre_Exterior_Day",
           "land_mons": {
             "encounter_rate": 10,
@@ -22927,7 +22927,7 @@
           }
         },
         {
-          "map": "MAP_MT_PYRE_EXTERIOR",
+          "map": "MAP_RUINS_OF_ALPH_INNER_CHAMBER",
           "base_label": "gMtPyre_Exterior_Evening",
           "land_mons": {
             "encounter_rate": 10,
@@ -22996,7 +22996,7 @@
           }
         },
         {
-          "map": "MAP_MT_PYRE_EXTERIOR",
+          "map": "MAP_RUINS_OF_ALPH_INNER_CHAMBER",
           "base_label": "gMtPyre_Exterior_Night",
           "land_mons": {
             "encounter_rate": 10,
@@ -23065,7 +23065,7 @@
           }
         },
         {
-          "map": "MAP_MT_PYRE_SUMMIT",
+          "map": "MAP_RUINS_OF_ALPH_PUZZLE_ROOM_B",
           "base_label": "gMtPyre_Summit_Morning",
           "land_mons": {
             "encounter_rate": 10,
@@ -23134,7 +23134,7 @@
           }
         },
         {
-          "map": "MAP_MT_PYRE_SUMMIT",
+          "map": "MAP_RUINS_OF_ALPH_PUZZLE_ROOM_B",
           "base_label": "gMtPyre_Summit_Day",
           "land_mons": {
             "encounter_rate": 10,
@@ -23203,7 +23203,7 @@
           }
         },
         {
-          "map": "MAP_MT_PYRE_SUMMIT",
+          "map": "MAP_RUINS_OF_ALPH_PUZZLE_ROOM_B",
           "base_label": "gMtPyre_Summit_Evening",
           "land_mons": {
             "encounter_rate": 10,
@@ -23272,7 +23272,7 @@
           }
         },
         {
-          "map": "MAP_MT_PYRE_SUMMIT",
+          "map": "MAP_RUINS_OF_ALPH_PUZZLE_ROOM_B",
           "base_label": "gMtPyre_Summit_Night",
           "land_mons": {
             "encounter_rate": 10,

@@ -126,7 +126,7 @@ const struct FollowerMsgInfoExtended gFollowerConditionalMessages[COND_MSG_COUNT
         .emotion = FOLLOWER_EMOTION_NEUTRAL,
         .conditions =
         {
-            MATCH_MAP(MAP_ROUTE117_POKEMON_DAY_CARE)
+            MATCH_MAP(MAP_ROUTE34_POKEMON_DAY_CARE)
         },
     },
     [COND_MSG_MART] =
@@ -167,8 +167,8 @@ const struct FollowerMsgInfoExtended gFollowerConditionalMessages[COND_MSG_COUNT
         .conditions =
         {
             MATCH_MAP(MAP_NEW_MAUVILLE_INSIDE),
-            MATCH_MAP(MAP_SLATEPORT_CITY_STERNS_SHIPYARD_1F),
-            MATCH_MAP(MAP_SLATEPORT_CITY_STERNS_SHIPYARD_2F),
+            MATCH_MAP(MAP_AZALEA_TOWN_ILEX_FOREST_GATE),
+            MATCH_MAP(MAP_AZALEA_TOWN_ILEX_FOREST_GATE),
         },
     },
     [COND_MSG_SAILING] =

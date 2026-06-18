@@ -287,6 +287,18 @@ const u16 gMetatileAttributes_house2_lc[] = INCBIN_U16("data/tilesets/secondary/
 const u16 gMetatiles_sprout_tower_lc[] = INCBIN_U16("data/tilesets/secondary/_sprout_tower_lc/metatiles.bin");
 const u16 gMetatileAttributes_sprout_tower_lc[] = INCBIN_U16("data/tilesets/secondary/_sprout_tower_lc/metatile_attributes.bin");
 
+const u16 gMetatiles_azalea_gym_lc[] = INCBIN_U16("data/tilesets/secondary/_azalea_gym_lc/metatiles.bin");
+const u16 gMetatileAttributes_azalea_gym_lc[] = INCBIN_U16("data/tilesets/secondary/_azalea_gym_lc/metatile_attributes.bin");
+
+const u16 gMetatiles_slowpoke_well_lc[] = INCBIN_U16("data/tilesets/secondary/_slowpoke_well_lc/metatiles.bin");
+const u16 gMetatileAttributes_slowpoke_well_lc[] = INCBIN_U16("data/tilesets/secondary/_slowpoke_well_lc/metatile_attributes.bin");
+
+const u16 gMetatiles_ruins_of_alph_lc[] = INCBIN_U16("data/tilesets/secondary/_ruins_of_alph_lc/metatiles.bin");
+const u16 gMetatileAttributes_ruins_of_alph_lc[] = INCBIN_U16("data/tilesets/secondary/_ruins_of_alph_lc/metatile_attributes.bin");
+
+const u16 gMetatiles_ruins_of_alph_puzzle_lc[] = INCBIN_U16("data/tilesets/secondary/_ruins_of_alph_puzzle_lc/metatiles.bin");
+const u16 gMetatileAttributes_ruins_of_alph_puzzle_lc[] = INCBIN_U16("data/tilesets/secondary/_ruins_of_alph_puzzle_lc/metatile_attributes.bin");
+
 #else
 
 const u16 gMetatiles_Building_Frlg[] = INCBIN_U16("data/tilesets/primary/building_frlg/metatiles.bin");

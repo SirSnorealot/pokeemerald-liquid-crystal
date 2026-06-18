@@ -33,8 +33,8 @@
       "map": "MAP_AZALEA_TOWN",
       "x": 19,
       "y": 20,
-      "respawn_map": "MAP_SLATEPORT_CITY_POKEMON_CENTER_1F",
-      "respawn_npc": "LOCALID_SLATEPORT_NURSE"
+      "respawn_map": "MAP_AZALEA_TOWN_POKEMON_CENTER",
+      "respawn_npc": "0"
     },
     {
       "id": "HEAL_LOCATION_MAUVILLE_CITY",
@@ -42,7 +42,7 @@
       "x": 22,
       "y": 6,
       "respawn_map": "MAP_MAUVILLE_CITY_POKEMON_CENTER_1F",
-      "respawn_npc": "LOCALID_MAUVILLE_NURSE"
+      "respawn_npc": "0"
     },
     {
       "id": "HEAL_LOCATION_RUSTBORO_CITY",

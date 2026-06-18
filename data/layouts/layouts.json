@@ -1145,28 +1145,6 @@
       "layout_version": "emerald"
     },
     {
-      "id": "LAYOUT_SLATEPORT_CITY_STERNS_SHIPYARD_1F",
-      "name": "SlateportCity_SternsShipyard_1F_Layout",
-      "width": 21,
-      "height": 15,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Facility",
-      "border_filepath": "data/layouts/SlateportCity_SternsShipyard_1F/border.bin",
-      "blockdata_filepath": "data/layouts/SlateportCity_SternsShipyard_1F/map.bin",
-      "layout_version": "emerald"
-    },
-    {
-      "id": "LAYOUT_SLATEPORT_CITY_STERNS_SHIPYARD_2F",
-      "name": "SlateportCity_SternsShipyard_2F_Layout",
-      "width": 17,
-      "height": 15,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Facility",
-      "border_filepath": "data/layouts/SlateportCity_SternsShipyard_2F/border.bin",
-      "blockdata_filepath": "data/layouts/SlateportCity_SternsShipyard_2F/map.bin",
-      "layout_version": "emerald"
-    },
-    {
       "id": "LAYOUT_UNUSED_CONTEST_ROOM2",
       "name": "UnusedContestRoom2_Layout",
       "width": 1,
@@ -1186,39 +1164,6 @@
       "secondary_tileset": "gTileset_Contest",
       "border_filepath": "data/layouts/UnusedContestRoom3/border.bin",
       "blockdata_filepath": "data/layouts/UnusedContestRoom3/map.bin",
-      "layout_version": "emerald"
-    },
-    {
-      "id": "LAYOUT_SLATEPORT_CITY_POKEMON_FAN_CLUB",
-      "name": "SlateportCity_PokemonFanClub_Layout",
-      "width": 14,
-      "height": 11,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_PokemonFanClub",
-      "border_filepath": "data/layouts/SlateportCity_PokemonFanClub/border.bin",
-      "blockdata_filepath": "data/layouts/SlateportCity_PokemonFanClub/map.bin",
-      "layout_version": "emerald"
-    },
-    {
-      "id": "LAYOUT_SLATEPORT_CITY_OCEANIC_MUSEUM_1F",
-      "name": "SlateportCity_OceanicMuseum_1F_Layout",
-      "width": 20,
-      "height": 9,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_OceanicMuseum",
-      "border_filepath": "data/layouts/SlateportCity_OceanicMuseum_1F/border.bin",
-      "blockdata_filepath": "data/layouts/SlateportCity_OceanicMuseum_1F/map.bin",
-      "layout_version": "emerald"
-    },
-    {
-      "id": "LAYOUT_SLATEPORT_CITY_OCEANIC_MUSEUM_2F",
-      "name": "SlateportCity_OceanicMuseum_2F_Layout",
-      "width": 20,
-      "height": 9,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_OceanicMuseum",
-      "border_filepath": "data/layouts/SlateportCity_OceanicMuseum_2F/border.bin",
-      "blockdata_filepath": "data/layouts/SlateportCity_OceanicMuseum_2F/map.bin",
       "layout_version": "emerald"
     },
     {
@@ -1563,17 +1508,6 @@
       "layout_version": "emerald"
     },
     {
-      "id": "LAYOUT_ROUTE104_PRETTY_PETAL_FLOWER_SHOP",
-      "name": "Route104_PrettyPetalFlowerShop_Layout",
-      "width": 15,
-      "height": 9,
-      "primary_tileset": "gTileset__building_lc",
-      "secondary_tileset": "gTileset__elms_lab_lc",
-      "border_filepath": "data/layouts/Route104_PrettyPetalFlowerShop/border.bin",
-      "blockdata_filepath": "data/layouts/Route104_PrettyPetalFlowerShop/map.bin",
-      "layout_version": "emerald"
-    },
-    {
       "id": "LAYOUT_CABLE_CAR_STATION",
       "name": "CableCarStation_Layout",
       "width": 13,
@@ -1629,14 +1563,14 @@
       "layout_version": "emerald"
     },
     {
-      "id": "LAYOUT_ROUTE117_POKEMON_DAY_CARE",
-      "name": "Route117_PokemonDayCare_Layout",
-      "width": 12,
+      "id": "LAYOUT_ROUTE34_POKEMON_DAY_CARE",
+      "name": "Route34_PokemonDayCare_Layout",
+      "width": 13,
       "height": 9,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_PokemonDayCare",
-      "border_filepath": "data/layouts/Route117_PokemonDayCare/border.bin",
-      "blockdata_filepath": "data/layouts/Route117_PokemonDayCare/map.bin",
+      "primary_tileset": "gTileset__building_lc",
+      "secondary_tileset": "gTileset__azalea_gym_lc",
+      "border_filepath": "data/layouts/_Route34_PokemonDayCare/border.bin",
+      "blockdata_filepath": "data/layouts/_Route34_PokemonDayCare/map.bin",
       "layout_version": "emerald"
     },
     {
@@ -1728,50 +1662,6 @@
       "layout_version": "emerald"
     },
     {
-      "id": "LAYOUT_GRANITE_CAVE_1F",
-      "name": "GraniteCave_1F_Layout",
-      "width": 42,
-      "height": 15,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Cave",
-      "border_filepath": "data/layouts/GraniteCave_1F/border.bin",
-      "blockdata_filepath": "data/layouts/GraniteCave_1F/map.bin",
-      "layout_version": "emerald"
-    },
-    {
-      "id": "LAYOUT_GRANITE_CAVE_B1F",
-      "name": "GraniteCave_B1F_Layout",
-      "width": 32,
-      "height": 26,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Cave",
-      "border_filepath": "data/layouts/GraniteCave_B1F/border.bin",
-      "blockdata_filepath": "data/layouts/GraniteCave_B1F/map.bin",
-      "layout_version": "emerald"
-    },
-    {
-      "id": "LAYOUT_GRANITE_CAVE_B2F",
-      "name": "GraniteCave_B2F_Layout",
-      "width": 32,
-      "height": 26,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Cave",
-      "border_filepath": "data/layouts/GraniteCave_B2F/border.bin",
-      "blockdata_filepath": "data/layouts/GraniteCave_B2F/map.bin",
-      "layout_version": "emerald"
-    },
-    {
-      "id": "LAYOUT_PETALBURG_WOODS",
-      "name": "PetalburgWoods_Layout",
-      "width": 48,
-      "height": 44,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Rustboro",
-      "border_filepath": "data/layouts/PetalburgWoods/border.bin",
-      "blockdata_filepath": "data/layouts/PetalburgWoods/map.bin",
-      "layout_version": "emerald"
-    },
-    {
       "id": "LAYOUT_MT_CHIMNEY",
       "name": "MtChimney_Layout",
       "width": 40,
@@ -1780,72 +1670,6 @@
       "secondary_tileset": "gTileset_Lavaridge",
       "border_filepath": "data/layouts/MtChimney/border.bin",
       "blockdata_filepath": "data/layouts/MtChimney/map.bin",
-      "layout_version": "emerald"
-    },
-    {
-      "id": "LAYOUT_MT_PYRE_1F",
-      "name": "MtPyre_1F_Layout",
-      "width": 22,
-      "height": 19,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Facility",
-      "border_filepath": "data/layouts/MtPyre_1F/border.bin",
-      "blockdata_filepath": "data/layouts/MtPyre_1F/map.bin",
-      "layout_version": "emerald"
-    },
-    {
-      "id": "LAYOUT_MT_PYRE_2F",
-      "name": "MtPyre_2F_Layout",
-      "width": 13,
-      "height": 13,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Facility",
-      "border_filepath": "data/layouts/MtPyre_2F/border.bin",
-      "blockdata_filepath": "data/layouts/MtPyre_2F/map.bin",
-      "layout_version": "emerald"
-    },
-    {
-      "id": "LAYOUT_MT_PYRE_3F",
-      "name": "MtPyre_3F_Layout",
-      "width": 13,
-      "height": 13,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Facility",
-      "border_filepath": "data/layouts/MtPyre_3F/border.bin",
-      "blockdata_filepath": "data/layouts/MtPyre_3F/map.bin",
-      "layout_version": "emerald"
-    },
-    {
-      "id": "LAYOUT_MT_PYRE_4F",
-      "name": "MtPyre_4F_Layout",
-      "width": 13,
-      "height": 13,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Facility",
-      "border_filepath": "data/layouts/MtPyre_4F/border.bin",
-      "blockdata_filepath": "data/layouts/MtPyre_4F/map.bin",
-      "layout_version": "emerald"
-    },
-    {
-      "id": "LAYOUT_MT_PYRE_5F",
-      "name": "MtPyre_5F_Layout",
-      "width": 13,
-      "height": 13,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Facility",
-      "border_filepath": "data/layouts/MtPyre_5F/border.bin",
-      "blockdata_filepath": "data/layouts/MtPyre_5F/map.bin",
-      "layout_version": "emerald"
-    },
-    {
-      "id": "LAYOUT_MT_PYRE_6F",
-      "name": "MtPyre_6F_Layout",
-      "width": 13,
-      "height": 13,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Facility",
-      "border_filepath": "data/layouts/MtPyre_6F/border.bin",
-      "blockdata_filepath": "data/layouts/MtPyre_6F/map.bin",
       "layout_version": "emerald"
     },
     {
@@ -3488,28 +3312,6 @@
       "layout_version": "emerald"
     },
     {
-      "id": "LAYOUT_JAGGED_PASS",
-      "name": "JaggedPass_Layout",
-      "width": 30,
-      "height": 46,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Lavaridge",
-      "border_filepath": "data/layouts/JaggedPass/border.bin",
-      "blockdata_filepath": "data/layouts/JaggedPass/map.bin",
-      "layout_version": "emerald"
-    },
-    {
-      "id": "LAYOUT_FIERY_PATH",
-      "name": "FieryPath_Layout",
-      "width": 35,
-      "height": 38,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Lavaridge",
-      "border_filepath": "data/layouts/FieryPath/border.bin",
-      "blockdata_filepath": "data/layouts/FieryPath/map.bin",
-      "layout_version": "emerald"
-    },
-    {
       "id": "LAYOUT_RUSTBORO_CITY_FLAT2_1F",
       "name": "RustboroCity_Flat2_1F_Layout",
       "width": 14,
@@ -3595,28 +3397,6 @@
       "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/Route124_DivingTreasureHuntersHouse/border.bin",
       "blockdata_filepath": "data/layouts/Route124_DivingTreasureHuntersHouse/map.bin",
-      "layout_version": "emerald"
-    },
-    {
-      "id": "LAYOUT_MT_PYRE_EXTERIOR",
-      "name": "MtPyre_Exterior_Layout",
-      "width": 38,
-      "height": 51,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Facility",
-      "border_filepath": "data/layouts/MtPyre_Exterior/border.bin",
-      "blockdata_filepath": "data/layouts/MtPyre_Exterior/map.bin",
-      "layout_version": "emerald"
-    },
-    {
-      "id": "LAYOUT_MT_PYRE_SUMMIT",
-      "name": "MtPyre_Summit_Layout",
-      "width": 50,
-      "height": 37,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Facility",
-      "border_filepath": "data/layouts/MtPyre_Summit/border.bin",
-      "blockdata_filepath": "data/layouts/MtPyre_Summit/map.bin",
       "layout_version": "emerald"
     },
     {
@@ -5080,6 +4860,171 @@
       "secondary_tileset": "gTileset_MysteryEventsHouse",
       "border_filepath": "data/layouts/SootopolisCity_MysteryEventsHouse_1F_StairsUnblocked/border.bin",
       "blockdata_filepath": "data/layouts/SootopolisCity_MysteryEventsHouse_1F_StairsUnblocked/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_ILEX_FOREST",
+      "name": "IlexForest_Layout",
+      "width": 70,
+      "height": 60,
+      "primary_tileset": "gTileset__general_lc",
+      "secondary_tileset": "gTileset__violet_city_lc",
+      "border_filepath": "data/layouts/_IlexForest/border.bin",
+      "blockdata_filepath": "data/layouts/_IlexForest/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_ROUTE32_RUINS_OF_ALPH_GATE",
+      "name": "Route32_RuinsOfAlphGate_Layout",
+      "width": 27,
+      "height": 23,
+      "primary_tileset": "gTileset__building_lc",
+      "secondary_tileset": "gTileset__route_gate_lc",
+      "border_filepath": "data/layouts/_Route32_RuinsOfAlphGate/border.bin",
+      "blockdata_filepath": "data/layouts/_Route32_RuinsOfAlphGate/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_UNION_CAVE_1F",
+      "name": "UnionCave_1F_Layout",
+      "width": 30,
+      "height": 48,
+      "primary_tileset": "gTileset__general_lc",
+      "secondary_tileset": "gTileset__dark_cave_lc",
+      "border_filepath": "data/layouts/_UnionCave_1F/border.bin",
+      "blockdata_filepath": "data/layouts/_UnionCave_1F/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_UNION_CAVE_B1F",
+      "name": "UnionCave_B1F_Layout",
+      "width": 30,
+      "height": 48,
+      "primary_tileset": "gTileset__general_lc",
+      "secondary_tileset": "gTileset__dark_cave_lc",
+      "border_filepath": "data/layouts/_UnionCave_B1F/border.bin",
+      "blockdata_filepath": "data/layouts/_UnionCave_B1F/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_UNION_CAVE_B2F",
+      "name": "UnionCave_B2F_Layout",
+      "width": 30,
+      "height": 100,
+      "primary_tileset": "gTileset__general_lc",
+      "secondary_tileset": "gTileset__dark_cave_lc",
+      "border_filepath": "data/layouts/_UnionCave_B2F/border.bin",
+      "blockdata_filepath": "data/layouts/_UnionCave_B2F/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_SLOWPOKE_WELL_1F",
+      "name": "SlowpokeWell_1F_Layout",
+      "width": 30,
+      "height": 26,
+      "primary_tileset": "gTileset__general_lc",
+      "secondary_tileset": "gTileset__slowpoke_well_lc",
+      "border_filepath": "data/layouts/_SlowpokeWell_1F/border.bin",
+      "blockdata_filepath": "data/layouts/_SlowpokeWell_1F/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_SLOWPOKE_WELL_B1F",
+      "name": "SlowpokeWell_B1F_Layout",
+      "width": 30,
+      "height": 26,
+      "primary_tileset": "gTileset__general_lc",
+      "secondary_tileset": "gTileset__slowpoke_well_lc",
+      "border_filepath": "data/layouts/_SlowpokeWell_B1F/border.bin",
+      "blockdata_filepath": "data/layouts/_SlowpokeWell_B1F/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_AZALEA_TOWN_KURTS_HOUSE",
+      "name": "AzaleaTown_KurtsHouse_Layout",
+      "width": 30,
+      "height": 24,
+      "primary_tileset": "gTileset__building_lc",
+      "secondary_tileset": "gTileset__house2_lc",
+      "border_filepath": "data/layouts/_AzaleaTown_KurtsHouse/border.bin",
+      "blockdata_filepath": "data/layouts/_AzaleaTown_KurtsHouse/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_AZALEA_TOWN_ILEX_FOREST_GATE",
+      "name": "AzaleaTown_IlexForestGate_Layout",
+      "width": 27,
+      "height": 23,
+      "primary_tileset": "gTileset__building_lc",
+      "secondary_tileset": "gTileset__route_gate_lc",
+      "border_filepath": "data/layouts/_AzaleaTown_IlexForestGate/border.bin",
+      "blockdata_filepath": "data/layouts/_AzaleaTown_IlexForestGate/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_AZALEA_TOWN_GYM",
+      "name": "AzaleaTown_Gym_Layout",
+      "width": 24,
+      "height": 32,
+      "primary_tileset": "gTileset__building_lc",
+      "secondary_tileset": "gTileset__azalea_gym_lc",
+      "border_filepath": "data/layouts/_AzaleaTown_Gym/border.bin",
+      "blockdata_filepath": "data/layouts/_AzaleaTown_Gym/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_RUINS_OF_ALPH_CHAMBER_A",
+      "name": "RuinsOfAlph_ChamberA_Layout",
+      "width": 10,
+      "height": 11,
+      "primary_tileset": "gTileset__building_lc",
+      "secondary_tileset": "gTileset__ruins_of_alph_lc",
+      "border_filepath": "data/layouts/_RuinsOfAlph_ChamberA/border.bin",
+      "blockdata_filepath": "data/layouts/_RuinsOfAlph_ChamberA/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_RUINS_OF_ALPH_RESEARCH_CENTER",
+      "name": "RuinsOfAlph_ResearchCenter_Layout",
+      "width": 10,
+      "height": 9,
+      "primary_tileset": "gTileset__building_lc",
+      "secondary_tileset": "gTileset__elms_lab_lc",
+      "border_filepath": "data/layouts/_RuinsOfAlph_ResearchCenter/border.bin",
+      "blockdata_filepath": "data/layouts/_RuinsOfAlph_ResearchCenter/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_RUINS_OF_ALPH_PUZZLE_ROOM",
+      "name": "RuinsOfAlph_PuzzleRoom_Layout",
+      "width": 21,
+      "height": 30,
+      "primary_tileset": "gTileset__building_lc",
+      "secondary_tileset": "gTileset__ruins_of_alph_lc",
+      "border_filepath": "data/layouts/_RuinsOfAlph_PuzzleRoom/border.bin",
+      "blockdata_filepath": "data/layouts/_RuinsOfAlph_PuzzleRoom/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_RUINS_OF_ALPH_CHAMBER",
+      "name": "RuinsOfAlph_Chamber_Layout",
+      "width": 10,
+      "height": 11,
+      "primary_tileset": "gTileset__building_lc",
+      "secondary_tileset": "gTileset__ruins_of_alph_lc",
+      "border_filepath": "data/layouts/_RuinsOfAlph_Chamber/border.bin",
+      "blockdata_filepath": "data/layouts/_RuinsOfAlph_Chamber/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_RUINS_OF_ALPH_INNER_CHAMBER",
+      "name": "RuinsOfAlph_InnerChamber_Layout",
+      "width": 15,
+      "height": 15,
+      "primary_tileset": "gTileset__building_lc",
+      "secondary_tileset": "gTileset__ruins_of_alph_puzzle_lc",
+      "border_filepath": "data/layouts/_RuinsOfAlph_InnerChamber/border.bin",
+      "blockdata_filepath": "data/layouts/_RuinsOfAlph_InnerChamber/map.bin",
       "layout_version": "emerald"
     },
     {

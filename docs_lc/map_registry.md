@@ -104,20 +104,32 @@ Maps every project map that was imported from the LC export to its source folder
 | Route29_GateHouse               | ROUTE_29_4_2         |
 | Route31_GateHouse               | ROUTE_31_5_2         |
 | VioletCity_Mart                 | VIOLET_CITY_34_3     |
-| VioletCity_PokemonCenter     | VIOLET_CITY_36_0     |
+| VioletCity_PokemonCenter        | VIOLET_CITY_36_0     |
 | VioletCity_House2               | VIOLET_CITY_5_20     |
 | VioletCity_House1               | VIOLET_CITY_5_21     |
 | VioletCity_Gym                  | VIOLET_CITY_34_0     |
 | VioletCity_EarlsPokemonAcademy  | VIOLET_CITY_35_4     |
 | Route30_House1                  | ROUTE_30_5_0         |
 | Route30_House2                  | ROUTE_30_34_12       |
-| CherrygroveCity_PokemonCenter | CHERRYGROVE_CITY_33_2  |
-| CherrygroveCity_Mart            | CHERRYGROVE_CITY_6_3   |
+| CherrygroveCity_PokemonCenter   | CHERRYGROVE_CITY_33_2 |
+| CherrygroveCity_Mart            | CHERRYGROVE_CITY_6_3 |
 | CherrygroveCity_House1          | CHERRYGROVE_CITY_2_100 |
-| CherrygroveCity_GuidesHouse     | CHERRYGROVE_CITY_4_91  |
-| CherrygroveCity_House2          | CHERRYGROVE_CITY_33_1  |
-
----
+| CherrygroveCity_GuidesHouse     | CHERRYGROVE_CITY_4_91 |
+| CherrygroveCity_House2          | CHERRYGROVE_CITY_33_1 |
+| Route32_PokemonCenter           | ROUTE_32_2_90        |
+| Route32_RuinsOfAlphGate         | ROUTE_32_39_0        |
+| Route36_RuinsOfAlphGate         | ROUTE_36_17_1        |
+| Route34_IlexForestGate          | ROUTE_34_1_115       |
+| Route34_PokemonDayCare          | ROUTE_34_5_24        |
+| AzaleaTown_PokemonCenter        | AZALEA_TOWN_34_1     |
+| AzaleaTown_House1               | AZALEA_TOWN_36_3     |
+| AzaleaTown_Mart                 | AZALEA_TOWN_37_4     |
+| AzaleaTown_KurtsHouse           | AZALEA_TOWN_1_102    |
+| AzaleaTown_IlexForestGate       | AZALEA_TOWN_1_120    |
+| AzaleaTown_Gym                  | AZALEA_TOWN_1_124    |
+| RuinsOfAlph_ResearchCenter      | RUINS_OF_ALPH_2_16   |
+| RuinsOfAlph_PuzzleRoomA         | RUINS_OF_ALPH_5_37   |
+| RuinsOfAlph_InnerChamber        | RUINS_OF_ALPH_4_42   |
 
 ## Dungeon Maps
 
@@ -130,3 +142,14 @@ Maps every project map that was imported from the LC export to its source folder
 | SproutTower_1F                  | SPROUT_TOWER_2_99     |
 | SproutTower_2F                  | SPROUT_TOWER_2_12     |
 | SproutTower_3F                  | SPROUT_TOWER_2_13     |
+| IlexForest                      | ILEX_FOREST_1_0       |
+| UnionCave_1F                    | UNION_CAVE_2_27       |
+| UnionCave_B1F                   | UNION_CAVE_2_19       |
+| UnionCave_B2F                   | UNION_CAVE_1_86       |
+| SlowpokeWell_1F                 | SLOWPOKE_WELL_2_101   |
+| SlowpokeWell_B1F                | SLOWPOKE_WELL_2_54    |
+| RuinsOfAlph_ChamberA            | RUINS_OF_ALPH_1_52    |
+| RuinsOfAlph_ChamberB            | RUINS_OF_ALPH_2_15    |
+| RuinsOfAlph_ChamberC            | RUINS_OF_ALPH_2_52    |
+| RuinsOfAlph_ChamberD            | RUINS_OF_ALPH_2_51    |
+| RuinsOfAlph_PuzzleRoomB         | RUINS_OF_ALPH_4_29    |

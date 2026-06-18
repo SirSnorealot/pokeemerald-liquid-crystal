@@ -1,0 +1,35 @@
+{
+  "id": "MAP_ROUTE36_RUINS_OF_ALPH_GATE",
+  "name": "Route36_RuinsOfAlphGate",
+  "layout": "LAYOUT_ROUTE_GATE",
+  "music": "MUS_RG_POKE_MANSION",
+  "region_map_section": "MAPSEC_ROUTE_107",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [],
+  "object_events": [],
+  "warp_events": [
+    {
+      "x": 7,
+      "y": 1,
+      "elevation": 3,
+      "dest_warp_id": "0",
+      "dest_map": "MAP_ROUTE36"
+    },
+    {
+      "x": 7,
+      "y": 10,
+      "elevation": 3,
+      "dest_warp_id": "1",
+      "dest_map": "MAP_RUINS_OF_ALPH"
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}

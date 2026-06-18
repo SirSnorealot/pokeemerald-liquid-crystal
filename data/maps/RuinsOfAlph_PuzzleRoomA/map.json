@@ -1,0 +1,35 @@
+{
+  "id": "MAP_RUINS_OF_ALPH_PUZZLE_ROOM_A",
+  "name": "RuinsOfAlph_PuzzleRoomA",
+  "layout": "LAYOUT_RUINS_OF_ALPH_PUZZLE_ROOM",
+  "music": "MUS_RG_VIRIDIAN_FOREST",
+  "region_map_section": "MAPSEC_LOST_CAVE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": true,
+  "allow_escaping": true,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [],
+  "object_events": [],
+  "warp_events": [
+    {
+      "x": 10,
+      "y": 13,
+      "elevation": 3,
+      "dest_warp_id": "4",
+      "dest_map": "MAP_RUINS_OF_ALPH"
+    },
+    {
+      "x": 15,
+      "y": 3,
+      "elevation": 3,
+      "dest_warp_id": "9",
+      "dest_map": "MAP_RUINS_OF_ALPH"
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}
