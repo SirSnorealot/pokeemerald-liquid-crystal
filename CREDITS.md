@@ -67,6 +67,7 @@ Also thanks to all the hard work put into [pokemerald](https://github.com/pret/p
 
 [PokeMapExport](https://github.com/SirSnorealot/PokeMapExport)
 [porymap](https://github.com/huderlem/porymap)
+[Tilemap Studio](https://github.com/Rangi42/tilemap-studio)
 
 ### Tutorial/Code Used
 
