@@ -1,6 +1,6 @@
 # Pokeemerald Liquid Crystal
 
-The goal of this project is to port the ROM hack [Liquid Crystal](https://www.pokecommunity.com/threads/pok%C3%A9mon-liquid-crystal-3-3-xxxxx-live-beta.242023/) to Pokeemerald. Things will be ported over with the intent of keeping the game exactly the same, however changes will be made where things can be improved. Eventually, when the project is far enough, the goal will become to finish the game's story with the creator's intentions in mind. Newer features like Mega Evolutions will be added later on as long as they can tie in with the story.
+The goal of this project is to port the ROM hack [Liquid Crystal](https://www.pokecommunity.com/threads/pok%C3%A9mon-liquid-crystal-3-3-xxxxx-live-beta.242023/) to Pokeemerald. Things will be ported over with the intent of keeping the game exactly the same, however changes will be made where things can be improved. Eventually, when the project is far enough, the goal will become to finish the game's story with the creators' intentions/Feedback in mind. Newer features like Mega Evolutions will be added later on as long as they can tie in with the story.
 
 This project will be open source and anyone can use anything in this project as long as they give credit.
 
@@ -14,7 +14,7 @@ This project will be open source and anyone can use anything in this project as 
 
 ## Screenshots
 
-> Screenshots will be added eventually.
+![Title Screen](./screenshots/titlescreen.gif)
 
 ## Environment Setup
 
@@ -42,8 +42,8 @@ make release -j$(nproc)
 - [ ] DNS Lights in Windows - Not started.
 - [ ] Headbutt Trees - Not started.
 - [ ] Region Maps - Not started.
-- [ ] Pokegear - Not started.
-- [ ] Port Title Screen - Not started.
+- [ ] Pokegear - Started: SirSnorealot
+- [X] Port Title Screen: SirSnorealot
 - [ ] Intro before Title screen - Not started.
 - [ ] New Game Intro - Not started.
 - [ ] Port OW Sprites - Not started.
@@ -54,6 +54,8 @@ make release -j$(nproc)
 - [ ] Decide how to do and implement berries and apricorns. - Not started.
 - [ ] Port Pokemon Images (Disable animations?) - Not started.
 - [ ] Port Trainer Sprites - Not started.
+- [ ] Port Battle Backgrounds
+- [ ] Port Trainer Back Sprites
 
 
 ## Credits
