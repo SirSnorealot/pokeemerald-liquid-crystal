@@ -1,5 +1,5 @@
 #include "global.h"
-#include "pokenav.h"
+#include "pokegear.h"
 #include "window.h"
 #include "strings.h"
 #include "text.h"

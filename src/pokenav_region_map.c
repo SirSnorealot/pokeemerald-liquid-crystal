@@ -8,7 +8,7 @@
 #include "menu.h"
 #include "overworld.h"
 #include "palette.h"
-#include "pokenav.h"
+#include "pokegear.h"
 #include "region_map.h"
 #include "sound.h"
 #include "sprite.h"

@@ -48,7 +48,7 @@
 #include "battle_pyramid.h"
 #include "field_specials.h"
 #include "pokemon_summary_screen.h"
-#include "pokenav.h"
+#include "pokegear.h"
 #include "menu_specialized.h"
 #include "data.h"
 #include "config_changes.h"

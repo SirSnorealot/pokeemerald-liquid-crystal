@@ -8,7 +8,7 @@
 #include "match_call.h"
 #include "overworld.h"
 #include "pokemon.h"
-#include "pokenav.h"
+#include "pokegear.h"
 #include "sound.h"
 #include "string_util.h"
 #include "strings.h"

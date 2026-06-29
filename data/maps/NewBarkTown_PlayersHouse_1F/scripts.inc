@@ -17,7 +17,7 @@ NewBarkTown_PlayersHouse_Obtain_PokeGear::
 	playfanfare MUS_OBTAIN_ITEM
 	message NewBarkTown_PlayersHouse_Obtain_PokeGear_Text_2
 	waitfanfare
-	setflag FLAG_SYS_POKENAV_GET
+	setflag FLAG_SYS_POKEGEAR_GET
 	msgbox NewBarkTown_PlayersHouse_Obtain_PokeGear_Text_3, MSGBOX_DEFAULT
 	msgbox NewBarkTown_PlayersHouse_Obtain_PokeGear_Text_4, MSGBOX_YESNO
 	compare VAR_RESULT, 0

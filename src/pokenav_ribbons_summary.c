@@ -4,7 +4,7 @@
 #include "graphics.h"
 #include "international_string_util.h"
 #include "palette.h"
-#include "pokenav.h"
+#include "pokegear.h"
 #include "sound.h"
 #include "sprite.h"
 #include "string_util.h"

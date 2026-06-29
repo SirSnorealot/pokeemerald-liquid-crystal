@@ -5,8 +5,6 @@
 #include "main.h"
 #include "pokemon_storage_system.h"
 
-#if IS_FRLG
-
 typedef u32 (*LoopedTask)(s32 state);
 
 struct PokenavMonListItem
@@ -501,7 +499,5 @@ bool32 OpenRibbonsSummaryMenu(void);
 void CreateRibbonsSummaryLoopedTask(s32 id);
 u32 IsRibbonsSummaryLoopedTaskActive(void);
 void FreeRibbonsSummaryScreen2(void);
-
-#endif // !IS_FRLG
 
 #endif // GUARD_POKENAV_H

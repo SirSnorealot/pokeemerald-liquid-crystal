@@ -9,7 +9,7 @@
 #include "mirage_tower.h"
 #include "overworld.h"
 #include "palette.h"
-#include "pokenav.h"
+#include "pokegear.h"
 #include "script.h"
 #include "secret_base.h"
 #include "trainer_hill.h"

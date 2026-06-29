@@ -4,7 +4,7 @@
 #include "main.h"
 #include "menu_specialized.h"
 #include "mon_markings.h"
-#include "pokenav.h"
+#include "pokegear.h"
 #include "pokemon.h"
 #include "pokemon_storage_system.h"
 #include "sound.h"

@@ -8,8 +8,6 @@
 #include "pokemon_storage_system.h"
 #include "pokegear.h"
 
-#if IS_FRLG
-
 #define LOOPED_TASK_DECODE_STATE(action) (action - 5)
 
 #define LOOPED_TASK_ID(primary, secondary) (((secondary) << 16) |(primary))
@@ -590,5 +588,3 @@ bool32 CanViewRibbonsMenu(void)
 {
     return gPokenavResources->hasAnyRibbons;
 }
-
-#endif // !IS_FRLG

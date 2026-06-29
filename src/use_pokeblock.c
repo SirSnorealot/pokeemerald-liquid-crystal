@@ -6,7 +6,7 @@
 #include "decompress.h"
 #include "graphics.h"
 #include "palette.h"
-#include "pokenav.h"
+#include "pokegear.h"
 #include "menu_specialized.h"
 #include "scanline_effect.h"
 #include "text.h"

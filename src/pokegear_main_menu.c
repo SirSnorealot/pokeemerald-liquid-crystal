@@ -13,8 +13,6 @@
 #include "menu.h"
 #include "dma3.h"
 
-#if IS_FRLG
-
 struct Pokenav_MainMenu
 {
     void (*loopTask)(u32);
@@ -842,5 +840,3 @@ static void SpriteCB_MoveLeftHeader(struct Sprite *sprite)
         sprite->callback = SpriteCallbackDummy;
     }
 }
-
-#endif // !IS_FRLG

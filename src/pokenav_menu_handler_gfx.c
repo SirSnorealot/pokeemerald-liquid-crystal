@@ -7,7 +7,7 @@
 #include "gpu_regs.h"
 #include "menu.h"
 #include "window.h"
-#include "pokenav.h"
+#include "pokegear.h"
 #include "graphics.h"
 #include "sound.h"
 #include "gym_leader_rematch.h"
