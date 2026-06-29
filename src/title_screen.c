@@ -37,6 +37,10 @@ enum {
 #define VERSION_BANNER_Y 2
 #define VERSION_BANNER_Y_GOAL 66
 #define START_BANNER_X 128
+#define PRESS_START_BG_SCREENBASE 24
+#define PRESS_START_BG_ROW 16
+#define PRESS_START_BG_COL 5
+#define PRESS_START_BG_WIDTH 12
 
 #define CLEAR_SAVE_BUTTON_COMBO (B_BUTTON | SELECT_BUTTON | DPAD_UP)
 #define RESET_RTC_BUTTON_COMBO (B_BUTTON | SELECT_BUTTON | DPAD_LEFT)
@@ -58,6 +62,7 @@ static void SpriteCB_VersionBannerLeft(struct Sprite *sprite);
 static void SpriteCB_VersionBannerRight(struct Sprite *sprite);
 static void SpriteCB_PressStartCopyrightBanner(struct Sprite *sprite);
 static void SpriteCB_PokemonLogoShine(struct Sprite *sprite);
+static void SetPressStartBgTextVisible(bool8 visible);
 
 // const rom data
 //static const u16 sUnusedUnknownPal[] = INCGFX_U16("graphics/title_screen/unused.pal", ".gbapal");
@@ -555,6 +560,21 @@ static void StartPokemonLogoShine(u8 mode)
 #undef sMode
 #undef sBgColor
 
+static void SetPressStartBgTextVisible(bool8 visible)
+{
+    static const u16 sPressStartTilemapEntries[PRESS_START_BG_WIDTH] =
+    {
+        0x75, 0x76, 0x77, 0x78, 0x79, 0x7A,
+        0x7B, 0x7C, 0x7D, 0x7E, 0x7F, 0x80
+    };
+    u16 *tilemap = (u16 *)BG_SCREEN_ADDR(PRESS_START_BG_SCREENBASE);
+    u16 offset = PRESS_START_BG_ROW * 32 + PRESS_START_BG_COL;
+    u8 i;
+
+    for (i = 0; i < PRESS_START_BG_WIDTH; i++)
+        tilemap[offset + i] = visible ? sPressStartTilemapEntries[i] : 0;
+}
+
 static void VBlankCB(void)
 {
     ScanlineEffect_InitHBlankDmaTransfer();
@@ -826,6 +846,7 @@ static void Task_TitleScreenPhase3(u8 taskId)
         //     gBattle_BG1_X = 0;
         // }
         // UpdateLegendaryMarkingColor(gTasks[taskId].tCounter);
+        SetPressStartBgTextVisible((++gTasks[taskId].tCounter & 64) != 0);
         if ((gMPlayInfo_BGM.status & 0xFFFF) == 0)
         {
             BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_WHITEALPHA);
