@@ -215,8 +215,4 @@ const u16 gMetatiles_crystal_caves_lc[] = INCBIN_U16("data/tilesets/secondary/_c
 const u16 gMetatileAttributes_crystal_caves_lc[] = INCBIN_U16("data/tilesets/secondary/_crystal_caves_lc/metatile_attributes.bin");
 const u16 gMetatiles_nexus_laboratory_lc[] = INCBIN_U16("data/tilesets/secondary/_nexus_laboratory_lc/metatiles.bin");
 const u16 gMetatileAttributes_nexus_laboratory_lc[] = INCBIN_U16("data/tilesets/secondary/_nexus_laboratory_lc/metatile_attributes.bin");
-const u16 gMetatiles_SecretBasePrimary[] = INCBIN_U16("data/tilesets/primary/secret_base/metatiles.bin");
-const u16 gMetatileAttributes_SecretBasePrimary[] = INCBIN_U16("data/tilesets/primary/secret_base/metatile_attributes.bin");
-const u16 gMetatiles_SecretBaseSecondary[] = INCBIN_U16("data/tilesets/secondary/secret_base/metatiles.bin");
-const u16 gMetatileAttributes_SecretBaseSecondary[] = INCBIN_U16("data/tilesets/secondary/secret_base/metatile_attributes.bin");
 #endif // IS_FRLG

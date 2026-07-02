@@ -1953,7 +1953,10 @@ static void ClearPlaceDecorationGraphicsDataBuffer(struct PlaceDecorationGraphic
 
 static void CopyPalette(u16 *dest, u16 pal)
 {
-    CpuFastCopy(&gTilesetPointer_SecretBase->palettes[pal], dest, PLTT_SIZE_4BPP);
+    // TODO(LC): gTilesetPointer_SecretBase was removed with the secret base tileset. Kept here commented out for reference.
+    // CpuFastCopy(&gTilesetPointer_SecretBase->palettes[pal], dest, PLTT_SIZE_4BPP);
+    // Secret base tileset removed (feature unused); this UI is unreachable dead code, zero-fill instead.
+    CpuFill16(0, dest, PLTT_SIZE_4BPP);
 }
 
 static void CopyTile(u8 *dest, u16 tile)
@@ -1966,7 +1969,10 @@ static void CopyTile(u8 *dest, u16 tile)
     if (tile != 0)
         tile &= 0x03FF;
 
-    CpuFastCopy(&gTilesetPointer_SecretBase->tiles[tile * TILE_SIZE_4BPP / sizeof(u32)], buffer, TILE_SIZE_4BPP);
+    // TODO(LC): gTilesetPointer_SecretBase was removed with the secret base tileset. Kept here commented out for reference.
+    // CpuFastCopy(&gTilesetPointer_SecretBase->tiles[tile * TILE_SIZE_4BPP / sizeof(u32)], buffer, TILE_SIZE_4BPP);
+    // Secret base tileset removed (feature unused); this UI is unreachable dead code, zero-fill instead.
+    CpuFill16(0, buffer, TILE_SIZE_4BPP);
     switch (mode)
     {
     case 0:
@@ -2008,7 +2014,10 @@ static void SetDecorSelectionBoxTiles(struct PlaceDecorationGraphicsDataBuffer *
 
 static u16 GetMetatile(u16 tile)
 {
-    return gTilesetPointer_SecretBaseRedCave->metatiles[tile] & 0xFFF;
+    // TODO(LC): gTilesetPointer_SecretBaseRedCave was removed with the secret base tileset. Kept here commented out for reference.
+    // return gTilesetPointer_SecretBaseRedCave->metatiles[tile] & 0xFFF;
+    // Secret base tileset removed (feature unused); this UI is unreachable dead code.
+    return 0;
 }
 
 static void SetDecorSelectionMetatiles(struct PlaceDecorationGraphicsDataBuffer *data)
@@ -2079,7 +2088,10 @@ static u8 gpu_pal_decompress_alloc_tag_and_upload(struct PlaceDecorationGraphics
     SetDecorSelectionMetatiles(data);
     SetDecorSelectionBoxOamAttributes(data->decoration->shape);
     SetDecorSelectionBoxTiles(data);
-    CopyPalette(data->palette, gTilesetPointer_SecretBaseRedCave->metatiles[(data->decoration->tiles[0] * NUM_TILES_PER_METATILE) + 7] >> 12);
+    // TODO(LC): gTilesetPointer_SecretBaseRedCave was removed with the secret base tileset. Kept here commented out for reference.
+    // CopyPalette(data->palette, gTilesetPointer_SecretBaseRedCave->metatiles[(data->decoration->tiles[0] * NUM_TILES_PER_METATILE) + 7] >> 12);
+    // Secret base tileset removed (feature unused); this UI is unreachable dead code, pass a dummy palette index.
+    CopyPalette(data->palette, 0);
     LoadSpritePalette(&sSpritePal_PlaceDecoration);
     return CreateSprite(&sDecorationSelectorSpriteTemplate, 0, 0, 0);
 }
@@ -2143,7 +2155,10 @@ static u8 AddDecorationIconObjectFromObjectEvent(u16 tilesTag, u16 paletteTag, u
         SetDecorSelectionMetatiles(&sPlaceDecorationGraphicsDataBuffer);
         SetDecorSelectionBoxOamAttributes(sPlaceDecorationGraphicsDataBuffer.decoration->shape);
         SetDecorSelectionBoxTiles(&sPlaceDecorationGraphicsDataBuffer);
-        CopyPalette(sPlaceDecorationGraphicsDataBuffer.palette, gTilesetPointer_SecretBaseRedCave->metatiles[(sPlaceDecorationGraphicsDataBuffer.decoration->tiles[0] * NUM_TILES_PER_METATILE) + 7] >> 12);
+        // TODO(LC): gTilesetPointer_SecretBaseRedCave was removed with the secret base tileset. Kept here commented out for reference.
+        // CopyPalette(sPlaceDecorationGraphicsDataBuffer.palette, gTilesetPointer_SecretBaseRedCave->metatiles[(sPlaceDecorationGraphicsDataBuffer.decoration->tiles[0] * NUM_TILES_PER_METATILE) + 7] >> 12);
+        // Secret base tileset removed (feature unused); this UI is unreachable dead code, pass a dummy palette index.
+        CopyPalette(sPlaceDecorationGraphicsDataBuffer.palette, 0);
         sheet.data = sPlaceDecorationGraphicsDataBuffer.image;
         sheet.size = sDecorShapes[sPlaceDecorationGraphicsDataBuffer.decoration->shape].size * TILE_SIZE_4BPP;
         sheet.tag = tilesTag;
