@@ -1,0 +1,200 @@
+{
+  "id": "MAP_BLACKTHORN_CITY_HOUSE4",
+  "name": "BlackthornCity_House4",
+  "layout": "LAYOUT_BLACKTHORN_CITY_HOUSE4",
+  "music": "MUS_RG_GYM",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [],
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "91",
+      "x": 8,
+      "y": 16,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "BLACKTHORN_CITY_2_91_Script_0085369B",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "41",
+      "x": 1,
+      "y": 15,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "1",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "BLACKTHORN_CITY_2_91_Script_00852F17",
+      "flag": "3"
+    },
+    {
+      "type": "object",
+      "graphics_id": "177",
+      "x": 6,
+      "y": 3,
+      "elevation": 0,
+      "movement_type": "8",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "BLACKTHORN_CITY_2_91_Script_00874A35",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "41",
+      "x": 6,
+      "y": 7,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "1",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "BLACKTHORN_CITY_2_91_Script_00853120",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "42",
+      "x": 10,
+      "y": 3,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "1",
+      "trainer_sight_or_berry_tree_id": "1",
+      "script": "BLACKTHORN_CITY_2_91_Script_008531A3",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "97",
+      "x": 0,
+      "y": 0,
+      "elevation": 0,
+      "movement_type": "76",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "0x0",
+      "flag": "4687"
+    },
+    {
+      "type": "object",
+      "graphics_id": "97",
+      "x": 2,
+      "y": 0,
+      "elevation": 0,
+      "movement_type": "76",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "0x0",
+      "flag": "4688"
+    },
+    {
+      "type": "object",
+      "graphics_id": "97",
+      "x": 1,
+      "y": 0,
+      "elevation": 0,
+      "movement_type": "76",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "0x0",
+      "flag": "4686"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 5,
+      "y": 18,
+      "elevation": 0,
+      "dest_map": "MAP_BLACKTHORN_CITY",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 1,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_BLACKTHORN_CITY_HOUSE5",
+      "dest_warp_id": 4
+    },
+    {
+      "x": 7,
+      "y": 10,
+      "elevation": 0,
+      "dest_map": "MAP_BLACKTHORN_CITY_HOUSE5",
+      "dest_warp_id": 1
+    },
+    {
+      "x": 3,
+      "y": 19,
+      "elevation": 0,
+      "dest_map": "MAP_BLACKTHORN_CITY",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 2,
+      "y": 7,
+      "elevation": 0,
+      "dest_map": "MAP_DYNAMIC",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 7,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_DYNAMIC",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 7,
+      "y": 7,
+      "elevation": 0,
+      "dest_map": "MAP_DYNAMIC",
+      "dest_warp_id": 0
+    }
+  ],
+  "coord_events": [],
+  "bg_events": [
+    {
+      "x": 3,
+      "y": 16,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "BLACKTHORN_CITY_2_91_Script_0085382E"
+    },
+    {
+      "x": 7,
+      "y": 16,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "BLACKTHORN_CITY_2_91_Script_0085382E"
+    }
+  ]
+}

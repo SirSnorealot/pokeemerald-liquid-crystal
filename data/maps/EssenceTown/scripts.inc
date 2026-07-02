@@ -1,0 +1,35 @@
+EssenceTown_MapScripts::
+	.byte 0
+
+ESSENCE_TOWN_3_79_Script_009280FD::
+	end
+
+ESSENCE_TOWN_3_79_Script_0092817A::
+	end
+
+ESSENCE_TOWN_3_79_Script_00928276::
+	end
+
+ESSENCE_TOWN_3_79_Script_0092834A::
+	end
+
+ESSENCE_TOWN_3_79_Script_009283AA::
+	end
+
+ESSENCE_TOWN_3_79_Script_009284D5::
+	end
+
+ESSENCE_TOWN_3_79_Script_0093A6C2::
+	end
+
+ESSENCE_TOWN_3_79_Script_0093A704::
+	end
+
+ESSENCE_TOWN_3_79_Script_0093A80B::
+	end
+
+ESSENCE_TOWN_3_79_Script_0093C2E3::
+	end
+
+ESSENCE_TOWN_3_79_Script_0093C32A::
+	end

@@ -1,0 +1,85 @@
+{
+  "id": "MAP_FUCHSIA_CITY_MART",
+  "name": "FuchsiaCity_Mart",
+  "layout": "LAYOUT_MART_LC",
+  "music": "MUS_RG_CELADON",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_NONE",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [],
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "68",
+      "x": 2,
+      "y": 3,
+      "elevation": 0,
+      "movement_type": "10",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "FUCHSIA_CITY_4_53_Script_008EDEEA",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "27",
+      "x": 4,
+      "y": 2,
+      "elevation": 3,
+      "movement_type": "9",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "FUCHSIA_CITY_4_53_Script_009143EF",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "24",
+      "x": 9,
+      "y": 5,
+      "elevation": 3,
+      "movement_type": "5",
+      "movement_range_x": 1,
+      "movement_range_y": 2,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "FUCHSIA_CITY_4_53_Script_009143F9",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 3,
+      "y": 7,
+      "elevation": 3,
+      "dest_map": "MAP_VERMILION_CITY",
+      "dest_warp_id": 7
+    },
+    {
+      "x": 4,
+      "y": 7,
+      "elevation": 3,
+      "dest_map": "MAP_FUCHSIA_CITY",
+      "dest_warp_id": 2
+    },
+    {
+      "x": 5,
+      "y": 7,
+      "elevation": 3,
+      "dest_map": "MAP_VERMILION_CITY",
+      "dest_warp_id": 7
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}

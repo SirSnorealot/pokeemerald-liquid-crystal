@@ -1,0 +1,120 @@
+{
+  "id": "MAP_BURNT_TOWER_ROOM2",
+  "name": "BurntTower_Room2",
+  "layout": "LAYOUT_BURNT_TOWER_ROOM2",
+  "music": "MUS_DUMMY",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_UNDERGROUND",
+  "allow_cycling": false,
+  "allow_escaping": true,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [],
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "143",
+      "x": 7,
+      "y": 3,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "0x0",
+      "flag": "4381"
+    },
+    {
+      "type": "object",
+      "graphics_id": "142",
+      "x": 10,
+      "y": 4,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "0x0",
+      "flag": "4381"
+    },
+    {
+      "type": "object",
+      "graphics_id": "141",
+      "x": 12,
+      "y": 3,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "0x0",
+      "flag": "4381"
+    },
+    {
+      "type": "object",
+      "graphics_id": "52",
+      "x": 10,
+      "y": 12,
+      "elevation": 0,
+      "movement_type": "7",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "BURNT_TOWER_2_44_Script_00965A18",
+      "flag": "4380"
+    },
+    {
+      "type": "object",
+      "graphics_id": "97",
+      "x": 17,
+      "y": 8,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "BURNT_TOWER_2_44_Script_001BE11D",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "92",
+      "x": 16,
+      "y": 4,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "BURNT_TOWER_2_44_Script_00837260",
+      "flag": "6090"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 7,
+      "y": 15,
+      "elevation": 3,
+      "dest_map": "MAP_BURNT_TOWER_ROOM1",
+      "dest_warp_id": 1
+    },
+    {
+      "x": 10,
+      "y": 9,
+      "elevation": 3,
+      "dest_map": "MAP_DYNAMIC",
+      "dest_warp_id": 0
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}

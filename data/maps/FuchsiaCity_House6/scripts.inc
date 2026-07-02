@@ -1,0 +1,23 @@
+FuchsiaCity_House6_MapScripts::
+	.byte 0
+
+FUCHSIA_CITY_11_10_Script_0016D688::
+	end
+
+FUCHSIA_CITY_11_10_Script_0016D6A7::
+	end
+
+FUCHSIA_CITY_11_10_Script_00916D11::
+	end
+
+FUCHSIA_CITY_11_10_Script_0091AEFA::
+	end
+
+FUCHSIA_CITY_11_10_Script_0091AF62::
+	end
+
+FUCHSIA_CITY_11_10_Script_0091B918::
+	end
+
+FUCHSIA_CITY_11_10_Script_009AD64D::
+	end

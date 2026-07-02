@@ -1,0 +1,56 @@
+LeafBayCity_MapScripts::
+	.byte 0
+
+LEAF_BAY_CITY_3_89_Script_00900258::
+	end
+
+LEAF_BAY_CITY_3_89_Script_009052EE::
+	end
+
+LEAF_BAY_CITY_3_89_Script_0090536D::
+	end
+
+LEAF_BAY_CITY_3_89_Script_00905C9C::
+	end
+
+LEAF_BAY_CITY_3_89_Script_0090DC89::
+	end
+
+LEAF_BAY_CITY_3_89_Script_0090E393::
+	end
+
+LEAF_BAY_CITY_3_89_Script_0090E3D2::
+	end
+
+LEAF_BAY_CITY_3_89_Script_0090E3E2::
+	end
+
+LEAF_BAY_CITY_3_89_Script_0094C4C8::
+	end
+
+LEAF_BAY_CITY_3_89_Script_009501E0::
+	end
+
+LEAF_BAY_CITY_3_89_Script_0095945E::
+	end
+
+LEAF_BAY_CITY_3_89_Script_0096A49A::
+	end
+
+LEAF_BAY_CITY_3_89_Script_0098881F::
+	end
+
+LEAF_BAY_CITY_3_89_Script_009B36B5::
+	end
+
+LEAF_BAY_CITY_3_89_Script_009C4D29::
+	end
+
+LEAF_BAY_CITY_3_89_Script_009D0EF6::
+	end
+
+LEAF_BAY_CITY_3_89_Script_009E37F6::
+	end
+
+LEAF_BAY_CITY_3_89_Script_009E846E::
+	end

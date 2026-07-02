@@ -1,0 +1,85 @@
+{
+  "id": "MAP_CERULEAN_CITY_HOUSE1",
+  "name": "CeruleanCity_House1",
+  "layout": "LAYOUT_HOUSE2_LC",
+  "music": "MUS_RG_SEVII_123",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [],
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "32",
+      "x": 3,
+      "y": 4,
+      "elevation": 3,
+      "movement_type": "1",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "CERULEAN_CITY_4_68_Script_00935C4A",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "116",
+      "x": 7,
+      "y": 6,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "CERULEAN_CITY_4_68_Script_00935C53",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "119",
+      "x": 7,
+      "y": 3,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "CERULEAN_CITY_4_68_Script_0093619F",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "35",
+      "x": 4,
+      "y": 5,
+      "elevation": 0,
+      "movement_type": "10",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "CERULEAN_CITY_4_68_Script_00935C41",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 4,
+      "y": 8,
+      "elevation": 3,
+      "dest_map": "MAP_CERULEAN_CITY",
+      "dest_warp_id": 2
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}

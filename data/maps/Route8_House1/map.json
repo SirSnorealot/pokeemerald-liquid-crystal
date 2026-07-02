@@ -1,0 +1,64 @@
+{
+  "id": "MAP_ROUTE8_HOUSE1",
+  "name": "Route8_House1",
+  "layout": "LAYOUT_ROUTE7_HOUSE1",
+  "music": "MUS_RG_ROUTE3",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_NONE",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [],
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "60",
+      "x": 6,
+      "y": 2,
+      "elevation": 3,
+      "movement_type": "8",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ROUTE_8_20_0_Script_00935391",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 1,
+      "y": 4,
+      "elevation": 3,
+      "dest_map": "MAP_SAFFRON_CITY",
+      "dest_warp_id": 10
+    },
+    {
+      "x": 1,
+      "y": 5,
+      "elevation": 3,
+      "dest_map": "MAP_SAFFRON_CITY",
+      "dest_warp_id": 10
+    },
+    {
+      "x": 11,
+      "y": 5,
+      "elevation": 3,
+      "dest_map": "MAP_ROUTE8",
+      "dest_warp_id": 1
+    },
+    {
+      "x": 11,
+      "y": 6,
+      "elevation": 3,
+      "dest_map": "MAP_ROUTE8",
+      "dest_warp_id": 1
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}

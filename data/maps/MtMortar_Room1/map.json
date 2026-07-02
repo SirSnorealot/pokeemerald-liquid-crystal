@@ -1,0 +1,134 @@
+{
+  "id": "MAP_MT_MORTAR_ROOM1",
+  "name": "MtMortar_Room1",
+  "layout": "LAYOUT_MT_MORTAR_ROOM1",
+  "music": "MUS_RG_VIRIDIAN_FOREST",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_UNDERGROUND",
+  "allow_cycling": false,
+  "allow_escaping": true,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [],
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "137",
+      "x": 26,
+      "y": 4,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MT__MORTAR_2_35_Script_00971F0A",
+      "flag": "731"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 34,
+      "y": 31,
+      "elevation": 3,
+      "dest_map": "MAP_MT_MORTAR_ROOM5",
+      "dest_warp_id": 3
+    },
+    {
+      "x": 17,
+      "y": 31,
+      "elevation": 3,
+      "dest_map": "MAP_MT_MORTAR_ROOM1",
+      "dest_warp_id": 2
+    },
+    {
+      "x": 31,
+      "y": 29,
+      "elevation": 0,
+      "dest_map": "MAP_MT_MORTAR_ROOM1",
+      "dest_warp_id": 1
+    },
+    {
+      "x": 15,
+      "y": 28,
+      "elevation": 0,
+      "dest_map": "MAP_MT_MORTAR_ROOM1",
+      "dest_warp_id": 5
+    },
+    {
+      "x": 5,
+      "y": 30,
+      "elevation": 0,
+      "dest_map": "MAP_MT_MORTAR_ROOM1",
+      "dest_warp_id": 6
+    },
+    {
+      "x": 2,
+      "y": 28,
+      "elevation": 0,
+      "dest_map": "MAP_MT_MORTAR_ROOM1",
+      "dest_warp_id": 3
+    },
+    {
+      "x": 5,
+      "y": 19,
+      "elevation": 0,
+      "dest_map": "MAP_MT_MORTAR_ROOM1",
+      "dest_warp_id": 4
+    },
+    {
+      "x": 3,
+      "y": 16,
+      "elevation": 0,
+      "dest_map": "MAP_MT_MORTAR_ROOM1",
+      "dest_warp_id": 9
+    },
+    {
+      "x": 20,
+      "y": 19,
+      "elevation": 0,
+      "dest_map": "MAP_MT_MORTAR_ROOM1",
+      "dest_warp_id": 12
+    },
+    {
+      "x": 18,
+      "y": 16,
+      "elevation": 0,
+      "dest_map": "MAP_MT_MORTAR_ROOM1",
+      "dest_warp_id": 7
+    },
+    {
+      "x": 7,
+      "y": 6,
+      "elevation": 0,
+      "dest_map": "MAP_MT_MORTAR_ROOM1",
+      "dest_warp_id": 13
+    },
+    {
+      "x": 18,
+      "y": 1,
+      "elevation": 0,
+      "dest_map": "MAP_POWER_PLANT_ROOM2",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 35,
+      "y": 19,
+      "elevation": 0,
+      "dest_map": "MAP_MT_MORTAR_ROOM1",
+      "dest_warp_id": 8
+    },
+    {
+      "x": 33,
+      "y": 16,
+      "elevation": 0,
+      "dest_map": "MAP_MT_MORTAR_ROOM1",
+      "dest_warp_id": 10
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}

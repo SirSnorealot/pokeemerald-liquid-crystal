@@ -1,0 +1,85 @@
+{
+  "id": "MAP_SAFARI_TOWN_3",
+  "name": "SafariTown_3",
+  "layout": "LAYOUT_SAFARI_TOWN_3",
+  "music": "MUS_RG_HEAL",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": true,
+  "allow_escaping": true,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [],
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "92",
+      "x": 36,
+      "y": 20,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "4",
+      "script": "SAFARI_TOWN_5_115_Script_00B0FFEF",
+      "flag": "897"
+    },
+    {
+      "type": "object",
+      "graphics_id": "92",
+      "x": 54,
+      "y": 48,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "4",
+      "script": "SAFARI_TOWN_5_115_Script_00B0FFD1",
+      "flag": "896"
+    },
+    {
+      "type": "object",
+      "graphics_id": "92",
+      "x": 10,
+      "y": 10,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "5",
+      "script": "SAFARI_TOWN_5_115_Script_00B0F400",
+      "flag": "898"
+    },
+    {
+      "type": "object",
+      "graphics_id": "92",
+      "x": 52,
+      "y": 53,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "4",
+      "script": "SAFARI_TOWN_5_115_Script_00B0FD60",
+      "flag": "895"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 25,
+      "y": 49,
+      "elevation": 0,
+      "dest_map": "MAP_SAFARI_TOWN_HOUSE5",
+      "dest_warp_id": 0
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}

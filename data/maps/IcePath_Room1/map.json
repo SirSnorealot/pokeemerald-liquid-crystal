@@ -1,0 +1,109 @@
+{
+  "id": "MAP_ICE_PATH_ROOM1",
+  "name": "IcePath_Room1",
+  "layout": "LAYOUT_ICE_PATH_ROOM1",
+  "music": "MUS_RG_MT_MOON",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_UNDERGROUND",
+  "allow_cycling": true,
+  "allow_escaping": true,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [],
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "92",
+      "x": 31,
+      "y": 7,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ICE_PATH_1_110_Script_00868DE2",
+      "flag": "4667"
+    },
+    {
+      "type": "object",
+      "graphics_id": "92",
+      "x": 34,
+      "y": 9,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ICE_PATH_1_110_Script_00868E00",
+      "flag": "4681"
+    },
+    {
+      "type": "object",
+      "graphics_id": "92",
+      "x": 32,
+      "y": 23,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ICE_PATH_1_110_Script_00868DF1",
+      "flag": "4682"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 4,
+      "y": 19,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE44",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 37,
+      "y": 13,
+      "elevation": 0,
+      "dest_map": "MAP_ICE_PATH_ROOM4",
+      "dest_warp_id": 7
+    },
+    {
+      "x": 37,
+      "y": 5,
+      "elevation": 0,
+      "dest_map": "MAP_ICE_PATH_ROOM4",
+      "dest_warp_id": 6
+    },
+    {
+      "x": 36,
+      "y": 27,
+      "elevation": 0,
+      "dest_map": "MAP_BLACKTHORN_CITY",
+      "dest_warp_id": 2
+    }
+  ],
+  "coord_events": [],
+  "bg_events": [
+    {
+      "x": 0,
+      "y": 0,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "0x0"
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "0x0"
+    }
+  ]
+}

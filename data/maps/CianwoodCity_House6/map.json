@@ -1,0 +1,172 @@
+{
+  "id": "MAP_CIANWOOD_CITY_HOUSE6",
+  "name": "CianwoodCity_House6",
+  "layout": "LAYOUT_CIANWOOD_CITY_HOUSE6",
+  "music": "MUS_RG_GYM",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [],
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "176",
+      "x": 5,
+      "y": 2,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "CIANWOOD_CITY_2_0_Script_0084C5D9",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "54",
+      "x": 8,
+      "y": 13,
+      "elevation": 0,
+      "movement_type": "9",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "1",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "CIANWOOD_CITY_2_0_Script_0082AB76",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "54",
+      "x": 2,
+      "y": 13,
+      "elevation": 0,
+      "movement_type": "10",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "1",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "CIANWOOD_CITY_2_0_Script_0082AAC5",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "54",
+      "x": 3,
+      "y": 10,
+      "elevation": 0,
+      "movement_type": "10",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "1",
+      "trainer_sight_or_berry_tree_id": "2",
+      "script": "CIANWOOD_CITY_2_0_Script_0082ABEB",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "97",
+      "x": 4,
+      "y": 8,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "CIANWOOD_CITY_2_0_Script_001BE11D",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "97",
+      "x": 5,
+      "y": 8,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "CIANWOOD_CITY_2_0_Script_001BE11D",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "97",
+      "x": 6,
+      "y": 8,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "CIANWOOD_CITY_2_0_Script_001BE11D",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "97",
+      "x": 6,
+      "y": 2,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "CIANWOOD_CITY_2_0_Script_001BE11D",
+      "flag": "2084"
+    },
+    {
+      "type": "object",
+      "graphics_id": "54",
+      "x": 6,
+      "y": 6,
+      "elevation": 0,
+      "movement_type": "9",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "1",
+      "trainer_sight_or_berry_tree_id": "2",
+      "script": "CIANWOOD_CITY_2_0_Script_0082AC51",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 5,
+      "y": 18,
+      "elevation": 0,
+      "dest_map": "MAP_CIANWOOD_CITY",
+      "dest_warp_id": 4
+    }
+  ],
+  "coord_events": [],
+  "bg_events": [
+    {
+      "x": 3,
+      "y": 16,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "CIANWOOD_CITY_2_0_Script_0082AA5C"
+    },
+    {
+      "x": 7,
+      "y": 16,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "CIANWOOD_CITY_2_0_Script_0082AA5C"
+    }
+  ]
+}

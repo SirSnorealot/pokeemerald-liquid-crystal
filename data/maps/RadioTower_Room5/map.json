@@ -1,0 +1,165 @@
+{
+  "id": "MAP_RADIO_TOWER_ROOM5",
+  "name": "RadioTower_Room5",
+  "layout": "LAYOUT_RADIO_TOWER_ROOM5",
+  "music": "MUS_DUMMY",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": false,
+  "weather": "WEATHER_SUNNY",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_MAGMA",
+  "connections": [],
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "55",
+      "x": 10,
+      "y": 7,
+      "elevation": 0,
+      "movement_type": "9",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "1",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "RADIO_TOWER_2_82_Script_008418C4",
+      "flag": "4628"
+    },
+    {
+      "type": "object",
+      "graphics_id": "49",
+      "x": 12,
+      "y": 9,
+      "elevation": 0,
+      "movement_type": "24",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "1",
+      "trainer_sight_or_berry_tree_id": "2",
+      "script": "RADIO_TOWER_2_82_Script_00841821",
+      "flag": "4628"
+    },
+    {
+      "type": "object",
+      "graphics_id": "49",
+      "x": 22,
+      "y": 7,
+      "elevation": 0,
+      "movement_type": "7",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "1",
+      "trainer_sight_or_berry_tree_id": "2",
+      "script": "RADIO_TOWER_2_82_Script_00845A2C",
+      "flag": "4628"
+    },
+    {
+      "type": "object",
+      "graphics_id": "50",
+      "x": 19,
+      "y": 9,
+      "elevation": 0,
+      "movement_type": "9",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "1",
+      "trainer_sight_or_berry_tree_id": "1",
+      "script": "RADIO_TOWER_2_82_Script_0084596D",
+      "flag": "4628"
+    },
+    {
+      "type": "object",
+      "graphics_id": "22",
+      "x": 21,
+      "y": 10,
+      "elevation": 0,
+      "movement_type": "1",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "RADIO_TOWER_2_82_Script_00846EE0",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "125",
+      "x": 18,
+      "y": 11,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "RADIO_TOWER_2_82_Script_008458F1",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "27",
+      "x": 13,
+      "y": 9,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "RADIO_TOWER_2_82_Script_00845EFD",
+      "flag": "4629"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 7,
+      "y": 5,
+      "elevation": 0,
+      "dest_map": "MAP_RADIO_TOWER_ROOM6",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 15,
+      "y": 5,
+      "elevation": 0,
+      "dest_map": "MAP_RADIO_TOWER_ROOM9",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 20,
+      "y": 5,
+      "elevation": 0,
+      "dest_map": "MAP_RADIO_TOWER_ROOM9",
+      "dest_warp_id": 1
+    },
+    {
+      "x": 22,
+      "y": 5,
+      "elevation": 0,
+      "dest_map": "MAP_RADIO_TOWER_ROOM6",
+      "dest_warp_id": 1
+    }
+  ],
+  "coord_events": [],
+  "bg_events": [
+    {
+      "x": 15,
+      "y": 4,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "RADIO_TOWER_2_82_Script_00841977"
+    },
+    {
+      "x": 21,
+      "y": 4,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "RADIO_TOWER_2_82_Script_00845B05"
+    }
+  ]
+}

@@ -8,7 +8,8 @@ SafariZone_EventScript_OutOfBallsMidBattle::
 #if IS_FRLG
 	setwarp MAP_FUCHSIA_CITY_SAFARI_ZONE_ENTRANCE, 4, 1
 #else
-	setwarp MAP_ROUTE121_SAFARI_ZONE_ENTRANCE, 2, 5
+	@ TODO(LC): MAP_ROUTE121_SAFARI_ZONE_ENTRANCE removed with Hoenn maps
+	setwarp MAP_DYNAMIC, 2, 5
 #endif
 	end
 
@@ -22,7 +23,8 @@ SafariZone_EventScript_Exit::
 #if IS_FRLG
 	warp MAP_FUCHSIA_CITY_SAFARI_ZONE_ENTRANCE, 4, 1
 #else
-	warp MAP_ROUTE121_SAFARI_ZONE_ENTRANCE, 2, 5
+	@ TODO(LC): MAP_ROUTE121_SAFARI_ZONE_ENTRANCE removed with Hoenn maps
+	warp MAP_DYNAMIC, 2, 5
 #endif
 	waitstate
 	end

@@ -1071,7 +1071,7 @@ bool8 IsPlayerCollidingWithFarawayIslandMew(enum Direction direction)
     playerY = object->currentCoords.y;
 
     MoveCoords(direction, &playerX, &playerY);
-    mewObjectId = GetObjectEventIdByLocalIdAndMap(LOCALID_FARAWAY_ISLAND_MEW, MAP_NUM(MAP_FARAWAY_ISLAND_INTERIOR), MAP_GROUP(MAP_FARAWAY_ISLAND_INTERIOR));
+    mewObjectId = GetObjectEventIdByLocalIdAndMap(0, MAP_NUM(MAP_FARAWAY_ISLAND_INTERIOR), MAP_GROUP(MAP_FARAWAY_ISLAND_INTERIOR)); // TODO(LC): was LOCALID_FARAWAY_ISLAND_MEW (removed with Hoenn maps)
     if (mewObjectId == OBJECT_EVENTS_COUNT)
         return FALSE;
 

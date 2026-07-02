@@ -18,6 +18,11 @@
       "map": "MAP_AZALEA_TOWN",
       "offset": 0,
       "direction": "left"
+    },
+    {
+      "map": "MAP_AZALEA_TOWN",
+      "offset": -4,
+      "direction": "down"
     }
   ],
   "object_events": [
@@ -131,8 +136,8 @@
       "x": 14,
       "y": 9,
       "elevation": 0,
-      "dest_warp_id": "1",
-      "dest_map": "MAP_UNION_CAVE_1_F"
+      "dest_map": "MAP_UNION_CAVE_1_F",
+      "dest_warp_id": 1
     }
   ],
   "coord_events": [],

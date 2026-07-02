@@ -1,0 +1,85 @@
+{
+  "id": "MAP_OLIVINE_CITY_HOUSE4",
+  "name": "OlivineCity_House4",
+  "layout": "LAYOUT_OLIVINE_CITY_HOUSE4",
+  "music": "MUS_RG_SEVII_67",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [],
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "62",
+      "x": 6,
+      "y": 7,
+      "elevation": 0,
+      "movement_type": "7",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "OLIVINE_CITY_1_104_Script_0089E078",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "68",
+      "x": 7,
+      "y": 4,
+      "elevation": 0,
+      "movement_type": "9",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "OLIVINE_CITY_1_104_Script_008614B4",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "62",
+      "x": 4,
+      "y": 4,
+      "elevation": 0,
+      "movement_type": "10",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "OLIVINE_CITY_1_104_Script_00861395",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "62",
+      "x": 1,
+      "y": 3,
+      "elevation": 0,
+      "movement_type": "10",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "OLIVINE_CITY_1_104_Script_00938E1E",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 3,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_OLIVINE_CITY",
+      "dest_warp_id": 2
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}

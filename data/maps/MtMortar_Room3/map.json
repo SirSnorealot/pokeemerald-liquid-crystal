@@ -1,0 +1,190 @@
+{
+  "id": "MAP_MT_MORTAR_ROOM3",
+  "name": "MtMortar_Room3",
+  "layout": "LAYOUT_MT_MORTAR_ROOM3",
+  "music": "MUS_RG_VIRIDIAN_FOREST",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": false,
+  "weather": "WEATHER_SHADE",
+  "map_type": "MAP_TYPE_UNDERGROUND",
+  "allow_cycling": true,
+  "allow_escaping": true,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [],
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "97",
+      "x": 20,
+      "y": 43,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MT__MORTAR_2_48_Script_001BE11D",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "52",
+      "x": 33,
+      "y": 43,
+      "elevation": 0,
+      "movement_type": "9",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "1",
+      "trainer_sight_or_berry_tree_id": "4",
+      "script": "MT__MORTAR_2_48_Script_0082DE22",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "92",
+      "x": 37,
+      "y": 36,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MT__MORTAR_2_48_Script_0082DF17",
+      "flag": "4438"
+    },
+    {
+      "type": "object",
+      "graphics_id": "92",
+      "x": 35,
+      "y": 24,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MT__MORTAR_2_48_Script_0082DF2E",
+      "flag": "4439"
+    },
+    {
+      "type": "object",
+      "graphics_id": "92",
+      "x": 11,
+      "y": 27,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MT__MORTAR_2_48_Script_0082DF45",
+      "flag": "4440"
+    },
+    {
+      "type": "object",
+      "graphics_id": "52",
+      "x": 23,
+      "y": 28,
+      "elevation": 0,
+      "movement_type": "1",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "1",
+      "trainer_sight_or_berry_tree_id": "2",
+      "script": "MT__MORTAR_2_48_Script_0082DF5C",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "92",
+      "x": 8,
+      "y": 15,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MT__MORTAR_2_48_Script_0090AF1D",
+      "flag": "5575"
+    },
+    {
+      "type": "object",
+      "graphics_id": "92",
+      "x": 23,
+      "y": 16,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MT__MORTAR_2_48_Script_0090AF2A",
+      "flag": "5576"
+    },
+    {
+      "type": "object",
+      "graphics_id": "92",
+      "x": 17,
+      "y": 10,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MT__MORTAR_2_48_Script_0090AF37",
+      "flag": "5577"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 3,
+      "y": 19,
+      "elevation": 3,
+      "dest_map": "MAP_MT_MORTAR_ROOM5",
+      "dest_warp_id": 1
+    },
+    {
+      "x": 29,
+      "y": 47,
+      "elevation": 3,
+      "dest_map": "MAP_MT_MORTAR_ROOM2",
+      "dest_warp_id": 6
+    },
+    {
+      "x": 9,
+      "y": 9,
+      "elevation": 0,
+      "dest_map": "MAP_MT_MORTAR_ROOM4",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 11,
+      "y": 47,
+      "elevation": 0,
+      "dest_map": "MAP_MT_MORTAR_ROOM2",
+      "dest_warp_id": 3
+    },
+    {
+      "x": 5,
+      "y": 39,
+      "elevation": 0,
+      "dest_map": "MAP_MT_MORTAR_ROOM2",
+      "dest_warp_id": 2
+    },
+    {
+      "x": 33,
+      "y": 41,
+      "elevation": 0,
+      "dest_map": "MAP_MT_MORTAR_ROOM2",
+      "dest_warp_id": 7
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}

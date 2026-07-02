@@ -1,0 +1,101 @@
+CeladonCity_House1_MapScripts::
+	.byte 0
+
+CELADON_CITY_5_13_Script_0016C68D::
+	end
+
+CELADON_CITY_5_13_Script_0016C95E::
+	end
+
+CELADON_CITY_5_13_Script_0016C9A4::
+	end
+
+CELADON_CITY_5_13_Script_0016C9B0::
+	end
+
+CELADON_CITY_5_13_Script_0016C9BC::
+	end
+
+CELADON_CITY_5_13_Script_0016C9D4::
+	end
+
+CELADON_CITY_5_13_Script_0016C9E0::
+	end
+
+CELADON_CITY_5_13_Script_0016C9EC::
+	end
+
+CELADON_CITY_5_13_Script_0016C9F8::
+	end
+
+CELADON_CITY_5_13_Script_0016CA04::
+	end
+
+CELADON_CITY_5_13_Script_0016CA10::
+	end
+
+CELADON_CITY_5_13_Script_0016CA1C::
+	end
+
+CELADON_CITY_5_13_Script_0016CA28::
+	end
+
+CELADON_CITY_5_13_Script_0016CA34::
+	end
+
+CELADON_CITY_5_13_Script_0016CA40::
+	end
+
+CELADON_CITY_5_13_Script_0016CA58::
+	end
+
+CELADON_CITY_5_13_Script_0016CA64::
+	end
+
+CELADON_CITY_5_13_Script_0016CA7C::
+	end
+
+CELADON_CITY_5_13_Script_0016CA88::
+	end
+
+CELADON_CITY_5_13_Script_0016CA94::
+	end
+
+CELADON_CITY_5_13_Script_0016CAAA::
+	end
+
+CELADON_CITY_5_13_Script_0016CB5A::
+	end
+
+CELADON_CITY_5_13_Script_0016CB63::
+	end
+
+CELADON_CITY_5_13_Script_0016CB6C::
+	end
+
+CELADON_CITY_5_13_Script_001B2867::
+	end
+
+CELADON_CITY_5_13_Script_008DFCFF::
+	end
+
+CELADON_CITY_5_13_Script_009731F4::
+	end
+
+CELADON_CITY_5_13_Script_009769EC::
+	end
+
+CELADON_CITY_5_13_Script_009984D6::
+	end
+
+CELADON_CITY_5_13_Script_009984ED::
+	end
+
+CELADON_CITY_5_13_Script_0099FC5E::
+	end
+
+CELADON_CITY_5_13_Script_0099FCC1::
+	end
+
+CELADON_CITY_5_13_Script_0099FD22::
+	end

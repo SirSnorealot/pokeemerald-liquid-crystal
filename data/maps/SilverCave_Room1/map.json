@@ -1,0 +1,88 @@
+{
+  "id": "MAP_SILVER_CAVE_ROOM1",
+  "name": "SilverCave_Room1",
+  "layout": "LAYOUT_POKEMON_CENTER_LC",
+  "music": "MUS_RG_POKE_CENTER",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [],
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "64",
+      "x": 7,
+      "y": 2,
+      "elevation": 3,
+      "movement_type": "8",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SILVER_CAVE_4_95_Script_00171D00",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "35",
+      "x": 2,
+      "y": 5,
+      "elevation": 3,
+      "movement_type": "2",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SILVER_CAVE_4_95_Script_0082E2F5",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 7,
+      "y": 8,
+      "elevation": 3,
+      "dest_map": "MAP_SILVER_CAVE",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 1,
+      "y": 5,
+      "elevation": 4,
+      "dest_map": "MAP_VALENCIA_ISLAND_HOUSE1",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 1,
+      "y": 3,
+      "elevation": 0,
+      "dest_map": "MAP_LEAF_BAY_CITY_HOUSE1",
+      "dest_warp_id": 0
+    }
+  ],
+  "coord_events": [],
+  "bg_events": [
+    {
+      "x": 1,
+      "y": 1,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "SILVER_CAVE_4_95_Script_00171619"
+    },
+    {
+      "x": 14,
+      "y": 1,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "SILVER_CAVE_4_95_Script_0092BFBA"
+    }
+  ]
+}

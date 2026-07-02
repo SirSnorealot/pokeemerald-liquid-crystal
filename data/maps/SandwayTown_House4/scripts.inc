@@ -1,0 +1,23 @@
+SandwayTown_House4_MapScripts::
+	.byte 0
+
+SANDWAY_TOWN_5_90_Script_0094F7BE::
+	end
+
+SANDWAY_TOWN_5_90_Script_00A25C60::
+	end
+
+SANDWAY_TOWN_5_90_Script_00A64F2B::
+	end
+
+SANDWAY_TOWN_5_90_Script_00A64FAE::
+	end
+
+SANDWAY_TOWN_5_90_Script_00A66874::
+	end
+
+SANDWAY_TOWN_5_90_Script_00A6690C::
+	end
+
+SANDWAY_TOWN_5_90_Script_00A66A07::
+	end

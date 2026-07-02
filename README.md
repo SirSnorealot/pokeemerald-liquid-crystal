@@ -38,7 +38,7 @@ make release -j$(nproc)
 
 > A place to track things I think of so I don't forget them.
 
-- [ ] **[PRIORITY]** Port All Maps - Started: SirSnorealot
+- [X] Import All Maps: SirSnorealot with the assistance of AI. (ROM Builds but maps to be more thoroughly check during scripting.)
 - [ ] DNS Lights in Windows - Not started.
 - [ ] Headbutt Trees - Not started.
 - [ ] Region Maps - Not started.

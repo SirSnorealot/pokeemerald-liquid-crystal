@@ -1,0 +1,26 @@
+TempleOfRock_MapScripts::
+	.byte 0
+
+TEMPLE_OF_ROCK_2_32_Script_000004EB::
+	end
+
+TEMPLE_OF_ROCK_2_32_Script_00880000::
+	end
+
+TEMPLE_OF_ROCK_2_32_Script_008E9192::
+	end
+
+TEMPLE_OF_ROCK_2_32_Script_00913560::
+	end
+
+TEMPLE_OF_ROCK_2_32_Script_00914179::
+	end
+
+TEMPLE_OF_ROCK_2_32_Script_00922DD8::
+	end
+
+TEMPLE_OF_ROCK_2_32_Script_009A6D8D::
+	end
+
+TEMPLE_OF_ROCK_2_32_Script_009AA805::
+	end

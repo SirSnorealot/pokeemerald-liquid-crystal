@@ -1,0 +1,23 @@
+EcruteakCity_House2_MapScripts::
+	.byte 0
+
+ECRUTEAK_CITY_2_23_Script_00824092::
+	end
+
+ECRUTEAK_CITY_2_23_Script_00824129::
+	end
+
+ECRUTEAK_CITY_2_23_Script_008241E6::
+	end
+
+ECRUTEAK_CITY_2_23_Script_008242C4::
+	end
+
+ECRUTEAK_CITY_2_23_Script_008246D8::
+	end
+
+ECRUTEAK_CITY_2_23_Script_008247A8::
+	end
+
+ECRUTEAK_CITY_2_23_Script_0090B6DE::
+	end

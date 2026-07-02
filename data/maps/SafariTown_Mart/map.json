@@ -1,0 +1,99 @@
+{
+  "id": "MAP_SAFARI_TOWN_MART",
+  "name": "SafariTown_Mart",
+  "layout": "LAYOUT_MART_LC",
+  "music": "MUS_RG_SEVII_67",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [],
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "68",
+      "x": 2,
+      "y": 3,
+      "elevation": 3,
+      "movement_type": "10",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SAFARI_TOWN_5_107_Script_0090EF67",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "193",
+      "x": 0,
+      "y": 0,
+      "elevation": 0,
+      "movement_type": "76",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SAFARI_TOWN_5_107_Script_00A527B7",
+      "flag": "1299"
+    },
+    {
+      "type": "object",
+      "graphics_id": "63",
+      "x": 6,
+      "y": 2,
+      "elevation": 0,
+      "movement_type": "14",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SAFARI_TOWN_5_107_Script_00B089B4",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "33",
+      "x": 10,
+      "y": 5,
+      "elevation": 0,
+      "movement_type": "7",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SAFARI_TOWN_5_107_Script_00B08FC0",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 3,
+      "y": 7,
+      "elevation": 3,
+      "dest_map": "MAP_MEADOW_TOWN",
+      "dest_warp_id": 7
+    },
+    {
+      "x": 4,
+      "y": 7,
+      "elevation": 3,
+      "dest_map": "MAP_SAFARI_TOWN",
+      "dest_warp_id": 4
+    },
+    {
+      "x": 5,
+      "y": 7,
+      "elevation": 3,
+      "dest_map": "MAP_SAFFRON_CITY",
+      "dest_warp_id": 7
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}

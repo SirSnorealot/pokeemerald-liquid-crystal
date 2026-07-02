@@ -1,0 +1,191 @@
+{
+  "id": "MAP_VALENCIA_PORT_HOUSE1",
+  "name": "ValenciaPort_House1",
+  "layout": "LAYOUT_VALENCIA_PORT_HOUSE1",
+  "music": "MUS_RG_SS_ANNE",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [],
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "60",
+      "x": 22,
+      "y": 6,
+      "elevation": 0,
+      "movement_type": "7",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "VALENCIA_PORT_6_16_Script_00914913",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "65",
+      "x": 3,
+      "y": 4,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "VALENCIA_PORT_6_16_Script_009148DE",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "23",
+      "x": 10,
+      "y": 9,
+      "elevation": 0,
+      "movement_type": "19",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "VALENCIA_PORT_6_16_Script_009323A8",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "26",
+      "x": 1,
+      "y": 7,
+      "elevation": 0,
+      "movement_type": "3",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "VALENCIA_PORT_6_16_Script_009324BF",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "22",
+      "x": 15,
+      "y": 9,
+      "elevation": 0,
+      "movement_type": "10",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "VALENCIA_PORT_6_16_Script_009324B6",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "17",
+      "x": 17,
+      "y": 2,
+      "elevation": 0,
+      "movement_type": "7",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "VALENCIA_PORT_6_16_Script_00934AF6",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "18",
+      "x": 10,
+      "y": 2,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "VALENCIA_PORT_6_16_Script_0093310D",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 3,
+      "y": 10,
+      "elevation": 0,
+      "dest_map": "MAP_VALENCIA_PORT",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 21,
+      "y": 10,
+      "elevation": 0,
+      "dest_map": "MAP_VALENCIA_PORT",
+      "dest_warp_id": 2
+    }
+  ],
+  "coord_events": [],
+  "bg_events": [
+    {
+      "x": 19,
+      "y": 1,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "VALENCIA_PORT_6_16_Script_0092BFBA"
+    },
+    {
+      "x": 13,
+      "y": 1,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "VALENCIA_PORT_6_16_Script_00938E06"
+    },
+    {
+      "x": 16,
+      "y": 1,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "VALENCIA_PORT_6_16_Script_00938E06"
+    },
+    {
+      "x": 14,
+      "y": 1,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "VALENCIA_PORT_6_16_Script_00938E06"
+    },
+    {
+      "x": 17,
+      "y": 1,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "VALENCIA_PORT_6_16_Script_00938E06"
+    },
+    {
+      "x": 23,
+      "y": 0,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "VALENCIA_PORT_6_16_Script_00914AEF"
+    },
+    {
+      "x": 24,
+      "y": 0,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "VALENCIA_PORT_6_16_Script_00914AEF"
+    }
+  ]
+}

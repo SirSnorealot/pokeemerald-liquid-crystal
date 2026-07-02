@@ -933,7 +933,7 @@ static bool8 BattlePyramidRetireCallback(void)
         ClearDialogWindowAndFrameToTransparent(0, TRUE);
         ScriptUnfreezeObjectEvents();
         UnlockPlayerFieldControls();
-        ScriptContext_SetupScript(BattlePyramid_Retire);
+        ScriptContext_SetupScript(NULL); // TODO(LC): was BattlePyramid_Retire (removed with Hoenn maps)
         return TRUE;
     }
 

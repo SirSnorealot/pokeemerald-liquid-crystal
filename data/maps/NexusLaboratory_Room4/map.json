@@ -1,0 +1,239 @@
+{
+  "id": "MAP_NEXUS_LABORATORY_ROOM4",
+  "name": "NexusLaboratory_Room4",
+  "layout": "LAYOUT_NEXUS_LABORATORY_ROOM4",
+  "music": "MUS_RG_SILPH",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_UNDERGROUND",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [],
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "193",
+      "x": 10,
+      "y": 16,
+      "elevation": 0,
+      "movement_type": "1",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "0x0",
+      "flag": "1345"
+    },
+    {
+      "type": "object",
+      "graphics_id": "193",
+      "x": 14,
+      "y": 16,
+      "elevation": 0,
+      "movement_type": "1",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "0x0",
+      "flag": "1345"
+    },
+    {
+      "type": "object",
+      "graphics_id": "193",
+      "x": 9,
+      "y": 16,
+      "elevation": 0,
+      "movement_type": "1",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "0x0",
+      "flag": "1345"
+    },
+    {
+      "type": "object",
+      "graphics_id": "92",
+      "x": 31,
+      "y": 15,
+      "elevation": 0,
+      "movement_type": "9",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NEXUS_LABORATORY_5_101_Script_00A90D70",
+      "flag": "1343"
+    },
+    {
+      "type": "object",
+      "graphics_id": "61",
+      "x": 11,
+      "y": 17,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "0x0",
+      "flag": "1345"
+    },
+    {
+      "type": "object",
+      "graphics_id": "193",
+      "x": 8,
+      "y": 27,
+      "elevation": 0,
+      "movement_type": "9",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "1",
+      "trainer_sight_or_berry_tree_id": "1",
+      "script": "NEXUS_LABORATORY_5_101_Script_00A96EEE",
+      "flag": "1299"
+    },
+    {
+      "type": "object",
+      "graphics_id": "193",
+      "x": 13,
+      "y": 16,
+      "elevation": 0,
+      "movement_type": "1",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "0x0",
+      "flag": "1345"
+    },
+    {
+      "type": "object",
+      "graphics_id": "92",
+      "x": 6,
+      "y": 25,
+      "elevation": 0,
+      "movement_type": "76",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NEXUS_LABORATORY_5_101_Script_00A8EDA4",
+      "flag": "1344"
+    },
+    {
+      "type": "object",
+      "graphics_id": "108",
+      "x": 12,
+      "y": 15,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "0x0",
+      "flag": "1345"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 7,
+      "y": 17,
+      "elevation": 0,
+      "dest_map": "MAP_NEXUS_LABORATORY_ROOM3",
+      "dest_warp_id": 8
+    },
+    {
+      "x": 22,
+      "y": 3,
+      "elevation": 0,
+      "dest_map": "MAP_NEXUS_LABORATORY_ROOM3",
+      "dest_warp_id": 7
+    },
+    {
+      "x": 22,
+      "y": 3,
+      "elevation": 0,
+      "dest_map": "MAP_NEXUS_LABORATORY_ROOM3",
+      "dest_warp_id": 11
+    },
+    {
+      "x": 22,
+      "y": 3,
+      "elevation": 0,
+      "dest_map": "MAP_NEXUS_LABORATORY_ROOM2",
+      "dest_warp_id": 6
+    },
+    {
+      "x": 22,
+      "y": 3,
+      "elevation": 0,
+      "dest_map": "MAP_NEXUS_LABORATORY_ROOM4",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 22,
+      "y": 3,
+      "elevation": 0,
+      "dest_map": "MAP_NEXUS_LABORATORY_ROOM2",
+      "dest_warp_id": 10
+    },
+    {
+      "x": 22,
+      "y": 3,
+      "elevation": 0,
+      "dest_map": "MAP_NEXUS_LABORATORY_ROOM2",
+      "dest_warp_id": 3
+    },
+    {
+      "x": 20,
+      "y": 29,
+      "elevation": 0,
+      "dest_map": "MAP_NEXUS_LABORATORY_ROOM3",
+      "dest_warp_id": 1
+    },
+    {
+      "x": 22,
+      "y": 3,
+      "elevation": 0,
+      "dest_map": "MAP_NEXUS_LABORATORY_ROOM2",
+      "dest_warp_id": 7
+    },
+    {
+      "x": 7,
+      "y": 30,
+      "elevation": 0,
+      "dest_map": "MAP_NEXUS_LABORATORY_ROOM3",
+      "dest_warp_id": 4
+    },
+    {
+      "x": 22,
+      "y": 3,
+      "elevation": 0,
+      "dest_map": "MAP_NEXUS_LABORATORY_ROOM2",
+      "dest_warp_id": 5
+    },
+    {
+      "x": 22,
+      "y": 3,
+      "elevation": 0,
+      "dest_map": "MAP_NEXUS_LABORATORY_ROOM3",
+      "dest_warp_id": 2
+    },
+    {
+      "x": 22,
+      "y": 3,
+      "elevation": 0,
+      "dest_map": "MAP_DYNAMIC",
+      "dest_warp_id": 0
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}

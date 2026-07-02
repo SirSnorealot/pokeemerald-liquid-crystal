@@ -1,0 +1,95 @@
+Route58_MapScripts::
+	.byte 0
+
+ROUTE_58_3_108_Script_009F01BB::
+	end
+
+ROUTE_58_3_108_Script_009F01F2::
+	end
+
+ROUTE_58_3_108_Script_009F01FF::
+	end
+
+ROUTE_58_3_108_Script_009F020C::
+	end
+
+ROUTE_58_3_108_Script_009F0219::
+	end
+
+ROUTE_58_3_108_Script_009F0226::
+	end
+
+ROUTE_58_3_108_Script_009F029D::
+	end
+
+ROUTE_58_3_108_Script_009F02E1::
+	end
+
+ROUTE_58_3_108_Script_009F0327::
+	end
+
+ROUTE_58_3_108_Script_009F039A::
+	end
+
+ROUTE_58_3_108_Script_009F03CE::
+	end
+
+ROUTE_58_3_108_Script_009F044F::
+	end
+
+ROUTE_58_3_108_Script_009F0493::
+	end
+
+ROUTE_58_3_108_Script_009F04D7::
+	end
+
+ROUTE_58_3_108_Script_009F0583::
+	end
+
+ROUTE_58_3_108_Script_009F063A::
+	end
+
+ROUTE_58_3_108_Script_009F0708::
+	end
+
+ROUTE_58_3_108_Script_009F07A1::
+	end
+
+ROUTE_58_3_108_Script_009F082C::
+	end
+
+ROUTE_58_3_108_Script_009F08DA::
+	end
+
+ROUTE_58_3_108_Script_009F099F::
+	end
+
+ROUTE_58_3_108_Script_009F0A38::
+	end
+
+ROUTE_58_3_108_Script_009F0AF2::
+	end
+
+ROUTE_58_3_108_Script_009F0BC0::
+	end
+
+ROUTE_58_3_108_Script_009F0C77::
+	end
+
+ROUTE_58_3_108_Script_009F0D6E::
+	end
+
+ROUTE_58_3_108_Script_009F0DA4::
+	end
+
+ROUTE_58_3_108_Script_009F0DE8::
+	end
+
+ROUTE_58_3_108_Script_009F0F79::
+	end
+
+ROUTE_58_3_108_Script_009F1065::
+	end
+
+ROUTE_58_3_108_Script_009F1151::
+	end

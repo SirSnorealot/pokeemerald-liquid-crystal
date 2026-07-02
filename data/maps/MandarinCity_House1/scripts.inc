@@ -1,0 +1,23 @@
+MandarinCity_House1_MapScripts::
+	.byte 0
+
+MANDARIN_CITY_5_121_Script_00171619::
+	end
+
+MANDARIN_CITY_5_121_Script_00171D00::
+	end
+
+MANDARIN_CITY_5_121_Script_0092BFBA::
+	end
+
+MANDARIN_CITY_5_121_Script_00931252::
+	end
+
+MANDARIN_CITY_5_121_Script_009312F6::
+	end
+
+MANDARIN_CITY_5_121_Script_009313E0::
+	end
+
+MANDARIN_CITY_5_121_Script_009314BB::
+	end

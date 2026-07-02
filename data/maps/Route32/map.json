@@ -487,22 +487,36 @@
       "x": 17,
       "y": 97,
       "elevation": 0,
-      "dest_warp_id": "0",
-      "dest_map": "MAP_ROUTE32_POKEMON_CENTER"
+      "dest_map": "MAP_ROUTE32_POKEMON_CENTER",
+      "dest_warp_id": 0
     },
     {
       "x": 2,
       "y": 4,
       "elevation": 0,
-      "dest_warp_id": "2",
-      "dest_map": "MAP_ROUTE32_RUINS_OF_ALPH_GATE"
+      "dest_map": "MAP_ROUTE32_RUINS_OF_ALPH_GATE",
+      "dest_warp_id": 2
     },
     {
       "x": 9,
       "y": 105,
       "elevation": 0,
-      "dest_warp_id": "0",
-      "dest_map": "MAP_UNION_CAVE_1_F"
+      "dest_map": "MAP_UNION_CAVE_1_F",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 36,
+      "y": 48,
+      "elevation": 0,
+      "dest_map": "MAP_DYNAMIC",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 1,
+      "y": 119,
+      "elevation": 0,
+      "dest_map": "MAP_DYNAMIC",
+      "dest_warp_id": 0
     }
   ],
   "coord_events": [

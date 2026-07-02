@@ -1,0 +1,180 @@
+{
+  "id": "MAP_LAKE_OF_RAGE_HOUSE1",
+  "name": "LakeOfRage_House1",
+  "layout": "LAYOUT_LAKE_OF_RAGE_HOUSE1",
+  "music": "MUS_RG_BERRY_PICK",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": false,
+  "weather": "WEATHER_UNDERWATER_BUBBLES",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_GYM",
+  "connections": [],
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "92",
+      "x": 18,
+      "y": 14,
+      "elevation": 0,
+      "movement_type": "1",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "LAKE_OF_RAGE_2_30_Script_0096B294",
+      "flag": "6058"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 21,
+      "y": 5,
+      "elevation": 3,
+      "dest_map": "MAP_LAKE_OF_RAGE",
+      "dest_warp_id": 2
+    }
+  ],
+  "coord_events": [],
+  "bg_events": [
+    {
+      "x": 24,
+      "y": 5,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "LAKE_OF_RAGE_2_30_Script_00971BA6"
+    },
+    {
+      "x": 23,
+      "y": 4,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "LAKE_OF_RAGE_2_30_Script_00971BA6"
+    },
+    {
+      "x": 22,
+      "y": 5,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "LAKE_OF_RAGE_2_30_Script_00971BA6"
+    },
+    {
+      "x": 22,
+      "y": 3,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "LAKE_OF_RAGE_2_30_Script_00971BA6"
+    },
+    {
+      "x": 22,
+      "y": 4,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "LAKE_OF_RAGE_2_30_Script_00971BA6"
+    },
+    {
+      "x": 23,
+      "y": 5,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "LAKE_OF_RAGE_2_30_Script_00971BA6"
+    },
+    {
+      "x": 24,
+      "y": 6,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "LAKE_OF_RAGE_2_30_Script_00971BA6"
+    },
+    {
+      "x": 23,
+      "y": 6,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "LAKE_OF_RAGE_2_30_Script_00971BA6"
+    },
+    {
+      "x": 22,
+      "y": 6,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "LAKE_OF_RAGE_2_30_Script_00971BA6"
+    },
+    {
+      "x": 21,
+      "y": 6,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "LAKE_OF_RAGE_2_30_Script_00971BA6"
+    },
+    {
+      "x": 21,
+      "y": 4,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "LAKE_OF_RAGE_2_30_Script_00971BA6"
+    },
+    {
+      "x": 20,
+      "y": 6,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "LAKE_OF_RAGE_2_30_Script_00971BA6"
+    },
+    {
+      "x": 20,
+      "y": 5,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "LAKE_OF_RAGE_2_30_Script_00971BA6"
+    },
+    {
+      "x": 20,
+      "y": 4,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "LAKE_OF_RAGE_2_30_Script_00971BA6"
+    },
+    {
+      "x": 21,
+      "y": 3,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "LAKE_OF_RAGE_2_30_Script_00971BA6"
+    },
+    {
+      "x": 20,
+      "y": 3,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "LAKE_OF_RAGE_2_30_Script_00971BA6"
+    },
+    {
+      "x": 21,
+      "y": 5,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "LAKE_OF_RAGE_2_30_Script_00971BA6"
+    }
+  ]
+}

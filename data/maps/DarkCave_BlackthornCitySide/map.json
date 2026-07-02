@@ -20,42 +20,42 @@
       "y": 33,
       "elevation": 3,
       "dest_map": "MAP_DARK_CAVE_VIOLET_CITY_SIDE",
-      "dest_warp_id": "1"
+      "dest_warp_id": 1
     },
     {
       "x": 33,
       "y": 8,
       "elevation": 3,
       "dest_map": "MAP_ROUTE45",
-      "dest_warp_id": "0"
+      "dest_warp_id": 0
     },
     {
       "x": 44,
       "y": 26,
       "elevation": 3,
       "dest_map": "MAP_DARK_CAVE_INNER_SECTION",
-      "dest_warp_id": "4"
+      "dest_warp_id": 4
     },
     {
       "x": 47,
       "y": 38,
       "elevation": 3,
       "dest_map": "MAP_DARK_CAVE_DEEP_SECTION",
-      "dest_warp_id": "6"
+      "dest_warp_id": 6
     },
     {
       "x": 3,
       "y": 38,
       "elevation": 0,
       "dest_map": "MAP_DARK_CAVE_BLACKTHORN_CITY_SIDE",
-      "dest_warp_id": "2"
+      "dest_warp_id": 2
     },
     {
       "x": 47,
       "y": 38,
       "elevation": 0,
       "dest_map": "MAP_DARK_CAVE_INNER_SECTION",
-      "dest_warp_id": "6"
+      "dest_warp_id": 6
     }
   ],
   "coord_events": [],

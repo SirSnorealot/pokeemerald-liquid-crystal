@@ -1,0 +1,43 @@
+{
+  "id": "MAP_HOLLOW_CAVE_ROOM3",
+  "name": "HollowCave_Room3",
+  "layout": "LAYOUT_HOLLOW_CAVE_ROOM3",
+  "music": "MUS_RG_MT_MOON",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_UNDERGROUND",
+  "allow_cycling": true,
+  "allow_escaping": true,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_MAGMA",
+  "connections": [],
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "92",
+      "x": 7,
+      "y": 8,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "HOLLOW_CAVE_2_104_Script_009CEDFB",
+      "flag": "6030"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 7,
+      "y": 14,
+      "elevation": 3,
+      "dest_map": "MAP_HOLLOW_CAVE_ROOM2",
+      "dest_warp_id": 3
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}

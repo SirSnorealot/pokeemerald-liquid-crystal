@@ -1,0 +1,85 @@
+{
+  "id": "MAP_CERULEAN_CITY_MART",
+  "name": "CeruleanCity_Mart",
+  "layout": "LAYOUT_MART_LC",
+  "music": "MUS_RG_SEVII_123",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [],
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "68",
+      "x": 2,
+      "y": 3,
+      "elevation": 0,
+      "movement_type": "10",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "CERULEAN_CITY_4_69_Script_0016ACB0",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "42",
+      "x": 8,
+      "y": 2,
+      "elevation": 3,
+      "movement_type": "5",
+      "movement_range_x": 4,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "CERULEAN_CITY_4_69_Script_009247EF",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "18",
+      "x": 2,
+      "y": 6,
+      "elevation": 3,
+      "movement_type": "0",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "CERULEAN_CITY_4_69_Script_00935928",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 3,
+      "y": 7,
+      "elevation": 3,
+      "dest_map": "MAP_CERULEAN_CITY",
+      "dest_warp_id": 6
+    },
+    {
+      "x": 4,
+      "y": 7,
+      "elevation": 3,
+      "dest_map": "MAP_CERULEAN_CITY",
+      "dest_warp_id": 12
+    },
+    {
+      "x": 5,
+      "y": 7,
+      "elevation": 3,
+      "dest_map": "MAP_CERULEAN_CITY",
+      "dest_warp_id": 6
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}

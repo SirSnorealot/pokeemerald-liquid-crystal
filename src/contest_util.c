@@ -2288,13 +2288,13 @@ void GetNpcContestantLocalId(void)
     switch (contestant)
     {
     case 0:
-        localId = LOCALID_CONTESTANT_1;
+        localId = 0; // TODO(LC): was LOCALID_CONTESTANT_1 (removed with Hoenn maps)
         break;
     case 1:
-        localId = LOCALID_CONTESTANT_2;
+        localId = 0; // TODO(LC): was LOCALID_CONTESTANT_2 (removed with Hoenn maps)
         break;
     case 2:
-        localId = LOCALID_CONTESTANT_3;
+        localId = 0; // TODO(LC): was LOCALID_CONTESTANT_3 (removed with Hoenn maps)
         break;
     default: // Invalid
         localId = 100;
@@ -2495,10 +2495,10 @@ void LoadLinkContestPlayerPalettes(void)
     enum GameVersion version;
     struct Sprite *sprite;
     static const u8 sContestantLocalIds[CONTESTANT_COUNT] = {
-        LOCALID_CONTESTANT_1,
-        LOCALID_CONTESTANT_2,
-        LOCALID_CONTESTANT_3,
-        LOCALID_CONTESTANT_4,
+        0, // TODO(LC): was LOCALID_CONTESTANT_1 (removed with Hoenn maps)
+        0, // TODO(LC): was LOCALID_CONTESTANT_2 (removed with Hoenn maps)
+        0, // TODO(LC): was LOCALID_CONTESTANT_3 (removed with Hoenn maps)
+        0, // TODO(LC): was LOCALID_CONTESTANT_4 (removed with Hoenn maps)
     };
 
     // gReservedSpritePaletteCount = 12;

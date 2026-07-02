@@ -361,7 +361,7 @@ CableClub_EventScript_EnterColosseum::
 	release
 	goto_if_eq VAR_0x8004, USING_MULTI_BATTLE, CableClub_EventScript_WarpTo4PColosseum
 	special SetCableClubWarp
-	warp MAP_BATTLE_COLOSSEUM_2P, 6, 8
+	warp MAP_DYNAMIC, 6, 8 @ TODO(LC): was MAP_BATTLE_COLOSSEUM_2P (removed with Hoenn maps)
 	special DoCableClubWarp
 	end
 
@@ -373,7 +373,7 @@ CableClub_EventScript_PlayerApproachLinkRoomRight::
 
 CableClub_EventScript_WarpTo4PColosseum::
 	special SetCableClubWarp
-	warp MAP_BATTLE_COLOSSEUM_4P, 5, 8
+	warp MAP_DYNAMIC, 5, 8 @ TODO(LC): was MAP_BATTLE_COLOSSEUM_4P (removed with Hoenn maps)
 	special DoCableClubWarp
 	end
 
@@ -451,7 +451,7 @@ CableClub_EventScript_EnterTradeCenter::
 	waitdooranim
 	release
 	special SetCableClubWarp
-	setwarp MAP_TRADE_CENTER, 5, 8
+	setwarp MAP_DYNAMIC, 5, 8 @ TODO(LC): was MAP_TRADE_CENTER (removed with Hoenn maps)
 	special DoCableClubWarp
 	end
 
@@ -513,7 +513,7 @@ CableClub_EventScript_EnterRecordCorner::
 	waitdooranim
 	release
 	special SetCableClubWarp
-	setwarp MAP_RECORD_CORNER, 8, 9
+	setwarp MAP_DYNAMIC, 8, 9 @ TODO(LC): was MAP_RECORD_CORNER (removed with Hoenn maps)
 	special DoCableClubWarp
 	end
 
@@ -877,7 +877,7 @@ CableClub_EventScript_EnterUnionRoom::
 	waitdooranim
 	special Script_ResetUnionRoomTrade
 	special SetCableClubWarp
-	warpspinenter MAP_UNION_ROOM, 7, 11
+	warpspinenter MAP_DYNAMIC, 7, 11 @ TODO(LC): was MAP_UNION_ROOM (removed with Hoenn maps)
 	waitstate
 	special RunUnionRoom
 	waitstate

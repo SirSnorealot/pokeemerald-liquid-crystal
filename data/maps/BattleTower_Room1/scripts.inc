@@ -1,0 +1,35 @@
+BattleTower_Room1_MapScripts::
+	.byte 0
+
+BATTLE_TOWER_2_73_Script_001649CE::
+	end
+
+BATTLE_TOWER_2_73_Script_001C4F54::
+	end
+
+BATTLE_TOWER_2_73_Script_001C51D8::
+	end
+
+BATTLE_TOWER_2_73_Script_001C54AF::
+	end
+
+BATTLE_TOWER_2_73_Script_008D0000::
+	end
+
+BATTLE_TOWER_2_73_Script_008D0051::
+	end
+
+BATTLE_TOWER_2_73_Script_008D00CB::
+	end
+
+BATTLE_TOWER_2_73_Script_008D0117::
+	end
+
+BATTLE_TOWER_2_73_Script_008D0186::
+	end
+
+BATTLE_TOWER_2_73_Script_009A2CF7::
+	end
+
+BATTLE_TOWER_2_73_Script_00A176D3::
+	end

@@ -1,0 +1,78 @@
+{
+  "id": "MAP_ROUTE59_HOUSE1",
+  "name": "Route59_House1",
+  "layout": "LAYOUT_ROUTE_GATE",
+  "music": "MUS_RG_UNION_ROOM",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [],
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "60",
+      "x": 11,
+      "y": 6,
+      "elevation": 0,
+      "movement_type": "9",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ROUTE_59_6_28_Script_00A9B878",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "33",
+      "x": 6,
+      "y": 7,
+      "elevation": 0,
+      "movement_type": "1",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ROUTE_59_6_28_Script_00A9B8B5",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "16",
+      "x": 9,
+      "y": 4,
+      "elevation": 0,
+      "movement_type": "2",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ROUTE_59_6_28_Script_00A9B802",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 7,
+      "y": 10,
+      "elevation": 0,
+      "dest_map": "MAP_MANDARIN_CITY",
+      "dest_warp_id": 2
+    },
+    {
+      "x": 7,
+      "y": 1,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE59",
+      "dest_warp_id": 3
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}

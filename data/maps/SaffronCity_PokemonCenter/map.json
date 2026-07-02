@@ -1,0 +1,151 @@
+{
+  "id": "MAP_SAFFRON_CITY_POKEMON_CENTER",
+  "name": "SaffronCity_PokemonCenter",
+  "layout": "LAYOUT_POKEMON_CENTER_LC",
+  "music": "MUS_RG_POKE_CENTER",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [],
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "64",
+      "x": 7,
+      "y": 2,
+      "elevation": 3,
+      "movement_type": "8",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SAFFRON_CITY_14_6_Script_0016EFFB",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "27",
+      "x": 12,
+      "y": 8,
+      "elevation": 3,
+      "movement_type": "9",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SAFFRON_CITY_14_6_Script_008DCA6E",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "19",
+      "x": 5,
+      "y": 5,
+      "elevation": 3,
+      "movement_type": "1",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SAFFRON_CITY_14_6_Script_008DC964",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "22",
+      "x": 13,
+      "y": 3,
+      "elevation": 3,
+      "movement_type": "2",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SAFFRON_CITY_14_6_Script_008DC9CD",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "0",
+      "x": 2,
+      "y": 0,
+      "elevation": 0,
+      "movement_type": "76",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SAFFRON_CITY_14_6_Script_001ACEEC",
+      "flag": "174"
+    },
+    {
+      "type": "object",
+      "graphics_id": "0",
+      "x": 3,
+      "y": 0,
+      "elevation": 0,
+      "movement_type": "76",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SAFFRON_CITY_14_6_Script_001ACEEC",
+      "flag": "174"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 6,
+      "y": 8,
+      "elevation": 3,
+      "dest_map": "MAP_SAFFRON_CITY",
+      "dest_warp_id": 6
+    },
+    {
+      "x": 7,
+      "y": 8,
+      "elevation": 3,
+      "dest_map": "MAP_SAFFRON_CITY",
+      "dest_warp_id": 6
+    },
+    {
+      "x": 8,
+      "y": 8,
+      "elevation": 3,
+      "dest_map": "MAP_SAFFRON_CITY",
+      "dest_warp_id": 6
+    },
+    {
+      "x": 1,
+      "y": 6,
+      "elevation": 4,
+      "dest_map": "MAP_SAFFRON_CITY_HOUSE6",
+      "dest_warp_id": 0
+    }
+  ],
+  "coord_events": [],
+  "bg_events": [
+    {
+      "x": 1,
+      "y": 1,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "SAFFRON_CITY_14_6_Script_00171619"
+    },
+    {
+      "x": 14,
+      "y": 1,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "SAFFRON_CITY_14_6_Script_0092BFBA"
+    }
+  ]
+}

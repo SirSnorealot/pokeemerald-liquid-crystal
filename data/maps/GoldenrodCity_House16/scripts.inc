@@ -1,0 +1,20 @@
+GoldenrodCity_House16_MapScripts::
+	.byte 0
+
+GOLDENROD_CITY_12_1_Script_0016E294::
+	end
+
+GOLDENROD_CITY_12_1_Script_0016E29D::
+	end
+
+GOLDENROD_CITY_12_1_Script_0016E2A6::
+	end
+
+GOLDENROD_CITY_12_1_Script_0016E2AF::
+	end
+
+GOLDENROD_CITY_12_1_Script_00853F3F::
+	end
+
+GOLDENROD_CITY_12_1_Script_00854CF1::
+	end

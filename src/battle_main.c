@@ -2557,7 +2557,7 @@ static void AskRecordBattle(void)
         }
         else
         {
-            BattleStringExpandPlaceholdersToDisplayedString(BattleFrontier_BattleTowerBattleRoom_Text_RecordCouldntBeSaved);
+            BattleStringExpandPlaceholdersToDisplayedString(NULL); // TODO(LC): was BattleFrontier_BattleTowerBattleRoom_Text_RecordCouldntBeSaved (removed with Hoenn maps)
             BattlePutTextOnWindow(gDisplayedStringBattle, B_WIN_MSG);
             gBattleCommunication[1] = 128; // Delay
             gBattleCommunication[MULTIUSE_STATE]++;

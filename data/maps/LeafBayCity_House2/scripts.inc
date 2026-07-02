@@ -1,0 +1,38 @@
+LeafBayCity_House2_MapScripts::
+	.byte 0
+
+LEAF_BAY_CITY_5_61_Script_00171619::
+	end
+
+LEAF_BAY_CITY_5_61_Script_00171D00::
+	end
+
+LEAF_BAY_CITY_5_61_Script_001A8D02::
+	end
+
+LEAF_BAY_CITY_5_61_Script_00900145::
+	end
+
+LEAF_BAY_CITY_5_61_Script_00900192::
+	end
+
+LEAF_BAY_CITY_5_61_Script_009001D9::
+	end
+
+LEAF_BAY_CITY_5_61_Script_0091362D::
+	end
+
+LEAF_BAY_CITY_5_61_Script_0092BFBA::
+	end
+
+LEAF_BAY_CITY_5_61_Script_009D0B9A::
+	end
+
+LEAF_BAY_CITY_5_61_Script_009D0EE2::
+	end
+
+LEAF_BAY_CITY_5_61_Script_009D0EEB::
+	end
+
+LEAF_BAY_CITY_5_61_Script_009D9D54::
+	end

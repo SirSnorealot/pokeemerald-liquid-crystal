@@ -1,0 +1,23 @@
+RocketHideout_Room2_MapScripts::
+	.byte 0
+
+ROCKET_HIDEOUT_1_43_Script_00835EF3::
+	end
+
+ROCKET_HIDEOUT_1_43_Script_00835FD0::
+	end
+
+ROCKET_HIDEOUT_1_43_Script_00835FDF::
+	end
+
+ROCKET_HIDEOUT_1_43_Script_00835FEE::
+	end
+
+ROCKET_HIDEOUT_1_43_Script_00836101::
+	end
+
+ROCKET_HIDEOUT_1_43_Script_00836110::
+	end
+
+ROCKET_HIDEOUT_1_43_Script_00836193::
+	end

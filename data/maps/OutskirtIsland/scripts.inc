@@ -19,7 +19,7 @@ SouthernIsland_Exterior_EventScript_Sailor::
 	@hideobjectat LOCALID_SOUTHERN_ISLAND_SAILOR, MAP_OUTSKIRT_ISLAND
 	@setvar VAR_0x8004, LOCALID_SOUTHERN_ISLAND_SS_TIDAL
 	call Common_EventScript_FerryDepartIsland
-	warp MAP_LILYCOVE_CITY_HARBOR, 8, 11
+	warp MAP_DYNAMIC, 8, 11
 	waitstate
 	release
 	end

@@ -16,18 +16,32 @@
   "object_events": [],
   "warp_events": [
     {
+      "x": 13,
+      "y": 14,
+      "elevation": 3,
+      "dest_map": "MAP_SAFFRON_CITY",
+      "dest_warp_id": 9
+    },
+    {
       "x": 7,
       "y": 1,
       "elevation": 3,
-      "dest_warp_id": "0",
-      "dest_map": "MAP_ROUTE36"
+      "dest_map": "MAP_ROUTE36",
+      "dest_warp_id": 0
     },
     {
       "x": 7,
       "y": 10,
       "elevation": 3,
-      "dest_warp_id": "1",
-      "dest_map": "MAP_RUINS_OF_ALPH"
+      "dest_map": "MAP_RUINS_OF_ALPH",
+      "dest_warp_id": 1
+    },
+    {
+      "x": 8,
+      "y": 1,
+      "elevation": 0,
+      "dest_map": "MAP_OUTSKIRT_ISLAND",
+      "dest_warp_id": 0
     }
   ],
   "coord_events": [],

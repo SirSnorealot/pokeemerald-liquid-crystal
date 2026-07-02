@@ -1,0 +1,14 @@
+CherrygroveCity_House3_MapScripts::
+	.byte 0
+
+CHERRYGROVE_CITY_21_1_Script_001A8CF6::
+	end
+
+CHERRYGROVE_CITY_21_1_Script_001A8CFC::
+	end
+
+CHERRYGROVE_CITY_21_1_Script_001A8D02::
+	end
+
+CHERRYGROVE_CITY_21_1_Script_001BB1D2::
+	end

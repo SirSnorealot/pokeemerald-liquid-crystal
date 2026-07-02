@@ -1,0 +1,85 @@
+{
+  "id": "MAP_SS_AQUA_ROOM6",
+  "name": "SSAqua_Room6",
+  "layout": "LAYOUT_SS_AQUA_ROOM6",
+  "music": "MUS_RG_SS_ANNE",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [],
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "61",
+      "x": 2,
+      "y": 7,
+      "elevation": 3,
+      "movement_type": "10",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "6",
+      "script": "S_S__AQUA_4_18_Script_008D8994",
+      "flag": "5485"
+    },
+    {
+      "type": "object",
+      "graphics_id": "17",
+      "x": 3,
+      "y": 9,
+      "elevation": 0,
+      "movement_type": "1",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "S_S__AQUA_4_18_Script_008D79C8",
+      "flag": "5478"
+    },
+    {
+      "type": "object",
+      "graphics_id": "17",
+      "x": 3,
+      "y": 7,
+      "elevation": 0,
+      "movement_type": "1",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "S_S__AQUA_4_18_Script_008D79C8",
+      "flag": "5481"
+    },
+    {
+      "type": "object",
+      "graphics_id": "52",
+      "x": 0,
+      "y": 6,
+      "elevation": 0,
+      "movement_type": "1",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "1",
+      "trainer_sight_or_berry_tree_id": "4",
+      "script": "S_S__AQUA_4_18_Script_00912D9C",
+      "flag": "5628"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 4,
+      "y": 9,
+      "elevation": 3,
+      "dest_map": "MAP_SS_AQUA_ROOM1",
+      "dest_warp_id": 0
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}

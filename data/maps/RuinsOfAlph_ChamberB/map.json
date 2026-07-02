@@ -19,29 +19,29 @@
       "x": 4,
       "y": 10,
       "elevation": 0,
-      "dest_warp_id": "5",
-      "dest_map": "MAP_RUINS_OF_ALPH"
+      "dest_map": "MAP_RUINS_OF_ALPH",
+      "dest_warp_id": 5
     },
     {
       "x": 5,
       "y": 10,
       "elevation": 0,
-      "dest_warp_id": "5",
-      "dest_map": "MAP_RUINS_OF_ALPH"
+      "dest_map": "MAP_RUINS_OF_ALPH",
+      "dest_warp_id": 5
     },
     {
       "x": 4,
       "y": 4,
       "elevation": 0,
-      "dest_warp_id": "1",
-      "dest_map": "MAP_RUINS_OF_ALPH_PUZZLE_ROOM_B"
+      "dest_map": "MAP_RUINS_OF_ALPH_PUZZLE_ROOM_B",
+      "dest_warp_id": 1
     },
     {
       "x": 5,
       "y": 4,
       "elevation": 0,
-      "dest_warp_id": "1",
-      "dest_map": "MAP_RUINS_OF_ALPH_PUZZLE_ROOM_B"
+      "dest_map": "MAP_RUINS_OF_ALPH_PUZZLE_ROOM_B",
+      "dest_warp_id": 1
     }
   ],
   "coord_events": [],

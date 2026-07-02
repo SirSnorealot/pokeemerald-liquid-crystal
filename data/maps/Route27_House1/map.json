@@ -1,0 +1,43 @@
+{
+  "id": "MAP_ROUTE27_HOUSE1",
+  "name": "Route27_House1",
+  "layout": "LAYOUT_HOUSE2_LC",
+  "music": "MUS_RG_TEACHY_TV_SHOW",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [],
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "35",
+      "x": 4,
+      "y": 4,
+      "elevation": 3,
+      "movement_type": "0",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ROUTE_27_1_18_Script_0086DA9B",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 4,
+      "y": 8,
+      "elevation": 3,
+      "dest_map": "MAP_ROUTE27",
+      "dest_warp_id": 0
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}

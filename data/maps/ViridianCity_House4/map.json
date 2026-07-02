@@ -1,0 +1,88 @@
+{
+  "id": "MAP_VIRIDIAN_CITY_HOUSE4",
+  "name": "ViridianCity_House4",
+  "layout": "LAYOUT_VIRIDIAN_CITY_HOUSE4",
+  "music": "MUS_RG_GYM",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_GYM",
+  "connections": [],
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "45",
+      "x": 5,
+      "y": 4,
+      "elevation": 3,
+      "movement_type": "8",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "VIRIDIAN_CITY_5_1_Script_009360D0",
+      "flag": "5764"
+    },
+    {
+      "type": "object",
+      "graphics_id": "91",
+      "x": 8,
+      "y": 16,
+      "elevation": 3,
+      "movement_type": "8",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "VIRIDIAN_CITY_5_1_Script_0016A032",
+      "flag": "5764"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 4,
+      "y": 20,
+      "elevation": 3,
+      "dest_map": "MAP_VIRIDIAN_CITY",
+      "dest_warp_id": 2
+    },
+    {
+      "x": 5,
+      "y": 20,
+      "elevation": 3,
+      "dest_map": "MAP_VIRIDIAN_CITY",
+      "dest_warp_id": 2
+    },
+    {
+      "x": 6,
+      "y": 20,
+      "elevation": 3,
+      "dest_map": "MAP_VIRIDIAN_CITY",
+      "dest_warp_id": 2
+    }
+  ],
+  "coord_events": [],
+  "bg_events": [
+    {
+      "x": 7,
+      "y": 16,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "VIRIDIAN_CITY_5_1_Script_0016A05E"
+    },
+    {
+      "x": 3,
+      "y": 16,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "VIRIDIAN_CITY_5_1_Script_0016A05E"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+OlivineCity_House6_MapScripts::
+	.byte 0
+
+OLIVINE_CITY_32_0_Script_00170E94::
+	end
+
+OLIVINE_CITY_32_0_Script_00170E9D::
+	end
+
+OLIVINE_CITY_32_0_Script_00170EC5::
+	end
+
+OLIVINE_CITY_32_0_Script_00171179::
+	end
+
+OLIVINE_CITY_32_0_Script_00171619::
+	end
+
+OLIVINE_CITY_32_0_Script_00827931::
+	end
+
+OLIVINE_CITY_32_0_Script_0089DF53::
+	end
+
+OLIVINE_CITY_32_0_Script_0092BFBA::
+	end
+
+OLIVINE_CITY_32_0_Script_0095915E::
+	end

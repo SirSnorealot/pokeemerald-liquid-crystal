@@ -1,0 +1,23 @@
+WestValePort_House4_MapScripts::
+	.byte 0
+
+WEST_VALE_PORT_5_84_Script_00171619::
+	end
+
+WEST_VALE_PORT_5_84_Script_00171D00::
+	end
+
+WEST_VALE_PORT_5_84_Script_0092BFBA::
+	end
+
+WEST_VALE_PORT_5_84_Script_00A5222D::
+	end
+
+WEST_VALE_PORT_5_84_Script_00A52320::
+	end
+
+WEST_VALE_PORT_5_84_Script_00A523A5::
+	end
+
+WEST_VALE_PORT_5_84_Script_00A52436::
+	end

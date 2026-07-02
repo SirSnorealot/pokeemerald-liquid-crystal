@@ -1,0 +1,32 @@
+EcruteakCity_House3_MapScripts::
+	.byte 0
+
+ECRUTEAK_CITY_2_24_Script_00821E22::
+	end
+
+ECRUTEAK_CITY_2_24_Script_00821EB8::
+	end
+
+ECRUTEAK_CITY_2_24_Script_00821EE3::
+	end
+
+ECRUTEAK_CITY_2_24_Script_00821FB9::
+	end
+
+ECRUTEAK_CITY_2_24_Script_008221FC::
+	end
+
+ECRUTEAK_CITY_2_24_Script_00822297::
+	end
+
+ECRUTEAK_CITY_2_24_Script_00822342::
+	end
+
+ECRUTEAK_CITY_2_24_Script_008223E3::
+	end
+
+ECRUTEAK_CITY_2_24_Script_0082249A::
+	end
+
+ECRUTEAK_CITY_2_24_Script_00909F70::
+	end

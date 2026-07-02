@@ -1,0 +1,41 @@
+WestValePort_MapScripts::
+	.byte 0
+
+WEST_VALE_PORT_3_98_Script_00A34A4F::
+	end
+
+WEST_VALE_PORT_3_98_Script_00A35402::
+	end
+
+WEST_VALE_PORT_3_98_Script_00A35793::
+	end
+
+WEST_VALE_PORT_3_98_Script_00A429E6::
+	end
+
+WEST_VALE_PORT_3_98_Script_00A4697C::
+	end
+
+WEST_VALE_PORT_3_98_Script_00A49770::
+	end
+
+WEST_VALE_PORT_3_98_Script_00A4D7E6::
+	end
+
+WEST_VALE_PORT_3_98_Script_00A4D804::
+	end
+
+WEST_VALE_PORT_3_98_Script_00A5167F::
+	end
+
+WEST_VALE_PORT_3_98_Script_00A5285C::
+	end
+
+WEST_VALE_PORT_3_98_Script_00A54C1B::
+	end
+
+WEST_VALE_PORT_3_98_Script_00A563A1::
+	end
+
+WEST_VALE_PORT_3_98_Script_00A56469::
+	end

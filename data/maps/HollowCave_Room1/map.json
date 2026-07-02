@@ -1,0 +1,113 @@
+{
+  "id": "MAP_HOLLOW_CAVE_ROOM1",
+  "name": "HollowCave_Room1",
+  "layout": "LAYOUT_HOLLOW_CAVE_ROOM1",
+  "music": "MUS_RG_MT_MOON",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_UNDERGROUND",
+  "allow_cycling": false,
+  "allow_escaping": true,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [],
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "92",
+      "x": 24,
+      "y": 29,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "HOLLOW_CAVE_2_102_Script_009CE9D7",
+      "flag": "6021"
+    },
+    {
+      "type": "object",
+      "graphics_id": "92",
+      "x": 23,
+      "y": 14,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "HOLLOW_CAVE_2_102_Script_009CE9CA",
+      "flag": "6020"
+    },
+    {
+      "type": "object",
+      "graphics_id": "92",
+      "x": 6,
+      "y": 36,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "HOLLOW_CAVE_2_102_Script_009CE9E4",
+      "flag": "6022"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 31,
+      "y": 7,
+      "elevation": 0,
+      "dest_map": "MAP_HOLLOW_CAVE_ROOM2",
+      "dest_warp_id": 1
+    },
+    {
+      "x": 6,
+      "y": 19,
+      "elevation": 0,
+      "dest_map": "MAP_HOLLOW_CAVE_ROOM2",
+      "dest_warp_id": 2
+    },
+    {
+      "x": 11,
+      "y": 22,
+      "elevation": 0,
+      "dest_map": "MAP_HOLLOW_CAVE_ROOM2",
+      "dest_warp_id": 5
+    },
+    {
+      "x": 34,
+      "y": 19,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE39_2",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 33,
+      "y": 47,
+      "elevation": 0,
+      "dest_map": "MAP_HOLLOW_CAVE_ROOM2",
+      "dest_warp_id": 4
+    },
+    {
+      "x": 5,
+      "y": 47,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE40",
+      "dest_warp_id": 1
+    },
+    {
+      "x": 32,
+      "y": 34,
+      "elevation": 0,
+      "dest_map": "MAP_HOLLOW_CAVE_ROOM2",
+      "dest_warp_id": 6
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}

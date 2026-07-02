@@ -1,0 +1,14 @@
+CinnabarVolcano_Room1_MapScripts::
+	.byte 0
+
+CINNABAR_VOLCANO_5_44_Script_009133B6::
+	end
+
+CINNABAR_VOLCANO_5_44_Script_00921734::
+	end
+
+CINNABAR_VOLCANO_5_44_Script_00921880::
+	end
+
+CINNABAR_VOLCANO_5_44_Script_00921A10::
+	end

@@ -1,0 +1,269 @@
+{
+  "id": "MAP_MT_MORTAR_ROOM5",
+  "name": "MtMortar_Room5",
+  "layout": "LAYOUT_MT_MORTAR_ROOM5",
+  "music": "MUS_RG_VIRIDIAN_FOREST",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": false,
+  "weather": "WEATHER_SHADE",
+  "map_type": "MAP_TYPE_UNDERGROUND",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [],
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "92",
+      "x": 35,
+      "y": 27,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MT__MORTAR_2_50_Script_0082DDAF",
+      "flag": "6091"
+    },
+    {
+      "type": "object",
+      "graphics_id": "92",
+      "x": 29,
+      "y": 12,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MT__MORTAR_2_50_Script_0082DDC6",
+      "flag": "4442"
+    },
+    {
+      "type": "object",
+      "graphics_id": "92",
+      "x": 37,
+      "y": 2,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MT__MORTAR_2_50_Script_0082DDDD",
+      "flag": "4443"
+    },
+    {
+      "type": "object",
+      "graphics_id": "92",
+      "x": 20,
+      "y": 26,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MT__MORTAR_2_50_Script_0082DDF4",
+      "flag": "4444"
+    },
+    {
+      "type": "object",
+      "graphics_id": "92",
+      "x": 4,
+      "y": 16,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MT__MORTAR_2_50_Script_0082E022",
+      "flag": "4445"
+    },
+    {
+      "type": "object",
+      "graphics_id": "54",
+      "x": 13,
+      "y": 2,
+      "elevation": 0,
+      "movement_type": "2",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MT__MORTAR_2_50_Script_0090AF44",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "97",
+      "x": 9,
+      "y": 10,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MT__MORTAR_2_50_Script_001BE11D",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 19,
+      "y": 29,
+      "elevation": 3,
+      "dest_map": "MAP_MT_MORTAR_ROOM2",
+      "dest_warp_id": 5
+    },
+    {
+      "x": 3,
+      "y": 3,
+      "elevation": 3,
+      "dest_map": "MAP_MT_MORTAR_ROOM3",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 29,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_UNDERSEA_CAVERN_ROOM6",
+      "dest_warp_id": 6
+    },
+    {
+      "x": 35,
+      "y": 1,
+      "elevation": 0,
+      "dest_map": "MAP_MT_MORTAR_ROOM1",
+      "dest_warp_id": 0
+    }
+  ],
+  "coord_events": [],
+  "bg_events": [
+    {
+      "x": 28,
+      "y": 9,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "MT__MORTAR_2_50_Script_0091663C"
+    },
+    {
+      "x": 28,
+      "y": 8,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "MT__MORTAR_2_50_Script_0091663C"
+    },
+    {
+      "x": 29,
+      "y": 7,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "MT__MORTAR_2_50_Script_0091663C"
+    },
+    {
+      "x": 29,
+      "y": 8,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "MT__MORTAR_2_50_Script_0091663C"
+    },
+    {
+      "x": 30,
+      "y": 9,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "MT__MORTAR_2_50_Script_0091663C"
+    },
+    {
+      "x": 29,
+      "y": 9,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "MT__MORTAR_2_50_Script_0091663C"
+    },
+    {
+      "x": 27,
+      "y": 9,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_WEST",
+      "script": "MT__MORTAR_2_50_Script_0091663C"
+    },
+    {
+      "x": 27,
+      "y": 8,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_WEST",
+      "script": "MT__MORTAR_2_50_Script_0091663C"
+    },
+    {
+      "x": 29,
+      "y": 6,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "MT__MORTAR_2_50_Script_0091663C"
+    },
+    {
+      "x": 31,
+      "y": 9,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_EAST",
+      "script": "MT__MORTAR_2_50_Script_0091663C"
+    },
+    {
+      "x": 30,
+      "y": 7,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_EAST",
+      "script": "MT__MORTAR_2_50_Script_0091663C"
+    },
+    {
+      "x": 30,
+      "y": 8,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_EAST",
+      "script": "MT__MORTAR_2_50_Script_0091663C"
+    },
+    {
+      "x": 28,
+      "y": 7,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_WEST",
+      "script": "MT__MORTAR_2_50_Script_0091663C"
+    },
+    {
+      "x": 35,
+      "y": 1,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "MT__MORTAR_2_50_Script_009709D6"
+    },
+    {
+      "x": 34,
+      "y": 1,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "MT__MORTAR_2_50_Script_009709D6"
+    }
+  ]
+}

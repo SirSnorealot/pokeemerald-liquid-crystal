@@ -186,9 +186,9 @@ ContestHall_EventScript_DoContest::
 	special LinkContestTryShowWirelessIndicator
 	setvar VAR_0x8006, 0
 	lockall
-	applymovement LOCALID_CONTESTANT_4, ContestHall_Movement_Player4FaceUp
+	@ TODO(LC): removed with Hoenn maps — applymovement LOCALID_CONTESTANT_4, ContestHall_Movement_Player4FaceUp
 	waitmovement 0
-	applymovement LOCALID_CONTEST_MC, ContestHall_Movement_MCWalkDown
+	@ TODO(LC): removed with Hoenn maps — applymovement LOCALID_CONTEST_MC, ContestHall_Movement_MCWalkDown
 	waitmovement 0
 	releaseall
 	call ContestHall_EventScript_TryWaitForLink
@@ -264,7 +264,7 @@ ContestHall_EventScript_ContestGettingStarted::
 	bufferstdstring STR_VAR_3, VAR_0x8009
 	call ContestHall_EventScript_GettingStarted
 	lockall
-	applymovement LOCALID_CONTEST_MC, ContestHall_Movement_MCBackUp
+	@ TODO(LC): removed with Hoenn maps — applymovement LOCALID_CONTEST_MC, ContestHall_Movement_MCBackUp
 	waitmovement 0
 	releaseall
 	return
@@ -325,37 +325,37 @@ ContestHall_EventScript_ContestantWalkToCenter::
 ContestHall_EventScript_Player1WalkToCenter::
 	call ContestHall_EventScript_TryWaitForLink
 	lockall
-	applymovement LOCALID_CONTESTANT_1, ContestHall_Movement_Player1WalkToCenter
+	@ TODO(LC): removed with Hoenn maps — applymovement LOCALID_CONTESTANT_1, ContestHall_Movement_Player1WalkToCenter
 	waitmovement 0
 	releaseall
-	setvar VAR_0x800B, LOCALID_CONTESTANT_1
+	@ TODO(LC): removed with Hoenn maps — setvar VAR_0x800B, LOCALID_CONTESTANT_1
 	return
 
 ContestHall_EventScript_Player2WalkToCenter::
 	call ContestHall_EventScript_TryWaitForLink
 	lockall
-	applymovement LOCALID_CONTESTANT_2, ContestHall_Movement_Player2WalkToCenter
+	@ TODO(LC): removed with Hoenn maps — applymovement LOCALID_CONTESTANT_2, ContestHall_Movement_Player2WalkToCenter
 	waitmovement 0
 	releaseall
-	setvar VAR_0x800B, LOCALID_CONTESTANT_2
+	@ TODO(LC): removed with Hoenn maps — setvar VAR_0x800B, LOCALID_CONTESTANT_2
 	return
 
 ContestHall_EventScript_Player3WalkToCenter::
 	call ContestHall_EventScript_TryWaitForLink
 	lockall
-	applymovement LOCALID_CONTESTANT_3, ContestHall_Movement_Player3WalkToCenter
+	@ TODO(LC): removed with Hoenn maps — applymovement LOCALID_CONTESTANT_3, ContestHall_Movement_Player3WalkToCenter
 	waitmovement 0
 	releaseall
-	setvar VAR_0x800B, LOCALID_CONTESTANT_3
+	@ TODO(LC): removed with Hoenn maps — setvar VAR_0x800B, LOCALID_CONTESTANT_3
 	return
 
 ContestHall_EventScript_Player4WalkToCenter::
 	call ContestHall_EventScript_TryWaitForLink
 	lockall
-	applymovement LOCALID_CONTESTANT_4, ContestHall_Movement_Player4WalkToCenter
+	@ TODO(LC): removed with Hoenn maps — applymovement LOCALID_CONTESTANT_4, ContestHall_Movement_Player4WalkToCenter
 	waitmovement 0
 	releaseall
-	setvar VAR_0x800B, LOCALID_CONTESTANT_4
+	@ TODO(LC): removed with Hoenn maps — setvar VAR_0x800B, LOCALID_CONTESTANT_4
 	return
 
 ContestHall_EventScript_ShowContestMonPic::
@@ -368,7 +368,7 @@ ContestHall_EventScript_ShowContestMonPic::
 	releaseall
 	call ContestHall_EventScript_TryWaitForLink
 	call ContestHall_EventScript_CheckIfContestWithRSPlayer
-	addobject LOCALID_CONTEST_POKEBALL
+	@ TODO(LC): removed with Hoenn maps — addobject LOCALID_CONTEST_POKEBALL
 	playse SE_LEDGE
 	lockall
 	applymovement VAR_0x800B, ContestHall_Movement_ContestantDelay32
@@ -397,13 +397,13 @@ ContestHall_EventScript_AudienceVote::
 	playse SE_M_ENCORE2
 	waitmessage
 	call ContestHall_EventScript_AudienceLookAround
-	applymovement LOCALID_CONTEST_MC, ContestHall_Movement_MCFaceJudge2
+	@ TODO(LC): removed with Hoenn maps — applymovement LOCALID_CONTEST_MC, ContestHall_Movement_MCFaceJudge2
 	waitmovement 0
-	applymovement LOCALID_CONTEST_JUDGE, ContestHall_Movement_JudgeFaceMC
+	@ TODO(LC): removed with Hoenn maps — applymovement LOCALID_CONTEST_JUDGE, ContestHall_Movement_JudgeFaceMC
 	waitmovement 0
 	delay 20
-	applymovement LOCALID_CONTEST_MC, ContestHall_Movement_FaceContestants
-	applymovement LOCALID_CONTEST_JUDGE, ContestHall_Movement_FaceContestants
+	@ TODO(LC): removed with Hoenn maps — applymovement LOCALID_CONTEST_MC, ContestHall_Movement_FaceContestants
+	@ TODO(LC): removed with Hoenn maps — applymovement LOCALID_CONTEST_JUDGE, ContestHall_Movement_FaceContestants
 	waitmovement 0
 	return
 
@@ -443,25 +443,25 @@ ContestHall_EventScript_VotingUnderWayLink::
 
 ContestHall_EventScript_AudienceReactToContestant::
 	call ContestHall_EventScript_TryWaitForLink
-	applymovement LOCALID_CONTEST_MC, ContestHall_Movement_AudienceMemberLookLeft
+	@ TODO(LC): removed with Hoenn maps — applymovement LOCALID_CONTEST_MC, ContestHall_Movement_AudienceMemberLookLeft
 	waitmovement 0
 	playse SE_M_ENCORE2
 	call ContestHall_EventScript_VObjectAudienceLookAround
-	applymovement LOCALID_CONTEST_AUDIENCE_5, ContestHall_Movement_AudienceMemberLookRight
-	applymovement LOCALID_CONTEST_AUDIENCE_2, ContestHall_Movement_AudienceMemberLookDown
-	applymovement LOCALID_CONTEST_AUDIENCE_3, ContestHall_Movement_AudienceMemberLookRight
+	@ TODO(LC): removed with Hoenn maps — applymovement LOCALID_CONTEST_AUDIENCE_5, ContestHall_Movement_AudienceMemberLookRight
+	@ TODO(LC): removed with Hoenn maps — applymovement LOCALID_CONTEST_AUDIENCE_2, ContestHall_Movement_AudienceMemberLookDown
+	@ TODO(LC): removed with Hoenn maps — applymovement LOCALID_CONTEST_AUDIENCE_3, ContestHall_Movement_AudienceMemberLookRight
 	waitmovement 0
-	applymovement LOCALID_CONTEST_MC, ContestHall_Movement_AudienceMemberLookRight
+	@ TODO(LC): removed with Hoenn maps — applymovement LOCALID_CONTEST_MC, ContestHall_Movement_AudienceMemberLookRight
 	waitmovement 0
-	applymovement LOCALID_CONTEST_AUDIENCE_6, ContestHall_Movement_AudienceMemberLookLeft
-	applymovement LOCALID_CONTEST_AUDIENCE_7, ContestHall_Movement_AudienceMemberLookDown
-	applymovement LOCALID_CONTEST_AUDIENCE_1, ContestHall_Movement_AudienceMemberLookUp
-	applymovement LOCALID_CONTEST_AUDIENCE_4, ContestHall_Movement_AudienceMemberLookLeft
+	@ TODO(LC): removed with Hoenn maps — applymovement LOCALID_CONTEST_AUDIENCE_6, ContestHall_Movement_AudienceMemberLookLeft
+	@ TODO(LC): removed with Hoenn maps — applymovement LOCALID_CONTEST_AUDIENCE_7, ContestHall_Movement_AudienceMemberLookDown
+	@ TODO(LC): removed with Hoenn maps — applymovement LOCALID_CONTEST_AUDIENCE_1, ContestHall_Movement_AudienceMemberLookUp
+	@ TODO(LC): removed with Hoenn maps — applymovement LOCALID_CONTEST_AUDIENCE_4, ContestHall_Movement_AudienceMemberLookLeft
 	waitmovement 0
-	applymovement LOCALID_CONTEST_MC, ContestHall_Movement_MCLookAtJudge
+	@ TODO(LC): removed with Hoenn maps — applymovement LOCALID_CONTEST_MC, ContestHall_Movement_MCLookAtJudge
 	waitmovement 0
-	applymovement LOCALID_CONTEST_MC, ContestHall_Movement_MCWalkInPlaceDown
-	applymovement LOCALID_CONTEST_JUDGE, ContestHall_Movement_JudgeLookAtMC
+	@ TODO(LC): removed with Hoenn maps — applymovement LOCALID_CONTEST_MC, ContestHall_Movement_MCWalkInPlaceDown
+	@ TODO(LC): removed with Hoenn maps — applymovement LOCALID_CONTEST_JUDGE, ContestHall_Movement_JudgeLookAtMC
 	waitmovement 0
 	releaseall
 	call ContestHall_EventScript_TryWaitForLink
@@ -607,7 +607,7 @@ ContestHall_EventScript_Set8Hearts::
 
 ContestHall_EventScript_TryDisplayHeartAudienceMember1::
 	goto_if_eq VAR_TEMP_1, 1, ContestHall_EventScript_AudienceMember1AlreadyEmoted
-	applymovement LOCALID_CONTEST_AUDIENCE_1, ContestHall_Movement_Heart
+	@ TODO(LC): removed with Hoenn maps — applymovement LOCALID_CONTEST_AUDIENCE_1, ContestHall_Movement_Heart
 	playse SE_PIN
 	delay 14
 	setvar VAR_TEMP_1, 1
@@ -619,7 +619,7 @@ ContestHall_EventScript_AudienceMember1AlreadyEmoted::
 
 ContestHall_EventScript_TryDisplayHeartAudienceMember2::
 	goto_if_eq VAR_TEMP_2, 1, ContestHall_EventScript_AudienceMember2AlreadyEmoted
-	applymovement LOCALID_CONTEST_AUDIENCE_2, ContestHall_Movement_Heart
+	@ TODO(LC): removed with Hoenn maps — applymovement LOCALID_CONTEST_AUDIENCE_2, ContestHall_Movement_Heart
 	playse SE_PIN
 	delay 14
 	setvar VAR_TEMP_2, 1
@@ -631,7 +631,7 @@ ContestHall_EventScript_AudienceMember2AlreadyEmoted::
 
 ContestHall_EventScript_TryDisplayHeartAudienceMember3::
 	goto_if_eq VAR_TEMP_3, 1, ContestHall_EventScript_AudienceMember3AlreadyEmoted
-	applymovement LOCALID_CONTEST_AUDIENCE_3, ContestHall_Movement_Heart
+	@ TODO(LC): removed with Hoenn maps — applymovement LOCALID_CONTEST_AUDIENCE_3, ContestHall_Movement_Heart
 	playse SE_PIN
 	delay 14
 	setvar VAR_TEMP_3, 1
@@ -643,7 +643,7 @@ ContestHall_EventScript_AudienceMember3AlreadyEmoted::
 
 ContestHall_EventScript_TryDisplayHeartAudienceMember4::
 	goto_if_eq VAR_TEMP_4, 1, ContestHall_EventScript_Audience4MemberAlreadyEmoted
-	applymovement LOCALID_CONTEST_AUDIENCE_4, ContestHall_Movement_Heart
+	@ TODO(LC): removed with Hoenn maps — applymovement LOCALID_CONTEST_AUDIENCE_4, ContestHall_Movement_Heart
 	playse SE_PIN
 	delay 14
 	setvar VAR_TEMP_4, 1
@@ -655,7 +655,7 @@ ContestHall_EventScript_Audience4MemberAlreadyEmoted::
 
 ContestHall_EventScript_TryDisplayHeartAudienceMember5::
 	goto_if_eq VAR_TEMP_5, 1, ContestHall_EventScript_AudienceMember5AlreadyEmoted
-	applymovement LOCALID_CONTEST_AUDIENCE_5, ContestHall_Movement_Heart
+	@ TODO(LC): removed with Hoenn maps — applymovement LOCALID_CONTEST_AUDIENCE_5, ContestHall_Movement_Heart
 	playse SE_PIN
 	delay 14
 	setvar VAR_TEMP_5, 1
@@ -667,7 +667,7 @@ ContestHall_EventScript_AudienceMember5AlreadyEmoted::
 
 ContestHall_EventScript_TryDisplayHeartAudienceMember6::
 	goto_if_eq VAR_TEMP_6, 1, ContestHall_EventScript_AudienceMember6AlreadyEmoted
-	applymovement LOCALID_CONTEST_AUDIENCE_6, ContestHall_Movement_Heart
+	@ TODO(LC): removed with Hoenn maps — applymovement LOCALID_CONTEST_AUDIENCE_6, ContestHall_Movement_Heart
 	playse SE_PIN
 	delay 14
 	setvar VAR_TEMP_6, 1
@@ -679,7 +679,7 @@ ContestHall_EventScript_AudienceMember6AlreadyEmoted::
 
 ContestHall_EventScript_TryDisplayHeartAudienceMember7::
 	goto_if_eq VAR_TEMP_7, 1, ContestHall_EventScript_AudienceMember7AlreadyEmoted
-	applymovement LOCALID_CONTEST_AUDIENCE_7, ContestHall_Movement_Heart
+	@ TODO(LC): removed with Hoenn maps — applymovement LOCALID_CONTEST_AUDIENCE_7, ContestHall_Movement_Heart
 	playse SE_PIN
 	delay 14
 	setvar VAR_TEMP_7, 1
@@ -691,7 +691,7 @@ ContestHall_EventScript_AudienceMember7AlreadyEmoted::
 
 ContestHall_EventScript_TryDisplayHeartAudienceMember8::
 	goto_if_eq VAR_TEMP_8, 1, ContestHall_EventScript_AudienceMember8AlreadyEmoted
-	applymovement LOCALID_CONTEST_ARTIST, ContestHall_Movement_Heart
+	@ TODO(LC): removed with Hoenn maps — applymovement LOCALID_CONTEST_ARTIST, ContestHall_Movement_Heart
 	playse SE_PIN
 	delay 14
 	setvar VAR_TEMP_8, 1
@@ -704,7 +704,7 @@ ContestHall_EventScript_AudienceMember8AlreadyEmoted::
 ContestHall_EventScript_ContestantReturn::
 	closemessage
 	release
-	removeobject LOCALID_CONTEST_POKEBALL
+	@ TODO(LC): removed with Hoenn maps — removeobject LOCALID_CONTEST_POKEBALL
 	special HideContestEntryMonPic
 	call ContestHall_EventScript_TryWaitForLink
 	switch VAR_0x8006
@@ -748,13 +748,13 @@ ContestHall_EventScript_Player4WalkBack::
 
 ContestHall_EventScript_DoContestAppeals::
 	lockall
-	applymovement LOCALID_CONTEST_MC, ContestHall_Movement_FaceContestants2
+	@ TODO(LC): removed with Hoenn maps — applymovement LOCALID_CONTEST_MC, ContestHall_Movement_FaceContestants2
 	waitmovement 0
 	call ContestHall_EventScript_TryWaitForLink
 	call ContestHall_EventScript_LetsAppeal
 	waitmessage
-	applymovement LOCALID_CONTEST_MC, ContestHall_Movement_WalkStageLeft
-	applymovement LOCALID_CONTEST_JUDGE, ContestHall_Movement_WalkStageRight
+	@ TODO(LC): removed with Hoenn maps — applymovement LOCALID_CONTEST_MC, ContestHall_Movement_WalkStageLeft
+	@ TODO(LC): removed with Hoenn maps — applymovement LOCALID_CONTEST_JUDGE, ContestHall_Movement_WalkStageRight
 	waitmovement 0
 	releaseall
 	call ContestHall_EventScript_TryWaitForLink
@@ -764,8 +764,8 @@ ContestHall_EventScript_DoContestAppeals::
 	special LinkContestTryShowWirelessIndicator
 	setvar VAR_TEMP_9, 0
 	lockall
-	applymovement LOCALID_CONTEST_MC, ContestHall_Movement_WalkStageRight
-	applymovement LOCALID_CONTEST_JUDGE, ContestHall_Movement_WalkStageLeft
+	@ TODO(LC): removed with Hoenn maps — applymovement LOCALID_CONTEST_MC, ContestHall_Movement_WalkStageRight
+	@ TODO(LC): removed with Hoenn maps — applymovement LOCALID_CONTEST_JUDGE, ContestHall_Movement_WalkStageLeft
 	waitmovement 0
 	releaseall
 	return
@@ -801,13 +801,13 @@ ContestHall_EventScript_ContestResults::
 	call ContestHall_EventScript_TryWaitForLink
 	call ContestHall_EventScript_ThankYouForAppeals
 	call ContestHall_EventScript_TryWaitForLink
-	applymovement LOCALID_CONTEST_MC, ContestHall_Movement_MCFaceJudge
+	@ TODO(LC): removed with Hoenn maps — applymovement LOCALID_CONTEST_MC, ContestHall_Movement_MCFaceJudge
 	waitmovement 0
 	call ContestHall_EventScript_JudgeLooksReady
 	call ContestHall_EventScript_TryWaitForLink
 	call ContestHall_EventScript_WeWillDeclareWinner
 	call ContestHall_EventScript_TryWaitForLink
-	applymovement LOCALID_CONTEST_MC, ContestHall_Movement_FaceContestants
+	@ TODO(LC): removed with Hoenn maps — applymovement LOCALID_CONTEST_MC, ContestHall_Movement_FaceContestants
 	waitmovement 0
 	closemessage
 	releaseall
@@ -876,19 +876,19 @@ ContestHall_EventScript_GetWinnerObjEventId::
 	return
 
 ContestHall_EventScript_GetPlayer1ObjEventId::
-	setvar VAR_TEMP_3, LOCALID_CONTESTANT_1
+	@ TODO(LC): removed with Hoenn maps — setvar VAR_TEMP_3, LOCALID_CONTESTANT_1
 	return
 
 ContestHall_EventScript_GetPlayer2ObjEventId::
-	setvar VAR_TEMP_3, LOCALID_CONTESTANT_2
+	@ TODO(LC): removed with Hoenn maps — setvar VAR_TEMP_3, LOCALID_CONTESTANT_2
 	return
 
 ContestHall_EventScript_GetPlayer3ObjEventId::
-	setvar VAR_TEMP_3, LOCALID_CONTESTANT_3
+	@ TODO(LC): removed with Hoenn maps — setvar VAR_TEMP_3, LOCALID_CONTESTANT_3
 	return
 
 ContestHall_EventScript_GetPlayer4ObjEventId::
-	setvar VAR_TEMP_3, LOCALID_CONTESTANT_4
+	@ TODO(LC): removed with Hoenn maps — setvar VAR_TEMP_3, LOCALID_CONTESTANT_4
 	return
 
 ContestHall_EventScript_CongratulateWinner::
@@ -918,14 +918,14 @@ ContestHall_EventScript_AudienceLookAround::
 	addvar VAR_TEMP_1, 1
 	lockall
 	call_if_gt VAR_CONTEST_TYPE, CONTEST_TYPE_NPC_NORMAL, ContestHall_EventScript_VObjectAudienceLookAround
-	applymovement LOCALID_CONTEST_AUDIENCE_5, ContestHall_Movement_AudienceMemberLookRight
-	applymovement LOCALID_CONTEST_AUDIENCE_2, ContestHall_Movement_AudienceMemberLookDown
-	applymovement LOCALID_CONTEST_AUDIENCE_3, ContestHall_Movement_AudienceMemberLookRight
+	@ TODO(LC): removed with Hoenn maps — applymovement LOCALID_CONTEST_AUDIENCE_5, ContestHall_Movement_AudienceMemberLookRight
+	@ TODO(LC): removed with Hoenn maps — applymovement LOCALID_CONTEST_AUDIENCE_2, ContestHall_Movement_AudienceMemberLookDown
+	@ TODO(LC): removed with Hoenn maps — applymovement LOCALID_CONTEST_AUDIENCE_3, ContestHall_Movement_AudienceMemberLookRight
 	delay 30
-	applymovement LOCALID_CONTEST_AUDIENCE_6, ContestHall_Movement_AudienceMemberLookLeft
-	applymovement LOCALID_CONTEST_AUDIENCE_7, ContestHall_Movement_AudienceMemberLookDown
-	applymovement LOCALID_CONTEST_AUDIENCE_1, ContestHall_Movement_AudienceMemberLookUp
-	applymovement LOCALID_CONTEST_AUDIENCE_4, ContestHall_Movement_AudienceMemberLookLeft
+	@ TODO(LC): removed with Hoenn maps — applymovement LOCALID_CONTEST_AUDIENCE_6, ContestHall_Movement_AudienceMemberLookLeft
+	@ TODO(LC): removed with Hoenn maps — applymovement LOCALID_CONTEST_AUDIENCE_7, ContestHall_Movement_AudienceMemberLookDown
+	@ TODO(LC): removed with Hoenn maps — applymovement LOCALID_CONTEST_AUDIENCE_1, ContestHall_Movement_AudienceMemberLookUp
+	@ TODO(LC): removed with Hoenn maps — applymovement LOCALID_CONTEST_AUDIENCE_4, ContestHall_Movement_AudienceMemberLookLeft
 	goto_if_ne VAR_TEMP_1, 4, ContestHall_EventScript_AudienceLookAround
 	delay 30
 	return

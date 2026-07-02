@@ -1,0 +1,64 @@
+{
+  "id": "MAP_MT_MOON_ROOM2",
+  "name": "MtMoon_Room2",
+  "layout": "LAYOUT_MT_MOON_ROOM2",
+  "music": "MUS_RG_FUCHSIA",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": false,
+  "weather": "WEATHER_SUNNY",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_GYM",
+  "connections": [],
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "32",
+      "x": 8,
+      "y": 8,
+      "elevation": 0,
+      "movement_type": "10",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MT__MOON_4_80_Script_00950562",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "22",
+      "x": 12,
+      "y": 9,
+      "elevation": 0,
+      "movement_type": "4",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MT__MOON_4_80_Script_009533D7",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 11,
+      "y": 13,
+      "elevation": 3,
+      "dest_map": "MAP_MT_MOON",
+      "dest_warp_id": 10
+    },
+    {
+      "x": 18,
+      "y": 7,
+      "elevation": 3,
+      "dest_map": "MAP_ROCKET_HIDEOUT_ROOM2",
+      "dest_warp_id": 1
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}

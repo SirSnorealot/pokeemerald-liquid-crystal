@@ -1,0 +1,582 @@
+{
+  "id": "MAP_LIGHTHOUSE_ROOM1",
+  "name": "Lighthouse_Room1",
+  "layout": "LAYOUT_LIGHTHOUSE_ROOM1",
+  "music": "MUS_RG_POKE_JUMP",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": false,
+  "allow_escaping": true,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [],
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "31",
+      "x": 16,
+      "y": 9,
+      "elevation": 0,
+      "movement_type": "9",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "LIGHTHOUSE_1_99_Script_0082B2DF",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "62",
+      "x": 8,
+      "y": 2,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "LIGHTHOUSE_1_99_Script_0082B362",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "61",
+      "x": 42,
+      "y": 11,
+      "elevation": 0,
+      "movement_type": "9",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "1",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "LIGHTHOUSE_1_99_Script_0082B44F",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "62",
+      "x": 33,
+      "y": 3,
+      "elevation": 0,
+      "movement_type": "10",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "1",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "LIGHTHOUSE_1_99_Script_0082B3C3",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "92",
+      "x": 60,
+      "y": 2,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "LIGHTHOUSE_1_99_Script_0082B8AC",
+      "flag": "4399"
+    },
+    {
+      "type": "object",
+      "graphics_id": "62",
+      "x": 61,
+      "y": 2,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "1",
+      "trainer_sight_or_berry_tree_id": "1",
+      "script": "LIGHTHOUSE_1_99_Script_0082B8C3",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "19",
+      "x": 55,
+      "y": 9,
+      "elevation": 0,
+      "movement_type": "7",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "1",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "LIGHTHOUSE_1_99_Script_0082C4AE",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "61",
+      "x": 65,
+      "y": 5,
+      "elevation": 0,
+      "movement_type": "10",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "1",
+      "trainer_sight_or_berry_tree_id": "4",
+      "script": "LIGHTHOUSE_1_99_Script_0082B5FB",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "24",
+      "x": 91,
+      "y": 4,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "1",
+      "trainer_sight_or_berry_tree_id": "1",
+      "script": "LIGHTHOUSE_1_99_Script_0082B6A9",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "62",
+      "x": 88,
+      "y": 16,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "1",
+      "trainer_sight_or_berry_tree_id": "4",
+      "script": "LIGHTHOUSE_1_99_Script_0082B7C4",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "92",
+      "x": 109,
+      "y": 13,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "LIGHTHOUSE_1_99_Script_0082B895",
+      "flag": "4398"
+    },
+    {
+      "type": "object",
+      "graphics_id": "19",
+      "x": 125,
+      "y": 0,
+      "elevation": 0,
+      "movement_type": "76",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "1",
+      "trainer_sight_or_berry_tree_id": "4",
+      "script": "LIGHTHOUSE_1_99_Script_0082BAA6",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "62",
+      "x": 115,
+      "y": 11,
+      "elevation": 0,
+      "movement_type": "1",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "1",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "LIGHTHOUSE_1_99_Script_0082B99F",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "92",
+      "x": 113,
+      "y": 15,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "LIGHTHOUSE_1_99_Script_0082BA78",
+      "flag": "4400"
+    },
+    {
+      "type": "object",
+      "graphics_id": "92",
+      "x": 122,
+      "y": 11,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "LIGHTHOUSE_1_99_Script_0082BA8F",
+      "flag": "4401"
+    },
+    {
+      "type": "object",
+      "graphics_id": "92",
+      "x": 137,
+      "y": 4,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "LIGHTHOUSE_1_99_Script_0082BB7F",
+      "flag": "4402"
+    },
+    {
+      "type": "object",
+      "graphics_id": "119",
+      "x": 143,
+      "y": 8,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "LIGHTHOUSE_1_99_Script_0082BB96",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "174",
+      "x": 142,
+      "y": 8,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "LIGHTHOUSE_1_99_Script_00884595",
+      "flag": "4433"
+    },
+    {
+      "type": "object",
+      "graphics_id": "47",
+      "x": 20,
+      "y": 16,
+      "elevation": 0,
+      "movement_type": "76",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "0x0",
+      "flag": "4780"
+    },
+    {
+      "type": "object",
+      "graphics_id": "52",
+      "x": 97,
+      "y": 6,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "LIGHTHOUSE_1_99_Script_009002A0",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 10,
+      "y": 17,
+      "elevation": 0,
+      "dest_map": "MAP_OLIVINE_CITY",
+      "dest_warp_id": 8
+    },
+    {
+      "x": 11,
+      "y": 17,
+      "elevation": 0,
+      "dest_map": "MAP_OLIVINE_CITY",
+      "dest_warp_id": 8
+    },
+    {
+      "x": 3,
+      "y": 11,
+      "elevation": 0,
+      "dest_map": "MAP_LIGHTHOUSE_ROOM1",
+      "dest_warp_id": 3
+    },
+    {
+      "x": 28,
+      "y": 13,
+      "elevation": 0,
+      "dest_map": "MAP_LIGHTHOUSE_ROOM1",
+      "dest_warp_id": 2
+    },
+    {
+      "x": 30,
+      "y": 3,
+      "elevation": 0,
+      "dest_map": "MAP_LIGHTHOUSE_ROOM1",
+      "dest_warp_id": 15
+    },
+    {
+      "x": 17,
+      "y": 13,
+      "elevation": 0,
+      "dest_map": "MAP_DYNAMIC",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 16,
+      "y": 13,
+      "elevation": 0,
+      "dest_map": "MAP_DYNAMIC",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 97,
+      "y": 9,
+      "elevation": 0,
+      "dest_map": "MAP_DYNAMIC",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 83,
+      "y": 7,
+      "elevation": 0,
+      "dest_map": "MAP_LIGHTHOUSE_ROOM1",
+      "dest_warp_id": 31
+    },
+    {
+      "x": 65,
+      "y": 3,
+      "elevation": 0,
+      "dest_map": "MAP_LIGHTHOUSE_ROOM1",
+      "dest_warp_id": 26
+    },
+    {
+      "x": 96,
+      "y": 9,
+      "elevation": 0,
+      "dest_map": "MAP_DYNAMIC",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 68,
+      "y": 11,
+      "elevation": 0,
+      "dest_map": "MAP_DYNAMIC",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 41,
+      "y": 15,
+      "elevation": 0,
+      "dest_map": "MAP_LIGHTHOUSE_ROOM1",
+      "dest_warp_id": 6
+    },
+    {
+      "x": 69,
+      "y": 11,
+      "elevation": 0,
+      "dest_map": "MAP_DYNAMIC",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 42,
+      "y": 13,
+      "elevation": 0,
+      "dest_map": "MAP_DYNAMIC",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 57,
+      "y": 3,
+      "elevation": 0,
+      "dest_map": "MAP_LIGHTHOUSE_ROOM1",
+      "dest_warp_id": 4
+    },
+    {
+      "x": 61,
+      "y": 5,
+      "elevation": 0,
+      "dest_map": "MAP_LIGHTHOUSE_ROOM1",
+      "dest_warp_id": 23
+    },
+    {
+      "x": 143,
+      "y": 15,
+      "elevation": 0,
+      "dest_map": "MAP_LIGHTHOUSE_ROOM1",
+      "dest_warp_id": 30
+    },
+    {
+      "x": 88,
+      "y": 5,
+      "elevation": 0,
+      "dest_map": "MAP_LIGHTHOUSE_ROOM1",
+      "dest_warp_id": 27
+    },
+    {
+      "x": 41,
+      "y": 13,
+      "elevation": 0,
+      "dest_map": "MAP_DYNAMIC",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 42,
+      "y": 15,
+      "elevation": 0,
+      "dest_map": "MAP_LIGHTHOUSE_ROOM1",
+      "dest_warp_id": 5
+    },
+    {
+      "x": 69,
+      "y": 13,
+      "elevation": 0,
+      "dest_map": "MAP_LIGHTHOUSE_ROOM1",
+      "dest_warp_id": 14
+    },
+    {
+      "x": 68,
+      "y": 13,
+      "elevation": 0,
+      "dest_map": "MAP_LIGHTHOUSE_ROOM1",
+      "dest_warp_id": 19
+    },
+    {
+      "x": 89,
+      "y": 7,
+      "elevation": 0,
+      "dest_map": "MAP_LIGHTHOUSE_ROOM1",
+      "dest_warp_id": 16
+    },
+    {
+      "x": 89,
+      "y": 9,
+      "elevation": 0,
+      "dest_map": "MAP_LIGHTHOUSE_ROOM1",
+      "dest_warp_id": 36
+    },
+    {
+      "x": 89,
+      "y": 5,
+      "elevation": 0,
+      "dest_map": "MAP_LIGHTHOUSE_ROOM1",
+      "dest_warp_id": 29
+    },
+    {
+      "x": 93,
+      "y": 5,
+      "elevation": 0,
+      "dest_map": "MAP_LIGHTHOUSE_ROOM1",
+      "dest_warp_id": 9
+    },
+    {
+      "x": 60,
+      "y": 3,
+      "elevation": 0,
+      "dest_map": "MAP_DYNAMIC",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 96,
+      "y": 11,
+      "elevation": 0,
+      "dest_map": "MAP_LIGHTHOUSE_ROOM1",
+      "dest_warp_id": 11
+    },
+    {
+      "x": 61,
+      "y": 3,
+      "elevation": 0,
+      "dest_map": "MAP_DYNAMIC",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 116,
+      "y": 15,
+      "elevation": 0,
+      "dest_map": "MAP_LIGHTHOUSE_ROOM1",
+      "dest_warp_id": 17
+    },
+    {
+      "x": 110,
+      "y": 5,
+      "elevation": 0,
+      "dest_map": "MAP_LIGHTHOUSE_ROOM1",
+      "dest_warp_id": 8
+    },
+    {
+      "x": 123,
+      "y": 5,
+      "elevation": 0,
+      "dest_map": "MAP_DYNAMIC",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 97,
+      "y": 11,
+      "elevation": 0,
+      "dest_map": "MAP_LIGHTHOUSE_ROOM1",
+      "dest_warp_id": 13
+    },
+    {
+      "x": 124,
+      "y": 7,
+      "elevation": 0,
+      "dest_map": "MAP_LIGHTHOUSE_ROOM1",
+      "dest_warp_id": 7
+    },
+    {
+      "x": 123,
+      "y": 7,
+      "elevation": 0,
+      "dest_map": "MAP_LIGHTHOUSE_ROOM1",
+      "dest_warp_id": 10
+    },
+    {
+      "x": 116,
+      "y": 7,
+      "elevation": 0,
+      "dest_map": "MAP_LIGHTHOUSE_ROOM1",
+      "dest_warp_id": 24
+    },
+    {
+      "x": 151,
+      "y": 5,
+      "elevation": 0,
+      "dest_map": "MAP_LIGHTHOUSE_ROOM1",
+      "dest_warp_id": 39
+    },
+    {
+      "x": 150,
+      "y": 5,
+      "elevation": 0,
+      "dest_map": "MAP_LIGHTHOUSE_ROOM1",
+      "dest_warp_id": 32
+    },
+    {
+      "x": 124,
+      "y": 5,
+      "elevation": 0,
+      "dest_map": "MAP_DYNAMIC",
+      "dest_warp_id": 0
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}

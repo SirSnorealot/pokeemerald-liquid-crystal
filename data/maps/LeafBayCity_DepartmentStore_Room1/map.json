@@ -1,0 +1,140 @@
+{
+  "id": "MAP_LEAF_BAY_CITY_DEPARTMENT_STORE_ROOM1",
+  "name": "LeafBayCity_DepartmentStore_Room1",
+  "layout": "LAYOUT_LEAF_BAY_CITY_DEPARTMENT_STORE_ROOM1",
+  "music": "MUS_RG_CELADON",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [],
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "65",
+      "x": 14,
+      "y": 9,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "LEAF_BAY_DEPT__2_20_Script_0096A424",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "19",
+      "x": 8,
+      "y": 6,
+      "elevation": 0,
+      "movement_type": "9",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "LEAF_BAY_DEPT__2_20_Script_0095BADA",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "27",
+      "x": 8,
+      "y": 10,
+      "elevation": 0,
+      "movement_type": "2",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "LEAF_BAY_DEPT__2_20_Script_0095CA7B",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "61",
+      "x": 20,
+      "y": 11,
+      "elevation": 0,
+      "movement_type": "2",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "LEAF_BAY_DEPT__2_20_Script_0095662B",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 14,
+      "y": 14,
+      "elevation": 3,
+      "dest_map": "MAP_LEAF_BAY_CITY",
+      "dest_warp_id": 4
+    },
+    {
+      "x": 19,
+      "y": 3,
+      "elevation": 3,
+      "dest_map": "MAP_LEAF_BAY_CITY_DEPARTMENT_STORE_ROOM2",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 10,
+      "y": 2,
+      "elevation": 0,
+      "dest_map": "MAP_GOLDENROD_CITY_DEPARTMENT_STORE_ROOM8",
+      "dest_warp_id": 0
+    }
+  ],
+  "coord_events": [],
+  "bg_events": [
+    {
+      "x": 17,
+      "y": 2,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "LEAF_BAY_DEPT__2_20_Script_0095CF75"
+    },
+    {
+      "x": 7,
+      "y": 3,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "LEAF_BAY_DEPT__2_20_Script_0016C034"
+    },
+    {
+      "x": 8,
+      "y": 3,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "LEAF_BAY_DEPT__2_20_Script_0016C034"
+    },
+    {
+      "x": 9,
+      "y": 3,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "LEAF_BAY_DEPT__2_20_Script_0016C034"
+    },
+    {
+      "x": 10,
+      "y": 3,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "LEAF_BAY_DEPT__2_20_Script_0016C034"
+    }
+  ]
+}

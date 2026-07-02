@@ -1,0 +1,113 @@
+{
+  "id": "MAP_CELADON_CITY_HOUSE10",
+  "name": "CeladonCity_House10",
+  "layout": "LAYOUT_CELADON_CITY_HOUSE10",
+  "music": "MUS_RG_CELADON",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_NONE",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [],
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "31",
+      "x": 3,
+      "y": 4,
+      "elevation": 3,
+      "movement_type": "9",
+      "movement_range_x": 2,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "CELADON_CITY_10_17_Script_008E5DF8",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "67",
+      "x": 11,
+      "y": 4,
+      "elevation": 3,
+      "movement_type": "9",
+      "movement_range_x": 1,
+      "movement_range_y": 2,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "CELADON_CITY_10_17_Script_008E5D29",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "27",
+      "x": 1,
+      "y": 6,
+      "elevation": 3,
+      "movement_type": "0",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "CELADON_CITY_10_17_Script_008E5E70",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "27",
+      "x": 1,
+      "y": 2,
+      "elevation": 0,
+      "movement_type": "8",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "CELADON_CITY_10_17_Script_008E5D83",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "27",
+      "x": 3,
+      "y": 7,
+      "elevation": 0,
+      "movement_type": "9",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "CELADON_CITY_10_17_Script_008E5EDE",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 5,
+      "y": 9,
+      "elevation": 0,
+      "dest_map": "MAP_CELADON_CITY",
+      "dest_warp_id": 7
+    },
+    {
+      "x": 6,
+      "y": 9,
+      "elevation": 0,
+      "dest_map": "MAP_CELADON_CITY",
+      "dest_warp_id": 8
+    },
+    {
+      "x": 7,
+      "y": 9,
+      "elevation": 0,
+      "dest_map": "MAP_CELADON_CITY",
+      "dest_warp_id": 7
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}

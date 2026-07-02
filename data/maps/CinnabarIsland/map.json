@@ -1,90 +1,112 @@
 {
-    "id": "MAP_CINNABAR_ISLAND",
-    "name": "CinnabarIsland",
-    "layout": "LAYOUT_CINNABAR_ISLAND",
-    "music": "MUS_RG_SEVII_123",
-    "region_map_section": "MAPSEC_CINNABAR_ISLAND",
-    "requires_flash": false,
-    "weather": "WEATHER_SUNNY",
-    "map_type": "MAP_TYPE_TOWN",
-    "allow_cycling": true,
-    "allow_escaping": false,
-    "allow_running": true,
-    "show_map_name": true,
-    "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-    "connections": [
-        {
-            "map": "MAP_ROUTE21",
-            "offset": 0,
-            "direction": "up"
-        },
-        {
-            "map": "MAP_ROUTE20",
-            "offset": 6,
-            "direction": "right"
-        },
-        {
-            "map": "MAP_ROUTE100",
-            "offset": 10,
-            "direction": "left"
-        }
-    ],
-    "object_events": [
-        {
-            "type": "object",
-            "graphics_id": "45",
-            "x": 18,
-            "y": 14,
-            "elevation": 0,
-            "movement_type": "1",
-            "movement_range_x": 0,
-            "movement_range_y": 0,
-            "trainer_type": "0",
-            "trainer_sight_or_berry_tree_id": "0",
-            "script": "CINNABAR_ISLAND_3_8_Script_00A7FF6E",
-            "flag": "6287"
-        },
-        {
-            "type": "object",
-            "graphics_id": "28",
-            "x": 15,
-            "y": 16,
-            "elevation": 0,
-            "movement_type": "1",
-            "movement_range_x": 0,
-            "movement_range_y": 0,
-            "trainer_type": "0",
-            "trainer_sight_or_berry_tree_id": "0",
-            "script": "CINNABAR_ISLAND_3_8_Script_0094B19F",
-            "flag": "5759"
-        }
-    ],
-    "warp_events": [],
-    "coord_events": [],
-    "bg_events": [
-        {
-            "x": 16,
-            "y": 16,
-            "elevation": 0,
-            "type": "sign",
-            "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-            "script": "CINNABAR_ISLAND_3_8_Script_0094B130"
-        },
-        {
-            "x": 21,
-            "y": 20,
-            "elevation": 0,
-            "type": "sign",
-            "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-            "script": "CINNABAR_ISLAND_3_8_Script_0094B0D5"
-        },
-        {
-            "x": 17,
-            "y": 13,
-            "elevation": 0,
-            "type": "sign",
-            "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-            "script": "CINNABAR_ISLAND_3_8_Script_00982C76"
-        }
-    ]
+  "id": "MAP_CINNABAR_ISLAND",
+  "name": "CinnabarIsland",
+  "layout": "LAYOUT_CINNABAR_ISLAND",
+  "music": "MUS_RG_SEVII_123",
+  "region_map_section": "MAPSEC_CINNABAR_ISLAND",
+  "requires_flash": false,
+  "weather": "WEATHER_SUNNY",
+  "map_type": "MAP_TYPE_TOWN",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_ROUTE21",
+      "offset": 0,
+      "direction": "up"
+    },
+    {
+      "map": "MAP_ROUTE20",
+      "offset": 6,
+      "direction": "right"
+    },
+    {
+      "map": "MAP_ROUTE100",
+      "offset": 10,
+      "direction": "left"
+    }
+  ],
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "45",
+      "x": 18,
+      "y": 14,
+      "elevation": 0,
+      "movement_type": "1",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "CINNABAR_ISLAND_3_8_Script_00A7FF6E",
+      "flag": "6287"
+    },
+    {
+      "type": "object",
+      "graphics_id": "28",
+      "x": 15,
+      "y": 16,
+      "elevation": 0,
+      "movement_type": "1",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "CINNABAR_ISLAND_3_8_Script_0094B19F",
+      "flag": "5759"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 35,
+      "y": 28,
+      "elevation": 0,
+      "dest_map": "MAP_CINNABAR_VOLCANO_ROOM2",
+      "dest_warp_id": 3
+    },
+    {
+      "x": 17,
+      "y": 13,
+      "elevation": 0,
+      "dest_map": "MAP_CINNABAR_VOLCANO_ROOM2",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 24,
+      "y": 20,
+      "elevation": 0,
+      "dest_map": "MAP_CINNABAR_ISLAND_POKEMON_CENTER",
+      "dest_warp_id": 0
+    }
+  ],
+  "coord_events": [],
+  "bg_events": [
+    {
+      "x": 16,
+      "y": 16,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "CINNABAR_ISLAND_3_8_Script_0094B130"
+    },
+    {
+      "x": 21,
+      "y": 20,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "CINNABAR_ISLAND_3_8_Script_0094B0D5"
+    },
+    {
+      "x": 17,
+      "y": 13,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "CINNABAR_ISLAND_3_8_Script_00982C76"
+    }
+  ]
 }

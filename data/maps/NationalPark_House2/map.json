@@ -1,0 +1,73 @@
+{
+  "id": "MAP_NATIONAL_PARK_HOUSE2",
+  "name": "NationalPark_House2",
+  "layout": "LAYOUT_NATIONAL_PARK_HOUSE2",
+  "music": "MUS_RG_SEVII_DUNGEON",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [],
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "69",
+      "x": 13,
+      "y": 9,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NATIONAL_PARK_1_118_Script_0081868A",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 8,
+      "y": 12,
+      "elevation": 0,
+      "dest_map": "MAP_NATIONAL_PARK",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 8,
+      "y": 13,
+      "elevation": 3,
+      "dest_map": "MAP_RUINS_OF_ALPH",
+      "dest_warp_id": 2
+    },
+    {
+      "x": 18,
+      "y": 12,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE36",
+      "dest_warp_id": 1
+    },
+    {
+      "x": 18,
+      "y": 13,
+      "elevation": 3,
+      "dest_map": "MAP_ROUTE31",
+      "dest_warp_id": 1
+    }
+  ],
+  "coord_events": [],
+  "bg_events": [
+    {
+      "x": 16,
+      "y": 8,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "NATIONAL_PARK_1_118_Script_008185B9"
+    }
+  ]
+}

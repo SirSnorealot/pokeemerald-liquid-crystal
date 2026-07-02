@@ -1,0 +1,131 @@
+{
+  "id": "MAP_ICE_PATH_ROOM6",
+  "name": "IcePath_Room6",
+  "layout": "LAYOUT_ICE_PATH_ROOM6",
+  "music": "MUS_RG_MT_MOON",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_UNDERGROUND",
+  "allow_cycling": true,
+  "allow_escaping": true,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [],
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "92",
+      "x": 26,
+      "y": 21,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ICE_PATH_2_33_Script_0096C1FB",
+      "flag": "6063"
+    },
+    {
+      "type": "object",
+      "graphics_id": "92",
+      "x": 5,
+      "y": 22,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ICE_PATH_2_33_Script_0096D352",
+      "flag": "6064"
+    },
+    {
+      "type": "object",
+      "graphics_id": "92",
+      "x": 19,
+      "y": 8,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ICE_PATH_2_33_Script_0096D345",
+      "flag": "6062"
+    },
+    {
+      "type": "object",
+      "graphics_id": "111",
+      "x": 18,
+      "y": 18,
+      "elevation": 0,
+      "movement_type": "20",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ICE_PATH_2_33_Script_009709C3",
+      "flag": "6065"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 7,
+      "y": 5,
+      "elevation": 0,
+      "dest_map": "MAP_ICE_PATH_ROOM5",
+      "dest_warp_id": 1
+    },
+    {
+      "x": 8,
+      "y": 26,
+      "elevation": 0,
+      "dest_map": "MAP_ICE_PATH_ROOM4",
+      "dest_warp_id": 7
+    },
+    {
+      "x": 34,
+      "y": 26,
+      "elevation": 0,
+      "dest_map": "MAP_BLACKTHORN_CITY",
+      "dest_warp_id": 8
+    },
+    {
+      "x": 32,
+      "y": 4,
+      "elevation": 0,
+      "dest_map": "MAP_ICE_PATH_ROOM7",
+      "dest_warp_id": 1
+    }
+  ],
+  "coord_events": [],
+  "bg_events": [
+    {
+      "x": 32,
+      "y": 5,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ICE_PATH_2_33_Script_0096EF44"
+    },
+    {
+      "x": 31,
+      "y": 5,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ICE_PATH_2_33_Script_0096EF44"
+    },
+    {
+      "x": 11,
+      "y": 15,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ICE_PATH_2_33_Script_00956550"
+    }
+  ]
+}

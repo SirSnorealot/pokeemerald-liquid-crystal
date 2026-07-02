@@ -1,0 +1,44 @@
+PowerPlant_Room1_MapScripts::
+	.byte 0
+
+POWER_PLANT_1_95_Script_001637B8::
+	end
+
+POWER_PLANT_1_95_Script_0016382F::
+	end
+
+POWER_PLANT_1_95_Script_0016388D::
+	end
+
+POWER_PLANT_1_95_Script_001BE929::
+	end
+
+POWER_PLANT_1_95_Script_001BE936::
+	end
+
+POWER_PLANT_1_95_Script_001BE943::
+	end
+
+POWER_PLANT_1_95_Script_0093AC9D::
+	end
+
+POWER_PLANT_1_95_Script_009444E7::
+	end
+
+POWER_PLANT_1_95_Script_00944F2E::
+	end
+
+POWER_PLANT_1_95_Script_00947CE1::
+	end
+
+POWER_PLANT_1_95_Script_00947CFF::
+	end
+
+POWER_PLANT_1_95_Script_00947D1D::
+	end
+
+POWER_PLANT_1_95_Script_00947D3B::
+	end
+
+POWER_PLANT_1_95_Script_0098694C::
+	end

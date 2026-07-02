@@ -1,0 +1,72 @@
+{
+  "id": "MAP_INDIGO_PLATEAU",
+  "name": "IndigoPlateau",
+  "layout": "LAYOUT_INDIGO_PLATEAU",
+  "music": "MUS_RG_VICTORY_ROAD",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": false,
+  "weather": "WEATHER_SUNNY",
+  "map_type": "MAP_TYPE_TOWN",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_ROUTE23",
+      "offset": 0,
+      "direction": "down"
+    }
+  ],
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "72",
+      "x": 11,
+      "y": 6,
+      "elevation": 0,
+      "movement_type": "8",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "0x0",
+      "flag": "163"
+    },
+    {
+      "type": "object",
+      "graphics_id": "71",
+      "x": 11,
+      "y": 6,
+      "elevation": 0,
+      "movement_type": "8",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "0x0",
+      "flag": "164"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 11,
+      "y": 6,
+      "elevation": 0,
+      "dest_map": "MAP_INDIGO_PLATEAU_ROOM1",
+      "dest_warp_id": 0
+    }
+  ],
+  "coord_events": [],
+  "bg_events": [
+    {
+      "x": 13,
+      "y": 8,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "INDIGO_PLATEAU_3_9_Script_008D1C1D"
+    }
+  ]
+}

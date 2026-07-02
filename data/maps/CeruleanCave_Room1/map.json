@@ -1,0 +1,204 @@
+{
+  "id": "MAP_CERULEAN_CAVE_ROOM1",
+  "name": "CeruleanCave_Room1",
+  "layout": "LAYOUT_CERULEAN_CAVE_ROOM1",
+  "music": "MUS_RG_ROCKET_HIDEOUT",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_NONE",
+  "allow_cycling": true,
+  "allow_escaping": true,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [],
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "92",
+      "x": 2,
+      "y": 11,
+      "elevation": 3,
+      "movement_type": "8",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "CERULEAN_CAVE_2_59_Script_001BE61D",
+      "flag": "6076"
+    },
+    {
+      "type": "object",
+      "graphics_id": "92",
+      "x": 9,
+      "y": 20,
+      "elevation": 3,
+      "movement_type": "8",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "CERULEAN_CAVE_2_59_Script_009721BE",
+      "flag": "6075"
+    },
+    {
+      "type": "object",
+      "graphics_id": "92",
+      "x": 34,
+      "y": 9,
+      "elevation": 4,
+      "movement_type": "8",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "CERULEAN_CAVE_2_59_Script_009721CB",
+      "flag": "6074"
+    },
+    {
+      "type": "object",
+      "graphics_id": "96",
+      "x": 7,
+      "y": 21,
+      "elevation": 3,
+      "movement_type": "1",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "CERULEAN_CAVE_2_59_Script_001BE00C",
+      "flag": "18"
+    },
+    {
+      "type": "object",
+      "graphics_id": "96",
+      "x": 13,
+      "y": 21,
+      "elevation": 3,
+      "movement_type": "1",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "CERULEAN_CAVE_2_59_Script_001BE00C",
+      "flag": "19"
+    },
+    {
+      "type": "object",
+      "graphics_id": "96",
+      "x": 5,
+      "y": 20,
+      "elevation": 3,
+      "movement_type": "1",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "CERULEAN_CAVE_2_59_Script_001BE00C",
+      "flag": "20"
+    },
+    {
+      "type": "object",
+      "graphics_id": "96",
+      "x": 14,
+      "y": 20,
+      "elevation": 3,
+      "movement_type": "1",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "CERULEAN_CAVE_2_59_Script_001BE00C",
+      "flag": "21"
+    },
+    {
+      "type": "object",
+      "graphics_id": "96",
+      "x": 11,
+      "y": 21,
+      "elevation": 3,
+      "movement_type": "1",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "CERULEAN_CAVE_2_59_Script_001BE00C",
+      "flag": "22"
+    },
+    {
+      "type": "object",
+      "graphics_id": "96",
+      "x": 9,
+      "y": 18,
+      "elevation": 3,
+      "movement_type": "1",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "CERULEAN_CAVE_2_59_Script_001BE00C",
+      "flag": "23"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 33,
+      "y": 21,
+      "elevation": 3,
+      "dest_map": "MAP_CERULEAN_CITY",
+      "dest_warp_id": 7
+    },
+    {
+      "x": 34,
+      "y": 2,
+      "elevation": 3,
+      "dest_map": "MAP_CERULEAN_CAVE_ROOM2",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 1,
+      "y": 7,
+      "elevation": 3,
+      "dest_map": "MAP_CERULEAN_CAVE_ROOM3",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 10,
+      "y": 2,
+      "elevation": 3,
+      "dest_map": "MAP_CERULEAN_CAVE_ROOM2",
+      "dest_warp_id": 1
+    },
+    {
+      "x": 5,
+      "y": 15,
+      "elevation": 3,
+      "dest_map": "MAP_CERULEAN_CAVE_ROOM2",
+      "dest_warp_id": 2
+    },
+    {
+      "x": 30,
+      "y": 10,
+      "elevation": 4,
+      "dest_map": "MAP_CERULEAN_CAVE_ROOM2",
+      "dest_warp_id": 3
+    },
+    {
+      "x": 24,
+      "y": 11,
+      "elevation": 3,
+      "dest_map": "MAP_CERULEAN_CAVE_ROOM2",
+      "dest_warp_id": 4
+    },
+    {
+      "x": 2,
+      "y": 4,
+      "elevation": 3,
+      "dest_map": "MAP_CERULEAN_CAVE_ROOM2",
+      "dest_warp_id": 5
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}

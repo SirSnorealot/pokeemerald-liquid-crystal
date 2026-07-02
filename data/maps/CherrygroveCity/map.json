@@ -97,35 +97,63 @@
       "y": 4,
       "elevation": 0,
       "dest_map": "MAP_CHERRYGROVE_CITY_MART",
-      "dest_warp_id": "1"
+      "dest_warp_id": 1
     },
     {
       "x": 28,
       "y": 8,
       "elevation": 0,
       "dest_map": "MAP_CHERRYGROVE_CITY_HOUSE1",
-      "dest_warp_id": "0"
+      "dest_warp_id": 0
     },
     {
       "x": 41,
       "y": 4,
       "elevation": 0,
       "dest_map": "MAP_CHERRYGROVE_CITY_POKEMON_CENTER",
-      "dest_warp_id": "0"
+      "dest_warp_id": 0
+    },
+    {
+      "x": 48,
+      "y": 19,
+      "elevation": 3,
+      "dest_map": "MAP_DYNAMIC",
+      "dest_warp_id": 0
     },
     {
       "x": 37,
       "y": 9,
       "elevation": 3,
       "dest_map": "MAP_CHERRYGROVE_CITY_GUIDES_HOUSE",
-      "dest_warp_id": "0"
+      "dest_warp_id": 0
     },
     {
       "x": 45,
       "y": 11,
       "elevation": 0,
       "dest_map": "MAP_CHERRYGROVE_CITY_HOUSE2",
-      "dest_warp_id": "0"
+      "dest_warp_id": 0
+    },
+    {
+      "x": 10,
+      "y": 14,
+      "elevation": 0,
+      "dest_map": "MAP_UNDERSEA_CAVERN_ROOM3",
+      "dest_warp_id": 8
+    },
+    {
+      "x": 45,
+      "y": 79,
+      "elevation": 0,
+      "dest_map": "MAP_DYNAMIC",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 17,
+      "y": 69,
+      "elevation": 0,
+      "dest_map": "MAP_DYNAMIC",
+      "dest_warp_id": 0
     }
   ],
   "coord_events": [

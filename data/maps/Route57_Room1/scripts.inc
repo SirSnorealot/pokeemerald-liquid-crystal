@@ -1,0 +1,68 @@
+Route57_Room1_MapScripts::
+	.byte 0
+
+ROUTE_57_5_117_Script_0097D33D::
+	end
+
+ROUTE_57_5_117_Script_0097D460::
+	end
+
+ROUTE_57_5_117_Script_0097D583::
+	end
+
+ROUTE_57_5_117_Script_0097D6A1::
+	end
+
+ROUTE_57_5_117_Script_0097D7BF::
+	end
+
+ROUTE_57_5_117_Script_0097D8DF::
+	end
+
+ROUTE_57_5_117_Script_0097D9FF::
+	end
+
+ROUTE_57_5_117_Script_0097DB31::
+	end
+
+ROUTE_57_5_117_Script_0097DC82::
+	end
+
+ROUTE_57_5_117_Script_0097DDA2::
+	end
+
+ROUTE_57_5_117_Script_0097DEC2::
+	end
+
+ROUTE_57_5_117_Script_0097DF97::
+	end
+
+ROUTE_57_5_117_Script_00A70BBA::
+	end
+
+ROUTE_57_5_117_Script_00A70CD8::
+	end
+
+ROUTE_57_5_117_Script_00A70DF6::
+	end
+
+ROUTE_57_5_117_Script_00A70F14::
+	end
+
+ROUTE_57_5_117_Script_00A71034::
+	end
+
+ROUTE_57_5_117_Script_00A71162::
+	end
+
+ROUTE_57_5_117_Script_00A71290::
+	end
+
+ROUTE_57_5_117_Script_00A713BD::
+	end
+
+ROUTE_57_5_117_Script_00A713CA::
+	end
+
+ROUTE_57_5_117_Script_00A713D7::
+	end

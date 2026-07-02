@@ -503,7 +503,29 @@
       "flag": "FLAG_HIDE_ROUTE_110_BIRCH"
     }
   ],
-  "warp_events": [],
+  "warp_events": [
+    {
+      "x": 3,
+      "y": 6,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE39_HOUSE2",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 7,
+      "y": 6,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE39_HOUSE1",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 19,
+      "y": 3,
+      "elevation": 0,
+      "dest_map": "MAP_DYNAMIC",
+      "dest_warp_id": 0
+    }
+  ],
   "coord_events": [
     {
       "type": "trigger",

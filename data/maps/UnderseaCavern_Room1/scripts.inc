@@ -1,0 +1,35 @@
+UnderseaCavern_Room1_MapScripts::
+	.byte 0
+
+UNDERSEA_CAVERN_4_5_Script_0097CB52::
+	end
+
+UNDERSEA_CAVERN_4_5_Script_009869C2::
+	end
+
+UNDERSEA_CAVERN_4_5_Script_009870DC::
+	end
+
+UNDERSEA_CAVERN_4_5_Script_0098A9DA::
+	end
+
+UNDERSEA_CAVERN_4_5_Script_0099458D::
+	end
+
+UNDERSEA_CAVERN_4_5_Script_00994F42::
+	end
+
+UNDERSEA_CAVERN_4_5_Script_0099E4EC::
+	end
+
+UNDERSEA_CAVERN_4_5_Script_009A4855::
+	end
+
+UNDERSEA_CAVERN_4_5_Script_009EE1D9::
+	end
+
+UNDERSEA_CAVERN_4_5_Script_009EE693::
+	end
+
+UNDERSEA_CAVERN_4_5_Script_009EE6C4::
+	end

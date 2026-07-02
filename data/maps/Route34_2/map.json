@@ -78,15 +78,15 @@
       "x": 12,
       "y": 6,
       "elevation": 0,
-      "dest_warp_id": "5",
-      "dest_map": "MAP_UNION_CAVE_B2_F"
+      "dest_map": "MAP_UNION_CAVE_B2_F",
+      "dest_warp_id": 5
     },
     {
       "x": 20,
       "y": 9,
       "elevation": 0,
-      "dest_warp_id": "6",
-      "dest_map": "MAP_UNION_CAVE_B2_F"
+      "dest_map": "MAP_UNION_CAVE_B2_F",
+      "dest_warp_id": 6
     }
   ],
   "coord_events": [],

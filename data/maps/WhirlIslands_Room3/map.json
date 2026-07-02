@@ -1,0 +1,162 @@
+{
+  "id": "MAP_WHIRL_ISLANDS_ROOM3",
+  "name": "WhirlIslands_Room3",
+  "layout": "LAYOUT_WHIRL_ISLANDS_ROOM3",
+  "music": "MUS_RG_MT_MOON",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": true,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_UNDERGROUND",
+  "allow_cycling": true,
+  "allow_escaping": true,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [],
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "97",
+      "x": 23,
+      "y": 27,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "WHIRL_ISLANDS_4_46_Script_001BE11D",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "92",
+      "x": 19,
+      "y": 27,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "WHIRL_ISLANDS_4_46_Script_008EAC56",
+      "flag": "5634"
+    },
+    {
+      "type": "object",
+      "graphics_id": "92",
+      "x": 33,
+      "y": 24,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "WHIRL_ISLANDS_4_46_Script_008EAC49",
+      "flag": "5633"
+    },
+    {
+      "type": "object",
+      "graphics_id": "92",
+      "x": 8,
+      "y": 12,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "WHIRL_ISLANDS_4_46_Script_008EAC7D",
+      "flag": "5638"
+    },
+    {
+      "type": "object",
+      "graphics_id": "92",
+      "x": 2,
+      "y": 19,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "WHIRL_ISLANDS_4_46_Script_008EAC8A",
+      "flag": "5639"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 17,
+      "y": 22,
+      "elevation": 3,
+      "dest_map": "MAP_WHIRL_ISLANDS_ROOM1",
+      "dest_warp_id": 1
+    },
+    {
+      "x": 11,
+      "y": 20,
+      "elevation": 3,
+      "dest_map": "MAP_ROUTE23",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 5,
+      "y": 6,
+      "elevation": 0,
+      "dest_map": "MAP_WHIRL_ISLANDS_ROOM2",
+      "dest_warp_id": 2
+    },
+    {
+      "x": 13,
+      "y": 28,
+      "elevation": 0,
+      "dest_map": "MAP_WHIRL_ISLANDS_ROOM1",
+      "dest_warp_id": 7
+    },
+    {
+      "x": 29,
+      "y": 10,
+      "elevation": 0,
+      "dest_map": "MAP_WHIRL_ISLANDS_ROOM2",
+      "dest_warp_id": 5
+    },
+    {
+      "x": 25,
+      "y": 22,
+      "elevation": 0,
+      "dest_map": "MAP_WHIRL_ISLANDS_ROOM1",
+      "dest_warp_id": 4
+    },
+    {
+      "x": 31,
+      "y": 31,
+      "elevation": 0,
+      "dest_map": "MAP_WHIRL_ISLANDS_ROOM1",
+      "dest_warp_id": 5
+    },
+    {
+      "x": 23,
+      "y": 32,
+      "elevation": 0,
+      "dest_map": "MAP_WHIRL_ISLANDS_ROOM2",
+      "dest_warp_id": 11
+    },
+    {
+      "x": 8,
+      "y": 31,
+      "elevation": 0,
+      "dest_map": "MAP_WHIRL_ISLANDS_ROOM2",
+      "dest_warp_id": 10
+    },
+    {
+      "x": 34,
+      "y": 4,
+      "elevation": 0,
+      "dest_map": "MAP_WHIRL_ISLANDS_ROOM2",
+      "dest_warp_id": 7
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}

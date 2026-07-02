@@ -397,9 +397,9 @@
     {
       "x": 2,
       "y": 5,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_DARK_CAVE_BLACKTHORN_CITY_SIDE",
-      "dest_warp_id": "1"
+      "dest_warp_id": 1
     }
   ],
   "coord_events": [

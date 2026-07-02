@@ -1,0 +1,78 @@
+{
+  "id": "MAP_ROUTE43_HOUSE1",
+  "name": "Route43_House1",
+  "layout": "LAYOUT_ROUTE43_HOUSE1",
+  "music": "MUS_RG_SEVII_ROUTE",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [],
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "69",
+      "x": 8,
+      "y": 9,
+      "elevation": 0,
+      "movement_type": "10",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ROUTE_43_6_0_Script_00840E64",
+      "flag": "4626"
+    },
+    {
+      "type": "object",
+      "graphics_id": "49",
+      "x": 10,
+      "y": 9,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ROUTE_43_6_0_Script_00942C22",
+      "flag": "4610"
+    },
+    {
+      "type": "object",
+      "graphics_id": "49",
+      "x": 12,
+      "y": 9,
+      "elevation": 0,
+      "movement_type": "7",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ROUTE_43_6_0_Script_00942C22",
+      "flag": "4610"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 11,
+      "y": 12,
+      "elevation": 3,
+      "dest_map": "MAP_ROUTE43",
+      "dest_warp_id": 1
+    },
+    {
+      "x": 11,
+      "y": 5,
+      "elevation": 3,
+      "dest_map": "MAP_ROUTE43",
+      "dest_warp_id": 0
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}

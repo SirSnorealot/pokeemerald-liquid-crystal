@@ -1,0 +1,26 @@
+LavenderTown_House6_MapScripts::
+	.byte 0
+
+LAVENDER_TOWN_8_2_Script_0016B1CC::
+	end
+
+LAVENDER_TOWN_8_2_Script_0016B211::
+	end
+
+LAVENDER_TOWN_8_2_Script_0016B229::
+	end
+
+LAVENDER_TOWN_8_2_Script_00924A5A::
+	end
+
+LAVENDER_TOWN_8_2_Script_00924A7F::
+	end
+
+LAVENDER_TOWN_8_2_Script_00924AA6::
+	end
+
+LAVENDER_TOWN_8_2_Script_00924BBB::
+	end
+
+LAVENDER_TOWN_8_2_Script_009399EB::
+	end

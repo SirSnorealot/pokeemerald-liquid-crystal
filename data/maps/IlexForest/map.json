@@ -19,15 +19,22 @@
       "x": 11,
       "y": 52,
       "elevation": 3,
-      "dest_warp_id": "0",
-      "dest_map": "MAP_AZALEA_TOWN_ILEX_FOREST_GATE"
+      "dest_map": "MAP_AZALEA_TOWN_ILEX_FOREST_GATE",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 17,
+      "y": 1,
+      "elevation": 0,
+      "dest_map": "MAP_DYNAMIC",
+      "dest_warp_id": 0
     },
     {
       "x": 10,
       "y": 18,
       "elevation": 3,
-      "dest_warp_id": "0",
-      "dest_map": "MAP_ROUTE34_ILEX_FOREST_GATE"
+      "dest_map": "MAP_ROUTE34_ILEX_FOREST_GATE",
+      "dest_warp_id": 0
     }
   ],
   "coord_events": [],

@@ -1,7 +1,7 @@
 {
   "id": "MAP_RUINS_OF_ALPH_CHAMBER_A",
   "name": "RuinsOfAlph_ChamberA",
-  "layout": "LAYOUT_RUINS_OF_ALPH_CHAMBER_A",
+  "layout": "LAYOUT_RUINS_OF_ALPH_CHAMBER",
   "music": "MUS_RG_POKE_TOWER",
   "region_map_section": "MAPSEC_LOST_CAVE",
   "requires_flash": false,
@@ -19,15 +19,15 @@
       "x": 4,
       "y": 10,
       "elevation": 0,
-      "dest_warp_id": "0",
-      "dest_map": "MAP_RUINS_OF_ALPH"
+      "dest_map": "MAP_RUINS_OF_ALPH",
+      "dest_warp_id": 0
     },
     {
       "x": 5,
       "y": 10,
       "elevation": 0,
-      "dest_warp_id": "0",
-      "dest_map": "MAP_RUINS_OF_ALPH"
+      "dest_map": "MAP_RUINS_OF_ALPH",
+      "dest_warp_id": 0
     }
   ],
   "coord_events": [],

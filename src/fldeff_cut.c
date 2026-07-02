@@ -26,7 +26,7 @@
 
 extern struct MapPosition gPlayerFacingPosition;
 
-extern const u8 FarawayIsland_Interior_EventScript_HideMewWhenGrassCut[];
+// TODO(LC): removed with Hoenn maps — extern const u8 FarawayIsland_Interior_EventScript_HideMewWhenGrassCut[];
 
 extern const u8 gFieldEffectPic_CutGrass[];
 extern const u16 gFieldEffectPal_CutGrass[];
@@ -598,7 +598,7 @@ static void CutGrassSpriteCallbackEnd(struct Sprite *sprite)
     UnlockPlayerFieldControls();
 
     if (IsMewPlayingHideAndSeek() == TRUE)
-        ScriptContext_SetupScript(FarawayIsland_Interior_EventScript_HideMewWhenGrassCut);
+        ScriptContext_SetupScript(NULL); // TODO(LC): was FarawayIsland_Interior_EventScript_HideMewWhenGrassCut (removed with Hoenn maps)
 }
 
 void FixLongGrassMetatilesWindowTop(s16 x, s16 y)

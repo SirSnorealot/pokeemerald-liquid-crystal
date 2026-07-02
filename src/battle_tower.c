@@ -210,12 +210,15 @@ static const u8 sRubyFacilityClassToEmerald[RS_FACILITY_CLASSES_COUNT - 2][2] =
     {RS_FACILITY_CLASS_SIS_AND_BRO, FACILITY_CLASS_SIS_AND_BRO},
 };
 
-#define PARTNER_TEXTS(name)                                             \
-    BattleFrontier_BattleTowerMultiPartnerRoom_Text_##name##Intro,      \
-    BattleFrontier_BattleTowerMultiPartnerRoom_Text_##name##Mon1,       \
-    BattleFrontier_BattleTowerMultiPartnerRoom_Text_##name##Mon2Ask,    \
-    BattleFrontier_BattleTowerMultiPartnerRoom_Text_##name##Accept,     \
-    BattleFrontier_BattleTowerMultiPartnerRoom_Text_##name##Reject
+// TODO(LC): BattleFrontier_BattleTowerMultiPartnerRoom map removed with Hoenn maps;
+// its texts no longer exist. Original macro kept for reference:
+// #define PARTNER_TEXTS(name)                                          \
+//     BattleFrontier_BattleTowerMultiPartnerRoom_Text_##name##Intro,   \
+//     BattleFrontier_BattleTowerMultiPartnerRoom_Text_##name##Mon1,    \
+//     BattleFrontier_BattleTowerMultiPartnerRoom_Text_##name##Mon2Ask, \
+//     BattleFrontier_BattleTowerMultiPartnerRoom_Text_##name##Accept,  \
+//     BattleFrontier_BattleTowerMultiPartnerRoom_Text_##name##Reject
+#define PARTNER_TEXTS(name) NULL, NULL, NULL, NULL, NULL
 
 static const u8 *const sPartnerApprenticeTexts1[] =
 {

@@ -1,0 +1,38 @@
+MandarinCity_House14_MapScripts::
+	.byte 0
+
+MANDARIN_CITY_6_23_Script_009F3D20::
+	end
+
+MANDARIN_CITY_6_23_Script_00A7FFF4::
+	end
+
+MANDARIN_CITY_6_23_Script_00A87005::
+	end
+
+MANDARIN_CITY_6_23_Script_00A96E93::
+	end
+
+MANDARIN_CITY_6_23_Script_00A9709E::
+	end
+
+MANDARIN_CITY_6_23_Script_00A98215::
+	end
+
+MANDARIN_CITY_6_23_Script_00A9821F::
+	end
+
+MANDARIN_CITY_6_23_Script_00A9835C::
+	end
+
+MANDARIN_CITY_6_23_Script_00A98366::
+	end
+
+MANDARIN_CITY_6_23_Script_00A98370::
+	end
+
+MANDARIN_CITY_6_23_Script_00AA0FD8::
+	end
+
+MANDARIN_CITY_6_23_Script_00AD344E::
+	end

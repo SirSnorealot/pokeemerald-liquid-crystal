@@ -1,0 +1,99 @@
+{
+  "id": "MAP_VIRIDIAN_CITY_HOUSE1",
+  "name": "ViridianCity_House1",
+  "layout": "LAYOUT_HOUSE2_LC",
+  "music": "MUS_RG_SEVII_123",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [],
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "122",
+      "x": 8,
+      "y": 4,
+      "elevation": 3,
+      "movement_type": "0",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "VIRIDIAN_CITY_4_81_Script_00954487",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "27",
+      "x": 4,
+      "y": 5,
+      "elevation": 3,
+      "movement_type": "10",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "VIRIDIAN_CITY_4_81_Script_00954374",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "40",
+      "x": 7,
+      "y": 5,
+      "elevation": 0,
+      "movement_type": "7",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "VIRIDIAN_CITY_4_81_Script_0095437E",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "110",
+      "x": 7,
+      "y": 3,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "VIRIDIAN_CITY_4_81_Script_00954461",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 3,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_PEWTER_CITY",
+      "dest_warp_id": 6
+    },
+    {
+      "x": 4,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_VIRIDIAN_CITY",
+      "dest_warp_id": 1
+    },
+    {
+      "x": 5,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_PEWTER_CITY",
+      "dest_warp_id": 6
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}

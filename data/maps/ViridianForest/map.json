@@ -1,0 +1,267 @@
+{
+  "id": "MAP_VIRIDIAN_FOREST",
+  "name": "ViridianForest",
+  "layout": "LAYOUT_VIRIDIAN_FOREST_2",
+  "music": "MUS_RG_HEAL",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": false,
+  "weather": "WEATHER_SHADE",
+  "map_type": "MAP_TYPE_NONE",
+  "allow_cycling": true,
+  "allow_escaping": true,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [],
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "18",
+      "x": 29,
+      "y": 68,
+      "elevation": 3,
+      "movement_type": "8",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "VIRIDIAN_FOREST_2_105_Script_00160529",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "20",
+      "x": 7,
+      "y": 56,
+      "elevation": 3,
+      "movement_type": "10",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "1",
+      "trainer_sight_or_berry_tree_id": "5",
+      "script": "VIRIDIAN_FOREST_2_105_Script_009CEECE",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "20",
+      "x": 47,
+      "y": 51,
+      "elevation": 3,
+      "movement_type": "9",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "1",
+      "trainer_sight_or_berry_tree_id": "5",
+      "script": "VIRIDIAN_FOREST_2_105_Script_009CEFAA",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "20",
+      "x": 47,
+      "y": 28,
+      "elevation": 3,
+      "movement_type": "9",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "1",
+      "trainer_sight_or_berry_tree_id": "4",
+      "script": "VIRIDIAN_FOREST_2_105_Script_009D0725",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "20",
+      "x": 11,
+      "y": 12,
+      "elevation": 3,
+      "movement_type": "10",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "1",
+      "trainer_sight_or_berry_tree_id": "4",
+      "script": "VIRIDIAN_FOREST_2_105_Script_009D07ED",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "92",
+      "x": 3,
+      "y": 39,
+      "elevation": 3,
+      "movement_type": "8",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "VIRIDIAN_FOREST_2_105_Script_001BE5A8",
+      "flag": "342"
+    },
+    {
+      "type": "object",
+      "graphics_id": "92",
+      "x": 29,
+      "y": 27,
+      "elevation": 3,
+      "movement_type": "8",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "VIRIDIAN_FOREST_2_105_Script_001BE5B5",
+      "flag": "343"
+    },
+    {
+      "type": "object",
+      "graphics_id": "92",
+      "x": 18,
+      "y": 35,
+      "elevation": 3,
+      "movement_type": "8",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "VIRIDIAN_FOREST_2_105_Script_001BE5C2",
+      "flag": "344"
+    },
+    {
+      "type": "object",
+      "graphics_id": "20",
+      "x": 29,
+      "y": 68,
+      "elevation": 3,
+      "movement_type": "13",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "1",
+      "trainer_sight_or_berry_tree_id": "1",
+      "script": "VIRIDIAN_FOREST_2_105_Script_001605B6",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "20",
+      "x": 29,
+      "y": 68,
+      "elevation": 3,
+      "movement_type": "7",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "1",
+      "trainer_sight_or_berry_tree_id": "1",
+      "script": "VIRIDIAN_FOREST_2_105_Script_001605CD",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "92",
+      "x": 32,
+      "y": 41,
+      "elevation": 3,
+      "movement_type": "8",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "VIRIDIAN_FOREST_2_105_Script_001BEAC9",
+      "flag": "446"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 29,
+      "y": 62,
+      "elevation": 3,
+      "dest_map": "MAP_ROUTE2_HOUSE1",
+      "dest_warp_id": 3
+    },
+    {
+      "x": 28,
+      "y": 62,
+      "elevation": 3,
+      "dest_map": "MAP_DYNAMIC",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 5,
+      "y": 9,
+      "elevation": 3,
+      "dest_map": "MAP_ROUTE2_HOUSE2",
+      "dest_warp_id": 1
+    },
+    {
+      "x": 6,
+      "y": 9,
+      "elevation": 3,
+      "dest_map": "MAP_DYNAMIC",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 30,
+      "y": 62,
+      "elevation": 3,
+      "dest_map": "MAP_DYNAMIC",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 4,
+      "y": 9,
+      "elevation": 3,
+      "dest_map": "MAP_DYNAMIC",
+      "dest_warp_id": 0
+    }
+  ],
+  "coord_events": [],
+  "bg_events": [
+    {
+      "x": 39,
+      "y": 59,
+      "elevation": 3,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "VIRIDIAN_FOREST_2_105_Script_009D08FA"
+    },
+    {
+      "x": 43,
+      "y": 26,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "VIRIDIAN_FOREST_2_105_Script_0016054D"
+    },
+    {
+      "x": 9,
+      "y": 29,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "VIRIDIAN_FOREST_2_105_Script_00160556"
+    },
+    {
+      "x": 6,
+      "y": 12,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "VIRIDIAN_FOREST_2_105_Script_00160568"
+    },
+    {
+      "x": 28,
+      "y": 44,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "VIRIDIAN_FOREST_2_105_Script_00160544"
+    },
+    {
+      "x": 31,
+      "y": 60,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "VIRIDIAN_FOREST_2_105_Script_009D08C1"
+    }
+  ]
+}

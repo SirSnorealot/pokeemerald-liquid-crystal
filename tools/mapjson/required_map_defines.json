@@ -3779,6 +3779,18 @@
         [
             "MAP_RUINS_OF_ALPH",
             112
+        ],
+        [
+            "MAP_ILEX_FOREST_CLEARING",
+            112
+        ],
+        [
+            "MAP_NEW_BARK_TOWN_HOUSE3",
+            112
+        ],
+        [
+            "MAP_NEW_BARK_TOWN_HOUSE4",
+            112
         ]
     ],
     "required_layouts": [

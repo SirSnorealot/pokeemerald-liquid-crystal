@@ -1,0 +1,26 @@
+MahoganyTown_House3_MapScripts::
+	.byte 0
+
+MAHOGANY_TOWN_2_88_Script_008457C3::
+	end
+
+MAHOGANY_TOWN_2_88_Script_0084582C::
+	end
+
+MAHOGANY_TOWN_2_88_Script_008469E3::
+	end
+
+MAHOGANY_TOWN_2_88_Script_00846BDB::
+	end
+
+MAHOGANY_TOWN_2_88_Script_00846C7F::
+	end
+
+MAHOGANY_TOWN_2_88_Script_00846CFF::
+	end
+
+MAHOGANY_TOWN_2_88_Script_0084E430::
+	end
+
+MAHOGANY_TOWN_2_88_Script_009AD124::
+	end

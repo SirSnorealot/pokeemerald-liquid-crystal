@@ -1,0 +1,26 @@
+ValenciaPort_MapScripts::
+	.byte 0
+
+VALENCIA_PORT_3_77_Script_0093C377::
+	end
+
+VALENCIA_PORT_3_77_Script_00968F80::
+	end
+
+VALENCIA_PORT_3_77_Script_00969076::
+	end
+
+VALENCIA_PORT_3_77_Script_0096915E::
+	end
+
+VALENCIA_PORT_3_77_Script_009691D9::
+	end
+
+VALENCIA_PORT_3_77_Script_009A445E::
+	end
+
+VALENCIA_PORT_3_77_Script_009A449D::
+	end
+
+VALENCIA_PORT_3_77_Script_009D4E33::
+	end

@@ -1,0 +1,71 @@
+{
+  "id": "MAP_GOLDENROD_CITY_HOUSE19",
+  "name": "GoldenrodCity_House19",
+  "layout": "LAYOUT_GOLDENROD_CITY_HOUSE19",
+  "music": "MUS_RG_SEVII_DUNGEON",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [],
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "19",
+      "x": 14,
+      "y": 0,
+      "elevation": 3,
+      "movement_type": "76",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "GOLDENROD_CITY_12_4_Script_0016E401",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "55",
+      "x": 12,
+      "y": 3,
+      "elevation": 3,
+      "movement_type": "2",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "GOLDENROD_CITY_12_4_Script_0092460E",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "55",
+      "x": 6,
+      "y": 5,
+      "elevation": 0,
+      "movement_type": "10",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "GOLDENROD_CITY_12_4_Script_008541B6",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 7,
+      "y": 9,
+      "elevation": 3,
+      "dest_map": "MAP_GOLDENROD_CITY_HOUSE16",
+      "dest_warp_id": 5
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}

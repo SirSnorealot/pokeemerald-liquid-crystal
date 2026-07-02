@@ -2505,8 +2505,9 @@ u32 FilterFlyDestination(struct RegionMap* regionMap)
     {
     case MAPSEC_SOUTHERN_ISLAND:
         return HEAL_LOCATION_SOUTHERN_ISLAND_EXTERIOR;
-    case MAPSEC_BATTLE_FRONTIER:
-        return HEAL_LOCATION_BATTLE_FRONTIER_OUTSIDE_EAST;
+    // TODO(LC): Battle Frontier maps removed with Hoenn maps
+    // case MAPSEC_BATTLE_FRONTIER:
+    //     return HEAL_LOCATION_BATTLE_FRONTIER_OUTSIDE_EAST;
     case MAPSEC_LITTLEROOT_TOWN:
         return HEAL_LOCATION_NEWBARK_TOWN_PLAYERS_HOUSE;
     case MAPSEC_EVER_GRANDE_CITY:

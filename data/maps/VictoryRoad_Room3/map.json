@@ -1,0 +1,64 @@
+{
+  "id": "MAP_VICTORY_ROAD_ROOM3",
+  "name": "VictoryRoad_Room3",
+  "layout": "LAYOUT_VICTORY_ROAD_ROOM3",
+  "music": "MUS_DUMMY",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_UNDERGROUND",
+  "allow_cycling": true,
+  "allow_escaping": true,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [],
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "92",
+      "x": 28,
+      "y": 7,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "VICTORY_ROAD_1_41_Script_0087910D",
+      "flag": "5778"
+    },
+    {
+      "type": "object",
+      "graphics_id": "92",
+      "x": 33,
+      "y": 5,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "VICTORY_ROAD_1_41_Script_0087911C",
+      "flag": "5779"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 6,
+      "y": 6,
+      "elevation": 0,
+      "dest_map": "MAP_VICTORY_ROAD_ROOM2",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 18,
+      "y": 31,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE23_HOUSE1",
+      "dest_warp_id": 1
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}

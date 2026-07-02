@@ -1,0 +1,32 @@
+CeladonCity_House9_MapScripts::
+	.byte 0
+
+CELADON_CITY_10_16_Script_0016D128::
+	end
+
+CELADON_CITY_10_16_Script_0016D14C::
+	end
+
+CELADON_CITY_10_16_Script_0016D1B5::
+	end
+
+CELADON_CITY_10_16_Script_0016D1CC::
+	end
+
+CELADON_CITY_10_16_Script_001BDF13::
+	end
+
+CELADON_CITY_10_16_Script_008E6008::
+	end
+
+CELADON_CITY_10_16_Script_008E608B::
+	end
+
+CELADON_CITY_10_16_Script_008E60F8::
+	end
+
+CELADON_CITY_10_16_Script_008E6188::
+	end
+
+CELADON_CITY_10_16_Script_009A5FDA::
+	end

@@ -89,14 +89,14 @@ static const u8 sMemberFacingDirections[MAX_RFU_PLAYERS] = {
 };
 
 static const u8 sUnionRoomLocalIds[] = {
-    LOCALID_UNION_ROOM_PLAYER_1,
-    LOCALID_UNION_ROOM_PLAYER_2,
-    LOCALID_UNION_ROOM_PLAYER_3,
-    LOCALID_UNION_ROOM_PLAYER_4,
-    LOCALID_UNION_ROOM_PLAYER_5,
-    LOCALID_UNION_ROOM_PLAYER_6,
-    LOCALID_UNION_ROOM_PLAYER_7,
-    LOCALID_UNION_ROOM_PLAYER_8
+    0, // TODO(LC): was LOCALID_UNION_ROOM_PLAYER_1 (removed with Hoenn maps)
+    0, // TODO(LC): was LOCALID_UNION_ROOM_PLAYER_2 (removed with Hoenn maps)
+    0, // TODO(LC): was LOCALID_UNION_ROOM_PLAYER_3 (removed with Hoenn maps)
+    0, // TODO(LC): was LOCALID_UNION_ROOM_PLAYER_4 (removed with Hoenn maps)
+    0, // TODO(LC): was LOCALID_UNION_ROOM_PLAYER_5 (removed with Hoenn maps)
+    0, // TODO(LC): was LOCALID_UNION_ROOM_PLAYER_6 (removed with Hoenn maps)
+    0, // TODO(LC): was LOCALID_UNION_ROOM_PLAYER_7 (removed with Hoenn maps)
+    0 // TODO(LC): was LOCALID_UNION_ROOM_PLAYER_8 (removed with Hoenn maps)
 };
 
 // Unused

@@ -1,0 +1,90 @@
+{
+  "id": "MAP_CELADON_CITY_DEPARTMENT_STORE_ROOM6",
+  "name": "CeladonCity_DepartmentStore_Room6",
+  "layout": "LAYOUT_CELADON_CITY_DEPARTMENT_STORE_ROOM6",
+  "music": "MUS_RG_CELADON",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_NONE",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [],
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "41",
+      "x": 11,
+      "y": 4,
+      "elevation": 3,
+      "movement_type": "7",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "CELADON_DEPT__10_5_Script_008E5C95",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "19",
+      "x": 9,
+      "y": 6,
+      "elevation": 3,
+      "movement_type": "6",
+      "movement_range_x": 2,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "CELADON_DEPT__10_5_Script_008E5CEB",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 15,
+      "y": 6,
+      "elevation": 3,
+      "dest_map": "MAP_CELADON_CITY_DEPARTMENT_STORE_ROOM5",
+      "dest_warp_id": 2
+    }
+  ],
+  "coord_events": [],
+  "bg_events": [
+    {
+      "x": 14,
+      "y": 3,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "CELADON_DEPT__10_5_Script_0016C02B"
+    },
+    {
+      "x": 10,
+      "y": 3,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "CELADON_DEPT__10_5_Script_0016C034"
+    },
+    {
+      "x": 11,
+      "y": 3,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "CELADON_DEPT__10_5_Script_0016C034"
+    },
+    {
+      "x": 12,
+      "y": 3,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "CELADON_DEPT__10_5_Script_0016C034"
+    }
+  ]
+}

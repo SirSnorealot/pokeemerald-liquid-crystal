@@ -1,0 +1,132 @@
+{
+  "id": "MAP_MANDARIN_CITY_HOUSE9",
+  "name": "MandarinCity_House9",
+  "layout": "LAYOUT_LEAF_BAY_CITY_DEPARTMENT_STORE_ROOM3",
+  "music": "MUS_RG_SEVII_DUNGEON",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [],
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "68",
+      "x": 6,
+      "y": 8,
+      "elevation": 0,
+      "movement_type": "10",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MANDARIN_CITY_5_129_Script_0096A980",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "65",
+      "x": 6,
+      "y": 11,
+      "elevation": 0,
+      "movement_type": "10",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MANDARIN_CITY_5_129_Script_00A889E4",
+      "flag": "4611"
+    },
+    {
+      "type": "object",
+      "graphics_id": "31",
+      "x": 13,
+      "y": 3,
+      "elevation": 0,
+      "movement_type": "7",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MANDARIN_CITY_5_129_Script_0096AA49",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "42",
+      "x": 19,
+      "y": 10,
+      "elevation": 0,
+      "movement_type": "1",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MANDARIN_CITY_5_129_Script_0096AA0F",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 26,
+      "y": 11,
+      "elevation": 3,
+      "dest_map": "MAP_LEAF_BAY_CITY",
+      "dest_warp_id": 4
+    },
+    {
+      "x": 19,
+      "y": 2,
+      "elevation": 3,
+      "dest_map": "MAP_MANDARIN_CITY_HOUSE8",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 9,
+      "y": 1,
+      "elevation": 0,
+      "dest_map": "MAP_GOLDENROD_CITY_DEPARTMENT_STORE_ROOM8",
+      "dest_warp_id": 0
+    }
+  ],
+  "coord_events": [],
+  "bg_events": [
+    {
+      "x": 20,
+      "y": 1,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "MANDARIN_CITY_5_129_Script_0096A9D4"
+    },
+    {
+      "x": 6,
+      "y": 2,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "MANDARIN_CITY_5_129_Script_0016C034"
+    },
+    {
+      "x": 12,
+      "y": 2,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "MANDARIN_CITY_5_129_Script_0016C034"
+    },
+    {
+      "x": 7,
+      "y": 12,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "MANDARIN_CITY_5_129_Script_0096ABDA"
+    }
+  ]
+}

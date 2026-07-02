@@ -1,0 +1,165 @@
+{
+  "id": "MAP_RADIO_TOWER_ROOM8",
+  "name": "RadioTower_Room8",
+  "layout": "LAYOUT_RADIO_TOWER_ROOM8",
+  "music": "MUS_DUMMY",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": false,
+  "weather": "WEATHER_SUNNY",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_MAGMA",
+  "connections": [],
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "22",
+      "x": 24,
+      "y": 8,
+      "elevation": 0,
+      "movement_type": "5",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "RADIO_TOWER_4_41_Script_008127C1",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "115",
+      "x": 19,
+      "y": 5,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "RADIO_TOWER_4_41_Script_00812917",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "50",
+      "x": 19,
+      "y": 10,
+      "elevation": 0,
+      "movement_type": "7",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "1",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "RADIO_TOWER_4_41_Script_0084143E",
+      "flag": "4628"
+    },
+    {
+      "type": "object",
+      "graphics_id": "49",
+      "x": 18,
+      "y": 8,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "1",
+      "trainer_sight_or_berry_tree_id": "2",
+      "script": "RADIO_TOWER_4_41_Script_00841590",
+      "flag": "4628"
+    },
+    {
+      "type": "object",
+      "graphics_id": "19",
+      "x": 15,
+      "y": 8,
+      "elevation": 0,
+      "movement_type": "1",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "RADIO_TOWER_4_41_Script_0081284B",
+      "flag": "4629"
+    },
+    {
+      "type": "object",
+      "graphics_id": "49",
+      "x": 13,
+      "y": 5,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "1",
+      "trainer_sight_or_berry_tree_id": "2",
+      "script": "RADIO_TOWER_4_41_Script_008414E4",
+      "flag": "4628"
+    },
+    {
+      "type": "object",
+      "graphics_id": "60",
+      "x": 7,
+      "y": 6,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "RADIO_TOWER_4_41_Script_00812890",
+      "flag": "4659"
+    },
+    {
+      "type": "object",
+      "graphics_id": "60",
+      "x": 9,
+      "y": 7,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "RADIO_TOWER_4_41_Script_008D1F42",
+      "flag": "4660"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 7,
+      "y": 5,
+      "elevation": 0,
+      "dest_map": "MAP_RADIO_TOWER_ROOM9",
+      "dest_warp_id": 2
+    },
+    {
+      "x": 23,
+      "y": 5,
+      "elevation": 0,
+      "dest_map": "MAP_RADIO_TOWER_ROOM7",
+      "dest_warp_id": 1
+    }
+  ],
+  "coord_events": [],
+  "bg_events": [
+    {
+      "x": 12,
+      "y": 4,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "RADIO_TOWER_4_41_Script_0081287B"
+    },
+    {
+      "x": 20,
+      "y": 4,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "RADIO_TOWER_4_41_Script_00812822"
+    }
+  ]
+}

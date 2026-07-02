@@ -1,0 +1,221 @@
+{
+  "id": "MAP_SANDWAY_TOWN_HOUSE5",
+  "name": "SandwayTown_House5",
+  "layout": "LAYOUT_SANDWAY_TOWN_HOUSE5",
+  "music": "MUS_RG_GYM",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [],
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "48",
+      "x": 9,
+      "y": 4,
+      "elevation": 3,
+      "movement_type": "0",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SANDWAY_TOWN_5_91_Script_009C8F98",
+      "flag": "5923"
+    },
+    {
+      "type": "object",
+      "graphics_id": "42",
+      "x": 7,
+      "y": 4,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "1",
+      "trainer_sight_or_berry_tree_id": "1",
+      "script": "SANDWAY_TOWN_5_91_Script_009C5D1B",
+      "flag": "5923"
+    },
+    {
+      "type": "object",
+      "graphics_id": "73",
+      "x": 9,
+      "y": 18,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SANDWAY_TOWN_5_91_Script_00B00435",
+      "flag": "1392"
+    },
+    {
+      "type": "object",
+      "graphics_id": "42",
+      "x": 12,
+      "y": 5,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "1",
+      "trainer_sight_or_berry_tree_id": "2",
+      "script": "SANDWAY_TOWN_5_91_Script_009C131C",
+      "flag": "5923"
+    },
+    {
+      "type": "object",
+      "graphics_id": "41",
+      "x": 10,
+      "y": 3,
+      "elevation": 0,
+      "movement_type": "1",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "1",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "SANDWAY_TOWN_5_91_Script_009BEA92",
+      "flag": "5923"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 11,
+      "y": 13,
+      "elevation": 3,
+      "dest_map": "MAP_MEADOW_TOWN_HOUSE3",
+      "dest_warp_id": 4
+    },
+    {
+      "x": 9,
+      "y": 23,
+      "elevation": 3,
+      "dest_map": "MAP_SANDWAY_TOWN",
+      "dest_warp_id": 1
+    },
+    {
+      "x": 11,
+      "y": 14,
+      "elevation": 3,
+      "dest_map": "MAP_MEADOW_TOWN_HOUSE3",
+      "dest_warp_id": 4
+    },
+    {
+      "x": 10,
+      "y": 13,
+      "elevation": 0,
+      "dest_map": "MAP_MEADOW_TOWN_HOUSE3",
+      "dest_warp_id": 4
+    },
+    {
+      "x": 16,
+      "y": 21,
+      "elevation": 0,
+      "dest_map": "MAP_DYNAMIC",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 13,
+      "y": 14,
+      "elevation": 0,
+      "dest_map": "MAP_MEADOW_TOWN_HOUSE3",
+      "dest_warp_id": 4
+    },
+    {
+      "x": 13,
+      "y": 15,
+      "elevation": 0,
+      "dest_map": "MAP_MEADOW_TOWN_HOUSE3",
+      "dest_warp_id": 4
+    },
+    {
+      "x": 7,
+      "y": 10,
+      "elevation": 0,
+      "dest_map": "MAP_MEADOW_TOWN_HOUSE3",
+      "dest_warp_id": 4
+    },
+    {
+      "x": 7,
+      "y": 11,
+      "elevation": 0,
+      "dest_map": "MAP_MEADOW_TOWN_HOUSE3",
+      "dest_warp_id": 4
+    },
+    {
+      "x": 9,
+      "y": 14,
+      "elevation": 0,
+      "dest_map": "MAP_MEADOW_TOWN_HOUSE3",
+      "dest_warp_id": 4
+    },
+    {
+      "x": 10,
+      "y": 14,
+      "elevation": 0,
+      "dest_map": "MAP_MEADOW_TOWN_HOUSE3",
+      "dest_warp_id": 4
+    },
+    {
+      "x": 5,
+      "y": 9,
+      "elevation": 0,
+      "dest_map": "MAP_MEADOW_TOWN_HOUSE3",
+      "dest_warp_id": 4
+    },
+    {
+      "x": 5,
+      "y": 10,
+      "elevation": 0,
+      "dest_map": "MAP_MEADOW_TOWN_HOUSE3",
+      "dest_warp_id": 4
+    },
+    {
+      "x": 4,
+      "y": 9,
+      "elevation": 0,
+      "dest_map": "MAP_MEADOW_TOWN_HOUSE3",
+      "dest_warp_id": 4
+    },
+    {
+      "x": 4,
+      "y": 10,
+      "elevation": 0,
+      "dest_map": "MAP_MEADOW_TOWN_HOUSE3",
+      "dest_warp_id": 4
+    },
+    {
+      "x": 4,
+      "y": 11,
+      "elevation": 0,
+      "dest_map": "MAP_MEADOW_TOWN_HOUSE3",
+      "dest_warp_id": 4
+    }
+  ],
+  "coord_events": [],
+  "bg_events": [
+    {
+      "x": 7,
+      "y": 21,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "SANDWAY_TOWN_5_91_Script_00B10977"
+    },
+    {
+      "x": 11,
+      "y": 21,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "SANDWAY_TOWN_5_91_Script_00B10977"
+    }
+  ]
+}

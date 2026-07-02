@@ -1,0 +1,35 @@
+SafariTown_MapScripts::
+	.byte 0
+
+SAFARI_TOWN_3_105_Script_00ABB9A4::
+	end
+
+SAFARI_TOWN_3_105_Script_00ABF288::
+	end
+
+SAFARI_TOWN_3_105_Script_00ABFA19::
+	end
+
+SAFARI_TOWN_3_105_Script_00AC5B1E::
+	end
+
+SAFARI_TOWN_3_105_Script_00AC9D84::
+	end
+
+SAFARI_TOWN_3_105_Script_00ACAC00::
+	end
+
+SAFARI_TOWN_3_105_Script_00AF8A24::
+	end
+
+SAFARI_TOWN_3_105_Script_00AFD4D7::
+	end
+
+SAFARI_TOWN_3_105_Script_00B0034D::
+	end
+
+SAFARI_TOWN_3_105_Script_00B01923::
+	end
+
+SAFARI_TOWN_3_105_Script_00B01B30::
+	end

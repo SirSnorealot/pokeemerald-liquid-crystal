@@ -1,0 +1,26 @@
+OldMansion_Room2_MapScripts::
+	.byte 0
+
+OLD_MANSION_2_116_Script_00969E49::
+	end
+
+OLD_MANSION_2_116_Script_00969EB6::
+	end
+
+OLD_MANSION_2_116_Script_00969FBD::
+	end
+
+OLD_MANSION_2_116_Script_0096A041::
+	end
+
+OLD_MANSION_2_116_Script_009D95EE::
+	end
+
+OLD_MANSION_2_116_Script_009DB36F::
+	end
+
+OLD_MANSION_2_116_Script_009E0B8E::
+	end
+
+OLD_MANSION_2_116_Script_009E0B9B::
+	end

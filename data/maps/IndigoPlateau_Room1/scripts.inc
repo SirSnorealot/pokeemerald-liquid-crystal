@@ -1,0 +1,32 @@
+IndigoPlateau_Room1_MapScripts::
+	.byte 0
+
+INDIGO_PLATEAU_13_0_Script_0016EA8A::
+	end
+
+INDIGO_PLATEAU_13_0_Script_0016EACC::
+	end
+
+INDIGO_PLATEAU_13_0_Script_0016EB06::
+	end
+
+INDIGO_PLATEAU_13_0_Script_001AD06C::
+	end
+
+INDIGO_PLATEAU_13_0_Script_00803EBD::
+	end
+
+INDIGO_PLATEAU_13_0_Script_008D28E9::
+	end
+
+INDIGO_PLATEAU_13_0_Script_00901D3B::
+	end
+
+INDIGO_PLATEAU_13_0_Script_0090EF7E::
+	end
+
+INDIGO_PLATEAU_13_0_Script_0096DA99::
+	end
+
+INDIGO_PLATEAU_13_0_Script_009A515A::
+	end

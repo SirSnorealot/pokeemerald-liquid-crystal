@@ -1,0 +1,67 @@
+{
+  "id": "MAP_GOLDENROD_CITY_HOUSE10",
+  "name": "GoldenrodCity_House10",
+  "layout": "LAYOUT_GOLDENROD_CITY_HOUSE10",
+  "music": "MUS_RG_POKE_CENTER",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [],
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "33",
+      "x": 6,
+      "y": 4,
+      "elevation": 0,
+      "movement_type": "9",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "GOLDENROD_CITY_2_109_Script_00A46361",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 3,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_GOLDENROD_CITY_HOUSE12",
+      "dest_warp_id": 2
+    },
+    {
+      "x": 11,
+      "y": 4,
+      "elevation": 0,
+      "dest_map": "MAP_DYNAMIC",
+      "dest_warp_id": 0
+    }
+  ],
+  "coord_events": [],
+  "bg_events": [
+    {
+      "x": 11,
+      "y": 3,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "GOLDENROD_CITY_2_109_Script_00A348D1"
+    },
+    {
+      "x": 8,
+      "y": 6,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "GOLDENROD_CITY_2_109_Script_00A318BF"
+    }
+  ]
+}

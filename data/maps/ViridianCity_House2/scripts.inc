@@ -1,0 +1,20 @@
+ViridianCity_House2_MapScripts::
+	.byte 0
+
+VIRIDIAN_CITY_4_82_Script_009407F0::
+	end
+
+VIRIDIAN_CITY_4_82_Script_00953CEC::
+	end
+
+VIRIDIAN_CITY_4_82_Script_00953D9E::
+	end
+
+VIRIDIAN_CITY_4_82_Script_00953E39::
+	end
+
+VIRIDIAN_CITY_4_82_Script_009541D5::
+	end
+
+VIRIDIAN_CITY_4_82_Script_00954211::
+	end

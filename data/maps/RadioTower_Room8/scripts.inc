@@ -1,0 +1,32 @@
+RadioTower_Room8_MapScripts::
+	.byte 0
+
+RADIO_TOWER_4_41_Script_008127C1::
+	end
+
+RADIO_TOWER_4_41_Script_00812822::
+	end
+
+RADIO_TOWER_4_41_Script_0081284B::
+	end
+
+RADIO_TOWER_4_41_Script_0081287B::
+	end
+
+RADIO_TOWER_4_41_Script_00812890::
+	end
+
+RADIO_TOWER_4_41_Script_00812917::
+	end
+
+RADIO_TOWER_4_41_Script_0084143E::
+	end
+
+RADIO_TOWER_4_41_Script_008414E4::
+	end
+
+RADIO_TOWER_4_41_Script_00841590::
+	end
+
+RADIO_TOWER_4_41_Script_008D1F42::
+	end

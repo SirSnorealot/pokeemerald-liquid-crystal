@@ -1,0 +1,59 @@
+Lighthouse_Room1_MapScripts::
+	.byte 0
+
+LIGHTHOUSE_1_99_Script_0082B2DF::
+	end
+
+LIGHTHOUSE_1_99_Script_0082B362::
+	end
+
+LIGHTHOUSE_1_99_Script_0082B3C3::
+	end
+
+LIGHTHOUSE_1_99_Script_0082B44F::
+	end
+
+LIGHTHOUSE_1_99_Script_0082B5FB::
+	end
+
+LIGHTHOUSE_1_99_Script_0082B6A9::
+	end
+
+LIGHTHOUSE_1_99_Script_0082B7C4::
+	end
+
+LIGHTHOUSE_1_99_Script_0082B895::
+	end
+
+LIGHTHOUSE_1_99_Script_0082B8AC::
+	end
+
+LIGHTHOUSE_1_99_Script_0082B8C3::
+	end
+
+LIGHTHOUSE_1_99_Script_0082B99F::
+	end
+
+LIGHTHOUSE_1_99_Script_0082BA78::
+	end
+
+LIGHTHOUSE_1_99_Script_0082BA8F::
+	end
+
+LIGHTHOUSE_1_99_Script_0082BAA6::
+	end
+
+LIGHTHOUSE_1_99_Script_0082BB7F::
+	end
+
+LIGHTHOUSE_1_99_Script_0082BB96::
+	end
+
+LIGHTHOUSE_1_99_Script_0082C4AE::
+	end
+
+LIGHTHOUSE_1_99_Script_00884595::
+	end
+
+LIGHTHOUSE_1_99_Script_009002A0::
+	end

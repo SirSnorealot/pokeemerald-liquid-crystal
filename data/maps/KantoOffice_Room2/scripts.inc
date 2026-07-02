@@ -1,0 +1,35 @@
+KantoOffice_Room2_MapScripts::
+	.byte 0
+
+KANTO_OFFICE_2_123_Script_0091EB88::
+	end
+
+KANTO_OFFICE_2_123_Script_009256AA::
+	end
+
+KANTO_OFFICE_2_123_Script_0092570F::
+	end
+
+KANTO_OFFICE_2_123_Script_00925718::
+	end
+
+KANTO_OFFICE_2_123_Script_00926858::
+	end
+
+KANTO_OFFICE_2_123_Script_00926861::
+	end
+
+KANTO_OFFICE_2_123_Script_0092686A::
+	end
+
+KANTO_OFFICE_2_123_Script_00926873::
+	end
+
+KANTO_OFFICE_2_123_Script_0092C0CD::
+	end
+
+KANTO_OFFICE_2_123_Script_0092C0D6::
+	end
+
+KANTO_OFFICE_2_123_Script_009CEE61::
+	end

@@ -19,18 +19,33 @@
       "direction": "right"
     },
     {
-      "map": "MAP_ROUTE40",
-      "offset": -29,
-      "direction": "left"
-    },
-    {
       "map": "MAP_OLIVINE_CITY",
       "offset": 0,
       "direction": "up"
+    },
+    {
+      "map": "MAP_ROUTE40",
+      "offset": -29,
+      "direction": "left"
     }
   ],
   "object_events": [],
-  "warp_events": [],
+  "warp_events": [
+    {
+      "x": 28,
+      "y": 12,
+      "elevation": 0,
+      "dest_map": "MAP_SS_AQUA_ROOM1",
+      "dest_warp_id": 3
+    },
+    {
+      "x": 28,
+      "y": 3,
+      "elevation": 0,
+      "dest_map": "MAP_OLIVINE_CITY",
+      "dest_warp_id": 7
+    }
+  ],
   "coord_events": [],
   "bg_events": [],
   "region": "REGION_HOENN"

@@ -1,0 +1,78 @@
+{
+  "id": "MAP_FUCHSIA_CITY_HOUSE4",
+  "name": "FuchsiaCity_House4",
+  "layout": "LAYOUT_FUCHSIA_CITY_HOUSE4",
+  "music": "MUS_RG_CELADON",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [],
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "47",
+      "x": 8,
+      "y": 5,
+      "elevation": 3,
+      "movement_type": "76",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "0x0",
+      "flag": "640"
+    },
+    {
+      "type": "object",
+      "graphics_id": "28",
+      "x": 3,
+      "y": 7,
+      "elevation": 3,
+      "movement_type": "7",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "FUCHSIA_CITY_5_114_Script_00973CA2",
+      "flag": "6180"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 4,
+      "y": 1,
+      "elevation": 3,
+      "dest_map": "MAP_SAFARI_ZONE",
+      "dest_warp_id": 5
+    },
+    {
+      "x": 5,
+      "y": 7,
+      "elevation": 3,
+      "dest_map": "MAP_FUCHSIA_CITY",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 4,
+      "y": 7,
+      "elevation": 3,
+      "dest_map": "MAP_FUCHSIA_CITY",
+      "dest_warp_id": 9
+    },
+    {
+      "x": 3,
+      "y": 7,
+      "elevation": 3,
+      "dest_map": "MAP_FUCHSIA_CITY",
+      "dest_warp_id": 0
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}

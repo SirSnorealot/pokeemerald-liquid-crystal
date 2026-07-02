@@ -19,36 +19,36 @@
       "x": 27,
       "y": 43,
       "elevation": 3,
-      "dest_warp_id": "1",
-      "dest_map": "MAP_UNION_CAVE_B2_F"
+      "dest_map": "MAP_UNION_CAVE_B2_F",
+      "dest_warp_id": 1
     },
     {
       "x": 11,
       "y": 4,
       "elevation": 3,
-      "dest_warp_id": "9",
-      "dest_map": "MAP_RUINS_OF_ALPH"
+      "dest_map": "MAP_RUINS_OF_ALPH",
+      "dest_warp_id": 9
     },
     {
       "x": 13,
       "y": 23,
       "elevation": 0,
-      "dest_warp_id": "2",
-      "dest_map": "MAP_UNION_CAVE_1_F"
+      "dest_map": "MAP_UNION_CAVE_1_F",
+      "dest_warp_id": 2
     },
     {
       "x": 12,
       "y": 12,
       "elevation": 3,
-      "dest_warp_id": "7",
-      "dest_map": "MAP_RUINS_OF_ALPH"
+      "dest_map": "MAP_RUINS_OF_ALPH",
+      "dest_warp_id": 7
     },
     {
       "x": 3,
       "y": 45,
       "elevation": 0,
-      "dest_warp_id": "3",
-      "dest_map": "MAP_UNION_CAVE_1_F"
+      "dest_map": "MAP_UNION_CAVE_1_F",
+      "dest_warp_id": 3
     }
   ],
   "coord_events": [],

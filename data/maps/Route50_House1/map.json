@@ -1,0 +1,57 @@
+{
+  "id": "MAP_ROUTE50_HOUSE1",
+  "name": "Route50_House1",
+  "layout": "LAYOUT_ROUTE50_HOUSE1",
+  "music": "MUS_DUMMY",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [],
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "52",
+      "x": 2,
+      "y": 4,
+      "elevation": 3,
+      "movement_type": "7",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ROUTE_50_5_59_Script_0090D999",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 3,
+      "y": 7,
+      "elevation": 3,
+      "dest_map": "MAP_MEADOW_TOWN",
+      "dest_warp_id": 7
+    },
+    {
+      "x": 4,
+      "y": 7,
+      "elevation": 3,
+      "dest_map": "MAP_ROUTE50",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 10,
+      "y": 4,
+      "elevation": 3,
+      "dest_map": "MAP_ROUTE50_ROOM1",
+      "dest_warp_id": 0
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}

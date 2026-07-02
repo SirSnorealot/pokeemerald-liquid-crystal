@@ -1,0 +1,92 @@
+{
+  "id": "MAP_CRYSTAL_CAVES_ROOM4",
+  "name": "CrystalCaves_Room4",
+  "layout": "LAYOUT_CRYSTAL_CAVES_ROOM4",
+  "music": "MUS_RG_MT_MOON",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": false,
+  "weather": "WEATHER_SHADE",
+  "map_type": "MAP_TYPE_UNDERGROUND",
+  "allow_cycling": false,
+  "allow_escaping": true,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [],
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "92",
+      "x": 28,
+      "y": 7,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "CRYSTAL_CAVES_5_94_Script_00A682D3",
+      "flag": "1321"
+    },
+    {
+      "type": "object",
+      "graphics_id": "92",
+      "x": 24,
+      "y": 17,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "CRYSTAL_CAVES_5_94_Script_00A682C6",
+      "flag": "1320"
+    },
+    {
+      "type": "object",
+      "graphics_id": "193",
+      "x": 22,
+      "y": 14,
+      "elevation": 0,
+      "movement_type": "1",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "1",
+      "trainer_sight_or_berry_tree_id": "5",
+      "script": "CRYSTAL_CAVES_5_94_Script_00A6DCBA",
+      "flag": "1299"
+    },
+    {
+      "type": "object",
+      "graphics_id": "52",
+      "x": 6,
+      "y": 12,
+      "elevation": 0,
+      "movement_type": "10",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "1",
+      "trainer_sight_or_berry_tree_id": "4",
+      "script": "CRYSTAL_CAVES_5_94_Script_00ACEF16",
+      "flag": "1346"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 24,
+      "y": 23,
+      "elevation": 0,
+      "dest_map": "MAP_CRYSTAL_CAVES_ROOM2",
+      "dest_warp_id": 3
+    },
+    {
+      "x": 23,
+      "y": 5,
+      "elevation": 0,
+      "dest_map": "MAP_CRYSTAL_CAVES_ROOM2",
+      "dest_warp_id": 4
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}

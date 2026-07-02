@@ -1,0 +1,26 @@
+SafariZone_4_MapScripts::
+	.byte 0
+
+SAFARI_ZONE_1_66_Script_00162386::
+	end
+
+SAFARI_ZONE_1_66_Script_009CB79E::
+	end
+
+SAFARI_ZONE_1_66_Script_009CB7AB::
+	end
+
+SAFARI_ZONE_1_66_Script_009CB7B8::
+	end
+
+SAFARI_ZONE_1_66_Script_009CB7C5::
+	end
+
+SAFARI_ZONE_1_66_Script_009E2A48::
+	end
+
+SAFARI_ZONE_1_66_Script_009E4064::
+	end
+
+SAFARI_ZONE_1_66_Script_009EE809::
+	end

@@ -1,0 +1,20 @@
+BlackthornCity_House4_MapScripts::
+	.byte 0
+
+BLACKTHORN_CITY_2_91_Script_00852F17::
+	end
+
+BLACKTHORN_CITY_2_91_Script_00853120::
+	end
+
+BLACKTHORN_CITY_2_91_Script_008531A3::
+	end
+
+BLACKTHORN_CITY_2_91_Script_0085369B::
+	end
+
+BLACKTHORN_CITY_2_91_Script_0085382E::
+	end
+
+BLACKTHORN_CITY_2_91_Script_00874A35::
+	end

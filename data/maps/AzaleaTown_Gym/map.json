@@ -19,8 +19,8 @@
       "x": 12,
       "y": 22,
       "elevation": 3,
-      "dest_warp_id": "6",
-      "dest_map": "MAP_AZALEA_TOWN"
+      "dest_map": "MAP_AZALEA_TOWN",
+      "dest_warp_id": 6
     }
   ],
   "coord_events": [],

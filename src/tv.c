@@ -3388,7 +3388,7 @@ void GetMomOrDadStringForTVMessage(void)
 void HideBattleTowerReporter(void)
 {
     VarSet(VAR_BRAVO_TRAINER_BATTLE_TOWER_ON, 0);
-    RemoveObjectEventByLocalIdAndMap(LOCALID_TOWER_LOBBY_REPORTER, gSaveBlock1Ptr->location.mapNum, gSaveBlock1Ptr->location.mapGroup);
+    RemoveObjectEventByLocalIdAndMap(0, gSaveBlock1Ptr->location.mapNum, gSaveBlock1Ptr->location.mapGroup); // TODO(LC): was LOCALID_TOWER_LOBBY_REPORTER (removed with Hoenn maps)
     FlagSet(FLAG_HIDE_BATTLE_TOWER_REPORTER);
 }
 

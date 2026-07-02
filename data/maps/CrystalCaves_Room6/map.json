@@ -1,0 +1,43 @@
+{
+  "id": "MAP_CRYSTAL_CAVES_ROOM6",
+  "name": "CrystalCaves_Room6",
+  "layout": "LAYOUT_CRYSTAL_CAVES_ROOM6",
+  "music": "MUS_RG_MT_MOON",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [],
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "33",
+      "x": 8,
+      "y": 4,
+      "elevation": 3,
+      "movement_type": "0",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "CRYSTAL_CAVES_5_97_Script_00A25091",
+      "flag": "1331"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 8,
+      "y": 8,
+      "elevation": 3,
+      "dest_map": "MAP_ROUTE55",
+      "dest_warp_id": 0
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}

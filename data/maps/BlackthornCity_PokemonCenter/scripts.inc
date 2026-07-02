@@ -1,0 +1,23 @@
+BlackthornCity_PokemonCenter_MapScripts::
+	.byte 0
+
+BLACKTHORN_CITY_21_0_Script_0016FC41::
+	end
+
+BLACKTHORN_CITY_21_0_Script_00171619::
+	end
+
+BLACKTHORN_CITY_21_0_Script_0084D0A8::
+	end
+
+BLACKTHORN_CITY_21_0_Script_0084DF1E::
+	end
+
+BLACKTHORN_CITY_21_0_Script_0084E126::
+	end
+
+BLACKTHORN_CITY_21_0_Script_0092BFBA::
+	end
+
+BLACKTHORN_CITY_21_0_Script_00997D8D::
+	end

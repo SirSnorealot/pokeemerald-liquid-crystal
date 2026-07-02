@@ -1,0 +1,26 @@
+SafariTown_2_MapScripts::
+	.byte 0
+
+SAFARI_TOWN_5_113_Script_001BE00C::
+	end
+
+SAFARI_TOWN_5_113_Script_00AEA840::
+	end
+
+SAFARI_TOWN_5_113_Script_00AEA97E::
+	end
+
+SAFARI_TOWN_5_113_Script_00AEAA3E::
+	end
+
+SAFARI_TOWN_5_113_Script_00AEB04C::
+	end
+
+SAFARI_TOWN_5_113_Script_00AEFFE4::
+	end
+
+SAFARI_TOWN_5_113_Script_00AEFFF1::
+	end
+
+SAFARI_TOWN_5_113_Script_00AF86E0::
+	end

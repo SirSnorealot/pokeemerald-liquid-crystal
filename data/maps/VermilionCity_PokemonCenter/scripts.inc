@@ -1,0 +1,26 @@
+VermilionCity_PokemonCenter_MapScripts::
+	.byte 0
+
+VERMILION_CITY_9_1_Script_0016B433::
+	end
+
+VERMILION_CITY_9_1_Script_00171619::
+	end
+
+VERMILION_CITY_9_1_Script_001A8D08::
+	end
+
+VERMILION_CITY_9_1_Script_001ACE83::
+	end
+
+VERMILION_CITY_9_1_Script_008DAFC3::
+	end
+
+VERMILION_CITY_9_1_Script_008DB026::
+	end
+
+VERMILION_CITY_9_1_Script_008DB06F::
+	end
+
+VERMILION_CITY_9_1_Script_0092BFBA::
+	end

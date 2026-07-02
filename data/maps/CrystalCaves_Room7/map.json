@@ -1,0 +1,120 @@
+{
+  "id": "MAP_CRYSTAL_CAVES_ROOM7",
+  "name": "CrystalCaves_Room7",
+  "layout": "LAYOUT_CRYSTAL_CAVES_ROOM7",
+  "music": "MUS_RG_MT_MOON",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": false,
+  "weather": "WEATHER_SHADE",
+  "map_type": "MAP_TYPE_UNDERGROUND",
+  "allow_cycling": false,
+  "allow_escaping": true,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [],
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "92",
+      "x": 13,
+      "y": 12,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "CRYSTAL_CAVES_5_103_Script_00AADFEF",
+      "flag": "1368"
+    },
+    {
+      "type": "object",
+      "graphics_id": "92",
+      "x": 15,
+      "y": 23,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "CRYSTAL_CAVES_5_103_Script_00AADD56",
+      "flag": "1369"
+    },
+    {
+      "type": "object",
+      "graphics_id": "17",
+      "x": 14,
+      "y": 10,
+      "elevation": 0,
+      "movement_type": "1",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "0x0",
+      "flag": "1367"
+    },
+    {
+      "type": "object",
+      "graphics_id": "26",
+      "x": 15,
+      "y": 10,
+      "elevation": 0,
+      "movement_type": "1",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "0x0",
+      "flag": "1367"
+    },
+    {
+      "type": "object",
+      "graphics_id": "41",
+      "x": 23,
+      "y": 12,
+      "elevation": 0,
+      "movement_type": "1",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "1",
+      "trainer_sight_or_berry_tree_id": "5",
+      "script": "CRYSTAL_CAVES_5_103_Script_00AD4036",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "18",
+      "x": 19,
+      "y": 21,
+      "elevation": 0,
+      "movement_type": "2",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "1",
+      "trainer_sight_or_berry_tree_id": "5",
+      "script": "CRYSTAL_CAVES_5_103_Script_00AD5770",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 4,
+      "y": 7,
+      "elevation": 0,
+      "dest_map": "MAP_SANDWAY_TOWN",
+      "dest_warp_id": 6
+    },
+    {
+      "x": 21,
+      "y": 24,
+      "elevation": 0,
+      "dest_map": "MAP_CRYSTAL_CAVES_ROOM8",
+      "dest_warp_id": 0
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}

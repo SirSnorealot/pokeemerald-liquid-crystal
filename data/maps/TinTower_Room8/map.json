@@ -1,0 +1,64 @@
+{
+  "id": "MAP_TIN_TOWER_ROOM8",
+  "name": "TinTower_Room8",
+  "layout": "LAYOUT_TIN_TOWER_ROOM8",
+  "music": "MUS_DUMMY",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [],
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "92",
+      "x": 6,
+      "y": 8,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "TIN_TOWER_4_122_Script_00964DC2",
+      "flag": "5859"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 9,
+      "y": 14,
+      "elevation": 0,
+      "dest_map": "MAP_TIN_TOWER_ROOM6",
+      "dest_warp_id": 2
+    },
+    {
+      "x": 1,
+      "y": 9,
+      "elevation": 0,
+      "dest_map": "MAP_TIN_TOWER_ROOM9",
+      "dest_warp_id": 2
+    },
+    {
+      "x": 0,
+      "y": 14,
+      "elevation": 0,
+      "dest_map": "MAP_TIN_TOWER_ROOM5",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 15,
+      "y": 14,
+      "elevation": 0,
+      "dest_map": "MAP_DYNAMIC",
+      "dest_warp_id": 0
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}

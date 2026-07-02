@@ -1,0 +1,162 @@
+{
+  "id": "MAP_BATTLE_TOWER_ROOM1",
+  "name": "BattleTower_Room1",
+  "layout": "LAYOUT_BATTLE_TOWER_ROOM1",
+  "music": "MUS_RG_ENCOUNTER_DEOXYS",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [],
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "35",
+      "x": 14,
+      "y": 8,
+      "elevation": 0,
+      "movement_type": "3",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "BATTLE_TOWER_2_73_Script_008D0051",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "66",
+      "x": 8,
+      "y": 12,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "BATTLE_TOWER_2_73_Script_009A2CF7",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "20",
+      "x": 1,
+      "y": 8,
+      "elevation": 0,
+      "movement_type": "2",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "BATTLE_TOWER_2_73_Script_008D0117",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "42",
+      "x": 3,
+      "y": 15,
+      "elevation": 0,
+      "movement_type": "1",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "BATTLE_TOWER_2_73_Script_008D00CB",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "41",
+      "x": 14,
+      "y": 14,
+      "elevation": 0,
+      "movement_type": "6",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "BATTLE_TOWER_2_73_Script_008D0000",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 8,
+      "y": 5,
+      "elevation": 0,
+      "dest_map": "MAP_DYNAMIC",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 8,
+      "y": 15,
+      "elevation": 0,
+      "dest_map": "MAP_BATTLE_TOWER",
+      "dest_warp_id": 1
+    },
+    {
+      "x": 18,
+      "y": 15,
+      "elevation": 0,
+      "dest_map": "MAP_DYNAMIC",
+      "dest_warp_id": 0
+    }
+  ],
+  "coord_events": [],
+  "bg_events": [
+    {
+      "x": 7,
+      "y": 12,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "BATTLE_TOWER_2_73_Script_008D0186"
+    },
+    {
+      "x": 9,
+      "y": 4,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "BATTLE_TOWER_2_73_Script_001C54AF"
+    },
+    {
+      "x": 10,
+      "y": 4,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "BATTLE_TOWER_2_73_Script_001649CE"
+    },
+    {
+      "x": 11,
+      "y": 4,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "BATTLE_TOWER_2_73_Script_001C51D8"
+    },
+    {
+      "x": 12,
+      "y": 4,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "BATTLE_TOWER_2_73_Script_001C4F54"
+    },
+    {
+      "x": 6,
+      "y": 4,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "BATTLE_TOWER_2_73_Script_00A176D3"
+    }
+  ]
+}

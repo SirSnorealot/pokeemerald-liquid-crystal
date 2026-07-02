@@ -118,7 +118,7 @@
       "movement_range_y": 0,
       "trainer_type": "0",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "0x8000000",
+      "script": "0x0",
       "flag": "0"
     },
     {
@@ -174,7 +174,36 @@
       "flag": "0"
     }
   ],
-  "warp_events": [],
+  "warp_events": [
+    {
+      "x": 46,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE27_HOUSE1",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 34,
+      "y": 7,
+      "elevation": 0,
+      "dest_map": "MAP_TOHJO_FALLS",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 50,
+      "y": 6,
+      "elevation": 0,
+      "dest_map": "MAP_TOHJO_FALLS",
+      "dest_warp_id": 1
+    },
+    {
+      "x": 9,
+      "y": 19,
+      "elevation": 0,
+      "dest_map": "MAP_UNDERSEA_CAVERN_ROOM3",
+      "dest_warp_id": 12
+    }
+  ],
   "coord_events": [],
   "bg_events": [
     {

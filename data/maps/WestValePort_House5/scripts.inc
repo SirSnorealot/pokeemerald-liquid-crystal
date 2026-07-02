@@ -1,0 +1,62 @@
+WestValePort_House5_MapScripts::
+	.byte 0
+
+WEST_VALE_PORT_5_86_Script_00A3B21E::
+	end
+
+WEST_VALE_PORT_5_86_Script_00A49653::
+	end
+
+WEST_VALE_PORT_5_86_Script_00A522A1::
+	end
+
+WEST_VALE_PORT_5_86_Script_00A562DE::
+	end
+
+WEST_VALE_PORT_5_86_Script_00A581D5::
+	end
+
+WEST_VALE_PORT_5_86_Script_00A5905F::
+	end
+
+WEST_VALE_PORT_5_86_Script_00A59155::
+	end
+
+WEST_VALE_PORT_5_86_Script_00A59207::
+	end
+
+WEST_VALE_PORT_5_86_Script_00A5BD92::
+	end
+
+WEST_VALE_PORT_5_86_Script_00A5BE8C::
+	end
+
+WEST_VALE_PORT_5_86_Script_00A5BF09::
+	end
+
+WEST_VALE_PORT_5_86_Script_00A5DE06::
+	end
+
+WEST_VALE_PORT_5_86_Script_00A5DEE0::
+	end
+
+WEST_VALE_PORT_5_86_Script_00A5DF20::
+	end
+
+WEST_VALE_PORT_5_86_Script_00A5FE22::
+	end
+
+WEST_VALE_PORT_5_86_Script_00A5FFC8::
+	end
+
+WEST_VALE_PORT_5_86_Script_00A60067::
+	end
+
+WEST_VALE_PORT_5_86_Script_00A60167::
+	end
+
+WEST_VALE_PORT_5_86_Script_00A62975::
+	end
+
+WEST_VALE_PORT_5_86_Script_00AD3E78::
+	end

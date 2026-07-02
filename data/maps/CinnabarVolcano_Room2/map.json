@@ -1,0 +1,241 @@
+{
+  "id": "MAP_CINNABAR_VOLCANO_ROOM2",
+  "name": "CinnabarVolcano_Room2",
+  "layout": "LAYOUT_CINNABAR_VOLCANO_ROOM2",
+  "music": "MUS_RG_BERRY_PICK",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_UNDERGROUND",
+  "allow_cycling": false,
+  "allow_escaping": true,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [],
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "14",
+      "x": 7,
+      "y": 18,
+      "elevation": 0,
+      "movement_type": "9",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "1",
+      "trainer_sight_or_berry_tree_id": "1",
+      "script": "CINNABAR_VOLCANO_5_45_Script_0092161D",
+      "flag": "5848"
+    },
+    {
+      "type": "object",
+      "graphics_id": "14",
+      "x": 6,
+      "y": 24,
+      "elevation": 0,
+      "movement_type": "10",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "1",
+      "trainer_sight_or_berry_tree_id": "1",
+      "script": "CINNABAR_VOLCANO_5_45_Script_00921598",
+      "flag": "5848"
+    },
+    {
+      "type": "object",
+      "graphics_id": "49",
+      "x": 13,
+      "y": 8,
+      "elevation": 0,
+      "movement_type": "16",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "1",
+      "trainer_sight_or_berry_tree_id": "2",
+      "script": "CINNABAR_VOLCANO_5_45_Script_009216C0",
+      "flag": "5848"
+    },
+    {
+      "type": "object",
+      "graphics_id": "41",
+      "x": 40,
+      "y": 32,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "1",
+      "trainer_sight_or_berry_tree_id": "4",
+      "script": "CINNABAR_VOLCANO_5_45_Script_00936B22",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 7,
+      "y": 37,
+      "elevation": 3,
+      "dest_map": "MAP_CINNABAR_ISLAND",
+      "dest_warp_id": 1
+    },
+    {
+      "x": 20,
+      "y": 7,
+      "elevation": 0,
+      "dest_map": "MAP_CINNABAR_VOLCANO_ROOM1",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 20,
+      "y": 27,
+      "elevation": 0,
+      "dest_map": "MAP_UNDERSEA_CAVERN_ROOM3",
+      "dest_warp_id": 22
+    },
+    {
+      "x": 40,
+      "y": 37,
+      "elevation": 0,
+      "dest_map": "MAP_CINNABAR_ISLAND",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 58,
+      "y": 32,
+      "elevation": 0,
+      "dest_map": "MAP_CINNABAR_ISLAND_ROOM1",
+      "dest_warp_id": 13
+    },
+    {
+      "x": 59,
+      "y": 24,
+      "elevation": 0,
+      "dest_map": "MAP_CINNABAR_ISLAND_ROOM1",
+      "dest_warp_id": 7
+    },
+    {
+      "x": 59,
+      "y": 45,
+      "elevation": 0,
+      "dest_map": "MAP_UNDERSEA_CAVERN_ROOM8",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 59,
+      "y": 34,
+      "elevation": 0,
+      "dest_map": "MAP_CINNABAR_ISLAND_ROOM1",
+      "dest_warp_id": 5
+    },
+    {
+      "x": 59,
+      "y": 13,
+      "elevation": 0,
+      "dest_map": "MAP_CINNABAR_ISLAND_ROOM1",
+      "dest_warp_id": 9
+    },
+    {
+      "x": 59,
+      "y": 3,
+      "elevation": 0,
+      "dest_map": "MAP_CINNABAR_ISLAND_ROOM1",
+      "dest_warp_id": 8
+    },
+    {
+      "x": 58,
+      "y": 1,
+      "elevation": 0,
+      "dest_map": "MAP_CINNABAR_ISLAND_ROOM1",
+      "dest_warp_id": 1
+    },
+    {
+      "x": 58,
+      "y": 11,
+      "elevation": 0,
+      "dest_map": "MAP_CINNABAR_ISLAND_ROOM1",
+      "dest_warp_id": 12
+    },
+    {
+      "x": 58,
+      "y": 22,
+      "elevation": 0,
+      "dest_map": "MAP_CINNABAR_ISLAND_ROOM1",
+      "dest_warp_id": 11
+    },
+    {
+      "x": 58,
+      "y": 43,
+      "elevation": 0,
+      "dest_map": "MAP_CINNABAR_ISLAND_ROOM1",
+      "dest_warp_id": 4
+    }
+  ],
+  "coord_events": [],
+  "bg_events": [
+    {
+      "x": 19,
+      "y": 26,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "CINNABAR_VOLCANO_5_45_Script_00A88B60"
+    },
+    {
+      "x": 19,
+      "y": 27,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "CINNABAR_VOLCANO_5_45_Script_00A88B60"
+    },
+    {
+      "x": 20,
+      "y": 27,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "CINNABAR_VOLCANO_5_45_Script_00A88B60"
+    },
+    {
+      "x": 20,
+      "y": 28,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "CINNABAR_VOLCANO_5_45_Script_00A88B60"
+    },
+    {
+      "x": 21,
+      "y": 28,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "CINNABAR_VOLCANO_5_45_Script_00A88B60"
+    },
+    {
+      "x": 21,
+      "y": 29,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "CINNABAR_VOLCANO_5_45_Script_00A88B60"
+    },
+    {
+      "x": 22,
+      "y": 28,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "CINNABAR_VOLCANO_5_45_Script_00A88B60"
+    },
+    {
+      "x": 22,
+      "y": 29,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "CINNABAR_VOLCANO_5_45_Script_00A88B60"
+    }
+  ]
+}

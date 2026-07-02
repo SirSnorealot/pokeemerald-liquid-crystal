@@ -1,0 +1,23 @@
+CeladonCity_PokemonCenter_MapScripts::
+	.byte 0
+
+CELADON_CITY_10_12_Script_0016C5FB::
+	end
+
+CELADON_CITY_10_12_Script_00171619::
+	end
+
+CELADON_CITY_10_12_Script_008E48E0::
+	end
+
+CELADON_CITY_10_12_Script_008E4996::
+	end
+
+CELADON_CITY_10_12_Script_008E49D0::
+	end
+
+CELADON_CITY_10_12_Script_0092BFBA::
+	end
+
+CELADON_CITY_10_12_Script_0097325D::
+	end

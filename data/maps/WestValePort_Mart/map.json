@@ -1,0 +1,99 @@
+{
+  "id": "MAP_WEST_VALE_PORT_MART",
+  "name": "WestValePort_Mart",
+  "layout": "LAYOUT_MART_LC",
+  "music": "MUS_RG_SEVII_45",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [],
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "68",
+      "x": 2,
+      "y": 3,
+      "elevation": 3,
+      "movement_type": "10",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "WEST_VALE_PORT_5_85_Script_0090EF67",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "193",
+      "x": 7,
+      "y": 2,
+      "elevation": 0,
+      "movement_type": "6",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "WEST_VALE_PORT_5_85_Script_00A527B7",
+      "flag": "1299"
+    },
+    {
+      "type": "object",
+      "graphics_id": "63",
+      "x": 11,
+      "y": 6,
+      "elevation": 0,
+      "movement_type": "7",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "WEST_VALE_PORT_5_85_Script_00A524AD",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "33",
+      "x": 5,
+      "y": 5,
+      "elevation": 0,
+      "movement_type": "2",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "WEST_VALE_PORT_5_85_Script_00A5260A",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 3,
+      "y": 7,
+      "elevation": 3,
+      "dest_map": "MAP_MEADOW_TOWN",
+      "dest_warp_id": 7
+    },
+    {
+      "x": 4,
+      "y": 7,
+      "elevation": 3,
+      "dest_map": "MAP_WEST_VALE_PORT",
+      "dest_warp_id": 6
+    },
+    {
+      "x": 5,
+      "y": 7,
+      "elevation": 3,
+      "dest_map": "MAP_SAFFRON_CITY",
+      "dest_warp_id": 7
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}

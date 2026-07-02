@@ -1,0 +1,20 @@
+SeafoamIslands_Room3_MapScripts::
+	.byte 0
+
+SEAFOAM_ISLANDS_27_3_Script_001BE11D::
+	end
+
+SEAFOAM_ISLANDS_27_3_Script_00932242::
+	end
+
+SEAFOAM_ISLANDS_27_3_Script_0096FDFB::
+	end
+
+SEAFOAM_ISLANDS_27_3_Script_009701D7::
+	end
+
+SEAFOAM_ISLANDS_27_3_Script_00970292::
+	end
+
+SEAFOAM_ISLANDS_27_3_Script_00970324::
+	end

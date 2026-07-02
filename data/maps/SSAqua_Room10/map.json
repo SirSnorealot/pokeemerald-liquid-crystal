@@ -1,0 +1,80 @@
+{
+  "id": "MAP_SS_AQUA_ROOM10",
+  "name": "SSAqua_Room10",
+  "layout": "LAYOUT_SS_AQUA_ROOM4",
+  "music": "MUS_RG_SS_ANNE",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [],
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "52",
+      "x": 2,
+      "y": 6,
+      "elevation": 0,
+      "movement_type": "7",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "1",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "S_S__AQUA_4_43_Script_0091234F",
+      "flag": "5626"
+    },
+    {
+      "type": "object",
+      "graphics_id": "42",
+      "x": 2,
+      "y": 6,
+      "elevation": 0,
+      "movement_type": "7",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "1",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "S_S__AQUA_4_43_Script_00912D1D",
+      "flag": "5628"
+    },
+    {
+      "type": "object",
+      "graphics_id": "41",
+      "x": 4,
+      "y": 4,
+      "elevation": 0,
+      "movement_type": "1",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "1",
+      "trainer_sight_or_berry_tree_id": "2",
+      "script": "S_S__AQUA_4_43_Script_00912F88",
+      "flag": "5628"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 2,
+      "y": 1,
+      "elevation": 0,
+      "dest_map": "MAP_SS_AQUA_ROOM1",
+      "dest_warp_id": 12
+    }
+  ],
+  "coord_events": [],
+  "bg_events": [
+    {
+      "x": 6,
+      "y": 0,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_SOUTH",
+      "script": "S_S__AQUA_4_43_Script_0087F87E"
+    }
+  ]
+}

@@ -1,473 +1,565 @@
 {
-    "id": "MAP_VERMILION_CITY",
-    "name": "VermilionCity",
-    "layout": "LAYOUT_VERMILION_CITY",
-    "music": "MUS_RG_VERMILLION",
-    "region_map_section": "MAPSEC_VERMILION_CITY",
-    "requires_flash": false,
-    "weather": "WEATHER_SUNNY",
-    "map_type": "MAP_TYPE_TOWN",
-    "allow_cycling": true,
-    "allow_escaping": false,
-    "allow_running": true,
-    "show_map_name": true,
-    "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-    "connections": [
-        {
-            "map": "MAP_ROUTE6",
-            "offset": 8,
-            "direction": "up"
-        },
-        {
-            "map": "MAP_ROUTE11",
-            "offset": 8,
-            "direction": "right"
-        }
-    ],
-    "object_events": [
-        {
-            "type": "object",
-            "graphics_id": "22",
-            "x": 28,
-            "y": 13,
-            "elevation": 0,
-            "movement_type": "2",
-            "movement_range_x": 0,
-            "movement_range_y": 0,
-            "trainer_type": "0",
-            "trainer_sight_or_berry_tree_id": "0",
-            "script": "VERMILION_CITY_3_5_Script_008DAE43",
-            "flag": "0"
-        },
-        {
-            "type": "object",
-            "graphics_id": "41",
-            "x": 44,
-            "y": 12,
-            "elevation": 0,
-            "movement_type": "1",
-            "movement_range_x": 0,
-            "movement_range_y": 0,
-            "trainer_type": "0",
-            "trainer_sight_or_berry_tree_id": "0",
-            "script": "VERMILION_CITY_3_5_Script_0090A45B",
-            "flag": "0"
-        },
-        {
-            "type": "object",
-            "graphics_id": "28",
-            "x": 39,
-            "y": 18,
-            "elevation": 0,
-            "movement_type": "0",
-            "movement_range_x": 0,
-            "movement_range_y": 0,
-            "trainer_type": "0",
-            "trainer_sight_or_berry_tree_id": "0",
-            "script": "VERMILION_CITY_3_5_Script_008EB16F",
-            "flag": "6127"
-        },
-        {
-            "type": "object",
-            "graphics_id": "94",
-            "x": 61,
-            "y": 40,
-            "elevation": 0,
-            "movement_type": "0",
-            "movement_range_x": 0,
-            "movement_range_y": 0,
-            "trainer_type": "0",
-            "trainer_sight_or_berry_tree_id": "0",
-            "script": "VERMILION_CITY_3_5_Script_0093C377",
-            "flag": "4612"
-        },
-        {
-            "type": "object",
-            "graphics_id": "0",
-            "x": 0,
-            "y": 1,
-            "elevation": 0,
-            "movement_type": "76",
-            "movement_range_x": 0,
-            "movement_range_y": 0,
-            "trainer_type": "0",
-            "trainer_sight_or_berry_tree_id": "0",
-            "script": "0x8000000",
-            "flag": "0"
-        },
-        {
-            "type": "object",
-            "graphics_id": "94",
-            "x": 47,
-            "y": 32,
-            "elevation": 0,
-            "movement_type": "0",
-            "movement_range_x": 0,
-            "movement_range_y": 0,
-            "trainer_type": "0",
-            "trainer_sight_or_berry_tree_id": "0",
-            "script": "VERMILION_CITY_3_5_Script_0093C377",
-            "flag": "4611"
-        },
-        {
-            "type": "object",
-            "graphics_id": "56",
-            "x": 43,
-            "y": 25,
-            "elevation": 0,
-            "movement_type": "0",
-            "movement_range_x": 0,
-            "movement_range_y": 0,
-            "trainer_type": "0",
-            "trainer_sight_or_berry_tree_id": "0",
-            "script": "VERMILION_CITY_3_5_Script_00935F17",
-            "flag": "0"
-        },
-        {
-            "type": "object",
-            "graphics_id": "19",
-            "x": 27,
-            "y": 25,
-            "elevation": 0,
-            "movement_type": "2",
-            "movement_range_x": 0,
-            "movement_range_y": 0,
-            "trainer_type": "0",
-            "trainer_sight_or_berry_tree_id": "0",
-            "script": "VERMILION_CITY_3_5_Script_008DADE9",
-            "flag": "0"
-        },
-        {
-            "type": "object",
-            "graphics_id": "109",
-            "x": 50,
-            "y": 25,
-            "elevation": 0,
-            "movement_type": "0",
-            "movement_range_x": 0,
-            "movement_range_y": 0,
-            "trainer_type": "0",
-            "trainer_sight_or_berry_tree_id": "0",
-            "script": "VERMILION_CITY_3_5_Script_00168014",
-            "flag": "5748"
-        },
-        {
-            "type": "object",
-            "graphics_id": "95",
-            "x": 22,
-            "y": 36,
-            "elevation": 0,
-            "movement_type": "0",
-            "movement_range_x": 0,
-            "movement_range_y": 0,
-            "trainer_type": "0",
-            "trainer_sight_or_berry_tree_id": "0",
-            "script": "VERMILION_CITY_3_5_Script_001BDF13",
-            "flag": "18"
-        },
-        {
-            "type": "object",
-            "graphics_id": "28",
-            "x": 27,
-            "y": 0,
-            "elevation": 0,
-            "movement_type": "0",
-            "movement_range_x": 0,
-            "movement_range_y": 0,
-            "trainer_type": "0",
-            "trainer_sight_or_berry_tree_id": "0",
-            "script": "0x8000000",
-            "flag": "640"
-        },
-        {
-            "type": "object",
-            "graphics_id": "94",
-            "x": 47,
-            "y": 32,
-            "elevation": 0,
-            "movement_type": "0",
-            "movement_range_x": 0,
-            "movement_range_y": 0,
-            "trainer_type": "0",
-            "trainer_sight_or_berry_tree_id": "0",
-            "script": "VERMILION_CITY_3_5_Script_0093C377",
-            "flag": "4620"
-        },
-        {
-            "type": "object",
-            "graphics_id": "0",
-            "x": 0,
-            "y": 0,
-            "elevation": 0,
-            "movement_type": "0",
-            "movement_range_x": 0,
-            "movement_range_y": 0,
-            "trainer_type": "0",
-            "trainer_sight_or_berry_tree_id": "0",
-            "script": "0x0",
-            "flag": "0"
-        },
-        {
-            "type": "object",
-            "graphics_id": "0",
-            "x": 0,
-            "y": 0,
-            "elevation": 0,
-            "movement_type": "0",
-            "movement_range_x": 0,
-            "movement_range_y": 0,
-            "trainer_type": "0",
-            "trainer_sight_or_berry_tree_id": "0",
-            "script": "0x0",
-            "flag": "0"
-        },
-        {
-            "type": "object",
-            "graphics_id": "0",
-            "x": 0,
-            "y": 0,
-            "elevation": 0,
-            "movement_type": "0",
-            "movement_range_x": 0,
-            "movement_range_y": 0,
-            "trainer_type": "0",
-            "trainer_sight_or_berry_tree_id": "0",
-            "script": "0x0",
-            "flag": "0"
-        },
-        {
-            "type": "object",
-            "graphics_id": "0",
-            "x": 0,
-            "y": 0,
-            "elevation": 0,
-            "movement_type": "0",
-            "movement_range_x": 0,
-            "movement_range_y": 0,
-            "trainer_type": "0",
-            "trainer_sight_or_berry_tree_id": "0",
-            "script": "0x0",
-            "flag": "0"
-        }
-    ],
-    "warp_events": [],
-    "coord_events": [],
-    "bg_events": [
-        {
-            "x": 12,
-            "y": 36,
-            "elevation": 0,
-            "type": "sign",
-            "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-            "script": "VERMILION_CITY_3_5_Script_00166C6E"
-        },
-        {
-            "x": 15,
-            "y": 22,
-            "elevation": 0,
-            "type": "sign",
-            "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-            "script": "VERMILION_CITY_3_5_Script_00166C65"
-        },
-        {
-            "x": 51,
-            "y": 24,
-            "elevation": 0,
-            "type": "sign",
-            "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-            "script": "VERMILION_CITY_3_5_Script_00943584"
-        },
-        {
-            "x": 43,
-            "y": 30,
-            "elevation": 0,
-            "type": "sign",
-            "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-            "script": "VERMILION_CITY_3_5_Script_008DADC4"
-        },
-        {
-            "x": 39,
-            "y": 9,
-            "elevation": 0,
-            "type": "sign",
-            "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-            "script": "VERMILION_CITY_3_5_Script_00166C53"
-        },
-        {
-            "x": 12,
-            "y": 16,
-            "elevation": 0,
-            "type": "sign",
-            "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
-            "script": "VERMILION_CITY_3_5_Script_00910B38"
-        },
-        {
-            "x": 15,
-            "y": 16,
-            "elevation": 0,
-            "type": "sign",
-            "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-            "script": "VERMILION_CITY_3_5_Script_00910B38"
-        },
-        {
-            "x": 14,
-            "y": 17,
-            "elevation": 0,
-            "type": "sign",
-            "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-            "script": "VERMILION_CITY_3_5_Script_00910B38"
-        },
-        {
-            "x": 13,
-            "y": 16,
-            "elevation": 0,
-            "type": "sign",
-            "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-            "script": "VERMILION_CITY_3_5_Script_00910B38"
-        },
-        {
-            "x": 15,
-            "y": 18,
-            "elevation": 0,
-            "type": "sign",
-            "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-            "script": "VERMILION_CITY_3_5_Script_00910B38"
-        },
-        {
-            "x": 18,
-            "y": 17,
-            "elevation": 0,
-            "type": "sign",
-            "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-            "script": "VERMILION_CITY_3_5_Script_00910B38"
-        },
-        {
-            "x": 17,
-            "y": 17,
-            "elevation": 0,
-            "type": "sign",
-            "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-            "script": "VERMILION_CITY_3_5_Script_00910B38"
-        },
-        {
-            "x": 13,
-            "y": 17,
-            "elevation": 0,
-            "type": "sign",
-            "player_facing_dir": "BG_EVENT_PLAYER_FACING_SOUTH",
-            "script": "VERMILION_CITY_3_5_Script_00910B38"
-        },
-        {
-            "x": 12,
-            "y": 17,
-            "elevation": 0,
-            "type": "sign",
-            "player_facing_dir": "BG_EVENT_PLAYER_FACING_SOUTH",
-            "script": "VERMILION_CITY_3_5_Script_00910B38"
-        },
-        {
-            "x": 43,
-            "y": 18,
-            "elevation": 0,
-            "type": "sign",
-            "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-            "script": "VERMILION_CITY_3_5_Script_00914B07"
-        },
-        {
-            "x": 19,
-            "y": 35,
-            "elevation": 0,
-            "type": "sign",
-            "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-            "script": "VERMILION_CITY_3_5_Script_0092AA94"
-        },
-        {
-            "x": 40,
-            "y": 16,
-            "elevation": 0,
-            "type": "sign",
-            "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-            "script": "VERMILION_CITY_3_5_Script_0091EA6E"
-        },
-        {
-            "x": 2,
-            "y": 16,
-            "elevation": 0,
-            "type": "sign",
-            "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
-            "script": "VERMILION_CITY_3_5_Script_00910B38"
-        },
-        {
-            "x": 14,
-            "y": 16,
-            "elevation": 0,
-            "type": "sign",
-            "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-            "script": "VERMILION_CITY_3_5_Script_00910B38"
-        },
-        {
-            "x": 16,
-            "y": 17,
-            "elevation": 0,
-            "type": "sign",
-            "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-            "script": "VERMILION_CITY_3_5_Script_00910B38"
-        },
-        {
-            "x": 16,
-            "y": 18,
-            "elevation": 0,
-            "type": "sign",
-            "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-            "script": "VERMILION_CITY_3_5_Script_00910B38"
-        },
-        {
-            "x": 14,
-            "y": 18,
-            "elevation": 0,
-            "type": "sign",
-            "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-            "script": "VERMILION_CITY_3_5_Script_00910B38"
-        },
-        {
-            "x": 17,
-            "y": 18,
-            "elevation": 0,
-            "type": "sign",
-            "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-            "script": "VERMILION_CITY_3_5_Script_00910B38"
-        },
-        {
-            "x": 19,
-            "y": 18,
-            "elevation": 0,
-            "type": "sign",
-            "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-            "script": "VERMILION_CITY_3_5_Script_00910B38"
-        },
-        {
-            "x": 18,
-            "y": 18,
-            "elevation": 0,
-            "type": "sign",
-            "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-            "script": "VERMILION_CITY_3_5_Script_00910B38"
-        },
-        {
-            "x": 19,
-            "y": 17,
-            "elevation": 0,
-            "type": "sign",
-            "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-            "script": "VERMILION_CITY_3_5_Script_00910B38"
-        },
-        {
-            "x": 13,
-            "y": 6,
-            "elevation": 0,
-            "type": "sign",
-            "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-            "script": "VERMILION_CITY_3_5_Script_00913134"
-        }
-    ]
+  "id": "MAP_VERMILION_CITY",
+  "name": "VermilionCity",
+  "layout": "LAYOUT_VERMILION_CITY",
+  "music": "MUS_RG_VERMILLION",
+  "region_map_section": "MAPSEC_VERMILION_CITY",
+  "requires_flash": false,
+  "weather": "WEATHER_SUNNY",
+  "map_type": "MAP_TYPE_TOWN",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_ROUTE6",
+      "offset": 8,
+      "direction": "up"
+    },
+    {
+      "map": "MAP_ROUTE11",
+      "offset": 8,
+      "direction": "right"
+    }
+  ],
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "22",
+      "x": 28,
+      "y": 13,
+      "elevation": 0,
+      "movement_type": "2",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "VERMILION_CITY_3_5_Script_008DAE43",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "41",
+      "x": 44,
+      "y": 12,
+      "elevation": 0,
+      "movement_type": "1",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "VERMILION_CITY_3_5_Script_0090A45B",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "28",
+      "x": 39,
+      "y": 18,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "VERMILION_CITY_3_5_Script_008EB16F",
+      "flag": "6127"
+    },
+    {
+      "type": "object",
+      "graphics_id": "94",
+      "x": 61,
+      "y": 40,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "VERMILION_CITY_3_5_Script_0093C377",
+      "flag": "4612"
+    },
+    {
+      "type": "object",
+      "graphics_id": "0",
+      "x": 0,
+      "y": 1,
+      "elevation": 0,
+      "movement_type": "76",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "0x0",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "94",
+      "x": 47,
+      "y": 32,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "VERMILION_CITY_3_5_Script_0093C377",
+      "flag": "4611"
+    },
+    {
+      "type": "object",
+      "graphics_id": "56",
+      "x": 43,
+      "y": 25,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "VERMILION_CITY_3_5_Script_00935F17",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "19",
+      "x": 27,
+      "y": 25,
+      "elevation": 0,
+      "movement_type": "2",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "VERMILION_CITY_3_5_Script_008DADE9",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "109",
+      "x": 50,
+      "y": 25,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "VERMILION_CITY_3_5_Script_00168014",
+      "flag": "5748"
+    },
+    {
+      "type": "object",
+      "graphics_id": "95",
+      "x": 22,
+      "y": 36,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "VERMILION_CITY_3_5_Script_001BDF13",
+      "flag": "18"
+    },
+    {
+      "type": "object",
+      "graphics_id": "28",
+      "x": 27,
+      "y": 0,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "0x0",
+      "flag": "640"
+    },
+    {
+      "type": "object",
+      "graphics_id": "94",
+      "x": 47,
+      "y": 32,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "VERMILION_CITY_3_5_Script_0093C377",
+      "flag": "4620"
+    },
+    {
+      "type": "object",
+      "graphics_id": "0",
+      "x": 0,
+      "y": 0,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "0x0",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "0",
+      "x": 0,
+      "y": 0,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "0x0",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "0",
+      "x": 0,
+      "y": 0,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "0x0",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "0",
+      "x": 0,
+      "y": 0,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "0x0",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 31,
+      "y": 52,
+      "elevation": 0,
+      "dest_map": "MAP_DYNAMIC",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 32,
+      "y": 52,
+      "elevation": 0,
+      "dest_map": "MAP_DYNAMIC",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 33,
+      "y": 52,
+      "elevation": 0,
+      "dest_map": "MAP_DYNAMIC",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 13,
+      "y": 9,
+      "elevation": 0,
+      "dest_map": "MAP_VERMILION_CITY_HOUSE1",
+      "dest_warp_id": 1
+    },
+    {
+      "x": 18,
+      "y": 9,
+      "elevation": 0,
+      "dest_map": "MAP_VERMILION_CITY_POKEMON_CENTER",
+      "dest_warp_id": 1
+    },
+    {
+      "x": 12,
+      "y": 22,
+      "elevation": 0,
+      "dest_map": "MAP_VERMILION_CITY_HOUSE2",
+      "dest_warp_id": 1
+    },
+    {
+      "x": 20,
+      "y": 22,
+      "elevation": 0,
+      "dest_map": "MAP_VERMILION_CITY_HOUSE3",
+      "dest_warp_id": 1
+    },
+    {
+      "x": 34,
+      "y": 24,
+      "elevation": 0,
+      "dest_map": "MAP_VERMILION_CITY_MART",
+      "dest_warp_id": 1
+    },
+    {
+      "x": 33,
+      "y": 33,
+      "elevation": 0,
+      "dest_map": "MAP_VERMILION_CITY_HOUSE5",
+      "dest_warp_id": 1
+    },
+    {
+      "x": 17,
+      "y": 37,
+      "elevation": 0,
+      "dest_map": "MAP_VERMILION_CITY_HOUSE4",
+      "dest_warp_id": 1
+    },
+    {
+      "x": 15,
+      "y": 17,
+      "elevation": 0,
+      "dest_map": "MAP_UNDERSEA_CAVERN_ROOM3",
+      "dest_warp_id": 14
+    },
+    {
+      "x": 50,
+      "y": 21,
+      "elevation": 0,
+      "dest_map": "MAP_DIGLETTS_CAVE_ROOM3",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 39,
+      "y": 17,
+      "elevation": 0,
+      "dest_map": "MAP_KANTO_OFFICE_ROOM1",
+      "dest_warp_id": 0
+    }
+  ],
+  "coord_events": [],
+  "bg_events": [
+    {
+      "x": 12,
+      "y": 36,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "VERMILION_CITY_3_5_Script_00166C6E"
+    },
+    {
+      "x": 15,
+      "y": 22,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "VERMILION_CITY_3_5_Script_00166C65"
+    },
+    {
+      "x": 51,
+      "y": 24,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "VERMILION_CITY_3_5_Script_00943584"
+    },
+    {
+      "x": 43,
+      "y": 30,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "VERMILION_CITY_3_5_Script_008DADC4"
+    },
+    {
+      "x": 39,
+      "y": 9,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "VERMILION_CITY_3_5_Script_00166C53"
+    },
+    {
+      "x": 12,
+      "y": 16,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "VERMILION_CITY_3_5_Script_00910B38"
+    },
+    {
+      "x": 15,
+      "y": 16,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "VERMILION_CITY_3_5_Script_00910B38"
+    },
+    {
+      "x": 14,
+      "y": 17,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "VERMILION_CITY_3_5_Script_00910B38"
+    },
+    {
+      "x": 13,
+      "y": 16,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "VERMILION_CITY_3_5_Script_00910B38"
+    },
+    {
+      "x": 15,
+      "y": 18,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "VERMILION_CITY_3_5_Script_00910B38"
+    },
+    {
+      "x": 18,
+      "y": 17,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "VERMILION_CITY_3_5_Script_00910B38"
+    },
+    {
+      "x": 17,
+      "y": 17,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "VERMILION_CITY_3_5_Script_00910B38"
+    },
+    {
+      "x": 13,
+      "y": 17,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_SOUTH",
+      "script": "VERMILION_CITY_3_5_Script_00910B38"
+    },
+    {
+      "x": 12,
+      "y": 17,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_SOUTH",
+      "script": "VERMILION_CITY_3_5_Script_00910B38"
+    },
+    {
+      "x": 43,
+      "y": 18,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "VERMILION_CITY_3_5_Script_00914B07"
+    },
+    {
+      "x": 19,
+      "y": 35,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "VERMILION_CITY_3_5_Script_0092AA94"
+    },
+    {
+      "x": 40,
+      "y": 16,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "VERMILION_CITY_3_5_Script_0091EA6E"
+    },
+    {
+      "x": 2,
+      "y": 16,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "VERMILION_CITY_3_5_Script_00910B38"
+    },
+    {
+      "x": 14,
+      "y": 16,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "VERMILION_CITY_3_5_Script_00910B38"
+    },
+    {
+      "x": 16,
+      "y": 17,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "VERMILION_CITY_3_5_Script_00910B38"
+    },
+    {
+      "x": 16,
+      "y": 18,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "VERMILION_CITY_3_5_Script_00910B38"
+    },
+    {
+      "x": 14,
+      "y": 18,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "VERMILION_CITY_3_5_Script_00910B38"
+    },
+    {
+      "x": 17,
+      "y": 18,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "VERMILION_CITY_3_5_Script_00910B38"
+    },
+    {
+      "x": 19,
+      "y": 18,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "VERMILION_CITY_3_5_Script_00910B38"
+    },
+    {
+      "x": 18,
+      "y": 18,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "VERMILION_CITY_3_5_Script_00910B38"
+    },
+    {
+      "x": 19,
+      "y": 17,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "VERMILION_CITY_3_5_Script_00910B38"
+    },
+    {
+      "x": 13,
+      "y": 6,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "VERMILION_CITY_3_5_Script_00913134"
+    }
+  ]
 }

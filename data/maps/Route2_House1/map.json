@@ -1,0 +1,78 @@
+{
+  "id": "MAP_ROUTE2_HOUSE1",
+  "name": "Route2_House1",
+  "layout": "LAYOUT_ROUTE_GATE",
+  "music": "MUS_RG_HEAL",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [],
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "41",
+      "x": 5,
+      "y": 7,
+      "elevation": 3,
+      "movement_type": "4",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ROUTE_2_2_106_Script_009D098D",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "26",
+      "x": 9,
+      "y": 3,
+      "elevation": 3,
+      "movement_type": "1",
+      "movement_range_x": 2,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ROUTE_2_2_106_Script_009D09E0",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 6,
+      "y": 10,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE2",
+      "dest_warp_id": 5
+    },
+    {
+      "x": 7,
+      "y": 10,
+      "elevation": 3,
+      "dest_map": "MAP_ROUTE2",
+      "dest_warp_id": 8
+    },
+    {
+      "x": 8,
+      "y": 10,
+      "elevation": 3,
+      "dest_map": "MAP_ROUTE2",
+      "dest_warp_id": 5
+    },
+    {
+      "x": 7,
+      "y": 1,
+      "elevation": 3,
+      "dest_map": "MAP_VIRIDIAN_FOREST",
+      "dest_warp_id": 0
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}

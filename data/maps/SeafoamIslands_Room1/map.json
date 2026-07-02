@@ -1,0 +1,192 @@
+{
+  "id": "MAP_SEAFOAM_ISLANDS_ROOM1",
+  "name": "SeafoamIslands_Room1",
+  "layout": "LAYOUT_SEAFOAM_ISLANDS_ROOM1",
+  "music": "MUS_RG_MT_MOON",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_UNDERGROUND",
+  "allow_cycling": false,
+  "allow_escaping": true,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [],
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "97",
+      "x": 16,
+      "y": 11,
+      "elevation": 3,
+      "movement_type": "8",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SEAFOAM_ISLANDS_27_1_Script_001BE11D",
+      "flag": "6143"
+    },
+    {
+      "type": "object",
+      "graphics_id": "97",
+      "x": 32,
+      "y": 9,
+      "elevation": 3,
+      "movement_type": "8",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "67",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SEAFOAM_ISLANDS_27_1_Script_001BE11D",
+      "flag": "65"
+    },
+    {
+      "type": "object",
+      "graphics_id": "92",
+      "x": 19,
+      "y": 19,
+      "elevation": 3,
+      "movement_type": "8",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SEAFOAM_ISLANDS_27_1_Script_0096FDD4",
+      "flag": "6144"
+    },
+    {
+      "type": "object",
+      "graphics_id": "49",
+      "x": 5,
+      "y": 16,
+      "elevation": 0,
+      "movement_type": "10",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "1",
+      "trainer_sight_or_berry_tree_id": "4",
+      "script": "SEAFOAM_ISLANDS_27_1_Script_0096FE38",
+      "flag": "6153"
+    },
+    {
+      "type": "object",
+      "graphics_id": "49",
+      "x": 18,
+      "y": 3,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "1",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "SEAFOAM_ISLANDS_27_1_Script_0096FF55",
+      "flag": "6153"
+    },
+    {
+      "type": "object",
+      "graphics_id": "50",
+      "x": 16,
+      "y": 14,
+      "elevation": 0,
+      "movement_type": "18",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "1",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "SEAFOAM_ISLANDS_27_1_Script_0096FED6",
+      "flag": "6153"
+    },
+    {
+      "type": "object",
+      "graphics_id": "49",
+      "x": 34,
+      "y": 19,
+      "elevation": 0,
+      "movement_type": "7",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "1",
+      "trainer_sight_or_berry_tree_id": "2",
+      "script": "SEAFOAM_ISLANDS_27_1_Script_009A498B",
+      "flag": "6153"
+    },
+    {
+      "type": "object",
+      "graphics_id": "28",
+      "x": 5,
+      "y": 21,
+      "elevation": 0,
+      "movement_type": "7",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SEAFOAM_ISLANDS_27_1_Script_00968536",
+      "flag": "6153"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 10,
+      "y": 6,
+      "elevation": 3,
+      "dest_map": "MAP_SEAFOAM_ISLANDS_ROOM2",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 32,
+      "y": 5,
+      "elevation": 3,
+      "dest_map": "MAP_SEAFOAM_ISLANDS_ROOM2",
+      "dest_warp_id": 1
+    },
+    {
+      "x": 28,
+      "y": 19,
+      "elevation": 3,
+      "dest_map": "MAP_SEAFOAM_ISLANDS_ROOM2",
+      "dest_warp_id": 2
+    },
+    {
+      "x": 6,
+      "y": 21,
+      "elevation": 3,
+      "dest_map": "MAP_ROUTE20",
+      "dest_warp_id": 1
+    },
+    {
+      "x": 40,
+      "y": 13,
+      "elevation": 3,
+      "dest_map": "MAP_SEAFOAM_ISLANDS_ROOM6",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 21,
+      "y": 8,
+      "elevation": 3,
+      "dest_map": "MAP_SEAFOAM_ISLANDS_ROOM2",
+      "dest_warp_id": 9
+    },
+    {
+      "x": 30,
+      "y": 8,
+      "elevation": 3,
+      "dest_map": "MAP_SEAFOAM_ISLANDS_ROOM2",
+      "dest_warp_id": 10
+    }
+  ],
+  "coord_events": [],
+  "bg_events": [
+    {
+      "x": 40,
+      "y": 13,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "SEAFOAM_ISLANDS_27_1_Script_0097D25F"
+    }
+  ]
+}

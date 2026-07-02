@@ -323,18 +323,18 @@
   ],
   "warp_events": [
     {
-      "x": 21,
-      "y": 6,
+      "x": 76,
+      "y": 14,
       "elevation": 0,
-      "dest_map": "MAP_TERRA_CAVE_ENTRANCE",
-      "dest_warp_id": "0"
+      "dest_map": "MAP_ICE_PATH_ROOM1",
+      "dest_warp_id": 0
     },
     {
-      "x": 36,
-      "y": 10,
+      "x": 45,
+      "y": 36,
       "elevation": 0,
-      "dest_map": "MAP_TERRA_CAVE_ENTRANCE",
-      "dest_warp_id": "0"
+      "dest_map": "MAP_ICE_PATH_ROOM5",
+      "dest_warp_id": 0
     }
   ],
   "coord_events": [],

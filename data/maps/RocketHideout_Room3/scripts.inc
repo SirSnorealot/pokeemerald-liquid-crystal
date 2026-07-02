@@ -1,0 +1,38 @@
+RocketHideout_Room3_MapScripts::
+	.byte 0
+
+ROCKET_HIDEOUT_1_44_Script_00818DBA::
+	end
+
+ROCKET_HIDEOUT_1_44_Script_00818DE7::
+	end
+
+ROCKET_HIDEOUT_1_44_Script_00837983::
+	end
+
+ROCKET_HIDEOUT_1_44_Script_00838E54::
+	end
+
+ROCKET_HIDEOUT_1_44_Script_00838E8E::
+	end
+
+ROCKET_HIDEOUT_1_44_Script_00838E9D::
+	end
+
+ROCKET_HIDEOUT_1_44_Script_00838EBB::
+	end
+
+ROCKET_HIDEOUT_1_44_Script_00838ECA::
+	end
+
+ROCKET_HIDEOUT_1_44_Script_00838ED9::
+	end
+
+ROCKET_HIDEOUT_1_44_Script_00839152::
+	end
+
+ROCKET_HIDEOUT_1_44_Script_009146DE::
+	end
+
+ROCKET_HIDEOUT_1_44_Script_00A22DAA::
+	end

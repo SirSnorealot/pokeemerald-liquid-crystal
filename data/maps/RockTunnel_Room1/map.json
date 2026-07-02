@@ -1,0 +1,162 @@
+{
+  "id": "MAP_ROCK_TUNNEL_ROOM1",
+  "name": "RockTunnel_Room1",
+  "layout": "LAYOUT_ROCK_TUNNEL_ROOM1",
+  "music": "MUS_RG_FUCHSIA",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": true,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_UNDERGROUND",
+  "allow_cycling": true,
+  "allow_escaping": true,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [],
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "0",
+      "x": 24,
+      "y": 36,
+      "elevation": 0,
+      "movement_type": "76",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "0x0",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "92",
+      "x": 20,
+      "y": 24,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ROCK_TUNNEL_1_81_Script_00941C40",
+      "flag": "5718"
+    },
+    {
+      "type": "object",
+      "graphics_id": "92",
+      "x": 18,
+      "y": 17,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ROCK_TUNNEL_1_81_Script_00942C85",
+      "flag": "5719"
+    },
+    {
+      "type": "object",
+      "graphics_id": "55",
+      "x": 14,
+      "y": 33,
+      "elevation": 0,
+      "movement_type": "10",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "0x0",
+      "flag": "5721"
+    },
+    {
+      "type": "object",
+      "graphics_id": "55",
+      "x": 15,
+      "y": 33,
+      "elevation": 0,
+      "movement_type": "9",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "0x0",
+      "flag": "5721"
+    },
+    {
+      "type": "object",
+      "graphics_id": "98",
+      "x": 13,
+      "y": 30,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "0x0",
+      "flag": "5721"
+    },
+    {
+      "type": "object",
+      "graphics_id": "98",
+      "x": 13,
+      "y": 31,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "0x0",
+      "flag": "5721"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 26,
+      "y": 7,
+      "elevation": 3,
+      "dest_map": "MAP_ROUTE9",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 9,
+      "y": 6,
+      "elevation": 0,
+      "dest_map": "MAP_ROCK_TUNNEL_ROOM2",
+      "dest_warp_id": 2
+    },
+    {
+      "x": 27,
+      "y": 14,
+      "elevation": 0,
+      "dest_map": "MAP_ROCK_TUNNEL_ROOM2",
+      "dest_warp_id": 1
+    },
+    {
+      "x": 41,
+      "y": 6,
+      "elevation": 0,
+      "dest_map": "MAP_ROCK_TUNNEL_ROOM2",
+      "dest_warp_id": 3
+    },
+    {
+      "x": 42,
+      "y": 19,
+      "elevation": 0,
+      "dest_map": "MAP_ROCK_TUNNEL_ROOM2",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 14,
+      "y": 40,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE10",
+      "dest_warp_id": 1
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}

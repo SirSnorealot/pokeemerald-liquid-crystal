@@ -1,0 +1,26 @@
+CeruleanCity_House5_MapScripts::
+	.byte 0
+
+CERULEAN_CITY_7_5_Script_0016AB44::
+	end
+
+CERULEAN_CITY_7_5_Script_0016AB7F::
+	end
+
+CERULEAN_CITY_7_5_Script_009370AA::
+	end
+
+CERULEAN_CITY_7_5_Script_009380CF::
+	end
+
+CERULEAN_CITY_7_5_Script_0093ABF4::
+	end
+
+CERULEAN_CITY_7_5_Script_009490D9::
+	end
+
+CERULEAN_CITY_7_5_Script_00949190::
+	end
+
+CERULEAN_CITY_7_5_Script_0094924C::
+	end

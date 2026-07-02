@@ -1,0 +1,247 @@
+{
+  "id": "MAP_VALENCIA_PORT",
+  "name": "ValenciaPort",
+  "layout": "LAYOUT_VALENCIA_PORT",
+  "music": "MUS_RG_SEVII_ROUTE",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": false,
+  "weather": "WEATHER_SUNNY",
+  "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_VALENCIA_PORT_2",
+      "offset": 10,
+      "direction": "up"
+    }
+  ],
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "108",
+      "x": 47,
+      "y": 25,
+      "elevation": 0,
+      "movement_type": "76",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "0x0",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "62",
+      "x": 0,
+      "y": 25,
+      "elevation": 3,
+      "movement_type": "7",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "VALENCIA_PORT_3_77_Script_009D4E33",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "94",
+      "x": 47,
+      "y": 0,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "VALENCIA_PORT_3_77_Script_0093C377",
+      "flag": "4611"
+    },
+    {
+      "type": "object",
+      "graphics_id": "41",
+      "x": 13,
+      "y": 15,
+      "elevation": 0,
+      "movement_type": "1",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "1",
+      "trainer_sight_or_berry_tree_id": "2",
+      "script": "VALENCIA_PORT_3_77_Script_0096915E",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "43",
+      "x": 19,
+      "y": 18,
+      "elevation": 0,
+      "movement_type": "9",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "1",
+      "trainer_sight_or_berry_tree_id": "4",
+      "script": "VALENCIA_PORT_3_77_Script_009A449D",
+      "flag": "4611"
+    },
+    {
+      "type": "object",
+      "graphics_id": "57",
+      "x": 26,
+      "y": 7,
+      "elevation": 0,
+      "movement_type": "10",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "1",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "VALENCIA_PORT_3_77_Script_009A445E",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "26",
+      "x": 15,
+      "y": 11,
+      "elevation": 0,
+      "movement_type": "6",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "1",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "VALENCIA_PORT_3_77_Script_00968F80",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "60",
+      "x": 31,
+      "y": 2,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "VALENCIA_PORT_3_77_Script_00969076",
+      "flag": "5938"
+    },
+    {
+      "type": "object",
+      "graphics_id": "94",
+      "x": 47,
+      "y": 0,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "VALENCIA_PORT_3_77_Script_0093C377",
+      "flag": "4618"
+    },
+    {
+      "type": "object",
+      "graphics_id": "61",
+      "x": 16,
+      "y": 6,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "0x0",
+      "flag": "640"
+    },
+    {
+      "type": "object",
+      "graphics_id": "47",
+      "x": 19,
+      "y": 0,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "0x0",
+      "flag": "640"
+    },
+    {
+      "type": "object",
+      "graphics_id": "61",
+      "x": 25,
+      "y": 5,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "0x0",
+      "flag": "640"
+    },
+    {
+      "type": "object",
+      "graphics_id": "61",
+      "x": 18,
+      "y": 12,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "0x0",
+      "flag": "6180"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 32,
+      "y": 14,
+      "elevation": 3,
+      "dest_map": "MAP_VALENCIA_PORT_HOUSE1",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 31,
+      "y": 1,
+      "elevation": 0,
+      "dest_map": "MAP_CORSOLA_CAVE",
+      "dest_warp_id": 2
+    },
+    {
+      "x": 37,
+      "y": 14,
+      "elevation": 0,
+      "dest_map": "MAP_VALENCIA_PORT_HOUSE1",
+      "dest_warp_id": 1
+    },
+    {
+      "x": 42,
+      "y": 16,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE100_HOUSE1",
+      "dest_warp_id": 0
+    }
+  ],
+  "coord_events": [],
+  "bg_events": [
+    {
+      "x": 18,
+      "y": 4,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "VALENCIA_PORT_3_77_Script_009691D9"
+    }
+  ]
+}

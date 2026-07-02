@@ -1,0 +1,124 @@
+{
+  "id": "MAP_GOLDENROD_CITY_DEPARTMENT_STORE_ROOM7",
+  "name": "GoldenrodCity_DepartmentStore_Room7",
+  "layout": "LAYOUT_GOLDENROD_CITY_DEPARTMENT_STORE_ROOM7",
+  "music": "MUS_RG_SEVII_DUNGEON",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [],
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "27",
+      "x": 10,
+      "y": 6,
+      "elevation": 0,
+      "movement_type": "7",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "GOLDENROD_DEPT__2_42_Script_00816EC6",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "17",
+      "x": 12,
+      "y": 8,
+      "elevation": 0,
+      "movement_type": "2",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "GOLDENROD_DEPT__2_42_Script_00816FA9",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "31",
+      "x": 20,
+      "y": 8,
+      "elevation": 0,
+      "movement_type": "6",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "GOLDENROD_DEPT__2_42_Script_00816E67",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "18",
+      "x": 23,
+      "y": 10,
+      "elevation": 0,
+      "movement_type": "10",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "GOLDENROD_DEPT__2_42_Script_00816E31",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 12,
+      "y": 0,
+      "elevation": 3,
+      "dest_map": "MAP_GOLDENROD_CITY",
+      "dest_warp_id": 6
+    },
+    {
+      "x": 22,
+      "y": 5,
+      "elevation": 3,
+      "dest_map": "MAP_GOLDENROD_CITY_DEPARTMENT_STORE_ROOM6",
+      "dest_warp_id": 2
+    },
+    {
+      "x": 13,
+      "y": 0,
+      "elevation": 0,
+      "dest_map": "MAP_GOLDENROD_CITY_DEPARTMENT_STORE_ROOM5",
+      "dest_warp_id": 1
+    }
+  ],
+  "coord_events": [],
+  "bg_events": [
+    {
+      "x": 12,
+      "y": 5,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "GOLDENROD_DEPT__2_42_Script_00816F3A"
+    },
+    {
+      "x": 10,
+      "y": 5,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "GOLDENROD_DEPT__2_42_Script_00816F3A"
+    },
+    {
+      "x": 11,
+      "y": 5,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "GOLDENROD_DEPT__2_42_Script_00816F3A"
+    }
+  ]
+}

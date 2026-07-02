@@ -1,0 +1,183 @@
+{
+  "id": "MAP_DRAGONS_DEN_ROOM8",
+  "name": "DragonsDen_Room8",
+  "layout": "LAYOUT_DRAGONS_DEN_ROOM8",
+  "music": "MUS_RG_BERRY_PICK",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_UNDERGROUND",
+  "allow_cycling": false,
+  "allow_escaping": true,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [],
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "97",
+      "x": 29,
+      "y": 7,
+      "elevation": 3,
+      "movement_type": "8",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "1",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "DRAGON___S_DEN_1_83_Script_001BE11D",
+      "flag": "64"
+    },
+    {
+      "type": "object",
+      "graphics_id": "97",
+      "x": 28,
+      "y": 5,
+      "elevation": 3,
+      "movement_type": "8",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "67",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "DRAGON___S_DEN_1_83_Script_001BE11D",
+      "flag": "65"
+    },
+    {
+      "type": "object",
+      "graphics_id": "92",
+      "x": 16,
+      "y": 11,
+      "elevation": 3,
+      "movement_type": "8",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "DRAGON___S_DEN_1_83_Script_001BEBE7",
+      "flag": "468"
+    },
+    {
+      "type": "object",
+      "graphics_id": "92",
+      "x": 34,
+      "y": 19,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "DRAGON___S_DEN_1_83_Script_001BED2C",
+      "flag": "493"
+    },
+    {
+      "type": "object",
+      "graphics_id": "92",
+      "x": 35,
+      "y": 15,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "DRAGON___S_DEN_1_83_Script_001BED39",
+      "flag": "494"
+    },
+    {
+      "type": "object",
+      "graphics_id": "92",
+      "x": 12,
+      "y": 1,
+      "elevation": 0,
+      "movement_type": "76",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "0x0",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "14",
+      "x": 13,
+      "y": 15,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "1",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "DRAGON___S_DEN_1_83_Script_0084426C",
+      "flag": "4697"
+    },
+    {
+      "type": "object",
+      "graphics_id": "14",
+      "x": 22,
+      "y": 7,
+      "elevation": 0,
+      "movement_type": "1",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "1",
+      "trainer_sight_or_berry_tree_id": "2",
+      "script": "DRAGON___S_DEN_1_83_Script_0084432E",
+      "flag": "4697"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 7,
+      "y": 4,
+      "elevation": 3,
+      "dest_map": "MAP_DRAGONS_DEN_ROOM7",
+      "dest_warp_id": 9
+    },
+    {
+      "x": 32,
+      "y": 2,
+      "elevation": 3,
+      "dest_map": "MAP_DRAGONS_DEN_ROOM9",
+      "dest_warp_id": 1
+    },
+    {
+      "x": 30,
+      "y": 21,
+      "elevation": 3,
+      "dest_map": "MAP_DRAGONS_DEN_ROOM9",
+      "dest_warp_id": 2
+    },
+    {
+      "x": 6,
+      "y": 21,
+      "elevation": 3,
+      "dest_map": "MAP_ROUTE20",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 32,
+      "y": 21,
+      "elevation": 3,
+      "dest_map": "MAP_ROUTE20",
+      "dest_warp_id": 1
+    },
+    {
+      "x": 28,
+      "y": 21,
+      "elevation": 3,
+      "dest_map": "MAP_DRAGONS_DEN_ROOM9",
+      "dest_warp_id": 9
+    },
+    {
+      "x": 32,
+      "y": 19,
+      "elevation": 3,
+      "dest_map": "MAP_DRAGONS_DEN_ROOM9",
+      "dest_warp_id": 10
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}

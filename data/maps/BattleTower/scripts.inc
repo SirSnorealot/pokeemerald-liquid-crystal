@@ -1,0 +1,20 @@
+BattleTower_MapScripts::
+	.byte 0
+
+BATTLE_TOWER_1_101_Script_001BE11D::
+	end
+
+BATTLE_TOWER_1_101_Script_00827DAF::
+	end
+
+BATTLE_TOWER_1_101_Script_00827E1E::
+	end
+
+BATTLE_TOWER_1_101_Script_00827EDF::
+	end
+
+BATTLE_TOWER_1_101_Script_0089ECF1::
+	end
+
+BATTLE_TOWER_1_101_Script_00A176D3::
+	end

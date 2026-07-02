@@ -1,0 +1,148 @@
+{
+  "id": "MAP_ICE_PATH_ROOM3",
+  "name": "IcePath_Room3",
+  "layout": "LAYOUT_ICE_PATH_ROOM3",
+  "music": "MUS_RG_MT_MOON",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_UNDERGROUND",
+  "allow_cycling": true,
+  "allow_escaping": true,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [],
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "97",
+      "x": 5,
+      "y": 8,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ICE_PATH_1_112_Script_0084D064",
+      "flag": "4675"
+    },
+    {
+      "type": "object",
+      "graphics_id": "97",
+      "x": 12,
+      "y": 5,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ICE_PATH_1_112_Script_0084D064",
+      "flag": "4673"
+    },
+    {
+      "type": "object",
+      "graphics_id": "97",
+      "x": 4,
+      "y": 13,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ICE_PATH_1_112_Script_0084D064",
+      "flag": "4674"
+    },
+    {
+      "type": "object",
+      "graphics_id": "97",
+      "x": 13,
+      "y": 14,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ICE_PATH_1_112_Script_0084D064",
+      "flag": "4672"
+    },
+    {
+      "type": "object",
+      "graphics_id": "92",
+      "x": 1,
+      "y": 3,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ICE_PATH_1_112_Script_0084CFFB",
+      "flag": "4676"
+    },
+    {
+      "type": "object",
+      "graphics_id": "92",
+      "x": 9,
+      "y": 10,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ICE_PATH_1_112_Script_0084D00A",
+      "flag": "4677"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 10,
+      "y": 12,
+      "elevation": 0,
+      "dest_map": "MAP_ICE_PATH_ROOM2",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 18,
+      "y": 2,
+      "elevation": 0,
+      "dest_map": "MAP_ICE_PATH_ROOM4",
+      "dest_warp_id": 5
+    },
+    {
+      "x": 5,
+      "y": 7,
+      "elevation": 0,
+      "dest_map": "MAP_DYNAMIC",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 13,
+      "y": 5,
+      "elevation": 0,
+      "dest_map": "MAP_DYNAMIC",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 5,
+      "y": 13,
+      "elevation": 0,
+      "dest_map": "MAP_DYNAMIC",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 13,
+      "y": 13,
+      "elevation": 0,
+      "dest_map": "MAP_DYNAMIC",
+      "dest_warp_id": 0
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}

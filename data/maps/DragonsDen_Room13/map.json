@@ -1,0 +1,104 @@
+{
+  "id": "MAP_DRAGONS_DEN_ROOM13",
+  "name": "DragonsDen_Room13",
+  "layout": "LAYOUT_DRAGONS_DEN_ROOM13",
+  "music": "MUS_RG_BERRY_PICK",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_UNDERGROUND",
+  "allow_cycling": true,
+  "allow_escaping": true,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [],
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "92",
+      "x": 10,
+      "y": 26,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "DRAGON___S_DEN_4_104_Script_00AD3571",
+      "flag": "6197"
+    },
+    {
+      "type": "object",
+      "graphics_id": "92",
+      "x": 22,
+      "y": 6,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "DRAGON___S_DEN_4_104_Script_00913220",
+      "flag": "5835"
+    },
+    {
+      "type": "object",
+      "graphics_id": "150",
+      "x": 3,
+      "y": 33,
+      "elevation": 0,
+      "movement_type": "76",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "DRAGON___S_DEN_4_104_Script_0090A176",
+      "flag": "5837"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 8,
+      "y": 23,
+      "elevation": 3,
+      "dest_map": "MAP_UNDERSEA_CAVERN_ROOM7",
+      "dest_warp_id": 6
+    }
+  ],
+  "coord_events": [],
+  "bg_events": [
+    {
+      "x": 6,
+      "y": 17,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "DRAGON___S_DEN_4_104_Script_00913498"
+    },
+    {
+      "x": 5,
+      "y": 16,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "DRAGON___S_DEN_4_104_Script_00913498"
+    },
+    {
+      "x": 5,
+      "y": 17,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "DRAGON___S_DEN_4_104_Script_00913498"
+    },
+    {
+      "x": 5,
+      "y": 18,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "DRAGON___S_DEN_4_104_Script_00913498"
+    }
+  ]
+}

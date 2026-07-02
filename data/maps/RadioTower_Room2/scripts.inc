@@ -1,0 +1,29 @@
+RadioTower_Room2_MapScripts::
+	.byte 0
+
+RADIO_TOWER_1_91_Script_001BE755::
+	end
+
+RADIO_TOWER_1_91_Script_0091B078::
+	end
+
+RADIO_TOWER_1_91_Script_0091B131::
+	end
+
+RADIO_TOWER_1_91_Script_0091B292::
+	end
+
+RADIO_TOWER_1_91_Script_0091B31E::
+	end
+
+RADIO_TOWER_1_91_Script_0091B35F::
+	end
+
+RADIO_TOWER_1_91_Script_0092B38E::
+	end
+
+RADIO_TOWER_1_91_Script_0092B4FD::
+	end
+
+RADIO_TOWER_1_91_Script_0092F37A::
+	end

@@ -1,0 +1,32 @@
+SaffronCity_House5_MapScripts::
+	.byte 0
+
+SAFFRON_CITY_14_3_Script_0016EE9F::
+	end
+
+SAFFRON_CITY_14_3_Script_0016EEF1::
+	end
+
+SAFFRON_CITY_14_3_Script_0016EF08::
+	end
+
+SAFFRON_CITY_14_3_Script_0016EF36::
+	end
+
+SAFFRON_CITY_14_3_Script_008DFFE7::
+	end
+
+SAFFRON_CITY_14_3_Script_008E2789::
+	end
+
+SAFFRON_CITY_14_3_Script_008E3969::
+	end
+
+SAFFRON_CITY_14_3_Script_008E3B89::
+	end
+
+SAFFRON_CITY_14_3_Script_008E3C2A::
+	end
+
+SAFFRON_CITY_14_3_Script_009AD7AA::
+	end

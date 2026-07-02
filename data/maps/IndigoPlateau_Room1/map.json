@@ -1,0 +1,192 @@
+{
+  "id": "MAP_INDIGO_PLATEAU_ROOM1",
+  "name": "IndigoPlateau_Room1",
+  "layout": "LAYOUT_INDIGO_PLATEAU_ROOM1",
+  "music": "MUS_RG_VICTORY_ROAD",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_GYM",
+  "connections": [],
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "68",
+      "x": 4,
+      "y": 10,
+      "elevation": 3,
+      "movement_type": "0",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "INDIGO_PLATEAU_13_0_Script_0016EACC",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "64",
+      "x": 13,
+      "y": 10,
+      "elevation": 3,
+      "movement_type": "8",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "INDIGO_PLATEAU_13_0_Script_0016EB06",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "121",
+      "x": 1,
+      "y": 12,
+      "elevation": 3,
+      "movement_type": "10",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "INDIGO_PLATEAU_13_0_Script_0090EF7E",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "42",
+      "x": 1,
+      "y": 0,
+      "elevation": 3,
+      "movement_type": "76",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "INDIGO_PLATEAU_13_0_Script_0016EA8A",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "33",
+      "x": 2,
+      "y": 12,
+      "elevation": 3,
+      "movement_type": "0",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "INDIGO_PLATEAU_13_0_Script_0096DA99",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "0",
+      "x": 24,
+      "y": 0,
+      "elevation": 0,
+      "movement_type": "76",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "INDIGO_PLATEAU_13_0_Script_001AD06C",
+      "flag": "157"
+    },
+    {
+      "type": "object",
+      "graphics_id": "41",
+      "x": 14,
+      "y": 14,
+      "elevation": 3,
+      "movement_type": "6",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "INDIGO_PLATEAU_13_0_Script_008D28E9",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "72",
+      "x": 22,
+      "y": 9,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "INDIGO_PLATEAU_13_0_Script_001AD06C",
+      "flag": "5771"
+    },
+    {
+      "type": "object",
+      "graphics_id": "30",
+      "x": 2,
+      "y": 0,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "INDIGO_PLATEAU_13_0_Script_00901D3B",
+      "flag": "5556"
+    },
+    {
+      "type": "object",
+      "graphics_id": "30",
+      "x": 23,
+      "y": 13,
+      "elevation": 0,
+      "movement_type": "9",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "INDIGO_PLATEAU_13_0_Script_009A515A",
+      "flag": "5556"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 7,
+      "y": 16,
+      "elevation": 3,
+      "dest_map": "MAP_INDIGO_PLATEAU",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 22,
+      "y": 2,
+      "elevation": 3,
+      "dest_map": "MAP_POKEMON_LEAGUE_ROOM1",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 1,
+      "y": 14,
+      "elevation": 4,
+      "dest_map": "MAP_INDIGO_PLATEAU_ROOM2",
+      "dest_warp_id": 0
+    }
+  ],
+  "coord_events": [],
+  "bg_events": [
+    {
+      "x": 9,
+      "y": 14,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "INDIGO_PLATEAU_13_0_Script_00803EBD"
+    }
+  ]
+}

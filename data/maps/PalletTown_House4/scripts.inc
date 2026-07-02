@@ -1,0 +1,29 @@
+PalletTown_House4_MapScripts::
+	.byte 0
+
+PALLET_TOWN_4_88_Script_00169E68::
+	end
+
+PALLET_TOWN_4_88_Script_00169E71::
+	end
+
+PALLET_TOWN_4_88_Script_00169E7A::
+	end
+
+PALLET_TOWN_4_88_Script_008560ED::
+	end
+
+PALLET_TOWN_4_88_Script_00936264::
+	end
+
+PALLET_TOWN_4_88_Script_0094A8F8::
+	end
+
+PALLET_TOWN_4_88_Script_0094A968::
+	end
+
+PALLET_TOWN_4_88_Script_0094A9C3::
+	end
+
+PALLET_TOWN_4_88_Script_009D609D::
+	end

@@ -1,0 +1,99 @@
+{
+  "id": "MAP_DRAGONS_DEN_ROOM4",
+  "name": "DragonsDen_Room4",
+  "layout": "LAYOUT_DRAGONS_DEN_ROOM4",
+  "music": "MUS_RG_BERRY_PICK",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": false,
+  "weather": "WEATHER_SUNNY",
+  "map_type": "MAP_TYPE_UNDERGROUND",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [],
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "150",
+      "x": 11,
+      "y": 4,
+      "elevation": 0,
+      "movement_type": "7",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "DRAGON___S_DEN_1_51_Script_0090A176",
+      "flag": "5837"
+    },
+    {
+      "type": "object",
+      "graphics_id": "47",
+      "x": 9,
+      "y": 6,
+      "elevation": 0,
+      "movement_type": "7",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "0x0",
+      "flag": "6196"
+    },
+    {
+      "type": "object",
+      "graphics_id": "72",
+      "x": 13,
+      "y": 6,
+      "elevation": 0,
+      "movement_type": "7",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "0x0",
+      "flag": "6196"
+    },
+    {
+      "type": "object",
+      "graphics_id": "74",
+      "x": 11,
+      "y": 13,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "0x0",
+      "flag": "640"
+    },
+    {
+      "type": "object",
+      "graphics_id": "28",
+      "x": 11,
+      "y": 13,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "0x0",
+      "flag": "640"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 9,
+      "y": 34,
+      "elevation": 0,
+      "dest_map": "MAP_DRAGONS_DEN_ROOM3",
+      "dest_warp_id": 1
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}

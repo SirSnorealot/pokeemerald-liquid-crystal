@@ -1,0 +1,43 @@
+{
+  "id": "MAP_DRAGONS_DEN_ROOM11",
+  "name": "DragonsDen_Room11",
+  "layout": "LAYOUT_DRAGONS_DEN_ROOM11",
+  "music": "MUS_RG_BERRY_PICK",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [],
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "33",
+      "x": 6,
+      "y": 3,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "DRAGON___S_DEN_2_93_Script_00853BD1",
+      "flag": "65535"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 6,
+      "y": 16,
+      "elevation": 0,
+      "dest_map": "MAP_DRAGONS_DEN_ROOM5",
+      "dest_warp_id": 4
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}

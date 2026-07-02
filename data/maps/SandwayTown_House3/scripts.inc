@@ -1,0 +1,23 @@
+SandwayTown_House3_MapScripts::
+	.byte 0
+
+SANDWAY_TOWN_5_89_Script_00171619::
+	end
+
+SANDWAY_TOWN_5_89_Script_00171D00::
+	end
+
+SANDWAY_TOWN_5_89_Script_0092BFBA::
+	end
+
+SANDWAY_TOWN_5_89_Script_00A5222D::
+	end
+
+SANDWAY_TOWN_5_89_Script_00A52320::
+	end
+
+SANDWAY_TOWN_5_89_Script_00A523A5::
+	end
+
+SANDWAY_TOWN_5_89_Script_00A52436::
+	end

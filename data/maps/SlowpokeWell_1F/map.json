@@ -19,15 +19,15 @@
       "x": 22,
       "y": 19,
       "elevation": 3,
-      "dest_warp_id": "0",
-      "dest_map": "MAP_AZALEA_TOWN"
+      "dest_map": "MAP_AZALEA_TOWN",
+      "dest_warp_id": 0
     },
     {
       "x": 11,
       "y": 15,
       "elevation": 0,
-      "dest_warp_id": "1",
-      "dest_map": "MAP_SLOWPOKE_WELL_B1_F"
+      "dest_map": "MAP_SLOWPOKE_WELL_B1_F",
+      "dest_warp_id": 1
     }
   ],
   "coord_events": [],

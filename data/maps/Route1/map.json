@@ -1,69 +1,69 @@
 {
-    "id": "MAP_ROUTE1",
-    "name": "Route1",
-    "layout": "LAYOUT_ROUTE1",
-    "music": "MUS_RG_NET_CENTER",
-    "region_map_section": "MAPSEC_ROUTE_1",
-    "requires_flash": false,
-    "weather": "WEATHER_SUNNY",
-    "map_type": "MAP_TYPE_ROUTE",
-    "allow_cycling": true,
-    "allow_escaping": false,
-    "allow_running": true,
-    "show_map_name": true,
-    "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-    "connections": [
-        {
-            "map": "MAP_VIRIDIAN_CITY",
-            "offset": -20,
-            "direction": "up"
-        },
-        {
-            "map": "MAP_PALLET_TOWN",
-            "offset": -2,
-            "direction": "down"
-        }
-    ],
-    "object_events": [
-        {
-            "type": "object",
-            "graphics_id": "42",
-            "x": 17,
-            "y": 40,
-            "elevation": 3,
-            "movement_type": "1",
-            "movement_range_x": 1,
-            "movement_range_y": 1,
-            "trainer_type": "1",
-            "trainer_sight_or_berry_tree_id": "4",
-            "script": "ROUTE_1_3_19_Script_00958FDF",
-            "flag": "0"
-        },
-        {
-            "type": "object",
-            "graphics_id": "19",
-            "x": 5,
-            "y": 25,
-            "elevation": 3,
-            "movement_type": "10",
-            "movement_range_x": 1,
-            "movement_range_y": 3,
-            "trainer_type": "1",
-            "trainer_sight_or_berry_tree_id": "6",
-            "script": "ROUTE_1_3_19_Script_00958F04",
-            "flag": "0"
-        }
-    ],
-    "warp_events": [],
-    "coord_events": [],
-    "bg_events": [
-        {
-            "x": 12,
-            "y": 44,
-            "elevation": 0,
-            "type": "sign",
-            "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-            "script": "ROUTE_1_3_19_Script_00167F5B"
-        }
-    ]
+  "id": "MAP_ROUTE1",
+  "name": "Route1",
+  "layout": "LAYOUT_ROUTE1",
+  "music": "MUS_RG_NET_CENTER",
+  "region_map_section": "MAPSEC_ROUTE_1",
+  "requires_flash": false,
+  "weather": "WEATHER_SUNNY",
+  "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_VIRIDIAN_CITY",
+      "offset": -20,
+      "direction": "up"
+    },
+    {
+      "map": "MAP_PALLET_TOWN",
+      "offset": -2,
+      "direction": "down"
+    }
+  ],
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "42",
+      "x": 17,
+      "y": 40,
+      "elevation": 3,
+      "movement_type": "1",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "1",
+      "trainer_sight_or_berry_tree_id": "4",
+      "script": "ROUTE_1_3_19_Script_00958FDF",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "19",
+      "x": 5,
+      "y": 25,
+      "elevation": 3,
+      "movement_type": "10",
+      "movement_range_x": 1,
+      "movement_range_y": 3,
+      "trainer_type": "1",
+      "trainer_sight_or_berry_tree_id": "6",
+      "script": "ROUTE_1_3_19_Script_00958F04",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [],
+  "coord_events": [],
+  "bg_events": [
+    {
+      "x": 12,
+      "y": 44,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ROUTE_1_3_19_Script_00167F5B"
+    }
+  ]
 }

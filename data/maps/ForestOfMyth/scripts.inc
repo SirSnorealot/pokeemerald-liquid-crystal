@@ -1,0 +1,44 @@
+ForestOfMyth_MapScripts::
+	.byte 0
+
+FOREST_OF_MYTH_3_85_Script_0091C3F0::
+	end
+
+FOREST_OF_MYTH_3_85_Script_0091C41A::
+	end
+
+FOREST_OF_MYTH_3_85_Script_0091C424::
+	end
+
+FOREST_OF_MYTH_3_85_Script_0091C42E::
+	end
+
+FOREST_OF_MYTH_3_85_Script_0091C438::
+	end
+
+FOREST_OF_MYTH_3_85_Script_0094C039::
+	end
+
+FOREST_OF_MYTH_3_85_Script_0094C046::
+	end
+
+FOREST_OF_MYTH_3_85_Script_0094CB89::
+	end
+
+FOREST_OF_MYTH_3_85_Script_0094CBDF::
+	end
+
+FOREST_OF_MYTH_3_85_Script_009AA023::
+	end
+
+FOREST_OF_MYTH_3_85_Script_009AA0CF::
+	end
+
+FOREST_OF_MYTH_3_85_Script_009AA162::
+	end
+
+FOREST_OF_MYTH_3_85_Script_009AD688::
+	end
+
+FOREST_OF_MYTH_3_85_Script_009D34B6::
+	end

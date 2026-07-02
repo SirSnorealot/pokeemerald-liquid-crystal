@@ -1,0 +1,445 @@
+{
+  "id": "MAP_GOLDENROD_CITY_HOUSE15",
+  "name": "GoldenrodCity_House15",
+  "layout": "LAYOUT_GOLDENROD_CITY_HOUSE15",
+  "music": "MUS_RG_GAME_CORNER",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [],
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "48",
+      "x": 16,
+      "y": 2,
+      "elevation": 3,
+      "movement_type": "0",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "GOLDENROD_CITY_10_14_Script_0016CB88",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "32",
+      "x": 3,
+      "y": 2,
+      "elevation": 3,
+      "movement_type": "0",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "GOLDENROD_CITY_10_14_Script_0016C68D",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "22",
+      "x": 9,
+      "y": 3,
+      "elevation": 3,
+      "movement_type": "5",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "GOLDENROD_CITY_10_14_Script_0016C7BA",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "27",
+      "x": 2,
+      "y": 8,
+      "elevation": 3,
+      "movement_type": "2",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "GOLDENROD_CITY_10_14_Script_0089B667",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "61",
+      "x": 5,
+      "y": 10,
+      "elevation": 3,
+      "movement_type": "10",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "GOLDENROD_CITY_10_14_Script_0095E6A9",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "30",
+      "x": 11,
+      "y": 10,
+      "elevation": 3,
+      "movement_type": "10",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "GOLDENROD_CITY_10_14_Script_0095ED16",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "56",
+      "x": 17,
+      "y": 10,
+      "elevation": 3,
+      "movement_type": "10",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "GOLDENROD_CITY_10_14_Script_0095ED34",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "25",
+      "x": 14,
+      "y": 8,
+      "elevation": 3,
+      "movement_type": "9",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "GOLDENROD_CITY_10_14_Script_0095ED20",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "48",
+      "x": 18,
+      "y": 2,
+      "elevation": 3,
+      "movement_type": "0",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "GOLDENROD_CITY_10_14_Script_0016CE1D",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "31",
+      "x": 17,
+      "y": 6,
+      "elevation": 3,
+      "movement_type": "10",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "GOLDENROD_CITY_10_14_Script_0095ED2A",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "49",
+      "x": 9,
+      "y": 0,
+      "elevation": 3,
+      "movement_type": "76",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "1",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "GOLDENROD_CITY_10_14_Script_0016CAF5",
+      "flag": "91"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 3,
+      "y": 13,
+      "elevation": 0,
+      "dest_map": "MAP_GOLDENROD_CITY",
+      "dest_warp_id": 5
+    },
+    {
+      "x": 4,
+      "y": 13,
+      "elevation": 0,
+      "dest_map": "MAP_CELADON_CITY",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 5,
+      "y": 13,
+      "elevation": 0,
+      "dest_map": "MAP_CELADON_CITY",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 22,
+      "y": 1,
+      "elevation": 3,
+      "dest_map": "MAP_ROCKET_HIDEOUT_ROOM1",
+      "dest_warp_id": 0
+    }
+  ],
+  "coord_events": [],
+  "bg_events": [
+    {
+      "x": 65535,
+      "y": 8,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_EAST",
+      "script": "GOLDENROD_CITY_10_14_Script_0016C95E"
+    },
+    {
+      "x": 65533,
+      "y": 13,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_WEST",
+      "script": "GOLDENROD_CITY_10_14_Script_0016C9A4"
+    },
+    {
+      "x": 65534,
+      "y": 11,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "GOLDENROD_CITY_10_14_Script_0016C9B0"
+    },
+    {
+      "x": 6,
+      "y": 6,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_EAST",
+      "script": "GOLDENROD_CITY_10_14_Script_0016C9BC"
+    },
+    {
+      "x": 6,
+      "y": 8,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_EAST",
+      "script": "GOLDENROD_CITY_10_14_Script_0016CB5A"
+    },
+    {
+      "x": 6,
+      "y": 9,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_EAST",
+      "script": "GOLDENROD_CITY_10_14_Script_0016C9D4"
+    },
+    {
+      "x": 6,
+      "y": 11,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_EAST",
+      "script": "GOLDENROD_CITY_10_14_Script_0016C9E0"
+    },
+    {
+      "x": 7,
+      "y": 6,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_WEST",
+      "script": "GOLDENROD_CITY_10_14_Script_0016C9EC"
+    },
+    {
+      "x": 7,
+      "y": 8,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_WEST",
+      "script": "GOLDENROD_CITY_10_14_Script_0016C9F8"
+    },
+    {
+      "x": 7,
+      "y": 9,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_WEST",
+      "script": "GOLDENROD_CITY_10_14_Script_0016CA04"
+    },
+    {
+      "x": 12,
+      "y": 6,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_EAST",
+      "script": "GOLDENROD_CITY_10_14_Script_0016CA10"
+    },
+    {
+      "x": 12,
+      "y": 7,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_EAST",
+      "script": "GOLDENROD_CITY_10_14_Script_0016CA1C"
+    },
+    {
+      "x": 12,
+      "y": 8,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_EAST",
+      "script": "GOLDENROD_CITY_10_14_Script_0016CA28"
+    },
+    {
+      "x": 12,
+      "y": 9,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_EAST",
+      "script": "GOLDENROD_CITY_10_14_Script_0016CA34"
+    },
+    {
+      "x": 13,
+      "y": 6,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_WEST",
+      "script": "GOLDENROD_CITY_10_14_Script_0016CA40"
+    },
+    {
+      "x": 13,
+      "y": 7,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_WEST",
+      "script": "GOLDENROD_CITY_10_14_Script_0016CB63"
+    },
+    {
+      "x": 13,
+      "y": 9,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_WEST",
+      "script": "GOLDENROD_CITY_10_14_Script_0016CA58"
+    },
+    {
+      "x": 13,
+      "y": 10,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_WEST",
+      "script": "GOLDENROD_CITY_10_14_Script_0016CA64"
+    },
+    {
+      "x": 18,
+      "y": 11,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_EAST",
+      "script": "GOLDENROD_CITY_10_14_Script_0016CB6C"
+    },
+    {
+      "x": 18,
+      "y": 7,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "GOLDENROD_CITY_10_14_Script_0016CA7C"
+    },
+    {
+      "x": 18,
+      "y": 8,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_EAST",
+      "script": "GOLDENROD_CITY_10_14_Script_0016CA88"
+    },
+    {
+      "x": 18,
+      "y": 9,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_EAST",
+      "script": "GOLDENROD_CITY_10_14_Script_0016CA94"
+    },
+    {
+      "x": 65535,
+      "y": 7,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "GOLDENROD_CITY_10_14_Script_0016CAAA"
+    },
+    {
+      "x": 19,
+      "y": 13,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "GOLDENROD_CITY_10_14_Script_001B2867"
+    },
+    {
+      "x": 7,
+      "y": 11,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_WEST",
+      "script": "GOLDENROD_CITY_10_14_Script_0016C9BC"
+    },
+    {
+      "x": 7,
+      "y": 7,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "GOLDENROD_CITY_10_14_Script_0016C9BC"
+    },
+    {
+      "x": 7,
+      "y": 10,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "GOLDENROD_CITY_10_14_Script_0016C9BC"
+    },
+    {
+      "x": 6,
+      "y": 7,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "GOLDENROD_CITY_10_14_Script_0016C9BC"
+    },
+    {
+      "x": 12,
+      "y": 11,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_EAST",
+      "script": "GOLDENROD_CITY_10_14_Script_0016CA28"
+    },
+    {
+      "x": 13,
+      "y": 11,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_WEST",
+      "script": "GOLDENROD_CITY_10_14_Script_0016CA64"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+ValenciaPort_House1_MapScripts::
+	.byte 0
+
+VALENCIA_PORT_6_16_Script_009148DE::
+	end
+
+VALENCIA_PORT_6_16_Script_00914913::
+	end
+
+VALENCIA_PORT_6_16_Script_00914AEF::
+	end
+
+VALENCIA_PORT_6_16_Script_0092BFBA::
+	end
+
+VALENCIA_PORT_6_16_Script_009323A8::
+	end
+
+VALENCIA_PORT_6_16_Script_009324B6::
+	end
+
+VALENCIA_PORT_6_16_Script_009324BF::
+	end
+
+VALENCIA_PORT_6_16_Script_0093310D::
+	end
+
+VALENCIA_PORT_6_16_Script_00934AF6::
+	end
+
+VALENCIA_PORT_6_16_Script_00938E06::
+	end

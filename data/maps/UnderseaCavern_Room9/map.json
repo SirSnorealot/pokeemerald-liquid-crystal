@@ -1,0 +1,57 @@
+{
+  "id": "MAP_UNDERSEA_CAVERN_ROOM9",
+  "name": "UnderseaCavern_Room9",
+  "layout": "LAYOUT_UNDERSEA_CAVERN_ROOM9",
+  "music": "MUS_RG_BERRY_PICK",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": false,
+  "weather": "WEATHER_SUNNY",
+  "map_type": "MAP_TYPE_UNDERGROUND",
+  "allow_cycling": false,
+  "allow_escaping": true,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_GYM",
+  "connections": [],
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "148",
+      "x": 21,
+      "y": 10,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "UNDERSEA_CAVERN_4_116_Script_00979CB2",
+      "flag": "5850"
+    },
+    {
+      "type": "object",
+      "graphics_id": "148",
+      "x": 21,
+      "y": 10,
+      "elevation": 0,
+      "movement_type": "7",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "UNDERSEA_CAVERN_4_116_Script_0097C35C",
+      "flag": "5849"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 9,
+      "y": 7,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE19_ROOM1",
+      "dest_warp_id": 3
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}

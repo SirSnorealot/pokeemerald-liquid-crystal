@@ -1,0 +1,99 @@
+{
+  "id": "MAP_CHERRYGROVE_CITY_HOUSE3",
+  "name": "CherrygroveCity_House3",
+  "layout": "LAYOUT_CHERRYGROVE_CITY_HOUSE12",
+  "music": "MUS_RG_POKE_CENTER",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [],
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "65",
+      "x": 6,
+      "y": 2,
+      "elevation": 3,
+      "movement_type": "8",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "CHERRYGROVE_CITY_21_1_Script_001A8CF6",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "65",
+      "x": 2,
+      "y": 2,
+      "elevation": 3,
+      "movement_type": "8",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "CHERRYGROVE_CITY_21_1_Script_001A8CFC",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "65",
+      "x": 10,
+      "y": 2,
+      "elevation": 3,
+      "movement_type": "8",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "CHERRYGROVE_CITY_21_1_Script_001A8D02",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "69",
+      "x": 1,
+      "y": 2,
+      "elevation": 3,
+      "movement_type": "8",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "CHERRYGROVE_CITY_21_1_Script_001BB1D2",
+      "flag": "112"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 1,
+      "y": 6,
+      "elevation": 4,
+      "dest_map": "MAP_BLACKTHORN_CITY_POKEMON_CENTER",
+      "dest_warp_id": 3
+    },
+    {
+      "x": 5,
+      "y": 1,
+      "elevation": 0,
+      "dest_map": "MAP_DYNAMIC",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 9,
+      "y": 1,
+      "elevation": 0,
+      "dest_map": "MAP_DYNAMIC",
+      "dest_warp_id": 0
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}

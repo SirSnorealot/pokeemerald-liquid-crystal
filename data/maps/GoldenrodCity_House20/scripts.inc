@@ -1,0 +1,32 @@
+GoldenrodCity_House20_MapScripts::
+	.byte 0
+
+GOLDENROD_CITY_35_1_Script_00171619::
+	end
+
+GOLDENROD_CITY_35_1_Script_00171BF9::
+	end
+
+GOLDENROD_CITY_35_1_Script_00904C07::
+	end
+
+GOLDENROD_CITY_35_1_Script_00904C83::
+	end
+
+GOLDENROD_CITY_35_1_Script_00904CB9::
+	end
+
+GOLDENROD_CITY_35_1_Script_00904E08::
+	end
+
+GOLDENROD_CITY_35_1_Script_00904E88::
+	end
+
+GOLDENROD_CITY_35_1_Script_00904EFE::
+	end
+
+GOLDENROD_CITY_35_1_Script_00904F3C::
+	end
+
+GOLDENROD_CITY_35_1_Script_00904F9D::
+	end

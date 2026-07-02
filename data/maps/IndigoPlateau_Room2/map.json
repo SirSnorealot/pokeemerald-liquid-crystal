@@ -1,0 +1,20 @@
+{
+  "id": "MAP_INDIGO_PLATEAU_ROOM2",
+  "name": "IndigoPlateau_Room2",
+  "layout": "LAYOUT_AZALEA_TOWN_HOUSE12",
+  "music": "MUS_RG_POKE_CENTER",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_GYM",
+  "connections": [],
+  "object_events": [],
+  "warp_events": [],
+  "coord_events": [],
+  "bg_events": []
+}

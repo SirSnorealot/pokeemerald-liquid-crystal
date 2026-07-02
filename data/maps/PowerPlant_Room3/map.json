@@ -1,0 +1,169 @@
+{
+  "id": "MAP_POWER_PLANT_ROOM3",
+  "name": "PowerPlant_Room3",
+  "layout": "LAYOUT_POWER_PLANT_ROOM3",
+  "music": "MUS_RG_FUCHSIA",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_UNDERGROUND",
+  "allow_cycling": false,
+  "allow_escaping": true,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [],
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "92",
+      "x": 13,
+      "y": 17,
+      "elevation": 3,
+      "movement_type": "8",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "POWER_PLANT_2_113_Script_00971FE9",
+      "flag": "410"
+    },
+    {
+      "type": "object",
+      "graphics_id": "92",
+      "x": 42,
+      "y": 25,
+      "elevation": 3,
+      "movement_type": "8",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "POWER_PLANT_2_113_Script_0097201D",
+      "flag": "411"
+    },
+    {
+      "type": "object",
+      "graphics_id": "92",
+      "x": 37,
+      "y": 37,
+      "elevation": 3,
+      "movement_type": "8",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "POWER_PLANT_2_113_Script_00972010",
+      "flag": "412"
+    },
+    {
+      "type": "object",
+      "graphics_id": "92",
+      "x": 36,
+      "y": 11,
+      "elevation": 3,
+      "movement_type": "8",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "POWER_PLANT_2_113_Script_00972003",
+      "flag": "413"
+    },
+    {
+      "type": "object",
+      "graphics_id": "92",
+      "x": 26,
+      "y": 17,
+      "elevation": 3,
+      "movement_type": "8",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "POWER_PLANT_2_113_Script_0097202A",
+      "flag": "414"
+    },
+    {
+      "type": "object",
+      "graphics_id": "136",
+      "x": 5,
+      "y": 11,
+      "elevation": 3,
+      "movement_type": "8",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "POWER_PLANT_2_113_Script_00972044",
+      "flag": "93"
+    },
+    {
+      "type": "object",
+      "graphics_id": "92",
+      "x": 2,
+      "y": 4,
+      "elevation": 3,
+      "movement_type": "0",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "POWER_PLANT_2_113_Script_00972037",
+      "flag": "134"
+    },
+    {
+      "type": "object",
+      "graphics_id": "92",
+      "x": 12,
+      "y": 37,
+      "elevation": 3,
+      "movement_type": "8",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "POWER_PLANT_2_113_Script_00971FF6",
+      "flag": "133"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 4,
+      "y": 39,
+      "elevation": 3,
+      "dest_map": "MAP_ROUTE10",
+      "dest_warp_id": 2
+    },
+    {
+      "x": 5,
+      "y": 38,
+      "elevation": 3,
+      "dest_map": "MAP_ROCK_TUNNEL_ROOM2",
+      "dest_warp_id": 6
+    },
+    {
+      "x": 6,
+      "y": 39,
+      "elevation": 3,
+      "dest_map": "MAP_ROUTE10",
+      "dest_warp_id": 2
+    },
+    {
+      "x": 1,
+      "y": 11,
+      "elevation": 3,
+      "dest_map": "MAP_ROUTE92",
+      "dest_warp_id": 1
+    },
+    {
+      "x": 0,
+      "y": 13,
+      "elevation": 3,
+      "dest_map": "MAP_ROUTE10",
+      "dest_warp_id": 2
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}

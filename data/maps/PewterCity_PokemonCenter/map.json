@@ -1,0 +1,166 @@
+{
+  "id": "MAP_PEWTER_CITY_POKEMON_CENTER",
+  "name": "PewterCity_PokemonCenter",
+  "layout": "LAYOUT_POKEMON_CENTER_LC",
+  "music": "MUS_RG_POKE_CENTER",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [],
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "64",
+      "x": 7,
+      "y": 2,
+      "elevation": 3,
+      "movement_type": "8",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "PEWTER_CITY_5_33_Script_00171D00",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "20",
+      "x": 15,
+      "y": 0,
+      "elevation": 3,
+      "movement_type": "76",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "PEWTER_CITY_5_33_Script_00936B5C",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "26",
+      "x": 15,
+      "y": 0,
+      "elevation": 3,
+      "movement_type": "76",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "PEWTER_CITY_5_33_Script_00936BC9",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "115",
+      "x": 4,
+      "y": 4,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "PEWTER_CITY_5_33_Script_00951A16",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "17",
+      "x": 5,
+      "y": 4,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "PEWTER_CITY_5_33_Script_009519CE",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "56",
+      "x": 12,
+      "y": 3,
+      "elevation": 0,
+      "movement_type": "1",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "PEWTER_CITY_5_33_Script_0098BDC8",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "23",
+      "x": 14,
+      "y": 7,
+      "elevation": 0,
+      "movement_type": "2",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "PEWTER_CITY_5_33_Script_009519BA",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 7,
+      "y": 8,
+      "elevation": 3,
+      "dest_map": "MAP_PEWTER_CITY",
+      "dest_warp_id": 4
+    },
+    {
+      "x": 1,
+      "y": 5,
+      "elevation": 4,
+      "dest_map": "MAP_VALENCIA_ISLAND_HOUSE1",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 1,
+      "y": 3,
+      "elevation": 0,
+      "dest_map": "MAP_LEAF_BAY_CITY_HOUSE1",
+      "dest_warp_id": 0
+    }
+  ],
+  "coord_events": [],
+  "bg_events": [
+    {
+      "x": 1,
+      "y": 1,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "PEWTER_CITY_5_33_Script_00171619"
+    },
+    {
+      "x": 14,
+      "y": 1,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "PEWTER_CITY_5_33_Script_0092BFBA"
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "0x0"
+    }
+  ]
+}

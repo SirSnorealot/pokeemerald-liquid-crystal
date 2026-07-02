@@ -1,0 +1,50 @@
+{
+  "id": "MAP_OLD_MANSION_ROOM1",
+  "name": "OldMansion_Room1",
+  "layout": "LAYOUT_OLD_MANSION_ROOM1",
+  "music": "MUS_RG_ROCKET_HIDEOUT",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": false,
+  "weather": "WEATHER_SHADE",
+  "map_type": "MAP_TYPE_UNDERGROUND",
+  "allow_cycling": true,
+  "allow_escaping": true,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [],
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "92",
+      "x": 1,
+      "y": 3,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "OLD_MANSION_2_114_Script_00958DC2",
+      "flag": "6049"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 8,
+      "y": 17,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE51",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 20,
+      "y": 3,
+      "elevation": 0,
+      "dest_map": "MAP_OLD_MANSION_ROOM2",
+      "dest_warp_id": 0
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}

@@ -1,0 +1,29 @@
+MeadowTown_MapScripts::
+	.byte 0
+
+MEADOW_TOWN_3_83_Script_0091C3FD::
+	end
+
+MEADOW_TOWN_3_83_Script_00974B5A::
+	end
+
+MEADOW_TOWN_3_83_Script_00977CB0::
+	end
+
+MEADOW_TOWN_3_83_Script_00977DB6::
+	end
+
+MEADOW_TOWN_3_83_Script_00977DC0::
+	end
+
+MEADOW_TOWN_3_83_Script_009A4DAD::
+	end
+
+MEADOW_TOWN_3_83_Script_009A54AC::
+	end
+
+MEADOW_TOWN_3_83_Script_009A92DC::
+	end
+
+MEADOW_TOWN_3_83_Script_009E0898::
+	end

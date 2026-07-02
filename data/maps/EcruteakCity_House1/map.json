@@ -1,0 +1,64 @@
+{
+  "id": "MAP_ECRUTEAK_CITY_HOUSE1",
+  "name": "EcruteakCity_House1",
+  "layout": "LAYOUT_AZALEA_TOWN_ILEX_FOREST_GATE",
+  "music": "MUS_RG_UNION_ROOM",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": false,
+  "weather": "WEATHER_SUNNY",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [],
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "69",
+      "x": 13,
+      "y": 9,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ECRUTEAK_CITY_2_21_Script_00823A5A",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 8,
+      "y": 12,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE38",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 8,
+      "y": 13,
+      "elevation": 3,
+      "dest_map": "MAP_RUINS_OF_ALPH",
+      "dest_warp_id": 2
+    },
+    {
+      "x": 18,
+      "y": 12,
+      "elevation": 0,
+      "dest_map": "MAP_ECRUTEAK_CITY",
+      "dest_warp_id": 7
+    },
+    {
+      "x": 18,
+      "y": 13,
+      "elevation": 3,
+      "dest_map": "MAP_ROUTE31",
+      "dest_warp_id": 1
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}

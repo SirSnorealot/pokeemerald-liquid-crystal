@@ -1,0 +1,64 @@
+{
+  "id": "MAP_LEAF_BAY_CITY_HOUSE5",
+  "name": "LeafBayCity_House5",
+  "layout": "LAYOUT_LEAF_BAY_CITY_HOUSE5",
+  "music": "MUS_RG_CELADON",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [],
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "65",
+      "x": 13,
+      "y": 3,
+      "elevation": 0,
+      "movement_type": "76",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "LEAF_BAY_CITY_5_64_Script_009D0ABB",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "69",
+      "x": 7,
+      "y": 6,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "LEAF_BAY_CITY_5_64_Script_00A35785",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 13,
+      "y": 8,
+      "elevation": 3,
+      "dest_map": "MAP_LEAF_BAY_CITY",
+      "dest_warp_id": 6
+    },
+    {
+      "x": 1,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_LEAF_BAY_CITY",
+      "dest_warp_id": 5
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}

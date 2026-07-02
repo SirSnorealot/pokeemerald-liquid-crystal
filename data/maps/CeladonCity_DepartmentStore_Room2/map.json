@@ -1,0 +1,108 @@
+{
+  "id": "MAP_CELADON_CITY_DEPARTMENT_STORE_ROOM2",
+  "name": "CeladonCity_DepartmentStore_Room2",
+  "layout": "LAYOUT_CELADON_CITY_DEPARTMENT_STORE_ROOM2",
+  "music": "MUS_RG_CELADON",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_NONE",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [],
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "56",
+      "x": 1,
+      "y": 6,
+      "elevation": 3,
+      "movement_type": "7",
+      "movement_range_x": 2,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "CELADON_DEPT__10_1_Script_008E4EF5",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "68",
+      "x": 12,
+      "y": 11,
+      "elevation": 0,
+      "movement_type": "8",
+      "movement_range_x": 3,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "CELADON_DEPT__10_1_Script_0016BB10",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "68",
+      "x": 11,
+      "y": 10,
+      "elevation": 3,
+      "movement_type": "9",
+      "movement_range_x": 3,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "CELADON_DEPT__10_1_Script_0016BB4E",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "20",
+      "x": 2,
+      "y": 6,
+      "elevation": 3,
+      "movement_type": "9",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "CELADON_DEPT__10_1_Script_008E4E87",
+      "flag": "157"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 6,
+      "y": 1,
+      "elevation": 0,
+      "dest_map": "MAP_CELADON_CITY_HOUSE2",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 3,
+      "y": 2,
+      "elevation": 3,
+      "dest_map": "MAP_CELADON_CITY_DEPARTMENT_STORE_ROOM1",
+      "dest_warp_id": 7
+    },
+    {
+      "x": 9,
+      "y": 2,
+      "elevation": 3,
+      "dest_map": "MAP_CELADON_CITY_DEPARTMENT_STORE_ROOM3",
+      "dest_warp_id": 1
+    }
+  ],
+  "coord_events": [],
+  "bg_events": [
+    {
+      "x": 4,
+      "y": 1,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "CELADON_DEPT__10_1_Script_0016BB07"
+    }
+  ]
+}

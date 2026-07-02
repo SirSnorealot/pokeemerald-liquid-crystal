@@ -1,0 +1,23 @@
+VermilionCity_House4_MapScripts::
+	.byte 0
+
+VERMILION_CITY_9_6_Script_0016BA6C::
+	end
+
+VERMILION_CITY_9_6_Script_008DB77D::
+	end
+
+VERMILION_CITY_9_6_Script_008DB7A8::
+	end
+
+VERMILION_CITY_9_6_Script_008DB864::
+	end
+
+VERMILION_CITY_9_6_Script_008DB910::
+	end
+
+VERMILION_CITY_9_6_Script_008DBA91::
+	end
+
+VERMILION_CITY_9_6_Script_0099F42C::
+	end

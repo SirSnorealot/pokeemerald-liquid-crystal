@@ -1,0 +1,29 @@
+RadioTower_Room9_MapScripts::
+	.byte 0
+
+RADIO_TOWER_4_92_Script_00841289::
+	end
+
+RADIO_TOWER_4_92_Script_008412A2::
+	end
+
+RADIO_TOWER_4_92_Script_008416E6::
+	end
+
+RADIO_TOWER_4_92_Script_0084178D::
+	end
+
+RADIO_TOWER_4_92_Script_00845D3A::
+	end
+
+RADIO_TOWER_4_92_Script_00845DA9::
+	end
+
+RADIO_TOWER_4_92_Script_00846DC0::
+	end
+
+RADIO_TOWER_4_92_Script_00846E35::
+	end
+
+RADIO_TOWER_4_92_Script_0084F2B9::
+	end

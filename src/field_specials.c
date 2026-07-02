@@ -2161,63 +2161,63 @@ void ShowFrontierManiacMessage(void)
     {
         [FRONTIER_MANIAC_TOWER_SINGLES] =
         {
-            BattleFrontier_Lounge2_Text_SalonMaidenIsThere,
-            BattleFrontier_Lounge2_Text_SalonMaidenSilverMons,
-            BattleFrontier_Lounge2_Text_SalonMaidenGoldMons
+            NULL, // TODO(LC): was BattleFrontier_Lounge2_Text_SalonMaidenIsThere (removed with Hoenn maps)
+            NULL, // TODO(LC): was BattleFrontier_Lounge2_Text_SalonMaidenSilverMons (removed with Hoenn maps)
+            NULL // TODO(LC): was BattleFrontier_Lounge2_Text_SalonMaidenGoldMons (removed with Hoenn maps)
         },
         [FRONTIER_MANIAC_TOWER_DOUBLES] =
         {
-            BattleFrontier_Lounge2_Text_DoubleBattleAdvice1,
-            BattleFrontier_Lounge2_Text_DoubleBattleAdvice2,
-            BattleFrontier_Lounge2_Text_DoubleBattleAdvice3
+            NULL, // TODO(LC): was BattleFrontier_Lounge2_Text_DoubleBattleAdvice1 (removed with Hoenn maps)
+            NULL, // TODO(LC): was BattleFrontier_Lounge2_Text_DoubleBattleAdvice2 (removed with Hoenn maps)
+            NULL // TODO(LC): was BattleFrontier_Lounge2_Text_DoubleBattleAdvice3 (removed with Hoenn maps)
         },
         [FRONTIER_MANIAC_TOWER_MULTIS] =
         {
-            BattleFrontier_Lounge2_Text_MultiBattleAdvice,
-            BattleFrontier_Lounge2_Text_MultiBattleAdvice,
-            BattleFrontier_Lounge2_Text_MultiBattleAdvice
+            NULL, // TODO(LC): was BattleFrontier_Lounge2_Text_MultiBattleAdvice (removed with Hoenn maps)
+            NULL, // TODO(LC): was BattleFrontier_Lounge2_Text_MultiBattleAdvice (removed with Hoenn maps)
+            NULL // TODO(LC): was BattleFrontier_Lounge2_Text_MultiBattleAdvice (removed with Hoenn maps)
         },
         [FRONTIER_MANIAC_TOWER_LINK] =
         {
-            BattleFrontier_Lounge2_Text_LinkMultiBattleAdvice,
-            BattleFrontier_Lounge2_Text_LinkMultiBattleAdvice,
-            BattleFrontier_Lounge2_Text_LinkMultiBattleAdvice
+            NULL, // TODO(LC): was BattleFrontier_Lounge2_Text_LinkMultiBattleAdvice (removed with Hoenn maps)
+            NULL, // TODO(LC): was BattleFrontier_Lounge2_Text_LinkMultiBattleAdvice (removed with Hoenn maps)
+            NULL // TODO(LC): was BattleFrontier_Lounge2_Text_LinkMultiBattleAdvice (removed with Hoenn maps)
         },
         [FRONTIER_MANIAC_DOME] =
         {
-            BattleFrontier_Lounge2_Text_DomeAceIsThere,
-            BattleFrontier_Lounge2_Text_DomeAceSilverMons,
-            BattleFrontier_Lounge2_Text_DomeAceGoldMons
+            NULL, // TODO(LC): was BattleFrontier_Lounge2_Text_DomeAceIsThere (removed with Hoenn maps)
+            NULL, // TODO(LC): was BattleFrontier_Lounge2_Text_DomeAceSilverMons (removed with Hoenn maps)
+            NULL // TODO(LC): was BattleFrontier_Lounge2_Text_DomeAceGoldMons (removed with Hoenn maps)
         },
         [FRONTIER_MANIAC_FACTORY] =
         {
-            BattleFrontier_Lounge2_Text_FactoryHeadIsThere,
-            BattleFrontier_Lounge2_Text_FactoryHeadSilverMons,
-            BattleFrontier_Lounge2_Text_FactoryHeadGoldMons
+            NULL, // TODO(LC): was BattleFrontier_Lounge2_Text_FactoryHeadIsThere (removed with Hoenn maps)
+            NULL, // TODO(LC): was BattleFrontier_Lounge2_Text_FactoryHeadSilverMons (removed with Hoenn maps)
+            NULL // TODO(LC): was BattleFrontier_Lounge2_Text_FactoryHeadGoldMons (removed with Hoenn maps)
         },
         [FRONTIER_MANIAC_PALACE] =
         {
-            BattleFrontier_Lounge2_Text_PalaceMavenIsThere,
-            BattleFrontier_Lounge2_Text_PalaceMavenSilverMons,
-            BattleFrontier_Lounge2_Text_PalaceMavenGoldMons
+            NULL, // TODO(LC): was BattleFrontier_Lounge2_Text_PalaceMavenIsThere (removed with Hoenn maps)
+            NULL, // TODO(LC): was BattleFrontier_Lounge2_Text_PalaceMavenSilverMons (removed with Hoenn maps)
+            NULL // TODO(LC): was BattleFrontier_Lounge2_Text_PalaceMavenGoldMons (removed with Hoenn maps)
         },
         [FRONTIER_MANIAC_ARENA] =
         {
-            BattleFrontier_Lounge2_Text_ArenaTycoonIsThere,
-            BattleFrontier_Lounge2_Text_ArenaTycoonSilverMons,
-            BattleFrontier_Lounge2_Text_ArenaTycoonGoldMons
+            NULL, // TODO(LC): was BattleFrontier_Lounge2_Text_ArenaTycoonIsThere (removed with Hoenn maps)
+            NULL, // TODO(LC): was BattleFrontier_Lounge2_Text_ArenaTycoonSilverMons (removed with Hoenn maps)
+            NULL // TODO(LC): was BattleFrontier_Lounge2_Text_ArenaTycoonGoldMons (removed with Hoenn maps)
         },
         [FRONTIER_MANIAC_PIKE] =
         {
-            BattleFrontier_Lounge2_Text_PikeQueenIsThere,
-            BattleFrontier_Lounge2_Text_PikeQueenSilverMons,
-            BattleFrontier_Lounge2_Text_PikeQueenGoldMons
+            NULL, // TODO(LC): was BattleFrontier_Lounge2_Text_PikeQueenIsThere (removed with Hoenn maps)
+            NULL, // TODO(LC): was BattleFrontier_Lounge2_Text_PikeQueenSilverMons (removed with Hoenn maps)
+            NULL // TODO(LC): was BattleFrontier_Lounge2_Text_PikeQueenGoldMons (removed with Hoenn maps)
         },
         [FRONTIER_MANIAC_PYRAMID] =
         {
-            BattleFrontier_Lounge2_Text_PyramidKingIsThere,
-            BattleFrontier_Lounge2_Text_PyramidKingSilverMons,
-            BattleFrontier_Lounge2_Text_PyramidKingGoldMons
+            NULL, // TODO(LC): was BattleFrontier_Lounge2_Text_PyramidKingIsThere (removed with Hoenn maps)
+            NULL, // TODO(LC): was BattleFrontier_Lounge2_Text_PyramidKingSilverMons (removed with Hoenn maps)
+            NULL // TODO(LC): was BattleFrontier_Lounge2_Text_PyramidKingGoldMons (removed with Hoenn maps)
         },
     };
 
@@ -2949,18 +2949,18 @@ void ShowFrontierGamblerLookingMessage(void)
 {
     static const u8 *const sFrontierGamblerLookingMessages[] =
     {
-        BattleFrontier_Lounge3_Text_ChallengeBattleTowerSingle,
-        BattleFrontier_Lounge3_Text_ChallengeBattleTowerDouble,
-        BattleFrontier_Lounge3_Text_ChallengeBattleTowerMulti,
-        BattleFrontier_Lounge3_Text_ChallengeBattleDomeSingle,
-        BattleFrontier_Lounge3_Text_ChallengeBattleDomeDouble,
-        BattleFrontier_Lounge3_Text_ChallengeBattleFactorySingle,
-        BattleFrontier_Lounge3_Text_ChallengeBattleFactoryDouble,
-        BattleFrontier_Lounge3_Text_ChallengeBattlePalaceSingle,
-        BattleFrontier_Lounge3_Text_ChallengeBattlePalaceDouble,
-        BattleFrontier_Lounge3_Text_ChallengeBattleArena,
-        BattleFrontier_Lounge3_Text_ChallengeBattlePike,
-        BattleFrontier_Lounge3_Text_ChallengeBattlePyramid,
+        NULL, // TODO(LC): was BattleFrontier_Lounge3_Text_ChallengeBattleTowerSingle (removed with Hoenn maps)
+        NULL, // TODO(LC): was BattleFrontier_Lounge3_Text_ChallengeBattleTowerDouble (removed with Hoenn maps)
+        NULL, // TODO(LC): was BattleFrontier_Lounge3_Text_ChallengeBattleTowerMulti (removed with Hoenn maps)
+        NULL, // TODO(LC): was BattleFrontier_Lounge3_Text_ChallengeBattleDomeSingle (removed with Hoenn maps)
+        NULL, // TODO(LC): was BattleFrontier_Lounge3_Text_ChallengeBattleDomeDouble (removed with Hoenn maps)
+        NULL, // TODO(LC): was BattleFrontier_Lounge3_Text_ChallengeBattleFactorySingle (removed with Hoenn maps)
+        NULL, // TODO(LC): was BattleFrontier_Lounge3_Text_ChallengeBattleFactoryDouble (removed with Hoenn maps)
+        NULL, // TODO(LC): was BattleFrontier_Lounge3_Text_ChallengeBattlePalaceSingle (removed with Hoenn maps)
+        NULL, // TODO(LC): was BattleFrontier_Lounge3_Text_ChallengeBattlePalaceDouble (removed with Hoenn maps)
+        NULL, // TODO(LC): was BattleFrontier_Lounge3_Text_ChallengeBattleArena (removed with Hoenn maps)
+        NULL, // TODO(LC): was BattleFrontier_Lounge3_Text_ChallengeBattlePike (removed with Hoenn maps)
+        NULL, // TODO(LC): was BattleFrontier_Lounge3_Text_ChallengeBattlePyramid (removed with Hoenn maps)
     };
 
     u16 challenge = VarGet(VAR_FRONTIER_GAMBLER_CHALLENGE);
@@ -2972,18 +2972,18 @@ void ShowFrontierGamblerGoMessage(void)
 {
     static const u8 *const sFrontierGamblerGoMessages[] =
     {
-        BattleFrontier_Lounge3_Text_GetToBattleTowerSingle,
-        BattleFrontier_Lounge3_Text_GetToBattleTowerDouble,
-        BattleFrontier_Lounge3_Text_GetToBattleTowerMulti,
-        BattleFrontier_Lounge3_Text_GetToBattleDomeSingle,
-        BattleFrontier_Lounge3_Text_GetToBattleDomeDouble,
-        BattleFrontier_Lounge3_Text_GetToBattleFactorySingle,
-        BattleFrontier_Lounge3_Text_GetToBattleFactoryDouble,
-        BattleFrontier_Lounge3_Text_GetToBattlePalaceSingle,
-        BattleFrontier_Lounge3_Text_GetToBattlePalaceDouble,
-        BattleFrontier_Lounge3_Text_GetToBattleArena,
-        BattleFrontier_Lounge3_Text_GetToBattlePike,
-        BattleFrontier_Lounge3_Text_GetToBattlePyramid,
+        NULL, // TODO(LC): was BattleFrontier_Lounge3_Text_GetToBattleTowerSingle (removed with Hoenn maps)
+        NULL, // TODO(LC): was BattleFrontier_Lounge3_Text_GetToBattleTowerDouble (removed with Hoenn maps)
+        NULL, // TODO(LC): was BattleFrontier_Lounge3_Text_GetToBattleTowerMulti (removed with Hoenn maps)
+        NULL, // TODO(LC): was BattleFrontier_Lounge3_Text_GetToBattleDomeSingle (removed with Hoenn maps)
+        NULL, // TODO(LC): was BattleFrontier_Lounge3_Text_GetToBattleDomeDouble (removed with Hoenn maps)
+        NULL, // TODO(LC): was BattleFrontier_Lounge3_Text_GetToBattleFactorySingle (removed with Hoenn maps)
+        NULL, // TODO(LC): was BattleFrontier_Lounge3_Text_GetToBattleFactoryDouble (removed with Hoenn maps)
+        NULL, // TODO(LC): was BattleFrontier_Lounge3_Text_GetToBattlePalaceSingle (removed with Hoenn maps)
+        NULL, // TODO(LC): was BattleFrontier_Lounge3_Text_GetToBattlePalaceDouble (removed with Hoenn maps)
+        NULL, // TODO(LC): was BattleFrontier_Lounge3_Text_GetToBattleArena (removed with Hoenn maps)
+        NULL, // TODO(LC): was BattleFrontier_Lounge3_Text_GetToBattlePike (removed with Hoenn maps)
+        NULL, // TODO(LC): was BattleFrontier_Lounge3_Text_GetToBattlePyramid (removed with Hoenn maps)
     };
 
     ShowFieldMessage(sFrontierGamblerGoMessages[VarGet(VAR_FRONTIER_GAMBLER_SET_CHALLENGE)]);
@@ -3218,31 +3218,31 @@ static void ShowBattleFrontierTutorMoveDescription(enum ScrollMulti menu, u16 se
 {
     static const u8 *const sBattleFrontier_TutorMoveDescriptions1[] =
     {
-        BattleFrontier_Lounge7_Text_SoftboiledDesc,
-        BattleFrontier_Lounge7_Text_SeismicTossDesc,
-        BattleFrontier_Lounge7_Text_DreamEaterDesc,
-        BattleFrontier_Lounge7_Text_MegaPunchDesc,
-        BattleFrontier_Lounge7_Text_MegaKickDesc,
-        BattleFrontier_Lounge7_Text_BodySlamDesc,
-        BattleFrontier_Lounge7_Text_RockSlideDesc,
-        BattleFrontier_Lounge7_Text_CounterDesc,
-        BattleFrontier_Lounge7_Text_ThunderWaveDesc,
-        BattleFrontier_Lounge7_Text_SwordsDanceDesc,
+        NULL, // TODO(LC): was BattleFrontier_Lounge7_Text_SoftboiledDesc (removed with Hoenn maps)
+        NULL, // TODO(LC): was BattleFrontier_Lounge7_Text_SeismicTossDesc (removed with Hoenn maps)
+        NULL, // TODO(LC): was BattleFrontier_Lounge7_Text_DreamEaterDesc (removed with Hoenn maps)
+        NULL, // TODO(LC): was BattleFrontier_Lounge7_Text_MegaPunchDesc (removed with Hoenn maps)
+        NULL, // TODO(LC): was BattleFrontier_Lounge7_Text_MegaKickDesc (removed with Hoenn maps)
+        NULL, // TODO(LC): was BattleFrontier_Lounge7_Text_BodySlamDesc (removed with Hoenn maps)
+        NULL, // TODO(LC): was BattleFrontier_Lounge7_Text_RockSlideDesc (removed with Hoenn maps)
+        NULL, // TODO(LC): was BattleFrontier_Lounge7_Text_CounterDesc (removed with Hoenn maps)
+        NULL, // TODO(LC): was BattleFrontier_Lounge7_Text_ThunderWaveDesc (removed with Hoenn maps)
+        NULL, // TODO(LC): was BattleFrontier_Lounge7_Text_SwordsDanceDesc (removed with Hoenn maps)
         gText_Exit,
     };
 
     static const u8 *const sBattleFrontier_TutorMoveDescriptions2[] =
     {
-        BattleFrontier_Lounge7_Text_DefenseCurlDesc,
-        BattleFrontier_Lounge7_Text_SnoreDesc,
-        BattleFrontier_Lounge7_Text_MudSlapDesc,
-        BattleFrontier_Lounge7_Text_SwiftDesc,
-        BattleFrontier_Lounge7_Text_IcyWindDesc,
-        BattleFrontier_Lounge7_Text_EndureDesc,
-        BattleFrontier_Lounge7_Text_PsychUpDesc,
-        BattleFrontier_Lounge7_Text_IcePunchDesc,
-        BattleFrontier_Lounge7_Text_ThunderPunchDesc,
-        BattleFrontier_Lounge7_Text_FirePunchDesc,
+        NULL, // TODO(LC): was BattleFrontier_Lounge7_Text_DefenseCurlDesc (removed with Hoenn maps)
+        NULL, // TODO(LC): was BattleFrontier_Lounge7_Text_SnoreDesc (removed with Hoenn maps)
+        NULL, // TODO(LC): was BattleFrontier_Lounge7_Text_MudSlapDesc (removed with Hoenn maps)
+        NULL, // TODO(LC): was BattleFrontier_Lounge7_Text_SwiftDesc (removed with Hoenn maps)
+        NULL, // TODO(LC): was BattleFrontier_Lounge7_Text_IcyWindDesc (removed with Hoenn maps)
+        NULL, // TODO(LC): was BattleFrontier_Lounge7_Text_EndureDesc (removed with Hoenn maps)
+        NULL, // TODO(LC): was BattleFrontier_Lounge7_Text_PsychUpDesc (removed with Hoenn maps)
+        NULL, // TODO(LC): was BattleFrontier_Lounge7_Text_IcePunchDesc (removed with Hoenn maps)
+        NULL, // TODO(LC): was BattleFrontier_Lounge7_Text_ThunderPunchDesc (removed with Hoenn maps)
+        NULL, // TODO(LC): was BattleFrontier_Lounge7_Text_FirePunchDesc (removed with Hoenn maps)
         gText_Exit,
     };
 
@@ -3407,7 +3407,7 @@ static void ChangeDeoxysRockLevel(u8 rockLevel)
         PlaySE(SE_RG_DEOXYS_MOVE); // Success sound
 
     CreateTask(WaitForDeoxysRockMovement, 8);
-    gFieldEffectArguments[0] = LOCALID_BIRTH_ISLAND_EXTERIOR_ROCK;
+    gFieldEffectArguments[0] = 0; // TODO(LC): was LOCALID_BIRTH_ISLAND_EXTERIOR_ROCK (removed with Hoenn maps)
     if (gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_BIRTH_ISLAND_EXTERIOR_FRLG) && gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_BIRTH_ISLAND_EXTERIOR_FRLG))
     {
         gFieldEffectArguments[1] = MAP_NUM(MAP_BIRTH_ISLAND_EXTERIOR_FRLG);
@@ -3429,7 +3429,7 @@ static void ChangeDeoxysRockLevel(u8 rockLevel)
         gFieldEffectArguments[5] = 5;
 
     FieldEffectStart(FLDEFF_MOVE_DEOXYS_ROCK);
-    SetObjEventTemplateCoords(LOCALID_BIRTH_ISLAND_EXTERIOR_ROCK, sDeoxysRockCoords[rockLevel][0], sDeoxysRockCoords[rockLevel][1]);
+    SetObjEventTemplateCoords(0, sDeoxysRockCoords[rockLevel][0], sDeoxysRockCoords[rockLevel][1]); // TODO(LC): was LOCALID_BIRTH_ISLAND_EXTERIOR_ROCK (removed with Hoenn maps)
 }
 
 static void WaitForDeoxysRockMovement(u8 taskId)
@@ -3661,18 +3661,21 @@ u32 GetMartEmployeeObjectEventId(void)
     static const u8 sPokeMarts[][3] =
     {
         // TODO(LC): { MAP_GROUP(MAP_CHERRYGROVE_CITY_MART),     MAP_NUM(MAP_CHERRYGROVE_CITY_MART),     LOCALID_CHERRYGROVE_MART_CLERK },
-        { MAP_GROUP(MAP_LAVARIDGE_TOWN_MART),  MAP_NUM(MAP_LAVARIDGE_TOWN_MART),  LOCALID_LAVARIDGE_MART_CLERK },
-        { MAP_GROUP(MAP_FALLARBOR_TOWN_MART),  MAP_NUM(MAP_FALLARBOR_TOWN_MART),  LOCALID_FALLARBOR_MART_CLERK },
-        { MAP_GROUP(MAP_VERDANTURF_TOWN_MART), MAP_NUM(MAP_VERDANTURF_TOWN_MART), LOCALID_VERDANTURF_MART_CLERK },
         { MAP_GROUP(MAP_VIOLET_CITY_MART),  MAP_NUM(MAP_VIOLET_CITY_MART),  LOCALID_VIOLET_CITY_MART_CLERK },
         // TODO(LC): Azalea mart clerk local id is not ported yet.
         // { MAP_GROUP(MAP_AZALEA_TOWN_MART),  MAP_NUM(MAP_AZALEA_TOWN_MART),  LOCALID_SLATEPORT_MART_CLERK },
-        { MAP_GROUP(MAP_MAUVILLE_CITY_MART),   MAP_NUM(MAP_MAUVILLE_CITY_MART),   LOCALID_MAUVILLE_MART_CLERK },
-        { MAP_GROUP(MAP_RUSTBORO_CITY_MART),   MAP_NUM(MAP_RUSTBORO_CITY_MART),   LOCALID_RUSTBORO_MART_CLERK },
-        { MAP_GROUP(MAP_FORTREE_CITY_MART),    MAP_NUM(MAP_FORTREE_CITY_MART),    LOCALID_FORTREE_MART_CLERK },
-        { MAP_GROUP(MAP_MOSSDEEP_CITY_MART),   MAP_NUM(MAP_MOSSDEEP_CITY_MART),   LOCALID_MOSSDEEP_MART_CLERK },
-        { MAP_GROUP(MAP_SOOTOPOLIS_CITY_MART), MAP_NUM(MAP_SOOTOPOLIS_CITY_MART), LOCALID_SOOTOPOLIS_MART_CLERK },
-        { MAP_GROUP(MAP_BATTLE_FRONTIER_MART), MAP_NUM(MAP_BATTLE_FRONTIER_MART), LOCALID_FRONTIER_MART_CLERK },
+        // TODO(LC): Mauville/Rustboro mart maps removed with Hoenn maps
+        // { MAP_GROUP(MAP_MAUVILLE_CITY_MART),   MAP_NUM(MAP_MAUVILLE_CITY_MART),   LOCALID_MAUVILLE_MART_CLERK },
+        // { MAP_GROUP(MAP_RUSTBORO_CITY_MART),   MAP_NUM(MAP_RUSTBORO_CITY_MART),   LOCALID_RUSTBORO_MART_CLERK },
+        // TODO(LC): Hoenn mart maps removed; their LOCALIDs no longer exist
+        // { MAP_GROUP(MAP_LAVARIDGE_TOWN_MART),  MAP_NUM(MAP_LAVARIDGE_TOWN_MART),  LOCALID_LAVARIDGE_MART_CLERK },
+        // { MAP_GROUP(MAP_FALLARBOR_TOWN_MART),  MAP_NUM(MAP_FALLARBOR_TOWN_MART),  LOCALID_FALLARBOR_MART_CLERK },
+        // { MAP_GROUP(MAP_VERDANTURF_TOWN_MART), MAP_NUM(MAP_VERDANTURF_TOWN_MART), LOCALID_VERDANTURF_MART_CLERK },
+        // { MAP_GROUP(MAP_FORTREE_CITY_MART),    MAP_NUM(MAP_FORTREE_CITY_MART),    LOCALID_FORTREE_MART_CLERK },
+        // { MAP_GROUP(MAP_MOSSDEEP_CITY_MART),   MAP_NUM(MAP_MOSSDEEP_CITY_MART),   LOCALID_MOSSDEEP_MART_CLERK },
+        // { MAP_GROUP(MAP_SOOTOPOLIS_CITY_MART), MAP_NUM(MAP_SOOTOPOLIS_CITY_MART), LOCALID_SOOTOPOLIS_MART_CLERK },
+        { MAP_GROUP(MAP_BATTLE_FRONTIER_MART), MAP_NUM(MAP_BATTLE_FRONTIER_MART), 0 }, // TODO(LC): was LOCALID_FRONTIER_MART_CLERK (removed with Hoenn maps)
+        { MAP_GROUP(MAP_BATTLE_FRONTIER_MART), MAP_NUM(MAP_BATTLE_FRONTIER_MART), 0 }, // TODO(LC): was LOCALID_FRONTIER_MART_CLERK (removed with Hoenn maps)
     };
 
     u8 i;
@@ -3817,12 +3820,12 @@ static void Task_LinkRetireStatusWithBattleTowerPartner(u8 taskId)
         if (GetMultiplayerId() == 0)
         {
             if (gSpecialVar_Result == BATTLE_TOWER_LINKSTAT_MEMBER_RETIRE)
-                ShowFieldAutoScrollMessage(gText_YourPartnerHasRetired);
+                ShowFieldAutoScrollMessage(NULL); // TODO(LC): was gText_YourPartnerHasRetired (removed with Hoenn maps)
         }
         else
         {
             if (gSpecialVar_Result == BATTLE_TOWER_LINKSTAT_LEADER_RETIRE)
-                ShowFieldAutoScrollMessage(gText_YourPartnerHasRetired);
+                ShowFieldAutoScrollMessage(NULL); // TODO(LC): was gText_YourPartnerHasRetired (removed with Hoenn maps)
         }
         gTasks[taskId].tState++;
         break;

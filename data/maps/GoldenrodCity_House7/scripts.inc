@@ -1,0 +1,38 @@
+GoldenrodCity_House7_MapScripts::
+	.byte 0
+
+GOLDENROD_CITY_2_85_Script_00838E8E::
+	end
+
+GOLDENROD_CITY_2_85_Script_00844AE9::
+	end
+
+GOLDENROD_CITY_2_85_Script_00844DE2::
+	end
+
+GOLDENROD_CITY_2_85_Script_00844EAE::
+	end
+
+GOLDENROD_CITY_2_85_Script_00844F69::
+	end
+
+GOLDENROD_CITY_2_85_Script_008451C1::
+	end
+
+GOLDENROD_CITY_2_85_Script_008452B4::
+	end
+
+GOLDENROD_CITY_2_85_Script_00845317::
+	end
+
+GOLDENROD_CITY_2_85_Script_0084691C::
+	end
+
+GOLDENROD_CITY_2_85_Script_008476D0::
+	end
+
+GOLDENROD_CITY_2_85_Script_0086FF51::
+	end
+
+GOLDENROD_CITY_2_85_Script_009741BD::
+	end

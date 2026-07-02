@@ -1,0 +1,208 @@
+{
+  "id": "MAP_OLIVINE_CITY_HOUSE6",
+  "name": "OlivineCity_House6",
+  "layout": "LAYOUT_OLIVINE_CITY_HOUSE6",
+  "music": "MUS_RG_POKE_CENTER",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_MAGMA",
+  "connections": [],
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "64",
+      "x": 5,
+      "y": 2,
+      "elevation": 3,
+      "movement_type": "8",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "OLIVINE_CITY_32_0_Script_00170E94",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "73",
+      "x": 17,
+      "y": 7,
+      "elevation": 3,
+      "movement_type": "76",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "OLIVINE_CITY_32_0_Script_00170E9D",
+      "flag": "114"
+    },
+    {
+      "type": "object",
+      "graphics_id": "89",
+      "x": 17,
+      "y": 6,
+      "elevation": 3,
+      "movement_type": "76",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "OLIVINE_CITY_32_0_Script_00170EC5",
+      "flag": "115"
+    },
+    {
+      "type": "object",
+      "graphics_id": "22",
+      "x": 11,
+      "y": 2,
+      "elevation": 3,
+      "movement_type": "0",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "OLIVINE_CITY_32_0_Script_00827931",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "20",
+      "x": 13,
+      "y": 6,
+      "elevation": 3,
+      "movement_type": "9",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "OLIVINE_CITY_32_0_Script_0095915E",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "27",
+      "x": 3,
+      "y": 4,
+      "elevation": 3,
+      "movement_type": "0",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "OLIVINE_CITY_32_0_Script_0089DF53",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 5,
+      "y": 8,
+      "elevation": 3,
+      "dest_map": "MAP_OLIVINE_CITY",
+      "dest_warp_id": 3
+    },
+    {
+      "x": 20,
+      "y": 6,
+      "elevation": 4,
+      "dest_map": "MAP_DYNAMIC",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 20,
+      "y": 1,
+      "elevation": 4,
+      "dest_map": "MAP_CAVE_OF_WISDOM",
+      "dest_warp_id": 0
+    }
+  ],
+  "coord_events": [],
+  "bg_events": [
+    {
+      "x": 18,
+      "y": 6,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "OLIVINE_CITY_32_0_Script_00171179"
+    },
+    {
+      "x": 18,
+      "y": 2,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "OLIVINE_CITY_32_0_Script_00171179"
+    },
+    {
+      "x": 16,
+      "y": 2,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "OLIVINE_CITY_32_0_Script_00171179"
+    },
+    {
+      "x": 18,
+      "y": 4,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "OLIVINE_CITY_32_0_Script_00171179"
+    },
+    {
+      "x": 18,
+      "y": 5,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "OLIVINE_CITY_32_0_Script_00171179"
+    },
+    {
+      "x": 17,
+      "y": 4,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "OLIVINE_CITY_32_0_Script_00171179"
+    },
+    {
+      "x": 17,
+      "y": 5,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "OLIVINE_CITY_32_0_Script_00171179"
+    },
+    {
+      "x": 12,
+      "y": 1,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "OLIVINE_CITY_32_0_Script_0092BFBA"
+    },
+    {
+      "x": 18,
+      "y": 3,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "OLIVINE_CITY_32_0_Script_00171179"
+    },
+    {
+      "x": 36,
+      "y": 1,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "OLIVINE_CITY_32_0_Script_00171619"
+    }
+  ]
+}

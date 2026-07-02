@@ -50,50 +50,50 @@ static const u16 sFrontierExchangeCorner_HoldItems[] =
 
 static const u8 *const sFrontierExchangeCorner_Decor1Descriptions[] =
 {
-    BattleFrontier_ExchangeServiceCorner_Text_KissPosterDesc,
-    BattleFrontier_ExchangeServiceCorner_Text_KissCushionDesc,
-    BattleFrontier_ExchangeServiceCorner_Text_SmoochumDollDesc,
-    BattleFrontier_ExchangeServiceCorner_Text_TogepiDollDesc,
-    BattleFrontier_ExchangeServiceCorner_Text_MeowthDollDesc,
-    BattleFrontier_ExchangeServiceCorner_Text_ClefairyDollDesc,
-    BattleFrontier_ExchangeServiceCorner_Text_DittoDollDesc,
-    BattleFrontier_ExchangeServiceCorner_Text_CyndaquilDollDesc,
-    BattleFrontier_ExchangeServiceCorner_Text_ChikoritaDollDesc,
-    BattleFrontier_ExchangeServiceCorner_Text_TotodileDollDesc,
+    NULL, // TODO(LC): was BattleFrontier_ExchangeServiceCorner_Text_KissPosterDesc (removed with Hoenn maps)
+    NULL, // TODO(LC): was BattleFrontier_ExchangeServiceCorner_Text_KissCushionDesc (removed with Hoenn maps)
+    NULL, // TODO(LC): was BattleFrontier_ExchangeServiceCorner_Text_SmoochumDollDesc (removed with Hoenn maps)
+    NULL, // TODO(LC): was BattleFrontier_ExchangeServiceCorner_Text_TogepiDollDesc (removed with Hoenn maps)
+    NULL, // TODO(LC): was BattleFrontier_ExchangeServiceCorner_Text_MeowthDollDesc (removed with Hoenn maps)
+    NULL, // TODO(LC): was BattleFrontier_ExchangeServiceCorner_Text_ClefairyDollDesc (removed with Hoenn maps)
+    NULL, // TODO(LC): was BattleFrontier_ExchangeServiceCorner_Text_DittoDollDesc (removed with Hoenn maps)
+    NULL, // TODO(LC): was BattleFrontier_ExchangeServiceCorner_Text_CyndaquilDollDesc (removed with Hoenn maps)
+    NULL, // TODO(LC): was BattleFrontier_ExchangeServiceCorner_Text_ChikoritaDollDesc (removed with Hoenn maps)
+    NULL, // TODO(LC): was BattleFrontier_ExchangeServiceCorner_Text_TotodileDollDesc (removed with Hoenn maps)
     gText_Exit,
 };
 
 static const u8 *const sFrontierExchangeCorner_Decor2Descriptions[] =
 {
-    BattleFrontier_ExchangeServiceCorner_Text_LargeDollDesc,
-    BattleFrontier_ExchangeServiceCorner_Text_LargeDollDesc,
-    BattleFrontier_ExchangeServiceCorner_Text_LargeDollDesc,
-    BattleFrontier_ExchangeServiceCorner_Text_LargeDollDesc,
-    BattleFrontier_ExchangeServiceCorner_Text_LargeDollDesc,
+    NULL, // TODO(LC): was BattleFrontier_ExchangeServiceCorner_Text_LargeDollDesc (removed with Hoenn maps)
+    NULL, // TODO(LC): was BattleFrontier_ExchangeServiceCorner_Text_LargeDollDesc (removed with Hoenn maps)
+    NULL, // TODO(LC): was BattleFrontier_ExchangeServiceCorner_Text_LargeDollDesc (removed with Hoenn maps)
+    NULL, // TODO(LC): was BattleFrontier_ExchangeServiceCorner_Text_LargeDollDesc (removed with Hoenn maps)
+    NULL, // TODO(LC): was BattleFrontier_ExchangeServiceCorner_Text_LargeDollDesc (removed with Hoenn maps)
     gText_Exit
 };
 
 static const u8 *const sFrontierExchangeCorner_VitaminsDescriptions[] =
 {
-    BattleFrontier_ExchangeServiceCorner_Text_ProteinDesc,
-    BattleFrontier_ExchangeServiceCorner_Text_CalciumDesc,
-    BattleFrontier_ExchangeServiceCorner_Text_IronDesc,
-    BattleFrontier_ExchangeServiceCorner_Text_ZincDesc,
-    BattleFrontier_ExchangeServiceCorner_Text_CarbosDesc,
-    BattleFrontier_ExchangeServiceCorner_Text_HPUpDesc,
+    NULL, // TODO(LC): was BattleFrontier_ExchangeServiceCorner_Text_ProteinDesc (removed with Hoenn maps)
+    NULL, // TODO(LC): was BattleFrontier_ExchangeServiceCorner_Text_CalciumDesc (removed with Hoenn maps)
+    NULL, // TODO(LC): was BattleFrontier_ExchangeServiceCorner_Text_IronDesc (removed with Hoenn maps)
+    NULL, // TODO(LC): was BattleFrontier_ExchangeServiceCorner_Text_ZincDesc (removed with Hoenn maps)
+    NULL, // TODO(LC): was BattleFrontier_ExchangeServiceCorner_Text_CarbosDesc (removed with Hoenn maps)
+    NULL, // TODO(LC): was BattleFrontier_ExchangeServiceCorner_Text_HPUpDesc (removed with Hoenn maps)
     gText_Exit
 };
 
 static const u8 *const sFrontierExchangeCorner_HoldItemsDescriptions[] =
 {
-    BattleFrontier_ExchangeServiceCorner_Text_LeftoversDesc,
-    BattleFrontier_ExchangeServiceCorner_Text_WhiteHerbDesc,
-    BattleFrontier_ExchangeServiceCorner_Text_QuickClawDesc,
-    BattleFrontier_ExchangeServiceCorner_Text_MentalHerbDesc,
-    BattleFrontier_ExchangeServiceCorner_Text_BrightpowderDesc,
-    BattleFrontier_ExchangeServiceCorner_Text_ChoiceBandDesc,
-    BattleFrontier_ExchangeServiceCorner_Text_KingsRockDesc,
-    BattleFrontier_ExchangeServiceCorner_Text_FocusBandDesc,
-    BattleFrontier_ExchangeServiceCorner_Text_ScopeLensDesc,
+    NULL, // TODO(LC): was BattleFrontier_ExchangeServiceCorner_Text_LeftoversDesc (removed with Hoenn maps)
+    NULL, // TODO(LC): was BattleFrontier_ExchangeServiceCorner_Text_WhiteHerbDesc (removed with Hoenn maps)
+    NULL, // TODO(LC): was BattleFrontier_ExchangeServiceCorner_Text_QuickClawDesc (removed with Hoenn maps)
+    NULL, // TODO(LC): was BattleFrontier_ExchangeServiceCorner_Text_MentalHerbDesc (removed with Hoenn maps)
+    NULL, // TODO(LC): was BattleFrontier_ExchangeServiceCorner_Text_BrightpowderDesc (removed with Hoenn maps)
+    NULL, // TODO(LC): was BattleFrontier_ExchangeServiceCorner_Text_ChoiceBandDesc (removed with Hoenn maps)
+    NULL, // TODO(LC): was BattleFrontier_ExchangeServiceCorner_Text_KingsRockDesc (removed with Hoenn maps)
+    NULL, // TODO(LC): was BattleFrontier_ExchangeServiceCorner_Text_FocusBandDesc (removed with Hoenn maps)
+    NULL, // TODO(LC): was BattleFrontier_ExchangeServiceCorner_Text_ScopeLensDesc (removed with Hoenn maps)
     gText_Exit
 };

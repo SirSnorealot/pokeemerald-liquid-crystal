@@ -1,0 +1,49 @@
+{
+  "id": "MAP_ROUTE19_ROOM1",
+  "name": "Route19_Room1",
+  "layout": "LAYOUT_ROUTE19_ROOM1",
+  "music": "MUS_RG_BERRY_PICK",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": false,
+  "weather": "WEATHER_SUNNY",
+  "map_type": "MAP_TYPE_UNDERGROUND",
+  "allow_cycling": false,
+  "allow_escaping": true,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_GYM",
+  "connections": [],
+  "object_events": [],
+  "warp_events": [
+    {
+      "x": 22,
+      "y": 24,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE19_ROOM1",
+      "dest_warp_id": 1
+    },
+    {
+      "x": 5,
+      "y": 2,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE19_ROOM1",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 21,
+      "y": 3,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE19",
+      "dest_warp_id": 1
+    },
+    {
+      "x": 5,
+      "y": 26,
+      "elevation": 0,
+      "dest_map": "MAP_UNDERSEA_CAVERN_ROOM9",
+      "dest_warp_id": 0
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}

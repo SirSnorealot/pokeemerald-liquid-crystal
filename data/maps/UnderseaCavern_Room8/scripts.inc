@@ -1,0 +1,14 @@
+UnderseaCavern_Room8_MapScripts::
+	.byte 0
+
+UNDERSEA_CAVERN_4_114_Script_009133B6::
+	end
+
+UNDERSEA_CAVERN_4_114_Script_00921734::
+	end
+
+UNDERSEA_CAVERN_4_114_Script_00921880::
+	end
+
+UNDERSEA_CAVERN_4_114_Script_00921A10::
+	end

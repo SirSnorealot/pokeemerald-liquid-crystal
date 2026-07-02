@@ -1,0 +1,56 @@
+CrystalCaves_Room2_MapScripts::
+	.byte 0
+
+CRYSTAL_CAVES_5_92_Script_0096E0FC::
+	end
+
+CRYSTAL_CAVES_5_92_Script_009E10FA::
+	end
+
+CRYSTAL_CAVES_5_92_Script_00A61797::
+	end
+
+CRYSTAL_CAVES_5_92_Script_00A68024::
+	end
+
+CRYSTAL_CAVES_5_92_Script_00A68031::
+	end
+
+CRYSTAL_CAVES_5_92_Script_00A6803E::
+	end
+
+CRYSTAL_CAVES_5_92_Script_00A6804B::
+	end
+
+CRYSTAL_CAVES_5_92_Script_00A68286::
+	end
+
+CRYSTAL_CAVES_5_92_Script_00A6D9C7::
+	end
+
+CRYSTAL_CAVES_5_92_Script_00A6DAD2::
+	end
+
+CRYSTAL_CAVES_5_92_Script_00A6DDDF::
+	end
+
+CRYSTAL_CAVES_5_92_Script_00A6E099::
+	end
+
+CRYSTAL_CAVES_5_92_Script_00A6E199::
+	end
+
+CRYSTAL_CAVES_5_92_Script_00ACD396::
+	end
+
+CRYSTAL_CAVES_5_92_Script_00ACD40E::
+	end
+
+CRYSTAL_CAVES_5_92_Script_00ACEC61::
+	end
+
+CRYSTAL_CAVES_5_92_Script_00ACED59::
+	end
+
+CRYSTAL_CAVES_5_92_Script_00ACEE37::
+	end

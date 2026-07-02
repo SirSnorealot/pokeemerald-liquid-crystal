@@ -68,78 +68,78 @@
       "x": 3,
       "y": 47,
       "elevation": 3,
-      "dest_warp_id": "0",
-      "dest_map": "MAP_RUINS_OF_ALPH_CHAMBER_A"
+      "dest_map": "MAP_RUINS_OF_ALPH_CHAMBER_A",
+      "dest_warp_id": 0
     },
     {
       "x": 12,
       "y": 6,
       "elevation": 3,
-      "dest_warp_id": "2",
-      "dest_map": "MAP_ROUTE36_RUINS_OF_ALPH_GATE"
+      "dest_map": "MAP_ROUTE36_RUINS_OF_ALPH_GATE",
+      "dest_warp_id": 2
     },
     {
       "x": 25,
       "y": 32,
       "elevation": 3,
-      "dest_warp_id": "0",
-      "dest_map": "MAP_ROUTE32_RUINS_OF_ALPH_GATE"
+      "dest_map": "MAP_ROUTE32_RUINS_OF_ALPH_GATE",
+      "dest_warp_id": 0
     },
     {
       "x": 27,
       "y": 16,
       "elevation": 3,
-      "dest_warp_id": "0",
-      "dest_map": "MAP_RUINS_OF_ALPH_RESEARCH_CENTER"
+      "dest_map": "MAP_RUINS_OF_ALPH_RESEARCH_CENTER",
+      "dest_warp_id": 0
     },
     {
       "x": 16,
       "y": 21,
       "elevation": 0,
-      "dest_warp_id": "0",
-      "dest_map": "MAP_RUINS_OF_ALPH_PUZZLE_ROOM_A"
+      "dest_map": "MAP_RUINS_OF_ALPH_PUZZLE_ROOM_A",
+      "dest_warp_id": 0
     },
     {
       "x": 22,
       "y": 11,
       "elevation": 0,
-      "dest_warp_id": "0",
-      "dest_map": "MAP_RUINS_OF_ALPH_CHAMBER_B"
+      "dest_map": "MAP_RUINS_OF_ALPH_CHAMBER_B",
+      "dest_warp_id": 0
     },
     {
       "x": 4,
       "y": 27,
       "elevation": 0,
-      "dest_warp_id": "0",
-      "dest_map": "MAP_RUINS_OF_ALPH_CHAMBER_C"
+      "dest_map": "MAP_RUINS_OF_ALPH_CHAMBER_C",
+      "dest_warp_id": 0
     },
     {
       "x": 10,
       "y": 44,
       "elevation": 0,
-      "dest_warp_id": "3",
-      "dest_map": "MAP_UNION_CAVE_B1_F"
+      "dest_map": "MAP_UNION_CAVE_B1_F",
+      "dest_warp_id": 3
     },
     {
       "x": 25,
       "y": 50,
       "elevation": 0,
-      "dest_warp_id": "0",
-      "dest_map": "MAP_RUINS_OF_ALPH_CHAMBER_D"
+      "dest_map": "MAP_RUINS_OF_ALPH_CHAMBER_D",
+      "dest_warp_id": 0
     },
     {
       "x": 10,
       "y": 30,
       "elevation": 0,
-      "dest_warp_id": "1",
-      "dest_map": "MAP_UNION_CAVE_B1_F"
+      "dest_map": "MAP_UNION_CAVE_B1_F",
+      "dest_warp_id": 1
     },
     {
       "x": 5,
       "y": 41,
       "elevation": 0,
-      "dest_warp_id": "0",
-      "dest_map": "MAP_RUINS_OF_ALPH_INNER_CHAMBER"
+      "dest_map": "MAP_RUINS_OF_ALPH_INNER_CHAMBER",
+      "dest_warp_id": 0
     }
   ],
   "coord_events": [],

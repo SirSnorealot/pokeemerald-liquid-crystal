@@ -1,0 +1,180 @@
+{
+  "id": "MAP_SAFARI_ZONE_2",
+  "name": "SafariZone_2",
+  "layout": "LAYOUT_SAFARI_ZONE_2",
+  "music": "MUS_RG_VIRIDIAN_FOREST",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": true,
+  "allow_escaping": true,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [],
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "49",
+      "x": 26,
+      "y": 13,
+      "elevation": 3,
+      "movement_type": "9",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "1",
+      "trainer_sight_or_berry_tree_id": "2",
+      "script": "SAFARI_ZONE_1_64_Script_009E1E47",
+      "flag": "6180"
+    },
+    {
+      "type": "object",
+      "graphics_id": "92",
+      "x": 21,
+      "y": 25,
+      "elevation": 3,
+      "movement_type": "8",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SAFARI_ZONE_1_64_Script_009CB750",
+      "flag": "6169"
+    },
+    {
+      "type": "object",
+      "graphics_id": "92",
+      "x": 37,
+      "y": 6,
+      "elevation": 3,
+      "movement_type": "8",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SAFARI_ZONE_1_64_Script_009CB76A",
+      "flag": "6170"
+    },
+    {
+      "type": "object",
+      "graphics_id": "92",
+      "x": 42,
+      "y": 28,
+      "elevation": 4,
+      "movement_type": "8",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SAFARI_ZONE_1_64_Script_009CB743",
+      "flag": "6168"
+    },
+    {
+      "type": "object",
+      "graphics_id": "50",
+      "x": 43,
+      "y": 22,
+      "elevation": 0,
+      "movement_type": "1",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "1",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "SAFARI_ZONE_1_64_Script_009CBA09",
+      "flag": "6180"
+    },
+    {
+      "type": "object",
+      "graphics_id": "0",
+      "x": 0,
+      "y": 0,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "0x0",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 8,
+      "y": 9,
+      "elevation": 3,
+      "dest_map": "MAP_SAFARI_ZONE_3",
+      "dest_warp_id": 6
+    },
+    {
+      "x": 8,
+      "y": 10,
+      "elevation": 3,
+      "dest_map": "MAP_SAFARI_ZONE_3",
+      "dest_warp_id": 7
+    },
+    {
+      "x": 8,
+      "y": 11,
+      "elevation": 0,
+      "dest_map": "MAP_SAFARI_ZONE_3",
+      "dest_warp_id": 8
+    },
+    {
+      "x": 8,
+      "y": 26,
+      "elevation": 3,
+      "dest_map": "MAP_SAFARI_ZONE",
+      "dest_warp_id": 2
+    },
+    {
+      "x": 8,
+      "y": 27,
+      "elevation": 3,
+      "dest_map": "MAP_SAFARI_ZONE",
+      "dest_warp_id": 3
+    },
+    {
+      "x": 8,
+      "y": 28,
+      "elevation": 0,
+      "dest_map": "MAP_SAFARI_ZONE",
+      "dest_warp_id": 11
+    },
+    {
+      "x": 40,
+      "y": 14,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE100_HOUSE2",
+      "dest_warp_id": 1
+    }
+  ],
+  "coord_events": [],
+  "bg_events": [
+    {
+      "x": 18,
+      "y": 27,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "SAFARI_ZONE_1_64_Script_00162386"
+    },
+    {
+      "x": 43,
+      "y": 15,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "SAFARI_ZONE_1_64_Script_00162386"
+    },
+    {
+      "x": 17,
+      "y": 8,
+      "elevation": 0,
+      "type": "sign",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "SAFARI_ZONE_1_64_Script_00162386"
+    }
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "id": "MAP_SILVER_CAVE_ROOM3",
+  "name": "SilverCave_Room3",
+  "layout": "LAYOUT_SILVER_CAVE_ROOM3",
+  "music": "MUS_RG_POKE_JUMP",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": true,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_UNDERGROUND",
+  "allow_cycling": true,
+  "allow_escaping": true,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [],
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "92",
+      "x": 44,
+      "y": 7,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SILVER_CAVE_4_97_Script_0091421C",
+      "flag": "5798"
+    },
+    {
+      "type": "object",
+      "graphics_id": "92",
+      "x": 53,
+      "y": 26,
+      "elevation": 0,
+      "movement_type": "0",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SILVER_CAVE_4_97_Script_00914236",
+      "flag": "5800"
+    },
+    {
+      "type": "object",
+      "graphics_id": "21",
+      "x": 13,
+      "y": 10,
+      "elevation": 0,
+      "movement_type": "7",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SILVER_CAVE_4_97_Script_00900E6D",
+      "flag": "5801"
+    },
+    {
+      "type": "object",
+      "graphics_id": "61",
+      "x": 50,
+      "y": 7,
+      "elevation": 0,
+      "movement_type": "1",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SILVER_CAVE_4_97_Script_00914316",
+      "flag": "5802"
+    },
+    {
+      "type": "object",
+      "graphics_id": "61",
+      "x": 44,
+      "y": 28,
+      "elevation": 0,
+      "movement_type": "1",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SILVER_CAVE_4_97_Script_00918FEF",
+      "flag": "5802"
+    },
+    {
+      "type": "object",
+      "graphics_id": "61",
+      "x": 13,
+      "y": 10,
+      "elevation": 0,
+      "movement_type": "7",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "0",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SILVER_CAVE_4_97_Script_0091971C",
+      "flag": "5802"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 13,
+      "y": 39,
+      "elevation": 0,
+      "dest_map": "MAP_SILVER_CAVE_ROOM2",
+      "dest_warp_id": 2
+    },
+    {
+      "x": 46,
+      "y": 32,
+      "elevation": 0,
+      "dest_map": "MAP_SILVER_CAVE_ROOM2",
+      "dest_warp_id": 3
+    },
+    {
+      "x": 53,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_SILVER_CAVE_ROOM2",
+      "dest_warp_id": 1
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}

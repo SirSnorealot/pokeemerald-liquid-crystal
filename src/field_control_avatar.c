@@ -489,14 +489,16 @@ static const u8 *GetInteractedMetatileScript(struct MapPosition *position, u8 me
         return EventScript_PC;
     if (MetatileBehavior_IsClosedSootopolisDoor(metatileBehavior) == TRUE)
         return EventScript_ClosedSootopolisDoor;
-    if (MetatileBehavior_IsSkyPillarClosedDoor(metatileBehavior) == TRUE)
-        return SkyPillar_Outside_EventScript_ClosedDoor;
+    // TODO(LC): SkyPillar_Outside map removed with Hoenn maps
+    // if (MetatileBehavior_IsSkyPillarClosedDoor(metatileBehavior) == TRUE)
+    //     return SkyPillar_Outside_EventScript_ClosedDoor;
     if (MetatileBehavior_IsCableBoxResults1(metatileBehavior) == TRUE)
         return EventScript_CableBoxResults;
     if (MetatileBehavior_IsPokeblockFeeder(metatileBehavior) == TRUE)
         return EventScript_PokeBlockFeeder;
-    if (MetatileBehavior_IsTrickHousePuzzleDoor(metatileBehavior) == TRUE)
-        return Route110_TrickHousePuzzle_EventScript_Door;
+    // TODO(LC): Route110_TrickHousePuzzle map removed with Hoenn maps
+    // if (MetatileBehavior_IsTrickHousePuzzleDoor(metatileBehavior) == TRUE)
+    //     return Route110_TrickHousePuzzle_EventScript_Door;
     if (MetatileBehavior_IsRegionMap(metatileBehavior) == TRUE)
         return EventScript_RegionMap;
     // if (MetatileBehavior_IsRunningShoesManual(metatileBehavior) == TRUE)
@@ -728,7 +730,7 @@ static bool8 TryStartMiscWalkingScripts(u16 metatileBehavior)
     }
     else if (MetatileBehavior_IsBattlePyramidWarp(metatileBehavior))
     {
-        ScriptContext_SetupScript(BattlePyramid_WarpToNextFloor);
+        ScriptContext_SetupScript(NULL); // TODO(LC): was BattlePyramid_WarpToNextFloor (removed with Hoenn maps)
         return TRUE;
     }
     else if (MetatileBehavior_IsSecretBaseGlitterMat(metatileBehavior) == TRUE)
@@ -777,11 +779,12 @@ static bool8 TryStartStepCountScript(u16 metatileBehavior)
             ScriptContext_SetupScript(AbnormalWeather_EventScript_EndEventAndCleanup_1);
             return TRUE;
         }
-        if (ShouldDoBrailleRegicePuzzle() == TRUE)
-        {
-            ScriptContext_SetupScript(IslandCave_EventScript_OpenRegiEntrance);
-            return TRUE;
-        }
+        // TODO(LC): IslandCave map removed with Hoenn maps
+        // if (ShouldDoBrailleRegicePuzzle() == TRUE)
+        // {
+        //     ScriptContext_SetupScript(IslandCave_EventScript_OpenRegiEntrance);
+        //     return TRUE;
+        // }
         if (ShouldDoWallyCall() == TRUE)
         {
             ScriptContext_SetupScript(MauvilleCity_EventScript_RegisterWallyCall);
@@ -797,16 +800,18 @@ static bool8 TryStartStepCountScript(u16 metatileBehavior)
         //     ScriptContext_SetupScript(LittlerootTown_ProfessorBirchsLab_EventScript_ScottAboardSSTidalCall);
         //     return TRUE;
         // }
-        if (ShouldDoRoxanneCall() == TRUE)
-        {
-            ScriptContext_SetupScript(RustboroCity_Gym_EventScript_RegisterRoxanne);
-            return TRUE;
-        }
-        if (ShouldDoRivalRayquazaCall() == TRUE)
-        {
-            ScriptContext_SetupScript(MossdeepCity_SpaceCenter_2F_EventScript_RivalRayquazaCall);
-            return TRUE;
-        }
+        // TODO(LC): RustboroCity_Gym map removed with Hoenn maps
+        // if (ShouldDoRoxanneCall() == TRUE)
+        // {
+        //     ScriptContext_SetupScript(RustboroCity_Gym_EventScript_RegisterRoxanne);
+        //     return TRUE;
+        // }
+        // TODO(LC): MossdeepCity_SpaceCenter_2F map removed with Hoenn maps
+        // if (ShouldDoRivalRayquazaCall() == TRUE)
+        // {
+        //     ScriptContext_SetupScript(MossdeepCity_SpaceCenter_2F_EventScript_RivalRayquazaCall);
+        //     return TRUE;
+        // }
         if (UpdateVsSeekerStepCounter())
         {
             ScriptContext_SetupScript(EventScript_VsSeekerChargingDone);
@@ -818,7 +823,7 @@ static bool8 TryStartStepCountScript(u16 metatileBehavior)
         return TRUE;
     if (CountSSTidalStep(1) == TRUE)
     {
-        ScriptContext_SetupScript(SSTidalCorridor_EventScript_ReachedStepCount);
+        ScriptContext_SetupScript(NULL); // TODO(LC): was SSTidalCorridor_EventScript_ReachedStepCount (removed with Hoenn maps)
         return TRUE;
     }
     if (TryStartMatchCall())
