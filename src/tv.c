@@ -5511,11 +5511,12 @@ static void DoTVShowTodaysRivalTrainer(void)
         case MAPSEC_DYNAMIC:
             switch (show->rivalTrainer.mapLayoutId)
             {
-            case LAYOUT_SS_TIDAL_CORRIDOR:
-            case LAYOUT_SS_TIDAL_LOWER_DECK:
-            case LAYOUT_SS_TIDAL_ROOMS:
-                sTVShowState = 10;
-                break;
+            // TODO(LC): SS Tidal maps removed with Hoenn maps
+            // case LAYOUT_SS_TIDAL_CORRIDOR:
+            // case LAYOUT_SS_TIDAL_LOWER_DECK:
+            // case LAYOUT_SS_TIDAL_ROOMS:
+            //     sTVShowState = 10;
+            //     break;
             default:
                 sTVShowState = 9;
                 break;
@@ -5672,11 +5673,12 @@ static void DoTVShowHoennTreasureInvestigators(void)
         {
             switch (show->treasureInvestigators.mapLayoutId)
             {
-            case LAYOUT_SS_TIDAL_CORRIDOR:
-            case LAYOUT_SS_TIDAL_LOWER_DECK:
-            case LAYOUT_SS_TIDAL_ROOMS:
-                sTVShowState = 2;
-                break;
+            // TODO(LC): SS Tidal maps removed with Hoenn maps
+            // case LAYOUT_SS_TIDAL_CORRIDOR:
+            // case LAYOUT_SS_TIDAL_LOWER_DECK:
+            // case LAYOUT_SS_TIDAL_ROOMS:
+            //     sTVShowState = 2;
+            //     break;
             default:
                 sTVShowState = 1;
                 break;
