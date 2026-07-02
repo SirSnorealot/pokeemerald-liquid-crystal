@@ -2022,28 +2022,6 @@ const u32 gUnionRoomChat_Keyboard_Gfx[] = INCGFX_U32("graphics/union_room_chat/k
 const u32 gUnionRoomChat_Keyboard_Tilemap[] = INCGFX_U32("graphics/union_room_chat/keyboard.bin", ".smolTM");
 const u32 gUnionRoomChat_RButtonLabels[] = INCGFX_U32("graphics/union_room_chat/r_button_labels.png", ".4bpp.smol");
 
-const u16 ALIGNED(4) gTilesetPalettes_General[][16] =
-{
-    INCGFX_U16("data/tilesets/primary/general/palettes/00.pal", ".gbapal"),
-    INCGFX_U16("data/tilesets/primary/general/palettes/01.pal", ".gbapal"),
-    INCGFX_U16("data/tilesets/primary/general/palettes/02.pal", ".gbapal"),
-    INCGFX_U16("data/tilesets/primary/general/palettes/03.pal", ".gbapal"),
-    INCGFX_U16("data/tilesets/primary/general/palettes/04.pal", ".gbapal"),
-    INCGFX_U16("data/tilesets/primary/general/palettes/05.pal", ".gbapal"),
-    INCGFX_U16("data/tilesets/primary/general/palettes/06.pal", ".gbapal"),
-    INCGFX_U16("data/tilesets/primary/general/palettes/07.pal", ".gbapal"),
-    INCGFX_U16("data/tilesets/primary/general/palettes/08.pal", ".gbapal"),
-    INCGFX_U16("data/tilesets/primary/general/palettes/09.pal", ".gbapal"),
-    INCGFX_U16("data/tilesets/primary/general/palettes/10.pal", ".gbapal"),
-    INCGFX_U16("data/tilesets/primary/general/palettes/11.pal", ".gbapal"),
-    INCGFX_U16("data/tilesets/primary/general/palettes/12.pal", ".gbapal"),
-    INCGFX_U16("data/tilesets/primary/general/palettes/13.pal", ".gbapal"),
-    INCGFX_U16("data/tilesets/primary/general/palettes/14.pal", ".gbapal"),
-    INCGFX_U16("data/tilesets/primary/general/palettes/15.pal", ".gbapal"),
-};
-
-const u32 gTilesetTiles_General[] = INCGFX_U32("data/tilesets/primary/general/tiles.png", ".4bpp.smol");
-
 // trade/egg hatch
 
 const u16 gTradeGba_Pal[] = INCGFX_U16("graphics/trade/gba.pal", ".gbapal");

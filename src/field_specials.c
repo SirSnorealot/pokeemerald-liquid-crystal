@@ -1026,9 +1026,9 @@ static bool32 IsBuildingPCTile(u32 tileId)
 
 static bool32 IsBuildingPCTileFrlg(u32 tileId)
 {
-    if (IS_FRLG)
-        return gMapHeader.mapLayout->primaryTileset == &gTileset_BuildingFrlg && (tileId == METATILE_BuildingFrlg_PCOn || tileId == METATILE_BuildingFrlg_PCOff);
-
+    // TODO(LC): FRLG tilesets removed. Kept here commented out for reference.
+    // if (IS_FRLG)
+    //     return gMapHeader.mapLayout->primaryTileset == &gTileset_BuildingFrlg && (tileId == METATILE_BuildingFrlg_PCOn || tileId == METATILE_BuildingFrlg_PCOff);
     return FALSE;
 }
 
@@ -1037,19 +1037,21 @@ static bool32 IsPlayerHousePCTile(u32 tileId)
     if (IS_FRLG)
         return FALSE;
 
-    return gMapHeader.mapLayout->secondaryTileset == &gTileset_BrendansMaysHouse
-        && (tileId == METATILE_BrendansMaysHouse_BrendanPC_On
-            || tileId == METATILE_BrendansMaysHouse_BrendanPC_Off
-            || tileId == METATILE_BrendansMaysHouse_MayPC_On
-            || tileId == METATILE_BrendansMaysHouse_MayPC_Off);
+    // TODO(LC): gTileset_BrendansMaysHouse removed with Hoenn maps. Kept here commented out for reference.
+    // return gMapHeader.mapLayout->secondaryTileset == &gTileset_BrendansMaysHouse
+    //     && (tileId == METATILE_BrendansMaysHouse_BrendanPC_On
+    //         || tileId == METATILE_BrendansMaysHouse_BrendanPC_Off
+    //         || tileId == METATILE_BrendansMaysHouse_MayPC_On
+    //         || tileId == METATILE_BrendansMaysHouse_MayPC_Off);
+    return FALSE;
 }
 
 static bool32 IsPlayerHousePCTileFrlg(u32 tileId)
 {
-    if (IS_FRLG)
-        return gMapHeader.mapLayout->secondaryTileset == &gTileset_GenericBuilding1
-            && (tileId == METATILE_GenericBuilding1_PlayersPCOn || tileId == METATILE_GenericBuilding1_PlayersPCOff);
-
+    // TODO(LC): FRLG tilesets removed. Kept here commented out for reference.
+    // if (IS_FRLG)
+    //     return gMapHeader.mapLayout->secondaryTileset == &gTileset_GenericBuilding1
+    //         && (tileId == METATILE_GenericBuilding1_PlayersPCOn || tileId == METATILE_GenericBuilding1_PlayersPCOff);
     return FALSE;
 }
 
