@@ -42,18 +42,18 @@
 */
 
 // Scene 1 main tasks
-static void Task_Scene1_FadeIn(u8);
-static void Task_Scene1_WaterDrops(u8);
+static void Task_Scene1_DittoLogo(u8);
+static void Task_Scene1_DittoAnimation(u8);
 static void Task_Scene1_PanUp(u8);
 static void Task_Scene1_End(u8);
 
 // Scene 1 supplemental functions
 static void IntroResetGpuRegs(void);
-static u8 CreateGameFreakLogoSprites(s16, s16, s16);
-static void Task_BlendLogoIn(u8);
-static void Task_BlendLogoOut(u8);
-static void Task_CreateSparkles(u8);
-static u8 CreateWaterDrop(s16, s16, u16, u16, u16, u8);
+// static u8 CreateGameFreakLogoSprites(s16, s16, s16);
+// static void Task_BlendLogoIn(u8);
+// static void Task_BlendLogoOut(u8);
+// static void Task_CreateSparkles(u8);
+// static u8 CreateWaterDrop(s16, s16, u16, u16, u16, u8);
 static void SpriteCB_WaterDrop(struct Sprite *sprite);
 static void SpriteCB_WaterDrop_Slide(struct Sprite *);
 static void SpriteCB_WaterDrop_ReachLeafEnd(struct Sprite *);
@@ -64,6 +64,7 @@ static void SpriteCB_Sparkle(struct Sprite *sprite);
 static void SpriteCB_LogoLetter(struct Sprite *sprite);
 static void SpriteCB_GameFreakLogo(struct Sprite *sprite);
 static void SpriteCB_FlygonSilhouette(struct Sprite *sprite);
+static void ShowLazText(void);
 
 // Scene 2 main tasks
 static void Task_Scene2_Load(u8);
@@ -155,7 +156,6 @@ enum {
     to trigger actions or progress through the cutscene.
     The values for these are defined contiguously below.
 */
-#define TIMER_BIG_DROP_START             76
 #define TIMER_LOGO_APPEAR               128
 #define TIMER_LOGO_LETTERS_COLOR        144
 #define TIMER_BIG_DROP_FALLS            251
@@ -184,6 +184,15 @@ enum {
 // timer is reset for scene 3
 #define TIMER_POKEBALL_FADE              28
 #define TIMER_START_LEGENDARIES          43
+
+#define DITTO_FALL_START_Y              -64
+#define DITTO_FALL_END_Y                 50
+#define DITTO_FALL_DURATION              18
+#define LAZ_BG_SCREENBASE                31
+#define LAZ_BG_CHARBASE                   0
+#define LAZ_TILE_START                    1
+#define LAZ_PALETTE_SLOT                  1
+#define TIMER_DITTO_TRANSFORM            76
 
 static EWRAM_DATA enum Gender sIntroCharacterGender = 0;
 static EWRAM_DATA u16 sFlygonYOffset = 0;
@@ -221,6 +230,9 @@ static const u8 sUnusedData[] = {
 // LC-specific Palettes
 
 static const u16 sIntroDittoGamefreakTilesheet_Pal[] = INCGFX_U16("graphics/intro/ditto_gamefreak_tilesheet.png", ".gbapal");
+static const u16 sIntroLaz_Pal[] = INCGFX_U16("graphics/intro/laz.png", ".gbapal");
+static const u32 sIntroLaz_Gfx[] = INCGFX_U32("graphics/intro/laz.png", ".4bpp.smol");
+static const u16 sIntroLaz_Tilemap[] = INCBIN_U16("graphics/intro/laz.bin");
 
 // LC-specific Palettes END
 
@@ -1047,10 +1059,10 @@ static const struct OamData sOamData_DittoGamefreak =
     .objMode = ST_OAM_OBJ_NORMAL,
     .mosaic = FALSE,
     .bpp = ST_OAM_4BPP,
-    .shape = SPRITE_SHAPE(64x64),
+    .shape = SPRITE_SHAPE(32x64),
     .x = 0,
     .matrixNum = 0,
-    .size = SPRITE_SIZE(64x64),
+    .size = SPRITE_SIZE(32x64),
     .tileNum = 0,
     .priority = 0,
     .paletteNum = 0,
@@ -1060,22 +1072,21 @@ static const struct OamData sOamData_DittoGamefreak =
 static const union AnimCmd sAnim_DittoGamefreak[] =
 {
     ANIMCMD_FRAME(0, 6),
+    ANIMCMD_FRAME(32, 6),
     ANIMCMD_FRAME(64, 6),
+    ANIMCMD_FRAME(96, 6),
     ANIMCMD_FRAME(128, 6),
+    ANIMCMD_FRAME(160, 6),
     ANIMCMD_FRAME(192, 6),
+    ANIMCMD_FRAME(224, 6),
     ANIMCMD_FRAME(256, 6),
+    ANIMCMD_FRAME(288, 6),
     ANIMCMD_FRAME(320, 6),
+    ANIMCMD_FRAME(352, 6),
     ANIMCMD_FRAME(384, 6),
+    ANIMCMD_FRAME(416, 6),
     ANIMCMD_FRAME(448, 6),
-    ANIMCMD_FRAME(512, 6),
-    ANIMCMD_FRAME(576, 6),
-    ANIMCMD_FRAME(640, 6),
-    ANIMCMD_FRAME(704, 6),
-    ANIMCMD_FRAME(768, 6),
-    ANIMCMD_FRAME(832, 6),
-    ANIMCMD_FRAME(896, 6),
-    ANIMCMD_FRAME(960, 6),
-    //ANIMCMD_FRAME(1024, 6),
+    ANIMCMD_FRAME(480, 6),
     ANIMCMD_END,
 };
 
@@ -1092,6 +1103,17 @@ static const struct SpriteTemplate sSpriteTemplate_DittoGamefreak =
     .anims = sAnims_DittoGamefreak,
     .callback = SpriteCallbackDummy,
 };
+
+static void ShowLazText(void)
+{
+    DmaClear16(3, (void *)BG_CHAR_ADDR(LAZ_BG_CHARBASE), 0x20);
+    DecompressDataWithHeaderVram(sIntroLaz_Gfx, (void *)(BG_CHAR_ADDR(LAZ_BG_CHARBASE) + LAZ_TILE_START * 0x20));
+    DmaCopy16(3, sIntroLaz_Tilemap, (void *)BG_SCREEN_ADDR(LAZ_BG_SCREENBASE), BG_SCREEN_SIZE);
+    LoadPalette(sIntroLaz_Pal, BG_PLTT_ID(LAZ_PALETTE_SLOT), sizeof(sIntroLaz_Pal));
+
+    SetGpuReg(REG_OFFSET_BG0CNT, BGCNT_PRIORITY(1) | BGCNT_CHARBASE(LAZ_BG_CHARBASE) | BGCNT_SCREENBASE(LAZ_BG_SCREENBASE) | BGCNT_16COLOR | BGCNT_TXT256x256);
+    SetGpuRegBits(REG_OFFSET_DISPCNT, DISPCNT_BG0_ON);
+}
 
 static void VBlankCB_Intro(void)
 {
@@ -1232,7 +1254,8 @@ void CB2_InitCopyrightScreenAfterTitleScreen(void)
     SetUpCopyrightScreen();
 }
 
-#define sBigDropSpriteId data[0]
+#define tDittoSpriteId data[0]
+#define tLazShown      data[1]
 
 void Task_Scene1_Load(u8 taskId)
 {
@@ -1276,17 +1299,18 @@ void Task_Scene1_Load(u8 taskId)
     LoadCompressedSpriteSheet(sSpriteSheet_ditto_gamefreak_tilesheet);
     LoadSpritePalettes(sSpritePalette_DittoGamefreakTilesheet);
 
-    gTasks[taskId].func = Task_Scene1_FadeIn;
+    gTasks[taskId].func = Task_Scene1_DittoLogo;
 }
 
-static void Task_Scene1_FadeIn(u8 taskId)
+static void Task_Scene1_DittoLogo(u8 taskId)
 {
     // BeginNormalPaletteFade(PALETTES_ALL, 0, 16, 0, RGB_BLACK);
     SetVBlankCallback(VBlankCB_Intro);
     // SetGpuReg(REG_OFFSET_DISPCNT, DISPCNT_MODE_0 | DISPCNT_OBJ_1D_MAP | DISPCNT_BG_ALL_ON | DISPCNT_OBJ_ON);
     SetGpuReg(REG_OFFSET_DISPCNT, DISPCNT_MODE_0 | DISPCNT_OBJ_1D_MAP | DISPCNT_OBJ_ON);
-    CreateSprite(&sSpriteTemplate_DittoGamefreak, DISPLAY_WIDTH / 2, DISPLAY_HEIGHT / 2, 0);
-    gTasks[taskId].func = Task_Scene1_WaterDrops;
+    gTasks[taskId].tDittoSpriteId = CreateSprite(&sSpriteTemplate_DittoGamefreak, DISPLAY_WIDTH / 2, DITTO_FALL_START_Y, 0);
+    gTasks[taskId].tLazShown = FALSE;
+    gTasks[taskId].func = Task_Scene1_DittoAnimation;
     gIntroFrameCounter = 0;
     // m4aSongNumStart(MUS_INTRO);
     ResetSerial();
@@ -1300,37 +1324,48 @@ static void Task_Scene1_FadeIn(u8 taskId)
 #define tBg3PosHi data[5]
 #define tBg3PosLo data[6]
 
-static void Task_Scene1_WaterDrops(u8 taskId)
+static void Task_Scene1_DittoAnimation(u8 taskId)
 {
-    if (gIntroFrameCounter == TIMER_BIG_DROP_START)
-        gSprites[gTasks[taskId].sBigDropSpriteId].sState = 1;
+    if (gIntroFrameCounter < DITTO_FALL_DURATION)
+        gSprites[gTasks[taskId].tDittoSpriteId].y = DITTO_FALL_START_Y + ((DITTO_FALL_END_Y - DITTO_FALL_START_Y) * gIntroFrameCounter) / DITTO_FALL_DURATION;
+    else
+        gSprites[gTasks[taskId].tDittoSpriteId].y = DITTO_FALL_END_Y;
 
-    if (gIntroFrameCounter == TIMER_LOGO_APPEAR)
-        CreateTask(Task_BlendLogoIn, 0);
+    if (!gTasks[taskId].tLazShown && gIntroFrameCounter >= DITTO_FALL_DURATION)
+    {
+        ShowLazText();
+        gTasks[taskId].tLazShown = TRUE;
+    }
 
-    if (gIntroFrameCounter == TIMER_BIG_DROP_FALLS)
-        gSprites[gTasks[taskId].sBigDropSpriteId].sState = 2;
+    // if (gIntroFrameCounter == TIMER_DITTO_TRANSFORM)
+    //     gSprites[gTasks[taskId].tDittoSpriteId].sState = 1;
 
-    if (gIntroFrameCounter == TIMER_LOGO_BLEND_OUT)
-        CreateTask(Task_BlendLogoOut, 0);
+    // if (gIntroFrameCounter == TIMER_LOGO_APPEAR)
+    //     CreateTask(Task_BlendLogoIn, 0);
 
-    if (gIntroFrameCounter == TIMER_SMALL_DROP_1)
-        CreateWaterDrop(48, 0, 0x400, 5, 0x70, TRUE);
+    // if (gIntroFrameCounter == TIMER_BIG_DROP_FALLS)
+    //     gSprites[gTasks[taskId].tDittoSpriteId].sState = 2;
 
-    if (gIntroFrameCounter == TIMER_SMALL_DROP_2)
-        CreateWaterDrop(200, 60, 0x400, 9, 0x80, TRUE);
+    // if (gIntroFrameCounter == TIMER_LOGO_BLEND_OUT)
+    //     CreateTask(Task_BlendLogoOut, 0);
 
-    if (gIntroFrameCounter == TIMER_SPARKLES)
-        CreateTask(Task_CreateSparkles, 0);
+    // if (gIntroFrameCounter == TIMER_SMALL_DROP_1)
+    //     CreateWaterDrop(48, 0, 0x400, 5, 0x70, TRUE);
+
+    // if (gIntroFrameCounter == TIMER_SMALL_DROP_2)
+    //     CreateWaterDrop(200, 60, 0x400, 9, 0x80, TRUE);
+
+    // if (gIntroFrameCounter == TIMER_SPARKLES)
+    //     CreateTask(Task_CreateSparkles, 0);
 
     if (gIntroFrameCounter > TIMER_SPARKLES)
     {
-        gTasks[taskId].tBg2PosHi = 80;
-        gTasks[taskId].tBg2PosLo = 0;
-        gTasks[taskId].tBg1PosHi = 24;
-        gTasks[taskId].tBg1PosLo = 0;
-        gTasks[taskId].tBg3PosHi = 40;
-        gTasks[taskId].tBg3PosLo = 0;
+        // gTasks[taskId].tBg2PosHi = 80;
+        // gTasks[taskId].tBg2PosLo = 0;
+        // gTasks[taskId].tBg1PosHi = 24;
+        // gTasks[taskId].tBg1PosLo = 0;
+        // gTasks[taskId].tBg3PosHi = 40;
+        // gTasks[taskId].tBg3PosLo = 0;
         gTasks[taskId].func = Task_Scene1_PanUp;
     }
 }
@@ -1339,31 +1374,6 @@ static void Task_Scene1_WaterDrops(u8 taskId)
 #define tTimer       data[2]
 #define tTimerSteps  data[3]
 #define tNumSparkles data[4]
-
-static void Task_CreateSparkles(u8 taskId)
-{
-    s16 *data = gTasks[taskId].data;
-
-    if (++tTimer & 1)
-        tTimerSteps++;
-
-    switch (tState)
-    {
-    case 0:
-        CreateSprite(&sSpriteTemplate_Sparkle, sSparkleCoords[tNumSparkles][0], sSparkleCoords[tNumSparkles][1] + tTimerSteps, 0);
-        tState++;
-        tDelay = 12;
-        tNumSparkles++;
-        break;
-    case 1:
-        if (--tDelay == 0)
-            tState = 0;
-        break;
-    }
-
-    if (tTimerSteps > 60)
-        DestroyTask(taskId);
-}
 
 #undef tDelay
 #undef tTimer
@@ -1382,35 +1392,35 @@ static void Task_Scene1_PanUp(u8 taskId)
 {
     if (gIntroFrameCounter < TIMER_END_PAN_UP)
     {
-        s32 offset;
+        // s32 offset;
 
-        // Slide bg 2 downward
-        offset = (gTasks[taskId].tBg2PosHi << 16) + (u16)gTasks[taskId].tBg2PosLo;
-        offset -= 0x6000;
-        gTasks[taskId].tBg2PosHi = offset >> 16;
-        gTasks[taskId].tBg2PosLo = offset;
-        SetGpuReg(REG_OFFSET_BG2VOFS, gTasks[taskId].tBg2PosHi);
+        // // Slide bg 2 downward
+        // offset = (gTasks[taskId].tBg2PosHi << 16) + (u16)gTasks[taskId].tBg2PosLo;
+        // offset -= 0x6000;
+        // gTasks[taskId].tBg2PosHi = offset >> 16;
+        // gTasks[taskId].tBg2PosLo = offset;
+        // SetGpuReg(REG_OFFSET_BG2VOFS, gTasks[taskId].tBg2PosHi);
 
-        // Slide bg 1 downward
-        offset = (gTasks[taskId].tBg1PosHi << 16) + (u16)gTasks[taskId].tBg1PosLo;
-        offset -= 0x8000;
-        gTasks[taskId].tBg1PosHi = offset >> 16;
-        gTasks[taskId].tBg1PosLo = offset;
-        SetGpuReg(REG_OFFSET_BG1VOFS, gTasks[taskId].tBg1PosHi);
+        // // Slide bg 1 downward
+        // offset = (gTasks[taskId].tBg1PosHi << 16) + (u16)gTasks[taskId].tBg1PosLo;
+        // offset -= 0x8000;
+        // gTasks[taskId].tBg1PosHi = offset >> 16;
+        // gTasks[taskId].tBg1PosLo = offset;
+        // SetGpuReg(REG_OFFSET_BG1VOFS, gTasks[taskId].tBg1PosHi);
 
-        // Slide bg 3 downward
-        offset = (gTasks[taskId].tBg3PosHi << 16) + (u16)gTasks[taskId].tBg3PosLo;
-        offset -= 0xC000;
-        gTasks[taskId].tBg3PosHi = offset >> 16;
-        gTasks[taskId].tBg3PosLo = offset;
-        SetGpuReg(REG_OFFSET_BG0VOFS, gTasks[taskId].tBg3PosHi);
+        // // Slide bg 3 downward
+        // offset = (gTasks[taskId].tBg3PosHi << 16) + (u16)gTasks[taskId].tBg3PosLo;
+        // offset -= 0xC000;
+        // gTasks[taskId].tBg3PosHi = offset >> 16;
+        // gTasks[taskId].tBg3PosLo = offset;
+        // SetGpuReg(REG_OFFSET_BG0VOFS, gTasks[taskId].tBg3PosHi);
 
-        if (gIntroFrameCounter == TIMER_FLYGON_SILHOUETTE_APPEAR)
-        {
-            // Show Flygon silhouette
-            u8 spriteId = CreateSprite(&sSpriteTemplate_FlygonSilhouette, 120, DISPLAY_HEIGHT, 10);
-            gSprites[spriteId].invisible = TRUE;
-        }
+        // if (gIntroFrameCounter == TIMER_FLYGON_SILHOUETTE_APPEAR)
+        // {
+        //     // Show Flygon silhouette
+        //     u8 spriteId = CreateSprite(&sSpriteTemplate_FlygonSilhouette, 120, DISPLAY_HEIGHT, 10);
+        //     gSprites[spriteId].invisible = TRUE;
+        // }
     }
     else
     {
@@ -2791,99 +2801,6 @@ static void IntroResetGpuRegs(void)
     SetGpuReg(REG_OFFSET_BLDY, 0);
 }
 
-static void Task_BlendLogoIn(u8 taskId)
-{
-    switch (gTasks[taskId].tState)
-    {
-    case 0:
-    default:
-        SetGpuReg(REG_OFFSET_BLDCNT, BLDCNT_EFFECT_BLEND
-                                   | BLDCNT_TGT2_BG0
-                                   | BLDCNT_TGT2_BG1
-                                   | BLDCNT_TGT2_BG2
-                                   | BLDCNT_TGT2_BG3
-                                   | BLDCNT_TGT2_OBJ
-                                   | BLDCNT_TGT2_BD);
-        SetGpuReg(REG_OFFSET_BLDALPHA, gTitleScreenAlphaBlend[31]);
-        SetGpuReg(REG_OFFSET_BLDY, 0);
-        gTasks[taskId].data[1] = ARRAY_COUNT(gTitleScreenAlphaBlend);
-        gTasks[taskId].tState++;
-        break;
-    case 1:
-        if (gTasks[taskId].data[1] != 0)
-        {
-            u8 tmp;
-
-            gTasks[taskId].data[1]--;
-            tmp = gTasks[taskId].data[1] / 2;
-            SetGpuReg(REG_OFFSET_BLDALPHA, gTitleScreenAlphaBlend[tmp]);
-        }
-        else
-        {
-            SetGpuReg(REG_OFFSET_BLDALPHA, gTitleScreenAlphaBlend[0]);
-            gTasks[taskId].data[1] = ARRAY_COUNT(gTitleScreenAlphaBlend) / 4;
-            gTasks[taskId].tState++;
-        }
-        break;
-    case 2:
-        SetGpuReg(REG_OFFSET_BLDCNT, 0);
-        SetGpuReg(REG_OFFSET_BLDALPHA, 0);
-        SetGpuReg(REG_OFFSET_BLDY, 0);
-        DestroyTask(taskId);
-        break;
-    }
-}
-
-static void Task_BlendLogoOut(u8 taskId)
-{
-    switch (gTasks[taskId].tState)
-    {
-    case 0:
-    default:
-        SetGpuReg(REG_OFFSET_BLDCNT, BLDCNT_EFFECT_BLEND
-                                   | BLDCNT_TGT2_BG0
-                                   | BLDCNT_TGT2_BG1
-                                   | BLDCNT_TGT2_BG2
-                                   | BLDCNT_TGT2_BG3
-                                   | BLDCNT_TGT2_OBJ
-                                   | BLDCNT_TGT2_BD);
-        SetGpuReg(REG_OFFSET_BLDALPHA, gTitleScreenAlphaBlend[0]);
-        SetGpuReg(REG_OFFSET_BLDY, 0);
-        gTasks[taskId].data[1] = 0;
-        gTasks[taskId].tState++;
-        break;
-    case 1:
-        if (gTasks[taskId].data[1] < (int)ARRAY_COUNT(gTitleScreenAlphaBlend) - 2)
-        {
-            u8 tmp;
-
-            gTasks[taskId].data[1]++;
-            tmp = gTasks[taskId].data[1] / 2;
-            SetGpuReg(REG_OFFSET_BLDALPHA, gTitleScreenAlphaBlend[tmp]);
-        }
-        else
-        {
-            SetGpuReg(REG_OFFSET_BLDALPHA, gTitleScreenAlphaBlend[31]);
-            gTasks[taskId].data[1] = ARRAY_COUNT(gTitleScreenAlphaBlend) / 4;
-            gTasks[taskId].tState++;
-        }
-        break;
-    case 2:
-        if (gTasks[taskId].data[1] != 0)
-        {
-            gTasks[taskId].data[1]--;
-        }
-        else
-        {
-            SetGpuReg(REG_OFFSET_BLDCNT, 0);
-            SetGpuReg(REG_OFFSET_BLDALPHA, 0);
-            SetGpuReg(REG_OFFSET_BLDY, 0);
-            DestroyTask(taskId);
-        }
-        break;
-    }
-}
-
 void PanFadeAndZoomScreen(u16 screenX, u16 screenY, u16 zoom, u16 alpha)
 {
     struct BgAffineSrcData src;
@@ -2934,33 +2851,9 @@ static void SpriteCB_WaterDrop_Ripple(struct Sprite *sprite)
     }
 }
 
-static void SpriteCB_WaterDropHalf(struct Sprite *sprite)
-{
-    if (gSprites[sprite->data[7]].data[7] != 0)
-    {
-        sprite->invisible = TRUE;
-        sprite->x += sprite->x2;
-        sprite->y += sprite->y2;
-        StartSpriteAnim(sprite, DROP_ANIM_RIPPLE);
-        sprite->data[2] = 1024;
-        sprite->data[3] = 8 * (sprite->data[1] & 3);
-        sprite->callback = SpriteCB_WaterDrop_Ripple;
-        sprite->oam.shape = SPRITE_SHAPE(64x32);
-        sprite->oam.size = SPRITE_SIZE(64x32);
-        CalcCenterToCornerVec(sprite, SPRITE_SHAPE(64x32), SPRITE_SIZE(64x32), ST_OAM_AFFINE_ERASE);
-    }
-    else
-    {
-        sprite->x2 = gSprites[sprite->data[7]].x2;
-        sprite->y2 = gSprites[sprite->data[7]].y2;
-        sprite->x = gSprites[sprite->data[7]].x;
-        sprite->y = gSprites[sprite->data[7]].y;
-    }
-}
-
 static void SpriteCB_WaterDrop(struct Sprite *sprite)
 {
-    // Wait for sState to be modified by Task_Scene1_WaterDrops
+    // Wait for sState to be modified by Task_Scene1_DittoAnimation
     if (sprite->sState != 0)
         sprite->callback = SpriteCB_WaterDrop_Slide;
 }
@@ -3073,80 +2966,6 @@ static void SpriteCB_WaterDrop_Fall(struct Sprite *sprite)
     }
 }
 
-// Identical to SpriteCB_WaterDrop_Fall
-// Used by the 2nd and 3rd water drops to skip the leaf slide
-static void SpriteCB_WaterDropShort(struct Sprite *sprite)
-{
-    if (sprite->y < sprite->data[5])
-    {
-        sprite->y += 4;
-    }
-    else
-    {
-        sprite->data[7] = 1;
-        sprite->invisible = TRUE;
-        sprite->x += sprite->x2;
-        sprite->y += sprite->y2;
-        StartSpriteAnim(sprite, DROP_ANIM_RIPPLE);
-        sprite->data[2] = 1024;
-        sprite->data[3] = 8 * (sprite->data[1] & 3);
-        sprite->callback = SpriteCB_WaterDrop_Ripple;
-        sprite->oam.shape = SPRITE_SHAPE(64x32);
-        sprite->oam.size = SPRITE_SIZE(64x32);
-        CalcCenterToCornerVec(sprite, SPRITE_SHAPE(64x32), SPRITE_SIZE(64x32), ST_OAM_AFFINE_ERASE);
-    }
-}
-
-static u8 CreateWaterDrop(s16 x, s16 y, u16 c, u16 d, u16 e, u8 fallImmediately)
-{
-    u8 spriteId;
-    u8 oldSpriteId;
-
-    // Create water drop reflection
-    spriteId = CreateSprite(&sSpriteTemplate_WaterDrop, x, y, 1);
-    gSprites[spriteId].data[0] = 0;
-    gSprites[spriteId].data[7] = 0;
-    gSprites[spriteId].data[1] = d;
-    gSprites[spriteId].data[2] = c;
-    gSprites[spriteId].data[3] = c;
-    gSprites[spriteId].data[5] = e;
-    gSprites[spriteId].data[6] = c;
-    gSprites[spriteId].oam.affineMode = ST_OAM_AFFINE_DOUBLE;
-    gSprites[spriteId].oam.matrixNum = d;
-    CalcCenterToCornerVec(&gSprites[spriteId], SPRITE_SHAPE(32x32), SPRITE_SIZE(32x32), ST_OAM_AFFINE_ERASE);
-    StartSpriteAnim(&gSprites[spriteId], DROP_ANIM_REFLECTION);
-    if (!fallImmediately)
-        gSprites[spriteId].callback = SpriteCB_WaterDrop; // Do full anim, for 1st drop that slides along the leaf
-    else
-        gSprites[spriteId].callback = SpriteCB_WaterDropShort; // Skip to drop falling into the water, for 2nd and 3rd drops
-    oldSpriteId = spriteId;
-
-    // Create water drop upper half
-    // Implicitly anim number 0, DROP_ANIM_UPPER_HALF
-    spriteId = CreateSprite(&sSpriteTemplate_WaterDrop, x, y, 1);
-    gSprites[spriteId].data[7] = oldSpriteId;
-    gSprites[spriteId].data[1] = d + 1;
-    gSprites[spriteId].oam.affineMode = ST_OAM_AFFINE_DOUBLE;
-    gSprites[spriteId].oam.matrixNum = d + 1;
-    CalcCenterToCornerVec(&gSprites[spriteId], SPRITE_SHAPE(32x32), SPRITE_SIZE(32x32), ST_OAM_AFFINE_ERASE);
-    gSprites[spriteId].callback = SpriteCB_WaterDropHalf;
-
-    // Create water drop lower half
-    spriteId = CreateSprite(&sSpriteTemplate_WaterDrop, x, y, 1);
-    gSprites[spriteId].data[7] = oldSpriteId;
-    gSprites[spriteId].data[1] = d + 2;
-    StartSpriteAnim(&gSprites[spriteId], DROP_ANIM_LOWER_HALF);
-    gSprites[spriteId].oam.affineMode = ST_OAM_AFFINE_DOUBLE;
-    gSprites[spriteId].oam.matrixNum = d + 2;
-    CalcCenterToCornerVec(&gSprites[spriteId], SPRITE_SHAPE(32x32), SPRITE_SIZE(32x32), ST_OAM_AFFINE_ERASE);
-    gSprites[spriteId].callback = SpriteCB_WaterDropHalf;
-
-    SetOamMatrix(d, c + 32, 0, 0, c + 32);
-    SetOamMatrix(d + 1, c + 32, 0, 0, c + 32);
-    SetOamMatrix(d + 2, c + 32, 0, 0, 2 * (c + 32));
-
-    return oldSpriteId;
-}
 
 // State is handled by Task_Scene2_BikeRide
 static void SpriteCB_PlayerOnBicycle(struct Sprite *sprite)
@@ -3374,33 +3193,6 @@ static void SpriteCB_GameFreakLogo(struct Sprite *sprite)
     }
 }
 
-static u8 CreateGameFreakLogoSprites(s16 x, s16 y, s16 unused)
-{
-    u16 i;
-    u8 spriteId;
-
-    // Create "Game Freak" letters
-    for (i = 0; i < NUM_GF_LETTERS; i++)
-    {
-        spriteId = CreateSprite(&sSpriteTemplate_GameFreakLetter, sGameFreakLetterData[i][1] + x, y - 4, 0);
-        gSprites[spriteId].sState = 0;
-        gSprites[spriteId].sTimer = sGameFreakLetterStartDelays[i];
-        gSprites[spriteId].sLetterId = i;
-        gSprites[spriteId].invisible = TRUE;
-        gSprites[spriteId].oam.matrixNum = i + 12;
-        StartSpriteAnim(&gSprites[spriteId], sGameFreakLetterData[i][0]);
-        StartSpriteAffineAnim(&gSprites[spriteId], 0);
-    }
-
-    // Create Game Freak logo
-    spriteId = CreateSprite(&sSpriteTemplate_GameFreakLogo, 120, y - 6, 0);
-    gSprites[spriteId].sState = 0;
-    gSprites[spriteId].invisible = TRUE;
-    gSprites[spriteId].oam.matrixNum = i + 12;
-    StartSpriteAffineAnim(&gSprites[spriteId], 1);
-
-    return spriteId;
-}
 
 #undef sTimer
 #undef sLetterId
