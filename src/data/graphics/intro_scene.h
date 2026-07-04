@@ -45,3 +45,5 @@ const u16 gIntroBubbles_Pal[] = INCGFX_U16("graphics/intro/scene_3/bubbles.png",
 
 const u32 gIntroFlygonSilhouette_Gfx[] = INCGFX_U32("graphics/intro/scene_1/flygon.png", ".4bpp.smol");
 const u32 gIntroSparkle_Gfx[] = INCGFX_U32("graphics/intro/scene_1/sparkle.png", ".4bpp.smol");
+
+const u32 gIntroDittoGamefreakTilesheet_Gfx[] = INCGFX_U32("graphics/intro/ditto_gamefreak_tilesheet.png", ".4bpp.smol");

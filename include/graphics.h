@@ -1833,6 +1833,9 @@ extern const u16 gIntroPlayer_Pal[];
 extern const u16 gIntroFlygon_Pal[];
 extern const u32 gIntroFlygon_Gfx[];
 
+//intro graphics LC
+extern const u32 gIntroDittoGamefreakTilesheet_Gfx[];
+
 // party menu graphics
 extern const u32 gPartyMenuBg_Gfx[];
 extern const u32 gPartyMenuBg_Tilemap[];

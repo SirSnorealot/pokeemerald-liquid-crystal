@@ -2,6 +2,7 @@
 #include "main.h"
 #include "palette.h"
 #include "scanline_effect.h"
+#include "sprite.h"
 #include "task.h"
 #include "title_screen.h"
 #include "libgcnmultiboot.h"
@@ -29,8 +30,6 @@
 #include "constants/rgb.h"
 #include "constants/battle_anim.h"
 #include "pokemon.h"
-
-#if IS_FRLG
 
 /*
     The intro is grouped into the following scenes
@@ -137,6 +136,13 @@ enum {
 #define TAG_FLYGON_SILHOUETTE 2002
 #define TAG_RAYQUAZA_ORB      2003
 
+// LC-specific graphic tags
+
+#define TAG_DITTO_GAMEFREAK_TILESHEET 2004
+
+// LC-specific graphic tags END
+
+
 #define COLOSSEUM_GAME_CODE 0x65366347 // "Gc6e" in ASCII
 
 // Used by various tasks and sprites
@@ -211,6 +217,13 @@ static const u8 sUnusedData[] = {
     0x10, 0x11, 0x12, 0x1A, 0x1B, 0x1C, 0x1D, 0x1E, 0x1F, 0x20, 0x21, 0x02, 0x0D, 0x0E, 0x0F, 0x10,
     0x11, 0x12, 0x22, 0x23, 0x24, 0x25, 0x26, 0x27, 0x28, 0x29, 0x2A, 0x00
 };
+
+// LC-specific Palettes
+
+static const u16 sIntroDittoGamefreakTilesheet_Pal[] = INCGFX_U16("graphics/intro/ditto_gamefreak_tilesheet.png", ".gbapal");
+
+// LC-specific Palettes END
+
 static const struct CompressedSpriteSheet sSpriteSheet_Sparkle[] =
 {
     {gIntroSparkle_Gfx, 0x400, TAG_SPARKLE},
@@ -1013,6 +1026,73 @@ static const struct SpritePalette sSpritePalette_RayquazaOrb[] =
 };
 
 
+// LC Graphic here.
+
+static const struct CompressedSpriteSheet sSpriteSheet_ditto_gamefreak_tilesheet[] =
+{
+    {gIntroDittoGamefreakTilesheet_Gfx, 0x8000, TAG_DITTO_GAMEFREAK_TILESHEET},
+    {},
+};
+
+static const struct SpritePalette sSpritePalette_DittoGamefreakTilesheet[] =
+{
+    {sIntroDittoGamefreakTilesheet_Pal, TAG_DITTO_GAMEFREAK_TILESHEET},
+    {},
+};
+
+static const struct OamData sOamData_DittoGamefreak =
+{
+    .y = DISPLAY_HEIGHT,
+    .affineMode = ST_OAM_AFFINE_OFF,
+    .objMode = ST_OAM_OBJ_NORMAL,
+    .mosaic = FALSE,
+    .bpp = ST_OAM_4BPP,
+    .shape = SPRITE_SHAPE(64x64),
+    .x = 0,
+    .matrixNum = 0,
+    .size = SPRITE_SIZE(64x64),
+    .tileNum = 0,
+    .priority = 0,
+    .paletteNum = 0,
+    .affineParam = 0,
+};
+
+static const union AnimCmd sAnim_DittoGamefreak[] =
+{
+    ANIMCMD_FRAME(0, 6),
+    ANIMCMD_FRAME(64, 6),
+    ANIMCMD_FRAME(128, 6),
+    ANIMCMD_FRAME(192, 6),
+    ANIMCMD_FRAME(256, 6),
+    ANIMCMD_FRAME(320, 6),
+    ANIMCMD_FRAME(384, 6),
+    ANIMCMD_FRAME(448, 6),
+    ANIMCMD_FRAME(512, 6),
+    ANIMCMD_FRAME(576, 6),
+    ANIMCMD_FRAME(640, 6),
+    ANIMCMD_FRAME(704, 6),
+    ANIMCMD_FRAME(768, 6),
+    ANIMCMD_FRAME(832, 6),
+    ANIMCMD_FRAME(896, 6),
+    ANIMCMD_FRAME(960, 6),
+    //ANIMCMD_FRAME(1024, 6),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd *const sAnims_DittoGamefreak[] =
+{
+    sAnim_DittoGamefreak,
+};
+
+static const struct SpriteTemplate sSpriteTemplate_DittoGamefreak =
+{
+    .tileTag = TAG_DITTO_GAMEFREAK_TILESHEET,
+    .paletteTag = TAG_DITTO_GAMEFREAK_TILESHEET,
+    .oam = &sOamData_DittoGamefreak,
+    .anims = sAnims_DittoGamefreak,
+    .callback = SpriteCallbackDummy,
+};
+
 static void VBlankCB_Intro(void)
 {
     LoadOam();
@@ -1053,9 +1133,6 @@ static void SerialCB_CopyrightScreen(void)
 
 static u8 SetUpCopyrightScreen(void)
 {
-    if (IS_FRLG)
-        return SetUpCopyrightScreenFrlg();
-
     switch (gMain.state)
     {
     case COPYRIGHT_INITIALIZE:
@@ -1107,13 +1184,10 @@ static u8 SetUpCopyrightScreen(void)
     case COPYRIGHT_START_INTRO:
         if (UpdatePaletteFade())
             break;
-#if EXPANSION_INTRO == TRUE
-        SetMainCallback2(CB2_ExpansionIntro);
-        CreateTask(Task_HandleExpansionIntro, 0);
-#else
+
         CreateTask(Task_Scene1_Load, 0);
         SetMainCallback2(MainCB2_Intro);
-#endif
+
         if (gMultibootProgramStruct.gcmb_field_2 != 0)
         {
             if (gMultibootProgramStruct.gcmb_field_2 == 2)
@@ -1165,49 +1239,56 @@ void Task_Scene1_Load(u8 taskId)
     SetVBlankCallback(NULL);
     sIntroCharacterGender = MOD(Random(), GENDER_COUNT);
     IntroResetGpuRegs();
-    SetGpuReg(REG_OFFSET_BG3VOFS, 0);
-    SetGpuReg(REG_OFFSET_BG2VOFS, 80);
-    SetGpuReg(REG_OFFSET_BG1VOFS, 24);
-    SetGpuReg(REG_OFFSET_BG0VOFS, 40);
-    DecompressDataWithHeaderVram(sIntro1Bg_Gfx, (void *)VRAM);
-    DecompressDataWithHeaderVram(sIntro1Bg0_Tilemap, (void *)(BG_CHAR_ADDR(2)));
-    DmaClear16(3, BG_SCREEN_ADDR(17), BG_SCREEN_SIZE);
-    DecompressDataWithHeaderVram(sIntro1Bg1_Tilemap, (void *)(BG_SCREEN_ADDR(18)));
-    DmaClear16(3, BG_SCREEN_ADDR(19), BG_SCREEN_SIZE);
-    DecompressDataWithHeaderVram(sIntro1Bg2_Tilemap, (void *)(BG_SCREEN_ADDR(20)));
-    DmaClear16(3, BG_SCREEN_ADDR(21), BG_SCREEN_SIZE);
-    DecompressDataWithHeaderVram(sIntro1Bg3_Tilemap, (void *)(BG_SCREEN_ADDR(22)));
-    DmaClear16(3, BG_SCREEN_ADDR(23), BG_SCREEN_SIZE);
-    LoadPalette(sIntro1Bg_Pal, BG_PLTT_ID(0), sizeof(sIntro1Bg_Pal));
-    SetGpuReg(REG_OFFSET_BG3CNT, BGCNT_PRIORITY(3) | BGCNT_CHARBASE(0) | BGCNT_SCREENBASE(22) | BGCNT_16COLOR | BGCNT_TXT256x512);
-    SetGpuReg(REG_OFFSET_BG2CNT, BGCNT_PRIORITY(2) | BGCNT_CHARBASE(0) | BGCNT_SCREENBASE(20) | BGCNT_16COLOR | BGCNT_TXT256x512);
-    SetGpuReg(REG_OFFSET_BG1CNT, BGCNT_PRIORITY(1) | BGCNT_CHARBASE(0) | BGCNT_SCREENBASE(18) | BGCNT_16COLOR | BGCNT_TXT256x512);
-    SetGpuReg(REG_OFFSET_BG0CNT, BGCNT_PRIORITY(0) | BGCNT_CHARBASE(0) | BGCNT_SCREENBASE(16) | BGCNT_16COLOR | BGCNT_TXT256x512);
-    LoadCompressedSpriteSheet(sSpriteSheet_WaterDropsAndLogo);
-    LoadCompressedSpriteSheet(sSpriteSheet_FlygonSilhouette);
-    LoadSpritePalettes(sSpritePalettes_Intro1);
-    LoadCompressedSpriteSheet(sSpriteSheet_Sparkle);
-    LoadSpritePalettes(sSpritePalette_Sparkle);
-    CpuCopy16(&gPlttBufferUnfaded[OBJ_PLTT_ID(0)], &gPlttBufferUnfaded[OBJ_PLTT_ID(15) + 0], PLTT_SIZEOF(16 - 0));
-    CpuCopy16(&gPlttBufferUnfaded[OBJ_PLTT_ID(0)], &gPlttBufferUnfaded[OBJ_PLTT_ID(14) + 1], PLTT_SIZEOF(16 - 1) + 1); // Copying an extra half color?
-    CpuCopy16(&gPlttBufferUnfaded[OBJ_PLTT_ID(0)], &gPlttBufferUnfaded[OBJ_PLTT_ID(13) + 2], PLTT_SIZEOF(16 - 2));
-    CpuCopy16(&gPlttBufferUnfaded[OBJ_PLTT_ID(0)], &gPlttBufferUnfaded[OBJ_PLTT_ID(12) + 3], PLTT_SIZEOF(16 - 3));
-    CpuCopy16(&gPlttBufferUnfaded[OBJ_PLTT_ID(0)], &gPlttBufferUnfaded[OBJ_PLTT_ID(11) + 4], PLTT_SIZEOF(16 - 4));
-    CpuCopy16(&gPlttBufferUnfaded[OBJ_PLTT_ID(0)], &gPlttBufferUnfaded[OBJ_PLTT_ID(10) + 5], PLTT_SIZEOF(16 - 5));
-    CpuCopy16(&gPlttBufferUnfaded[OBJ_PLTT_ID(0)], &gPlttBufferUnfaded[OBJ_PLTT_ID( 9) + 6], PLTT_SIZEOF(16 - 6));
-    CreateGameFreakLogoSprites(DISPLAY_WIDTH / 2, DISPLAY_HEIGHT / 2, 0);
-    gTasks[taskId].sBigDropSpriteId = CreateWaterDrop(236, -14, 0x200, 1, 0x78, FALSE);
+    // SetGpuReg(REG_OFFSET_BG3VOFS, 0);
+    // SetGpuReg(REG_OFFSET_BG2VOFS, 80);
+    // SetGpuReg(REG_OFFSET_BG1VOFS, 24);
+    // SetGpuReg(REG_OFFSET_BG0VOFS, 40);
+    // DecompressDataWithHeaderVram(sIntro1Bg_Gfx, (void *)VRAM);
+    // DecompressDataWithHeaderVram(sIntro1Bg0_Tilemap, (void *)(BG_CHAR_ADDR(2)));
+    // DmaClear16(3, BG_SCREEN_ADDR(17), BG_SCREEN_SIZE);
+    // DecompressDataWithHeaderVram(sIntro1Bg1_Tilemap, (void *)(BG_SCREEN_ADDR(18)));
+    // DmaClear16(3, BG_SCREEN_ADDR(19), BG_SCREEN_SIZE);
+    // DecompressDataWithHeaderVram(sIntro1Bg2_Tilemap, (void *)(BG_SCREEN_ADDR(20)));
+    // DmaClear16(3, BG_SCREEN_ADDR(21), BG_SCREEN_SIZE);
+    // DecompressDataWithHeaderVram(sIntro1Bg3_Tilemap, (void *)(BG_SCREEN_ADDR(22)));
+    // DmaClear16(3, BG_SCREEN_ADDR(23), BG_SCREEN_SIZE);
+    // LoadPalette(sIntro1Bg_Pal, BG_PLTT_ID(0), sizeof(sIntro1Bg_Pal));
+    // SetGpuReg(REG_OFFSET_BG3CNT, BGCNT_PRIORITY(3) | BGCNT_CHARBASE(0) | BGCNT_SCREENBASE(22) | BGCNT_16COLOR | BGCNT_TXT256x512);
+    // SetGpuReg(REG_OFFSET_BG2CNT, BGCNT_PRIORITY(2) | BGCNT_CHARBASE(0) | BGCNT_SCREENBASE(20) | BGCNT_16COLOR | BGCNT_TXT256x512);
+    // SetGpuReg(REG_OFFSET_BG1CNT, BGCNT_PRIORITY(1) | BGCNT_CHARBASE(0) | BGCNT_SCREENBASE(18) | BGCNT_16COLOR | BGCNT_TXT256x512);
+    // SetGpuReg(REG_OFFSET_BG0CNT, BGCNT_PRIORITY(0) | BGCNT_CHARBASE(0) | BGCNT_SCREENBASE(16) | BGCNT_16COLOR | BGCNT_TXT256x512);
+    // LoadCompressedSpriteSheet(sSpriteSheet_WaterDropsAndLogo);
+    // LoadCompressedSpriteSheet(sSpriteSheet_FlygonSilhouette);
+    // LoadSpritePalettes(sSpritePalettes_Intro1);
+    // LoadCompressedSpriteSheet(sSpriteSheet_Sparkle);
+    // LoadSpritePalettes(sSpritePalette_Sparkle);
+    // CpuCopy16(&gPlttBufferUnfaded[OBJ_PLTT_ID(0)], &gPlttBufferUnfaded[OBJ_PLTT_ID(15) + 0], PLTT_SIZEOF(16 - 0));
+    // CpuCopy16(&gPlttBufferUnfaded[OBJ_PLTT_ID(0)], &gPlttBufferUnfaded[OBJ_PLTT_ID(14) + 1], PLTT_SIZEOF(16 - 1) + 1); // Copying an extra half color?
+    // CpuCopy16(&gPlttBufferUnfaded[OBJ_PLTT_ID(0)], &gPlttBufferUnfaded[OBJ_PLTT_ID(13) + 2], PLTT_SIZEOF(16 - 2));
+    // CpuCopy16(&gPlttBufferUnfaded[OBJ_PLTT_ID(0)], &gPlttBufferUnfaded[OBJ_PLTT_ID(12) + 3], PLTT_SIZEOF(16 - 3));
+    // CpuCopy16(&gPlttBufferUnfaded[OBJ_PLTT_ID(0)], &gPlttBufferUnfaded[OBJ_PLTT_ID(11) + 4], PLTT_SIZEOF(16 - 4));
+    // CpuCopy16(&gPlttBufferUnfaded[OBJ_PLTT_ID(0)], &gPlttBufferUnfaded[OBJ_PLTT_ID(10) + 5], PLTT_SIZEOF(16 - 5));
+    // CpuCopy16(&gPlttBufferUnfaded[OBJ_PLTT_ID(0)], &gPlttBufferUnfaded[OBJ_PLTT_ID( 9) + 6], PLTT_SIZEOF(16 - 6));
+    // CreateGameFreakLogoSprites(DISPLAY_WIDTH / 2, DISPLAY_HEIGHT / 2, 0);
+    // gTasks[taskId].sBigDropSpriteId = CreateWaterDrop(236, -14, 0x200, 1, 0x78, FALSE);
+
+
+    LoadCompressedSpriteSheet(sSpriteSheet_ditto_gamefreak_tilesheet);
+    LoadSpritePalettes(sSpritePalette_DittoGamefreakTilesheet);
+
     gTasks[taskId].func = Task_Scene1_FadeIn;
 }
 
 static void Task_Scene1_FadeIn(u8 taskId)
 {
-    BeginNormalPaletteFade(PALETTES_ALL, 0, 16, 0, RGB_BLACK);
+    // BeginNormalPaletteFade(PALETTES_ALL, 0, 16, 0, RGB_BLACK);
     SetVBlankCallback(VBlankCB_Intro);
-    SetGpuReg(REG_OFFSET_DISPCNT, DISPCNT_MODE_0 | DISPCNT_OBJ_1D_MAP | DISPCNT_BG_ALL_ON | DISPCNT_OBJ_ON);
+    // SetGpuReg(REG_OFFSET_DISPCNT, DISPCNT_MODE_0 | DISPCNT_OBJ_1D_MAP | DISPCNT_BG_ALL_ON | DISPCNT_OBJ_ON);
+    SetGpuReg(REG_OFFSET_DISPCNT, DISPCNT_MODE_0 | DISPCNT_OBJ_1D_MAP | DISPCNT_OBJ_ON);
+    CreateSprite(&sSpriteTemplate_DittoGamefreak, DISPLAY_WIDTH / 2, DISPLAY_HEIGHT / 2, 0);
     gTasks[taskId].func = Task_Scene1_WaterDrops;
     gIntroFrameCounter = 0;
-    m4aSongNumStart(MUS_INTRO);
+    // m4aSongNumStart(MUS_INTRO);
     ResetSerial();
 }
 
@@ -3429,5 +3510,3 @@ static void SpriteCB_RayquazaOrb(struct Sprite *sprite)
         break;
     }
 }
-
-#endif // !IS_FRLG
