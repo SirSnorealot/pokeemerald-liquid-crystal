@@ -3534,6 +3534,9 @@ static void Task_CrystalScene_Jump(u8 taskId)
 
 //------------------------------------------------- scene: close-up pan
 
+// How far the close-up pans to the right as the artwork slides in (as GBC)
+#define CI_CLOSE_PAN 96
+
 static void Task_CrystalScene_Close_Load(u8 taskId)
 {
     ResetSpriteData();
@@ -3542,7 +3545,9 @@ static void Task_CrystalScene_Close_Load(u8 taskId)
     DecompressDataWithHeaderVram(sCI_SuicuneCloseMap, (void *)BG_SCREEN_ADDR(28));
     LoadPalette(sCI_SuicuneClosePal, BG_PLTT_ID(0), sizeof(sCI_SuicuneClosePal));
     CrystalIntro_InitBg(CI_BGCNT_512);
-    gTasks[taskId].tScroll = -240; // starts off the right edge of the screen
+    // The artwork is laid out diagonally on the map; Suicune's snout starts
+    // at the right edge and the image slides in as the camera pans right
+    gTasks[taskId].tScroll = -CI_SCREEN_X;
     SetGpuReg(REG_OFFSET_BG0HOFS, gTasks[taskId].tScroll);
     gTasks[taskId].tTimer = 0;
     gTasks[taskId].func = Task_CrystalScene_Close;
@@ -3557,7 +3562,7 @@ static void Task_CrystalScene_Close(u8 taskId)
         gTasks[taskId].func = Task_CrystalScene_Back_Load;
         return;
     }
-    if (tScroll < -CI_SCREEN_X)
+    if (tScroll < -CI_SCREEN_X + CI_CLOSE_PAN)
     {
         tScroll += 8;
         SetGpuReg(REG_OFFSET_BG0HOFS, tScroll);
