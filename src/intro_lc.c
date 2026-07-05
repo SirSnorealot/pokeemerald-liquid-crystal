@@ -2904,7 +2904,7 @@ static const struct CompressedSpriteSheet sCI_SpriteSheet_Suicune   = {sCI_Suicu
 static const struct CompressedSpriteSheet sCI_SpriteSheet_Pichu     = {sCI_PichuGfx, 0x1800, TAG_CI_PICHU};
 static const struct CompressedSpriteSheet sCI_SpriteSheet_Wooper    = {sCI_WooperGfx, 0x200, TAG_CI_WOOPER};
 static const struct CompressedSpriteSheet sCI_SpriteSheet_UnownBack = {sCI_UnownBackGfx, 0x600, TAG_CI_UNOWN};
-static const struct CompressedSpriteSheet sCI_SpriteSheet_Pulse     = {sCI_PulseGfx, 0x200, TAG_CI_PULSE};
+static const struct CompressedSpriteSheet sCI_SpriteSheet_Pulse     = {sCI_PulseGfx, 0x3800, TAG_CI_PULSE};
 
 static const struct SpritePalette sCI_SpritePalette_Suicune   = {sCI_SuicuneRunPal, TAG_CI_SUICUNE};
 static const struct SpritePalette sCI_SpritePalette_Pichu     = {sCI_PichuPal, TAG_CI_PICHU};
@@ -2960,6 +2960,31 @@ static const union AnimCmd sCI_Anim_SingleFrame32[] =
 };
 static const union AnimCmd *const sCI_Anims_SingleFrame32[] = {sCI_Anim_SingleFrame32};
 
+// One anim per pulse ring radius (7 frames of 64x64 = 64 tiles each)
+#define CI_PULSE_FRAME(n) \
+static const union AnimCmd sCI_Anim_Pulse##n[] = \
+{ \
+    ANIMCMD_FRAME((n) * 64, 8), \
+    ANIMCMD_END, \
+}
+CI_PULSE_FRAME(0);
+CI_PULSE_FRAME(1);
+CI_PULSE_FRAME(2);
+CI_PULSE_FRAME(3);
+CI_PULSE_FRAME(4);
+CI_PULSE_FRAME(5);
+CI_PULSE_FRAME(6);
+static const union AnimCmd *const sCI_Anims_Pulse[] =
+{
+    sCI_Anim_Pulse0,
+    sCI_Anim_Pulse1,
+    sCI_Anim_Pulse2,
+    sCI_Anim_Pulse3,
+    sCI_Anim_Pulse4,
+    sCI_Anim_Pulse5,
+    sCI_Anim_Pulse6,
+};
+
 static const struct SpriteTemplate sCI_SpriteTemplate_Suicune =
 {
     .tileTag = TAG_CI_SUICUNE,
@@ -2996,8 +3021,8 @@ static const struct SpriteTemplate sCI_SpriteTemplate_Pulse =
 {
     .tileTag = TAG_CI_PULSE,
     .paletteTag = TAG_CI_PULSE,
-    .oam = &sCI_OamData_32x32,
-    .anims = sCI_Anims_SingleFrame32,
+    .oam = &sCI_OamData_64x64,
+    .anims = sCI_Anims_Pulse,
     .callback = SpriteCB_CrystalPulse,
 };
 
@@ -3100,10 +3125,16 @@ static void CrystalIntro_LoadPanorama(u8 taskId)
 
 #define sTimer  data[1]
 #define sMatrix data[2]
-#define sScale  data[3]
+#define sRadius data[3]
 #define sDelay  data[4]
 
-// Expanding ring shown when an Unown appears
+// The largest ring radius drawn in the sheet; anything bigger is the last
+// frame affine-scaled up (to a maximum of 2x)
+#define CI_PULSE_MAX_DRAWN_RADIUS 28
+#define CI_PULSE_MAX_RADIUS       56
+
+// Expanding rings shown when an Unown appears. The ring grows through the
+// pre-drawn radius frames, then keeps expanding by scaling the largest one.
 static void SpriteCB_CrystalPulse(struct Sprite *sprite)
 {
     if (sprite->sDelay != 0)
@@ -3111,36 +3142,43 @@ static void SpriteCB_CrystalPulse(struct Sprite *sprite)
         sprite->sDelay--;
         return;
     }
-    if (sprite->sScale == 0)
+    if (sprite->sRadius == 0)
     {
         sprite->invisible = FALSE;
         sprite->oam.affineMode = ST_OAM_AFFINE_DOUBLE;
         sprite->oam.matrixNum = sprite->sMatrix;
-        CalcCenterToCornerVec(sprite, SPRITE_SHAPE(32x32), SPRITE_SIZE(32x32), ST_OAM_AFFINE_DOUBLE);
-        sprite->sScale = 512;
+        CalcCenterToCornerVec(sprite, SPRITE_SHAPE(64x64), SPRITE_SIZE(64x64), ST_OAM_AFFINE_DOUBLE);
+        SetOamMatrix(sprite->sMatrix, 256, 0, 0, 256);
+        sprite->sRadius = 4;
+        return;
     }
-    sprite->sScale -= 16;
-    if (sprite->sScale <= 128)
+    sprite->sRadius += 2;
+    if (sprite->sRadius > CI_PULSE_MAX_RADIUS)
     {
         DestroySprite(sprite);
         return;
     }
-    SetOamMatrix(sprite->sMatrix, sprite->sScale, 0, 0, sprite->sScale);
+    if (sprite->sRadius <= CI_PULSE_MAX_DRAWN_RADIUS)
+    {
+        if (((sprite->sRadius - 4) & 3) == 0)
+            StartSpriteAnim(sprite, (sprite->sRadius - 4) / 4);
+    }
+    else
+    {
+        // 256 * CI_PULSE_MAX_DRAWN_RADIUS / radius
+        u16 scale = 7168 / sprite->sRadius;
+        SetOamMatrix(sprite->sMatrix, scale, 0, 0, scale);
+    }
 }
 
 static void CrystalIntro_CreatePulse(s16 x, s16 y)
 {
-    u32 i;
+    u8 spriteId = CreateSprite(&sCI_SpriteTemplate_Pulse, x, y, 2);
 
-    for (i = 0; i < 4; i++)
+    if (spriteId != MAX_SPRITES)
     {
-        u8 spriteId = CreateSprite(&sCI_SpriteTemplate_Pulse, x, y, 2);
-        if (spriteId != MAX_SPRITES)
-        {
-            gSprites[spriteId].invisible = TRUE;
-            gSprites[spriteId].sDelay = i * 6;
-            gSprites[spriteId].sMatrix = 8 + i;
-        }
+        gSprites[spriteId].invisible = TRUE;
+        gSprites[spriteId].sMatrix = 8;
     }
 }
 
@@ -3211,7 +3249,7 @@ static void Task_CrystalScene_UnownA(u8 taskId)
         return;
     }
     if (tTimer == 0x60)
-        CrystalIntro_CreatePulse(CI_SCREEN_X + 88, CI_SCREEN_Y + 88);
+        CrystalIntro_CreatePulse(CI_SCREEN_X + 80, CI_SCREEN_Y + 72); // on the Unown's eye
     CrystalIntro_UnownFadePal(0, tTimer);
     tTimer++;
 }
@@ -3271,9 +3309,9 @@ static void Task_CrystalScene_UnownHI(u8 taskId)
         return;
     }
     if (tTimer == 0x20)
-        CrystalIntro_CreatePulse(CI_SCREEN_X + 120, CI_SCREEN_Y + 56);
+        CrystalIntro_CreatePulse(CI_SCREEN_X + 112, CI_SCREEN_Y + 40);
     if (tTimer == 0x60)
-        CrystalIntro_CreatePulse(CI_SCREEN_X + 48, CI_SCREEN_Y + 112);
+        CrystalIntro_CreatePulse(CI_SCREEN_X + 40, CI_SCREEN_Y + 96);
     if (tTimer < 0x40)
         CrystalIntro_UnownFadePal(0, tTimer);
     else
@@ -3652,7 +3690,7 @@ static void Task_CrystalScene_CrystalUnowns(u8 taskId)
 
 #undef sTimer
 #undef sMatrix
-#undef sScale
+#undef sRadius
 #undef sDelay
 #undef tTimer
 #undef tTreeX
