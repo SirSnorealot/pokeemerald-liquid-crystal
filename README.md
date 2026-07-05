@@ -44,7 +44,7 @@ make release -j$(nproc)
 - [ ] Region Maps - Not started.
 - [ ] Pokegear - Started: SirSnorealot
 - [X] Port Title Screen: SirSnorealot
-- [ ] Intro before Title screen - Not started.
+- [ ] Intro before Title screen - Started: SirSnorealot
 - [ ] New Game Intro - Not started.
 - [ ] Port OW Sprites - Not started.
 - [ ] Scripting - Started: SirSnorealot
