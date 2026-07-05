@@ -1337,6 +1337,11 @@ void Task_Scene1_Load(u8 taskId)
 static void Task_Scene1_DittoLogo(u8 taskId)
 {
     // BeginNormalPaletteFade(PALETTES_ALL, 0, 16, 0, RGB_BLACK);
+    // Clear the stale copyright-screen colors out of BG palette 0 so the
+    // fade out of this scene starts from the black backdrop instead of
+    // popping back to the copyright screen's gray background
+    CpuFill16(RGB_BLACK, &gPlttBufferUnfaded[BG_PLTT_ID(0)], PLTT_SIZE_4BPP);
+    CpuFill16(RGB_BLACK, &gPlttBufferFaded[BG_PLTT_ID(0)], PLTT_SIZE_4BPP);
     SetVBlankCallback(VBlankCB_Intro);
     // SetGpuReg(REG_OFFSET_DISPCNT, DISPCNT_MODE_0 | DISPCNT_OBJ_1D_MAP | DISPCNT_BG_ALL_ON | DISPCNT_OBJ_ON);
     SetGpuReg(REG_OFFSET_DISPCNT, DISPCNT_MODE_0 | DISPCNT_OBJ_1D_MAP | DISPCNT_OBJ_ON);
@@ -3239,18 +3244,22 @@ static void Task_CrystalScene_UnownA_Load(u8 taskId)
     gTasks[taskId].func = Task_CrystalScene_UnownA;
 }
 
+// Frames of black screen before the first Unown starts fading in
+#define CI_UNOWN_A_START_DELAY 48
+
 static void Task_CrystalScene_UnownA(u8 taskId)
 {
     s16 *data = gTasks[taskId].data;
 
-    if (tTimer >= 0x80)
+    if (tTimer >= CI_UNOWN_A_START_DELAY + 0x80)
     {
         gTasks[taskId].func = Task_CrystalScene_Panorama1_Load;
         return;
     }
-    if (tTimer == 0x60)
+    if (tTimer == CI_UNOWN_A_START_DELAY + 0x60)
         CrystalIntro_CreatePulse(CI_SCREEN_X + 80, CI_SCREEN_Y + 72); // on the Unown's eye
-    CrystalIntro_UnownFadePal(0, tTimer);
+    if (tTimer >= CI_UNOWN_A_START_DELAY)
+        CrystalIntro_UnownFadePal(0, tTimer - CI_UNOWN_A_START_DELAY);
     tTimer++;
 }
 
