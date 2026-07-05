@@ -3280,10 +3280,16 @@ static void Task_CrystalScene_Panorama1(u8 taskId)
 {
     s16 *data = gTasks[taskId].data;
 
+    // Fade out to black before the next Unown scene
+    if (tTimer == 0x80 - 32)
+        BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
     if (tTimer >= 0x80)
     {
-        ScanlineEffect_Stop();
-        gTasks[taskId].func = Task_CrystalScene_UnownHI_Load;
+        if (!gPaletteFade.active)
+        {
+            ScanlineEffect_Stop();
+            gTasks[taskId].func = Task_CrystalScene_UnownHI_Load;
+        }
         return;
     }
     if (tTimer & 1)
@@ -3385,9 +3391,13 @@ static void Task_CrystalScene_Grass(u8 taskId)
     static const u32 *const grassFrames[] = {sCI_Grass1Gfx, sCI_Grass2Gfx, sCI_Grass3Gfx, sCI_Grass2Gfx};
     s16 *data = gTasks[taskId].data;
 
+    // Fade out to black before the Unown scene
+    if (tTimer == 0xC0 - 32)
+        BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
     if (tTimer >= 0xC0)
     {
-        gTasks[taskId].func = Task_CrystalScene_Unowns_Load;
+        if (!gPaletteFade.active)
+            gTasks[taskId].func = Task_CrystalScene_Unowns_Load;
         return;
     }
     // Rustle the grass tiles as the Pokémon stir
