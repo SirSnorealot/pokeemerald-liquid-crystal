@@ -453,7 +453,7 @@ static const u16 sCI_PulsePal[]           = INCGFX_U16("graphics/intro/crystal/p
 static const struct CompressedSpriteSheet sCI_SpriteSheet_Suicune   = {sCI_SuicuneRunGfx, 0x2000, TAG_CI_SUICUNE};
 static const struct CompressedSpriteSheet sCI_SpriteSheet_Pichu     = {sCI_PichuGfx, 0x1800, TAG_CI_PICHU};
 static const struct CompressedSpriteSheet sCI_SpriteSheet_Wooper    = {sCI_WooperGfx, 0x200, TAG_CI_WOOPER};
-static const struct CompressedSpriteSheet sCI_SpriteSheet_UnownBack = {sCI_UnownBackGfx, 0x600, TAG_CI_UNOWN};
+static const struct CompressedSpriteSheet sCI_SpriteSheet_UnownBack = {sCI_UnownBackGfx, 0x400, TAG_CI_UNOWN};
 static const struct CompressedSpriteSheet sCI_SpriteSheet_Pulse     = {sCI_PulseGfx, 0x3800, TAG_CI_PULSE};
 
 static const struct SpritePalette sCI_SpritePalette_Suicune   = {sCI_SuicuneRunPal, TAG_CI_SUICUNE};
@@ -480,6 +480,16 @@ static const struct OamData sCI_OamData_32x32 =
     .bpp = ST_OAM_4BPP,
     .shape = SPRITE_SHAPE(32x32),
     .size = SPRITE_SIZE(32x32),
+    .priority = 0,
+};
+static const struct OamData sCI_OamData_32x64 =
+{
+    .y = DISPLAY_HEIGHT,
+    .affineMode = ST_OAM_AFFINE_OFF,
+    .objMode = ST_OAM_OBJ_NORMAL,
+    .bpp = ST_OAM_4BPP,
+    .shape = SPRITE_SHAPE(32x64),
+    .size = SPRITE_SIZE(32x64),
     .priority = 0,
 };
 
@@ -562,7 +572,7 @@ static const struct SpriteTemplate sCI_SpriteTemplate_UnownBack =
 {
     .tileTag = TAG_CI_UNOWN,
     .paletteTag = TAG_CI_UNOWN,
-    .oam = &sCI_OamData_32x32,
+    .oam = &sCI_OamData_32x64,
     .anims = sCI_Anims_SingleFrame32,
     .callback = SpriteCB_CrystalBob,
 };
@@ -814,6 +824,8 @@ static void Task_CrystalScene_Panorama1_Load(u8 taskId)
     gTasks[taskId].tTreeX = 0;
     gTasks[taskId].tGrassX = 0;
     CrystalIntro_LoadPanorama(taskId);
+    // Fade in from the black gap between scenes
+    BeginNormalPaletteFade(PALETTES_ALL, 0, 16, 0, RGB_BLACK);
     gTasks[taskId].tTimer = 0;
     gTasks[taskId].func = Task_CrystalScene_Panorama1;
 }
@@ -889,6 +901,8 @@ static void Task_CrystalScene_SuicuneRun_Load(u8 taskId)
     LoadCompressedSpriteSheet(&sCI_SpriteSheet_Wooper);
     LoadSpritePalette(&sCI_SpritePalette_Wooper);
     CrystalIntro_LoadPanorama(taskId);
+    // Fade in from the black gap between scenes
+    BeginNormalPaletteFade(PALETTES_ALL, 0, 16, 0, RGB_BLACK);
     gTasks[taskId].tTimer = 0;
     gTasks[taskId].func = Task_CrystalScene_SuicuneRun;
 }
@@ -996,6 +1010,8 @@ static void Task_CrystalScene_Approach_Load(u8 taskId)
 
     ResetSpriteData();
     FreeAllSpritePalettes();
+    // Make sure the last Unown fade step is fully black while VRAM is swapped
+    CrystalIntro_BlackenBgPals();
     LoadCompressedSpriteSheet(&sCI_SpriteSheet_Suicune);
     LoadSpritePalette(&sCI_SpritePalette_Suicune);
     CrystalIntro_LoadBg(sCI_BackgroundTiles, sCI_BackgroundMap);
@@ -1007,6 +1023,8 @@ static void Task_CrystalScene_Approach_Load(u8 taskId)
         gSprites[spriteId].sState = CI_SUICUNE_IDLE;
     gTasks[taskId].tSpriteId = spriteId;
     gTasks[taskId].tScroll = 0;
+    // Fade in from the black gap between scenes
+    BeginNormalPaletteFade(PALETTES_ALL, 0, 16, 0, RGB_BLACK);
     gTasks[taskId].tTimer = 0;
     gTasks[taskId].func = Task_CrystalScene_Approach;
 }
@@ -1015,9 +1033,14 @@ static void Task_CrystalScene_Approach(u8 taskId)
 {
     s16 *data = gTasks[taskId].data;
 
+    // Fade out to black before the jump scene
+    if (tTimer == 0x80 - 32)
+        BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
     if (tTimer >= 0x80)
     {
-        gTasks[taskId].func = Task_CrystalScene_Jump_Load;
+        // gTasks[taskId].func = Task_CrystalScene_Jump_Load;
+        if (!gPaletteFade.active)
+            gTasks[taskId].func = Task_CrystalScene_Jump_Load;
         return;
     }
     // The whole background rushes by while Suicune runs
@@ -1047,6 +1070,8 @@ static void Task_CrystalScene_Jump_Load(u8 taskId)
     gPlttBufferFaded[0] = RGB(24, 12, 9);
     CrystalIntro_InitBg(CI_BGCNT_256);
     CreateSprite(&sCI_SpriteTemplate_UnownBack, CI_SCREEN_X + 40, CI_SCREEN_Y + 64, 1);
+    // Fade in from the black gap between scenes
+    BeginNormalPaletteFade(PALETTES_ALL, 0, 16, 0, RGB_BLACK);
     gTasks[taskId].tScroll = 136; // scene slides up into view
     SetGpuReg(REG_OFFSET_BG0VOFS, gTasks[taskId].tScroll);
     gTasks[taskId].tMapFrame = 0;
@@ -1058,9 +1083,14 @@ static void Task_CrystalScene_Jump(u8 taskId)
 {
     s16 *data = gTasks[taskId].data;
 
+    // Fade out to black before the close-up scene
+    if (tTimer == 0x80 - 32)
+        BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
     if (tTimer >= 0x80)
     {
-        gTasks[taskId].func = Task_CrystalScene_Close_Load;
+        // gTasks[taskId].func = Task_CrystalScene_Close_Load;
+        if (!gPaletteFade.active)
+            gTasks[taskId].func = Task_CrystalScene_Close_Load;
         return;
     }
     if (tTimer < 14)
@@ -1079,8 +1109,8 @@ static void Task_CrystalScene_Jump(u8 taskId)
 
 //------------------------------------------------- scene: close-up pan
 
-// How far the close-up pans to the right as the artwork slides in (as GBC)
-#define CI_CLOSE_PAN 96
+// How far the close-up pans to the right as the artwork slides in.
+#define CI_CLOSE_PAN 56
 
 static void Task_CrystalScene_Close_Load(u8 taskId)
 {
@@ -1089,12 +1119,11 @@ static void Task_CrystalScene_Close_Load(u8 taskId)
     DecompressDataWithHeaderVram(sCI_SuicuneCloseTiles, (void *)BG_CHAR_ADDR(0));
     DecompressDataWithHeaderVram(sCI_SuicuneCloseMap, (void *)BG_SCREEN_ADDR(28));
     LoadPalette(sCI_SuicuneClosePal, BG_PLTT_ID(0), sizeof(sCI_SuicuneClosePal));
-    // Orange backdrop so transparent tiles match the scene's orange background
-    gPlttBufferUnfaded[0] = RGB(24, 12, 9);
-    gPlttBufferFaded[0] = RGB(24, 12, 9);
     CrystalIntro_InitBg(CI_BGCNT_512);
     gTasks[taskId].tScroll = -CI_SCREEN_X;
     SetGpuReg(REG_OFFSET_BG0HOFS, gTasks[taskId].tScroll);
+    // Fade in from the black gap between scenes
+    BeginNormalPaletteFade(PALETTES_ALL, 0, 16, 0, RGB_BLACK);
     gTasks[taskId].tTimer = 0;
     gTasks[taskId].func = Task_CrystalScene_Close;
 }
@@ -1103,9 +1132,14 @@ static void Task_CrystalScene_Close(u8 taskId)
 {
     s16 *data = gTasks[taskId].data;
 
+    // Fade out to black before the back-view scene
+    if (tTimer == 0x60 - 32)
+        BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
     if (tTimer >= 0x60)
     {
-        gTasks[taskId].func = Task_CrystalScene_Back_Load;
+        // gTasks[taskId].func = Task_CrystalScene_Back_Load;
+        if (!gPaletteFade.active)
+            gTasks[taskId].func = Task_CrystalScene_Back_Load;
         return;
     }
     if (tScroll < -CI_SCREEN_X + CI_CLOSE_PAN)
@@ -1132,6 +1166,8 @@ static void Task_CrystalScene_Back_Load(u8 taskId)
     CrystalIntro_InitBg(CI_BGCNT_256);
     gTasks[taskId].tScroll = -48; // pans up to center on Suicune
     SetGpuReg(REG_OFFSET_BG0VOFS, gTasks[taskId].tScroll);
+    // Fade in from the black gap between scenes
+    BeginNormalPaletteFade(PALETTES_ALL, 0, 16, 0, RGB_BLACK);
     gTasks[taskId].tTimer = 0;
     gTasks[taskId].func = Task_CrystalScene_Back;
 }
