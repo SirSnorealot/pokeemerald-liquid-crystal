@@ -2953,8 +2953,7 @@ static const union AnimCmd sCI_Anim_Pichu[] =
     ANIMCMD_FRAME(0, 24),
     ANIMCMD_FRAME(64, 6),
     ANIMCMD_FRAME(128, 6),
-    ANIMCMD_FRAME(64, 6),
-    ANIMCMD_JUMP(0),
+    ANIMCMD_END,
 };
 static const union AnimCmd *const sCI_Anims_Pichu[] = {sCI_Anim_Pichu};
 
@@ -3212,14 +3211,21 @@ static void SpriteCB_CrystalSuicune(struct Sprite *sprite)
         DestroySprite(sprite);
 }
 
-// Periodic hopping for Pichu/Wooper
+// Single hop out of the grass for Pichu/Wooper
 static void SpriteCB_CrystalHop(struct Sprite *sprite)
 {
-    s16 s;
-
-    sprite->sTimer += 3;
-    s = Sin(sprite->sTimer & 0xFF, 8);
-    sprite->y2 = s > 0 ? -s : 0;
+    if (sprite->sTimer < 128)
+    {
+        sprite->sTimer += 3;
+        if (sprite->sTimer > 128)
+            sprite->sTimer = 128;
+        sprite->y2 = -Sin(sprite->sTimer, 8);
+    }
+    else
+    {
+        sprite->y2 = 0;
+        sprite->callback = SpriteCallbackDummy;
+    }
 }
 
 // Gentle floating for the Unown sprite
@@ -3404,9 +3410,9 @@ static void Task_CrystalScene_Grass(u8 taskId)
     if (tTimer < 36 && (tTimer & 3) == 0)
         CpuCopy16(grassFrames[(tTimer >> 2) & 3], (void *)(BG_CHAR_ADDR(0) + 9 * TILE_SIZE_4BPP), 4 * TILE_SIZE_4BPP);
     if (tTimer == 0x20)
-        CreateSprite(&sCI_SpriteTemplate_Wooper, 76, 120, 1);
+        CreateSprite(&sCI_SpriteTemplate_Wooper, 76, 132, 1);
     if (tTimer == 0x40)
-        CreateSprite(&sCI_SpriteTemplate_Pichu, 172, 108, 1);
+        CreateSprite(&sCI_SpriteTemplate_Pichu, 172, 132, 1);
     tTimer++;
 }
 
