@@ -1042,6 +1042,9 @@ static void Task_CrystalScene_Jump_Load(u8 taskId)
     DecompressDataWithHeaderVram(sCI_SuicuneJumpMap, (void *)BG_SCREEN_ADDR(28));
     DecompressDataWithHeaderVram(sCI_SuicuneJumpMap2, (void *)BG_SCREEN_ADDR(29));
     LoadPalette(sCI_SuicunePal, BG_PLTT_ID(0), sizeof(sCI_SuicunePal));
+    // Orange backdrop so transparent tiles match the scene's orange background
+    gPlttBufferUnfaded[0] = RGB(24, 12, 9);
+    gPlttBufferFaded[0] = RGB(24, 12, 9);
     CrystalIntro_InitBg(CI_BGCNT_256);
     CreateSprite(&sCI_SpriteTemplate_UnownBack, CI_SCREEN_X + 40, CI_SCREEN_Y + 64, 1);
     gTasks[taskId].tScroll = 136; // scene slides up into view
@@ -1086,6 +1089,9 @@ static void Task_CrystalScene_Close_Load(u8 taskId)
     DecompressDataWithHeaderVram(sCI_SuicuneCloseTiles, (void *)BG_CHAR_ADDR(0));
     DecompressDataWithHeaderVram(sCI_SuicuneCloseMap, (void *)BG_SCREEN_ADDR(28));
     LoadPalette(sCI_SuicuneClosePal, BG_PLTT_ID(0), sizeof(sCI_SuicuneClosePal));
+    // Orange backdrop so transparent tiles match the scene's orange background
+    gPlttBufferUnfaded[0] = RGB(24, 12, 9);
+    gPlttBufferFaded[0] = RGB(24, 12, 9);
     CrystalIntro_InitBg(CI_BGCNT_512);
     gTasks[taskId].tScroll = -CI_SCREEN_X;
     SetGpuReg(REG_OFFSET_BG0HOFS, gTasks[taskId].tScroll);
@@ -1120,6 +1126,9 @@ static void Task_CrystalScene_Back_Load(u8 taskId)
     DecompressDataWithHeaderVram(sCI_SuicuneBackMap, (void *)BG_SCREEN_ADDR(28));
     DecompressDataWithHeaderVram(sCI_SuicuneBackMap2, (void *)BG_SCREEN_ADDR(29));
     LoadPalette(sCI_SuicunePal, BG_PLTT_ID(0), sizeof(sCI_SuicunePal));
+    // Orange backdrop so transparent tiles match the scene's orange background
+    gPlttBufferUnfaded[0] = RGB(24, 12, 9);
+    gPlttBufferFaded[0] = RGB(24, 12, 9);
     CrystalIntro_InitBg(CI_BGCNT_256);
     gTasks[taskId].tScroll = -48; // pans up to center on Suicune
     SetGpuReg(REG_OFFSET_BG0VOFS, gTasks[taskId].tScroll);
