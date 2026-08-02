@@ -70,20 +70,24 @@ static void SpriteCB_CrystalSuicune(struct Sprite *);
 static void SpriteCB_CrystalHop(struct Sprite *);
 static void SpriteCB_CrystalBob(struct Sprite *);
 
-
 static void MainCB2_EndIntro(void);
 
-enum {
+enum
+{
     COPYRIGHT_INITIALIZE,
     COPYRIGHT_EMULATOR_BLEND,
     COPYRIGHT_START_FADE = 140,
     COPYRIGHT_START_INTRO,
 };
 
-
 #define TAG_DITTO_GAMEFREAK_TILESHEET 2004
 
-
+// Crystal intro sprite tags
+#define TAG_LC_SUICUNE 3000
+#define TAG_LC_PICHU 3001
+#define TAG_LC_WOOPER 3002
+#define TAG_LC_UNOWN 3003
+#define TAG_LC_PULSE 3004
 
 #define COLOSSEUM_GAME_CODE 0x65366347 // "Gc6e" in ASCII
 
@@ -97,111 +101,122 @@ enum {
     to trigger actions or progress through the cutscene.
     The values for these are defined contiguously below.
 */
-#define DITTO_FALL_START_Y              -64
-#define DITTO_FALL_END_Y                 50
-#define DITTO_FALL_DURATION              18
-#define TIMER_LC_LOGO_END               300 // When the Ditto logo/LAZ screen fades into the Crystal intro
-#define LAZ_BG_SCREENBASE                31
-#define LAZ_BG_CHARBASE                   0
-#define LAZ_TILE_START                    1
-#define LAZ_PALETTE_SLOT                  1
-#define LAZ_TILEMAP_LAZ_ROW               9 // first tilemap row of the LAZ text (16px tall, 2 rows)
-#define LAZ_TILEMAP_PRESENTS_ROW         11 // tilemap row with the presents text
-#define LAZ_PRESENTS_DELAY               90 // frames between LAZ text and presents text (~1.5s)
+#define DITTO_FALL_START_Y -64
+#define DITTO_FALL_END_Y 50
+#define DITTO_FALL_DURATION 18
+#define TIMER_LC_LOGO_END 300 // When the Ditto logo/LAZ screen fades into the Crystal intro
+#define LAZ_BG_SCREENBASE 31
+#define LAZ_BG_CHARBASE 0
+#define LAZ_TILE_START 1
+#define LAZ_PALETTE_SLOT 1
+#define LAZ_TILEMAP_LAZ_ROW 9       // first tilemap row of the LAZ text (16px tall, 2 rows)
+#define LAZ_TILEMAP_PRESENTS_ROW 11 // tilemap row with the presents text
+#define LAZ_PRESENTS_DELAY 90       // frames between LAZ text and presents text (~1.5s)
+
+// GBC screen (160x144) centered on the GBA screen (240x160)
+#define LC_SCREEN_X 40
+#define LC_SCREEN_Y 8
+#define LC_BG_HOFS ((u16) - LC_SCREEN_X)
+#define LC_BG_VOFS ((u16) - LC_SCREEN_Y)
+
+// Panorama parallax bands (GBA scanlines)
+#define LC_PANORAMA_TOP (LC_SCREEN_Y)
+#define LC_PANORAMA_TREE_END (LC_SCREEN_Y + 0x5F)
+#define LC_PANORAMA_BOTTOM (LC_SCREEN_Y + 144)
+
+// BG0 layouts used by the Crystal intro scenes
+#define LC_BGCNT_256 (BGCNT_PRIORITY(0) | BGCNT_CHARBASE(0) | BGCNT_SCREENBASE(28) | BGCNT_16COLOR | BGCNT_TXT256x256)
+#define LC_BGCNT_ALT (BGCNT_PRIORITY(0) | BGCNT_CHARBASE(0) | BGCNT_SCREENBASE(29) | BGCNT_16COLOR | BGCNT_TXT256x256)
+#define LC_BGCNT_512 (BGCNT_PRIORITY(0) | BGCNT_CHARBASE(0) | BGCNT_SCREENBASE(28) | BGCNT_16COLOR | BGCNT_TXT512x256)
+
+// Suicune sprite states
+enum
+{
+    LC_SUICUNE_IDLE,     // Runs in place
+    LC_SUICUNE_RUN,      // Runs left across the screen
+    LC_SUICUNE_RUN_SLOW, // Creeps left slowly
+    LC_SUICUNE_DASH,     // Dashes off screen
+};
 
 COMMON_DATA u32 gIntroFrameCounter = 0;
 COMMON_DATA struct GcmbStruct gMultibootProgramStruct = {0};
 
-
+//==============================================================================
+// Scene 1 data
+//==============================================================================
 
 static const u16 sIntroDittoGamefreakTilesheet_Pal[] = INCGFX_U16("graphics/intro/ditto_gamefreak_tilesheet.png", ".gbapal");
 static const u16 sIntroLaz_Pal[] = INCGFX_U16("graphics/intro/laz.png", ".gbapal");
 static const u32 sIntroLaz_Gfx[] = INCGFX_U32("graphics/intro/laz.png", ".4bpp.smol");
 static const u16 sIntroLaz_Tilemap[] = INCBIN_U16("graphics/intro/laz.bin");
 
-
-
 static const struct CompressedSpriteSheet sSpriteSheet_ditto_gamefreak_tilesheet[] =
-{
-    {gIntroDittoGamefreakTilesheet_Gfx, 0x8000, TAG_DITTO_GAMEFREAK_TILESHEET},
-    {},
+    {
+        {gIntroDittoGamefreakTilesheet_Gfx, 0x8000, TAG_DITTO_GAMEFREAK_TILESHEET},
+        {},
 };
 
 static const struct SpritePalette sSpritePalette_DittoGamefreakTilesheet[] =
-{
-    {sIntroDittoGamefreakTilesheet_Pal, TAG_DITTO_GAMEFREAK_TILESHEET},
-    {},
+    {
+        {sIntroDittoGamefreakTilesheet_Pal, TAG_DITTO_GAMEFREAK_TILESHEET},
+        {},
 };
 
 static const struct OamData sOamData_DittoGamefreak =
-{
-    .y = DISPLAY_HEIGHT,
-    .affineMode = ST_OAM_AFFINE_OFF,
-    .objMode = ST_OAM_OBJ_NORMAL,
-    .mosaic = FALSE,
-    .bpp = ST_OAM_4BPP,
-    .shape = SPRITE_SHAPE(32x64),
-    .x = 0,
-    .matrixNum = 0,
-    .size = SPRITE_SIZE(32x64),
-    .tileNum = 0,
-    .priority = 0,
-    .paletteNum = 0,
-    .affineParam = 0,
+    {
+        .y = DISPLAY_HEIGHT,
+        .affineMode = ST_OAM_AFFINE_OFF,
+        .objMode = ST_OAM_OBJ_NORMAL,
+        .mosaic = FALSE,
+        .bpp = ST_OAM_4BPP,
+        .shape = SPRITE_SHAPE(32x64),
+        .x = 0,
+        .matrixNum = 0,
+        .size = SPRITE_SIZE(32x64),
+        .tileNum = 0,
+        .priority = 0,
+        .paletteNum = 0,
+        .affineParam = 0,
 };
 
 static const union AnimCmd sAnim_DittoGamefreak[] =
-{
-    ANIMCMD_FRAME(0, 6),
-    ANIMCMD_FRAME(32, 6),
-    ANIMCMD_FRAME(64, 6),
-    ANIMCMD_FRAME(96, 6),
-    ANIMCMD_FRAME(128, 6),
-    ANIMCMD_FRAME(160, 6),
-    ANIMCMD_FRAME(192, 6),
-    ANIMCMD_FRAME(224, 6),
-    ANIMCMD_FRAME(256, 6),
-    ANIMCMD_FRAME(288, 6),
-    ANIMCMD_FRAME(320, 6),
-    ANIMCMD_FRAME(352, 6),
-    ANIMCMD_FRAME(384, 6),
-    ANIMCMD_FRAME(416, 6),
-    ANIMCMD_FRAME(448, 6),
-    ANIMCMD_FRAME(480, 6),
-    ANIMCMD_END,
+    {
+        ANIMCMD_FRAME(0, 6),
+        ANIMCMD_FRAME(32, 6),
+        ANIMCMD_FRAME(64, 6),
+        ANIMCMD_FRAME(96, 6),
+        ANIMCMD_FRAME(128, 6),
+        ANIMCMD_FRAME(160, 6),
+        ANIMCMD_FRAME(192, 6),
+        ANIMCMD_FRAME(224, 6),
+        ANIMCMD_FRAME(256, 6),
+        ANIMCMD_FRAME(288, 6),
+        ANIMCMD_FRAME(320, 6),
+        ANIMCMD_FRAME(352, 6),
+        ANIMCMD_FRAME(384, 6),
+        ANIMCMD_FRAME(416, 6),
+        ANIMCMD_FRAME(448, 6),
+        ANIMCMD_FRAME(480, 6),
+        ANIMCMD_END,
 };
 
 static const union AnimCmd *const sAnims_DittoGamefreak[] =
-{
-    sAnim_DittoGamefreak,
+    {
+        sAnim_DittoGamefreak,
 };
 
 static const struct SpriteTemplate sSpriteTemplate_DittoGamefreak =
-{
-    .tileTag = TAG_DITTO_GAMEFREAK_TILESHEET,
-    .paletteTag = TAG_DITTO_GAMEFREAK_TILESHEET,
-    .oam = &sOamData_DittoGamefreak,
-    .anims = sAnims_DittoGamefreak,
-    .callback = SpriteCallbackDummy,
+    {
+        .tileTag = TAG_DITTO_GAMEFREAK_TILESHEET,
+        .paletteTag = TAG_DITTO_GAMEFREAK_TILESHEET,
+        .oam = &sOamData_DittoGamefreak,
+        .anims = sAnims_DittoGamefreak,
+        .callback = SpriteCallbackDummy,
 };
 
-static void ShowLazText(void)
-{
-    DmaClear16(3, (void *)BG_CHAR_ADDR(LAZ_BG_CHARBASE), 0x20);
-    DecompressDataWithHeaderVram(sIntroLaz_Gfx, (void *)(BG_CHAR_ADDR(LAZ_BG_CHARBASE) + LAZ_TILE_START * 0x20));
-    // Only show the two LAZ text rows for now; the presents row is copied in later by ShowPresentsText
-    DmaClear16(3, (void *)BG_SCREEN_ADDR(LAZ_BG_SCREENBASE), BG_SCREEN_SIZE);
-    DmaCopy16(3, &sIntroLaz_Tilemap[LAZ_TILEMAP_LAZ_ROW * 32], (void *)(BG_SCREEN_ADDR(LAZ_BG_SCREENBASE) + LAZ_TILEMAP_LAZ_ROW * 64), 2 * 64);
-    LoadPalette(sIntroLaz_Pal, BG_PLTT_ID(LAZ_PALETTE_SLOT), sizeof(sIntroLaz_Pal));
-
-    SetGpuReg(REG_OFFSET_BG0CNT, BGCNT_PRIORITY(1) | BGCNT_CHARBASE(LAZ_BG_CHARBASE) | BGCNT_SCREENBASE(LAZ_BG_SCREENBASE) | BGCNT_16COLOR | BGCNT_TXT256x256);
-    SetGpuRegBits(REG_OFFSET_DISPCNT, DISPCNT_BG0_ON);
-}
-
-static void ShowPresentsText(void)
-{
-    DmaCopy16(3, &sIntroLaz_Tilemap[LAZ_TILEMAP_PRESENTS_ROW * 32], (void *)(BG_SCREEN_ADDR(LAZ_BG_SCREENBASE) + LAZ_TILEMAP_PRESENTS_ROW * 64), 64);
-}
+//==============================================================================
+// Main callbacks
+//==============================================================================
 
 static void VBlankCB_Intro(void)
 {
@@ -228,6 +243,10 @@ static void MainCB2_EndIntro(void)
     if (!UpdatePaletteFade())
         SetMainCallback2(CB2_InitTitleScreen);
 }
+
+//==============================================================================
+// Scene 0: Copyright screen
+//==============================================================================
 
 static void LoadCopyrightGraphics(u16 tilesetAddress, u16 tilemapAddress, u16 paletteOffset)
 {
@@ -264,11 +283,7 @@ static u8 SetUpCopyrightScreen(void)
         ResetSpriteData();
         FreeAllSpritePalettes();
         BeginNormalPaletteFade(PALETTES_ALL, 0, 16, 0, RGB_WHITEALPHA);
-        SetGpuReg(REG_OFFSET_BG0CNT, BGCNT_PRIORITY(0)
-                                   | BGCNT_CHARBASE(0)
-                                   | BGCNT_SCREENBASE(7)
-                                   | BGCNT_16COLOR
-                                   | BGCNT_TXT256x256);
+        SetGpuReg(REG_OFFSET_BG0CNT, BGCNT_PRIORITY(0) | BGCNT_CHARBASE(0) | BGCNT_SCREENBASE(7) | BGCNT_16COLOR | BGCNT_TXT256x256);
         EnableInterrupts(INTR_FLAG_VBLANK);
         SetVBlankCallback(VBlankCB_Intro);
         REG_DISPCNT = DISPCNT_MODE_0 | DISPCNT_OBJ_1D_MAP | DISPCNT_BG0_ON;
@@ -342,8 +357,30 @@ void CB2_InitCopyrightScreenAfterTitleScreen(void)
     SetUpCopyrightScreen();
 }
 
+//==============================================================================
+// Scene 1: Ditto/Game Freak logo, LAZ presents
+//==============================================================================
+
+static void ShowLazText(void)
+{
+    DmaClear16(3, (void *)BG_CHAR_ADDR(LAZ_BG_CHARBASE), 0x20);
+    DecompressDataWithHeaderVram(sIntroLaz_Gfx, (void *)(BG_CHAR_ADDR(LAZ_BG_CHARBASE) + LAZ_TILE_START * 0x20));
+    // Only show the two LAZ text rows for now; the presents row is copied in later by ShowPresentsText
+    DmaClear16(3, (void *)BG_SCREEN_ADDR(LAZ_BG_SCREENBASE), BG_SCREEN_SIZE);
+    DmaCopy16(3, &sIntroLaz_Tilemap[LAZ_TILEMAP_LAZ_ROW * 32], (void *)(BG_SCREEN_ADDR(LAZ_BG_SCREENBASE) + LAZ_TILEMAP_LAZ_ROW * 64), 2 * 64);
+    LoadPalette(sIntroLaz_Pal, BG_PLTT_ID(LAZ_PALETTE_SLOT), sizeof(sIntroLaz_Pal));
+
+    SetGpuReg(REG_OFFSET_BG0CNT, BGCNT_PRIORITY(1) | BGCNT_CHARBASE(LAZ_BG_CHARBASE) | BGCNT_SCREENBASE(LAZ_BG_SCREENBASE) | BGCNT_16COLOR | BGCNT_TXT256x256);
+    SetGpuRegBits(REG_OFFSET_DISPCNT, DISPCNT_BG0_ON);
+}
+
+static void ShowPresentsText(void)
+{
+    DmaCopy16(3, &sIntroLaz_Tilemap[LAZ_TILEMAP_PRESENTS_ROW * 32], (void *)(BG_SCREEN_ADDR(LAZ_BG_SCREENBASE) + LAZ_TILEMAP_PRESENTS_ROW * 64), 64);
+}
+
 #define tDittoSpriteId data[0]
-#define tLazShown      data[1]
+#define tLazShown data[1]
 #define tPresentsShown data[2]
 #define tPresentsTimer data[3]
 
@@ -378,7 +415,6 @@ static void Task_Scene1_DittoLogo(u8 taskId)
     ResetSerial();
 }
 
-
 static void Task_Scene1_DittoAnimation(u8 taskId)
 {
     if (gIntroFrameCounter < DITTO_FALL_DURATION)
@@ -392,8 +428,7 @@ static void Task_Scene1_DittoAnimation(u8 taskId)
         gTasks[taskId].tLazShown = TRUE;
     }
 
-    if (gTasks[taskId].tLazShown && !gTasks[taskId].tPresentsShown
-     && ++gTasks[taskId].tPresentsTimer > LAZ_PRESENTS_DELAY)
+    if (gTasks[taskId].tLazShown && !gTasks[taskId].tPresentsShown && ++gTasks[taskId].tPresentsTimer > LAZ_PRESENTS_DELAY)
     {
         ShowPresentsText();
         gTasks[taskId].tPresentsShown = TRUE;
@@ -418,216 +453,206 @@ static void Task_Scene1_End(u8 taskId)
 #undef tPresentsShown
 #undef tPresentsTimer
 
-// GBC screen (160x144) centered on the GBA screen (240x160)
-#define CI_SCREEN_X 40
-#define CI_SCREEN_Y 8
-#define CI_BG_HOFS ((u16)-CI_SCREEN_X)
-#define CI_BG_VOFS ((u16)-CI_SCREEN_Y)
-
-// Panorama parallax bands (GBA scanlines)
-#define CI_PANORAMA_TOP        (CI_SCREEN_Y)
-#define CI_PANORAMA_TREE_END   (CI_SCREEN_Y + 0x5F)
-#define CI_PANORAMA_BOTTOM     (CI_SCREEN_Y + 144)
-
-#define TAG_CI_SUICUNE 3000
-#define TAG_CI_PICHU   3001
-#define TAG_CI_WOOPER  3002
-#define TAG_CI_UNOWN   3003
-#define TAG_CI_PULSE   3004
+//==============================================================================
+// Scene 2: Crystal intro (GBC port) data
+//==============================================================================
 
 // BG scene data
-static const u32 sCI_UnownsTiles[]        = INCGFX_U32("graphics/intro/crystal/unowns_tiles.png", ".4bpp.smol");
-static const u32 sCI_UnownAMap[]          = INCGFX_U32("graphics/intro/crystal/unown_a_map.bin", ".smolTM");
-static const u32 sCI_UnownHIMap[]         = INCGFX_U32("graphics/intro/crystal/unown_hi_map.bin", ".smolTM");
-static const u32 sCI_UnownsMap[]          = INCGFX_U32("graphics/intro/crystal/unowns_map.bin", ".smolTM");
-static const u32 sCI_BackgroundTiles[]    = INCGFX_U32("graphics/intro/crystal/background_tiles.png", ".4bpp.smol");
-static const u32 sCI_BackgroundMap[]      = INCGFX_U32("graphics/intro/crystal/background_map.bin", ".smolTM");
-static const u16 sCI_BackgroundPal[]      = INCGFX_U16("graphics/intro/crystal/background.pal", ".gbapal");
-static const u32 sCI_Grass1Gfx[]          = INCGFX_U32("graphics/intro/crystal/grass1.png", ".4bpp");
-static const u32 sCI_Grass2Gfx[]          = INCGFX_U32("graphics/intro/crystal/grass2.png", ".4bpp");
-static const u32 sCI_Grass3Gfx[]          = INCGFX_U32("graphics/intro/crystal/grass3.png", ".4bpp");
-static const u32 sCI_SuicuneJumpTiles[]   = INCGFX_U32("graphics/intro/crystal/suicune_jump_tiles.png", ".4bpp.smol");
-static const u32 sCI_SuicuneJumpMap[]     = INCGFX_U32("graphics/intro/crystal/suicune_jump_map.bin", ".smolTM");
-static const u32 sCI_SuicuneJumpMap2[]    = INCGFX_U32("graphics/intro/crystal/suicune_jump_map2.bin", ".smolTM");
-static const u16 sCI_SuicunePal[]         = INCGFX_U16("graphics/intro/crystal/suicune.pal", ".gbapal");
-static const u32 sCI_SuicuneCloseTiles[]  = INCGFX_U32("graphics/intro/crystal/suicune_close_tiles.png", ".4bpp.smol");
-static const u32 sCI_SuicuneCloseMap[]    = INCGFX_U32("graphics/intro/crystal/suicune_close_map.bin", ".smolTM");
-static const u16 sCI_SuicuneClosePal[]    = INCGFX_U16("graphics/intro/crystal/suicune_close.pal", ".gbapal");
-static const u32 sCI_SuicuneBackTiles[]   = INCGFX_U32("graphics/intro/crystal/suicune_back_tiles.png", ".4bpp.smol");
-static const u32 sCI_SuicuneBackMap[]     = INCGFX_U32("graphics/intro/crystal/suicune_back_map.bin", ".smolTM");
-static const u32 sCI_SuicuneBackMap2[]    = INCGFX_U32("graphics/intro/crystal/suicune_back_map2.bin", ".smolTM");
+static const u32 sLC_UnownsTiles[] = INCGFX_U32("graphics/intro/crystal/unowns_tiles.png", ".4bpp.smol");
+static const u32 sLC_UnownAMap[] = INCGFX_U32("graphics/intro/crystal/unown_a_map.bin", ".smolTM");
+static const u32 sLC_UnownHIMap[] = INCGFX_U32("graphics/intro/crystal/unown_hi_map.bin", ".smolTM");
+static const u32 sLC_UnownsMap[] = INCGFX_U32("graphics/intro/crystal/unowns_map.bin", ".smolTM");
+static const u32 sLC_BackgroundTiles[] = INCGFX_U32("graphics/intro/crystal/background_tiles.png", ".4bpp.smol");
+static const u32 sLC_BackgroundMap[] = INCGFX_U32("graphics/intro/crystal/background_map.bin", ".smolTM");
+static const u16 sLC_BackgroundPal[] = INCGFX_U16("graphics/intro/crystal/background.pal", ".gbapal");
+static const u32 sLC_Grass1Gfx[] = INCGFX_U32("graphics/intro/crystal/grass1.png", ".4bpp");
+static const u32 sLC_Grass2Gfx[] = INCGFX_U32("graphics/intro/crystal/grass2.png", ".4bpp");
+static const u32 sLC_Grass3Gfx[] = INCGFX_U32("graphics/intro/crystal/grass3.png", ".4bpp");
+static const u32 sLC_SuicuneJumpTiles[] = INCGFX_U32("graphics/intro/crystal/suicune_jump_tiles.png", ".4bpp.smol");
+static const u32 sLC_SuicuneJumpMap[] = INCGFX_U32("graphics/intro/crystal/suicune_jump_map.bin", ".smolTM");
+static const u32 sLC_SuicuneJumpMap2[] = INCGFX_U32("graphics/intro/crystal/suicune_jump_map2.bin", ".smolTM");
+static const u16 sLC_SuicunePal[] = INCGFX_U16("graphics/intro/crystal/suicune.pal", ".gbapal");
+static const u32 sLC_SuicuneCloseTiles[] = INCGFX_U32("graphics/intro/crystal/suicune_close_tiles.png", ".4bpp.smol");
+static const u32 sLC_SuicuneCloseMap[] = INCGFX_U32("graphics/intro/crystal/suicune_close_map.bin", ".smolTM");
+static const u16 sLC_SuicuneClosePal[] = INCGFX_U16("graphics/intro/crystal/suicune_close.pal", ".gbapal");
+static const u32 sLC_SuicuneBackTiles[] = INCGFX_U32("graphics/intro/crystal/suicune_back_tiles.png", ".4bpp.smol");
+static const u32 sLC_SuicuneBackMap[] = INCGFX_U32("graphics/intro/crystal/suicune_back_map.bin", ".smolTM");
+static const u32 sLC_SuicuneBackMap2[] = INCGFX_U32("graphics/intro/crystal/suicune_back_map2.bin", ".smolTM");
 
 // Sprite data
-static const u32 sCI_SuicuneRunGfx[]      = INCGFX_U32("graphics/intro/crystal/suicune_run.png", ".4bpp.smol");
-static const u16 sCI_SuicuneRunPal[]      = INCGFX_U16("graphics/intro/crystal/suicune_run.png", ".gbapal");
-static const u32 sCI_PichuGfx[]           = INCGFX_U32("graphics/intro/crystal/pichu.png", ".4bpp.smol");
-static const u16 sCI_PichuPal[]           = INCGFX_U16("graphics/intro/crystal/pichu.png", ".gbapal");
-static const u32 sCI_WooperGfx[]          = INCGFX_U32("graphics/intro/crystal/wooper.png", ".4bpp.smol");
-static const u16 sCI_WooperPal[]          = INCGFX_U16("graphics/intro/crystal/wooper.png", ".gbapal");
-static const u32 sCI_UnownBackGfx[]       = INCGFX_U32("graphics/intro/crystal/unown_back.png", ".4bpp.smol");
-static const u16 sCI_UnownBackPal[]       = INCGFX_U16("graphics/intro/crystal/unown_back.png", ".gbapal");
-static const u32 sCI_PulseGfx[]           = INCGFX_U32("graphics/intro/crystal/pulse.png", ".4bpp.smol");
-static const u16 sCI_PulsePal[]           = INCGFX_U16("graphics/intro/crystal/pulse.png", ".gbapal");
+static const u32 sLC_SuicuneRunGfx[] = INCGFX_U32("graphics/intro/crystal/suicune_run.png", ".4bpp.smol");
+static const u16 sLC_SuicuneRunPal[] = INCGFX_U16("graphics/intro/crystal/suicune_run.png", ".gbapal");
+static const u32 sLC_PichuGfx[] = INCGFX_U32("graphics/intro/crystal/pichu.png", ".4bpp.smol");
+static const u16 sLC_PichuPal[] = INCGFX_U16("graphics/intro/crystal/pichu.png", ".gbapal");
+static const u32 sLC_WooperGfx[] = INCGFX_U32("graphics/intro/crystal/wooper.png", ".4bpp.smol");
+static const u16 sLC_WooperPal[] = INCGFX_U16("graphics/intro/crystal/wooper.png", ".gbapal");
+static const u32 sLC_UnownBackGfx[] = INCGFX_U32("graphics/intro/crystal/unown_back.png", ".4bpp.smol");
+static const u16 sLC_UnownBackPal[] = INCGFX_U16("graphics/intro/crystal/unown_back.png", ".gbapal");
+static const u32 sLC_PulseGfx[] = INCGFX_U32("graphics/intro/crystal/pulse.png", ".4bpp.smol");
+static const u16 sLC_PulsePal[] = INCGFX_U16("graphics/intro/crystal/pulse.png", ".gbapal");
 
-static const struct CompressedSpriteSheet sCI_SpriteSheet_Suicune   = {sCI_SuicuneRunGfx, 0x2000, TAG_CI_SUICUNE};
-static const struct CompressedSpriteSheet sCI_SpriteSheet_Pichu     = {sCI_PichuGfx, 0x1800, TAG_CI_PICHU};
-static const struct CompressedSpriteSheet sCI_SpriteSheet_Wooper    = {sCI_WooperGfx, 0x200, TAG_CI_WOOPER};
-static const struct CompressedSpriteSheet sCI_SpriteSheet_UnownBack = {sCI_UnownBackGfx, 0x400, TAG_CI_UNOWN};
-static const struct CompressedSpriteSheet sCI_SpriteSheet_Pulse     = {sCI_PulseGfx, 0x3800, TAG_CI_PULSE};
+static const struct CompressedSpriteSheet sLC_SpriteSheet_Suicune = {sLC_SuicuneRunGfx, 0x2000, TAG_LC_SUICUNE};
+static const struct CompressedSpriteSheet sLC_SpriteSheet_Pichu = {sLC_PichuGfx, 0x1800, TAG_LC_PICHU};
+static const struct CompressedSpriteSheet sLC_SpriteSheet_Wooper = {sLC_WooperGfx, 0x200, TAG_LC_WOOPER};
+static const struct CompressedSpriteSheet sLC_SpriteSheet_UnownBack = {sLC_UnownBackGfx, 0x400, TAG_LC_UNOWN};
+static const struct CompressedSpriteSheet sLC_SpriteSheet_Pulse = {sLC_PulseGfx, 0x3800, TAG_LC_PULSE};
 
-static const struct SpritePalette sCI_SpritePalette_Suicune   = {sCI_SuicuneRunPal, TAG_CI_SUICUNE};
-static const struct SpritePalette sCI_SpritePalette_Pichu     = {sCI_PichuPal, TAG_CI_PICHU};
-static const struct SpritePalette sCI_SpritePalette_Wooper    = {sCI_WooperPal, TAG_CI_WOOPER};
-static const struct SpritePalette sCI_SpritePalette_UnownBack = {sCI_UnownBackPal, TAG_CI_UNOWN};
-static const struct SpritePalette sCI_SpritePalette_Pulse     = {sCI_PulsePal, TAG_CI_PULSE};
+static const struct SpritePalette sLC_SpritePalette_Suicune = {sLC_SuicuneRunPal, TAG_LC_SUICUNE};
+static const struct SpritePalette sLC_SpritePalette_Pichu = {sLC_PichuPal, TAG_LC_PICHU};
+static const struct SpritePalette sLC_SpritePalette_Wooper = {sLC_WooperPal, TAG_LC_WOOPER};
+static const struct SpritePalette sLC_SpritePalette_UnownBack = {sLC_UnownBackPal, TAG_LC_UNOWN};
+static const struct SpritePalette sLC_SpritePalette_Pulse = {sLC_PulsePal, TAG_LC_PULSE};
 
-static const struct OamData sCI_OamData_64x64 =
-{
-    .y = DISPLAY_HEIGHT,
-    .affineMode = ST_OAM_AFFINE_OFF,
-    .objMode = ST_OAM_OBJ_NORMAL,
-    .bpp = ST_OAM_4BPP,
-    .shape = SPRITE_SHAPE(64x64),
-    .size = SPRITE_SIZE(64x64),
-    .priority = 0,
+static const struct OamData sLC_OamData_64x64 =
+    {
+        .y = DISPLAY_HEIGHT,
+        .affineMode = ST_OAM_AFFINE_OFF,
+        .objMode = ST_OAM_OBJ_NORMAL,
+        .bpp = ST_OAM_4BPP,
+        .shape = SPRITE_SHAPE(64x64),
+        .size = SPRITE_SIZE(64x64),
+        .priority = 0,
 };
-static const struct OamData sCI_OamData_32x32 =
-{
-    .y = DISPLAY_HEIGHT,
-    .affineMode = ST_OAM_AFFINE_OFF,
-    .objMode = ST_OAM_OBJ_NORMAL,
-    .bpp = ST_OAM_4BPP,
-    .shape = SPRITE_SHAPE(32x32),
-    .size = SPRITE_SIZE(32x32),
-    .priority = 0,
+static const struct OamData sLC_OamData_32x32 =
+    {
+        .y = DISPLAY_HEIGHT,
+        .affineMode = ST_OAM_AFFINE_OFF,
+        .objMode = ST_OAM_OBJ_NORMAL,
+        .bpp = ST_OAM_4BPP,
+        .shape = SPRITE_SHAPE(32x32),
+        .size = SPRITE_SIZE(32x32),
+        .priority = 0,
 };
-static const struct OamData sCI_OamData_32x64 =
-{
-    .y = DISPLAY_HEIGHT,
-    .affineMode = ST_OAM_AFFINE_OFF,
-    .objMode = ST_OAM_OBJ_NORMAL,
-    .bpp = ST_OAM_4BPP,
-    .shape = SPRITE_SHAPE(32x64),
-    .size = SPRITE_SIZE(32x64),
-    .priority = 0,
+static const struct OamData sLC_OamData_32x64 =
+    {
+        .y = DISPLAY_HEIGHT,
+        .affineMode = ST_OAM_AFFINE_OFF,
+        .objMode = ST_OAM_OBJ_NORMAL,
+        .bpp = ST_OAM_4BPP,
+        .shape = SPRITE_SHAPE(32x64),
+        .size = SPRITE_SIZE(32x64),
+        .priority = 0,
 };
 
-static const union AnimCmd sCI_Anim_SuicuneRun[] =
-{
-    ANIMCMD_FRAME(0, 4),
-    ANIMCMD_FRAME(64, 4),
-    ANIMCMD_FRAME(128, 4),
-    ANIMCMD_FRAME(192, 4),
-    ANIMCMD_JUMP(0),
+static const union AnimCmd sLC_Anim_SuicuneRun[] =
+    {
+        ANIMCMD_FRAME(0, 4),
+        ANIMCMD_FRAME(64, 4),
+        ANIMCMD_FRAME(128, 4),
+        ANIMCMD_FRAME(192, 4),
+        ANIMCMD_JUMP(0),
 };
-static const union AnimCmd *const sCI_Anims_Suicune[] = {sCI_Anim_SuicuneRun};
+static const union AnimCmd *const sLC_Anims_Suicune[] = {sLC_Anim_SuicuneRun};
 
-static const union AnimCmd sCI_Anim_Pichu[] =
-{
-    ANIMCMD_FRAME(0, 24),
-    ANIMCMD_FRAME(64, 6),
-    ANIMCMD_FRAME(128, 6),
-    ANIMCMD_END,
+static const union AnimCmd sLC_Anim_Pichu[] =
+    {
+        ANIMCMD_FRAME(0, 24),
+        ANIMCMD_FRAME(64, 6),
+        ANIMCMD_FRAME(128, 6),
+        ANIMCMD_END,
 };
-static const union AnimCmd *const sCI_Anims_Pichu[] = {sCI_Anim_Pichu};
+static const union AnimCmd *const sLC_Anims_Pichu[] = {sLC_Anim_Pichu};
 
-static const union AnimCmd sCI_Anim_SingleFrame32[] =
-{
-    ANIMCMD_FRAME(0, 8),
-    ANIMCMD_END,
+static const union AnimCmd sLC_Anim_SingleFrame32[] =
+    {
+        ANIMCMD_FRAME(0, 8),
+        ANIMCMD_END,
 };
-static const union AnimCmd *const sCI_Anims_SingleFrame32[] = {sCI_Anim_SingleFrame32};
+static const union AnimCmd *const sLC_Anims_SingleFrame32[] = {sLC_Anim_SingleFrame32};
 
 // One anim per pulse ring radius (7 frames of 64x64 = 64 tiles each)
-#define CI_PULSE_FRAME(n) \
-static const union AnimCmd sCI_Anim_Pulse##n[] = \
-{ \
-    ANIMCMD_FRAME((n) * 64, 8), \
-    ANIMCMD_END, \
-}
-CI_PULSE_FRAME(0);
-CI_PULSE_FRAME(1);
-CI_PULSE_FRAME(2);
-CI_PULSE_FRAME(3);
-CI_PULSE_FRAME(4);
-CI_PULSE_FRAME(5);
-CI_PULSE_FRAME(6);
-static const union AnimCmd *const sCI_Anims_Pulse[] =
-{
-    sCI_Anim_Pulse0,
-    sCI_Anim_Pulse1,
-    sCI_Anim_Pulse2,
-    sCI_Anim_Pulse3,
-    sCI_Anim_Pulse4,
-    sCI_Anim_Pulse5,
-    sCI_Anim_Pulse6,
+#define LC_PULSE_FRAME(n)                            \
+    static const union AnimCmd sLC_Anim_Pulse##n[] = \
+        {                                            \
+            ANIMCMD_FRAME((n) * 64, 8),              \
+            ANIMCMD_END,                             \
+    }
+LC_PULSE_FRAME(0);
+LC_PULSE_FRAME(1);
+LC_PULSE_FRAME(2);
+LC_PULSE_FRAME(3);
+LC_PULSE_FRAME(4);
+LC_PULSE_FRAME(5);
+LC_PULSE_FRAME(6);
+static const union AnimCmd *const sLC_Anims_Pulse[] =
+    {
+        sLC_Anim_Pulse0,
+        sLC_Anim_Pulse1,
+        sLC_Anim_Pulse2,
+        sLC_Anim_Pulse3,
+        sLC_Anim_Pulse4,
+        sLC_Anim_Pulse5,
+        sLC_Anim_Pulse6,
 };
 
-static const struct SpriteTemplate sCI_SpriteTemplate_Suicune =
-{
-    .tileTag = TAG_CI_SUICUNE,
-    .paletteTag = TAG_CI_SUICUNE,
-    .oam = &sCI_OamData_64x64,
-    .anims = sCI_Anims_Suicune,
-    .callback = SpriteCB_CrystalSuicune,
+static const struct SpriteTemplate sLC_SpriteTemplate_Suicune =
+    {
+        .tileTag = TAG_LC_SUICUNE,
+        .paletteTag = TAG_LC_SUICUNE,
+        .oam = &sLC_OamData_64x64,
+        .anims = sLC_Anims_Suicune,
+        .callback = SpriteCB_CrystalSuicune,
 };
-static const struct SpriteTemplate sCI_SpriteTemplate_Pichu =
-{
-    .tileTag = TAG_CI_PICHU,
-    .paletteTag = TAG_CI_PICHU,
-    .oam = &sCI_OamData_64x64,
-    .anims = sCI_Anims_Pichu,
-    .callback = SpriteCB_CrystalHop,
+static const struct SpriteTemplate sLC_SpriteTemplate_Pichu =
+    {
+        .tileTag = TAG_LC_PICHU,
+        .paletteTag = TAG_LC_PICHU,
+        .oam = &sLC_OamData_64x64,
+        .anims = sLC_Anims_Pichu,
+        .callback = SpriteCB_CrystalHop,
 };
-static const struct SpriteTemplate sCI_SpriteTemplate_Wooper =
-{
-    .tileTag = TAG_CI_WOOPER,
-    .paletteTag = TAG_CI_WOOPER,
-    .oam = &sCI_OamData_32x32,
-    .anims = sCI_Anims_SingleFrame32,
-    .callback = SpriteCB_CrystalHop,
+static const struct SpriteTemplate sLC_SpriteTemplate_Wooper =
+    {
+        .tileTag = TAG_LC_WOOPER,
+        .paletteTag = TAG_LC_WOOPER,
+        .oam = &sLC_OamData_32x32,
+        .anims = sLC_Anims_SingleFrame32,
+        .callback = SpriteCB_CrystalHop,
 };
-static const struct SpriteTemplate sCI_SpriteTemplate_UnownBack =
-{
-    .tileTag = TAG_CI_UNOWN,
-    .paletteTag = TAG_CI_UNOWN,
-    .oam = &sCI_OamData_32x64,
-    .anims = sCI_Anims_SingleFrame32,
-    .callback = SpriteCB_CrystalBob,
+static const struct SpriteTemplate sLC_SpriteTemplate_UnownBack =
+    {
+        .tileTag = TAG_LC_UNOWN,
+        .paletteTag = TAG_LC_UNOWN,
+        .oam = &sLC_OamData_32x64,
+        .anims = sLC_Anims_SingleFrame32,
+        .callback = SpriteCB_CrystalBob,
 };
-static const struct SpriteTemplate sCI_SpriteTemplate_Pulse =
-{
-    .tileTag = TAG_CI_PULSE,
-    .paletteTag = TAG_CI_PULSE,
-    .oam = &sCI_OamData_64x64,
-    .anims = sCI_Anims_Pulse,
-    .callback = SpriteCB_CrystalPulse,
+static const struct SpriteTemplate sLC_SpriteTemplate_Pulse =
+    {
+        .tileTag = TAG_LC_PULSE,
+        .paletteTag = TAG_LC_PULSE,
+        .oam = &sLC_OamData_64x64,
+        .anims = sLC_Anims_Pulse,
+        .callback = SpriteCB_CrystalPulse,
 };
 
-static const u16 sCI_AppearUnownColors[4] =
-{
-    RGB(24, 12, 9), RGB(31, 31, 31), RGB(12, 0, 31), RGB(0, 0, 0),
+static const u16 sLC_AppearUnownColors[4] =
+    {
+        RGB(24, 12, 9),
+        RGB(31, 31, 31),
+        RGB(12, 0, 31),
+        RGB(0, 0, 0),
 };
+
+//==============================================================================
+// Scene 2: Crystal intro (GBC port)
+//==============================================================================
 
 // Task data
-#define tTimer    data[1]
-#define tTreeX    data[2]
-#define tGrassX   data[3]
+#define tTimer data[1]
+#define tTreeX data[2]
+#define tGrassX data[3]
 #define tSpriteId data[4]
-#define tScroll   data[5]
+#define tScroll data[5]
 #define tMapFrame data[6]
 
 //--------------------------------------------------------------- BG helpers
 
-#define CI_BGCNT_256 (BGCNT_PRIORITY(0) | BGCNT_CHARBASE(0) | BGCNT_SCREENBASE(28) | BGCNT_16COLOR | BGCNT_TXT256x256)
-#define CI_BGCNT_ALT (BGCNT_PRIORITY(0) | BGCNT_CHARBASE(0) | BGCNT_SCREENBASE(29) | BGCNT_16COLOR | BGCNT_TXT256x256)
-#define CI_BGCNT_512 (BGCNT_PRIORITY(0) | BGCNT_CHARBASE(0) | BGCNT_SCREENBASE(28) | BGCNT_16COLOR | BGCNT_TXT512x256)
-
 static void CrystalIntro_InitBg(u16 bgCnt)
 {
     SetGpuReg(REG_OFFSET_BG0CNT, bgCnt);
-    SetGpuReg(REG_OFFSET_BG0HOFS, CI_BG_HOFS);
-    SetGpuReg(REG_OFFSET_BG0VOFS, CI_BG_VOFS);
+    SetGpuReg(REG_OFFSET_BG0HOFS, LC_BG_HOFS);
+    SetGpuReg(REG_OFFSET_BG0VOFS, LC_BG_VOFS);
     SetGpuReg(REG_OFFSET_DISPCNT, DISPCNT_MODE_0 | DISPCNT_OBJ_1D_MAP | DISPCNT_BG0_ON | DISPCNT_OBJ_ON);
 }
 
@@ -663,9 +688,9 @@ static void CrystalIntro_UpdatePanoramaScroll(u16 treeX, u16 grassX)
     for (i = 0; i < DISPLAY_HEIGHT; i++)
     {
         u16 x = 0;
-        if (i >= CI_PANORAMA_TOP && i < CI_PANORAMA_TREE_END)
+        if (i >= LC_PANORAMA_TOP && i < LC_PANORAMA_TREE_END)
             x = treeX;
-        else if (i >= CI_PANORAMA_TREE_END && i < CI_PANORAMA_BOTTOM)
+        else if (i >= LC_PANORAMA_TREE_END && i < LC_PANORAMA_BOTTOM)
             x = grassX;
         gScanlineEffectRegBuffers[0][i] = x;
         gScanlineEffectRegBuffers[1][i] = x;
@@ -686,9 +711,9 @@ static void CrystalIntro_StartPanoramaScanlineEffect(void)
 
 static void CrystalIntro_LoadPanorama(u8 taskId)
 {
-    CrystalIntro_LoadBg(sCI_BackgroundTiles, sCI_BackgroundMap);
-    LoadPalette(sCI_BackgroundPal, BG_PLTT_ID(0), sizeof(sCI_BackgroundPal));
-    CrystalIntro_InitBg(CI_BGCNT_256);
+    CrystalIntro_LoadBg(sLC_BackgroundTiles, sLC_BackgroundMap);
+    LoadPalette(sLC_BackgroundPal, BG_PLTT_ID(0), sizeof(sLC_BackgroundPal));
+    CrystalIntro_InitBg(LC_BGCNT_256);
     SetGpuReg(REG_OFFSET_BG0HOFS, 0); // panorama wraps, use the full GBA width
     CrystalIntro_UpdatePanoramaScroll(gTasks[taskId].tTreeX, gTasks[taskId].tGrassX);
     CrystalIntro_StartPanoramaScanlineEffect();
@@ -696,13 +721,13 @@ static void CrystalIntro_LoadPanorama(u8 taskId)
 
 //------------------------------------------------------------------ sprites
 
-#define sTimer  data[1]
+#define sTimer data[1]
 #define sMatrix data[2]
 #define sRadius data[3]
-#define sDelay  data[4]
+#define sDelay data[4]
 
-#define CI_PULSE_MAX_DRAWN_RADIUS 28
-#define CI_PULSE_MAX_RADIUS       56
+#define LC_PULSE_MAX_DRAWN_RADIUS 28
+#define LC_PULSE_MAX_RADIUS 56
 
 static void SpriteCB_CrystalPulse(struct Sprite *sprite)
 {
@@ -722,19 +747,19 @@ static void SpriteCB_CrystalPulse(struct Sprite *sprite)
         return;
     }
     sprite->sRadius += 2;
-    if (sprite->sRadius > CI_PULSE_MAX_RADIUS)
+    if (sprite->sRadius > LC_PULSE_MAX_RADIUS)
     {
         DestroySprite(sprite);
         return;
     }
-    if (sprite->sRadius <= CI_PULSE_MAX_DRAWN_RADIUS)
+    if (sprite->sRadius <= LC_PULSE_MAX_DRAWN_RADIUS)
     {
         if (((sprite->sRadius - 4) & 3) == 0)
             StartSpriteAnim(sprite, (sprite->sRadius - 4) / 4);
     }
     else
     {
-        // 256 * CI_PULSE_MAX_DRAWN_RADIUS / radius
+        // 256 * LC_PULSE_MAX_DRAWN_RADIUS / radius
         u16 scale = 7168 / sprite->sRadius;
         SetOamMatrix(sprite->sMatrix, scale, 0, 0, scale);
     }
@@ -742,7 +767,7 @@ static void SpriteCB_CrystalPulse(struct Sprite *sprite)
 
 static void CrystalIntro_CreatePulse(s16 x, s16 y)
 {
-    u8 spriteId = CreateSprite(&sCI_SpriteTemplate_Pulse, x, y, 2);
+    u8 spriteId = CreateSprite(&sLC_SpriteTemplate_Pulse, x, y, 2);
 
     if (spriteId != MAX_SPRITES)
     {
@@ -751,28 +776,21 @@ static void CrystalIntro_CreatePulse(s16 x, s16 y)
     }
 }
 
-enum {
-    CI_SUICUNE_IDLE,     // Runs in place
-    CI_SUICUNE_RUN,      // Runs left across the screen
-    CI_SUICUNE_RUN_SLOW, // Creeps left slowly
-    CI_SUICUNE_DASH,     // Dashes off screen
-};
-
 static void SpriteCB_CrystalSuicune(struct Sprite *sprite)
 {
     switch (sprite->sState)
     {
-    case CI_SUICUNE_IDLE:
+    case LC_SUICUNE_IDLE:
         break;
-    case CI_SUICUNE_RUN:
-    case CI_SUICUNE_DASH:
+    case LC_SUICUNE_RUN:
+    case LC_SUICUNE_DASH:
         sprite->x -= 8;
         break;
-    case CI_SUICUNE_RUN_SLOW:
+    case LC_SUICUNE_RUN_SLOW:
         sprite->x -= 2;
         break;
     }
-    if (sprite->sState != CI_SUICUNE_IDLE && sprite->x < -64)
+    if (sprite->sState != LC_SUICUNE_IDLE && sprite->x < -64)
         DestroySprite(sprite);
 }
 
@@ -806,31 +824,31 @@ static void Task_CrystalScene_UnownA_Load(u8 taskId)
 {
     ResetSpriteData();
     FreeAllSpritePalettes();
-    LoadCompressedSpriteSheet(&sCI_SpriteSheet_Pulse);
-    LoadSpritePalette(&sCI_SpritePalette_Pulse);
+    LoadCompressedSpriteSheet(&sLC_SpriteSheet_Pulse);
+    LoadSpritePalette(&sLC_SpritePalette_Pulse);
     CrystalIntro_BlackenBgPals();
-    CrystalIntro_LoadBg(sCI_UnownsTiles, sCI_UnownAMap);
-    CrystalIntro_InitBg(CI_BGCNT_256);
+    CrystalIntro_LoadBg(sLC_UnownsTiles, sLC_UnownAMap);
+    CrystalIntro_InitBg(LC_BGCNT_256);
     gTasks[taskId].tTimer = 0;
     gTasks[taskId].func = Task_CrystalScene_UnownA;
 }
 
 // Frames of black screen before the first Unown starts fading in
-#define CI_UNOWN_A_START_DELAY 48
+#define LC_UNOWN_A_START_DELAY 48
 
 static void Task_CrystalScene_UnownA(u8 taskId)
 {
     s16 *data = gTasks[taskId].data;
 
-    if (tTimer >= CI_UNOWN_A_START_DELAY + 0x80)
+    if (tTimer >= LC_UNOWN_A_START_DELAY + 0x80)
     {
         gTasks[taskId].func = Task_CrystalScene_Panorama1_Load;
         return;
     }
-    if (tTimer == CI_UNOWN_A_START_DELAY + 0x60)
-        CrystalIntro_CreatePulse(CI_SCREEN_X + 80, CI_SCREEN_Y + 72); // on the Unown's eye
-    if (tTimer >= CI_UNOWN_A_START_DELAY)
-        CrystalIntro_UnownFadePal(0, tTimer - CI_UNOWN_A_START_DELAY);
+    if (tTimer == LC_UNOWN_A_START_DELAY + 0x60)
+        CrystalIntro_CreatePulse(LC_SCREEN_X + 80, LC_SCREEN_Y + 72); // on the Unown's eye
+    if (tTimer >= LC_UNOWN_A_START_DELAY)
+        CrystalIntro_UnownFadePal(0, tTimer - LC_UNOWN_A_START_DELAY);
     tTimer++;
 }
 
@@ -878,11 +896,11 @@ static void Task_CrystalScene_UnownHI_Load(u8 taskId)
 {
     ResetSpriteData();
     FreeAllSpritePalettes();
-    LoadCompressedSpriteSheet(&sCI_SpriteSheet_Pulse);
-    LoadSpritePalette(&sCI_SpritePalette_Pulse);
+    LoadCompressedSpriteSheet(&sLC_SpriteSheet_Pulse);
+    LoadSpritePalette(&sLC_SpritePalette_Pulse);
     CrystalIntro_BlackenBgPals();
-    CrystalIntro_LoadBg(sCI_UnownsTiles, sCI_UnownHIMap);
-    CrystalIntro_InitBg(CI_BGCNT_256);
+    CrystalIntro_LoadBg(sLC_UnownsTiles, sLC_UnownHIMap);
+    CrystalIntro_InitBg(LC_BGCNT_256);
     gTasks[taskId].tTimer = 0;
     gTasks[taskId].func = Task_CrystalScene_UnownHI;
 }
@@ -897,9 +915,9 @@ static void Task_CrystalScene_UnownHI(u8 taskId)
         return;
     }
     if (tTimer == 0x20)
-        CrystalIntro_CreatePulse(CI_SCREEN_X + 112, CI_SCREEN_Y + 40);
+        CrystalIntro_CreatePulse(LC_SCREEN_X + 112, LC_SCREEN_Y + 40);
     if (tTimer == 0x60)
-        CrystalIntro_CreatePulse(CI_SCREEN_X + 40, CI_SCREEN_Y + 96);
+        CrystalIntro_CreatePulse(LC_SCREEN_X + 40, LC_SCREEN_Y + 96);
     if (tTimer < 0x40)
         CrystalIntro_UnownFadePal(0, tTimer);
     else
@@ -913,12 +931,12 @@ static void Task_CrystalScene_SuicuneRun_Load(u8 taskId)
 {
     ResetSpriteData();
     FreeAllSpritePalettes();
-    LoadCompressedSpriteSheet(&sCI_SpriteSheet_Suicune);
-    LoadSpritePalette(&sCI_SpritePalette_Suicune);
-    LoadCompressedSpriteSheet(&sCI_SpriteSheet_Pichu);
-    LoadSpritePalette(&sCI_SpritePalette_Pichu);
-    LoadCompressedSpriteSheet(&sCI_SpriteSheet_Wooper);
-    LoadSpritePalette(&sCI_SpritePalette_Wooper);
+    LoadCompressedSpriteSheet(&sLC_SpriteSheet_Suicune);
+    LoadSpritePalette(&sLC_SpritePalette_Suicune);
+    LoadCompressedSpriteSheet(&sLC_SpriteSheet_Pichu);
+    LoadSpritePalette(&sLC_SpritePalette_Pichu);
+    LoadCompressedSpriteSheet(&sLC_SpriteSheet_Wooper);
+    LoadSpritePalette(&sLC_SpritePalette_Wooper);
     CrystalIntro_LoadPanorama(taskId);
     // Fade in from the black gap between scenes
     BeginNormalPaletteFade(PALETTES_ALL, 0, 16, 0, RGB_BLACK);
@@ -945,9 +963,9 @@ static void Task_CrystalScene_SuicuneRun(u8 taskId)
     }
     else if (tTimer == 0x40)
     {
-        u8 spriteId = CreateSprite(&sCI_SpriteTemplate_Suicune, DISPLAY_WIDTH + 64, 107, 1);
+        u8 spriteId = CreateSprite(&sLC_SpriteTemplate_Suicune, DISPLAY_WIDTH + 64, 107, 1);
         if (spriteId != MAX_SPRITES)
-            gSprites[spriteId].sState = CI_SUICUNE_RUN;
+            gSprites[spriteId].sState = LC_SUICUNE_RUN;
     }
     tTimer++;
 }
@@ -963,7 +981,7 @@ static void Task_CrystalScene_Grass_Load(u8 taskId)
 
 static void Task_CrystalScene_Grass(u8 taskId)
 {
-    static const u32 *const grassFrames[] = {sCI_Grass1Gfx, sCI_Grass2Gfx, sCI_Grass3Gfx, sCI_Grass2Gfx};
+    static const u32 *const grassFrames[] = {sLC_Grass1Gfx, sLC_Grass2Gfx, sLC_Grass3Gfx, sLC_Grass2Gfx};
     s16 *data = gTasks[taskId].data;
 
     // Fade out to black before the Unown scene
@@ -979,9 +997,9 @@ static void Task_CrystalScene_Grass(u8 taskId)
     if (tTimer < 36 && (tTimer & 3) == 0)
         CpuCopy16(grassFrames[(tTimer >> 2) & 3], (void *)(BG_CHAR_ADDR(0) + 9 * TILE_SIZE_4BPP), 4 * TILE_SIZE_4BPP);
     if (tTimer == 0x20)
-        CreateSprite(&sCI_SpriteTemplate_Wooper, 76, 132, 1);
+        CreateSprite(&sLC_SpriteTemplate_Wooper, 76, 132, 1);
     if (tTimer == 0x40)
-        CreateSprite(&sCI_SpriteTemplate_Pichu, 172, 132, 1);
+        CreateSprite(&sLC_SpriteTemplate_Pichu, 172, 132, 1);
     tTimer++;
 }
 
@@ -993,8 +1011,8 @@ static void Task_CrystalScene_Unowns_Load(u8 taskId)
     FreeAllSpritePalettes();
     ScanlineEffect_Stop();
     CrystalIntro_BlackenBgPals();
-    CrystalIntro_LoadBg(sCI_UnownsTiles, sCI_UnownsMap);
-    CrystalIntro_InitBg(CI_BGCNT_256);
+    CrystalIntro_LoadBg(sLC_UnownsTiles, sLC_UnownsMap);
+    CrystalIntro_InitBg(LC_BGCNT_256);
     gTasks[taskId].tTimer = 0;
     gTasks[taskId].func = Task_CrystalScene_Unowns;
 }
@@ -1031,15 +1049,15 @@ static void Task_CrystalScene_Approach_Load(u8 taskId)
     FreeAllSpritePalettes();
     // Make sure the last Unown fade step is fully black while VRAM is swapped
     CrystalIntro_BlackenBgPals();
-    LoadCompressedSpriteSheet(&sCI_SpriteSheet_Suicune);
-    LoadSpritePalette(&sCI_SpritePalette_Suicune);
-    CrystalIntro_LoadBg(sCI_BackgroundTiles, sCI_BackgroundMap);
-    LoadPalette(sCI_BackgroundPal, BG_PLTT_ID(0), sizeof(sCI_BackgroundPal));
-    CrystalIntro_InitBg(CI_BGCNT_256);
+    LoadCompressedSpriteSheet(&sLC_SpriteSheet_Suicune);
+    LoadSpritePalette(&sLC_SpritePalette_Suicune);
+    CrystalIntro_LoadBg(sLC_BackgroundTiles, sLC_BackgroundMap);
+    LoadPalette(sLC_BackgroundPal, BG_PLTT_ID(0), sizeof(sLC_BackgroundPal));
+    CrystalIntro_InitBg(LC_BGCNT_256);
     SetGpuReg(REG_OFFSET_BG0HOFS, 0);
-    spriteId = CreateSprite(&sCI_SpriteTemplate_Suicune, CI_SCREEN_X + 88, 107, 1);
+    spriteId = CreateSprite(&sLC_SpriteTemplate_Suicune, LC_SCREEN_X + 88, 107, 1);
     if (spriteId != MAX_SPRITES)
-        gSprites[spriteId].sState = CI_SUICUNE_IDLE;
+        gSprites[spriteId].sState = LC_SUICUNE_IDLE;
     gTasks[taskId].tSpriteId = spriteId;
     gTasks[taskId].tScroll = 0;
     // Fade in from the black gap between scenes
@@ -1066,9 +1084,9 @@ static void Task_CrystalScene_Approach(u8 taskId)
     tScroll -= 10;
     SetGpuReg(REG_OFFSET_BG0HOFS, tScroll);
     if (tTimer == 0x40)
-        gSprites[gTasks[taskId].tSpriteId].sState = CI_SUICUNE_RUN_SLOW;
+        gSprites[gTasks[taskId].tSpriteId].sState = LC_SUICUNE_RUN_SLOW;
     if (tTimer == 0x60)
-        gSprites[gTasks[taskId].tSpriteId].sState = CI_SUICUNE_DASH;
+        gSprites[gTasks[taskId].tSpriteId].sState = LC_SUICUNE_DASH;
     tTimer++;
 }
 
@@ -1078,17 +1096,17 @@ static void Task_CrystalScene_Jump_Load(u8 taskId)
 {
     ResetSpriteData();
     FreeAllSpritePalettes();
-    LoadCompressedSpriteSheet(&sCI_SpriteSheet_UnownBack);
-    LoadSpritePalette(&sCI_SpritePalette_UnownBack);
-    DecompressDataWithHeaderVram(sCI_SuicuneJumpTiles, (void *)BG_CHAR_ADDR(0));
-    DecompressDataWithHeaderVram(sCI_SuicuneJumpMap, (void *)BG_SCREEN_ADDR(28));
-    DecompressDataWithHeaderVram(sCI_SuicuneJumpMap2, (void *)BG_SCREEN_ADDR(29));
-    LoadPalette(sCI_SuicunePal, BG_PLTT_ID(0), sizeof(sCI_SuicunePal));
+    LoadCompressedSpriteSheet(&sLC_SpriteSheet_UnownBack);
+    LoadSpritePalette(&sLC_SpritePalette_UnownBack);
+    DecompressDataWithHeaderVram(sLC_SuicuneJumpTiles, (void *)BG_CHAR_ADDR(0));
+    DecompressDataWithHeaderVram(sLC_SuicuneJumpMap, (void *)BG_SCREEN_ADDR(28));
+    DecompressDataWithHeaderVram(sLC_SuicuneJumpMap2, (void *)BG_SCREEN_ADDR(29));
+    LoadPalette(sLC_SuicunePal, BG_PLTT_ID(0), sizeof(sLC_SuicunePal));
     // Orange backdrop so transparent tiles match the scene's orange background
     gPlttBufferUnfaded[0] = RGB(24, 12, 9);
     gPlttBufferFaded[0] = RGB(24, 12, 9);
-    CrystalIntro_InitBg(CI_BGCNT_256);
-    CreateSprite(&sCI_SpriteTemplate_UnownBack, CI_SCREEN_X + 40, CI_SCREEN_Y + 64, 1);
+    CrystalIntro_InitBg(LC_BGCNT_256);
+    CreateSprite(&sLC_SpriteTemplate_UnownBack, LC_SCREEN_X + 40, LC_SCREEN_Y + 64, 1);
     // Fade in from the black gap between scenes
     BeginNormalPaletteFade(PALETTES_ALL, 0, 16, 0, RGB_BLACK);
     gTasks[taskId].tScroll = 136; // scene slides up into view
@@ -1121,7 +1139,7 @@ static void Task_CrystalScene_Jump(u8 taskId)
     if ((tTimer & 3) == 0)
     {
         tMapFrame ^= 1;
-        SetGpuReg(REG_OFFSET_BG0CNT, tMapFrame ? CI_BGCNT_ALT : CI_BGCNT_256);
+        SetGpuReg(REG_OFFSET_BG0CNT, tMapFrame ? LC_BGCNT_ALT : LC_BGCNT_256);
     }
     tTimer++;
 }
@@ -1129,17 +1147,17 @@ static void Task_CrystalScene_Jump(u8 taskId)
 //------------------------------------------------- scene: close-up pan
 
 // How far the close-up pans to the right as the artwork slides in.
-#define CI_CLOSE_PAN 56
+#define LC_CLOSE_PAN 56
 
 static void Task_CrystalScene_Close_Load(u8 taskId)
 {
     ResetSpriteData();
     FreeAllSpritePalettes();
-    DecompressDataWithHeaderVram(sCI_SuicuneCloseTiles, (void *)BG_CHAR_ADDR(0));
-    DecompressDataWithHeaderVram(sCI_SuicuneCloseMap, (void *)BG_SCREEN_ADDR(28));
-    LoadPalette(sCI_SuicuneClosePal, BG_PLTT_ID(0), sizeof(sCI_SuicuneClosePal));
-    CrystalIntro_InitBg(CI_BGCNT_512);
-    gTasks[taskId].tScroll = -CI_SCREEN_X;
+    DecompressDataWithHeaderVram(sLC_SuicuneCloseTiles, (void *)BG_CHAR_ADDR(0));
+    DecompressDataWithHeaderVram(sLC_SuicuneCloseMap, (void *)BG_SCREEN_ADDR(28));
+    LoadPalette(sLC_SuicuneClosePal, BG_PLTT_ID(0), sizeof(sLC_SuicuneClosePal));
+    CrystalIntro_InitBg(LC_BGCNT_512);
+    gTasks[taskId].tScroll = -LC_SCREEN_X;
     SetGpuReg(REG_OFFSET_BG0HOFS, gTasks[taskId].tScroll);
     // Fade in from the black gap between scenes
     BeginNormalPaletteFade(PALETTES_ALL, 0, 16, 0, RGB_BLACK);
@@ -1161,7 +1179,7 @@ static void Task_CrystalScene_Close(u8 taskId)
             gTasks[taskId].func = Task_CrystalScene_Back_Load;
         return;
     }
-    if (tScroll < -CI_SCREEN_X + CI_CLOSE_PAN)
+    if (tScroll < -LC_SCREEN_X + LC_CLOSE_PAN)
     {
         tScroll += 8;
         SetGpuReg(REG_OFFSET_BG0HOFS, tScroll);
@@ -1175,14 +1193,14 @@ static void Task_CrystalScene_Back_Load(u8 taskId)
 {
     ResetSpriteData();
     FreeAllSpritePalettes();
-    DecompressDataWithHeaderVram(sCI_SuicuneBackTiles, (void *)BG_CHAR_ADDR(0));
-    DecompressDataWithHeaderVram(sCI_SuicuneBackMap, (void *)BG_SCREEN_ADDR(28));
-    DecompressDataWithHeaderVram(sCI_SuicuneBackMap2, (void *)BG_SCREEN_ADDR(29));
-    LoadPalette(sCI_SuicunePal, BG_PLTT_ID(0), sizeof(sCI_SuicunePal));
+    DecompressDataWithHeaderVram(sLC_SuicuneBackTiles, (void *)BG_CHAR_ADDR(0));
+    DecompressDataWithHeaderVram(sLC_SuicuneBackMap, (void *)BG_SCREEN_ADDR(28));
+    DecompressDataWithHeaderVram(sLC_SuicuneBackMap2, (void *)BG_SCREEN_ADDR(29));
+    LoadPalette(sLC_SuicunePal, BG_PLTT_ID(0), sizeof(sLC_SuicunePal));
     // Orange backdrop so transparent tiles match the scene's orange background
     gPlttBufferUnfaded[0] = RGB(24, 12, 9);
     gPlttBufferFaded[0] = RGB(24, 12, 9);
-    CrystalIntro_InitBg(CI_BGCNT_256);
+    CrystalIntro_InitBg(LC_BGCNT_256);
     gTasks[taskId].tScroll = -48; // pans up to center on Suicune
     SetGpuReg(REG_OFFSET_BG0VOFS, gTasks[taskId].tScroll);
     // Fade in from the black gap between scenes
@@ -1202,7 +1220,7 @@ static void Task_CrystalScene_Back(u8 taskId)
         gTasks[taskId].func = Task_CrystalScene_Silhouette;
         return;
     }
-    if (tTimer < 0x28 && tScroll < (s16)-CI_SCREEN_Y)
+    if (tTimer < 0x28 && tScroll < (s16)-LC_SCREEN_Y)
     {
         tScroll++;
         SetGpuReg(REG_OFFSET_BG0VOFS, tScroll);
@@ -1216,8 +1234,8 @@ static void Task_CrystalScene_Back(u8 taskId)
         {
             for (i = 0; i < 4; i++)
             {
-                gPlttBufferUnfaded[BG_PLTT_ID(palNum) + 1 + i] = sCI_AppearUnownColors[i];
-                gPlttBufferFaded[BG_PLTT_ID(palNum) + 1 + i] = sCI_AppearUnownColors[i];
+                gPlttBufferUnfaded[BG_PLTT_ID(palNum) + 1 + i] = sLC_AppearUnownColors[i];
+                gPlttBufferFaded[BG_PLTT_ID(palNum) + 1 + i] = sLC_AppearUnownColors[i];
             }
         }
     }
@@ -1234,7 +1252,7 @@ static void Task_CrystalScene_Silhouette(u8 taskId)
     {
     case 0:
         // Suicune turns to a silhouette as it leaps away
-        SetGpuReg(REG_OFFSET_BG0CNT, CI_BGCNT_ALT);
+        SetGpuReg(REG_OFFSET_BG0CNT, LC_BGCNT_ALT);
         gTasks[taskId].tState++;
         break;
     case 1:
@@ -1255,8 +1273,6 @@ static void Task_CrystalScene_Silhouette(u8 taskId)
         // Hold the white screen for a moment, then go to the title screen
         if (++tTimer > 0x40)
         {
-            // gTasks[taskId].tState = 0;
-            // gTasks[taskId].func = Task_CrystalScene_CrystalUnowns_Load;
             DestroyTask(taskId);
             SetMainCallback2(MainCB2_EndIntro);
         }
@@ -1274,6 +1290,10 @@ static void Task_CrystalScene_Silhouette(u8 taskId)
 #undef tSpriteId
 #undef tScroll
 #undef tMapFrame
+
+//==============================================================================
+// Misc helpers
+//==============================================================================
 
 static void IntroResetGpuRegs(void)
 {
@@ -1313,4 +1333,3 @@ void PanFadeAndZoomScreen(u16 screenX, u16 screenY, u16 zoom, u16 alpha)
     SetGpuReg(REG_OFFSET_BG2Y_L, dest.dy);
     SetGpuReg(REG_OFFSET_BG2Y_H, dest.dy >> 16);
 }
-
