@@ -26,7 +26,7 @@
     The intro is grouped into the following scenes
     Scene 0. Copyright screen
     Scene 1. Ditto/Game Freak logo drops in, LAZ presents
-    Scene 2. Crystal intro (GBC port): Unowns, Suicune, "CRYSTAL" letters
+    Scene 2. Crystal intro (GBC port): Unowns, Suicune
 
     After this it progresses to the title screen
 */
@@ -63,8 +63,6 @@ static void Task_CrystalScene_Close(u8);
 static void Task_CrystalScene_Back_Load(u8);
 static void Task_CrystalScene_Back(u8);
 static void Task_CrystalScene_Silhouette(u8);
-static void Task_CrystalScene_CrystalUnowns_Load(u8);
-static void Task_CrystalScene_CrystalUnowns(u8);
 
 // Crystal intro sprite callbacks
 static void SpriteCB_CrystalPulse(struct Sprite *);
@@ -458,9 +456,6 @@ static const u16 sCI_SuicuneClosePal[]    = INCGFX_U16("graphics/intro/crystal/s
 static const u32 sCI_SuicuneBackTiles[]   = INCGFX_U32("graphics/intro/crystal/suicune_back_tiles.png", ".4bpp.smol");
 static const u32 sCI_SuicuneBackMap[]     = INCGFX_U32("graphics/intro/crystal/suicune_back_map.bin", ".smolTM");
 static const u32 sCI_SuicuneBackMap2[]    = INCGFX_U32("graphics/intro/crystal/suicune_back_map2.bin", ".smolTM");
-static const u32 sCI_CrystalUnownsTiles[] = INCGFX_U32("graphics/intro/crystal/crystal_unowns_tiles.png", ".4bpp.smol");
-static const u32 sCI_CrystalUnownsMap[]   = INCGFX_U32("graphics/intro/crystal/crystal_unowns_map.bin", ".smolTM");
-static const u16 sCI_CrystalUnownsPal[]   = INCGFX_U16("graphics/intro/crystal/crystal_unowns.pal", ".gbapal");
 
 // Sprite data
 static const u32 sCI_SuicuneRunGfx[]      = INCGFX_U32("graphics/intro/crystal/suicune_run.png", ".4bpp.smol");
@@ -1257,68 +1252,16 @@ static void Task_CrystalScene_Silhouette(u8 taskId)
         }
         break;
     case 3:
-        // Hold the white screen for a moment
+        // Hold the white screen for a moment, then go to the title screen
         if (++tTimer > 0x40)
         {
-            gTasks[taskId].tState = 0;
-            gTasks[taskId].func = Task_CrystalScene_CrystalUnowns_Load;
+            // gTasks[taskId].tState = 0;
+            // gTasks[taskId].func = Task_CrystalScene_CrystalUnowns_Load;
+            DestroyTask(taskId);
+            SetMainCallback2(MainCB2_EndIntro);
         }
         break;
     }
-}
-
-//------------------------------------------- scene: "CRYSTAL" in Unowns
-
-// Grayscale ramps for the letters darkening into view
-static u16 CrystalIntro_LetterFastFade(u8 i)
-{
-    u8 v = 31 - 3 * (i / 2) - (i & 1);
-    return RGB(v, v, v);
-}
-
-static u16 CrystalIntro_LetterSlowFade(u8 i)
-{
-    u8 v = 31 - i;
-    return RGB(v, v, v);
-}
-
-static void Task_CrystalScene_CrystalUnowns_Load(u8 taskId)
-{
-    ResetSpriteData();
-    FreeAllSpritePalettes();
-    CrystalIntro_LoadBg(sCI_CrystalUnownsTiles, sCI_CrystalUnownsMap);
-    LoadPalette(sCI_CrystalUnownsPal, BG_PLTT_ID(0), 8 * PLTT_SIZE_4BPP);
-    // White backdrop to match the white scene
-    gPlttBufferUnfaded[0] = RGB_WHITE;
-    gPlttBufferFaded[0] = RGB_WHITE;
-    CrystalIntro_InitBg(CI_BGCNT_256);
-    gTasks[taskId].tTimer = 0;
-    gTasks[taskId].func = Task_CrystalScene_CrystalUnowns;
-}
-
-static void Task_CrystalScene_CrystalUnowns(u8 taskId)
-{
-    s16 *data = gTasks[taskId].data;
-
-    if (tTimer < 0x80)
-    {
-        // Each letter's Unown darkens into view, one palette per 16 frames
-        u8 palNum = tTimer >> 4;
-        u8 step = tTimer & 0xF;
-        gPlttBufferUnfaded[BG_PLTT_ID(palNum) + 3] = CrystalIntro_LetterFastFade(step);
-        gPlttBufferFaded[BG_PLTT_ID(palNum) + 3] = CrystalIntro_LetterFastFade(step);
-        gPlttBufferUnfaded[BG_PLTT_ID(palNum) + 4] = CrystalIntro_LetterSlowFade(step);
-        gPlttBufferFaded[BG_PLTT_ID(palNum) + 4] = CrystalIntro_LetterSlowFade(step);
-    }
-    else if (tTimer == 0x100)
-    {
-        // Off to the title screen
-        BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_WHITEALPHA);
-        DestroyTask(taskId);
-        SetMainCallback2(MainCB2_EndIntro);
-        return;
-    }
-    tTimer++;
 }
 
 #undef sTimer
