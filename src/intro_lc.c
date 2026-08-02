@@ -39,6 +39,7 @@ static void Task_Scene1_End(u8);
 // Scene 1 supplemental functions
 static void IntroResetGpuRegs(void);
 static void ShowLazText(void);
+static void ShowPresentsText(void);
 
 // Crystal intro (GBC port) main task chain
 static void Task_CrystalScene_UnownA_Load(u8);
@@ -106,6 +107,9 @@ enum {
 #define LAZ_BG_CHARBASE                   0
 #define LAZ_TILE_START                    1
 #define LAZ_PALETTE_SLOT                  1
+#define LAZ_TILEMAP_LAZ_ROW               9 // first tilemap row of the LAZ text (16px tall, 2 rows)
+#define LAZ_TILEMAP_PRESENTS_ROW         11 // tilemap row with the presents text
+#define LAZ_PRESENTS_DELAY               90 // frames between LAZ text and presents text (~1.5s)
 
 COMMON_DATA u32 gIntroFrameCounter = 0;
 COMMON_DATA struct GcmbStruct gMultibootProgramStruct = {0};
@@ -187,11 +191,18 @@ static void ShowLazText(void)
 {
     DmaClear16(3, (void *)BG_CHAR_ADDR(LAZ_BG_CHARBASE), 0x20);
     DecompressDataWithHeaderVram(sIntroLaz_Gfx, (void *)(BG_CHAR_ADDR(LAZ_BG_CHARBASE) + LAZ_TILE_START * 0x20));
-    DmaCopy16(3, sIntroLaz_Tilemap, (void *)BG_SCREEN_ADDR(LAZ_BG_SCREENBASE), BG_SCREEN_SIZE);
+    // Only show the two LAZ text rows for now; the presents row is copied in later by ShowPresentsText
+    DmaClear16(3, (void *)BG_SCREEN_ADDR(LAZ_BG_SCREENBASE), BG_SCREEN_SIZE);
+    DmaCopy16(3, &sIntroLaz_Tilemap[LAZ_TILEMAP_LAZ_ROW * 32], (void *)(BG_SCREEN_ADDR(LAZ_BG_SCREENBASE) + LAZ_TILEMAP_LAZ_ROW * 64), 2 * 64);
     LoadPalette(sIntroLaz_Pal, BG_PLTT_ID(LAZ_PALETTE_SLOT), sizeof(sIntroLaz_Pal));
 
     SetGpuReg(REG_OFFSET_BG0CNT, BGCNT_PRIORITY(1) | BGCNT_CHARBASE(LAZ_BG_CHARBASE) | BGCNT_SCREENBASE(LAZ_BG_SCREENBASE) | BGCNT_16COLOR | BGCNT_TXT256x256);
     SetGpuRegBits(REG_OFFSET_DISPCNT, DISPCNT_BG0_ON);
+}
+
+static void ShowPresentsText(void)
+{
+    DmaCopy16(3, &sIntroLaz_Tilemap[LAZ_TILEMAP_PRESENTS_ROW * 32], (void *)(BG_SCREEN_ADDR(LAZ_BG_SCREENBASE) + LAZ_TILEMAP_PRESENTS_ROW * 64), 64);
 }
 
 static void VBlankCB_Intro(void)
@@ -335,6 +346,8 @@ void CB2_InitCopyrightScreenAfterTitleScreen(void)
 
 #define tDittoSpriteId data[0]
 #define tLazShown      data[1]
+#define tPresentsShown data[2]
+#define tPresentsTimer data[3]
 
 void Task_Scene1_Load(u8 taskId)
 {
@@ -359,6 +372,8 @@ static void Task_Scene1_DittoLogo(u8 taskId)
     SetGpuReg(REG_OFFSET_DISPCNT, DISPCNT_MODE_0 | DISPCNT_OBJ_1D_MAP | DISPCNT_OBJ_ON);
     gTasks[taskId].tDittoSpriteId = CreateSprite(&sSpriteTemplate_DittoGamefreak, DISPLAY_WIDTH / 2, DITTO_FALL_START_Y, 0);
     gTasks[taskId].tLazShown = FALSE;
+    gTasks[taskId].tPresentsShown = FALSE;
+    gTasks[taskId].tPresentsTimer = 0;
     gTasks[taskId].func = Task_Scene1_DittoAnimation;
     gIntroFrameCounter = 0;
     // m4aSongNumStart(MUS_INTRO);
@@ -373,10 +388,17 @@ static void Task_Scene1_DittoAnimation(u8 taskId)
     else
         gSprites[gTasks[taskId].tDittoSpriteId].y = DITTO_FALL_END_Y;
 
-    if (!gTasks[taskId].tLazShown && gIntroFrameCounter >= DITTO_FALL_DURATION)
+    if (!gTasks[taskId].tLazShown && gSprites[gTasks[taskId].tDittoSpriteId].animEnded)
     {
         ShowLazText();
         gTasks[taskId].tLazShown = TRUE;
+    }
+
+    if (gTasks[taskId].tLazShown && !gTasks[taskId].tPresentsShown
+     && ++gTasks[taskId].tPresentsTimer > LAZ_PRESENTS_DELAY)
+    {
+        ShowPresentsText();
+        gTasks[taskId].tPresentsShown = TRUE;
     }
 
     if (gIntroFrameCounter > TIMER_LC_LOGO_END)
@@ -395,6 +417,8 @@ static void Task_Scene1_End(u8 taskId)
 
 #undef tDittoSpriteId
 #undef tLazShown
+#undef tPresentsShown
+#undef tPresentsTimer
 
 // GBC screen (160x144) centered on the GBA screen (240x160)
 #define CI_SCREEN_X 40
