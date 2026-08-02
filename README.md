@@ -15,6 +15,7 @@ This project will be open source and anyone can use anything in this project as 
 ## Screenshots
 
 ![Title Screen](./screenshots/titlescreen.gif)
+![Intro](./screenshots/LC_INTRO_08012025.gif)
 
 ## Environment Setup
 
