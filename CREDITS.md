@@ -61,13 +61,16 @@ Credits for pokeemerald-expansion can be found [here](https://github.com/rh-hide
 
 Also thanks to all the hard work put into [pokemerald](https://github.com/pret/pokeemerald).
 
-## Pokemerald Liquid Crystal Credits
+# Pokemerald Liquid Crystal Credits
 
-### Tools Used
-
-[PokeMapExport](https://github.com/SirSnorealot/PokeMapExport)
+## Tools Used For Editing
+[PokeCompEditor](https://github.com/SirSnorealot/PokeCompEditor)
 [porymap](https://github.com/huderlem/porymap)
 [Tilemap Studio](https://github.com/Rangi42/tilemap-studio)
+
+## Tools Used For Exporting from Liquid Crystal
+[PokeCompDumper](https://github.com/SirSnorealot/PokeCompDumper)
+[Sappy](https://github.com/Touched/Sappy)
 
 ### Tutorial/Code Used
 
