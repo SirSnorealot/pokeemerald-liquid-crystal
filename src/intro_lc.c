@@ -40,6 +40,7 @@ static void Task_Scene1_End(u8);
 static void IntroResetGpuRegs(void);
 static void ShowLazText(void);
 static void ShowPresentsText(void);
+static void SpriteCB_DittoBounce(struct Sprite *);
 
 // Crystal intro (GBC port) main task chain
 static void Task_CrystalScene_UnownA_Load(u8);
@@ -101,10 +102,13 @@ enum
     to trigger actions or progress through the cutscene.
     The values for these are defined contiguously below.
 */
-#define DITTO_FALL_START_Y -64
 #define DITTO_FALL_END_Y 50
-#define DITTO_FALL_DURATION 18
-#define TIMER_LC_LOGO_END 300 // When the Ditto logo/LAZ screen fades into the Crystal intro
+#define DITTO_BOUNCE_HEIGHT 96
+#define DITTO_BOUNCE_DECREMENT 48
+#define DITTO_BOUNCE_SINE_START 192   // 48/64ths of a circle on GBC: the top of the sine wave
+#define DITTO_ANIM_FRAME_DITTO 7      // first tilesheet frame with the ditto at rest; the transform follows
+#define DITTO_TRANSFORM_DELAY 32      // frames between landing and the transform anim starting
+#define TIMER_LC_LOGO_END 380 // When the Ditto logo/LAZ screen fades into the Crystal intro
 #define LAZ_BG_SCREENBASE 31
 #define LAZ_BG_CHARBASE 0
 #define LAZ_TILE_START 1
@@ -211,7 +215,7 @@ static const struct SpriteTemplate sSpriteTemplate_DittoGamefreak =
         .paletteTag = TAG_DITTO_GAMEFREAK_TILESHEET,
         .oam = &sOamData_DittoGamefreak,
         .anims = sAnims_DittoGamefreak,
-        .callback = SpriteCallbackDummy,
+        .callback = SpriteCB_DittoBounce,
 };
 
 //==============================================================================
@@ -383,6 +387,40 @@ static void ShowPresentsText(void)
 #define tLazShown data[1]
 #define tPresentsShown data[2]
 #define tPresentsTimer data[3]
+#define tTransformStarted data[4]
+#define tTransformTimer data[5]
+
+#define sJumpHeight data[1]
+#define sSineIdx data[2]
+
+// Port of Crystal's GameFreakLogo_Bounce: the y offset follows the negative
+// half of a sine wave, halving the bounce height each time it hits the ground
+static void SpriteCB_DittoBounce(struct Sprite *sprite)
+{
+    if (sprite->sJumpHeight != 0)
+    {
+        u8 idx = sprite->sSineIdx;
+        u8 offset = idx;
+
+        // Keep the offset in the negative part of the wave so the ditto stays above the ground
+        if (offset < 128)
+            offset += 128;
+        sprite->y2 = Sin(offset, sprite->sJumpHeight);
+        sprite->sSineIdx -= 4; // 1/64th of a circle per frame, as on GBC
+        // If the ditto's reached the ground, decrement the jump height and play the sfx
+        if ((idx & 0x7F) == 0)
+        {
+            sprite->sJumpHeight -= DITTO_BOUNCE_DECREMENT;
+            PlaySE(SE_DITTOBOUNCE);
+        }
+    }
+    else
+    {
+        sprite->y2 = 0;
+        SeekSpriteAnim(sprite, DITTO_ANIM_FRAME_DITTO); // rest on the ditto frame (stays paused)
+        sprite->callback = SpriteCallbackDummy;
+    }
+}
 
 void Task_Scene1_Load(u8 taskId)
 {
@@ -405,10 +443,15 @@ static void Task_Scene1_DittoLogo(u8 taskId)
     CpuFill16(RGB_BLACK, &gPlttBufferFaded[BG_PLTT_ID(0)], PLTT_SIZE_4BPP);
     SetVBlankCallback(VBlankCB_Intro);
     SetGpuReg(REG_OFFSET_DISPCNT, DISPCNT_MODE_0 | DISPCNT_OBJ_1D_MAP | DISPCNT_OBJ_ON);
-    gTasks[taskId].tDittoSpriteId = CreateSprite(&sSpriteTemplate_DittoGamefreak, DISPLAY_WIDTH / 2, DITTO_FALL_START_Y, 0);
+    gTasks[taskId].tDittoSpriteId = CreateSprite(&sSpriteTemplate_DittoGamefreak, DISPLAY_WIDTH / 2, DITTO_FALL_END_Y, 0);
+    gSprites[gTasks[taskId].tDittoSpriteId].sJumpHeight = DITTO_BOUNCE_HEIGHT;
+    gSprites[gTasks[taskId].tDittoSpriteId].sSineIdx = DITTO_BOUNCE_SINE_START;
+    gSprites[gTasks[taskId].tDittoSpriteId].animPaused = TRUE; // hold the ditto frame until the transform starts
     gTasks[taskId].tLazShown = FALSE;
     gTasks[taskId].tPresentsShown = FALSE;
     gTasks[taskId].tPresentsTimer = 0;
+    gTasks[taskId].tTransformStarted = FALSE;
+    gTasks[taskId].tTransformTimer = 0;
     gTasks[taskId].func = Task_Scene1_DittoAnimation;
     gIntroFrameCounter = 0;
     ResetSerial();
@@ -416,10 +459,14 @@ static void Task_Scene1_DittoLogo(u8 taskId)
 
 static void Task_Scene1_DittoAnimation(u8 taskId)
 {
-    if (gIntroFrameCounter < DITTO_FALL_DURATION)
-        gSprites[gTasks[taskId].tDittoSpriteId].y = DITTO_FALL_START_Y + ((DITTO_FALL_END_Y - DITTO_FALL_START_Y) * gIntroFrameCounter) / DITTO_FALL_DURATION;
-    else
-        gSprites[gTasks[taskId].tDittoSpriteId].y = DITTO_FALL_END_Y;
+    // Once the bounce has settled, wait a moment before playing the transform anim
+    if (!gTasks[taskId].tTransformStarted && gSprites[gTasks[taskId].tDittoSpriteId].callback == SpriteCallbackDummy
+        && ++gTasks[taskId].tTransformTimer > DITTO_TRANSFORM_DELAY)
+    {
+        gSprites[gTasks[taskId].tDittoSpriteId].animPaused = FALSE;
+        PlaySE(SE_DITTOTRANSFORM);
+        gTasks[taskId].tTransformStarted = TRUE;
+    }
 
     if (!gTasks[taskId].tLazShown && gSprites[gTasks[taskId].tDittoSpriteId].animEnded)
     {
@@ -452,6 +499,10 @@ static void Task_Scene1_End(u8 taskId)
 #undef tLazShown
 #undef tPresentsShown
 #undef tPresentsTimer
+#undef tTransformStarted
+#undef tTransformTimer
+#undef sJumpHeight
+#undef sSineIdx
 
 //==============================================================================
 // Scene 2: Crystal intro (GBC port) data
