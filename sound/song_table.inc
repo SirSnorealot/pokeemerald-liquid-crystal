@@ -616,6 +616,7 @@ gSongTable::
 	song ph_nurse_blend, MUSIC_PLAYER_SE2, 2
 	song ph_nurse_held, MUSIC_PLAYER_SE2, 2
 	song ph_nurse_solo, MUSIC_PLAYER_SE2, 2
+	song se_gamefreakpresents, MUSIC_PLAYER_SE1, 1
 
 	.align 2
 dummy_song_header:

@@ -411,7 +411,6 @@ static void Task_Scene1_DittoLogo(u8 taskId)
     gTasks[taskId].tPresentsTimer = 0;
     gTasks[taskId].func = Task_Scene1_DittoAnimation;
     gIntroFrameCounter = 0;
-    // m4aSongNumStart(MUS_INTRO);
     ResetSerial();
 }
 
@@ -425,6 +424,7 @@ static void Task_Scene1_DittoAnimation(u8 taskId)
     if (!gTasks[taskId].tLazShown && gSprites[gTasks[taskId].tDittoSpriteId].animEnded)
     {
         ShowLazText();
+        PlaySE(SE_GAMEFREAKPRESENTS);
         gTasks[taskId].tLazShown = TRUE;
     }
 
@@ -1062,6 +1062,7 @@ static void Task_CrystalScene_Approach_Load(u8 taskId)
     gTasks[taskId].tScroll = 0;
     // Fade in from the black gap between scenes
     BeginNormalPaletteFade(PALETTES_ALL, 0, 16, 0, RGB_BLACK);
+    m4aSongNumStart(MUS_INTRO);
     gTasks[taskId].tTimer = 0;
     gTasks[taskId].func = Task_CrystalScene_Approach;
 }

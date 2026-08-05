@@ -67,6 +67,9 @@ Also thanks to all the hard work put into [pokemerald](https://github.com/pret/p
 [PokeCompEditor](https://github.com/SirSnorealot/PokeCompEditor)
 [porymap](https://github.com/huderlem/porymap)
 [Tilemap Studio](https://github.com/Rangi42/tilemap-studio)
+[MidiEditor](http://www.midieditor.org)
+[poryaaaa](https://github.com/huderlem/poryaaaa)
+[porydaw](https://github.com/huderlem/porydaw)
 
 ## Tools Used For Exporting from Liquid Crystal
 [PokeCompDumper](https://github.com/SirSnorealot/PokeCompDumper)
