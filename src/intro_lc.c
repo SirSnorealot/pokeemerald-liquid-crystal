@@ -987,9 +987,15 @@ static void Task_CrystalScene_UnownHI(u8 taskId)
         return;
     }
     if (tTimer == 0x20)
+    {
         CrystalIntro_CreatePulse(LC_SCREEN_X + 112, LC_SCREEN_Y + 40);
+        PlaySE(SE_INTROUNOWN2);
+    }
     if (tTimer == 0x60)
+    {
         CrystalIntro_CreatePulse(LC_SCREEN_X + 40, LC_SCREEN_Y + 96);
+        PlaySE(SE_INTROUNOWN1);
+    }
     if (tTimer < 0x40)
         CrystalIntro_UnownFadePal(0, tTimer);
     else
