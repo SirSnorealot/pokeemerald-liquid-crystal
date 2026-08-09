@@ -1095,14 +1095,40 @@ static void Task_CrystalScene_Unowns_Load(u8 taskId)
     gTasks[taskId].func = Task_CrystalScene_Unowns;
 }
 
+// Sound cues for the many-Unowns scene, matching Crystal's IntroScene12
+static const struct
+{
+    u16 frame;
+    u16 song;
+} sLC_UnownsSceneSounds[] =
+    {
+        {0x00, SE_INTROUNOWN3},
+        {0x20, SE_INTROUNOWN2},
+        {0x40, SE_INTROUNOWN1},
+        {0x60, SE_INTROUNOWN2},
+        {0x80, SE_INTROUNOWN3},
+        {0x90, SE_INTROUNOWN2},
+        {0xA0, SE_INTROUNOWN1},
+        {0xB0, SE_INTROUNOWN2},
+};
+
 static void Task_CrystalScene_Unowns(u8 taskId)
 {
     s16 *data = gTasks[taskId].data;
+    u32 i;
 
     if (tTimer >= 0xC0)
     {
         gTasks[taskId].func = Task_CrystalScene_Approach_Load;
         return;
+    }
+    for (i = 0; i < ARRAY_COUNT(sLC_UnownsSceneSounds); i++)
+    {
+        if (tTimer == sLC_UnownsSceneSounds[i].frame)
+        {
+            PlaySE(sLC_UnownsSceneSounds[i].song);
+            break;
+        }
     }
     if (tTimer < 0x80)
     {
