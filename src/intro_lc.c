@@ -841,7 +841,8 @@ static void SpriteCB_CrystalSuicune(struct Sprite *sprite)
         sprite->x -= 2;
         break;
     }
-    if (sprite->sState != LC_SUICUNE_IDLE && sprite->x < -64)
+    if ((sprite->sState == LC_SUICUNE_DASH && sprite->x < 0)
+     || (sprite->sState == LC_SUICUNE_RUN && sprite->x < -64))
         DestroySprite(sprite);
 }
 
@@ -1122,12 +1123,11 @@ static void Task_CrystalScene_Approach(u8 taskId)
 {
     s16 *data = gTasks[taskId].data;
 
-    // Fade out to black before the jump scene
-    if (tTimer == 0x80 - 32)
+    // The normal fade needs 21 frames, including its completion handoff.
+    if (tTimer == 0x80 - 21)
         BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
     if (tTimer >= 0x80)
     {
-        // gTasks[taskId].func = Task_CrystalScene_Jump_Load;
         if (!gPaletteFade.active)
             gTasks[taskId].func = Task_CrystalScene_Jump_Load;
         return;
@@ -1172,8 +1172,8 @@ static void Task_CrystalScene_Jump(u8 taskId)
 {
     s16 *data = gTasks[taskId].data;
 
-    // Fade out to black before the close-up scene
-    if (tTimer == 0x80 - 32)
+    // The normal fade needs 21 frames, including its completion handoff.
+    if (tTimer == 0x80 - 21)
         BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
     if (tTimer >= 0x80)
     {
@@ -1221,8 +1221,8 @@ static void Task_CrystalScene_Close(u8 taskId)
 {
     s16 *data = gTasks[taskId].data;
 
-    // Fade out to black before the back-view scene
-    if (tTimer == 0x60 - 32)
+    // The normal fade needs 21 frames, including its completion handoff.
+    if (tTimer == 0x60 - 21)
         BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
     if (tTimer >= 0x60)
     {
@@ -1305,17 +1305,25 @@ static void Task_CrystalScene_Silhouette(u8 taskId)
     case 0:
         // Suicune turns to a silhouette as it leaps away
         SetGpuReg(REG_OFFSET_BG0CNT, LC_BGCNT_ALT);
-        gTasks[taskId].tState++;
+        if (++tTimer >= 4)
+        {
+            tTimer = 0;
+            gTasks[taskId].tState++;
+        }
         break;
     case 1:
-        if (++tTimer > 16)
+        if (++tTimer >= 10)
         {
-            BeginNormalPaletteFade(PALETTES_ALL, 1, 0, 16, RGB_WHITEALPHA);
+            tTimer = 0;
             gTasks[taskId].tState++;
         }
         break;
     case 2:
-        if (!gPaletteFade.active)
+        if (tTimer == 0)
+        {
+            BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_WHITEALPHA);
+        }
+        if (++tTimer >= 0x21)
         {
             tTimer = 0;
             gTasks[taskId].tState++;
@@ -1323,7 +1331,7 @@ static void Task_CrystalScene_Silhouette(u8 taskId)
         break;
     case 3:
         // Hold the white screen for a moment, then go to the title screen
-        if (++tTimer > 0x40)
+        if (++tTimer >= 0x40)
         {
             DestroyTask(taskId);
             SetMainCallback2(MainCB2_EndIntro);
