@@ -69,7 +69,7 @@ static void Task_CrystalScene_Silhouette(u8);
 static void SpriteCB_CrystalPulse(struct Sprite *);
 static void SpriteCB_CrystalSuicune(struct Sprite *);
 static void SpriteCB_CrystalHop(struct Sprite *);
-static void SpriteCB_CrystalBob(struct Sprite *);
+static void SpriteCB_CrystalUnownBack(struct Sprite *);
 
 static void MainCB2_EndIntro(void);
 
@@ -545,7 +545,7 @@ static const u16 sLC_PulsePal[] = INCGFX_U16("graphics/intro/crystal/pulse.png",
 static const struct CompressedSpriteSheet sLC_SpriteSheet_Suicune = {sLC_SuicuneRunGfx, 0x2000, TAG_LC_SUICUNE};
 static const struct CompressedSpriteSheet sLC_SpriteSheet_Pichu = {sLC_PichuGfx, 0x1800, TAG_LC_PICHU};
 static const struct CompressedSpriteSheet sLC_SpriteSheet_Wooper = {sLC_WooperGfx, 0x200, TAG_LC_WOOPER};
-static const struct CompressedSpriteSheet sLC_SpriteSheet_UnownBack = {sLC_UnownBackGfx, 0x400, TAG_LC_UNOWN};
+static const struct CompressedSpriteSheet sLC_SpriteSheet_UnownBack = {sLC_UnownBackGfx, 0x1400, TAG_LC_UNOWN}; // 5 frames of 32x64
 static const struct CompressedSpriteSheet sLC_SpriteSheet_Pulse = {sLC_PulseGfx, 0x3800, TAG_LC_PULSE};
 
 static const struct SpritePalette sLC_SpritePalette_Suicune = {sLC_SuicuneRunPal, TAG_LC_SUICUNE};
@@ -611,6 +611,17 @@ static const union AnimCmd sLC_Anim_SingleFrame32[] =
 };
 static const union AnimCmd *const sLC_Anims_SingleFrame32[] = {sLC_Anim_SingleFrame32};
 
+static const union AnimCmd sLC_Anim_UnownBack[] =
+    {
+        ANIMCMD_FRAME(0, 3),
+        ANIMCMD_FRAME(32, 3),
+        ANIMCMD_FRAME(64, 3),
+        ANIMCMD_FRAME(96, 7),
+        ANIMCMD_FRAME(128, 7),
+        ANIMCMD_END,
+};
+static const union AnimCmd *const sLC_Anims_UnownBack[] = {sLC_Anim_UnownBack};
+
 // One anim per pulse ring radius (7 frames of 64x64 = 64 tiles each)
 #define LC_PULSE_FRAME(n)                            \
     static const union AnimCmd sLC_Anim_Pulse##n[] = \
@@ -665,8 +676,8 @@ static const struct SpriteTemplate sLC_SpriteTemplate_UnownBack =
         .tileTag = TAG_LC_UNOWN,
         .paletteTag = TAG_LC_UNOWN,
         .oam = &sLC_OamData_32x64,
-        .anims = sLC_Anims_SingleFrame32,
-        .callback = SpriteCB_CrystalBob,
+        .anims = sLC_Anims_UnownBack,
+        .callback = SpriteCB_CrystalUnownBack,
 };
 static const struct SpriteTemplate sLC_SpriteTemplate_Pulse =
     {
@@ -863,11 +874,17 @@ static void SpriteCB_CrystalHop(struct Sprite *sprite)
     }
 }
 
-// Gentle floating for the Unown sprite
-static void SpriteCB_CrystalBob(struct Sprite *sprite)
+// The original intro holds this Unown offscreen until scene frame 0x40.
+static void SpriteCB_CrystalUnownBack(struct Sprite *sprite)
 {
-    sprite->sTimer += 2;
-    sprite->y2 = Sin(sprite->sTimer & 0xFF, 3);
+    sprite->invisible = TRUE;
+    sprite->animPaused = TRUE;
+    if (++sprite->sTimer > 0x40)
+    {
+        sprite->invisible = FALSE;
+        sprite->animPaused = FALSE;
+        sprite->callback = SpriteCallbackDummy;
+    }
 }
 
 //------------------------------------------------- scene: Unown A fades in
