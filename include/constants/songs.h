@@ -545,6 +545,7 @@
 #define SE_GAMEFREAKPRESENTS        610
 #define SE_DITTOBOUNCE              611
 #define SE_DITTOTRANSFORM           612
+#define SE_INTROUNOWN1              613
 
 #define MUS_ROUTE118                0x7FFF  // Map is split into 2 music sections. controlled by GetCurrLocationDefaultMusic().
 

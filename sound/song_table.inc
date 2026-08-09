@@ -619,6 +619,7 @@ gSongTable::
 	song se_gamefreakpresents, MUSIC_PLAYER_SE1, 1
 	song se_dittobounce, MUSIC_PLAYER_SE1, 1
 	song se_dittotransform, MUSIC_PLAYER_SE1, 1
+	song se_introunown1, MUSIC_PLAYER_SE1, 1
 
 	.align 2
 dummy_song_header:

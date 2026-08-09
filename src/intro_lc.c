@@ -915,7 +915,10 @@ static void Task_CrystalScene_UnownA(u8 taskId)
         return;
     }
     if (tTimer == LC_UNOWN_A_START_DELAY + 0x60)
+    {
         CrystalIntro_CreatePulse(LC_SCREEN_X + 80, LC_SCREEN_Y + 72); // on the Unown's eye
+        PlaySE(SE_INTROUNOWN1);
+    }
     if (tTimer >= LC_UNOWN_A_START_DELAY)
         CrystalIntro_UnownFadePal(0, tTimer - LC_UNOWN_A_START_DELAY);
     tTimer++;
