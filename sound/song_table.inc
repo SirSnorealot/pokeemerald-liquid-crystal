@@ -622,6 +622,10 @@ gSongTable::
 	song se_introunown1, MUSIC_PLAYER_SE1, 1
 	song se_introunown2, MUSIC_PLAYER_SE1, 1
 	song se_introunown3, MUSIC_PLAYER_SE1, 1
+	song se_intropichu, MUSIC_PLAYER_SE1, 1
+	song se_introsuicune2, MUSIC_PLAYER_SE1, 1
+	song se_introsuicune3, MUSIC_PLAYER_SE1, 1
+	song se_introsuicune4, MUSIC_PLAYER_SE1, 1
 
 	.align 2
 dummy_song_header:

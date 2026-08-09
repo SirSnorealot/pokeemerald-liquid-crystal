@@ -4538,7 +4538,11 @@ static void DebugAction_DestroyFollowerNPC(u8 taskId)
     X(SE_DITTOTRANSFORM)            \
     X(SE_INTROUNOWN1)               \
     X(SE_INTROUNOWN2)               \
-    X(SE_INTROUNOWN3)
+    X(SE_INTROUNOWN3)               \
+    X(SE_INTROPICHU)                \
+    X(SE_INTROSUICUNE2)             \
+    X(SE_INTROSUICUNE3)             \
+    X(SE_INTROSUICUNE4)
 
 // Create song list
 #define X(songId) [songId] = COMPOUND_STRING(#songId),

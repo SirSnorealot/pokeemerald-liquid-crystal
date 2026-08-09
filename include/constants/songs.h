@@ -548,6 +548,10 @@
 #define SE_INTROUNOWN1              613
 #define SE_INTROUNOWN2              614
 #define SE_INTROUNOWN3              615
+#define SE_INTROPICHU               616
+#define SE_INTROSUICUNE2            617
+#define SE_INTROSUICUNE3            618
+#define SE_INTROSUICUNE4            619
 
 #define MUS_ROUTE118                0x7FFF  // Map is split into 2 music sections. controlled by GetCurrLocationDefaultMusic().
 

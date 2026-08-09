@@ -1028,6 +1028,8 @@ static void Task_CrystalScene_SuicuneRun(u8 taskId)
 
     if (tTimer >= 0x70)
     {
+        // Matches Crystal's IntroScene8 .finish, as Suicune exits
+        PlaySE(SE_INTROSUICUNE2);
         gTasks[taskId].func = Task_CrystalScene_Grass_Load;
         return;
     }
@@ -1044,6 +1046,7 @@ static void Task_CrystalScene_SuicuneRun(u8 taskId)
         u8 spriteId = CreateSprite(&sLC_SpriteTemplate_Suicune, DISPLAY_WIDTH + 64, 107, 1);
         if (spriteId != MAX_SPRITES)
             gSprites[spriteId].sState = LC_SUICUNE_RUN;
+        PlaySE(SE_INTROSUICUNE3);
     }
     tTimer++;
 }
@@ -1075,9 +1078,15 @@ static void Task_CrystalScene_Grass(u8 taskId)
     if (tTimer < 36 && (tTimer & 3) == 0)
         CpuCopy16(grassFrames[(tTimer >> 2) & 3], (void *)(BG_CHAR_ADDR(0) + 9 * TILE_SIZE_4BPP), 4 * TILE_SIZE_4BPP);
     if (tTimer == 0x20)
+    {
         CreateSprite(&sLC_SpriteTemplate_Wooper, 76, 132, 1);
+        PlaySE(SE_INTROPICHU);
+    }
     if (tTimer == 0x40)
+    {
         CreateSprite(&sLC_SpriteTemplate_Pichu, 172, 132, 1);
+        PlaySE(SE_INTROPICHU);
+    }
     tTimer++;
 }
 
@@ -1190,7 +1199,10 @@ static void Task_CrystalScene_Approach(u8 taskId)
     if (tTimer == 0x40)
         gSprites[gTasks[taskId].tSpriteId].sState = LC_SUICUNE_RUN_SLOW;
     if (tTimer == 0x60)
+    {
         gSprites[gTasks[taskId].tSpriteId].sState = LC_SUICUNE_DASH;
+        PlaySE(SE_INTROSUICUNE4);
+    }
     tTimer++;
 }
 

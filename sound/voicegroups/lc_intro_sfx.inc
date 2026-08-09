@@ -8,7 +8,6 @@ voice_group lc_intro_sfx
 	voice_square_1 60, 0, 0, 2, 1, 2, 0, 2
 @ 001 Sfx_IntroUnown3: GB ch7 = wave channel; Crystal wave #2, NR32 volume carried by velocity
 	voice_programmable_wave 60, 0, ProgrammableWaveData_LcWave2, 0, 7, 15, 0
-@	voice_square_1 60, 0, 0, 0, 0, 2, 0, 2 @ old: misread ch7 as square
 @ 002 Sfx_DittoPopUp drop: 50% duty, pitch_sweep 1, -6 (NR10 0x1E), fade 2
 	voice_square_1 60, 0, 30, 2, 0, 2, 0, 1
 @ 003 Sfx_DittoPopUp rise: 50% duty, pitch_sweep 1, 6 (NR10 0x16), fade 1
@@ -38,11 +37,11 @@ voice_group lc_intro_sfx
 
 @ Noise (GB ch8) voices; period = NR43 width bit (0 = 15-bit hiss, 1 = 7-bit buzz).
 @ Noise pitch (NR43 divider) comes from the midi key, not the voice.
-@ 015 Sfx_IntroSuicune1 open: 7-bit (noise 0x59), fade 8
+@ 015 unused (was Sfx_IntroSuicune1 open): 7-bit (noise 0x59), fade 8; kept so later program numbers don't shift
 	voice_noise_alt 60, 0, 1, 0, 7, 0, 7
 @ 016 Sfx_IntroSuicune4 cracks: 7-bit (noise 0x5C/0x4D), fade 1
 	voice_noise_alt 60, 0, 1, 0, 1, 0, 1
-@ 017 Sfx_IntroSuicune1 tail / Suicune2 taps: 15-bit, fade 1
+@ 017 Sfx_IntroSuicune2 taps: 15-bit, fade 1
 	voice_noise_alt 60, 0, 0, 0, 1, 0, 1
 @ 018 Sfx_IntroSuicune2/4 body: 15-bit, fade 2
 	voice_noise_alt 60, 0, 0, 0, 2, 0, 2
