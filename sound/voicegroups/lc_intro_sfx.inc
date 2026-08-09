@@ -6,8 +6,9 @@ voice_group lc_intro_sfx
 
 @ 000 Sfx_IntroUnown1/2: 50% duty, swell in (square_note 8, 3, -1), fade out (square_note 32, 14, 2)
 	voice_square_1 60, 0, 0, 2, 1, 2, 0, 2
-@ 001 Sfx_IntroUnown3: 12.5% duty (default), re-triggered fade-2 pulses at 1986
-	voice_square_1 60, 0, 0, 0, 0, 2, 0, 2
+@ 001 Sfx_IntroUnown3: GB ch7 = wave channel; Crystal wave #2, NR32 volume carried by velocity
+	voice_programmable_wave 60, 0, ProgrammableWaveData_LcWave2, 0, 7, 15, 0
+@	voice_square_1 60, 0, 0, 0, 0, 2, 0, 2 @ old: misread ch7 as square
 @ 002 Sfx_DittoPopUp drop: 50% duty, pitch_sweep 1, -6 (NR10 0x1E), fade 2
 	voice_square_1 60, 0, 30, 2, 0, 2, 0, 1
 @ 003 Sfx_DittoPopUp rise: 50% duty, pitch_sweep 1, 6 (NR10 0x16), fade 1
