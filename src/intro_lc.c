@@ -133,6 +133,15 @@ enum
 #define LC_BGCNT_ALT (BGCNT_PRIORITY(0) | BGCNT_CHARBASE(0) | BGCNT_SCREENBASE(29) | BGCNT_16COLOR | BGCNT_TXT256x256)
 #define LC_BGCNT_512 (BGCNT_PRIORITY(0) | BGCNT_CHARBASE(0) | BGCNT_SCREENBASE(28) | BGCNT_16COLOR | BGCNT_TXT512x256)
 
+// Foreground grass strip (BG1) that hides the bottom of the pop-up sprites in the grass scene
+#define LC_BGCNT_256_BEHIND (BGCNT_PRIORITY(1) | BGCNT_CHARBASE(0) | BGCNT_SCREENBASE(28) | BGCNT_16COLOR | BGCNT_TXT256x256)
+#define LC_BGCNT_GRASS_FG (BGCNT_PRIORITY(0) | BGCNT_CHARBASE(0) | BGCNT_SCREENBASE(30) | BGCNT_16COLOR | BGCNT_TXT256x256)
+#define LC_GRASS_FG_SCREENBASE 30
+#define LC_GRASS_FG_BLANK_TILE 511 // unused char slot, cleared at load
+#define LC_GRASS_FG_TILE_START 512 // unused char slots for the static grass1/2/3 tiles
+#define LC_GRASS_FG_TOP_ROW 16    // strip sits over the sprites' bottoms (screen y 136-151)
+#define LC_GRASS_FG_BACKDROP 0xC  // solid filler color in grass1/2/3, keyed out to transparent
+
 // Suicune sprite states
 enum
 {
@@ -781,12 +790,58 @@ static void CrystalIntro_LoadPanorama(u8 taskId)
     CrystalIntro_StartPanoramaScanlineEffect();
 }
 
+// Foreground grass strip on BG1.
+static void CrystalIntro_CreateGrassFgStrip(u8 taskId)
+{
+    static const u32 *const grassGfx[3] = {sLC_Grass1Gfx, sLC_Grass2Gfx, sLC_Grass3Gfx};
+    u16 *fgMap = (u16 *)BG_SCREEN_ADDR(LC_GRASS_FG_SCREENBASE);
+    u32 buf[4 * TILE_SIZE_4BPP / 4];
+    u32 f, i, n, col;
+
+    for (f = 0; f < 3; f++)
+    {
+        for (i = 0; i < ARRAY_COUNT(buf); i++)
+        {
+            u32 v = grassGfx[f][i];
+            u32 out = 0;
+            for (n = 0; n < 32; n += 4)
+            {
+                u32 nib = (v >> n) & 0xF;
+                if (nib != LC_GRASS_FG_BACKDROP)
+                    out |= nib << n;
+            }
+            buf[i] = out;
+        }
+        CpuCopy16(buf, (void *)(BG_CHAR_ADDR(0) + (LC_GRASS_FG_TILE_START + f * 4) * TILE_SIZE_4BPP), 4 * TILE_SIZE_4BPP);
+    }
+    DmaFill16(3, 0, (void *)(BG_CHAR_ADDR(0) + LC_GRASS_FG_BLANK_TILE * TILE_SIZE_4BPP), TILE_SIZE_4BPP);
+    DmaFill16(3, LC_GRASS_FG_BLANK_TILE, (void *)BG_SCREEN_ADDR(LC_GRASS_FG_SCREENBASE), BG_SCREEN_SIZE);
+    for (col = 0; col < 32; col += 2)
+    {
+        u16 base = LC_GRASS_FG_TILE_START + ((col >> 1) % 3) * 4; // alternate grass1/2/3 across the row
+        fgMap[LC_GRASS_FG_TOP_ROW * 32 + col] = base;
+        fgMap[LC_GRASS_FG_TOP_ROW * 32 + col + 1] = base + 1;
+        fgMap[(LC_GRASS_FG_TOP_ROW + 1) * 32 + col] = base + 2;
+        fgMap[(LC_GRASS_FG_TOP_ROW + 1) * 32 + col + 1] = base + 3;
+    }
+    SetGpuReg(REG_OFFSET_BG0CNT, LC_BGCNT_256_BEHIND); // sprites go between BG0 and BG1
+    SetGpuReg(REG_OFFSET_BG1CNT, LC_BGCNT_GRASS_FG);
+    SetGpuReg(REG_OFFSET_BG1HOFS, gTasks[taskId].tGrassX); // scrolls with the grass band
+    SetGpuReg(REG_OFFSET_BG1VOFS, LC_BG_VOFS);
+    SetGpuRegBits(REG_OFFSET_DISPCNT, DISPCNT_BG1_ON);
+}
+
 //------------------------------------------------------------------ sprites
 
 #define sTimer data[1]
 #define sMatrix data[2]
 #define sRadius data[3]
 #define sDelay data[4]
+#define sHopHeight data[5]
+
+// Pichu's artwork is cut off below the grass strip, so it must stay lower
+#define LC_HOP_HEIGHT_WOOPER 12
+#define LC_HOP_HEIGHT_PICHU 6
 
 #define LC_PULSE_MAX_DRAWN_RADIUS 28
 #define LC_PULSE_MAX_RADIUS 56
@@ -865,7 +920,7 @@ static void SpriteCB_CrystalHop(struct Sprite *sprite)
         sprite->sTimer += 3;
         if (sprite->sTimer > 128)
             sprite->sTimer = 128;
-        sprite->y2 = -Sin(sprite->sTimer, 8);
+        sprite->y2 = -Sin(sprite->sTimer, sprite->sHopHeight);
     }
     else
     {
@@ -933,6 +988,7 @@ static void Task_CrystalScene_Panorama1_Load(u8 taskId)
     gTasks[taskId].tTreeX = 0;
     gTasks[taskId].tGrassX = 0;
     CrystalIntro_LoadPanorama(taskId);
+    CrystalIntro_CreateGrassFgStrip(taskId);
     // Fade in from the black gap between scenes
     BeginNormalPaletteFade(PALETTES_ALL, 0, 16, 0, RGB_BLACK);
     gTasks[taskId].tTimer = 0;
@@ -959,6 +1015,7 @@ static void Task_CrystalScene_Panorama1(u8 taskId)
         tTreeX++;
     tGrassX += 2;
     CrystalIntro_UpdatePanoramaScroll(tTreeX, tGrassX);
+    SetGpuReg(REG_OFFSET_BG1HOFS, tGrassX); // grass strip scrolls with the band
     tTimer++;
 }
 
@@ -1016,6 +1073,7 @@ static void Task_CrystalScene_SuicuneRun_Load(u8 taskId)
     LoadCompressedSpriteSheet(&sLC_SpriteSheet_Wooper);
     LoadSpritePalette(&sLC_SpritePalette_Wooper);
     CrystalIntro_LoadPanorama(taskId);
+    CrystalIntro_CreateGrassFgStrip(taskId);
     // Fade in from the black gap between scenes
     BeginNormalPaletteFade(PALETTES_ALL, 0, 16, 0, RGB_BLACK);
     gTasks[taskId].tTimer = 0;
@@ -1040,6 +1098,7 @@ static void Task_CrystalScene_SuicuneRun(u8 taskId)
             tTreeX++;
         tGrassX += 2;
         CrystalIntro_UpdatePanoramaScroll(tTreeX, tGrassX);
+        SetGpuReg(REG_OFFSET_BG1HOFS, tGrassX); // grass strip scrolls with the band
     }
     else if (tTimer == 0x40)
     {
@@ -1055,7 +1114,7 @@ static void Task_CrystalScene_SuicuneRun(u8 taskId)
 
 static void Task_CrystalScene_Grass_Load(u8 taskId)
 {
-    // Same panorama stays loaded; the camera just sits still now
+    // Same panorama and grass strip stay loaded; the camera just sits still now
     gTasks[taskId].tTimer = 0;
     gTasks[taskId].func = Task_CrystalScene_Grass;
 }
@@ -1079,12 +1138,22 @@ static void Task_CrystalScene_Grass(u8 taskId)
         CpuCopy16(grassFrames[(tTimer >> 2) & 3], (void *)(BG_CHAR_ADDR(0) + 9 * TILE_SIZE_4BPP), 4 * TILE_SIZE_4BPP);
     if (tTimer == 0x20)
     {
-        CreateSprite(&sLC_SpriteTemplate_Wooper, 76, 132, 1);
+        u8 spriteId = CreateSprite(&sLC_SpriteTemplate_Wooper, 76, 132, 1);
+        if (spriteId != MAX_SPRITES)
+        {
+            gSprites[spriteId].oam.priority = 1; // behind the BG1 grass strip
+            gSprites[spriteId].sHopHeight = LC_HOP_HEIGHT_WOOPER;
+        }
         PlaySE(SE_INTROPICHU);
     }
     if (tTimer == 0x40)
     {
-        CreateSprite(&sLC_SpriteTemplate_Pichu, 172, 132, 1);
+        u8 spriteId = CreateSprite(&sLC_SpriteTemplate_Pichu, 172, 132, 1);
+        if (spriteId != MAX_SPRITES)
+        {
+            gSprites[spriteId].oam.priority = 1; // behind the BG1 grass strip
+            gSprites[spriteId].sHopHeight = LC_HOP_HEIGHT_PICHU;
+        }
         PlaySE(SE_INTROPICHU);
     }
     tTimer++;
@@ -1241,7 +1310,6 @@ static void Task_CrystalScene_Jump(u8 taskId)
         BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
     if (tTimer >= 0x80)
     {
-        // gTasks[taskId].func = Task_CrystalScene_Close_Load;
         if (!gPaletteFade.active)
             gTasks[taskId].func = Task_CrystalScene_Close_Load;
         return;
