@@ -55,7 +55,7 @@ Algratue – A lot of the music included in beta 3.1 & OW sprites.
 
 ## Pokeemerald Credits
 
-Based off RHH's [pokeemerald-expansion 1.16.3](https://github.com/rh-hideout/pokeemerald-expansion/).
+Based off RHH's [pokeemerald-expansion 1.17.0](https://github.com/rh-hideout/pokeemerald-expansion/).
 
 Credits for pokeemerald-expansion can be found [here](https://github.com/rh-hideout/pokeemerald-expansion/blob/master/CREDITS.md).
 

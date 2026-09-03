@@ -1,7 +1,6 @@
 
 
 
-
 const u16 gTilesetPalettes_building_lc[][16] =
 {
 	INCGFX_U16("data/tilesets/primary/_building_lc/palettes/00.pal", ".gbapal"),
