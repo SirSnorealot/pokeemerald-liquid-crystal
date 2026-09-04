@@ -13,8 +13,6 @@
 #include "text.h"
 #include "constants/songs.h"
 
-#if IS_FRLG
-
 #define CONDITION_MONS_LOADED 3
 
 struct Pokenav_ConditionMenu
@@ -625,5 +623,3 @@ u8 GetNumConditionMonSparkles(void)
     struct Pokenav_ConditionMenu *menu = GetSubstructPtr(POKENAV_SUBSTRUCT_CONDITION_GRAPH_MENU);
     return menu->numSparkles[menu->loadId];
 }
-
-#endif // !IS_FRLG

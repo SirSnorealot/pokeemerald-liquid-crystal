@@ -15,8 +15,6 @@
 #include "strings.h"
 #include "text.h"
 
-#if IS_FRLG
-
 static u32 LoopedTask_TransitionMons(s32);
 static u32 LoopedTask_ExitConditionGraphMenu(s32);
 static u32 LoopedTask_MoveCursorNoTransition(s32);
@@ -900,5 +898,3 @@ u8 GetMonMarkingsData(void)
     else
         return 0;
 }
-
-#endif // !IS_FRLG

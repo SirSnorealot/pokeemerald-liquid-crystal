@@ -24,8 +24,6 @@
 #include "constants/region_map_sections.h"
 #include "constants/songs.h"
 
-#if IS_FRLG
-
 #define GFXTAG_CURSOR 7
 #define GFXTAG_TRAINER_PIC 8
 #define PALTAG_CURSOR 12
@@ -1299,5 +1297,3 @@ static void SpriteCB_TrainerPicSlideOffscreen(struct Sprite *sprite)
         sprite->callback = SpriteCallbackDummy;
     }
 }
-
-#endif // !IS_FRLG

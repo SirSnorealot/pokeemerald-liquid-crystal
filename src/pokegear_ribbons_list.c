@@ -9,8 +9,6 @@
 #include "international_string_util.h"
 #include "constants/songs.h"
 
-#if IS_FRLG
-
 enum
 {
     RIBBONS_MON_LIST_FUNC_NONE,
@@ -748,5 +746,3 @@ static void BufferRibbonMonInfoText(struct PokenavListItem *listItem, u8 *dest)
     dest = GetStringClearToWidth(dest, FONT_NORMAL, gStringVar1, 54);
     ConvertIntToDecimalStringN(dest, item->data, STR_CONV_MODE_RIGHT_ALIGN, 2);
 }
-
-#endif // !IS_FRLG

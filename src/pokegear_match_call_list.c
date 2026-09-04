@@ -14,8 +14,6 @@
 #include "strings.h"
 #include "constants/songs.h"
 
-#if IS_FRLG
-
 struct Pokenav_MatchCallMenu
 {
     u16 optionCursorPos;
@@ -526,5 +524,3 @@ static bool32 ShouldDoNearbyMessage(void)
 #endif //FREE_MATCH_CALL
     return FALSE;
 }
-
-#endif // !IS_FRLG

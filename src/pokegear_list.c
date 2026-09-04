@@ -8,8 +8,6 @@
 #include "decompress.h"
 #include "international_string_util.h"
 
-#if IS_FRLG
-
 #define GFXTAG_ARROW 10
 #define PALTAG_ARROW 20
 
@@ -998,5 +996,3 @@ static bool32 CopyPokenavListMenuTemplate(struct PokenavList *dest, const struct
     dest->downArrow = NULL;
     return 1;
 }
-
-#endif // !IS_FRLG

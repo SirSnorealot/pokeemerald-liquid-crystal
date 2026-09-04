@@ -11,7 +11,6 @@
 #include "constants/region_map_sections.h"
 #include "constants/trainers.h"
 
-#if IS_FRLG
 
 // NPC below means non-trainer character (no rematch or check page)
 // Steven also uses this type but has a check page by using a MatchCallCheckPageOverride
@@ -1139,5 +1138,3 @@ void SetMatchCallRegisteredFlag(void)
     if (index >= 0)
         FlagSet(TRAINER_REGISTERED_FLAGS_START + index);
 }
-
-#endif // !IS_FRLG

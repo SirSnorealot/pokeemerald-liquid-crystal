@@ -5,8 +5,6 @@
 #include "sound.h"
 #include "constants/songs.h"
 
-#if IS_FRLG
-
 struct Pokenav_Menu
 {
     u16 menuType;
@@ -513,5 +511,3 @@ u16 GetHelpBarTextId(void)
     struct Pokenav_Menu *menu = GetSubstructPtr(POKENAV_SUBSTRUCT_MAIN_MENU_HANDLER);
     return menu->helpBarIndex;
 }
-
-#endif // !IS_FRLG

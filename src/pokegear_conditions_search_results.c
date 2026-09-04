@@ -11,8 +11,6 @@
 #include "international_string_util.h"
 #include "constants/songs.h"
 
-#if IS_FRLG
-
 enum
 {
     CONDITION_SEARCH_FUNC_NONE,
@@ -751,5 +749,3 @@ static void BufferSearchMonListItem(struct PokenavMonListItem *item, u8 *dest)
     ConvertIntToDecimalStringN(s, level, STR_CONV_MODE_LEFT_ALIGN, 3);
     GetStringClearToWidth(dest, FONT_NORMAL, gStringVar1, 40);
 }
-
-#endif // !IS_FRLG

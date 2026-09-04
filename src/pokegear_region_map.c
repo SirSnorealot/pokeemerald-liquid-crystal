@@ -20,8 +20,6 @@
 #include "constants/songs.h"
 #include "constants/region_map_sections.h"
 
-#if IS_FRLG
-
 #define GFXTAG_CITY_ZOOM 6
 #define PALTAG_CITY_ZOOM 11
 
@@ -790,5 +788,3 @@ void UpdateRegionMapHelpBarText(void)
             PrintHelpBarText(HELPBAR_MAP_ZOOMED_OUT);
     }
 }
-
-#endif // !IS_FRLG

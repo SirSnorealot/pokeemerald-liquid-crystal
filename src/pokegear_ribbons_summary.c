@@ -14,8 +14,6 @@
 #include "window.h"
 #include "constants/songs.h"
 
-#if IS_FRLG
-
 enum
 {
     RIBBONS_SUMMARY_FUNC_NONE,
@@ -1277,5 +1275,3 @@ static void SpriteCB_WaitForRibbonAnimation(struct Sprite *sprite)
         sprite->callback = SpriteCallbackDummy;
     }
 }
-
-#endif // !IS_FRLG

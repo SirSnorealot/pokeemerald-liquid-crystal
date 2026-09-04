@@ -17,8 +17,6 @@
 #include "constants/songs.h"
 #include "constants/rgb.h"
 
-#if IS_FRLG
-
 #define GFXTAG_BLUE_LIGHT 1
 #define GFXTAG_OPTIONS    3
 
@@ -1377,5 +1375,3 @@ void ResetBldCnt_(void)
 {
     ResetBldCnt();
 }
-
-#endif // !IS_FRLG
