@@ -1500,6 +1500,9 @@ static void Task_CrystalScene_Back(u8 taskId)
 
 //------------------------------------- scene: silhouette, then fade to white
 
+#define LC_SUICUNE_BACK_PALETTE 1
+#define LC_SILHOUETTE_FADE_FRAMES 16
+
 static void Task_CrystalScene_Silhouette(u8 taskId)
 {
     s16 *data = gTasks[taskId].data;
@@ -1507,11 +1510,13 @@ static void Task_CrystalScene_Silhouette(u8 taskId)
     switch (gTasks[taskId].tState)
     {
     case 0:
-        // Suicune turns to a silhouette as it leaps away
-        SetGpuReg(REG_OFFSET_BG0CNT, LC_BGCNT_ALT);
+        // Suicune fades to a silhouette as it leaps away
         CrystalIntro_ScrollSpeedLines(taskId);
-        if (++tTimer >= 4)
+        BlendPalettes(1 << LC_SUICUNE_BACK_PALETTE, tTimer, RGB_BLACK);
+        if (++tTimer > LC_SILHOUETTE_FADE_FRAMES)
         {
+            // Keep the silhouette as the source for the fade to white
+            CpuCopy16(&gPlttBufferFaded[BG_PLTT_ID(LC_SUICUNE_BACK_PALETTE)], &gPlttBufferUnfaded[BG_PLTT_ID(LC_SUICUNE_BACK_PALETTE)], PLTT_SIZE_4BPP);
             tTimer = 0;
             gTasks[taskId].tState++;
         }
