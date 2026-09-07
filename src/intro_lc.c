@@ -142,6 +142,21 @@ enum
 #define LC_GRASS_FG_TOP_ROW 16    // strip sits over the sprites' bottoms (screen y 136-151)
 #define LC_GRASS_FG_BACKDROP 0xC  // solid filler color in grass1/2/3, keyed out to transparent
 
+// Speed lines (BG1) streaking down behind Suicune in the orange scenes. Crystal draws
+// these as 20 single-tile OBJs (Crystal's "grass4") in a zigzag wave, behind the BG, moving 16px/frame and
+// wrapping every 256px; a 256px-tall BG behind BG0 reproduces that exactly.
+#define LC_BGCNT_SPEED_LINES (BGCNT_PRIORITY(1) | BGCNT_CHARBASE(0) | BGCNT_SCREENBASE(30) | BGCNT_16COLOR | BGCNT_TXT256x256)
+#define LC_SPEED_LINES_SCREENBASE 30
+#define LC_SPEED_LINES_BLANK_TILE 511
+#define LC_SPEED_LINES_TILE 512
+#define LC_SPEED_LINES_PALETTE 8 // first BG palette not used by the GBC art
+#define LC_SPEED_LINES_START_Y (LC_SCREEN_Y + 80) // Crystal spawns the wave at OAM y 96
+#define LC_SPEED_LINES_SPEED 16
+// The GBC art's orange (color 0) became color 1 in the converted tilesheets
+#define LC_ART_ORANGE_INDEX 1
+#define LC_SUICUNE_JUMP_NUM_TILES 144 // 128x72 tilesheet
+#define LC_SUICUNE_BACK_NUM_TILES 272 // 128x136 tilesheet
+
 // Suicune sprite states
 enum
 {
@@ -528,6 +543,8 @@ static const u16 sLC_BackgroundPal[] = INCGFX_U16("graphics/intro/crystal/backgr
 static const u32 sLC_Grass1Gfx[] = INCGFX_U32("graphics/intro/crystal/grass1.png", ".4bpp");
 static const u32 sLC_Grass2Gfx[] = INCGFX_U32("graphics/intro/crystal/grass2.png", ".4bpp");
 static const u32 sLC_Grass3Gfx[] = INCGFX_U32("graphics/intro/crystal/grass3.png", ".4bpp");
+static const u32 sLC_SpeedLineGfx[] = INCGFX_U32("graphics/intro/crystal/speed_line.png", ".4bpp");
+static const u16 sLC_SpeedLinePal[] = INCGFX_U16("graphics/intro/crystal/speed_line.png", ".gbapal");
 static const u32 sLC_SuicuneJumpTiles[] = INCGFX_U32("graphics/intro/crystal/suicune_jump_tiles.png", ".4bpp.smol");
 static const u32 sLC_SuicuneJumpMap[] = INCGFX_U32("graphics/intro/crystal/suicune_jump_map.bin", ".smolTM");
 static const u32 sLC_SuicuneJumpMap2[] = INCGFX_U32("graphics/intro/crystal/suicune_jump_map2.bin", ".smolTM");
@@ -716,6 +733,7 @@ static const u16 sLC_AppearUnownColors[4] =
 #define tSpriteId data[4]
 #define tScroll data[5]
 #define tMapFrame data[6]
+#define tSpeedLinesY data[7]
 
 //--------------------------------------------------------------- BG helpers
 
@@ -829,6 +847,54 @@ static void CrystalIntro_CreateGrassFgStrip(u8 taskId)
     SetGpuReg(REG_OFFSET_BG1HOFS, gTasks[taskId].tGrassX); // scrolls with the grass band
     SetGpuReg(REG_OFFSET_BG1VOFS, LC_BG_VOFS);
     SetGpuRegBits(REG_OFFSET_DISPCNT, DISPCNT_BG1_ON);
+}
+
+// Key out the art's orange so BG1 behind it shows through, as the GBC's
+// behind-BG OBJs did over BG color 0. The backdrop is set to orange instead.
+static void CrystalIntro_MakeOrangeTransparent(u32 numTiles)
+{
+    u32 *tiles = (u32 *)BG_CHAR_ADDR(0);
+    u32 i, n;
+
+    for (i = 0; i < numTiles * (TILE_SIZE_4BPP / 4); i++)
+    {
+        u32 v = tiles[i];
+        u32 out = 0;
+        for (n = 0; n < 32; n += 4)
+        {
+            u32 nib = (v >> n) & 0xF;
+            if (nib != LC_ART_ORANGE_INDEX)
+                out |= nib << n;
+        }
+        tiles[i] = out;
+    }
+}
+
+// Speed lines on BG1, behind BG0. One zigzag wave of speed line tiles across the map.
+static void CrystalIntro_CreateSpeedLines(u8 taskId)
+{
+    // Column heights of Crystal's IntroSuicuneAway OAM set, starting at GBC x = 8
+    static const u8 rowOffsets[8] = {0, 1, 2, 3, 4, 3, 2, 1};
+    u16 *map = (u16 *)BG_SCREEN_ADDR(LC_SPEED_LINES_SCREENBASE);
+    u32 col;
+
+    LoadPalette(sLC_SpeedLinePal, BG_PLTT_ID(LC_SPEED_LINES_PALETTE), sizeof(sLC_SpeedLinePal));
+    DmaCopy16(3, sLC_SpeedLineGfx, (void *)(BG_CHAR_ADDR(0) + LC_SPEED_LINES_TILE * TILE_SIZE_4BPP), TILE_SIZE_4BPP);
+    DmaFill16(3, 0, (void *)(BG_CHAR_ADDR(0) + LC_SPEED_LINES_BLANK_TILE * TILE_SIZE_4BPP), TILE_SIZE_4BPP);
+    DmaFill16(3, LC_SPEED_LINES_BLANK_TILE, map, BG_SCREEN_SIZE);
+    for (col = 0; col < 32; col++)
+        map[rowOffsets[(col - 1) & 7] * 32 + col] = LC_SPEED_LINES_TILE | (LC_SPEED_LINES_PALETTE << 12);
+    gTasks[taskId].tSpeedLinesY = -LC_SPEED_LINES_START_Y;
+    SetGpuReg(REG_OFFSET_BG1CNT, LC_BGCNT_SPEED_LINES);
+    SetGpuReg(REG_OFFSET_BG1HOFS, LC_BG_HOFS);
+    SetGpuReg(REG_OFFSET_BG1VOFS, gTasks[taskId].tSpeedLinesY);
+    SetGpuRegBits(REG_OFFSET_DISPCNT, DISPCNT_BG1_ON);
+}
+
+static void CrystalIntro_ScrollSpeedLines(u8 taskId)
+{
+    gTasks[taskId].tSpeedLinesY -= LC_SPEED_LINES_SPEED;
+    SetGpuReg(REG_OFFSET_BG1VOFS, gTasks[taskId].tSpeedLinesY);
 }
 
 //------------------------------------------------------------------ sprites
@@ -1284,6 +1350,7 @@ static void Task_CrystalScene_Jump_Load(u8 taskId)
     LoadCompressedSpriteSheet(&sLC_SpriteSheet_UnownBack);
     LoadSpritePalette(&sLC_SpritePalette_UnownBack);
     DecompressDataWithHeaderVram(sLC_SuicuneJumpTiles, (void *)BG_CHAR_ADDR(0));
+    CrystalIntro_MakeOrangeTransparent(LC_SUICUNE_JUMP_NUM_TILES);
     DecompressDataWithHeaderVram(sLC_SuicuneJumpMap, (void *)BG_SCREEN_ADDR(28));
     DecompressDataWithHeaderVram(sLC_SuicuneJumpMap2, (void *)BG_SCREEN_ADDR(29));
     LoadPalette(sLC_SuicunePal, BG_PLTT_ID(0), sizeof(sLC_SuicunePal));
@@ -1291,6 +1358,7 @@ static void Task_CrystalScene_Jump_Load(u8 taskId)
     gPlttBufferUnfaded[0] = RGB(24, 12, 9);
     gPlttBufferFaded[0] = RGB(24, 12, 9);
     CrystalIntro_InitBg(LC_BGCNT_256);
+    CrystalIntro_CreateSpeedLines(taskId);
     CreateSprite(&sLC_SpriteTemplate_UnownBack, LC_SCREEN_X + 40, LC_SCREEN_Y + 64, 1);
     // Fade in from the black gap between scenes
     BeginNormalPaletteFade(PALETTES_ALL, 0, 16, 0, RGB_BLACK);
@@ -1314,6 +1382,7 @@ static void Task_CrystalScene_Jump(u8 taskId)
             gTasks[taskId].func = Task_CrystalScene_Close_Load;
         return;
     }
+    CrystalIntro_ScrollSpeedLines(taskId);
     if (tTimer < 14)
     {
         tScroll += 8;
@@ -1378,6 +1447,7 @@ static void Task_CrystalScene_Back_Load(u8 taskId)
     ResetSpriteData();
     FreeAllSpritePalettes();
     DecompressDataWithHeaderVram(sLC_SuicuneBackTiles, (void *)BG_CHAR_ADDR(0));
+    CrystalIntro_MakeOrangeTransparent(LC_SUICUNE_BACK_NUM_TILES);
     DecompressDataWithHeaderVram(sLC_SuicuneBackMap, (void *)BG_SCREEN_ADDR(28));
     DecompressDataWithHeaderVram(sLC_SuicuneBackMap2, (void *)BG_SCREEN_ADDR(29));
     LoadPalette(sLC_SuicunePal, BG_PLTT_ID(0), sizeof(sLC_SuicunePal));
@@ -1385,6 +1455,7 @@ static void Task_CrystalScene_Back_Load(u8 taskId)
     gPlttBufferUnfaded[0] = RGB(24, 12, 9);
     gPlttBufferFaded[0] = RGB(24, 12, 9);
     CrystalIntro_InitBg(LC_BGCNT_256);
+    CrystalIntro_CreateSpeedLines(taskId);
     gTasks[taskId].tScroll = -48; // pans up to center on Suicune
     SetGpuReg(REG_OFFSET_BG0VOFS, gTasks[taskId].tScroll);
     // Fade in from the black gap between scenes
@@ -1404,6 +1475,7 @@ static void Task_CrystalScene_Back(u8 taskId)
         gTasks[taskId].func = Task_CrystalScene_Silhouette;
         return;
     }
+    CrystalIntro_ScrollSpeedLines(taskId);
     if (tTimer < 0x28 && tScroll < (s16)-LC_SCREEN_Y)
     {
         tScroll++;
@@ -1437,6 +1509,7 @@ static void Task_CrystalScene_Silhouette(u8 taskId)
     case 0:
         // Suicune turns to a silhouette as it leaps away
         SetGpuReg(REG_OFFSET_BG0CNT, LC_BGCNT_ALT);
+        CrystalIntro_ScrollSpeedLines(taskId);
         if (++tTimer >= 4)
         {
             tTimer = 0;
@@ -1444,8 +1517,11 @@ static void Task_CrystalScene_Silhouette(u8 taskId)
         }
         break;
     case 1:
+        CrystalIntro_ScrollSpeedLines(taskId);
         if (++tTimer >= 10)
         {
+            // Crystal clears its OBJs here, before the fade to white
+            ClearGpuRegBits(REG_OFFSET_DISPCNT, DISPCNT_BG1_ON);
             tTimer = 0;
             gTasks[taskId].tState++;
         }
@@ -1482,6 +1558,7 @@ static void Task_CrystalScene_Silhouette(u8 taskId)
 #undef tSpriteId
 #undef tScroll
 #undef tMapFrame
+#undef tSpeedLinesY
 
 //==============================================================================
 // Misc helpers
