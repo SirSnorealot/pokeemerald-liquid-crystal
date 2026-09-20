@@ -1289,6 +1289,12 @@ static void Task_CrystalScene_Unowns(u8 taskId)
 
 //------------------------------------------- scene: Suicune runs and jumps
 
+#define LC_APPROACH_LEN 204   // bars 0-3 (was 0x80)
+#define LC_JUMP_LEN 252       // bars 4-8 (was 0x80)
+#define LC_CLOSE_LEN 152      // bars 9-11 (was 0x60)
+#define LC_BACK_LEN 408       // bars 12-19 (was 0x98)
+#define LC_FADE_OUT_LEAD 21
+
 static void Task_CrystalScene_Approach_Load(u8 taskId)
 {
     u8 spriteId;
@@ -1319,10 +1325,9 @@ static void Task_CrystalScene_Approach(u8 taskId)
 {
     s16 *data = gTasks[taskId].data;
 
-    // The normal fade needs 21 frames, including its completion handoff.
-    if (tTimer == 0x80 - 21)
+    if (tTimer == LC_APPROACH_LEN - LC_FADE_OUT_LEAD)
         BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
-    if (tTimer >= 0x80)
+    if (tTimer >= LC_APPROACH_LEN)
     {
         if (!gPaletteFade.active)
             gTasks[taskId].func = Task_CrystalScene_Jump_Load;
@@ -1331,9 +1336,9 @@ static void Task_CrystalScene_Approach(u8 taskId)
     // The whole background rushes by while Suicune runs
     tScroll -= 10;
     SetGpuReg(REG_OFFSET_BG0HOFS, tScroll);
-    if (tTimer == 0x40)
+    if (tTimer == LC_APPROACH_LEN - 0x40)
         gSprites[gTasks[taskId].tSpriteId].sState = LC_SUICUNE_RUN_SLOW;
-    if (tTimer == 0x60)
+    if (tTimer == LC_APPROACH_LEN - 0x20)
     {
         gSprites[gTasks[taskId].tSpriteId].sState = LC_SUICUNE_DASH;
         PlaySE(SE_INTROSUICUNE4);
@@ -1373,10 +1378,9 @@ static void Task_CrystalScene_Jump(u8 taskId)
 {
     s16 *data = gTasks[taskId].data;
 
-    // The normal fade needs 21 frames, including its completion handoff.
-    if (tTimer == 0x80 - 21)
+    if (tTimer == LC_JUMP_LEN - LC_FADE_OUT_LEAD)
         BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
-    if (tTimer >= 0x80)
+    if (tTimer >= LC_JUMP_LEN)
     {
         if (!gPaletteFade.active)
             gTasks[taskId].func = Task_CrystalScene_Close_Load;
@@ -1401,6 +1405,7 @@ static void Task_CrystalScene_Jump(u8 taskId)
 
 // How far the close-up pans to the right as the artwork slides in.
 #define LC_CLOSE_PAN 56
+#define LC_CLOSE_PAN_SPEED 2 // slower than Crystal's 8px/frame, since the scene holds longer
 
 static void Task_CrystalScene_Close_Load(u8 taskId)
 {
@@ -1422,10 +1427,9 @@ static void Task_CrystalScene_Close(u8 taskId)
 {
     s16 *data = gTasks[taskId].data;
 
-    // The normal fade needs 21 frames, including its completion handoff.
-    if (tTimer == 0x60 - 21)
+    if (tTimer == LC_CLOSE_LEN - LC_FADE_OUT_LEAD)
         BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
-    if (tTimer >= 0x60)
+    if (tTimer >= LC_CLOSE_LEN)
     {
         // gTasks[taskId].func = Task_CrystalScene_Back_Load;
         if (!gPaletteFade.active)
@@ -1434,13 +1438,18 @@ static void Task_CrystalScene_Close(u8 taskId)
     }
     if (tScroll < -LC_SCREEN_X + LC_CLOSE_PAN)
     {
-        tScroll += 8;
+        tScroll += LC_CLOSE_PAN_SPEED;
         SetGpuReg(REG_OFFSET_BG0HOFS, tScroll);
     }
     tTimer++;
 }
 
 //------------------------------------------- scene: Suicune from behind
+
+// The Unowns materialize during the song's rising climax (bars 16-18)
+#define LC_BACK_UNOWN_START 208
+#define LC_BACK_UNOWN_INTERVAL 24
+#define LC_BACK_NUM_UNOWNS 6
 
 static void Task_CrystalScene_Back_Load(u8 taskId)
 {
@@ -1468,7 +1477,7 @@ static void Task_CrystalScene_Back(u8 taskId)
 {
     s16 *data = gTasks[taskId].data;
 
-    if (tTimer >= 0x98)
+    if (tTimer >= LC_BACK_LEN)
     {
         gTasks[taskId].tTimer = 0;
         gTasks[taskId].tState = 0;
@@ -1476,15 +1485,17 @@ static void Task_CrystalScene_Back(u8 taskId)
         return;
     }
     CrystalIntro_ScrollSpeedLines(taskId);
-    if (tTimer < 0x28 && tScroll < (s16)-LC_SCREEN_Y)
+    // Pan up at half of Crystal's speed; the scene holds much longer now
+    if ((tTimer & 1) && tScroll < (s16)-LC_SCREEN_Y)
     {
         tScroll++;
         SetGpuReg(REG_OFFSET_BG0VOFS, tScroll);
     }
-    // Unowns materialize around Suicune, one palette at a time
-    if (tTimer >= 0x40 && tTimer < 0x58 && (tTimer & 3) == 0)
+    // Unowns materialize around Suicune
+    if (tTimer >= LC_BACK_UNOWN_START && tTimer < LC_BACK_UNOWN_START + LC_BACK_NUM_UNOWNS * LC_BACK_UNOWN_INTERVAL
+     && (tTimer - LC_BACK_UNOWN_START) % LC_BACK_UNOWN_INTERVAL == 0)
     {
-        u8 palNum = 2 + ((tTimer - 0x40) >> 2);
+        u8 palNum = 2 + (tTimer - LC_BACK_UNOWN_START) / LC_BACK_UNOWN_INTERVAL;
         u32 i;
         if (palNum <= 7)
         {
@@ -1501,7 +1512,9 @@ static void Task_CrystalScene_Back(u8 taskId)
 //------------------------------------- scene: silhouette, then fade to white
 
 #define LC_SUICUNE_BACK_PALETTE 1
-#define LC_SILHOUETTE_FADE_FRAMES 16
+#define LC_SILHOUETTE_FADE_FRAMES 48 // Suicune darkens over the held note of bars 20-21
+#define LC_SILHOUETTE_HOLD_FRAMES 8
+#define LC_WHITE_HOLD_FRAMES 96 // covers the final chord and the song's trailing bar
 
 static void Task_CrystalScene_Silhouette(u8 taskId)
 {
@@ -1512,7 +1525,7 @@ static void Task_CrystalScene_Silhouette(u8 taskId)
     case 0:
         // Suicune fades to a silhouette as it leaps away
         CrystalIntro_ScrollSpeedLines(taskId);
-        BlendPalettes(1 << LC_SUICUNE_BACK_PALETTE, tTimer, RGB_BLACK);
+        BlendPalettes(1 << LC_SUICUNE_BACK_PALETTE, tTimer * 16 / LC_SILHOUETTE_FADE_FRAMES, RGB_BLACK);
         if (++tTimer > LC_SILHOUETTE_FADE_FRAMES)
         {
             // Keep the silhouette as the source for the fade to white
@@ -1523,7 +1536,7 @@ static void Task_CrystalScene_Silhouette(u8 taskId)
         break;
     case 1:
         CrystalIntro_ScrollSpeedLines(taskId);
-        if (++tTimer >= 10)
+        if (++tTimer >= LC_SILHOUETTE_HOLD_FRAMES)
         {
             // Crystal clears its OBJs here, before the fade to white
             ClearGpuRegBits(REG_OFFSET_DISPCNT, DISPCNT_BG1_ON);
@@ -1544,7 +1557,7 @@ static void Task_CrystalScene_Silhouette(u8 taskId)
         break;
     case 3:
         // Hold the white screen for a moment, then go to the title screen
-        if (++tTimer >= 0x40)
+        if (++tTimer >= LC_WHITE_HOLD_FRAMES)
         {
             DestroyTask(taskId);
             SetMainCallback2(MainCB2_EndIntro);
