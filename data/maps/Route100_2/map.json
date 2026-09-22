@@ -26,7 +26,6 @@
   ],
   "object_events": [
     {
-      "type": "object",
       "graphics_id": "40",
       "x": 8,
       "y": 15,
@@ -40,7 +39,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "57",
       "x": 17,
       "y": 24,
@@ -54,7 +52,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "26",
       "x": 96,
       "y": 11,
@@ -74,45 +71,45 @@
       "y": 12,
       "elevation": 0,
       "dest_map": "MAP_LOST_WOODS",
-      "dest_warp_id": 3
+      "dest_warp_id": "3"
     },
     {
       "x": 11,
       "y": 13,
       "elevation": 0,
       "dest_map": "MAP_LOST_WOODS",
-      "dest_warp_id": 3
+      "dest_warp_id": "3"
     },
     {
       "x": 90,
       "y": 16,
       "elevation": 0,
       "dest_map": "MAP_LOST_WOODS",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 90,
       "y": 17,
       "elevation": 0,
       "dest_map": "MAP_LOST_WOODS",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [],
   "bg_events": [
     {
+      "type": "sign",
       "x": 9,
       "y": 11,
       "elevation": 0,
-      "type": "sign",
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "ROUTE_100_3_94_Script_0095A56A"
     },
     {
+      "type": "sign",
       "x": 92,
       "y": 15,
       "elevation": 0,
-      "type": "sign",
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "ROUTE_100_3_94_Script_0095A56A"
     }

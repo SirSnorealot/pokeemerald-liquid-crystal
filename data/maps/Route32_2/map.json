@@ -31,7 +31,6 @@
   ],
   "object_events": [
     {
-      "type": "object",
       "graphics_id": "92",
       "x": 7,
       "y": 9,
@@ -45,7 +44,6 @@
       "flag": "6052"
     },
     {
-      "type": "object",
       "graphics_id": "92",
       "x": 2,
       "y": 32,
@@ -59,7 +57,6 @@
       "flag": "6053"
     },
     {
-      "type": "object",
       "graphics_id": "92",
       "x": 25,
       "y": 37,
@@ -73,7 +70,6 @@
       "flag": "6054"
     },
     {
-      "type": "object",
       "graphics_id": "20",
       "x": 16,
       "y": 33,
@@ -87,7 +83,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "57",
       "x": 16,
       "y": 53,
@@ -101,7 +96,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "26",
       "x": 12,
       "y": 80,
