@@ -41,6 +41,8 @@
 #include "window.h"
 #include "mystery_gift_menu.h"
 
+#if IS_FRLG
+
 /*
  * Main menu state machine
  * -----------------------
@@ -2307,3 +2309,5 @@ static void Task_NewGameBirchSpeech_ReturnFromNamingScreenShowTextbox(u8 taskId)
 }
 
 #undef tTimer
+
+#endif // !IS_FRLG

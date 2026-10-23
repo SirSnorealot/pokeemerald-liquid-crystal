@@ -46,7 +46,7 @@ make release -j$(nproc)
 - [ ] Pokegear - Started: SirSnorealot
 - [X] Port Title Screen: SirSnorealot
 - [X] Intro before Title screen: SirSnorealot
-- [ ] New Game Intro - Not started.
+- [ ] New Game Intro - Started: SirSnorealot
 - [ ] Port OW Sprites - Not started.
 - [ ] Scripting - Started: SirSnorealot
 - [ ] Properly implement roaming legendaries. - Not started.
