@@ -285,14 +285,14 @@ static void BufferFanClubTrainerName(struct LinkBattleRecords *linkRecords, u8 w
         switch (whichNPCTrainer)
         {
         case 0:
-#if IS_FRLG
+// #if IS_FRLG
             StringCopy(gStringVar1, gSaveBlock1Ptr->rivalName);
-#else
-            if (gSaveBlock2Ptr->playerGender == MALE)
-                StringCopy(gStringVar1, gText_ExpandedPlaceholder_May);
-            else
-                StringCopy(gStringVar1, gText_ExpandedPlaceholder_Brendan);
-#endif
+// #else
+//             if (gSaveBlock2Ptr->playerGender == MALE)
+//                 StringCopy(gStringVar1, gText_ExpandedPlaceholder_May);
+//             else
+//                 StringCopy(gStringVar1, gText_ExpandedPlaceholder_Brendan);
+// #endif
             break;
         case 1:
             StringCopy(gStringVar1, sText_LtSurge);
@@ -301,14 +301,14 @@ static void BufferFanClubTrainerName(struct LinkBattleRecords *linkRecords, u8 w
             StringCopy(gStringVar1, sText_Koga);
             break;
         default:
-#if IS_FRLG
+// #if IS_FRLG
                 StringCopy(gStringVar1, gSaveBlock1Ptr->rivalName);
-#else
-            if (gSaveBlock2Ptr->playerGender == MALE)
-                StringCopy(gStringVar1, gText_ExpandedPlaceholder_May);
-            else
-                StringCopy(gStringVar1, gText_ExpandedPlaceholder_Brendan);
-#endif
+// #else
+//            if (gSaveBlock2Ptr->playerGender == MALE)
+//                StringCopy(gStringVar1, gText_ExpandedPlaceholder_May);
+//            else
+//                StringCopy(gStringVar1, gText_ExpandedPlaceholder_Brendan);
+// #endif
             break;
         }
     }
@@ -336,10 +336,10 @@ static void BufferFanClubTrainerName(u8 whichLinkTrainer, u8 whichNPCTrainer)
     {
     case 0:
     default:
-#if IS_FRLG
+// #if IS_FRLG
         StringCopy(gStringVar1, gSaveBlock1Ptr->rivalName);
         break;
-#endif
+// #endif
     case 1:
         StringCopy(gStringVar1, sText_LtSurge);
         break;
