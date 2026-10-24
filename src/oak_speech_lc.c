@@ -52,10 +52,12 @@ static EWRAM_DATA struct OakSpeechResources *sOakSpeechResources = NULL;
 
 static void Task_NewGameScene(u8);
 
+/* Controls guide skipped in Liquid Crystal.
 static void ControlsGuide_LoadPage1(void);
 static void Task_ControlsGuide_HandleInput(u8);
 static void Task_ControlsGuide_ChangePage(u8);
 static void Task_ControlsGuide_Clear(u8);
+*/
 
 static void Task_PikachuIntro_LoadPage1(u8);
 static void Task_PikachuIntro_HandleInput(u8);
@@ -110,7 +112,7 @@ static void CreateFadeOutTask(u8, u8);
 static void PrintNameChoiceOptions(u8, u8);
 static void GetDefaultName(u8, u8);
 
-extern const u8 gText_Controls[];
+// extern const u8 gText_Controls[];
 extern const u8 gText_Next[];
 extern const u8 gText_NextBack[];
 extern const struct OamData gOamData_AffineOff_ObjBlend_32x32;
@@ -118,12 +120,13 @@ extern const struct OamData gOamData_AffineOff_ObjNormal_32x32;
 extern const struct OamData gOamData_AffineOff_ObjNormal_32x16;
 extern const struct OamData gOamData_AffineOff_ObjNormal_16x8;
 
-// Controls guide and Pikachu intro text (same as FRLG)
+// Controls guide and Pikachu intro text
 static const u8 sText_NewName[] = _("NEW NAME");
 
+/* Controls guide text (unused).
 static const u8 sText_ControlsGuide_Intro[] = _(
-    "The various buttons will be explained in\n"
-    "the order of their importance.");
+    "You guys probably know all this already\n"
+    "but here we go anyway...");
 static const u8 sText_ControlsGuide_DPad[] = _(
     "Moves the main character.\n"
     "Also used to choose various data\n"
@@ -144,6 +147,7 @@ static const u8 sText_ControlsGuide_LRButtons[] = _(
     "If you need help playing the\n"
     "game, or on how to do things,\n"
     "press the L or R Button.");
+*/
 
 static const u8 sText_PikachuIntro_Page1[] = _(
     "In the world which you are about to\n"
@@ -176,8 +180,10 @@ static const u32 sControlsGuide_PikachuIntro_Background_Tiles[] = INCGFX_U32("gr
 static const u32 sPikachuIntro_Background_Tilemap[] = INCGFX_U32("graphics/oak_speech/pikachu_intro/tilemap.bin", ".smolTM");
 static const u32 sOakSpeech_Background_Tiles[] = INCGFX_U32("graphics/oak_speech/oak_speech_bg.png", ".4bpp.smol");
 static const u32 sOakSpeech_Background_Tilemap[] = INCGFX_U32("graphics/oak_speech/oak_speech_bg.bin", ".smolTM");
+/* Controls guide tilemaps (unused).
 static const u16 sControlsGuide_Tilemap_Page2[] = INCBIN_U16("graphics/oak_speech/controls_guide_page_2.bin");
 static const u16 sControlsGuide_Tilemap_Page3[] = INCBIN_U16("graphics/oak_speech/controls_guide_page_3.bin");
+*/
 static const u16 sOakSpeech_Leaf_Pal[] = INCGFX_U16("graphics/oak_speech/leaf/pal.pal", ".gbapal");
 static const u32 sOakSpeech_Leaf_Tiles[] = INCGFX_U32("graphics/oak_speech/leaf/pic.png", ".8bpp.smol");
 static const u16 sOakSpeech_Red_Pal[] = INCGFX_U16("graphics/oak_speech/red/pal.pal", ".gbapal");
@@ -224,6 +230,7 @@ static const struct BgTemplate sBgTemplates[] =
     }
 };
 
+/* Controls guide windows (unused).
 enum
 {
     CONTROLS_GUIDE_PAGE_1_WINDOW,
@@ -337,6 +344,7 @@ static const struct WindowTemplate *const sControlsGuide_WindowTemplates[NUM_CON
     [CONTROLS_GUIDE_PAGE_2] = sControlsGuide_WindowTemplate_Page2,
     [CONTROLS_GUIDE_PAGE_3] = sControlsGuide_WindowTemplate_Page3
 };
+*/
 
 static const struct WindowTemplate sIntro_WindowTemplates[NUM_INTRO_WINDOWS + 1] =
 {
@@ -383,7 +391,7 @@ static const struct WindowTemplate sIntro_WindowTemplates[NUM_INTRO_WINDOWS + 1]
     DUMMY_WIN_TEMPLATE
 };
 
-static const u8 sTextColor_White[] = { 0, 1, 2, 0 };
+// static const u8 sTextColor_White[] = { 0, 1, 2, 0 };
 static const u8 sTextColor_DarkGray[] = { 0, 2, 3, 0 };
 
 enum
@@ -626,6 +634,7 @@ static const struct SpriteTemplate sPikachuIntro_Pikachu_SpriteTemplates[NUM_PIK
     }
 };
 
+/* Controls guide text table (unused).
 #define CONTROLS_GUIDE_STRINGS_PER_PAGE 3
 
 static const u8 *const sControlsGuide_Pages2And3_Strings[CONTROLS_GUIDE_STRINGS_PER_PAGE * 2] =
@@ -639,6 +648,7 @@ static const u8 *const sControlsGuide_Pages2And3_Strings[CONTROLS_GUIDE_STRINGS_
     sText_ControlsGuide_SelectButton,
     sText_ControlsGuide_LRButtons
 };
+*/
 
 static const u8 *const sMaleNameChoices[] =
 {
@@ -785,7 +795,7 @@ void StartNewGameSceneLc(void)
                                  // data[9]     //
 #define tMenuWindowId               data[13]
 #define tTextboxWindowId            data[14]
-#define tDelta                      data[15]
+// #define tDelta                      data[15]
 
 static void Task_NewGameScene(u8 taskId)
 {
@@ -858,19 +868,22 @@ static void Task_NewGameScene(u8 taskId)
         FillBgTilemapBufferRect_Palette0(1, 0xD00F, 0,  0, 30, 2);
         FillBgTilemapBufferRect_Palette0(1, 0xD002, 0,  2, 30, 1);
         FillBgTilemapBufferRect_Palette0(1, 0xD00E, 0, 19, 30, 1);
-        ControlsGuide_LoadPage1();
+        // ControlsGuide_LoadPage1();
         gPaletteFade.bufferTransferDisabled = FALSE;
-        gTasks[taskId].tTextCursorSpriteId = CreateTextCursorSprite(0, 230, 149, 0, 0);
+        // gTasks[taskId].tTextCursorSpriteId = CreateTextCursorSprite(0, 230, 149, 0, 0);
+        gPlttBufferUnfaded[0] = RGB_BLACK;
         BlendPalettes(PALETTES_ALL, 16, RGB_BLACK);
         break;
     case 10:
-        BeginNormalPaletteFade(PALETTES_ALL, 0, 16, 0, RGB_BLACK);
+        // BeginNormalPaletteFade(PALETTES_ALL, 0, 16, 0, RGB_BLACK);
         SetGpuReg(REG_OFFSET_DISPCNT, DISPCNT_MODE_0 | DISPCNT_OBJ_1D_MAP | DISPCNT_OBJ_ON);
         ShowBg(0);
         ShowBg(1);
         SetVBlankCallback(VBlankCB_NewGameScene);
-        PlayBGM(MUS_RG_NEW_GAME_INSTRUCT);
-        gTasks[taskId].func = Task_ControlsGuide_HandleInput;
+        // PlayBGM(MUS_RG_NEW_GAME_INSTRUCT);
+        // gTasks[taskId].func = Task_ControlsGuide_HandleInput;
+        gTasks[taskId].tTimer = 0;
+        gTasks[taskId].func = Task_PikachuIntro_LoadPage1;
         gMain.state = 0;
         return;
     }
@@ -878,6 +891,7 @@ static void Task_NewGameScene(u8 taskId)
     gMain.state++;
 }
 
+/* Controls guide tasks (unused).
 static void ControlsGuide_LoadPage1(void)
 {
     HofPCTopBar_PrintPair(gText_Controls, gText_Next, FALSE, 0, TRUE);
@@ -1010,6 +1024,8 @@ static void Task_ControlsGuide_Clear(u8 taskId)
         gTasks[taskId].func = Task_PikachuIntro_LoadPage1;
     }
 }
+
+*/
 
 enum
 {
@@ -2269,4 +2285,3 @@ static void GetDefaultName(u8 hasPlayerBeenNamed, u8 nameChoice)
 #undef tBlendTarget2
 #undef tUnusedState
 #undef tFadeTimer
-
