@@ -21,7 +21,7 @@
 #include "constants/rgb.h"
 #include "constants/songs.h"
 
-#define INTRO_SPECIES SPECIES_NIDORAN_F
+#define INTRO_SPECIES SPECIES_WOOPER
 
 enum
 {
@@ -84,9 +84,9 @@ static void Task_OakSpeech_DoNamingScreen(u8);
 static void Task_OakSpeech_ConfirmName(u8);
 static void Task_OakSpeech_HandleConfirmNameInput(u8);
 static void Task_OakSpeech_FadeOutPlayerPic(u8);
-static void Task_OakSpeech_FadeOutRivalPic(u8);
-static void Task_OakSpeech_FadeInRivalPic(u8);
-static void Task_OakSpeech_AskRivalsName(u8);
+// static void Task_OakSpeech_FadeOutRivalPic(u8);
+// static void Task_OakSpeech_FadeInRivalPic(u8);
+// static void Task_OakSpeech_AskRivalsName(u8);
 static void Task_OakSpeech_ReshowPlayersPic(u8);
 static void Task_OakSpeech_LetsGo(u8);
 static void Task_OakSpeech_FadeOutBGM(u8);
@@ -109,8 +109,8 @@ static void LoadTrainerPic(u16, u16);
 static void ClearTrainerPic(void);
 static void CreateFadeInTask(u8, u8);
 static void CreateFadeOutTask(u8, u8);
-static void PrintNameChoiceOptions(u8, u8);
-static void GetDefaultName(u8, u8);
+static void PrintNameChoiceOptions(u8);
+static void GetDefaultName(void);
 
 // extern const u8 gText_Controls[];
 extern const u8 gText_Next[];
@@ -150,30 +150,32 @@ static const u8 sText_ControlsGuide_LRButtons[] = _(
 */
 
 static const u8 sText_PikachuIntro_Page1[] = _(
-    "In the world which you are about to\n"
-    "enter, you will embark on a grand\n"
-    "adventure with you as the hero.\n"
+    "Welcome to POKéMON Liquid Crystal\n"
+    "by linkandzelda and Synyster Zeikku.\n"
+    "I hope people enjoy this game as much\n"
+    "as we did making it! This game is a beta\n"
+    "which is a 99% complete remake of\n"
+    "POKéMON Crystal Version for the GBA.\n"
     "\n"
-    "Speak to people and check things\n"
-    "wherever you go, be it towns, roads,\n"
-    "or caves. Gather information and\n"
-    "hints from every source.");
+    "Current Build Number: 3.3.00512");
 static const u8 sText_PikachuIntro_Page2[] = _(
-    "New paths will open to you by helping\n"
-    "people in need, overcoming challenges,\n"
-    "and solving mysteries.\n"
+    "Mitchel1, thethethethe, zel, foullump,\n"
+    "Diegoisawesome, scizz, mastermind x,\n"
+    "Horus, Project Platinum, ZeikkuSSJ7,\n"
+    "Keyrin, Jambo51, HackMew, Darthron,\n"
+    "Blues/Dash, Marniac, JorgeZero, Etc..\n"
     "\n"
-    "At times, you will be challenged by\n"
-    "others and attacked by wild creatures.\n"
-    "Be brave and keep pushing on.");
+    "With the credits done, a little bit\n"
+    "of what's to come!");
 static const u8 sText_PikachuIntro_Page3[] = _(
-    "Through your adventure, we hope\n"
-    "that you will interact with all sorts\n"
-    "of people and achieve personal growth.\n"
-    "That is our biggest objective.\n"
+    "This game is a remake of POKéMON\n"
+    "Crystal which has Johto, Kanto and\n"
+    "Valencia Island completed.\n"
+    "Report bugs at http://romhack.me/\n"
+    "pokemonliquidcrystal\n"
     "\n"
-    "Press the A Button, and let your\n"
-    "adventure begin!");
+    "Enjoy the game and I'll leave the\n"
+    "rest to PROF. OAK!.....");
 
 static const u16 sOakSpeech_Background_Pals[] = INCGFX_U16("graphics/oak_speech/bg_tiles.png", ".gbapal"); // Shared by the Controls Guide, Pikachu Intro and Oak Speech scenes
 static const u32 sControlsGuide_PikachuIntro_Background_Tiles[] = INCGFX_U32("graphics/oak_speech/bg_tiles.png", ".4bpp.smol");
@@ -190,8 +192,8 @@ static const u16 sOakSpeech_Red_Pal[] = INCGFX_U16("graphics/oak_speech/red/pal.
 static const u32 sOakSpeech_Red_Tiles[] = INCGFX_U32("graphics/oak_speech/red/pic.png", ".8bpp.smol");
 static const u16 sOakSpeech_Oak_Pal[] = INCGFX_U16("graphics/oak_speech/oak/pal.pal", ".gbapal");
 static const u32 sOakSpeech_Oak_Tiles[] = INCGFX_U32("graphics/oak_speech/oak/pic.png", ".8bpp.smol");
-static const u16 sOakSpeech_Rival_Pal[] = INCGFX_U16("graphics/oak_speech/rival/pal.pal", ".gbapal");
-static const u32 sOakSpeech_Rival_Tiles[] = INCGFX_U32("graphics/oak_speech/rival/pic.png", ".8bpp.smol");
+// static const u16 sOakSpeech_Rival_Pal[] = INCGFX_U16("graphics/oak_speech/rival/pal.pal", ".gbapal");
+// static const u32 sOakSpeech_Rival_Tiles[] = INCGFX_U32("graphics/oak_speech/rival/pic.png", ".8bpp.smol");
 static const u16 sOakSpeech_Platform_Pal[] = INCGFX_U16("graphics/oak_speech/platform.pal", ".gbapal");
 static const u16 sPikachuIntro_Pikachu_Pal[] = INCGFX_U16("graphics/oak_speech/pikachu_intro/pikachu.pal", ".gbapal");
 static const u32 sOakSpeech_Platform_Gfx[] = INCGFX_U32("graphics/oak_speech/platform.png", ".4bpp.smol");
@@ -696,6 +698,7 @@ static const u8 *const sFemaleNameChoices[] =
     COMPOUND_STRING("SAI")
 };
 
+/* Rival naming is deferred until later in the game.
 static const u8 *const sRivalNameChoices[] =
 {
     COMPOUND_STRING("SILVER"),
@@ -703,24 +706,25 @@ static const u8 *const sRivalNameChoices[] =
     COMPOUND_STRING("HARU"),
     COMPOUND_STRING("RYO")
 };
+*/
 
 // Oak speech text. Mostly identical to FRLG, but the rival is not Oak's grandson.
 static const u8 sText_WelcomeToTheWorld[] = _(
-    "Hello, there!\n"
-    "Glad to meet you!\p"
+    "Hello! Sorry to keep you waiting!\n"
     "Welcome to the world of POKéMON!\p"
-    "My name is OAK.\p"
-    "People affectionately refer to me\n"
-    "as the POKéMON PROFESSOR.\p");
+    "My name is OAK.\n"
+    "People call me the POKéMON PROF.\p");
 static const u8 sText_ThisWorld[] = _("This world…");
 static const u8 sText_IsInhabitedFarAndWide[] = _(
     "…is inhabited far and wide by\n"
     "creatures called POKéMON.\p");
 static const u8 sText_IStudyPokemon[] = _(
-    "For some people, POKéMON are pets.\n"
-    "Others use them for battling.\p"
-    "As for myself…\p"
-    "I study POKéMON as a profession.\p");
+    "Some people play with POKéMON,\n"
+    "some battle with them.\p"
+    "But we don't know everything\n"
+    "about POKéMON yet.\p"
+    "There are still many mysteries\n"
+    "to solve.\p");
 static const u8 sText_TellMeALittleAboutYourself[] = _(
     "But first, tell me a little about\n"
     "yourself.\p");
@@ -733,6 +737,7 @@ static const u8 sText_YourNameWhatIsIt[] = _(
 static const u8 sText_SoYourNameIsPlayer[] = _(
     "Right…\n"
     "So your name is {PLAYER}.");
+/*
 static const u8 sText_WhatWasHisName[] = _(
     "There's a boy about your age that\n"
     "I've been hearing about lately.\p"
@@ -744,10 +749,12 @@ static const u8 sText_ConfirmRivalName[] = _("…Er, was it {RIVAL}?");
 static const u8 sText_RememberRivalsName[] = _(
     "That's right! I remember now!\n"
     "His name is {RIVAL}!\p");
+*/
 static const u8 sText_LetsGo[] = _(
-    "{PLAYER}!\p"
-    "Your very own POKéMON legend is\n"
-    "about to unfold!\p"
+    "{PLAYER}, are you ready?\p"
+    "Your very own POKéMON story full\n"
+    "of memories and tough challenges\n"
+    "is about to unfold.\p"
     "A world of dreams and adventures\n"
     "with POKéMON awaits! Let's go!");
 
@@ -1478,6 +1485,7 @@ static void Task_OakSpeech_FadeOutForPlayerNamingScreen(u8 taskId)
     }
 }
 
+/*
 static void Task_OakSpeech_MoveRivalDisplayNameOptions(u8 taskId)
 {
     s16 *data = gTasks[taskId].data;
@@ -1498,14 +1506,15 @@ static void Task_OakSpeech_MoveRivalDisplayNameOptions(u8 taskId)
         }
     }
 }
+*/
 
 static void Task_OakSpeech_RepeatNameQuestion(u8 taskId)
 {
-    PrintNameChoiceOptions(taskId, sOakSpeechResources->hasPlayerBeenNamed);
+    PrintNameChoiceOptions(taskId);
     if (sOakSpeechResources->hasPlayerBeenNamed == FALSE)
         OakSpeechPrintMessage(sText_YourNameWhatIsIt, 0, FALSE);
-    else
-        OakSpeechPrintMessage(sText_YourRivalsNameWhatWasIt, 0, FALSE);
+    // else
+    //     OakSpeechPrintMessage(sText_YourRivalsNameWhatWasIt, 0, FALSE);
     gTasks[taskId].func = Task_OakSpeech_HandleRivalNameInput;
 }
 
@@ -1529,7 +1538,7 @@ static void Task_OakSpeech_HandleRivalNameInput(u8 taskId)
         PlaySE(SE_SELECT);
         ClearStdWindowAndFrameToTransparent(tMenuWindowId, TRUE);
         RemoveWindow(tMenuWindowId);
-        GetDefaultName(sOakSpeechResources->hasPlayerBeenNamed, input - 1);
+        GetDefaultName();
         tNameNotConfirmed = TRUE;
         gTasks[taskId].func = Task_OakSpeech_ConfirmName;
         break;
@@ -1542,17 +1551,19 @@ static void Task_OakSpeech_DoNamingScreen(u8 taskId)
 {
     if (!gPaletteFade.active)
     {
-        GetDefaultName(sOakSpeechResources->hasPlayerBeenNamed, 0);
+        GetDefaultName();
         if (sOakSpeechResources->hasPlayerBeenNamed == FALSE)
         {
             DoNamingScreen(NAMING_SCREEN_PLAYER, gSaveBlock2Ptr->playerName, gSaveBlock2Ptr->playerGender, 0, 0, CB2_ReturnFromNamingScreen);
         }
+        /*
         else
         {
             ClearStdWindowAndFrameToTransparent(gTasks[taskId].tMenuWindowId, TRUE);
             RemoveWindow(gTasks[taskId].tMenuWindowId);
             DoNamingScreen(NAMING_SCREEN_RIVAL, gSaveBlock1Ptr->rivalName, 0, 0, 0, CB2_ReturnFromNamingScreen);
         }
+        */
         DestroyPikachuOrPlatformSprites(taskId, SPRITE_TYPE_PLATFORM);
         FreeAllWindowBuffers();
     }
@@ -1567,8 +1578,8 @@ static void Task_OakSpeech_ConfirmName(u8 taskId)
         {
             if (sOakSpeechResources->hasPlayerBeenNamed == FALSE)
                 StringExpandPlaceholders(gStringVar4, sText_SoYourNameIsPlayer);
-            else
-                StringExpandPlaceholders(gStringVar4, sText_ConfirmRivalName);
+            // else
+            //     StringExpandPlaceholders(gStringVar4, sText_ConfirmRivalName);
             OakSpeechPrintMessage(gStringVar4, sOakSpeechResources->textSpeed, TRUE);
             tNameNotConfirmed = FALSE;
             tTimer = 25;
@@ -1599,15 +1610,18 @@ static void Task_OakSpeech_HandleConfirmNameInput(u8 taskId)
         if (sOakSpeechResources->hasPlayerBeenNamed == FALSE)
         {
             ClearDialogWindowAndFrame(WIN_INTRO_TEXTBOX, TRUE);
+            StringCopy(gSaveBlock1Ptr->rivalName, COMPOUND_STRING("???"));
             CreateFadeInTask(taskId, 2);
             gTasks[taskId].func = Task_OakSpeech_FadeOutPlayerPic;
         }
+        /*
         else
         {
             StringExpandPlaceholders(gStringVar4, sText_RememberRivalsName);
             OakSpeechPrintMessage(gStringVar4, sOakSpeechResources->textSpeed, TRUE);
             gTasks[taskId].func = Task_OakSpeech_FadeOutRivalPic;
         }
+        */
         break;
     case 1: // NO
     case MENU_B_PRESSED:
@@ -1630,10 +1644,14 @@ static void Task_OakSpeech_FadeOutPlayerPic(u8 taskId)
         if (tTimer != 0)
             tTimer--;
         else
-            gTasks[taskId].func = Task_OakSpeech_FadeInRivalPic;
+        {
+            // gTasks[taskId].func = Task_OakSpeech_FadeInRivalPic;
+            gTasks[taskId].func = Task_OakSpeech_ReshowPlayersPic;
+        }
     }
 }
 
+/*
 static void Task_OakSpeech_FadeOutRivalPic(u8 taskId)
 {
     if (!IsTextPrinterActiveOnWindow(WIN_INTRO_TEXTBOX))
@@ -1665,6 +1683,8 @@ static void Task_OakSpeech_AskRivalsName(u8 taskId)
         gTasks[taskId].func = Task_OakSpeech_MoveRivalDisplayNameOptions;
     }
 }
+
+*/
 
 static void Task_OakSpeech_ReshowPlayersPic(u8 taskId)
 {
@@ -1955,10 +1975,12 @@ static void CB2_ReturnFromNamingScreen(void)
             else
                 LoadTrainerPic(FEMALE_PLAYER_PIC, 0);
         }
+        /*
         else
         {
             LoadTrainerPic(RIVAL_PIC, 0);
         }
+        */
         gTasks[taskId].tTrainerPicPosX = -60;
         gSpriteCoordOffsetX += 60;
         ChangeBgX(2, 0xFFFFC400, BG_COORD_SET);
@@ -2078,10 +2100,12 @@ static void LoadTrainerPic(u16 whichPic, u16 tileOffset)
         LoadPalette(sOakSpeech_Leaf_Pal, BG_PLTT_ID(4), sizeof(sOakSpeech_Leaf_Pal));
         DecompressDataWithHeaderVram(sOakSpeech_Leaf_Tiles, (void *)VRAM + 0x600 + tileOffset);
         break;
+    /*
     case RIVAL_PIC:
         LoadPalette(sOakSpeech_Rival_Pal, BG_PLTT_ID(6), sizeof(sOakSpeech_Rival_Pal));
         DecompressDataWithHeaderVram(sOakSpeech_Rival_Tiles, (void *)VRAM + 0x600 + tileOffset);
         break;
+    */
     case OAK_PIC:
         LoadPalette(sOakSpeech_Oak_Pal, BG_PLTT_ID(6), sizeof(sOakSpeech_Oak_Pal));
         DecompressDataWithHeaderVram(sOakSpeech_Oak_Tiles, (void *)VRAM + 0x600 + tileOffset);
@@ -2215,7 +2239,7 @@ static void CreateFadeOutTask(u8 taskId, u8 delay)
         gTasks[taskId2].tPikachuPlatformSpriteId(i) = gTasks[taskId].tPikachuPlatformSpriteId(i);
 }
 
-static void PrintNameChoiceOptions(u8 taskId, u8 hasPlayerBeenNamed)
+static void PrintNameChoiceOptions(u8 taskId)
 {
     s16 *data = gTasks[taskId].data;
     const u8 *const *textPtrs;
@@ -2226,22 +2250,22 @@ static void PrintNameChoiceOptions(u8 taskId, u8 hasPlayerBeenNamed)
     DrawStdFrameWithCustomTileAndPalette(tMenuWindowId, 1, STD_WINDOW_BASE_TILE_NUM, 14);
     FillWindowPixelBuffer(gTasks[taskId].tMenuWindowId, PIXEL_FILL(1));
     AddTextPrinterParameterized(tMenuWindowId, FONT_NORMAL, sText_NewName, 8, 1, 0, NULL);
-    if (hasPlayerBeenNamed == FALSE)
-        textPtrs = gSaveBlock2Ptr->playerGender == MALE ? sMaleNameChoices : sFemaleNameChoices;
-    else
-        textPtrs = sRivalNameChoices;
-    for (i = 0; i < ARRAY_COUNT(sRivalNameChoices); i++)
+    // if (hasPlayerBeenNamed == FALSE)
+    textPtrs = gSaveBlock2Ptr->playerGender == MALE ? sMaleNameChoices : sFemaleNameChoices;
+    // else
+    //     textPtrs = sRivalNameChoices;
+    for (i = 0; i < 4; i++)
         AddTextPrinterParameterized(tMenuWindowId, FONT_NORMAL, textPtrs[i], 8, 16 * (i + 1) + 1, 0, NULL);
     InitMenuNormal(tMenuWindowId, FONT_NORMAL, 0, 1, 16, 5, 0);
     CopyWindowToVram(tMenuWindowId, COPYWIN_FULL);
 }
 
-static void GetDefaultName(u8 hasPlayerBeenNamed, u8 nameChoice)
+static void GetDefaultName(void)
 {
     const u8 *src;
     u8 *dest;
     u8 i;
-    if (hasPlayerBeenNamed == FALSE)
+    // if (hasPlayerBeenNamed == FALSE)
     {
         if (gSaveBlock2Ptr->playerGender == MALE)
             src = sMaleNameChoices[Random() % ARRAY_COUNT(sMaleNameChoices)];
@@ -2249,11 +2273,13 @@ static void GetDefaultName(u8 hasPlayerBeenNamed, u8 nameChoice)
             src = sFemaleNameChoices[Random() % ARRAY_COUNT(sFemaleNameChoices)];
         dest = gSaveBlock2Ptr->playerName;
     }
+    /*
     else
     {
         src = sRivalNameChoices[nameChoice];
         dest = gSaveBlock1Ptr->rivalName;
     }
+    */
     for (i = 0; i < PLAYER_NAME_LENGTH && src[i] != EOS; i++)
         dest[i] = src[i];
     for (; i < PLAYER_NAME_LENGTH + 1; i++)
