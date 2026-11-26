@@ -36,7 +36,8 @@
  *
  * This is the Emerald main menu with the Birch speech removed.
  * Selecting NEW GAME hands off to the FRLG-style Oak speech in
- * oak_speech_lc.c (StartNewGameSceneLc), which then starts the game.
+ * oak_speech_lc.c (StartNewGameSceneLc), which is followed by the new game
+ * dialogue in init_clock_lc.c (CB2_InitClockLc), which then starts the game.
  *
  * Entry point: CB2_InitMainMenu
  *
