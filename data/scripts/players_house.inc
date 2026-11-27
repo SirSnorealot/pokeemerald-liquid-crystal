@@ -40,28 +40,29 @@
 @ 	releaseall
 @ 	end
 
-PlayersHouse_2F_EventScript_WallClock::
-	goto_if_set FLAG_SET_WALL_CLOCK, PlayersHouse_2F_EventScript_CheckWallClock
-	msgbox PlayersHouse_2F_Text_ClockIsStopped, MSGBOX_DEFAULT
-	call PlayersHouse_2F_EventScript_SetWallClock
-	delay 30
-	setflag FLAG_SET_WALL_CLOCK
-	playse SE_EXIT
-	removeobject VAR_0x8008
-	releaseall
-	end
+@ The wall clock is not used. The clock is set at the start of the game (src/init_clock_lc.c).
+@ PlayersHouse_2F_EventScript_WallClock::
+@ 	goto_if_set FLAG_SET_WALL_CLOCK, PlayersHouse_2F_EventScript_CheckWallClock
+@ 	msgbox PlayersHouse_2F_Text_ClockIsStopped, MSGBOX_DEFAULT
+@ 	call PlayersHouse_2F_EventScript_SetWallClock
+@ 	delay 30
+@ 	setflag FLAG_SET_WALL_CLOCK
+@ 	playse SE_EXIT
+@ 	removeobject VAR_0x8008
+@ 	releaseall
+@ 	end
 
-PlayersHouse_2F_EventScript_CheckWallClock::
-	incrementgamestat GAME_STAT_CHECKED_CLOCK
-	fadescreen FADE_TO_BLACK
-	special Special_ViewWallClock
-	releaseall
-	end
+@ PlayersHouse_2F_EventScript_CheckWallClock::
+@ 	incrementgamestat GAME_STAT_CHECKED_CLOCK
+@ 	fadescreen FADE_TO_BLACK
+@ 	special Special_ViewWallClock
+@ 	releaseall
+@ 	end
 
-PlayersHouse_2F_EventScript_SetWallClock::
-	fadescreen FADE_TO_BLACK
-	special StartWallClock
-	return
+@ PlayersHouse_2F_EventScript_SetWallClock::
+@ 	fadescreen FADE_TO_BLACK
+@ 	special StartWallClock
+@ 	return
 
 @ PlayersHouse_1F_EventScript_SetWatchedBroadcast::
 @ 	setvar VAR_NEWBARK_INTRO_STATE, 7

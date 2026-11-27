@@ -4,6 +4,7 @@
 #include "constants/songs.h"
 #include "event_data.h"
 #include "gpu_regs.h"
+#include "init_clock.h"
 #include "international_string_util.h"
 #include "link.h"
 #include "list_menu.h"
@@ -86,6 +87,8 @@
  *
  * Task_HandleMainMenuAPressed
  *  - If the user selected New Game, advance to StartNewGameSceneLc (oak_speech_lc.c).
+ *    However, if the clock is not working, instead advance to
+ *    Task_DisplayMainMenuInvalidActionError.
  *  - If the user selected Continue, advance to CB2_ContinueSavedGame.
  *  - If the user selected the Options menu, advance to CB2_InitOptionMenu.
  *  - If the user selected Mystery Gift, advance to CB2_InitMysteryGift. However,
@@ -98,7 +101,7 @@
  *  - Clean up the main menu and go back to CB2_InitTitleScreen.
  *
  * Task_DisplayMainMenuInvalidActionError
- *  - Print one of three different error messages, wait for the text to stop
+ *  - Print one of four different error messages, wait for the text to stop
  *    printing, and then wait for A or B to be pressed.
  */
 
@@ -301,6 +304,10 @@ enum
     HAS_MYSTERY_GIFT,   //CONTINUE, NEW GAME, MYSTERY GIFT, OPTION
     HAS_MYSTERY_EVENTS, //CONTINUE, NEW GAME, MYSTERY GIFT, MYSTERY EVENTS, OPTION
 };
+
+// Task_DisplayMainMenuInvalidActionError picks its message from tMenuType.
+// This selects the one for starting a new game without a working clock.
+#define MENU_ERROR_NO_CLOCK (HAS_MYSTERY_EVENTS + 1)
 
 enum
 {
@@ -837,6 +844,12 @@ static void Task_HandleMainMenuAPressed(u8 taskId)
             }
             break;
         }
+        if (action == ACTION_NEW_GAME && !IsClockAvailableLc())
+        {
+            // The clock is set at the start of the game, so it can't be started without one.
+            action = ACTION_INVALID;
+            gTasks[taskId].tMenuType = MENU_ERROR_NO_CLOCK;
+        }
         ChangeBgY(0, 0, BG_COORD_SET);
         ChangeBgY(1, 0, BG_COORD_SET);
         switch (action)
@@ -923,6 +936,9 @@ static void Task_DisplayMainMenuInvalidActionError(u8 taskId)
             break;
         case 2:
             CreateMainMenuErrorWindow(gText_MysteryEventsCantUse);
+            break;
+        case MENU_ERROR_NO_CLOCK:
+            CreateMainMenuErrorWindow(gText_ClockNotWorkingLc);
             break;
         }
         gTasks[taskId].tCurrItem++;

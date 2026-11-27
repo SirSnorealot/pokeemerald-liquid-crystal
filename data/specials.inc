@@ -172,8 +172,9 @@ gSpecials::
 	def_special CableCarWarp
 	def_special CableCar, waitstate=1
 	def_special Overworld_PlaySpecialMapMusic
-	def_special StartWallClock, waitstate=1
-	def_special Special_ViewWallClock, waitstate=1
+	@ The wall clock is not used. The clock is set at the start of the game (src/init_clock_lc.c).
+	@ def_special StartWallClock, waitstate=1
+	@ def_special Special_ViewWallClock, waitstate=1
 	def_special ChooseStarter, waitstate=1
 	def_special StartWallyTutorialBattle, waitstate=1
 	def_special ChangePokemonNickname, waitstate=1

@@ -1944,11 +1944,14 @@ const u16 gEasyChatMode_Pal[] = INCGFX_U16("graphics/easy_chat/mode.png", ".gbap
 const u32 gEasyChatWindow_Gfx[] = INCGFX_U32("graphics/easy_chat/window.png", ".4bpp.smol"); // uses mode pal
 const u32 gEasyChatWindow_Tilemap[] = INCGFX_U32("graphics/easy_chat/window.bin", ".smolTM");
 
+// Only used by wallclock.c, which is guarded the same way.
+#if IS_FRLG
 const u16 gWallClockMale_Pal[]      = INCGFX_U16("graphics/wallclock/male.pal", ".gbapal");
 const u16 gWallClockFemale_Pal[]    = INCGFX_U16("graphics/wallclock/female.pal", ".gbapal");
 const u32 gWallClock_Gfx[]          = INCGFX_U32("graphics/wallclock/clock.png", ".4bpp.smol");
 const u32 gWallClockStart_Tilemap[] = INCGFX_U32("graphics/wallclock/clock_start.bin", ".smolTM");
 const u32 gWallClockView_Tilemap[]  = INCGFX_U32("graphics/wallclock/clock_view.bin", ".smolTM");
+#endif // IS_FRLG
 
 const u16 gUsePokeblockCondition_Pal[] = INCGFX_U16("graphics/pokeblock/use_screen/condition.png", ".gbapal");
 const u32 gUsePokeblockCondition_Gfx[] = INCGFX_U32("graphics/pokeblock/use_screen/condition.png", ".4bpp.smol");

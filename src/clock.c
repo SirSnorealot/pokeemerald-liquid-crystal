@@ -14,7 +14,7 @@
 #include "rtc.h"
 #include "time_events.h"
 #include "tv.h"
-#include "wallclock.h"
+// #include "wallclock.h"
 #include "constants/form_change_types.h"
 #include "apricorn_tree.h"
 
@@ -105,6 +105,7 @@ void FormChangeTimeUpdate()
     }
 }
 
+/* Wall clock special (unused). The clock is set at the start of the game (init_clock_lc.c).
 static void ReturnFromStartWallClock(void)
 {
     InitTimeBasedEvents();
@@ -116,3 +117,4 @@ void StartWallClock(void)
     SetMainCallback2(CB2_StartWallClock);
     gMain.savedCallback = ReturnFromStartWallClock;
 }
+*/

@@ -54,7 +54,7 @@
 #include "text_window.h"
 #include "tilesets.h"
 #include "tv.h"
-#include "wallclock.h"
+// #include "wallclock.h"
 #include "window.h"
 #include "constants/battle_frontier.h"
 #include "constants/battle_pyramid.h"
@@ -194,12 +194,14 @@ void Special_ShowDiploma(void)
     LockPlayerFieldControls();
 }
 
+/* Wall clock special (unused).
 void Special_ViewWallClock(void)
 {
     gMain.savedCallback = CB2_ReturnToField;
     SetMainCallback2(CB2_ViewWallClock);
     LockPlayerFieldControls();
 }
+*/
 
 void ResetCyclingRoadChallengeData(void)
 {

@@ -21,6 +21,9 @@
 #include "constants/rgb.h"
 #include "constants/songs.h"
 
+// The wall clock is not used. The clock is set at the start of the game (init_clock_lc.c).
+#if IS_FRLG
+
 static void CB2_WallClock(void);
 static void Task_SetClock_WaitFadeIn(u8 taskId);
 static void Task_SetClock_HandleInput(u8 taskId);
@@ -1091,3 +1094,5 @@ static void SpriteCB_AMIndicator(struct Sprite *sprite)
     sprite->x2 = Cos2(sprite->sAngle) * 30 / 0x1000;
     sprite->y2 = Sin2(sprite->sAngle) * 30 / 0x1000;
 }
+
+#endif // IS_FRLG

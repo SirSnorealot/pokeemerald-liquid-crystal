@@ -1152,12 +1152,13 @@ static const struct Story sStorytellerStories[] = {
         MauvilleCity_PokemonCenter_1F_Text_TVWatchedAction,
         MauvilleCity_PokemonCenter_1F_Text_TVWatchedStory
     },
-    {
-        GAME_STAT_CHECKED_CLOCK, 1,
-        MauvilleCity_PokemonCenter_1F_Text_CheckedClockTitle,
-        MauvilleCity_PokemonCenter_1F_Text_CheckedClockAction,
-        MauvilleCity_PokemonCenter_1F_Text_CheckedClockStory
-    },
+    // The wall clock is not used, so this stat is never counted.
+    // {
+    //     GAME_STAT_CHECKED_CLOCK, 1,
+    //     MauvilleCity_PokemonCenter_1F_Text_CheckedClockTitle,
+    //     MauvilleCity_PokemonCenter_1F_Text_CheckedClockAction,
+    //     MauvilleCity_PokemonCenter_1F_Text_CheckedClockStory
+    // },
     {
         GAME_STAT_WON_POKEMON_LOTTERY, 1,
         MauvilleCity_PokemonCenter_1F_Text_WonLotteryTitle,

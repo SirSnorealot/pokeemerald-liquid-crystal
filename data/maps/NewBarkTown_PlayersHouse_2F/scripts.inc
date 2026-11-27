@@ -69,9 +69,9 @@ PlayersHouse_2F_EventScript_GameCube::
 	msgbox PlayersHouse_2F_Text_PlayNES, MSGBOX_SIGN
 	end
 
-PlayersHouse_2F_Text_ClockIsStopped:
-	.string "The clock is stopped…\p"
-	.string "Better set it and start it!$"
+@ PlayersHouse_2F_Text_ClockIsStopped:
+@ 	.string "The clock is stopped…\p"
+@ 	.string "Better set it and start it!$"
 
 Common_Text_LookCloserAtMap:
 	.string "{PLAYER} took a closer look at the\n"

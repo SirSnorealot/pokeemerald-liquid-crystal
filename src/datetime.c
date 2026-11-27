@@ -108,6 +108,9 @@ void ConvertRtcToDateTime(struct DateTime *result, struct SiiRtcInfo *rtc)
 void ConvertTimeToDateTime(struct DateTime *result, struct Time *timeSinceEpoch)
 {
     result = memcpy(result, &gGen3Epoch, sizeof(struct DateTime));
+    // A time before the epoch can't be represented. This happens when the RTC is set back or stops working.
+    if (timeSinceEpoch->days < 0)
+        return;
     DateTime_AddSeconds(result, timeSinceEpoch->seconds);
     DateTime_AddMinutes(result, timeSinceEpoch->minutes);
     DateTime_AddHours(result, timeSinceEpoch->hours);
