@@ -157,7 +157,6 @@ static const u8 sText_PikachuIntro_Page1[] = _(
     "as we did making it! This game is a beta\n"
     "which is a 99% complete remake of\n"
     "POKéMON Crystal Version for the GBA.\n"
-    "\n"
     "Current Build Number: 3.3.00512");
 static const u8 sText_PikachuIntro_Page2[] = _(
     "Mitchel1, thethethethe, zel, foullump,\n"
@@ -165,7 +164,6 @@ static const u8 sText_PikachuIntro_Page2[] = _(
     "Horus, Project Platinum, ZeikkuSSJ7,\n"
     "Keyrin, Jambo51, HackMew, Darthron,\n"
     "Blues/Dash, Marniac, JorgeZero, Etc..\n"
-    "\n"
     "With the credits done, a little bit\n"
     "of what's to come!");
 static const u8 sText_PikachuIntro_Page3[] = _(
@@ -174,7 +172,6 @@ static const u8 sText_PikachuIntro_Page3[] = _(
     "Valencia Island completed.\n"
     "Report bugs at http://romhack.me/\n"
     "pokemonliquidcrystal\n"
-    "\n"
     "Enjoy the game and I'll leave the\n"
     "rest to PROF. OAK!.....");
 
