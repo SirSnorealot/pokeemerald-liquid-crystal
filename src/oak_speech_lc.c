@@ -1302,7 +1302,7 @@ static void Task_OakSpeech_IsInhabitedFarAndWide(u8 taskId)
         if (gTasks[taskId].tTimer == 32)
         {
             OakSpeechPrintMessage(sText_IsInhabitedFarAndWide, sOakSpeechResources->textSpeed, FALSE);
-            PlayCry_Normal(INTRO_SPECIES, 0);
+            // PlayCry_Normal(INTRO_SPECIES, 0);
         }
     }
 }
