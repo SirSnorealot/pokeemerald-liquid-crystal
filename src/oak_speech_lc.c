@@ -184,10 +184,10 @@ static const u32 sOakSpeech_Background_Tilemap[] = INCGFX_U32("graphics/oak_spee
 static const u16 sControlsGuide_Tilemap_Page2[] = INCBIN_U16("graphics/oak_speech/controls_guide_page_2.bin");
 static const u16 sControlsGuide_Tilemap_Page3[] = INCBIN_U16("graphics/oak_speech/controls_guide_page_3.bin");
 */
-static const u16 sOakSpeech_Leaf_Pal[] = INCGFX_U16("graphics/oak_speech/leaf/pal.pal", ".gbapal");
-static const u32 sOakSpeech_Leaf_Tiles[] = INCGFX_U32("graphics/oak_speech/leaf/pic.png", ".8bpp.smol");
-static const u16 sOakSpeech_Red_Pal[] = INCGFX_U16("graphics/oak_speech/red/pal.pal", ".gbapal");
-static const u32 sOakSpeech_Red_Tiles[] = INCGFX_U32("graphics/oak_speech/red/pic.png", ".8bpp.smol");
+static const u16 sOakSpeech_Kris_Pal[] = INCGFX_U16("graphics/oak_speech/kris/pal.pal", ".gbapal");
+static const u32 sOakSpeech_Kris_Tiles[] = INCGFX_U32("graphics/oak_speech/kris/pic.png", ".8bpp.smol");
+static const u16 sOakSpeech_Gold_Pal[] = INCGFX_U16("graphics/oak_speech/gold/pal.pal", ".gbapal");
+static const u32 sOakSpeech_Gold_Tiles[] = INCGFX_U32("graphics/oak_speech/gold/pic.png", ".8bpp.smol");
 static const u16 sOakSpeech_Oak_Pal[] = INCGFX_U16("graphics/oak_speech/oak/pal.pal", ".gbapal");
 static const u32 sOakSpeech_Oak_Tiles[] = INCGFX_U32("graphics/oak_speech/oak/pic.png", ".8bpp.smol");
 // static const u16 sOakSpeech_Rival_Pal[] = INCGFX_U16("graphics/oak_speech/rival/pal.pal", ".gbapal");
@@ -650,35 +650,35 @@ static const u8 *const sControlsGuide_Pages2And3_Strings[CONTROLS_GUIDE_STRINGS_
 };
 */
 
+// The default names from Liquid Crystal, used when the player leaves their name blank.
+// The repeated names are in its tables too.
 static const u8 *const sMaleNameChoices[] =
 {
-    COMPOUND_STRING("ETHAN"),
+    COMPOUND_STRING("MAGNIUS"),
+    COMPOUND_STRING("FIRE"),
+    COMPOUND_STRING("ASH"),
+    COMPOUND_STRING("GOLD"),
     COMPOUND_STRING("GOLD"),
     COMPOUND_STRING("CHRIS"),
+    COMPOUND_STRING("ZEIKKU"),
+    COMPOUND_STRING("JONN"),
+    COMPOUND_STRING("RICK"),
+    COMPOUND_STRING("KEV"),
+    COMPOUND_STRING("TAYLOR"),
+    COMPOUND_STRING("BOB"),
+    COMPOUND_STRING("CHRIS"),
+    COMPOUND_STRING("LIQUID"),
     COMPOUND_STRING("MAT"),
     COMPOUND_STRING("ALLAN"),
-    COMPOUND_STRING("JAK"),
-    COMPOUND_STRING("JANNE"),
-    COMPOUND_STRING("JONN"),
-    COMPOUND_STRING("KAMON"),
-    COMPOUND_STRING("KARL"),
-    COMPOUND_STRING("TAYLOR"),
-    COMPOUND_STRING("OSCAR"),
-    COMPOUND_STRING("HIRO"),
-    COMPOUND_STRING("MAX"),
-    COMPOUND_STRING("JON"),
-    COMPOUND_STRING("RALPH"),
-    COMPOUND_STRING("KAY"),
-    COMPOUND_STRING("TOSH"),
-    COMPOUND_STRING("ROAK")
+    COMPOUND_STRING("DOM"),
+    COMPOUND_STRING("LINK"),
+    COMPOUND_STRING("GOD")
 };
 
 static const u8 *const sFemaleNameChoices[] =
 {
-    COMPOUND_STRING("KRIS"),
-    COMPOUND_STRING("LYRA"),
-    COMPOUND_STRING("BETH"),
-    COMPOUND_STRING("CARRIE"),
+    COMPOUND_STRING("MAGNIUS"),
+    COMPOUND_STRING("FIRE"),
     COMPOUND_STRING("OMI"),
     COMPOUND_STRING("JODI"),
     COMPOUND_STRING("AMANDA"),
@@ -693,7 +693,9 @@ static const u8 *const sFemaleNameChoices[] =
     COMPOUND_STRING("KIKO"),
     COMPOUND_STRING("MINA"),
     COMPOUND_STRING("NORIE"),
-    COMPOUND_STRING("SAI")
+    COMPOUND_STRING("SAI"),
+    COMPOUND_STRING("MOMO"),
+    COMPOUND_STRING("SUZI")
 };
 
 /* Rival naming is deferred until later in the game.
@@ -2091,12 +2093,12 @@ static void LoadTrainerPic(u16 whichPic, u16 tileOffset)
     switch (whichPic)
     {
     case MALE_PLAYER_PIC:
-        LoadPalette(sOakSpeech_Red_Pal, BG_PLTT_ID(4), sizeof(sOakSpeech_Red_Pal));
-        DecompressDataWithHeaderVram(sOakSpeech_Red_Tiles, (void *)VRAM + 0x600 + tileOffset);
+        LoadPalette(sOakSpeech_Gold_Pal, BG_PLTT_ID(4), sizeof(sOakSpeech_Gold_Pal));
+        DecompressDataWithHeaderVram(sOakSpeech_Gold_Tiles, (void *)VRAM + 0x600 + tileOffset);
         break;
     case FEMALE_PLAYER_PIC:
-        LoadPalette(sOakSpeech_Leaf_Pal, BG_PLTT_ID(4), sizeof(sOakSpeech_Leaf_Pal));
-        DecompressDataWithHeaderVram(sOakSpeech_Leaf_Tiles, (void *)VRAM + 0x600 + tileOffset);
+        LoadPalette(sOakSpeech_Kris_Pal, BG_PLTT_ID(4), sizeof(sOakSpeech_Kris_Pal));
+        DecompressDataWithHeaderVram(sOakSpeech_Kris_Tiles, (void *)VRAM + 0x600 + tileOffset);
         break;
     /*
     case RIVAL_PIC:
